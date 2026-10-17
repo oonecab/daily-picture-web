@@ -45,3 +45,9 @@
 | `npm test` | 10 通过、0 失败、0 跳过，退出码 0 |
 
 标准正文比较来源：[SPDX license-list-data / MIT.txt](https://raw.githubusercontent.com/spdx/license-list-data/main/text/MIT.txt)。本次应用代码未变，不重跑真实 Bing、浏览器交互或服务器部署测试。
+
+## 2026-10-17 后续：README 免责声明
+
+用户要求在 README 补充免责声明，延续既有提交推送授权。新增非官方关系、第三方内容权利、上游可用性、使用/部署责任和按现状提供说明；以现有 LICENSE / THIRD_PARTY_NOTICES 为准，不增加“仅限学习”或“禁止商用”等与 MIT 冲突的软件许可条件。措辞参考 [MIT 标准文本](https://opensource.org/license/mit) 和 [Microsoft 服务协议](https://www.microsoft.com/zh-cn/servicesagreement/)。
+
+文档影响：README 必须更新；LICENSE、第三方范围、技术事实、业务规则、API、缓存和部署配置均不变。此为既有许可范围的说明补充，不新增应用行为或正式版本；不为文案添加模拟业务测试，沿用已登记检查及文档/许可一致性评审。本次检查通过：`npm run check`、`npm test`（16/16，0 跳过）、研究校验（238 文件 / 432 引用）、治理 strict、11 条文档本地链接和 `git diff --check`。差异确认仅为 README 与本记录，许可证及应用文件未修改；没有重跑真实 Bing、浏览器或部署验收。提交与推送结果以 Git 记录及交付时的远端 SHA 核对为准。

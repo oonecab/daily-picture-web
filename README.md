@@ -104,3 +104,11 @@ npm test
 Bing 摄影作品及上游内容、原生应用内容，以及 `docs/reverse-engineering/source/` 中的原始研究快照不纳入本项目 MIT 授权范围；具体说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。图片权利归原摄影师及相应权利人。
 
 这份实现保留来源与版权信息，与原 Daily Picture 作者、Duracellko.NET 及 Microsoft 没有隶属关系。研究导航见 [REA 资料说明](docs/reverse-engineering/README.md)。
+
+## 免责声明
+
+- **非官方项目**：本项目为独立实现的开源 Web 应用，与 Microsoft、Bing、原 Daily Picture 作者及 Duracellko.NET 没有隶属、合作或背书关系。相关名称、商标和标志的权利归各自权利人所有。
+- **第三方内容权利**：Bing 图片、版权说明、原应用内容及研究快照的权利不因本项目开源而转移。项目的 MIT 许可证不授予这些内容的使用、商用或再分发许可；下载、缓存或展示功能也不代表获得相关授权。使用这些内容时，应自行确认适用许可并保留来源与版权信息，具体范围见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+- **上游服务与数据**：本项目依赖 Bing 的外部接口和图片服务，无法控制其内容、更新频率、地区差异、访问限制或服务变更。不保证接口持续可用、始终返回完整十五日图片、图片长期可访问，或所有元数据与分辨率准确完整。收藏和缓存不等同于永久备份，重要内容应在取得相应许可后自行备份。
+- **使用与部署责任**：使用者及部署者应遵守适用法律、第三方内容许可和相关服务条款，包括适用的 [Microsoft 服务协议](https://www.microsoft.com/zh-cn/servicesagreement/)。自行部署时，应根据实际环境配置访问控制、HTTPS、安全更新和数据备份；本项目提供源码不构成对某个部署环境安全性或合规性的保证。
+- **按现状提供**：在适用法律允许的范围内，本软件按“现状”提供，不提供明示或默示担保；作者及版权持有人的责任限制以 [MIT License](LICENSE) 原文为准。本声明不变更 MIT 对项目自有代码的授权，也不排除或限制依法不得排除或限制的责任。
