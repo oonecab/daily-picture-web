@@ -136,6 +136,25 @@
   "consistency": {
     "links": [
       {
+        "id": "DP-ARCHIVE",
+        "document": {
+          "path": "docs/rules/catalog.md",
+          "contains": "DP-ARCHIVE"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "windowDays: ARCHIVE_DAYS"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "two overlapping archive pages merge into fifteen dated images with recent-page precedence"
+          }
+        ]
+      },
+      {
         "id": "DP-DATE",
         "document": {
           "path": "docs/rules/catalog.md",
@@ -182,7 +201,7 @@
         "code": [
           {
             "path": "lib/bing.mjs",
-            "contains": "Metadata is committed independently of image cache hits."
+            "contains": "image cache hits never suppress metadata updates."
           }
         ],
         "tests": [

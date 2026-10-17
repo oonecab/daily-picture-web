@@ -24,5 +24,6 @@
 | 003 | 长期、真机、PWA 等验证缺口 | [问题 003](003-validation-gaps.md) |
 | 004 | 开源许可证与第三方范围 | [问题 004](004-open-source-license.md) |
 | 005 | 首次提交并推送到 GitHub | [问题 005](005-initial-publication.md) |
+| 007 | 最近十五日归档与首页 GitHub 入口 | [问题 007](007-fifteen-day-archive.md) |
 
 当前没有外部问题跟踪服务；由项目维护者在本目录维护。既有记录编号保留，后续新文件可采用上方建议命名。

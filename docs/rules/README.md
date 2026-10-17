@@ -16,8 +16,8 @@
 
 | 规则 ID | 名称 | 权威文档 | 生效版本/日期 | 责任人 |
 |---|---|---|---|---|
-| DP-DATE / DP-IMAGE / DP-HTTP | 市场日期、图片来源与本机 HTTP 边界 | [catalog.md](catalog.md) | 1.0.0 / 2026-10-17 | 项目维护者 |
-| DP-METADATA / DP-CACHE / DP-RETRY | 元数据提交、旧数据与失败预算 | [cache.md](cache.md) | 1.0.0 / 2026-10-17 | 项目维护者 |
-| DP-LOCAL / DP-LIFECYCLE | 收藏、离线与页面生命周期 | [browser-state.md](browser-state.md) | 1.0.0 / 2026-10-17 | 项目维护者 |
+| DP-ARCHIVE / DP-DATE / DP-IMAGE / DP-HTTP | 十五日窗口、市场日期、图片来源与本机 HTTP 边界 | [catalog.md](catalog.md) | 1.1.0 / 2026-10-17 | 项目维护者 |
+| DP-METADATA / DP-CACHE / DP-RETRY | 元数据提交、旧数据与失败预算 | [cache.md](cache.md) | 1.1.0 / 2026-10-17 | 项目维护者 |
+| DP-LOCAL / DP-LIFECYCLE | 收藏、离线与页面生命周期 | [browser-state.md](browser-state.md) | 1.1.0 / 2026-10-17 | 项目维护者 |
 
-前六项规则中的已登记引用可由 manifest consistency 检查；完整测试覆盖与限制见 [测试基线](../testing/current-baseline.md)。首次建档整理现有行为，没有改变业务口径。
+七项已登记服务规则的引用可由 manifest consistency 检查；完整测试覆盖与限制见 [测试基线](../testing/current-baseline.md)。首次建档没有改变业务口径；1.1.0 的窗口扩展与兼容变化见 [问题 007](../../issues/007-fifteen-day-archive.md)。

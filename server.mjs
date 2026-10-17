@@ -34,7 +34,7 @@ export function createApp({ service = createBingService({ cacheDir: join(root, '
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.0.0' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.1.0' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/archive') {
         const result = await service.archive(url.searchParams.get('market') || 'zh-CN', url.searchParams.get('refresh') === '1');

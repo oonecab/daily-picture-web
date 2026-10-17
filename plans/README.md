@@ -16,3 +16,5 @@
 当前计划：[001 治理接入](001-governance-adoption.md)。更新计划时保留实际完成与未完成的区别，结果以关联验收记录为准。
 
 首次源码发布：[002 提交并推送到 GitHub](002-initial-publication.md)。
+
+十五日窗口扩展：[004 最近十五日与 GitHub 入口](004-fifteen-day-archive.md)。

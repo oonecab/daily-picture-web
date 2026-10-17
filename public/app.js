@@ -91,7 +91,7 @@ function renderStrip() {
   });
   if (!images().length) {
     if (state.busy && state.mode === 'browse') {
-      for (let i = 0; i < 7; i++) { const card = document.createElement('div'); card.className = 'filmstrip-placeholder'; fragment.append(card); }
+      for (let i = 0; i < 15; i++) { const card = document.createElement('div'); card.className = 'filmstrip-placeholder'; fragment.append(card); }
     } else { const message = document.createElement('p'); message.className = 'collection-empty'; message.textContent = state.mode === 'favorites' ? '你的风景故事，从一次收藏开始。' : '图片列表将在联网后显示。'; fragment.append(message); }
   }
   $('filmstrip').replaceChildren(fragment);
@@ -148,7 +148,7 @@ function setMode(mode) {
   $('browse-tab').classList.toggle('active', !favorites); $('browse-tab').setAttribute('aria-pressed', String(!favorites));
   $('favorites-tab').classList.toggle('active', favorites); $('favorites-tab').setAttribute('aria-pressed', String(favorites));
   $('page-heading').textContent = favorites ? '喜欢的风景，值得再看一遍。' : '每天，发现一点不一样。';
-  $('filmstrip-title').textContent = favorites ? '我的风景收藏' : '最近七日';
+  $('filmstrip-title').textContent = favorites ? '我的风景收藏' : '最近十五日';
   $('filmstrip-subtitle').textContent = favorites ? '每一次心动，都有迹可循' : '让美好，多停留一会儿';
   renderSelection();
 }

@@ -16,3 +16,5 @@
 [当前测试设计与覆盖关系](current-baseline.md)；[原浏览器/上游验证](../../VERIFICATION.md)；[本次初始化验收](../governance/INITIALIZATION.md)。可执行测试保持在 `test/app.test.mjs`。当前尚无自动化浏览器测试套件，不能把 Node 测试结果扩大为全部浏览器行为通过。
 
 首次源码发布的文件、摘要和远端验收见 [initial-publication.md](initial-publication.md)。
+
+1.1.0 归档扩展与首页仓库入口：[fifteen-day-archive.md](fifteen-day-archive.md)。

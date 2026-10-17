@@ -1,6 +1,6 @@
 # 浏览器状态与生命周期
 
-状态：CURRENT；基线版本：1.0.0；生效日期：2026-10-17；维护角色：项目维护者。
+状态：CURRENT；基线版本：1.1.0；生效日期：2026-10-17；维护角色：项目维护者。
 
 权威范围：[public/app.js](../../public/app.js) 和 [public/sw.js](../../public/sw.js)。短时交互证据见 [VERIFICATION.md](../../VERIFICATION.md)，未验证范围见 [问题 003](../../issues/003-validation-gaps.md)。
 
@@ -9,6 +9,8 @@
 localStorage 使用 `daily-picture-v1` 前缀，保存收藏元数据、偏好与上次归档。最多 200 个收藏，同源多标签页通过 storage 事件同步。没有账号、跨设备同步或原生 UWP 数据导入；清理网站数据会丢失这些记录。不同主机名/端口构成不同来源，不应宣称更换端口后收藏自动迁移。
 
 Service Worker 缓存应用外壳、归档、访问过的图片。离线只能使用之前成功缓存且尚未淘汰的资源；首次访问仍需服务与上游可用。图片收藏不是永久备份。安装入口由浏览器事件决定，操作系统安装并未验证。
+
+1.1.0 将外壳缓存改为 `daily-picture-v1-shell-1.1.0`，激活后淘汰旧外壳；保留 `daily-picture-v1-data`、`daily-picture-v1-images` 与原 localStorage 键，避免升级清空收藏、偏好及已缓存图片。归档窗口升级由服务端 DP-CACHE 处理，离线时仍可浏览旧数量。界面文案为“最近十五日”，计数始终取实际列表长度。
 
 ## DP-LIFECYCLE：请求与计时器
 
@@ -21,3 +23,4 @@ Service Worker 缓存应用外壳、归档、访问过的图片。离线只能�
 ## 变更记录（只追加）
 
 - 2026-10-17：依据现有实现及历史验证建立 DP-LOCAL / DP-LIFECYCLE 文档基线，保留长期验证缺口；[问题 001](../../issues/001-governance-adoption.md)。
+- 2026-10-17：1.1.0 更新十五日文案和外壳版本，保留数据缓存命名及收藏键；首页增加指定 GitHub 仓库入口；[问题 007](../../issues/007-fifteen-day-archive.md)。

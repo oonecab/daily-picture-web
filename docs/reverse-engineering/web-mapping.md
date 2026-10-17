@@ -4,7 +4,7 @@
 
 | 主题 | 原应用观察及依据 | 当前 Web 实现 | 状态 / 验证 |
 | --- | --- | --- | --- |
-| 归档来源 | [网络与下载](source/docs/network-and-download.md)：HTTP Bing 归档模板，前台默认 7 张；无显式 `mkt` | 固定 HTTPS，`idx=0&n=7`，六个显式市场；保留近七日语义 | 继承核心流程并调整传输/市场；2026-10-17 六市场实测见原验证记录 |
+| 归档来源 | [网络与下载](source/docs/network-and-download.md)：HTTP Bing 归档模板，前台默认 7 张；无显式 `mkt` | 固定 HTTPS，`idx=0&n=8` 与 `idx=7&n=8`，六个显式市场；Web 1.1.0 合并去重扩展至最近十五日 | 原生七张观察不变；Web 主动扩展，六市场各 15 项实测见 [最近十五日验收](../testing/fifteen-day-archive.md) |
 | 发布日期 | [数据模型](source/docs/data-model-and-storage.md)：保留服务返回的日期字段 | 先把 `fullstartdate` 当 UTC 时刻转为市场时区；保留原始字段，必要时回退 `startdate` | Web 规则 DP-DATE；含夏令时单测，不将原始字段直接当显示日期 |
 | 元数据落盘 | [网络与下载](source/docs/network-and-download.md)：是否下载新图影响归档提交与清理 | 元数据独立原子提交，即使图片 ID 相同也保存标题/版权变化 | 主动调整；DP-METADATA 回归测试 |
 | 图片加载 | [图片生命周期](source/docs/image-loading-and-lifetime.md)：懒加载可重复发起；解绑回调不等同清空位图 | 服务合并同键在途请求；前端切市场取消请求并用代次检查丢弃迟到结果 | 主动调整；服务去重有自动测试，浏览器地区切换有历史实测 |

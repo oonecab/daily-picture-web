@@ -15,3 +15,5 @@
 当前基线：[001 本地 Web 与可追溯治理](001-local-web-baseline.md)。里程碑记录不代表公开部署或 Windows 系统集成已完成。
 
 源码发布：[002 GitHub 首次发布](002-initial-publication.md)。
+
+1.1.0 功能扩展：[004 最近十五日浏览与项目入口](004-fifteen-day-archive.md)。

@@ -11,13 +11,19 @@
 | `market date uses the UTC publication instant, including US daylight-saving time` | DP-DATE，UTC→市场与美国夏令时 |
 | `archive normalization preserves attribution and rejects arbitrary image hosts` | DP-IMAGE，版权及来源 |
 | `image validation rejects traversal, URL injection, and unknown sizes` | DP-IMAGE，参数边界 |
-| `concurrent archive requests share one upstream request and cache metadata` | DP-CACHE，同键归档合并 |
+| `concurrent archive requests share one pair of upstream requests and cache metadata` | DP-CACHE，同键两批归档合并 |
+| `two overlapping archive pages merge into fifteen dated images with recent-page precedence` | DP-ARCHIVE，参数、去重优先级、跨月排序、共享时限、完整落盘 |
+| `each archive page validates its eighth image and rejects duplicate IDs within that page` | DP-IMAGE，第八项校验、单批重复拒绝 |
+| `merged archives are limited to the latest fifteen images even when pages do not overlap` | DP-ARCHIVE，最多 15 项 |
+| `failure of the older page cannot replace a complete cached archive with a partial result` | DP-METADATA / DP-CACHE，第二批失败时磁盘不变 |
+| `an empty older page is rejected without writing a partial archive` | DP-ARCHIVE，空批次与无缓存 502 |
+| `a fresh legacy seven-image cache is upgraded online and preserved as stale when offline` | DP-CACHE，旧窗口联网升级、离线保留 |
 | `metadata-only changes are committed even when image IDs do not change` | DP-METADATA，元数据独立提交 |
 | `a transient connection failure is retried once within the original time budget` | DP-RETRY，连接失败重试及共享信号 |
 | `network failure returns explicitly stale data, including after service restart` | DP-CACHE，重启与旧数据回退 |
 | `a corrupt archive cache can recover from the network` | DP-METADATA，缓存恢复 |
 | `non-image responses cannot poison the image cache` | DP-IMAGE，错误内容拒绝 |
-| `HTTP routes serve the app, reject writes and invalid hosts, and hide workspace files` | DP-HTTP，静态/API/Host/方法边界 |
+| `HTTP routes serve the app, reject writes and invalid hosts, and hide workspace files` | DP-HTTP，静态/API/Host/方法边界，十五日标题与 GitHub 目标/新标签属性 |
 
 ```text
 npm run check
@@ -32,6 +38,8 @@ python -X utf8 tools/verify_research.py
 [VERIFICATION.md](../../VERIFICATION.md) 是本地网页版开发阶段的原始记录：10 项自动测试、六市场实时接口、四尺寸样例解码、桌面/窄屏、收藏/设置/幻灯片、地区竞态，以及停止服务后的离线重载。该文件本次逐字保留，其真实上游与浏览器结果是历史证据，本次治理接入不自动刷新这些结论。
 
 本次接入的结构校验、资料摘要、既有文件保留与自动回归结果另记于 [初始化验收](../governance/INITIALIZATION.md)。
+
+1.1.0 新增六项测试，共 16 项；旧实现的失败证明及修改后的自动检查、真实上游和浏览器结果见 [最近十五日验收](fifteen-day-archive.md)。不覆盖或改写初版证据。
 
 ## 后续验收边界
 

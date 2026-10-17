@@ -1,5 +1,5 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell`;
+const SHELL = `${VERSION}-shell-1.1.0`;
 const DATA = `${VERSION}-data`;
 const IMAGES = `${VERSION}-images`;
 const ASSETS = ['/', '/index.html', '/styles.css', '/app.js', '/icon.svg', '/manifest.webmanifest'];
