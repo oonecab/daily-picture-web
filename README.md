@@ -16,7 +16,7 @@ cd daily-picture-web
 npm start
 ```
 
-打开 **http://localhost:8787**。请通过该地址使用应用，不要直接双击 `public/index.html`。只监听 `127.0.0.1`，本版本不提供局域网或互联网访问。
+打开 [http://localhost:8787](http://localhost:8787/)。请通过该地址使用应用，不要直接双击 `public/index.html`。只监听 `127.0.0.1`，本版本不提供局域网或互联网访问。
 
 端口被占用时可执行 `node server.mjs 8788`，然后打开对应端口。浏览器按来源（包含端口）隔离收藏与缓存；长期使用建议保持同一地址。启动器支持 `start.cmd 8788` 和用于验证的 `start.cmd --no-open`。
 
