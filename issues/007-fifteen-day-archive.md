@@ -1,6 +1,6 @@
 # 007：最近十五日图片与首页 GitHub 入口
 
-- 状态：in-progress；日期：2026-10-17（Asia/Shanghai）；负责人：项目维护者。
+- 状态：resolved；日期：2026-10-17（Asia/Shanghai）；负责人：项目维护者。
 - 类型：business-rule、api-schema、user-visible；重要变更。
 - 授权：用户要求两批请求合并去重、同步界面和测试、验证后提交推送，以及添加首页 GitHub 链接。
 - 关联：[计划 004](../plans/004-fifteen-day-archive.md)、[测试设计](../docs/testing/fifteen-day-archive.md)、[里程碑 004](../milestones/004-fifteen-day-archive.md)。ADR：none，无核心技术栈替换。
@@ -28,3 +28,4 @@ required：同步 DP-ARCHIVE、DP-IMAGE、DP-METADATA、DP-CACHE、DP-RETRY、�
 - 2026-10-17：完成范围与规则设计，先补回归测试，等待旧实现失败证明。
 - 2026-10-17：新增/调整测试在旧实现上得到 7 通过、9 失败；实现后 16/16 通过。六个市场真实调用各返回 15 项，排序、唯一性和版权字段通过检查；继续浏览器验收。
 - 2026-10-17：桌面/窄屏、首尾切换、收藏保留、新标签仓库入口及真实停服回退通过；文档、治理严格校验与研究资料完整性通过。待提交推送并核对远端。
+- 2026-10-17：功能提交 [a667893](https://github.com/oonecab/daily-picture-web/commit/a6678936620f9e366639b919cd0f76af89711408) 已推送 main，远端 SHA 与本地一致；验收完成。原部署分支保持 `8a5ad12`，未更新生产服务器。

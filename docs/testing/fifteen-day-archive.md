@@ -63,4 +63,4 @@ Node 测试使用隔离临时目录和假上游；真实 Bing 验收单独列出
 
 本次不证明 Bing 长期总能返回 15 项，不新增任意历史日期查询。真实手机、其他浏览器、PWA 系统安装、一小时实际刷新与长期压力仍按 [问题 003](../../issues/003-validation-gaps.md) 跟踪。共享超时信号由单测验证，没有实际等待 20 秒的超时端到端实验。
 
-代码与文档已具备提交条件；GitHub 推送及远端 SHA 核对将在发布完成后追加，尚不把本记录当作推送证明。
+功能提交 [a667893](https://github.com/oonecab/daily-picture-web/commit/a6678936620f9e366639b919cd0f76af89711408) 已于 2026-10-17 普通推送到 `oonecab/daily-picture-web` 的 `main`；随后 `git ls-remote origin refs/heads/main` 返回完整 SHA `a6678936620f9e366639b919cd0f76af89711408`，与本地功能提交一致。提交身份为 `oonecab <hisaohisaochao@foxmail.com>`。本段及问题/计划/里程碑状态作为后续文档提交记录此次已核实的发布，不改变应用代码；最终文档提交的远端核对结果另在交付说明中提供。
