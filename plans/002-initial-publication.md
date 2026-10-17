@@ -1,6 +1,6 @@
 # 002：首次提交并推送到 GitHub
 
-- 状态：`in-progress`
+- 状态：`completed`
 - 关联问题：[005](../issues/005-initial-publication.md)。
 - 目标里程碑：[002](../milestones/002-initial-publication.md)。
 - 负责人：项目维护者。
@@ -17,8 +17,8 @@
 
 1. `[completed]` 核对本地、远端和文件边界，整理 README 与忽略项。
 2. `[completed]` 执行已登记检查、治理检查和暂存审阅。
-3. `[in-progress]` 提交并普通推送 `main`，比较远端与本地提交。
-4. `[pending]` 追加实际推送证据并提交记录，确认最终工作区与上游状态。
+3. `[completed]` 提交并普通推送 `main`，比较远端与本地提交。
+4. `[completed]` 追加首次推送的实际核验结果，形成随仓发布的证据记录；记录提交自身的最终远端核对保存在当次交付说明中。
 
 ## 文档同步与验证
 
