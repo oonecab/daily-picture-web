@@ -1,0 +1,160 @@
+{
+  "app": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "codeview": [
+      {
+        "guid": "fe1416b8-6dd3-4fcf-aff4-5d354d9fbfac",
+        "age": 1,
+        "path": "D:\\data\\PkgProc\\mupAwdZgJkaFwBR2iGOucg\\ExtractedBundle\\Duracellko.BingImage.Universal_1.4.13.0_x64\\Duracellko.BingImage.Universal.pdb",
+        "basename": "Duracellko.BingImage.Universal.pdb",
+        "symbol_key": "FE1416B86DD34FCFAFF45D354D9FBFAC1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/Duracellko.BingImage.Universal.pdb/FE1416B86DD34FCFAFF45D354D9FBFAC1/Duracellko.BingImage.Universal.pdb"
+      }
+    ]
+  },
+  "shared": {
+    "path": "C:\\Program Files\\WindowsApps\\Microsoft.NET.Native.Framework.1.7_1.7.27413.0_x64__8wekyb3d8bbwe\\SharedLibrary.dll",
+    "sha256": "078c83815b5b6be67a397e33f0bfe125708a933f0a034545fc6a088f5eb0ce6d",
+    "codeview": [
+      {
+        "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+        "age": 1,
+        "path": "f:\\ddSetup\\SD\\2\\setup\\msis\\x86ret\\enu\\netfx_ProjectNamd64\\TestILC\\ExternalFiles\\SharedAssemblyPath\\ret\\Native\\SharedLibrary.pdb",
+        "basename": "SharedLibrary.pdb",
+        "symbol_key": "FE6DCBB5864A4F9D8101638B869D98AE1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb"
+      }
+    ]
+  },
+  "custom_descriptors": [
+    {
+      "index": 0,
+      "eat_rva": "0x29f000",
+      "iat_rva": "0x29f000",
+      "count": 0,
+      "ordinary_eat_import": null
+    },
+    {
+      "index": 1,
+      "eat_rva": "0x2a8438",
+      "iat_rva": "0x29f008",
+      "count": 4737,
+      "ordinary_eat_import": {
+        "dll": "SharedLibrary.dll",
+        "va": "0x1802a8438",
+        "name": "$NEAT$",
+        "ordinal": null
+      }
+    }
+  ],
+  "neat_export": {
+    "va": "0x18010e1d0",
+    "rva": "0x10e1d0"
+  },
+  "shared_import_range": {
+    "start": "0x18029f008",
+    "end_exclusive": "0x1802a8410",
+    "count": 4737
+  },
+  "layout_source": "https://github.com/synacktiv/dotNIET/blob/main/dotNIET_plugin.py",
+  "symbol_validation": {
+    "pdb_path": "E:\\study\\rea\\daily-picture\\evidence\\deep-symbols\\SharedLibrary.pdb",
+    "pdb_sha256": "d3200600d44d7de49f986207738efab5823cc7ac4d0b9693d134982d02ef918a",
+    "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+    "pdb_stream_age": 3,
+    "dbi_age": 1,
+    "installed_pe_codeview_age": 1,
+    "all_section_headers_match": true,
+    "section_count": 22,
+    "public_symbol_records": 55968,
+    "unique_public_symbol_addresses": 43146,
+    "source_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb",
+    "note": "PDB stream age is 3; DBI age is 1 and matches the PE CodeView age. GUID and all 22 section layouts match the installed DLL."
+  },
+  "resolved_slots": [
+    {
+      "slot_va": "0x1802a6380",
+      "slot_file_offset": "0x2a5780",
+      "raw": "0x8000000000007aa0",
+      "neat_index": 31392,
+      "neat_entry_file_offset": "0x12c250",
+      "resolved_rva": "0xc1e8",
+      "resolved_va": "0x18000c1e8",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0000081118000000887400800100000003000400e72cb8d4a8ff6c8001000000",
+      "symbols": [
+        {
+          "name": "??_7Boxed_Boolean@System@@6B@",
+          "flags": "none",
+          "record_offset": 298760,
+          "section": 1,
+          "section_offset": 45544
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x18000c1e8",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a6710",
+      "slot_file_offset": "0x2a5b10",
+      "raw": "0x8000000000007d46",
+      "neat_index": 32070,
+      "neat_entry_file_offset": "0x12cce8",
+      "resolved_rva": "0xcf28",
+      "resolved_va": "0x18000cf28",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0200000116000000b8740080010000000300070061334fb7a0196c8001000000",
+      "symbols": [
+        {
+          "name": "??_7String@System@@6B@",
+          "flags": "none",
+          "record_offset": 302116,
+          "section": 1,
+          "section_offset": 48936
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x18000cf28",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a6fe0",
+      "slot_file_offset": "0x2a63e0",
+      "raw": "0x80000000000084c7",
+      "neat_index": 33991,
+      "neat_entry_file_offset": "0x12eaec",
+      "resolved_rva": "0x7e68",
+      "resolved_va": "0x180007e68",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0000000618000000000000000000000001000300c5a326000000000000000000",
+      "symbols": [
+        {
+          "name": "??_7?$IDictionary$2@VString@System@@VObject@System@@@Generic@Collections@System@@6B@",
+          "flags": "none",
+          "record_offset": 1110852,
+          "section": 1,
+          "section_offset": 28264
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x180007e68",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    }
+  ],
+  "limitations": [
+    "No target or runtime binder execution; this maps shipped custom descriptors and SharedLibrary table bytes.",
+    "A resolved address alone does not establish its source method name; symbol or instruction corroboration is needed.",
+    "Per-address symbol records are capped at 64 with explicit total/truncation flags. Complete aliases remain in sharedlibrary-symbols.json; compiler folding can create thousands of aliases at a single ret instruction."
+  ]
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "output": "evidence/architecture-data/reused-model-projection.asm",
+    "range_start": "0x1804b9190",
+    "range_end_exclusive": "0x1804b9573",
+    "source": {
+      "path": "evidence/deep-cache/storage-json.json",
+      "sha256": "b82deaac369bc3e3a0c0560a86c755c8f108f6221b8fccf4856b12ae294559df",
+      "length": 2656578,
+      "evidence_id": "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-archive-load.asm",
+    "range_start": "0x1804b96b0",
+    "range_end_exclusive": "0x1804b9ae7",
+    "source": {
+      "path": "evidence/deep-cache/storage-json.json",
+      "sha256": "b82deaac369bc3e3a0c0560a86c755c8f108f6221b8fccf4856b12ae294559df",
+      "length": 2656578,
+      "evidence_id": "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-archive-save.asm",
+    "range_start": "0x1804ba4b0",
+    "range_end_exclusive": "0x1804bb100",
+    "source": {
+      "path": "evidence/deep-cache/storage-json.json",
+      "sha256": "b82deaac369bc3e3a0c0560a86c755c8f108f6221b8fccf4856b12ae294559df",
+      "length": 2656578,
+      "evidence_id": "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-get-image-file.asm",
+    "range_start": "0x1804bf900",
+    "range_end_exclusive": "0x1804bfb70",
+    "source": {
+      "path": "evidence/deep-cache/extra-cache.json",
+      "sha256": "8dd51bbbd46ec1d9f4bad8072302d968a6ca3c6f8d5a0a633f5e6f11575296cf",
+      "length": 570020,
+      "evidence_id": "ev_6da75649a5d884360afb0fedf9861d1ad2efaaf237aed1981b2a4a37d3c18b7c",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-desktop-boolean-read.asm",
+    "range_start": "0x18051d510",
+    "range_end_exclusive": "0x18051d5c9",
+    "source": {
+      "path": "evidence/background/desktop-settings-read.json",
+      "sha256": "a3d86fbc3998ec0bb41eb695063e37ca795a0ea240cfb8069301e2967743aaed",
+      "length": 57864,
+      "evidence_id": "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-desktop-boolean-write.asm",
+    "range_start": "0x18051d430",
+    "range_end_exclusive": "0x18051d4c9",
+    "source": {
+      "path": "evidence/background/desktop-settings-write.json",
+      "sha256": "b5c1ba2d6a4b826f00e20f7553be8bcf833188531363e0161d2c5a707b996cf0",
+      "length": 24778,
+      "evidence_id": "ev_7084e6e44d29757c7880cdc784d6befef86e55f914dc8c3c59618477da2df0e9",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-lockscreen-boolean-read.asm",
+    "range_start": "0x18051d730",
+    "range_end_exclusive": "0x18051d7e9",
+    "source": {
+      "path": "evidence/background/lockscreen-settings-read.json",
+      "sha256": "bd6f5f26ddc9c191436f53c4c54dcd0598dd122f96e2e08e04d7b67220e4ae84",
+      "length": 55950,
+      "evidence_id": "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  },
+  {
+    "output": "evidence/architecture-data/reused-lockscreen-boolean-write.asm",
+    "range_start": "0x18051d650",
+    "range_end_exclusive": "0x18051d6e9",
+    "source": {
+      "path": "evidence/background/lockscreen-settings-write.json",
+      "sha256": "e46690032dadcbc491c4e25e0683bab9dec21fdcb148deadd34905c9683168eb",
+      "length": 24778,
+      "evidence_id": "ev_0af13c153f19e30616e1011b6db241a4091bf306f23a888552a19a0c40b4b697",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    }
+  }
+]

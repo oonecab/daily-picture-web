@@ -1,0 +1,508 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "scan_scope": "all executable section bytes; selected REX RIP lea/mov, E8/E9 and FF15/FF25 patterns; .pdata boundaries used as attribution, instruction alignment not assumed",
+  "references": [
+    {
+      "instruction": "0x1804a1d71",
+      "target": "0x1804a20e0",
+      "label": "MainVM factory",
+      "kind": "direct call/jump candidate",
+      "bytes": "e86a030000",
+      "owner": {
+        "start": "0x1804a1d50",
+        "end": "0x1804a1de1",
+        "length": 145,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x1804a2287",
+      "target": "0x18001c678",
+      "label": "MainVM EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0deaa3b7ff",
+      "owner": {
+        "start": "0x1804a20e0",
+        "end": "0x1804a22bd",
+        "length": 477,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a22a5",
+      "target": "0x1804a22c0",
+      "label": "MainVM ctor",
+      "kind": "direct call/jump candidate",
+      "bytes": "e816000000",
+      "owner": {
+        "start": "0x1804a20e0",
+        "end": "0x1804a22bd",
+        "length": 477,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2371",
+      "target": "0x18001d2c0",
+      "label": "DispatcherTimer wrapper EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0d48afb7ff",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2384",
+      "target": "0x1804a4f20",
+      "label": "DispatcherTimer wrapper ctor",
+      "kind": "direct call/jump candidate",
+      "bytes": "e8972b0000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2396",
+      "target": "0x18001d2c0",
+      "label": "DispatcherTimer wrapper EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0d23afb7ff",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a23a9",
+      "target": "0x1804a4f20",
+      "label": "DispatcherTimer wrapper ctor",
+      "kind": "direct call/jump candidate",
+      "bytes": "e8722b0000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a27a7",
+      "target": "0x1804a38e0",
+      "label": "add_Tick wrapper",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "4c8d0532110000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a27ba",
+      "target": "0x1804a38b0",
+      "label": "remove_Tick wrapper",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d15ef100000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a27dd",
+      "target": "0x1804a3910",
+      "label": "notification Tick",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "4c8d052c110000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2868",
+      "target": "0x1800084e0",
+      "label": "IDispatcherTimer EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d15715cb6ff",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a288b",
+      "target": "0x1804a38e0",
+      "label": "add_Tick wrapper",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "4c8d054e100000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a289e",
+      "target": "0x1804a38b0",
+      "label": "remove_Tick wrapper",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d150b100000",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a28c1",
+      "target": "0x180602cc0",
+      "label": "download Tick thunk",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "4c8d05f8031600",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a294c",
+      "target": "0x1800084e0",
+      "label": "IDispatcherTimer EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d158d5bb6ff",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2962",
+      "target": "0x18010f128",
+      "label": "timer Start/Stop context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0dbfc7c6ff",
+      "owner": {
+        "start": "0x1804a22c0",
+        "end": "0x1804a29a4",
+        "length": 1764,
+        "unwind_rva": "0x14afb4"
+      }
+    },
+    {
+      "instruction": "0x1804a2d29",
+      "target": "0x1804a2e90",
+      "label": "show notification",
+      "kind": "direct call/jump candidate",
+      "bytes": "e862010000",
+      "owner": {
+        "start": "0x1804a2d19",
+        "end": "0x1804a2d3a",
+        "length": 33,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x1804a2ef7",
+      "target": "0x18010f128",
+      "label": "timer Start/Stop context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d3d2ac2c6ff",
+      "owner": {
+        "start": "0x1804a2e90",
+        "end": "0x1804a2f42",
+        "length": 178,
+        "unwind_rva": "0x14ae08"
+      }
+    },
+    {
+      "instruction": "0x1804a38b7",
+      "target": "0x18010f138",
+      "label": "timer remove context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0d7ab8c6ff",
+      "owner": {
+        "start": "0x1804a38b0",
+        "end": "0x1804a38d5",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x1804a38e7",
+      "target": "0x18010f148",
+      "label": "timer add context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0d5ab8c6ff",
+      "owner": {
+        "start": "0x1804a38e0",
+        "end": "0x1804a3905",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x1804a3920",
+      "target": "0x18010f128",
+      "label": "timer Start/Stop context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d0d01b8c6ff",
+      "owner": {
+        "start": "0x1804a3910",
+        "end": "0x1804a398d",
+        "length": 125,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x1804a3bd8",
+      "target": "0x1804a2e90",
+      "label": "show notification",
+      "kind": "direct call/jump candidate",
+      "bytes": "e8b3f2ffff",
+      "owner": {
+        "start": "0x1804a3ae0",
+        "end": "0x1804a3cd1",
+        "length": 497,
+        "unwind_rva": "0x14b54c"
+      }
+    },
+    {
+      "instruction": "0x1804a4358",
+      "target": "0x1804a2e90",
+      "label": "show notification",
+      "kind": "direct call/jump candidate",
+      "bytes": "e833ebffff",
+      "owner": {
+        "start": "0x1804a4260",
+        "end": "0x1804a4451",
+        "length": 497,
+        "unwind_rva": "0x14b54c"
+      }
+    },
+    {
+      "instruction": "0x1804a4b2e",
+      "target": "0x1804a2e90",
+      "label": "show notification",
+      "kind": "direct call/jump candidate",
+      "bytes": "e85de3ffff",
+      "owner": {
+        "start": "0x1804a4760",
+        "end": "0x1804a4c39",
+        "length": 1241,
+        "unwind_rva": "0x14b3bc"
+      }
+    },
+    {
+      "instruction": "0x1804a4f66",
+      "target": "0x18001d2c0",
+      "label": "DispatcherTimer wrapper EEType",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d155383b7ff",
+      "owner": {
+        "start": "0x1804a4f50",
+        "end": "0x1804a5071",
+        "length": 289,
+        "unwind_rva": "0x14b06c"
+      }
+    },
+    {
+      "instruction": "0x180531e23",
+      "target": "0x18010f128",
+      "label": "timer Start/Stop context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d3dfed2bdff",
+      "owner": {
+        "start": "0x180531e10",
+        "end": "0x180531e5e",
+        "length": 78,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x180531f18",
+      "target": "0x1802a4700",
+      "label": "managed removal helper import",
+      "kind": "RIP-indirect call/jump candidate",
+      "bytes": "ff15e227d7ff",
+      "owner": {
+        "start": "0x180531e90",
+        "end": "0x180531f4f",
+        "length": 191,
+        "unwind_rva": "0x14ae08"
+      }
+    },
+    {
+      "instruction": "0x180531f2d",
+      "target": "0x1802a4728",
+      "label": "native/static removal helper import",
+      "kind": "RIP-indirect call/jump candidate",
+      "bytes": "ff15f527d7ff",
+      "owner": {
+        "start": "0x180531e90",
+        "end": "0x180531f4f",
+        "length": 191,
+        "unwind_rva": "0x14ae08"
+      }
+    },
+    {
+      "instruction": "0x18053eb94",
+      "target": "0x18010f128",
+      "label": "timer Start/Stop context",
+      "kind": "RIP-relative lea/mov candidate",
+      "bytes": "488d3d8d05bdff",
+      "owner": {
+        "start": "0x18053eb80",
+        "end": "0x18053ebc6",
+        "length": 70,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x1805b26e3",
+      "target": "0x1802a4700",
+      "label": "managed removal helper import",
+      "kind": "RIP-indirect call/jump candidate",
+      "bytes": "ff151720cfff",
+      "owner": {
+        "start": "0x1805b2690",
+        "end": "0x1805b2716",
+        "length": 134,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x1805b26f8",
+      "target": "0x1802a4728",
+      "label": "native/static removal helper import",
+      "kind": "RIP-indirect call/jump candidate",
+      "bytes": "ff152a20cfff",
+      "owner": {
+        "start": "0x1805b2690",
+        "end": "0x1805b2716",
+        "length": 134,
+        "unwind_rva": "0x14adf4"
+      }
+    }
+  ],
+  "type_layout_candidates": [
+    {
+      "type": "0x18001c678",
+      "bytes": "00002001a0000000d86000800100000003000200205dee8660826080010000006882608001000000708260800100000051512a800100000049672a800100000028cf14800100000078ffffff00000000e0ffffffffffffff1800000000000000e0ffffffffffffff080000000000000002000000000000000000240028000000",
+      "relative_table_candidate": "0x1001695e0",
+      "consecutive_pdata_start_entries": []
+    },
+    {
+      "type": "0x18001d2c0",
+      "bytes": "0000240160000000a8512a8001000000030002004310085f288760800100000068826080010000007082608001000000697f2a8001000000e0840080010000008cce14800100000000000002180000000000000000000000000000008152634d0000000218000000000000000000000000000000cd51af1c0000000218000000",
+      "relative_table_candidate": "0x10016a18c",
+      "consecutive_pdata_start_entries": []
+    },
+    {
+      "type": "0x1800084e0",
+      "bytes": "00000002180000000000000000000000000000006a87105e0000000218000000000000000000000000000000bc2a5ce2e0ffffffffffffff08000000000000000100000000000000000024003000000038662a800100000007000100bc3d5a1d60826080010000003087608001000000388760800100000090625b8001000000",
+      "relative_table_candidate": "0x180008521",
+      "consecutive_pdata_start_entries": []
+    }
+  ],
+  "absolute_pointer_occurrences": [
+    {
+      "target": "0x18001c678",
+      "label": "MainVM EEType",
+      "qword_occurrences": []
+    },
+    {
+      "target": "0x18001d2c0",
+      "label": "DispatcherTimer wrapper EEType",
+      "qword_occurrences": [
+        {
+          "file_offset": "0x2e5bd0",
+          "va": "0x1802e67d0",
+          "section": ".data"
+        },
+        {
+          "file_offset": "0x2ed998",
+          "va": "0x1802ee598",
+          "section": ".data"
+        }
+      ]
+    },
+    {
+      "target": "0x1800084e0",
+      "label": "IDispatcherTimer EEType",
+      "qword_occurrences": [
+        {
+          "file_offset": "0x1c8f8",
+          "va": "0x18001d2f8",
+          "section": ".rdata"
+        },
+        {
+          "file_offset": "0x10e728",
+          "va": "0x18010f128",
+          "section": ".rdata"
+        },
+        {
+          "file_offset": "0x10e738",
+          "va": "0x18010f138",
+          "section": ".rdata"
+        },
+        {
+          "file_offset": "0x10e748",
+          "va": "0x18010f148",
+          "section": ".rdata"
+        },
+        {
+          "file_offset": "0x2e5bc8",
+          "va": "0x1802e67c8",
+          "section": ".data"
+        }
+      ]
+    },
+    {
+      "target": "0x1804a38b0",
+      "label": "remove_Tick wrapper",
+      "qword_occurrences": []
+    },
+    {
+      "target": "0x1804a38e0",
+      "label": "add_Tick wrapper",
+      "qword_occurrences": []
+    },
+    {
+      "target": "0x1804a3910",
+      "label": "notification Tick",
+      "qword_occurrences": []
+    },
+    {
+      "target": "0x180602cc0",
+      "label": "download Tick thunk",
+      "qword_occurrences": []
+    }
+  ],
+  "limitations": [
+    "No references found is bounded to these encodings and targets; indirect/delegate/reflection/dynamic construction can evade this inventory.",
+    "Relative method table candidates stop at the first value not matching a .pdata function start; they are not a full type/interface parser."
+  ]
+}

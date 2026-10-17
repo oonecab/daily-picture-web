@@ -1,0 +1,304 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "image_base": "0x180000000",
+  "mainvm": {
+    "ee_type": "0x18001c678",
+    "header_bytes": "00002001a0000000d86000800100000003000200205dee86",
+    "base_type": "0x1800060d8",
+    "virtual_slot_count": 3,
+    "interface_count": 2,
+    "virtual_slots": [
+      {
+        "field": "0x18001c690",
+        "value": "0x180608260",
+        "owner": null
+      },
+      {
+        "field": "0x18001c698",
+        "value": "0x180608268",
+        "owner": null
+      },
+      {
+        "field": "0x18001c6a0",
+        "value": "0x180608270",
+        "owner": null
+      }
+    ],
+    "interface_entries": [
+      {
+        "field": "0x18001c6a8",
+        "value": "0x1802a5151"
+      },
+      {
+        "field": "0x18001c6b0",
+        "value": "0x1802a6749"
+      }
+    ],
+    "interface_names": {
+      "0x1802a5151": "tagged indirect import 0x1802a5150: INotifyPropertyChanged",
+      "0x1802a6749": "tagged indirect import 0x1802a6748: IDisposable"
+    },
+    "interface_symbol_evidence": "evidence/timer-cleanup/interface-event-symbols.json",
+    "extra_method_table": {
+      "field": "0x18001c6c0",
+      "field_offset": "0x48",
+      "field_bytes": "78ffffff",
+      "table": "0x18001c638",
+      "entry_bytes": "d8575100",
+      "entry_target": "0x180531e10",
+      "owner": {
+        "start": "0x180531e10",
+        "end": "0x180531e5e",
+        "length": 78,
+        "unwind_rva": "0x14adf4"
+      },
+      "confidence": "derived-high",
+      "limit": "The selected pointer chain and interface identity are validated, not the complete runtime dispatch-map format."
+    },
+    "dispose_unwind": {
+      "address": "0x18014adf4",
+      "header_bytes": "010603000642027001300000",
+      "version": 1,
+      "flags": 0,
+      "limitation": "PE UNWIND_INFO flags are observed only; .NET Native managed EH metadata has not been fully decoded. A zero flag does not rule out every local managed exception handler."
+    },
+    "discarded_hypothesis": "A generic +0x40 relative-table interpretation is inapplicable here: +0x40 holds 0x18014cf28. The earlier reference-inventory.json candidate is not used as a method mapping."
+  },
+  "navigator": {
+    "ee_type": "0x18001bd50",
+    "header_bytes": "0000300020000000e0bd018001000000060002006579f790",
+    "base_type": "0x18001bde0",
+    "virtual_slot_count": 6,
+    "interface_count": 2,
+    "virtual_slots": [
+      {
+        "field": "0x18001bd68",
+        "value": "0x180608260",
+        "owner": null
+      },
+      {
+        "field": "0x18001bd70",
+        "value": "0x180608268",
+        "owner": null
+      },
+      {
+        "field": "0x18001bd78",
+        "value": "0x180608270",
+        "owner": null
+      },
+      {
+        "field": "0x18001bd80",
+        "value": "0x1804a1cb0",
+        "owner": {
+          "start": "0x1804a1cb0",
+          "end": "0x1804a1d4b",
+          "length": 155,
+          "unwind_rva": "0x14adec"
+        }
+      },
+      {
+        "field": "0x18001bd88",
+        "value": "0x1804a1d50",
+        "owner": {
+          "start": "0x1804a1d50",
+          "end": "0x1804a1de1",
+          "length": 145,
+          "unwind_rva": "0x14adf4"
+        }
+      },
+      {
+        "field": "0x18001bd90",
+        "value": "0x1804a1c30",
+        "owner": {
+          "start": "0x1804a1c30",
+          "end": "0x1804a1cac",
+          "length": 124,
+          "unwind_rva": "0x14adf4"
+        }
+      }
+    ],
+    "interface_entries": [
+      {
+        "field": "0x18001bd98",
+        "value": "0x180006120"
+      },
+      {
+        "field": "0x18001bda0",
+        "value": "0x1802a6749"
+      }
+    ]
+  },
+  "timer_interface": {
+    "name": "IDispatcherTimer",
+    "namespace": "Windows.UI.Xaml",
+    "iid": "d160ce46-cd22-4f5f-8c97-40e61da3e2dc",
+    "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+    "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+    "guid_attribute": {
+      "name": "Windows.Foundation.Metadata.GuidAttribute",
+      "blob": "010046CE60D122CD5F4F8C9740E61DA3E2DC0000",
+      "guid": "d160ce46-cd22-4f5f-8c97-40e61da3e2dc"
+    },
+    "iid_hits": [
+      {
+        "iid_va": "0x1802e67e0",
+        "iid_file_offset": "0x2e5be0",
+        "preceding_type_pointer": "0x1800084e0",
+        "surrounding_bytes": "e084008001000000c0d2018001000000000000000000000046ce60d122cd5f4f8c9740e61da3e2dc01000000000000000000000000000000"
+      }
+    ],
+    "methods": [
+      {
+        "slot": 6,
+        "name": "get_Interval",
+        "signature": "200011B411"
+      },
+      {
+        "slot": 7,
+        "name": "put_Interval",
+        "signature": "20010111B411"
+      },
+      {
+        "slot": 8,
+        "name": "get_IsEnabled",
+        "signature": "200002"
+      },
+      {
+        "slot": 9,
+        "name": "add_Tick",
+        "signature": "200111B3C51512B3C9011C"
+      },
+      {
+        "slot": 10,
+        "name": "remove_Tick",
+        "signature": "20010111B3C5"
+      },
+      {
+        "slot": 11,
+        "name": "Start",
+        "signature": "200001"
+      },
+      {
+        "slot": 12,
+        "name": "Stop",
+        "signature": "200001"
+      }
+    ]
+  },
+  "timer_contexts": [
+    {
+      "address": "0x18010f128",
+      "bytes": "e08400800100000055f32f2900000000",
+      "first_type_pointer": "0x1800084e0",
+      "interface": "IDispatcherTimer"
+    },
+    {
+      "address": "0x18010f138",
+      "bytes": "e084008001000000469d8e3600000000",
+      "first_type_pointer": "0x1800084e0",
+      "interface": "IDispatcherTimer"
+    },
+    {
+      "address": "0x18010f148",
+      "bytes": "e08400800100000067bd226b00000000",
+      "first_type_pointer": "0x1800084e0",
+      "interface": "IDispatcherTimer"
+    }
+  ],
+  "system_navigation_interfaces": [
+    {
+      "name": "ISystemNavigationManager",
+      "iid": "93023118-cf50-42a6-9706-69107fa122e1",
+      "source": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e8a60",
+          "type": "0x18000c4a0",
+          "bytes": "a0c400800100000038c400800100000000000000000000001831029350cfa642970669107fa122e1"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "add_BackRequested",
+          "signature": "20011196D91512977D01128765"
+        },
+        {
+          "slot": 7,
+          "name": "remove_BackRequested",
+          "signature": "2001011196D9"
+        }
+      ]
+    },
+    {
+      "name": "ISystemNavigationManager2",
+      "iid": "8c510401-67be-49ae-9509-671c1e54a389",
+      "source": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e8aa0",
+          "type": "0x18000c488",
+          "bytes": "88c400800100000038c400800100000000000000000000000104518cbe67ae499509671c1e54a389"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_AppViewBackButtonVisibility",
+          "signature": "200011875D"
+        },
+        {
+          "slot": 7,
+          "name": "put_AppViewBackButtonVisibility",
+          "signature": "20010111875D"
+        }
+      ]
+    },
+    {
+      "name": "ISystemNavigationManagerStatics",
+      "iid": "dc52b5ce-bee0-4305-8c54-68228ed683b5",
+      "source": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e8a20",
+          "type": "0x18000c540",
+          "bytes": "40c500800100000000000000000000000000000000000000ceb552dce0be05438c5468228ed683b5"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetForCurrentView",
+          "signature": "20001288D1"
+        }
+      ]
+    }
+  ],
+  "system_navigation_contexts": [
+    {
+      "address": "0x18010f100",
+      "bytes": "40c500800100000038c4008001000000",
+      "type": "0x18000c540",
+      "matched_interfaces": [
+        "ISystemNavigationManagerStatics"
+      ]
+    },
+    {
+      "address": "0x18010f118",
+      "bytes": "88c4008001000000e92c78a7ffffffff",
+      "type": "0x18000c488",
+      "matched_interfaces": [
+        "ISystemNavigationManager2"
+      ]
+    }
+  ],
+  "limitations": [
+    "Method/type names of app classes are reconstructed semantic labels; exact framework interface names come from a validated PDB or local WinMD.",
+    "Static metadata does not prove any lifecycle or finalizer invocation.",
+    "These two EEType layouts were decoded with their own counts and validated field contents; offsets must not be copied to unrelated types."
+  ]
+}

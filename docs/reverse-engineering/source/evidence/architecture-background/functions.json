@@ -1,0 +1,721 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "image_base": "0x180000000",
+  "functions": [
+    {
+      "address": "0x1804a08a0",
+      "role": "后台权限请求、旧任务清理与登记状态机",
+      "evidence_paths": [
+        "evidence/background/task-registration.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0a76",
+      "evidence_ids": [
+        "ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0a76",
+      "role": "后台登记异常完成 funclet",
+      "evidence_paths": [
+        "evidence/architecture-background/registration-exception.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0aa1",
+      "evidence_ids": [
+        "ev_6aa94b16ebeccc1fa3b3c33eeda0c4e8fb1c09226a5eed8052d9302eca7afb86"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0ab0",
+      "role": "按名称检查后创建后台任务 builder",
+      "evidence_paths": [
+        "evidence/background/background-builder.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0ba7",
+      "evidence_ids": [
+        "ev_7c719583d48638766d6526248c091a9edcd4cbad0cea540aca6b29917601f6ff"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0be0",
+      "role": "按任务名查找注册对象",
+      "evidence_paths": [
+        "evidence/background/background-task-find.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804a0c8a",
+      "evidence_ids": [
+        "ev_f70bdc13e6209974c6cf2736ac5f74876b81f73e347bc0c479a646e3bfda5e16"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0d90",
+      "role": "TimeTrigger 构造包装器",
+      "evidence_paths": [
+        "evidence/background/time-trigger.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0dce",
+      "evidence_ids": [
+        "ev_5851ce0242f869ac690d9bf4dcc68b9e073854b1eb15fc6c4301148a5f9d2d91"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0dd0",
+      "role": "TimeTrigger 工厂 ABI 包装器",
+      "evidence_paths": [
+        "evidence/background/time-trigger-factory.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0e93",
+      "evidence_ids": [
+        "ev_9e770d83bef3f875364c68d76788aeb8951f8871baf9e8f745c5afee7590967f"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0c90",
+      "role": "SystemCondition 构造包装器",
+      "evidence_paths": [
+        "evidence/background/system-condition.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804a0cc4",
+      "evidence_ids": [
+        "ev_8358ad6bb8aca5bebbd70f76799cf98093375f7d6ee02f3df89cbf97ed0c34ce"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a0f80",
+      "role": "旧任务名单清理，Unregister(true) 语义",
+      "evidence_paths": [
+        "evidence/background/old-task-unregister.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804a101d",
+      "evidence_ids": [
+        "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x180432c20",
+      "role": "二依赖对象字段初始化构造器",
+      "evidence_paths": [
+        "evidence/architecture-background/dependency-constructor-two.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x180432c58",
+      "evidence_ids": [
+        "ev_ccb68365e65666fbf80d599f452302075b6a4602a987f096323813f34351972f"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x180382c10",
+      "role": "三依赖对象字段初始化构造器",
+      "evidence_paths": [
+        "evidence/architecture-background/dependency-constructor-three.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x180382c5c",
+      "evidence_ids": [
+        "ev_ce066679cc4d98bff78058fa0546df6c81acba745b0c014eb2f8e990fc9073f6"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18055e200",
+      "role": "IBackgroundTask.Run 的反向 WinRT ABI 桥",
+      "evidence_paths": [
+        "evidence/architecture-background/deferral-bridge.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x18055e25c",
+      "evidence_ids": [
+        "ev_c6da20d2dcb9a962ce95e8d2fff0a76c904d4e30c4e989a8be8d8355fa93252e"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1805a3a70",
+      "role": "IBackgroundTaskInstance.GetDeferral 投影",
+      "evidence_paths": [
+        "evidence/architecture-background/get-deferral-projection.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1805a3a8f",
+      "evidence_ids": [
+        "ev_6b283cb672e12123e49a70c855aa95d6e1b7e6185329045a253de0a974e3b44c"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c2900",
+      "role": "后台 Run 异步 void 包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c29ad",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c29b0",
+      "role": "后台 Run：构造依赖及依次更新磁贴、锁屏、桌面",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c2cd8",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c2770",
+      "role": "磁贴更新调用及异常隔离状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c281d",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c2540",
+      "role": "锁屏更新调用及异常隔离状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c25ed",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c2310",
+      "role": "桌面更新调用及异常隔离状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c23bd",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c2d40",
+      "role": "BackgroundTaskDeferral.Complete ABI 包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c2d5f",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bd770",
+      "role": "磁贴自动更新异步包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804bd80f",
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bd810",
+      "role": "磁贴自动更新完整状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bdbce",
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be170",
+      "role": "桌面自动更新异步包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804be224",
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be230",
+      "role": "桌面自动开关检查、单图获取与系统应用状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804be4be",
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1bf0",
+      "role": "锁屏自动更新异步包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804c1ca4",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1cb0",
+      "role": "锁屏自动开关检查、单图获取与系统应用状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c1f3e",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1803eec30",
+      "role": "FirstOrDefault 语义：取集合第一项或默认值",
+      "evidence_paths": [
+        "evidence/architecture-background/archive-first-selector.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1803eed10",
+      "evidence_ids": [
+        "ev_105b6abd3a86d44b5864cb5d9a864a7b24e46cd0f80ae88ad9a54ed9b4facccd"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bd1b0",
+      "role": "选归档第一张并与 CurrentLiveTileImageUrl 去重",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-convert-and-select.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bd21a",
+      "evidence_ids": [
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be100",
+      "role": "选归档第一张并与 CurrentDesktopBackgroundImageUrl 去重",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804be16a",
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1b80",
+      "role": "选归档第一张并与 CurrentLockScreenImageUrl 去重",
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c1bea",
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bc790",
+      "role": "磁贴图像解码与像素参数提取状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-convert-and-select.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bcaef",
+      "evidence_ids": [
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bbbb0",
+      "role": "LiveTiles PNG 文件编码与保存状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bc101",
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bb330",
+      "role": "磁贴310×150中心裁切尺寸计算",
+      "evidence_paths": [
+        "evidence/architecture-background/image-resize.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bb429",
+      "evidence_ids": [
+        "ev_a00d5eb93ea8d850f16b612e677d184f8e96f44f32ca6d1542932554123e411e"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bb430",
+      "role": "设置BitmapTransform缩放与裁切属性",
+      "evidence_paths": [
+        "evidence/architecture-background/image-resize.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bb50b",
+      "evidence_ids": [
+        "ev_a00d5eb93ea8d850f16b612e677d184f8e96f44f32ca6d1542932554123e411e"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bc200",
+      "role": "BitmapEncoder.SetPixelData 参数包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-encoder-set-pixels.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bc23f",
+      "evidence_ids": [
+        "ev_c6a81a5d3fb6c9d934d07f551050575ed8befced4ebf9e4e515a79312ba6df57"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bb510",
+      "role": "构建TileWideImage通知并设UtcNow+2日期限后发布",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bb6c2",
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bb6d0",
+      "role": "设置磁贴通知过期时间 ABI 包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bb773",
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bd2d0",
+      "role": "保留当前磁贴文件并清理其他文件的状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/tile-convert-and-select.json"
+      ],
+      "confidence": "derived-high",
+      "end_exclusive": "0x1804bd49f",
+      "evidence_ids": [
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804b6d40",
+      "role": "TrySetWallpaperImageAsync 布尔分支、清理及失败抛错",
+      "evidence_paths": [
+        "evidence/architecture-background/desktop-personalization-apply.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804b6faa",
+      "evidence_ids": [
+        "ev_94271ed3e40ff7b78535978d727e6d87b315b17fbc9a88eefc152dd5e6330e6c"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804b4190",
+      "role": "TrySetLockScreenImageAsync 布尔分支、清理及失败抛错",
+      "evidence_paths": [
+        "evidence/architecture-background/lockscreen-personalization-apply.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804b43fa",
+      "evidence_ids": [
+        "ev_881031a01d5e7e4e0837d4b8601333bd619da146c96171ab47e185b0aebfce92"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1380",
+      "role": "传统LockScreen.SetImageStreamAsync 异步状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/personalization-providers.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c143a",
+      "evidence_ids": [
+        "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1510",
+      "role": "传统LockScreen.SetImageStreamAsync ABI 包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/personalization-providers.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c154b",
+      "evidence_ids": [
+        "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c15f0",
+      "role": "传统LockScreen.SetImageFileAsync 异步状态机",
+      "evidence_paths": [
+        "evidence/architecture-background/personalization-providers.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c16aa",
+      "evidence_ids": [
+        "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804c1780",
+      "role": "传统LockScreen.SetImageFileAsync ABI 包装器",
+      "evidence_paths": [
+        "evidence/architecture-background/personalization-providers.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804c17bb",
+      "evidence_ids": [
+        "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18051d810",
+      "role": "UserProfilePersonalizationSettings.IsSupported",
+      "evidence_paths": [
+        "evidence/architecture-background/settings-and-capabilities.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x18051d843",
+      "evidence_ids": [
+        "ev_db635d3433ce4d0069a503fff410c877118a715e052c6f088b2afc0b7781dd2c"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18051d430",
+      "role": "写UseBingImageAsDesktopBackground",
+      "evidence_paths": [
+        "evidence/background/desktop-settings-write.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x18051d4c8",
+      "evidence_ids": [
+        "ev_7084e6e44d29757c7880cdc784d6befef86e55f914dc8c3c59618477da2df0e9"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18051d510",
+      "role": "读UseBingImageAsDesktopBackground，缺省false",
+      "evidence_paths": [
+        "evidence/background/desktop-settings-read.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x18051d5c8",
+      "evidence_ids": [
+        "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18051d650",
+      "role": "写UseBingImageAsLockScreen",
+      "evidence_paths": [
+        "evidence/background/lockscreen-settings-write.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x18051d6e8",
+      "evidence_ids": [
+        "ev_0af13c153f19e30616e1011b6db241a4091bf306f23a888552a19a0c40b4b697"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18051d730",
+      "role": "读UseBingImageAsLockScreen，缺省false",
+      "evidence_paths": [
+        "evidence/background/lockscreen-settings-read.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x18051d7e8",
+      "evidence_ids": [
+        "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be7f0",
+      "role": "写CurrentLiveTileImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804be872",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be880",
+      "role": "读CurrentLiveTileImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804be909",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be910",
+      "role": "写CurrentDesktopBackgroundImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804be992",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804be9a0",
+      "role": "读CurrentDesktopBackgroundImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bea29",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bea30",
+      "role": "写CurrentLockScreenImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804beab2",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804beac0",
+      "role": "读CurrentLockScreenImageUrl",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804beb49",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804beb50",
+      "role": "单键从Roaming复制到Local并将旧值赋null",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804bec78",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804bec80",
+      "role": "迁移两个锁屏旧设置入口",
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "confidence": "confirmed",
+      "end_exclusive": "0x1804beca2",
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "name_kind": "semantic-role-not-original-source-symbol"
+    }
+  ]
+}

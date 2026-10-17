@@ -1,0 +1,142 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "evidence": [
+    {
+      "path": "evidence/app-lifecycle/app-allocation.json",
+      "evidence_id": "ev_6fd03e9b8bdac1cee0953838946d4da5386a7b827142437a699bf00963748885",
+      "sha256": "a1b14b56957806e17577edabfb4b38a0a139c5a1e5916656539f480a55676a75",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-constructor-pseudocode.json",
+      "evidence_id": "ev_f5f9c330c2087bfa6406e046011719907eb48f399b9645f6a70d7cb3cf93c888",
+      "sha256": "94f3a4335e0fa36d3588adf88db237f76de99c62bc576bc66ac5846efca99717",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-constructor-real.json",
+      "evidence_id": "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+      "sha256": "fd0df710c5fdf69288e09183497bb8a593a24b11bee455eb63d515a7c14d226a",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-dispose-pseudocode.json",
+      "evidence_id": "ev_f11a85900dc99e99071efbcd09721996b63095229acd74bc0916d6deabf78e02",
+      "sha256": "fa73727fb610222e7cc20c2ffdfff58d6e56ea78e23affe8f0455e002d810594",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-nearby.json",
+      "evidence_id": "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640",
+      "sha256": "2f11af8348591bbf783e72ac107de2654c210db9f26a36d03927af890ec35a62",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-start-and-interfaces.json",
+      "evidence_id": "ev_455f62b34dbe737bb05565a7cbce5646da584e1adf939f57f2347e473ba55be9",
+      "sha256": "53920fb7dbe096910be3dbd2bc52f93e8baf7c9d68246f6cdc708ac1ec655f8f",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/app-start-cctor.json",
+      "evidence_id": "ev_83426cca2242473d189de474deb1714ace3b8bdb0ed993e71b8457ca879adf24",
+      "sha256": "0b945e11604a2e825cabb0e7ae6bf5ccf17057b8b7769681c9d8513b85a70274",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/application-event-projections.json",
+      "evidence_id": "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e",
+      "sha256": "86950698101ab459cd665d9a4d2619f60b1f7c2d4041707aae1cac4472b2f633",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/application-start-projection.json",
+      "evidence_id": "ev_9085c4f89f8264c8b0567d0a98b30cdbdad89a74209017dfe640bba479cab191",
+      "sha256": "03165095c246db0bb30a3c6bbc7279f75479e3ce3c31279012cbcf70f8176576",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/base-onlaunched-projection.json",
+      "evidence_id": "ev_c7ea8672e8f41aa29cc97cb28ec6f1dd3902e8b2e3acaf5e8d4f2dc47986b0a9",
+      "sha256": "aee9a30c01b4389d4f2881dc79b99f5f7e7aece8d3a74225f05e3ed5bcc8dbd2",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/lifecycle-event-accessors.json",
+      "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+      "sha256": "273e8066f4198c6d5df337db72b1009149812b31ed9100fe0a9be4a1a3580538",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/onlaunched-interface-dispatch.json",
+      "evidence_id": "ev_e308beaad09b6a25db0575d918c826a49634db00232e7f01d3d80c86c65357ef",
+      "sha256": "739d5cdcbaba5a4c64fb58582b130fa2116c24250a40c956065f9a37794e8c2c",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/onlaunched-pseudocode.json",
+      "evidence_id": "ev_c81b8372c8bd30ebcbd24e56eaa61afe0c5fb63ebee383b0847908a1c62c2795",
+      "sha256": "8cb90441615ff807be07bbf2d7eb40c090731e62046896a5f9e54982b686876c",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/app-lifecycle/suspending-pseudocode.json",
+      "evidence_id": "ev_d62b720c827f1e47f24da08df5dcc165561bb9d95f910c3412f3006cfe3b081c",
+      "sha256": "97b5bbcc924bf28bb8444cef259402ed459c0f6f2bdf311e8bb061f47735a4a4",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-ui/app-constructor.json",
+      "evidence_id": "ev_bda048b4579340be4b5293ade7fd5e18a9436c60c289904e23e1dcdf18c68016",
+      "sha256": "9142cd8a2ccd8e6ad22894aed619c8e5da10d30a385d06d890bfa55633259813",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-ui/app-lifecycle-candidate.json",
+      "evidence_id": "ev_ec4ca01bd51f99b16983649e566c60e119d609e71611ae86e05593e3cb9324b2",
+      "sha256": "f3a1cc201483bea36d11fe67304afee8a94347aa257073f46cf36c54defab910",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/timer-cleanup/navigator-forwarded-event.json",
+      "evidence_id": "ev_9465589a2edf5c364ee2f4fc2ff5f03f64bd78a641be45a1ac09329117842ba5",
+      "sha256": "8df5dba8144bc6e8972ca20f1157b563f764d8b6b9c976c5011a8a734e6e1e26",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    }
+  ]
+}

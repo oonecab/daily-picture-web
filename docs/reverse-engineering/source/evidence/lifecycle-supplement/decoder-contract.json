@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "checked_utc": "2026-10-17T10:40:14.873758+00:00",
+  "claims": [
+    {
+      "id": "DEC-01",
+      "level": "derived-static",
+      "claim": "The tile decode state machine uses IBitmapFrame slot16, the zero-parameter GetPixelDataAsync overload, not transformed slot17.",
+      "site": "0x1804bc918",
+      "context": "0x18010f8f0",
+      "interface_type": "0x18000d2a8",
+      "iid": "72a49a1c-8081-438d-91bc-94ecfc8185c6",
+      "abi_slots": [
+        {
+          "slot": 6,
+          "name": "GetThumbnailAsync"
+        },
+        {
+          "slot": 7,
+          "name": "BitmapProperties"
+        },
+        {
+          "slot": 8,
+          "name": "BitmapPixelFormat"
+        },
+        {
+          "slot": 9,
+          "name": "BitmapAlphaMode"
+        },
+        {
+          "slot": 10,
+          "name": "DpiX"
+        },
+        {
+          "slot": 11,
+          "name": "DpiY"
+        },
+        {
+          "slot": 12,
+          "name": "PixelWidth"
+        },
+        {
+          "slot": 13,
+          "name": "PixelHeight"
+        },
+        {
+          "slot": 14,
+          "name": "OrientedPixelWidth"
+        },
+        {
+          "slot": 15,
+          "name": "OrientedPixelHeight"
+        },
+        {
+          "slot": 16,
+          "name": "GetPixelDataAsync"
+        },
+        {
+          "slot": 17,
+          "name": "GetPixelDataTransformedAsync"
+        }
+      ],
+      "local_winmd_signatures": [
+        {
+          "index": 10,
+          "name": "GetPixelDataAsync",
+          "signature": "200015128791011282F1"
+        },
+        {
+          "index": 11,
+          "name": "GetPixelDataAsync",
+          "signature": "200515128791011282F111826D118245128289118295118291"
+        }
+      ],
+      "bridge": "0x180402590 -> 0x180402630 -> vtable[slot] with this and output pointer"
+    },
+    {
+      "id": "DEC-02",
+      "level": "external-api-contract",
+      "claim": "The documented no-argument overload respects EXIF orientation, color manages an embedded profile to sRGB, and retains the frame pixel format and alpha mode. The app delegates these choices to the API.",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.graphics.imaging.bitmapdecoder.getpixeldataasync",
+      "retrieved_date": "2026-10-17",
+      "runtime_verified": false
+    },
+    {
+      "id": "DEC-03",
+      "level": "derived-static",
+      "claim": "After pixel extraction, the app reads un-oriented PixelWidth and PixelHeight (slots12/13), not OrientedPixelWidth/Height (14/15), and forwards them with the pixel array.",
+      "sites": [
+        "0x1804bc9fb",
+        "0x1804bca13",
+        "0x1804bca8d"
+      ],
+      "implication": "An EXIF rotation that exchanges width and height can make the supplied geometry inconsistent with oriented pixel ordering. This is a contract-based potential mismatch; no affected image or actual output failure was exercised."
+    }
+  ],
+  "evidence_paths": [
+    "evidence/architecture-background/tile-convert-and-select.json",
+    "evidence/lifecycle-supplement/pixel-data-abi-bridge.json",
+    "evidence/lifecycle-supplement/no-input-interface-slot.json"
+  ],
+  "evidence_ids": [
+    "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4",
+    "ev_b8f180218217ed13f4097fbfa3c4be90a94acf37eaa669ed4ad0c38e8ae28bb2",
+    "ev_bd70a3a278066e96c2cd4c73f21a0d83e825726d87b79bdd541422962cb043f6"
+  ],
+  "supplemental_sources": [
+    "evidence/architecture-background/abi-evidence.json",
+    "evidence/architecture-background/system-winmd.json"
+  ],
+  "limitations": [
+    "No target execution or controlled EXIF/color-profile sample was tested.",
+    "The external API contract does not establish behavior of every codec or damaged file.",
+    "Foreground BitmapImage.SetSourceAsync has a different pipeline; these tile findings do not automatically transfer to foreground rendering."
+  ]
+}

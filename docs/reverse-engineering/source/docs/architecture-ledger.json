@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "target": {
+    "package": "14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a"
+  },
+  "scope": "Curated logical architecture derived from shipped artifacts. Not the original solution, exhaustive source class hierarchy, full call graph, or a runtime trace.",
+  "components": [
+    {
+      "id": "package",
+      "title": "安装与原生交付",
+      "evidence_level": "observed-artifact",
+      "document": "docs/packaging-and-dependencies.md",
+      "evidence_paths": [
+        "evidence/architecture/package-layout.json",
+        "evidence/identity.json"
+      ],
+      "rea_evidence_ids": []
+    },
+    {
+      "id": "app",
+      "title": "前台激活、Frame 与导航",
+      "evidence_level": "derived-static",
+      "document": "docs/ui-and-lifecycle.md",
+      "evidence_paths": [
+        "evidence/architecture-ui/app-lifecycle-candidate.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_ec4ca01bd51f99b16983649e566c60e119d609e71611ae86e05593e3cb9324b2"
+      ]
+    },
+    {
+      "id": "view",
+      "title": "XAML 页面和资源",
+      "evidence_level": "observed-artifact",
+      "document": "docs/ui-and-lifecycle.md",
+      "evidence_paths": [
+        "evidence/resources/xbf-metadata.json",
+        "evidence/resources/original/Duracellko.BingImage.Universal.xr.xml"
+      ],
+      "rea_evidence_ids": []
+    },
+    {
+      "id": "viewmodel",
+      "title": "ViewModel、命令与前台计时器",
+      "evidence_level": "derived-static",
+      "document": "docs/ui-and-lifecycle.md",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-constructor.json",
+        "evidence/architecture-ui/mainvm-property-and-refresh.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2",
+        "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+      ]
+    },
+    {
+      "id": "image-source",
+      "title": "图片项、BitmapImage 与控件回调",
+      "evidence_level": "derived-static",
+      "document": "docs/image-loading-and-lifetime.md",
+      "evidence_paths": [
+        "evidence/image-lifetime/image-load-state.json",
+        "evidence/image-lifetime/image-loaded-handler.json",
+        "evidence/image-lifetime/image-unloaded-handler.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+        "ev_3c1d5c44432293bfac294956417df3cdc17821656579fb6f3117a3e34ef472f1",
+        "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d"
+      ]
+    },
+    {
+      "id": "app-lifecycle",
+      "title": "App 挂起与显式清理",
+      "evidence_level": "derived-static",
+      "document": "docs/suspend-and-resume.md",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-constructor-real.json",
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ]
+    },
+    {
+      "id": "timers",
+      "title": "前台计时器与主 VM Dispose",
+      "evidence_level": "derived-static",
+      "document": "docs/timers-and-disposal.md",
+      "evidence_paths": [
+        "evidence/timer-cleanup/mainvm-dispose-instructions.json",
+        "evidence/timer-cleanup/navigator-forwarded-event.json",
+        "evidence/architecture-ui/mainvm-constructor.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_163276c9187267392694be367c0056754df21598e908fd1caf8df54ad55efcc9",
+        "ev_9465589a2edf5c364ee2f4fc2ff5f03f64bd78a641be45a1ac09329117842ba5",
+        "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+      ]
+    },
+    {
+      "id": "manager",
+      "title": "图片下载与缓存协调",
+      "evidence_level": "derived-static",
+      "document": "docs/network-and-download.md",
+      "evidence_paths": [
+        "evidence/deep-cache/storage-json.json",
+        "evidence/deep-download/refresh-cleanup-sequence.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+        "ev_942fda182a00886a8532bfe6e4e76dc47d0b6ddae19c7cad395d86bd8041c909"
+      ]
+    },
+    {
+      "id": "downloader",
+      "title": "Bing 归档和图片字节下载",
+      "evidence_level": "derived-static",
+      "document": "docs/network-and-download.md",
+      "evidence_paths": [
+        "evidence/rea/archive-url-assembly.json",
+        "evidence/rea/image-url-http-assembly.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_6478a71aad1bff76fe4f8a4d997fcc5df47efdc3a25652c2138e6c8fe622593f",
+        "ev_348c554d94d9d44272336ade5d39f5e043b7eebe3a8107dbd902272579aeb922"
+      ]
+    },
+    {
+      "id": "storage",
+      "title": "归档、图片文件与淘汰",
+      "evidence_level": "derived-static",
+      "document": "docs/data-model-and-storage.md",
+      "evidence_paths": [
+        "evidence/deep-cache/storage-json.json",
+        "evidence/deep-cache/extra-cache.json",
+        "evidence/deep-cache/filename.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+        "ev_6da75649a5d884360afb0fedf9861d1ad2efaaf237aed1981b2a4a37d3c18b7c",
+        "ev_f55360c578fbe40de5b04f98d6e88f52f1236b01a38164bca11767e789445e80"
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "本地设置与两键漫游迁移",
+      "evidence_level": "derived-static",
+      "document": "docs/data-model-and-storage.md",
+      "evidence_paths": [
+        "evidence/architecture-data/settings-url-and-migrate.json",
+        "evidence/architecture-data/settings-imports.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_47c402db3041bed79b42a93aef6ecf773a04a45de7384f3c0f44cbf8af89e42c"
+      ]
+    },
+    {
+      "id": "background",
+      "title": "后台注册与 Run",
+      "evidence_level": "derived-static",
+      "document": "docs/background-and-personalization.md",
+      "evidence_paths": [
+        "evidence/background/task-registration.json",
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9",
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ]
+    },
+    {
+      "id": "personalization",
+      "title": "磁贴、锁屏与桌面提供器",
+      "evidence_level": "derived-static",
+      "document": "docs/background-and-personalization.md",
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json",
+        "evidence/architecture-background/tile-convert-and-select.json"
+      ],
+      "rea_evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ]
+    },
+    {
+      "id": "framework",
+      "title": "SharedLibrary / .NET Native / WinRT",
+      "evidence_level": "derived-static",
+      "document": "docs/methodology-and-reproduction.md",
+      "evidence_paths": [
+        "evidence/deep-symbols/symbols-findings.json",
+        "evidence/deep-cache/abi-evidence.json"
+      ],
+      "rea_evidence_ids": []
+    },
+    {
+      "id": "bing",
+      "title": "外部 Bing 服务",
+      "evidence_level": "unknown-runtime",
+      "document": "docs/network-and-download.md",
+      "evidence_paths": [
+        "evidence/deep-region/region-findings.json"
+      ],
+      "rea_evidence_ids": []
+    }
+  ],
+  "relationships": [
+    {
+      "source": "package",
+      "target": "app",
+      "relationship": "清单声明前台激活入口",
+      "evidence_level": "observed-artifact"
+    },
+    {
+      "source": "package",
+      "target": "background",
+      "relationship": "清单声明后台 WinRT 入口",
+      "evidence_level": "observed-artifact"
+    },
+    {
+      "source": "app",
+      "target": "view",
+      "relationship": "Frame 首次内容导航到主页面",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "app",
+      "target": "background",
+      "relationship": "MainPage.Loaded 处理器进入后台注册入口",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "view",
+      "target": "viewmodel",
+      "relationship": "资源绑定和命令连接形成表现层",
+      "evidence_level": "inferred-architecture"
+    },
+    {
+      "source": "viewmodel",
+      "target": "image-source",
+      "relationship": "集合持有图片项，惰性 ImageSource getter 发起加载",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "view",
+      "target": "image-source",
+      "relationship": "Image Loaded/Unloaded 注册或解除 SourceProperty 回调",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "image-source",
+      "target": "manager",
+      "relationship": "经图片服务接口异步请求读取流；具体 dispatch 的证据边界见专题",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "app",
+      "target": "app-lifecycle",
+      "relationship": "构造订阅 Suspending；处理器立即完成 deferral",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "app-lifecycle",
+      "target": "app",
+      "relationship": "显式 App.Dispose 清理 Navigator；自动调用者尚未建立",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "viewmodel",
+      "target": "timers",
+      "relationship": "构造两只计时器；主 VM 显式 Dispose 双 Stop",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "timers",
+      "target": "viewmodel",
+      "relationship": "Tick 分别触发刷新或清除通知；Stop 不等于移除委托",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "viewmodel",
+      "target": "manager",
+      "relationship": "前台刷新与定时下载编排",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "viewmodel",
+      "target": "personalization",
+      "relationship": "前台下载返回有更新时调用磁贴服务",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "manager",
+      "target": "downloader",
+      "relationship": "获取归档和未命中的图片",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "manager",
+      "target": "storage",
+      "relationship": "读取旧索引、写图片/新索引并条件清理",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "viewmodel",
+      "target": "settings",
+      "relationship": "设置界面读写自动开关",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "app",
+      "target": "settings",
+      "relationship": "仅迁移两个指定锁屏键",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "background",
+      "target": "personalization",
+      "relationship": "Run 顺序更新磁贴、锁屏、桌面",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "personalization",
+      "target": "downloader",
+      "relationship": "共享下载器对象，各自请求 n=1 归档",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "personalization",
+      "target": "settings",
+      "relationship": "自动开关及 Current URL 去重/持久化",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "personalization",
+      "target": "framework",
+      "relationship": "WinRT 图像、通知、个性化系统调用",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "storage",
+      "target": "framework",
+      "relationship": "WinRT ApplicationData 和文件操作",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "downloader",
+      "target": "framework",
+      "relationship": "请求、流、JSON相关运行时支持",
+      "evidence_level": "derived-static"
+    },
+    {
+      "source": "downloader",
+      "target": "bing",
+      "relationship": "固定模板及响应 URL；最终运行请求未观察",
+      "evidence_level": "derived-static"
+    }
+  ],
+  "flows": [
+    {
+      "id": "FLOW-FOREGROUND-CACHE",
+      "steps": [
+        "初始化 Images",
+        "读取旧索引 URL",
+        "请求默认 n=7 归档",
+        "串行逐张命中判断/下载/保存",
+        "有实际下载才保存新归档",
+        "true 返回后才清理旧图"
+      ],
+      "source": "docs/network-and-download.md"
+    },
+    {
+      "id": "FLOW-BACKGROUND",
+      "steps": [
+        "Windows 触发后台 Run",
+        "取得 deferral",
+        "磁贴提供器",
+        "锁屏提供器",
+        "桌面提供器",
+        "Complete deferral"
+      ],
+      "qualification": "各提供器有自己的门控和异常处理；不是每次触发都发生三次系统提交。",
+      "source": "docs/background-and-personalization.md"
+    },
+    {
+      "id": "FLOW-SETTINGS-MIGRATION",
+      "steps": [
+        "读取指定 Roaming 值",
+        "仅非 null 时覆盖同名 Local 值",
+        "Roaming 同名项赋 null"
+      ],
+      "keys": [
+        "UseBingImageAsLockScreen",
+        "CurrentLockScreenImageUrl"
+      ],
+      "source": "docs/data-model-and-storage.md"
+    },
+    {
+      "id": "FLOW-IMAGE-SOURCE",
+      "steps": [
+        "ImageSource 为 null 时发起异步加载",
+        "等待图片服务返回流",
+        "创建 BitmapImage",
+        "await SetSourceAsync",
+        "发布 ImageSource 属性",
+        "finally 关闭非空流"
+      ],
+      "qualification": "这是前台显示路径；控件 Unloaded 只解除 SourceProperty 回调，未见主动清空图片项的 ImageSource。",
+      "source": "docs/image-loading-and-lifetime.md"
+    },
+    {
+      "id": "FLOW-SUSPENDING",
+      "steps": [
+        "App 构造注册 Suspending",
+        "处理器读取 SuspendingOperation",
+        "GetDeferral",
+        "立即 Complete"
+      ],
+      "qualification": "完整已解正常路径没有保存状态、等待下载、Stop 或 Dispose；托管 EH 表未完整解析。未建立其他生命周期事件的应用订阅链。",
+      "source": "docs/suspend-and-resume.md"
+    },
+    {
+      "id": "FLOW-EXPLICIT-MAINVM-DISPOSE",
+      "steps": [
+        "进入主 VM Dispose",
+        "Stop 小时计时器",
+        "Stop 通知计时器",
+        "GC.SuppressFinalize(this)"
+      ],
+      "qualification": "清理入口存在；页面退出/挂起自动调用它的链尚未建立。没有 Tick 退订、清字段或取消在途异步操作。",
+      "source": "docs/timers-and-disposal.md"
+    }
+  ],
+  "unknowns": "docs/unknowns.json",
+  "function_map": "docs/function-map.json"
+}

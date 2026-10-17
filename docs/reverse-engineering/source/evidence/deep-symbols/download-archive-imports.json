@@ -1,0 +1,1146 @@
+{
+  "app": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "codeview": [
+      {
+        "guid": "fe1416b8-6dd3-4fcf-aff4-5d354d9fbfac",
+        "age": 1,
+        "path": "D:\\data\\PkgProc\\mupAwdZgJkaFwBR2iGOucg\\ExtractedBundle\\Duracellko.BingImage.Universal_1.4.13.0_x64\\Duracellko.BingImage.Universal.pdb",
+        "basename": "Duracellko.BingImage.Universal.pdb",
+        "symbol_key": "FE1416B86DD34FCFAFF45D354D9FBFAC1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/Duracellko.BingImage.Universal.pdb/FE1416B86DD34FCFAFF45D354D9FBFAC1/Duracellko.BingImage.Universal.pdb"
+      }
+    ]
+  },
+  "shared": {
+    "path": "C:\\Program Files\\WindowsApps\\Microsoft.NET.Native.Framework.1.7_1.7.27413.0_x64__8wekyb3d8bbwe\\SharedLibrary.dll",
+    "sha256": "078c83815b5b6be67a397e33f0bfe125708a933f0a034545fc6a088f5eb0ce6d",
+    "codeview": [
+      {
+        "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+        "age": 1,
+        "path": "f:\\ddSetup\\SD\\2\\setup\\msis\\x86ret\\enu\\netfx_ProjectNamd64\\TestILC\\ExternalFiles\\SharedAssemblyPath\\ret\\Native\\SharedLibrary.pdb",
+        "basename": "SharedLibrary.pdb",
+        "symbol_key": "FE6DCBB5864A4F9D8101638B869D98AE1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb"
+      }
+    ]
+  },
+  "custom_descriptors": [
+    {
+      "index": 0,
+      "eat_rva": "0x29f000",
+      "iat_rva": "0x29f000",
+      "count": 0,
+      "ordinary_eat_import": null
+    },
+    {
+      "index": 1,
+      "eat_rva": "0x2a8438",
+      "iat_rva": "0x29f008",
+      "count": 4737,
+      "ordinary_eat_import": {
+        "dll": "SharedLibrary.dll",
+        "va": "0x1802a8438",
+        "name": "$NEAT$",
+        "ordinal": null
+      }
+    }
+  ],
+  "neat_export": {
+    "va": "0x18010e1d0",
+    "rva": "0x10e1d0"
+  },
+  "shared_import_range": {
+    "start": "0x18029f008",
+    "end_exclusive": "0x1802a8410",
+    "count": 4737
+  },
+  "layout_source": "https://github.com/synacktiv/dotNIET/blob/main/dotNIET_plugin.py",
+  "symbol_validation": {
+    "pdb_path": "E:\\study\\rea\\daily-picture\\evidence\\deep-symbols\\SharedLibrary.pdb",
+    "pdb_sha256": "d3200600d44d7de49f986207738efab5823cc7ac4d0b9693d134982d02ef918a",
+    "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+    "pdb_stream_age": 3,
+    "dbi_age": 1,
+    "installed_pe_codeview_age": 1,
+    "all_section_headers_match": true,
+    "section_count": 22,
+    "public_symbol_records": 55968,
+    "unique_public_symbol_addresses": 43146,
+    "source_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb",
+    "note": "PDB stream age is 3; DBI age is 1 and matches the PE CodeView age. GUID and all 22 section layouts match the installed DLL."
+  },
+  "resolved_slots": [
+    {
+      "slot_va": "0x18029f248",
+      "slot_file_offset": "0x29e648",
+      "raw": "0x8000000000000561",
+      "neat_index": 1377,
+      "neat_entry_file_offset": "0x10ed54",
+      "resolved_rva": "0x4829c0",
+      "resolved_va": "0x1804829c0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804829c0",
+        "end_exclusive": "0x1804829d1",
+        "length": 17,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec2833d2e815000000904883c428c3cccccccccccccccccccccccccccccc",
+      "symbols": [
+        {
+          "name": "$4_System::IO::MemoryStream..ctor",
+          "flags": "procedure",
+          "record_offset": 872180,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1149376,
+          "type_index": "0x1d11",
+          "length": 17
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804829c0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f308",
+      "slot_file_offset": "0x29e708",
+      "raw": "0x8000000000000582",
+      "neat_index": 1410,
+      "neat_entry_file_offset": "0x10edd8",
+      "resolved_rva": "0x50fb00",
+      "resolved_va": "0x18050fb00",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x18050fb00",
+        "end_exclusive": "0x18050fb63",
+        "length": 99,
+        "unwind_rva": "0x16b468"
+      },
+      "bytes": "5356574883ec30488bf18b79202b7918751d488b15ce96c2ff4883c2f0ff15fd",
+      "symbols": [
+        {
+          "name": "$4_System::IO::MemoryStream.ToArray",
+          "flags": "function",
+          "record_offset": 2842152,
+          "section": 5,
+          "section_offset": 1727232
+        },
+        {
+          "name": "$4_System::IO::MemoryStream.ToArray",
+          "flags": "procedure",
+          "record_offset": 885308,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1727232,
+          "type_index": "0x1d29",
+          "length": 99
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x18050fb00",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f3d8",
+      "slot_file_offset": "0x29e7d8",
+      "raw": "0x8000000000000603",
+      "neat_index": 1539,
+      "neat_entry_file_offset": "0x10efdc",
+      "resolved_rva": "0x5569b0",
+      "resolved_va": "0x1805569b0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1805569b0",
+        "end_exclusive": "0x180556a72",
+        "length": 194,
+        "unwind_rva": "0x16b45c"
+      },
+      "bytes": "53574883ec28488bda488bf94885d2746a488b0148ff503084c0750e488bcf48",
+      "symbols": [
+        {
+          "name": "$4_System::IO::Stream.CopyTo",
+          "flags": "procedure",
+          "record_offset": 1084176,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 2017712,
+          "type_index": "0x1f69",
+          "length": 194
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x1805569b0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f3e0",
+      "slot_file_offset": "0x29e7e0",
+      "raw": "0x8000000000000606",
+      "neat_index": 1542,
+      "neat_entry_file_offset": "0x10efe8",
+      "resolved_rva": "0x4973b0",
+      "resolved_va": "0x1804973b0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804973b0",
+        "end_exclusive": "0x1804973d3",
+        "length": 35,
+        "unwind_rva": "0x16b440"
+      },
+      "bytes": "534883ec20488bd9b201488b0148ff9090000000488bcbe8f42cfcff904883c4",
+      "symbols": [
+        {
+          "name": "$4_System::IO::Stream.Dispose",
+          "flags": "procedure",
+          "record_offset": 1085464,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1233840,
+          "type_index": "0x1f6b",
+          "length": 35
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804973b0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f468",
+      "slot_file_offset": "0x29e868",
+      "raw": "0x80000000000006d8",
+      "neat_index": 1752,
+      "neat_entry_file_offset": "0x10f330",
+      "resolved_rva": "0x5563b0",
+      "resolved_va": "0x1805563b0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1805563b0",
+        "end_exclusive": "0x1805563c2",
+        "length": 18,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec2841b001e8b4ffffff904883c428c3cccccccccccccccccccccccccccc",
+      "symbols": [
+        {
+          "name": "$4_System::IO::StreamReader..ctor",
+          "flags": "procedure",
+          "record_offset": 1193340,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 2016176,
+          "type_index": "0x21a8",
+          "length": 18
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x1805563b0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f478",
+      "slot_file_offset": "0x29e878",
+      "raw": "0x8000000000000750",
+      "neat_index": 1872,
+      "neat_entry_file_offset": "0x10f510",
+      "resolved_rva": "0x411ff0",
+      "resolved_va": "0x180411ff0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180411ff0",
+        "end_exclusive": "0x1804120c3",
+        "length": 211,
+        "unwind_rva": "0x16b450"
+      },
+      "bytes": "5356574883ec204889542448498bf0488d7908488b1f4885db754f488b442448",
+      "symbols": [
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetResult",
+          "flags": "function",
+          "record_offset": 4700392,
+          "section": 5,
+          "section_offset": 688112
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetResult",
+          "flags": "procedure",
+          "record_offset": 1302124,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 688112,
+          "type_index": "0x2354",
+          "length": 211
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x180411ff0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f480",
+      "slot_file_offset": "0x29e880",
+      "raw": "0x8000000000000752",
+      "neat_index": 1874,
+      "neat_entry_file_offset": "0x10f518",
+      "resolved_rva": "0x411f90",
+      "resolved_va": "0x180411f90",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180411f90",
+        "end_exclusive": "0x180411faf",
+        "length": 31,
+        "unwind_rva": "0x16b440"
+      },
+      "bytes": "534883ec20498bd8e8f3fcffff488bd3488bc8e858710b00904883c4205bc3cc",
+      "symbols": [
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetException",
+          "flags": "function",
+          "record_offset": 4700500,
+          "section": 5,
+          "section_offset": 688016
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetException",
+          "flags": "procedure",
+          "record_offset": 1303164,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 688016,
+          "type_index": "0x235c",
+          "length": 31
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x180411f90",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029fab0",
+      "slot_file_offset": "0x29eeb0",
+      "raw": "0x8000000000000d40",
+      "neat_index": 3392,
+      "neat_entry_file_offset": "0x110cd0",
+      "resolved_rva": "0x4d5b90",
+      "resolved_va": "0x1804d5b90",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804d5b90",
+        "end_exclusive": "0x1804d5bae",
+        "length": 30,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec288b413025000000113d000000017405e808000000904883c428c3cccc",
+      "symbols": [
+        {
+          "name": "$13_System::Runtime::CompilerServices::TaskAwaiter.ValidateEnd",
+          "flags": "function",
+          "record_offset": 4080000,
+          "section": 5,
+          "section_offset": 1489808
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::TaskAwaiter.ValidateEnd",
+          "flags": "procedure",
+          "record_offset": 2300476,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1489808,
+          "type_index": "0x301b",
+          "length": 30
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804d5b90",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a1288",
+      "slot_file_offset": "0x2a0688",
+      "raw": "0x8000000000002b4a",
+      "neat_index": 11082,
+      "neat_entry_file_offset": "0x1184f8",
+      "resolved_rva": "0x4a5890",
+      "resolved_va": "0x1804a5890",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804a5890",
+        "end_exclusive": "0x1804a58a1",
+        "length": 17,
+        "unwind_rva": "0x16b4a0"
+      },
+      "bytes": "8b4130a900006001770433c0eb02b001c3cccccccccccccccccccccccccccccc",
+      "symbols": [
+        {
+          "name": "$13_System::Threading::Tasks::Task.get_IsCompleted",
+          "flags": "function",
+          "record_offset": 4119292,
+          "section": 5,
+          "section_offset": 1292432
+        },
+        {
+          "name": "$13_System::Threading::Tasks::Task.get_IsCompleted",
+          "flags": "procedure",
+          "record_offset": 7353628,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1292432,
+          "type_index": "0x3018",
+          "length": 17
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804a5890",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a1a10",
+      "slot_file_offset": "0x2a0e10",
+      "raw": "0x800000000000372c",
+      "neat_index": 14124,
+      "neat_entry_file_offset": "0x11b480",
+      "resolved_rva": "0x4ebab0",
+      "resolved_va": "0x1804ebab0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804ebab0",
+        "end_exclusive": "0x1804ebad0",
+        "length": 32,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec28f7c1a0ffffff75054883c428c3e86a8bf9ff488bc8ff15b995dcffcc",
+      "symbols": [
+        {
+          "name": "$13_System::Threading::Tasks::TaskFactory.CheckCreationOptions",
+          "flags": "function",
+          "record_offset": 4132120,
+          "section": 5,
+          "section_offset": 1579696
+        },
+        {
+          "name": "$13_System::Threading::Tasks::TaskFactory.CheckCreationOptions",
+          "flags": "procedure",
+          "record_offset": 9062748,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1579696,
+          "type_index": "0x7331",
+          "length": 32
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804ebab0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a1a18",
+      "slot_file_offset": "0x2a0e18",
+      "raw": "0x8000000000003780",
+      "neat_index": 14208,
+      "neat_entry_file_offset": "0x11b5d0",
+      "resolved_rva": "0x4eb800",
+      "resolved_va": "0x1804eb800",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804eb800",
+        "end_exclusive": "0x1804eb852",
+        "length": 82,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec288bc125020008003d020008007415f7c1c0fff0ff751bf7c100000700",
+      "symbols": [
+        {
+          "name": "$13_System::Threading::Tasks::TaskFactory.CheckMultiTaskContinuationOptions",
+          "flags": "function",
+          "record_offset": 4134292,
+          "section": 5,
+          "section_offset": 1579008
+        },
+        {
+          "name": "$13_System::Threading::Tasks::TaskFactory.CheckMultiTaskContinuationOptions",
+          "flags": "procedure",
+          "record_offset": 9114608,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1579008,
+          "type_index": "0x739d",
+          "length": 82
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804eb800",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2cd8",
+      "slot_file_offset": "0x2a20d8",
+      "raw": "0x8000000000004197",
+      "neat_index": 16791,
+      "neat_entry_file_offset": "0x11de2c",
+      "resolved_rva": "0x6bf430",
+      "resolved_va": "0x1806bf430",
+      "resolved_section": ".text",
+      "owner": null,
+      "bytes": "e95b9ce3ffcccccce9539ce3ffcccccce9fb45daffcccccce9439ce3ffcccccc",
+      "symbols": [
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<$8_System::Runtime::InteropServices::EquatableIntPtr>..ctor",
+          "flags": "function",
+          "record_offset": 4885924,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$9_Internal::Reflection::Extensibility::ExtensibleTypeInfo..ctor",
+          "flags": "function",
+          "record_offset": 3708768,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::SharedCcw_IVector_Blittable..cctor",
+          "flags": "function",
+          "record_offset": 3605572,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$4_System::IO::Stream::NullStream.set_Position",
+          "flags": "function",
+          "record_offset": 2855452,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::McgMarshal..cctor",
+          "flags": "function",
+          "record_offset": 3623908,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$4_System::IO::TextReader.Dispose",
+          "flags": "function",
+          "record_offset": 2850796,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Delegate..ctor",
+          "flags": "function",
+          "record_offset": 3267780,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$13___DynamicallyInvokableAttribute..ctor",
+          "flags": "function",
+          "record_offset": 4138284,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Runtime::CompilerServices::EagerStaticClassConstructionAttribute._ILT_ReadFields",
+          "flags": "function",
+          "record_offset": 3450852,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::SharedCcw_IIterator_Blittable..cctor",
+          "flags": "function",
+          "record_offset": 3606780,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$11_Internal::Reflection::Core::Execution::Binder::DefaultBinder..cctor",
+          "flags": "function",
+          "record_offset": 3862732,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Array$1<System::Runtime::CompilerServices::ClassConstructorRunner::Cctor>..ctor",
+          "flags": "function",
+          "record_offset": 5972644,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::WindowsRuntime::ReadOnlyArrayAttribute..ctor",
+          "flags": "function",
+          "record_offset": 3680248,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$11_Internal::IntrinsicSupport::ComparerHelpers::GenericComparer$1<$11_Internal::Reflection::Execution::ExecutionEnvironmentImplementation::FunctionPointerOffsetPair>..ctor",
+          "flags": "function",
+          "record_offset": 5375492,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$14_System::Collections::Generic::LowLevelDictionary$2<System::IntPtr,System::Int32>::Entry..ctor",
+          "flags": "function",
+          "record_offset": 5690608,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$2_System::Diagnostics::Tracing::NonEventAttribute..ctor",
+          "flags": "function",
+          "record_offset": 2749188,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AddOvfInstruction::AddOvfSingle..ctor",
+          "flags": "function",
+          "record_offset": 3073936,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$14_System::Collections::Generic::LowLevelDictionary$2<System::IntPtr,System::Int32>::DefaultComparer$1<System::IntPtr>..ctor",
+          "flags": "function",
+          "record_offset": 5700624,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Comparison$1<System::Int64>..ctor",
+          "flags": "function",
+          "record_offset": 5610512,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AddInstruction::AddInt16..ctor",
+          "flags": "function",
+          "record_offset": 3071536,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AndInstruction::AndInt16..ctor",
+          "flags": "function",
+          "record_offset": 3125724,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::DivInstruction::DivInt16..ctor",
+          "flags": "function",
+          "record_offset": 3074488,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::MulInstruction::MulInt16..ctor",
+          "flags": "function",
+          "record_offset": 3100460,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::SubInstruction::SubInt16..ctor",
+          "flags": "function",
+          "record_offset": 3110380,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::ExclusiveOrInstruction::ExclusiveOrInt16..ctor",
+          "flags": "function",
+          "record_offset": 3122328,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$9_System::Reflection::CustomAttributeData..ctor",
+          "flags": "function",
+          "record_offset": 3712096,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<System::Guid>..ctor",
+          "flags": "function",
+          "record_offset": 4923968,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$14_System::Collections::Generic::LowLevelDictionary$2<System::__Canon,System::Int32>::DefaultComparer$1<System::__Canon>..ctor",
+          "flags": "function",
+          "record_offset": 5697404,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::__vtable_IStringable..cctor",
+          "flags": "function",
+          "record_offset": 3648368,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "Internal::Reflection::Tracing::ReflectionTrace.Type_AssemblyQualifiedName",
+          "flags": "function",
+          "record_offset": 3147776,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AddOvfInstruction::AddOvfDouble..ctor",
+          "flags": "function",
+          "record_offset": 3074128,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$23_System::Collections::Generic::IEnumerable_A__s_Type_V___Impl::DynamicRCWAdapter..ctor",
+          "flags": "function",
+          "record_offset": 4477156,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$13_System::Threading::Tasks::TaskFactory$1<$13_System::Threading::Tasks::VoidTaskResult>::<>c__DisplayClass35_0..ctor",
+          "flags": "function",
+          "record_offset": 5739452,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Array$1<$13_System::Collections::Concurrent::VolatileBool>..ctor",
+          "flags": "function",
+          "record_offset": 5774992,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::MulOvfInstruction::MulOvfInt16..ctor",
+          "flags": "function",
+          "record_offset": 3101904,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$11_Internal::IntrinsicSupport::EqualityComparerHelpers::ObjectEqualityComparer$1<$0_System::Collections::Generic::Dictionary$2<System::__Canon,System::__Canon>::Entry>..ctor",
+          "flags": "function",
+          "record_offset": 5524600,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$10_Internal::Reflection::Tracing::ReflectionTrace.FieldInfo_GetValue",
+          "flags": "function",
+          "record_offset": 3732388,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::CastInstruction::CastInstructionT$1<System::Decimal>..ctor",
+          "flags": "function",
+          "record_offset": 6261908,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::NotEqualInstruction::NotEqualReference..ctor",
+          "flags": "function",
+          "record_offset": 3105624,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$13_System::Threading::ThreadPool.NotifyWorkItemProgress",
+          "flags": "function",
+          "record_offset": 4108112,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$3_System::Runtime::CompilerServices::CallSite$1<System::__Canon>::<>c__DisplayClass0..ctor",
+          "flags": "function",
+          "record_offset": 5274596,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<$8_System::Runtime::InteropServices::McgHashcodeVerifyEntry>..ctor",
+          "flags": "function",
+          "record_offset": 4898840,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<System::UInt64>..ctor",
+          "flags": "function",
+          "record_offset": 4931480,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AndInstruction::AndSByte..ctor",
+          "flags": "function",
+          "record_offset": 3125548,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$14_Internal::Runtime::TypeLoader::GenericDictionaryCell::TypeSizeCell..ctor",
+          "flags": "function",
+          "record_offset": 4241712,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::ExclusiveOrInstruction::ExclusiveOrSByte..ctor",
+          "flags": "function",
+          "record_offset": 3122120,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Func$3<System::__Canon,System::__Canon,System::Int32>..ctor",
+          "flags": "function",
+          "record_offset": 5479144,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_Windows::Foundation::Size..cctor",
+          "flags": "function",
+          "record_offset": 3563452,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<System::Int16>..ctor",
+          "flags": "function",
+          "record_offset": 4924404,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$2_System::Diagnostics::Tracing::EventListener..cctor",
+          "flags": "function",
+          "record_offset": 2744344,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$12_Internal::Metadata::NativeFormat::HandleCollection::Enumerator.Dispose",
+          "flags": "function",
+          "record_offset": 4073924,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Array$1<$8_System::Runtime::InteropServices::WindowsRuntime::WindowsRuntimeMarshal::EventRegistrationTokenList>..ctor",
+          "flags": "function",
+          "record_offset": 5912688,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$10_Internal::Reflection::Tracing::ReflectionTrace.TypeInfo_MakeByRefType",
+          "flags": "function",
+          "record_offset": 3730864,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<System::Collections::Concurrent::ConcurrentUnifier$2<System::__Canon,System::__Canon>::Entry>..ctor",
+          "flags": "function",
+          "record_offset": 4951032,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::DecrementInstruction::DecrementInt16..ctor",
+          "flags": "function",
+          "record_offset": 3117644,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "System::Func$2<System::__Canon,System::UInt32>..ctor",
+          "flags": "function",
+          "record_offset": 5433072,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$4_System::IO::Stream::NullStream.SetLength",
+          "flags": "function",
+          "record_offset": 2856096,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::TaskAwaiter::<>c__DisplayClass11_0..ctor",
+          "flags": "function",
+          "record_offset": 4139484,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$0_System::Collections::Generic::EqualityComparer$1<$8_System::Runtime::InteropServices::ContextCookie>..ctor",
+          "flags": "function",
+          "record_offset": 4877324,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::McgRootsTypeAttribute._ILT_ReadFields",
+          "flags": "function",
+          "record_offset": 3632976,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$6_System::Linq::Expressions::Interpreter::AddOvfInstruction::AddOvfUInt16..ctor",
+          "flags": "function",
+          "record_offset": 3073360,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$23_System::Collections::Generic::IEnumerable_A_int_V___Impl::DynamicRCWAdapter..ctor",
+          "flags": "function",
+          "record_offset": 4475924,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$11_Internal::IntrinsicSupport::EqualityComparerHelpers::ObjectEqualityComparer$1<System::Runtime::CompilerServices::ClassConstructorRunner::Cctor>..ctor",
+          "flags": "function",
+          "record_offset": 5571888,
+          "section": 5,
+          "section_offset": 1634448
+        },
+        {
+          "name": "$11_Internal::IntrinsicSupport::EqualityComparerHelpers::ObjectEqualityComparer$1<System::Collections::Concurrent::ConcurrentUnifierW$2<System::EETypePtr,System::__Canon>::Entry>..ctor",
+          "flags": "function",
+          "record_offset": 5568852,
+          "section": 5,
+          "section_offset": 1634448
+        }
+      ],
+      "symbol_record_count": 3632,
+      "symbols_truncated": true,
+      "symbol_address": "0x1804f9090",
+      "symbol_trace": [
+        {
+          "kind": "direct-relative-jump-bytes",
+          "source": "0x1806bf430",
+          "target": "0x1804f9090",
+          "bytes": "e95b9ce3ff"
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2f70",
+      "slot_file_offset": "0x2a2370",
+      "raw": "0x80000000000042d0",
+      "neat_index": 17104,
+      "neat_entry_file_offset": "0x11e310",
+      "resolved_rva": "0x4824e0",
+      "resolved_va": "0x1804824e0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804824e0",
+        "end_exclusive": "0x180482553",
+        "length": 115,
+        "unwind_rva": "0x16b4ec"
+      },
+      "bytes": "5356574883ec60498bd8488bfa488bf133c033d2448d4020488d4c2420ff1515",
+      "symbols": [
+        {
+          "name": "System::String.Format",
+          "flags": "procedure",
+          "record_offset": 11206340,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1148128,
+          "type_index": "0x8917",
+          "length": 115
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804824e0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2f98",
+      "slot_file_offset": "0x2a2398",
+      "raw": "0x80000000000042d9",
+      "neat_index": 17113,
+      "neat_entry_file_offset": "0x11e334",
+      "resolved_rva": "0x426e40",
+      "resolved_va": "0x180426e40",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180426e40",
+        "end_exclusive": "0x180426ebf",
+        "length": 127,
+        "unwind_rva": "0x16b5c0"
+      },
+      "bytes": "53565741564883ec28488bfa488bf14885c97446448b71084585f6743d4885d2",
+      "symbols": [
+        {
+          "name": "System::String.Concat",
+          "flags": "procedure",
+          "record_offset": 11211848,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 773696,
+          "type_index": "0x8925",
+          "length": 127
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x180426e40",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a4110",
+      "slot_file_offset": "0x2a3510",
+      "raw": "0x8000000000004c5e",
+      "neat_index": 19550,
+      "neat_entry_file_offset": "0x120948",
+      "resolved_rva": "0x428300",
+      "resolved_va": "0x180428300",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180428300",
+        "end_exclusive": "0x18042832b",
+        "length": 43,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec284885d274134c8941204883c108ff1511cde8ff4883c428c3e88fae09",
+      "symbols": [
+        {
+          "name": "System::Delegate.InitializeClosedInstance",
+          "flags": "function",
+          "record_offset": 3268024,
+          "section": 5,
+          "section_offset": 779008
+        },
+        {
+          "name": "System::Delegate.InitializeClosedInstance",
+          "flags": "procedure",
+          "record_offset": 12430540,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 779008,
+          "type_index": "0x99bf",
+          "length": 43
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x180428300",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a4758",
+      "slot_file_offset": "0x2a3b58",
+      "raw": "0x80000000000058cf",
+      "neat_index": 22735,
+      "neat_entry_file_offset": "0x123b0c",
+      "resolved_rva": "0x5125a0",
+      "resolved_va": "0x1805125a0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1805125a0",
+        "end_exclusive": "0x1805125c1",
+        "length": 33,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec28488d1515a1daffff156f2adaff488d056046daff488b40084883c428",
+      "symbols": [
+        {
+          "name": "System::Globalization::FormatProvider.get_InvariantCulture",
+          "flags": "function",
+          "record_offset": 3343320,
+          "section": 5,
+          "section_offset": 1738144
+        },
+        {
+          "name": "System::Globalization::CultureInfo.get_InvariantCulture",
+          "flags": "function",
+          "record_offset": 3386492,
+          "section": 5,
+          "section_offset": 1738144
+        },
+        {
+          "name": "System::Globalization::FormatProvider.get_InvariantCulture",
+          "flags": "procedure",
+          "record_offset": 13915304,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1738144,
+          "type_index": "0x80cc",
+          "length": 33
+        },
+        {
+          "name": "System::Globalization::CultureInfo.get_InvariantCulture",
+          "flags": "procedure",
+          "record_offset": 14326864,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1738144,
+          "type_index": "0x1559",
+          "length": 33
+        }
+      ],
+      "symbol_record_count": 4,
+      "symbols_truncated": false,
+      "symbol_address": "0x1805125a0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    }
+  ],
+  "limitations": [
+    "No target or runtime binder execution; this maps shipped custom descriptors and SharedLibrary table bytes.",
+    "A resolved address alone does not establish its source method name; symbol or instruction corroboration is needed.",
+    "Per-address symbol records are capped at 64 with explicit total/truncation flags. Complete aliases remain in sharedlibrary-symbols.json; compiler folding can create thousands of aliases at a single ret instruction."
+  ]
+}

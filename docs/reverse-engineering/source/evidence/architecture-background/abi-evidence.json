@@ -1,0 +1,1580 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "time_utc": "2026-10-17T10:01:29.656092+00:00",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/windows-rs/master/crates/libs/windows/src/Windows/ApplicationModel/Background/mod.rs",
+      "path": "evidence\\architecture-background\\background-reference.rs",
+      "sha256": "d567180d62844a5486534f4438fbfa3f7634503c0e14940ab63e74df7a077350"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/windows-rs/master/crates/libs/windows/src/Windows/UI/Notifications/mod.rs",
+      "path": "evidence\\architecture-background\\notifications-reference.rs",
+      "sha256": "896997bfb8b26d78e8af8551449cb172abdd71e0c6640605f3a8b5b782d0ee2f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/windows-rs/master/crates/libs/windows/src/Windows/System/UserProfile/mod.rs",
+      "path": "evidence\\architecture-background\\personalization-reference.rs",
+      "sha256": "d3e1c065a863166ac43cddd93cef18f8034ac2ac0fb74b2ccdbc27c32e7fe617"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/windows-rs/master/crates/libs/windows/src/Windows/Graphics/Imaging/mod.rs",
+      "path": "evidence\\architecture-background\\imaging-reference.rs",
+      "sha256": "f8347000007db3f741ba0f6b7dd54e91d38b71b84c91bce222c0022a67c96014"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IBackgroundTask",
+      "iid": "7d13d534-fd12-43ce-8c22-ea1ff13c06df",
+      "hits": [
+        {
+          "va": "0x1802e47e0",
+          "offset": "0x2e3be0",
+          "type_pointer": "0x1800221e0",
+          "bytes": "e0210280010000000000000000000000000000000000000034d5137d12fdce438c22ea1ff13c06df0100000000000000304c568001000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x180035380",
+        "0x1802e47c8",
+        "0x1802f2238"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Run"
+        }
+      ],
+      "definition": "pub struct IBackgroundTask_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Run: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundTaskInstance",
+      "iid": "865bda7a-21d8-4573-8f32-928a1b0641f6",
+      "hits": [
+        {
+          "va": "0x1802e4820",
+          "offset": "0x2e3c20",
+          "type_pointer": "0x18000e310",
+          "bytes": "10e3008001000000b8a702800100000000000000000000007ada5b86d82173458f32928a1b0641f601000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18002a7f0",
+        "0x1801108a8",
+        "0x180112428",
+        "0x1802e4808"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "InstanceId"
+        },
+        {
+          "slot": 7,
+          "name": "Task"
+        },
+        {
+          "slot": 8,
+          "name": "Progress"
+        },
+        {
+          "slot": 9,
+          "name": "SetProgress"
+        },
+        {
+          "slot": 10,
+          "name": "TriggerDetails"
+        },
+        {
+          "slot": 11,
+          "name": "Canceled"
+        },
+        {
+          "slot": 12,
+          "name": "RemoveCanceled"
+        },
+        {
+          "slot": 13,
+          "name": "SuspendedCount"
+        },
+        {
+          "slot": 14,
+          "name": "GetDeferral"
+        }
+      ],
+      "definition": "pub struct IBackgroundTaskInstance_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub InstanceId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub Task: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Progress: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetProgress: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32) -> windows_core::HRESULT,\n    pub TriggerDetails: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Canceled: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut i64) -> windows_core::HRESULT,\n    pub RemoveCanceled: unsafe extern \"system\" fn(*mut core::ffi::c_void, i64) -> windows_core::HRESULT,\n    pub SuspendedCount: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub GetDeferral: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundTaskDeferral",
+      "iid": "93cc156d-af27-4dd3-846e-24ee40cadd25",
+      "hits": [
+        {
+          "va": "0x1802e4860",
+          "offset": "0x2e3c60",
+          "type_pointer": "0x18000e250",
+          "bytes": "50e200800100000008e200800100000000000000000000006d15cc9327afd34d846e24ee40cadd2501000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000e240",
+        "0x18010fb60",
+        "0x1802e4848"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Complete"
+        }
+      ],
+      "definition": "pub struct IBackgroundTaskDeferral_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Complete: unsafe extern \"system\" fn(*mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundTaskBuilder",
+      "iid": "0351550e-3e64-4572-a93a-84075a37c917",
+      "hits": [
+        {
+          "va": "0x1802e6820",
+          "offset": "0x2e5c20",
+          "type_pointer": "0x18000e358",
+          "bytes": "58e3008001000000d01f02800100000000000000000000000e555103643e7245a93a84075a37c91701000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x180022008",
+        "0x18010f038",
+        "0x18010f050",
+        "0x18010f068",
+        "0x18010f078",
+        "0x1802e6808"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "SetTaskEntryPoint"
+        },
+        {
+          "slot": 7,
+          "name": "TaskEntryPoint"
+        },
+        {
+          "slot": 8,
+          "name": "SetTrigger"
+        },
+        {
+          "slot": 9,
+          "name": "AddCondition"
+        },
+        {
+          "slot": 10,
+          "name": "SetName"
+        },
+        {
+          "slot": 11,
+          "name": "Name"
+        },
+        {
+          "slot": 12,
+          "name": "Register"
+        }
+      ],
+      "definition": "pub struct IBackgroundTaskBuilder_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub SetTaskEntryPoint: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub TaskEntryPoint: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub SetTrigger: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub AddCondition: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub SetName: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Name: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Register: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundTaskRegistration",
+      "iid": "10654cc2-a26e-43bf-8c12-1fb40dbfbfa0",
+      "hits": [
+        {
+          "va": "0x1802e5820",
+          "offset": "0x2e4c20",
+          "type_pointer": "0x18000e2f8",
+          "bytes": "f8e2008001000000a8e20080010000000000000000000000c24c65106ea2bf438c121fb40dbfbfa001000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000e2e0",
+        "0x18007be88",
+        "0x180111c00",
+        "0x180112850",
+        "0x180113758",
+        "0x180113768",
+        "0x180121885",
+        "0x180122abf",
+        "0x18012db1c",
+        "0x18012febe",
+        "0x1802dcef0",
+        "0x1802e5808"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "TaskId"
+        },
+        {
+          "slot": 7,
+          "name": "Name"
+        },
+        {
+          "slot": 8,
+          "name": "Progress"
+        },
+        {
+          "slot": 9,
+          "name": "RemoveProgress"
+        },
+        {
+          "slot": 10,
+          "name": "Completed"
+        },
+        {
+          "slot": 11,
+          "name": "RemoveCompleted"
+        },
+        {
+          "slot": 12,
+          "name": "Unregister"
+        }
+      ],
+      "definition": "pub struct IBackgroundTaskRegistration_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub TaskId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub Name: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Progress: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut i64) -> windows_core::HRESULT,\n    pub RemoveProgress: unsafe extern \"system\" fn(*mut core::ffi::c_void, i64) -> windows_core::HRESULT,\n    pub Completed: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut i64) -> windows_core::HRESULT,\n    pub RemoveCompleted: unsafe extern \"system\" fn(*mut core::ffi::c_void, i64) -> windows_core::HRESULT,\n    pub Unregister: unsafe extern \"system\" fn(*mut core::ffi::c_void, bool) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundTaskRegistrationStatics",
+      "iid": "4c542f69-b000-42ba-a093-6a563c65e3f8",
+      "hits": [
+        {
+          "va": "0x1802e6860",
+          "offset": "0x2e5c60",
+          "type_pointer": "0x18000e370",
+          "bytes": "70e300800100000000000000000000000000000000000000692f544c00b0ba42a0936a563c65e3f801000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f090",
+        "0x1802e6848"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "AllTasks"
+        }
+      ],
+      "definition": "pub struct IBackgroundTaskRegistrationStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub AllTasks: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBackgroundExecutionManagerStatics",
+      "iid": "e826ea58-66a9-4d41-83d4-b4c18c87b846",
+      "hits": [
+        {
+          "va": "0x1802e8fe0",
+          "offset": "0x2e83e0",
+          "type_pointer": "0x18000e388",
+          "bytes": "88e30080010000000000000000000000000000000000000058ea26e8a966414d83d4b4c18c87b84601000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f020",
+        "0x1802e8fc8"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "RequestAccessAsync"
+        },
+        {
+          "slot": 7,
+          "name": "RequestAccessForApplicationAsync"
+        },
+        {
+          "slot": 8,
+          "name": "RemoveAccess"
+        },
+        {
+          "slot": 9,
+          "name": "RemoveAccessForApplication"
+        },
+        {
+          "slot": 10,
+          "name": "GetAccessStatus"
+        },
+        {
+          "slot": 11,
+          "name": "GetAccessStatusForApplication"
+        }
+      ],
+      "definition": "pub struct IBackgroundExecutionManagerStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub RequestAccessAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RequestAccessForApplicationAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RemoveAccess: unsafe extern \"system\" fn(*mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RemoveAccessForApplication: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub GetAccessStatus: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BackgroundAccessStatus) -> windows_core::HRESULT,\n    pub GetAccessStatusForApplication: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut BackgroundAccessStatus) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ITimeTriggerFactory",
+      "iid": "38c682fe-9b54-45e6-b2f3-269b87a6f734",
+      "hits": [
+        {
+          "va": "0x1802e6ca0",
+          "offset": "0x2e60a0",
+          "type_pointer": "0x1800221f8",
+          "bytes": "f82102800100000000000000000000000000000000000000fe82c638549be645b2f3269b87a6f73401000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x1802e6c88"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Create"
+        }
+      ],
+      "definition": "pub struct ITimeTriggerFactory_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Create: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32, bool, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ISystemConditionFactory",
+      "iid": "d269d1f1-05a7-49ae-87d7-16b2b8b9a553",
+      "hits": [
+        {
+          "va": "0x1802e6d20",
+          "offset": "0x2e6120",
+          "type_pointer": "0x180022210",
+          "bytes": "102202800100000000000000000000000000000000000000f1d169d2a705ae4987d716b2b8b9a55301000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x1802e6d08"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Create"
+        }
+      ],
+      "definition": "pub struct ISystemConditionFactory_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Create: unsafe extern \"system\" fn(*mut core::ffi::c_void, SystemConditionType, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ITileUpdateManagerStatics",
+      "iid": "da159e5d-3ea9-4986-8d84-b09d5e12276d",
+      "hits": [
+        {
+          "va": "0x1802e8ee0",
+          "offset": "0x2e82e0",
+          "type_pointer": "0x18000bf90",
+          "bytes": "90bf008001000000000000000000000000000000000000005d9e15daa93e86498d84b09d5e12276d01000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f780",
+        "0x18010f7b0",
+        "0x1802e8ec8"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateTileUpdaterForApplication"
+        },
+        {
+          "slot": 7,
+          "name": "CreateTileUpdaterForApplicationWithId"
+        },
+        {
+          "slot": 8,
+          "name": "CreateTileUpdaterForSecondaryTile"
+        },
+        {
+          "slot": 9,
+          "name": "GetTemplateContent"
+        }
+      ],
+      "definition": "pub struct ITileUpdateManagerStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub CreateTileUpdaterForApplication: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub CreateTileUpdaterForApplicationWithId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub CreateTileUpdaterForSecondaryTile: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Data_Xml_Dom\")]\n    pub GetTemplateContent: unsafe extern \"system\" fn(*mut core::ffi::c_void, TileTemplateType, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Data_Xml_Dom\"))]\n    GetTemplateContent: usize,\n}"
+    },
+    {
+      "name": "ITileUpdater",
+      "iid": "0942a48b-1d91-44ec-9243-c1e821c29a20",
+      "hits": [
+        {
+          "va": "0x1802e8f20",
+          "offset": "0x2e8320",
+          "type_pointer": "0x18000bf60",
+          "bytes": "60bf00800100000018bf00800100000000000000000000008ba44209911dec449243c1e821c29a2001000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000bf50",
+        "0x18010f7d0",
+        "0x1802e8f08"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Update"
+        },
+        {
+          "slot": 7,
+          "name": "Clear"
+        },
+        {
+          "slot": 8,
+          "name": "EnableNotificationQueue"
+        },
+        {
+          "slot": 9,
+          "name": "Setting"
+        },
+        {
+          "slot": 10,
+          "name": "AddToSchedule"
+        },
+        {
+          "slot": 11,
+          "name": "RemoveFromSchedule"
+        },
+        {
+          "slot": 12,
+          "name": "GetScheduledTileNotifications"
+        },
+        {
+          "slot": 13,
+          "name": "StartPeriodicUpdate"
+        },
+        {
+          "slot": 14,
+          "name": "StartPeriodicUpdateAtTime"
+        },
+        {
+          "slot": 15,
+          "name": "StopPeriodicUpdate"
+        },
+        {
+          "slot": 16,
+          "name": "StartPeriodicUpdateBatch"
+        },
+        {
+          "slot": 17,
+          "name": "StartPeriodicUpdateBatchAtTime"
+        }
+      ],
+      "definition": "pub struct ITileUpdater_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Update: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Clear: unsafe extern \"system\" fn(*mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub EnableNotificationQueue: unsafe extern \"system\" fn(*mut core::ffi::c_void, bool) -> windows_core::HRESULT,\n    pub Setting: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut NotificationSetting) -> windows_core::HRESULT,\n    pub AddToSchedule: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RemoveFromSchedule: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub GetScheduledTileNotifications: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub StartPeriodicUpdate: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, PeriodicUpdateRecurrence) -> windows_core::HRESULT,\n    pub StartPeriodicUpdateAtTime: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, windows_time::DateTime, PeriodicUpdateRecurrence) -> windows_core::HRESULT,\n    pub StopPeriodicUpdate: unsafe extern \"system\" fn(*mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub StartPeriodicUpdateBatch: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, PeriodicUpdateRecurrence) -> windows_core::HRESULT,\n    pub StartPeriodicUpdateBatchAtTime: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, windows_time::DateTime, PeriodicUpdateRecurrence) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ITileNotification",
+      "iid": "ebaec8fa-50ec-4c18-b4d0-3af02e5540ab",
+      "hits": [
+        {
+          "va": "0x1802e6720",
+          "offset": "0x2e5b20",
+          "type_pointer": "0x18000bec8",
+          "bytes": "c8be00800100000080be0080010000000000000000000000fac8aeebec50184cb4d03af02e5540ab01000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000beb8",
+        "0x1802e6708"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Content"
+        },
+        {
+          "slot": 7,
+          "name": "SetExpirationTime"
+        },
+        {
+          "slot": 8,
+          "name": "ExpirationTime"
+        },
+        {
+          "slot": 9,
+          "name": "SetTag"
+        },
+        {
+          "slot": 10,
+          "name": "Tag"
+        }
+      ],
+      "definition": "pub struct ITileNotification_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    #[cfg(feature = \"Data_Xml_Dom\")]\n    pub Content: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Data_Xml_Dom\"))]\n    Content: usize,\n    pub SetExpirationTime: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub ExpirationTime: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub SetTag: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Tag: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ITileNotificationFactory",
+      "iid": "c6abdd6e-4928-46c8-bdbf-81a047dea0d4",
+      "hits": [
+        {
+          "va": "0x1802e64e0",
+          "offset": "0x2e58e0",
+          "type_pointer": "0x18000bf78",
+          "bytes": "78bf008001000000000000000000000000000000000000006eddabc62849c846bdbf81a047dea0d401000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010e268",
+        "0x1802e64c8"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateTileNotification"
+        }
+      ],
+      "definition": "pub struct ITileNotificationFactory_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    #[cfg(feature = \"Data_Xml_Dom\")]\n    pub CreateTileNotification: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Data_Xml_Dom\"))]\n    CreateTileNotification: usize,\n}"
+    },
+    {
+      "name": "IUserProfilePersonalizationSettings",
+      "iid": "8ceddab4-7998-46d5-8dd3-184f1c5f9ab9",
+      "hits": [
+        {
+          "va": "0x1802e8ba0",
+          "offset": "0x2e7fa0",
+          "type_pointer": "0x18000c5d8",
+          "bytes": "d8c500800100000090c50080010000000000000000000000b4daed8c9879d5468dd3184f1c5f9ab901000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000c5c8",
+        "0x18010f440",
+        "0x1802e8b88"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "TrySetLockScreenImageAsync"
+        },
+        {
+          "slot": 7,
+          "name": "TrySetWallpaperImageAsync"
+        }
+      ],
+      "definition": "pub struct IUserProfilePersonalizationSettings_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub TrySetLockScreenImageAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    TrySetLockScreenImageAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub TrySetWallpaperImageAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    TrySetWallpaperImageAsync: usize,\n}"
+    },
+    {
+      "name": "IUserProfilePersonalizationSettingsStatics",
+      "iid": "91acb841-5037-454b-9883-bb772d08dd16",
+      "hits": [
+        {
+          "va": "0x1802e8b60",
+          "offset": "0x2e7f60",
+          "type_pointer": "0x18000c5f0",
+          "bytes": "f0c50080010000000000000000000000000000000000000041b8ac9137504b459883bb772d08dd1601000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f420",
+        "0x180110398",
+        "0x1802e8b48"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Current"
+        },
+        {
+          "slot": 7,
+          "name": "IsSupported"
+        }
+      ],
+      "definition": "pub struct IUserProfilePersonalizationSettingsStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Current: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub IsSupported: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut bool) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "ILockScreenStatics",
+      "iid": "3ee9d3ad-b607-40ae-b426-7631d9821269",
+      "hits": [
+        {
+          "va": "0x1802e9060",
+          "offset": "0x2e8460",
+          "type_pointer": "0x18000c608",
+          "bytes": "08c600800100000000000000000000000000000000000000add3e93e07b6ae40b4267631d982126901000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010fb18",
+        "0x18010fb38",
+        "0x1802e9048"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "OriginalImageFile"
+        },
+        {
+          "slot": 7,
+          "name": "GetImageStream"
+        },
+        {
+          "slot": 8,
+          "name": "SetImageFileAsync"
+        },
+        {
+          "slot": 9,
+          "name": "SetImageStreamAsync"
+        }
+      ],
+      "definition": "pub struct ILockScreenStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub OriginalImageFile: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub GetImageStream: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    GetImageStream: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub SetImageFileAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    SetImageFileAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub SetImageStreamAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    SetImageStreamAsync: usize,\n}"
+    },
+    {
+      "name": "IBitmapEncoderStatics",
+      "iid": "a74356a7-a4e4-4eb9-8e40-564de7e1ccb2",
+      "hits": [
+        {
+          "va": "0x1802e7020",
+          "offset": "0x2e6420",
+          "type_pointer": "0x18000d420",
+          "bytes": "20d400800100000000000000000000000000000000000000a75643a7e4a4b94e8e40564de7e1ccb201000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f800",
+        "0x1802e7008"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "BmpEncoderId"
+        },
+        {
+          "slot": 7,
+          "name": "JpegEncoderId"
+        },
+        {
+          "slot": 8,
+          "name": "PngEncoderId"
+        },
+        {
+          "slot": 9,
+          "name": "TiffEncoderId"
+        },
+        {
+          "slot": 10,
+          "name": "GifEncoderId"
+        },
+        {
+          "slot": 11,
+          "name": "JpegXREncoderId"
+        },
+        {
+          "slot": 12,
+          "name": "GetEncoderInformationEnumerator"
+        },
+        {
+          "slot": 13,
+          "name": "CreateAsync"
+        },
+        {
+          "slot": 14,
+          "name": "CreateWithEncodingOptionsAsync"
+        },
+        {
+          "slot": 15,
+          "name": "CreateForTranscodingAsync"
+        },
+        {
+          "slot": 16,
+          "name": "CreateForInPlacePropertyEncodingAsync"
+        }
+      ],
+      "definition": "pub struct IBitmapEncoderStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub BmpEncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub JpegEncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub PngEncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub TiffEncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub GifEncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub JpegXREncoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub GetEncoderInformationEnumerator: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, windows_core::GUID, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateWithEncodingOptionsAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, windows_core::GUID, *mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateWithEncodingOptionsAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateForTranscodingAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateForTranscodingAsync: usize,\n    pub CreateForInPlacePropertyEncodingAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBitmapEncoder",
+      "iid": "2bc468e3-e1f8-4b54-95e8-32919551ce62",
+      "hits": [
+        {
+          "va": "0x1802e70a0",
+          "offset": "0x2e64a0",
+          "type_pointer": "0x18000d3f0",
+          "bytes": "f0d3008001000000a8d30080010000000000000000000000e368c42bf8e1544b95e832919551ce6201000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000d3e0",
+        "0x18010f870",
+        "0x18010f888",
+        "0x1802dcbf0",
+        "0x1802e7088"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "EncoderInformation"
+        },
+        {
+          "slot": 7,
+          "name": "BitmapProperties"
+        },
+        {
+          "slot": 8,
+          "name": "BitmapContainerProperties"
+        },
+        {
+          "slot": 9,
+          "name": "IsThumbnailGenerated"
+        },
+        {
+          "slot": 10,
+          "name": "SetIsThumbnailGenerated"
+        },
+        {
+          "slot": 11,
+          "name": "GeneratedThumbnailWidth"
+        },
+        {
+          "slot": 12,
+          "name": "SetGeneratedThumbnailWidth"
+        },
+        {
+          "slot": 13,
+          "name": "GeneratedThumbnailHeight"
+        },
+        {
+          "slot": 14,
+          "name": "SetGeneratedThumbnailHeight"
+        },
+        {
+          "slot": 15,
+          "name": "BitmapTransform"
+        },
+        {
+          "slot": 16,
+          "name": "SetPixelData"
+        },
+        {
+          "slot": 17,
+          "name": "GoToNextFrameAsync"
+        },
+        {
+          "slot": 18,
+          "name": "GoToNextFrameWithEncodingOptionsAsync"
+        },
+        {
+          "slot": 19,
+          "name": "FlushAsync"
+        }
+      ],
+      "definition": "pub struct IBitmapEncoder_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub EncoderInformation: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub BitmapProperties: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub BitmapContainerProperties: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub IsThumbnailGenerated: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut bool) -> windows_core::HRESULT,\n    pub SetIsThumbnailGenerated: unsafe extern \"system\" fn(*mut core::ffi::c_void, bool) -> windows_core::HRESULT,\n    pub GeneratedThumbnailWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetGeneratedThumbnailWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32) -> windows_core::HRESULT,\n    pub GeneratedThumbnailHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetGeneratedThumbnailHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32) -> windows_core::HRESULT,\n    pub BitmapTransform: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub SetPixelData: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapPixelFormat, BitmapAlphaMode, u32, u32, f64, f64, u32, *const u8) -> windows_core::HRESULT,\n    pub GoToNextFrameAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub GoToNextFrameWithEncodingOptionsAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub FlushAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBitmapDecoderStatics",
+      "iid": "438ccb26-bcef-4e95-bad6-23a822e58d01",
+      "hits": [
+        {
+          "va": "0x1802e6e20",
+          "offset": "0x2e6220",
+          "type_pointer": "0x18000d408",
+          "bytes": "08d40080010000000000000000000000000000000000000026cb8c43efbc954ebad623a822e58d0101000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18010f9a8",
+        "0x1802e6e08"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "BmpDecoderId"
+        },
+        {
+          "slot": 7,
+          "name": "JpegDecoderId"
+        },
+        {
+          "slot": 8,
+          "name": "PngDecoderId"
+        },
+        {
+          "slot": 9,
+          "name": "TiffDecoderId"
+        },
+        {
+          "slot": 10,
+          "name": "GifDecoderId"
+        },
+        {
+          "slot": 11,
+          "name": "JpegXRDecoderId"
+        },
+        {
+          "slot": 12,
+          "name": "IcoDecoderId"
+        },
+        {
+          "slot": 13,
+          "name": "GetDecoderInformationEnumerator"
+        },
+        {
+          "slot": 14,
+          "name": "CreateAsync"
+        },
+        {
+          "slot": 15,
+          "name": "CreateWithIdAsync"
+        }
+      ],
+      "definition": "pub struct IBitmapDecoderStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub BmpDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub JpegDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub PngDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub TiffDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub GifDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub JpegXRDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub IcoDecoderId: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut windows_core::GUID) -> windows_core::HRESULT,\n    pub GetDecoderInformationEnumerator: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateWithIdAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, windows_core::GUID, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateWithIdAsync: usize,\n}"
+    },
+    {
+      "name": "IBitmapDecoder",
+      "iid": "acef22ba-1d74-4c91-9dfc-9620745233e6",
+      "hits": [
+        {
+          "va": "0x1802e6ea0",
+          "offset": "0x2e62a0",
+          "type_pointer": "0x18000d2c0",
+          "bytes": "c0d200800100000000000000000000000000000000000000ba22efac741d914c9dfc9620745233e601000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000d290",
+        "0x1802dcb90",
+        "0x1802e6e88"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "BitmapContainerProperties"
+        },
+        {
+          "slot": 7,
+          "name": "DecoderInformation"
+        },
+        {
+          "slot": 8,
+          "name": "FrameCount"
+        },
+        {
+          "slot": 9,
+          "name": "GetPreviewAsync"
+        },
+        {
+          "slot": 10,
+          "name": "GetFrameAsync"
+        }
+      ],
+      "definition": "pub struct IBitmapDecoder_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub BitmapContainerProperties: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub DecoderInformation: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub FrameCount: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub GetPreviewAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    GetPreviewAsync: usize,\n    pub GetFrameAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBitmapFrame",
+      "iid": "72a49a1c-8081-438d-91bc-94ecfc8185c6",
+      "hits": [
+        {
+          "va": "0x1802e6ee0",
+          "offset": "0x2e62e0",
+          "type_pointer": "0x18000d2a8",
+          "bytes": "a8d200800100000058d200800100000000000000000000001c9aa47281808d4391bc94ecfc8185c601000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000d298",
+        "0x18010f8f0",
+        "0x18010f980",
+        "0x18010f990",
+        "0x1802e6ec8"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetThumbnailAsync"
+        },
+        {
+          "slot": 7,
+          "name": "BitmapProperties"
+        },
+        {
+          "slot": 8,
+          "name": "BitmapPixelFormat"
+        },
+        {
+          "slot": 9,
+          "name": "BitmapAlphaMode"
+        },
+        {
+          "slot": 10,
+          "name": "DpiX"
+        },
+        {
+          "slot": 11,
+          "name": "DpiY"
+        },
+        {
+          "slot": 12,
+          "name": "PixelWidth"
+        },
+        {
+          "slot": 13,
+          "name": "PixelHeight"
+        },
+        {
+          "slot": 14,
+          "name": "OrientedPixelWidth"
+        },
+        {
+          "slot": 15,
+          "name": "OrientedPixelHeight"
+        },
+        {
+          "slot": 16,
+          "name": "GetPixelDataAsync"
+        },
+        {
+          "slot": 17,
+          "name": "GetPixelDataTransformedAsync"
+        }
+      ],
+      "definition": "pub struct IBitmapFrame_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub GetThumbnailAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    GetThumbnailAsync: usize,\n    pub BitmapProperties: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub BitmapPixelFormat: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapPixelFormat) -> windows_core::HRESULT,\n    pub BitmapAlphaMode: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapAlphaMode) -> windows_core::HRESULT,\n    pub DpiX: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut f64) -> windows_core::HRESULT,\n    pub DpiY: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut f64) -> windows_core::HRESULT,\n    pub PixelWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub PixelHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub OrientedPixelWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub OrientedPixelHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub GetPixelDataAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub GetPixelDataTransformedAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapPixelFormat, BitmapAlphaMode, *mut core::ffi::c_void, ExifOrientationMode, ColorManagementMode, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IBitmapTransform",
+      "iid": "ae755344-e268-4d35-adcf-e995d31a8d34",
+      "hits": [
+        {
+          "va": "0x1802e56e0",
+          "offset": "0x2e4ae0",
+          "type_pointer": "0x18000d208",
+          "bytes": "08d2008001000000c0d10080010000000000000000000000445375ae68e2354dadcfe995d31a8d3401000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000d1f8",
+        "0x18010f760",
+        "0x18010f770",
+        "0x1802e56c8"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "ScaledWidth"
+        },
+        {
+          "slot": 7,
+          "name": "SetScaledWidth"
+        },
+        {
+          "slot": 8,
+          "name": "ScaledHeight"
+        },
+        {
+          "slot": 9,
+          "name": "SetScaledHeight"
+        },
+        {
+          "slot": 10,
+          "name": "InterpolationMode"
+        },
+        {
+          "slot": 11,
+          "name": "SetInterpolationMode"
+        },
+        {
+          "slot": 12,
+          "name": "Flip"
+        },
+        {
+          "slot": 13,
+          "name": "SetFlip"
+        },
+        {
+          "slot": 14,
+          "name": "Rotation"
+        },
+        {
+          "slot": 15,
+          "name": "SetRotation"
+        },
+        {
+          "slot": 16,
+          "name": "Bounds"
+        },
+        {
+          "slot": 17,
+          "name": "SetBounds"
+        }
+      ],
+      "definition": "pub struct IBitmapTransform_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub ScaledWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetScaledWidth: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32) -> windows_core::HRESULT,\n    pub ScaledHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetScaledHeight: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32) -> windows_core::HRESULT,\n    pub InterpolationMode: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapInterpolationMode) -> windows_core::HRESULT,\n    pub SetInterpolationMode: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapInterpolationMode) -> windows_core::HRESULT,\n    pub Flip: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapFlip) -> windows_core::HRESULT,\n    pub SetFlip: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapFlip) -> windows_core::HRESULT,\n    pub Rotation: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapRotation) -> windows_core::HRESULT,\n    pub SetRotation: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapRotation) -> windows_core::HRESULT,\n    pub Bounds: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut BitmapBounds) -> windows_core::HRESULT,\n    pub SetBounds: unsafe extern \"system\" fn(*mut core::ffi::c_void, BitmapBounds) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IPixelDataProvider",
+      "iid": "dd831f25-185c-4595-9fb9-ccbe6ec18a6f",
+      "hits": [
+        {
+          "va": "0x1802e6f20",
+          "offset": "0x2e6320",
+          "type_pointer": "0x18000d358",
+          "bytes": "58d300800100000010d30080010000000000000000000000251f83dd5c1895459fb9ccbe6ec18a6f01000000000000000000000000000000"
+        }
+      ],
+      "pointer_candidates": [
+        "0x18000d348",
+        "0x1802dcbc0",
+        "0x1802e6f08"
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "DetachPixelData"
+        }
+      ],
+      "definition": "pub struct IPixelDataProvider_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub DetachPixelData: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32, *mut *mut u8) -> windows_core::HRESULT,\n}"
+    }
+  ],
+  "reference_candidates": [
+    {
+      "instruction": "0x1804a08cc",
+      "target": "0x18000e388",
+      "interface": "IBackgroundExecutionManagerStatics",
+      "owner": {
+        "start": "0x1804a08a0",
+        "end_exclusive": "0x1804a0a76",
+        "length": 470,
+        "unwind_rva": "0x14b36c"
+      }
+    },
+    {
+      "instruction": "0x1804a08e0",
+      "target": "0x18010f020",
+      "interface": "IBackgroundExecutionManagerStatics",
+      "owner": {
+        "start": "0x1804a08a0",
+        "end_exclusive": "0x1804a0a76",
+        "length": 470,
+        "unwind_rva": "0x14b36c"
+      }
+    },
+    {
+      "instruction": "0x1804a0af8",
+      "target": "0x18010f038",
+      "interface": "IBackgroundTaskBuilder",
+      "owner": {
+        "start": "0x1804a0ab0",
+        "end_exclusive": "0x1804a0ba7",
+        "length": 247,
+        "unwind_rva": "0x14b150"
+      }
+    },
+    {
+      "instruction": "0x1804a0b83",
+      "target": "0x18010f078",
+      "interface": "IBackgroundTaskBuilder",
+      "owner": {
+        "start": "0x1804a0ab0",
+        "end_exclusive": "0x1804a0ba7",
+        "length": 247,
+        "unwind_rva": "0x14b150"
+      }
+    },
+    {
+      "instruction": "0x1804a0c17",
+      "target": "0x18000e370",
+      "interface": "IBackgroundTaskRegistrationStatics",
+      "owner": {
+        "start": "0x1804a0be0",
+        "end_exclusive": "0x1804a0c8a",
+        "length": 170,
+        "unwind_rva": "0x14ae08"
+      }
+    },
+    {
+      "instruction": "0x1804a0c24",
+      "target": "0x18010f090",
+      "interface": "IBackgroundTaskRegistrationStatics",
+      "owner": {
+        "start": "0x1804a0be0",
+        "end_exclusive": "0x1804a0c8a",
+        "length": 170,
+        "unwind_rva": "0x14ae08"
+      }
+    },
+    {
+      "instruction": "0x1804a0cdc",
+      "target": "0x180022210",
+      "interface": "ISystemConditionFactory",
+      "owner": {
+        "start": "0x1804a0cd0",
+        "end_exclusive": "0x1804a0d81",
+        "length": 177,
+        "unwind_rva": "0x14af0c"
+      }
+    },
+    {
+      "instruction": "0x1804a0d08",
+      "target": "0x180022210",
+      "interface": "ISystemConditionFactory",
+      "owner": {
+        "start": "0x1804a0cd0",
+        "end_exclusive": "0x1804a0d81",
+        "length": 177,
+        "unwind_rva": "0x14af0c"
+      }
+    },
+    {
+      "instruction": "0x1804a0de0",
+      "target": "0x1800221f8",
+      "interface": "ITimeTriggerFactory",
+      "owner": {
+        "start": "0x1804a0dd0",
+        "end_exclusive": "0x1804a0e93",
+        "length": 195,
+        "unwind_rva": "0x14af0c"
+      }
+    },
+    {
+      "instruction": "0x1804a0e1a",
+      "target": "0x1800221f8",
+      "interface": "ITimeTriggerFactory",
+      "owner": {
+        "start": "0x1804a0dd0",
+        "end_exclusive": "0x1804a0e93",
+        "length": 195,
+        "unwind_rva": "0x14af0c"
+      }
+    },
+    {
+      "instruction": "0x1804b4214",
+      "target": "0x18000c5f0",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x1804b4190",
+        "end_exclusive": "0x1804b43fa",
+        "length": 618,
+        "unwind_rva": "0x14b4c0"
+      }
+    },
+    {
+      "instruction": "0x1804b4228",
+      "target": "0x18010f420",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x1804b4190",
+        "end_exclusive": "0x1804b43fa",
+        "length": 618,
+        "unwind_rva": "0x14b4c0"
+      }
+    },
+    {
+      "instruction": "0x1804b6dc4",
+      "target": "0x18000c5f0",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x1804b6d40",
+        "end_exclusive": "0x1804b6faa",
+        "length": 618,
+        "unwind_rva": "0x14b4c0"
+      }
+    },
+    {
+      "instruction": "0x1804b6dd8",
+      "target": "0x18010f420",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x1804b6d40",
+        "end_exclusive": "0x1804b6faa",
+        "length": 618,
+        "unwind_rva": "0x14b4c0"
+      }
+    },
+    {
+      "instruction": "0x1804bb3b6",
+      "target": "0x18010f760",
+      "interface": "IBitmapTransform",
+      "owner": {
+        "start": "0x1804bb330",
+        "end_exclusive": "0x1804bb429",
+        "length": 249,
+        "unwind_rva": "0x14b06c"
+      }
+    },
+    {
+      "instruction": "0x1804bb3f8",
+      "target": "0x18000d208",
+      "interface": "IBitmapTransform",
+      "owner": {
+        "start": "0x1804bb330",
+        "end_exclusive": "0x1804bb429",
+        "length": 249,
+        "unwind_rva": "0x14b06c"
+      }
+    },
+    {
+      "instruction": "0x1804bb407",
+      "target": "0x18010f770",
+      "interface": "IBitmapTransform",
+      "owner": {
+        "start": "0x1804bb330",
+        "end_exclusive": "0x1804bb429",
+        "length": 249,
+        "unwind_rva": "0x14b06c"
+      }
+    },
+    {
+      "instruction": "0x1804bb536",
+      "target": "0x18000bf90",
+      "interface": "ITileUpdateManagerStatics",
+      "owner": {
+        "start": "0x1804bb510",
+        "end_exclusive": "0x1804bb6c2",
+        "length": 434,
+        "unwind_rva": "0x14b258"
+      }
+    },
+    {
+      "instruction": "0x1804bb54a",
+      "target": "0x18010f780",
+      "interface": "ITileUpdateManagerStatics",
+      "owner": {
+        "start": "0x1804bb510",
+        "end_exclusive": "0x1804bb6c2",
+        "length": 434,
+        "unwind_rva": "0x14b258"
+      }
+    },
+    {
+      "instruction": "0x1804bb672",
+      "target": "0x18000bf90",
+      "interface": "ITileUpdateManagerStatics",
+      "owner": {
+        "start": "0x1804bb510",
+        "end_exclusive": "0x1804bb6c2",
+        "length": 434,
+        "unwind_rva": "0x14b258"
+      }
+    },
+    {
+      "instruction": "0x1804bb686",
+      "target": "0x18010f7b0",
+      "interface": "ITileUpdateManagerStatics",
+      "owner": {
+        "start": "0x1804bb510",
+        "end_exclusive": "0x1804bb6c2",
+        "length": 434,
+        "unwind_rva": "0x14b258"
+      }
+    },
+    {
+      "instruction": "0x1804bb74f",
+      "target": "0x18000bec8",
+      "interface": "ITileNotification",
+      "owner": {
+        "start": "0x1804bb6d0",
+        "end_exclusive": "0x1804bb773",
+        "length": 163,
+        "unwind_rva": "0x14c0ec"
+      }
+    },
+    {
+      "instruction": "0x1804bb7dc",
+      "target": "0x18000bf78",
+      "interface": "ITileNotificationFactory",
+      "owner": {
+        "start": "0x1804bb7d0",
+        "end_exclusive": "0x1804bb86c",
+        "length": 156,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "instruction": "0x1804bbea4",
+      "target": "0x18000d420",
+      "interface": "IBitmapEncoderStatics",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end_exclusive": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      }
+    },
+    {
+      "instruction": "0x1804bbec2",
+      "target": "0x18010f800",
+      "interface": "IBitmapEncoderStatics",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end_exclusive": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      }
+    },
+    {
+      "instruction": "0x1804bbfc8",
+      "target": "0x18010f870",
+      "interface": "IBitmapEncoder",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end_exclusive": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      }
+    },
+    {
+      "instruction": "0x1804bc02d",
+      "target": "0x18010f888",
+      "interface": "IBitmapEncoder",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end_exclusive": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      }
+    },
+    {
+      "instruction": "0x1804bc2fb",
+      "target": "0x18000d3f0",
+      "interface": "IBitmapEncoder",
+      "owner": {
+        "start": "0x1804bc240",
+        "end_exclusive": "0x1804bc31d",
+        "length": 221,
+        "unwind_rva": "0x14ba74"
+      }
+    },
+    {
+      "instruction": "0x1804bc458",
+      "target": "0x18000d420",
+      "interface": "IBitmapEncoderStatics",
+      "owner": {
+        "start": "0x1804bc440",
+        "end_exclusive": "0x1804bc487",
+        "length": 71,
+        "unwind_rva": "0x14c12c"
+      }
+    },
+    {
+      "instruction": "0x1804bc4ea",
+      "target": "0x18000d420",
+      "interface": "IBitmapEncoderStatics",
+      "owner": {
+        "start": "0x1804bc490",
+        "end_exclusive": "0x1804bc53f",
+        "length": 175,
+        "unwind_rva": "0x14c084"
+      }
+    },
+    {
+      "instruction": "0x1804bc911",
+      "target": "0x18010f8f0",
+      "interface": "IBitmapFrame",
+      "owner": {
+        "start": "0x1804bc790",
+        "end_exclusive": "0x1804bcaef",
+        "length": 863,
+        "unwind_rva": "0x14c144"
+      }
+    },
+    {
+      "instruction": "0x1804bc9b8",
+      "target": "0x18000d2a8",
+      "interface": "IBitmapFrame",
+      "owner": {
+        "start": "0x1804bc790",
+        "end_exclusive": "0x1804bcaef",
+        "length": 863,
+        "unwind_rva": "0x14c144"
+      }
+    },
+    {
+      "instruction": "0x1804bc9dd",
+      "target": "0x18000d2a8",
+      "interface": "IBitmapFrame",
+      "owner": {
+        "start": "0x1804bc790",
+        "end_exclusive": "0x1804bcaef",
+        "length": 863,
+        "unwind_rva": "0x14c144"
+      }
+    },
+    {
+      "instruction": "0x1804bc9f4",
+      "target": "0x18010f980",
+      "interface": "IBitmapFrame",
+      "owner": {
+        "start": "0x1804bc790",
+        "end_exclusive": "0x1804bcaef",
+        "length": 863,
+        "unwind_rva": "0x14c144"
+      }
+    },
+    {
+      "instruction": "0x1804bca2b",
+      "target": "0x18010f990",
+      "interface": "IBitmapFrame",
+      "owner": {
+        "start": "0x1804bc790",
+        "end_exclusive": "0x1804bcaef",
+        "length": 863,
+        "unwind_rva": "0x14c144"
+      }
+    },
+    {
+      "instruction": "0x1804bcbab",
+      "target": "0x18000d358",
+      "interface": "IPixelDataProvider",
+      "owner": {
+        "start": "0x1804bcb80",
+        "end_exclusive": "0x1804bcc2c",
+        "length": 172,
+        "unwind_rva": "0x14b10c"
+      }
+    },
+    {
+      "instruction": "0x1804bcc4f",
+      "target": "0x18000d408",
+      "interface": "IBitmapDecoderStatics",
+      "owner": {
+        "start": "0x1804bcc40",
+        "end_exclusive": "0x1804bcc7b",
+        "length": 59,
+        "unwind_rva": "0x14adec"
+      }
+    },
+    {
+      "instruction": "0x1804c151f",
+      "target": "0x18000c608",
+      "interface": "ILockScreenStatics",
+      "owner": {
+        "start": "0x1804c1510",
+        "end_exclusive": "0x1804c154b",
+        "length": 59,
+        "unwind_rva": "0x14adec"
+      }
+    },
+    {
+      "instruction": "0x1804c178f",
+      "target": "0x18000c608",
+      "interface": "ILockScreenStatics",
+      "owner": {
+        "start": "0x1804c1780",
+        "end_exclusive": "0x1804c17bb",
+        "length": 59,
+        "unwind_rva": "0x14adec"
+      }
+    },
+    {
+      "instruction": "0x1804c2d47",
+      "target": "0x18010fb60",
+      "interface": "IBackgroundTaskDeferral",
+      "owner": {
+        "start": "0x1804c2d40",
+        "end_exclusive": "0x1804c2d5f",
+        "length": 31,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x18051d81b",
+      "target": "0x18000c5f0",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x18051d810",
+        "end_exclusive": "0x18051d843",
+        "length": 51,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x18051d828",
+      "target": "0x180110398",
+      "interface": "IUserProfilePersonalizationSettingsStatics",
+      "owner": {
+        "start": "0x18051d810",
+        "end_exclusive": "0x18051d843",
+        "length": 51,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x18055e235",
+      "target": "0x1801108a8",
+      "interface": "IBackgroundTaskInstance",
+      "owner": {
+        "start": "0x18055e200",
+        "end_exclusive": "0x18055e25c",
+        "length": 92,
+        "unwind_rva": "0x14c7b4"
+      }
+    },
+    {
+      "instruction": "0x1805a08ea",
+      "target": "0x18000e2f8",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805a08b0",
+        "end_exclusive": "0x1805a0923",
+        "length": 115,
+        "unwind_rva": "0x14c55c"
+      }
+    },
+    {
+      "instruction": "0x1805a08fe",
+      "target": "0x18000e2f8",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805a08b0",
+        "end_exclusive": "0x1805a0923",
+        "length": 115,
+        "unwind_rva": "0x14c55c"
+      }
+    },
+    {
+      "instruction": "0x1805a3a4e",
+      "target": "0x1800221e0",
+      "interface": "IBackgroundTask",
+      "owner": {
+        "start": "0x1805a3a30",
+        "end_exclusive": "0x1805a3a65",
+        "length": 53,
+        "unwind_rva": "0x14adec"
+      }
+    },
+    {
+      "instruction": "0x1805a3a77",
+      "target": "0x180112428",
+      "interface": "IBackgroundTaskInstance",
+      "owner": {
+        "start": "0x1805a3a70",
+        "end_exclusive": "0x1805a3a8f",
+        "length": 31,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x1805a6e4c",
+      "target": "0x18000e2f8",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805a6dc0",
+        "end_exclusive": "0x1805a6eee",
+        "length": 302,
+        "unwind_rva": "0x14cbd4"
+      }
+    },
+    {
+      "instruction": "0x1805a6e60",
+      "target": "0x18000e2f8",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805a6dc0",
+        "end_exclusive": "0x1805a6eee",
+        "length": 302,
+        "unwind_rva": "0x14cbd4"
+      }
+    },
+    {
+      "instruction": "0x1805b2397",
+      "target": "0x180113758",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805b2390",
+        "end_exclusive": "0x1805b23b6",
+        "length": 38,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "instruction": "0x1805b23c7",
+      "target": "0x180113768",
+      "interface": "IBackgroundTaskRegistration",
+      "owner": {
+        "start": "0x1805b23c0",
+        "end_exclusive": "0x1805b23df",
+        "length": 31,
+        "unwind_rva": "0x14ae34"
+      }
+    }
+  ],
+  "limitations": [
+    "IIDs plus preceding EEType pointer bytes corroborate static generic contexts; they are not runtime COM observations.",
+    "RIP-relative byte patterns require REA decoding. COM ABI slot numbers apply only after the target interface is matched."
+  ]
+}

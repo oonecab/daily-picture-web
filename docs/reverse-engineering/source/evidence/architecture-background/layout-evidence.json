@@ -1,0 +1,691 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "types": [
+    {
+      "type_address": "0x18001c350",
+      "bytes": "0000240120000000c0662a800100000003000100f393ccd5608260800100000068826080010000007082608001000000784e008001000000b2ce148001000000a4ffffffdc1d4a00f8214a005411500050125000ac145000f0ffffffffffffff08000000000000000100000000000000",
+      "relative_code_pointer_candidates": [
+        {
+          "field": "0x18001c394",
+          "raw": "0x4a1ddc",
+          "target": "0x1804be170",
+          "owner": {
+            "start": "0x1804be170",
+            "end_exclusive": "0x1804be224",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        },
+        {
+          "field": "0x18001c398",
+          "raw": "0x4a21f8",
+          "target": "0x1804be590",
+          "owner": {
+            "start": "0x1804be590",
+            "end_exclusive": "0x1804be62c",
+            "length": 156,
+            "unwind_rva": "0x14ae00"
+          }
+        },
+        {
+          "field": "0x18001c39c",
+          "raw": "0x501154",
+          "target": "0x18051d4f0",
+          "owner": {
+            "start": "0x18051d4f0",
+            "end_exclusive": "0x18051d50b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "field": "0x18001c3a0",
+          "raw": "0x501250",
+          "target": "0x18051d5f0",
+          "owner": {
+            "start": "0x18051d5f0",
+            "end_exclusive": "0x18051d60b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "field": "0x18001c3a4",
+          "raw": "0x5014ac",
+          "target": "0x18051d850",
+          "owner": {
+            "start": "0x18051d850",
+            "end_exclusive": "0x18051d86b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        }
+      ],
+      "relative_table_field": "0x18001c390",
+      "relative_table": "0x18001c334",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001c334",
+          "target": "0x1804bd770",
+          "owner": {
+            "start": "0x1804bd770",
+            "end_exclusive": "0x1804bd80f",
+            "length": 159,
+            "unwind_rva": "0x14c168"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001c2a0",
+      "bytes": "0000240128000000c0662a8001000000030001000fa9886e608260800100000068826080010000007082608001000000604e00800100000026cf14800100000090fffffffc4f4a0068524a00ec7c5e000000040118000000c0662a8001000000030001001200a9e66082608001000000",
+      "relative_code_pointer_candidates": [
+        {
+          "field": "0x18001c2e4",
+          "raw": "0x4a4ffc",
+          "target": "0x1804c12e0",
+          "owner": {
+            "start": "0x1804c12e0",
+            "end_exclusive": "0x1804c1377",
+            "length": 151,
+            "unwind_rva": "0x14ae00"
+          }
+        },
+        {
+          "field": "0x18001c2e8",
+          "raw": "0x4a5268",
+          "target": "0x1804c1550",
+          "owner": {
+            "start": "0x1804c1550",
+            "end_exclusive": "0x1804c15e7",
+            "length": 151,
+            "unwind_rva": "0x14ae00"
+          }
+        }
+      ],
+      "relative_table_field": "0x18001c2e0",
+      "relative_table": "0x18001c270",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001c270",
+          "target": "0x1804c1bf0",
+          "owner": {
+            "start": "0x1804c1bf0",
+            "end_exclusive": "0x1804c1ca4",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001c274",
+          "target": "0x1804c2010",
+          "owner": {
+            "start": "0x1804c2010",
+            "end_exclusive": "0x1804c20ac",
+            "length": 156,
+            "unwind_rva": "0x14ae00"
+          }
+        },
+        {
+          "index": 2,
+          "entry": "0x18001c278",
+          "target": "0x18051d630",
+          "owner": {
+            "start": "0x18051d630",
+            "end_exclusive": "0x18051d64b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 3,
+          "entry": "0x18001c27c",
+          "target": "0x18051d710",
+          "owner": {
+            "start": "0x18051d710",
+            "end_exclusive": "0x18051d72b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 4,
+          "entry": "0x18001c280",
+          "target": "0x18051d890",
+          "owner": {
+            "start": "0x18051d890",
+            "end_exclusive": "0x18051d8ab",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001c3c0",
+      "bytes": "0000240128000000c0662a80010000000300010063b2ef35608260800100000068826080010000007082608001000000904e00800100000026cf14800100000094ffffffdc184a0008194a00bc7b5e000000040118000000c0662a800100000003000100a2dc42d76082608001000000",
+      "relative_code_pointer_candidates": [
+        {
+          "field": "0x18001c404",
+          "raw": "0x4a18dc",
+          "target": "0x1804bdce0",
+          "owner": {
+            "start": "0x1804bdce0",
+            "end_exclusive": "0x1804bdd0f",
+            "length": 47,
+            "unwind_rva": "0x14adec"
+          }
+        },
+        {
+          "field": "0x18001c408",
+          "raw": "0x4a1908",
+          "target": "0x1804bdd10",
+          "owner": {
+            "start": "0x1804bdd10",
+            "end_exclusive": "0x1804bdd3f",
+            "length": 47,
+            "unwind_rva": "0x14adec"
+          }
+        }
+      ],
+      "relative_table_field": "0x18001c400",
+      "relative_table": "0x18001c394",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001c394",
+          "target": "0x1804be170",
+          "owner": {
+            "start": "0x1804be170",
+            "end_exclusive": "0x1804be224",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001c398",
+          "target": "0x1804be590",
+          "owner": {
+            "start": "0x1804be590",
+            "end_exclusive": "0x1804be62c",
+            "length": 156,
+            "unwind_rva": "0x14ae00"
+          }
+        },
+        {
+          "index": 2,
+          "entry": "0x18001c39c",
+          "target": "0x18051d4f0",
+          "owner": {
+            "start": "0x18051d4f0",
+            "end_exclusive": "0x18051d50b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 3,
+          "entry": "0x18001c3a0",
+          "target": "0x18051d5f0",
+          "owner": {
+            "start": "0x18051d5f0",
+            "end_exclusive": "0x18051d60b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 4,
+          "entry": "0x18001c3a4",
+          "target": "0x18051d850",
+          "owner": {
+            "start": "0x18051d850",
+            "end_exclusive": "0x18051d86b",
+            "length": 27,
+            "unwind_rva": "0x14ae34"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001c1b0",
+      "bytes": "0000040118000000c0662a8001000000030001003ef6a7fb60826080010000006882608001000000708260800100000040c101800100000024cf14800100000098ffffff000000000000040018000000c0662a800100000003000000d0d5b36f60826080010000006882608001000000",
+      "relative_code_pointer_candidates": [],
+      "relative_table_field": "0x18001c1f0",
+      "relative_table": "0x18001c188",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001c188",
+          "target": "0x1804be7f0",
+          "owner": {
+            "start": "0x1804be7f0",
+            "end_exclusive": "0x1804be872",
+            "length": 130,
+            "unwind_rva": "0x14adec"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001c18c",
+          "target": "0x1804be880",
+          "owner": {
+            "start": "0x1804be880",
+            "end_exclusive": "0x1804be909",
+            "length": 137,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 2,
+          "entry": "0x18001c190",
+          "target": "0x18051d430",
+          "owner": {
+            "start": "0x18051d430",
+            "end_exclusive": "0x18051d4c8",
+            "length": 152,
+            "unwind_rva": "0x14adf4"
+          }
+        },
+        {
+          "index": 3,
+          "entry": "0x18001c194",
+          "target": "0x18051d510",
+          "owner": {
+            "start": "0x18051d510",
+            "end_exclusive": "0x18051d5c8",
+            "length": 184,
+            "unwind_rva": "0x14ae94"
+          }
+        },
+        {
+          "index": 4,
+          "entry": "0x18001c198",
+          "target": "0x18051d650",
+          "owner": {
+            "start": "0x18051d650",
+            "end_exclusive": "0x18051d6e8",
+            "length": 152,
+            "unwind_rva": "0x14adf4"
+          }
+        },
+        {
+          "index": 5,
+          "entry": "0x18001c19c",
+          "target": "0x18051d730",
+          "owner": {
+            "start": "0x18051d730",
+            "end_exclusive": "0x18051d7e8",
+            "length": 184,
+            "unwind_rva": "0x14ae94"
+          }
+        },
+        {
+          "index": 6,
+          "entry": "0x18001c1a0",
+          "target": "0x1804be910",
+          "owner": {
+            "start": "0x1804be910",
+            "end_exclusive": "0x1804be992",
+            "length": 130,
+            "unwind_rva": "0x14adec"
+          }
+        },
+        {
+          "index": 7,
+          "entry": "0x18001c1a4",
+          "target": "0x1804be9a0",
+          "owner": {
+            "start": "0x1804be9a0",
+            "end_exclusive": "0x1804bea29",
+            "length": 137,
+            "unwind_rva": "0x14ae34"
+          }
+        },
+        {
+          "index": 8,
+          "entry": "0x18001c1a8",
+          "target": "0x1804bea30",
+          "owner": {
+            "start": "0x1804bea30",
+            "end_exclusive": "0x1804beab2",
+            "length": 130,
+            "unwind_rva": "0x14adec"
+          }
+        },
+        {
+          "index": 9,
+          "entry": "0x18001c1ac",
+          "target": "0x1804beac0",
+          "owner": {
+            "start": "0x1804beac0",
+            "end_exclusive": "0x1804beb49",
+            "length": 137,
+            "unwind_rva": "0x14ae34"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001c460",
+      "bytes": "0000040118000000c0662a800100000003000100e8b7454c608260800100000068826080010000007082608001000000a84e00800100000004cf148001000000b4ffffff000000000000040118000000c0662a8001000000030000005dd0253960826080010000006882608001000000",
+      "relative_code_pointer_candidates": [],
+      "relative_table_field": "0x18001c4a0",
+      "relative_table": "0x18001c454",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001c454",
+          "target": "0x1804bfb70",
+          "owner": {
+            "start": "0x1804bfb70",
+            "end_exclusive": "0x1804bfc89",
+            "length": 281,
+            "unwind_rva": "0x14b17c"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001c458",
+          "target": "0x1804c0d00",
+          "owner": {
+            "start": "0x1804c0d00",
+            "end_exclusive": "0x1804c0e1d",
+            "length": 285,
+            "unwind_rva": "0x14b17c"
+          }
+        },
+        {
+          "index": 2,
+          "entry": "0x18001c45c",
+          "target": "0x1804c10c0",
+          "owner": {
+            "start": "0x1804c10c0",
+            "end_exclusive": "0x1804c11d9",
+            "length": 281,
+            "unwind_rva": "0x14b17c"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001bfd0",
+      "bytes": "0000040118000000c0662a800100000003000100760b519660826080010000006882608001000000708260800100000018c001800100000022cf148001000000b0ffffff0000000000000002180000000000000000000000000000003f10e467000f5000ac0f50005810500004115000",
+      "relative_code_pointer_candidates": [
+        {
+          "field": "0x18001c030",
+          "raw": "0x500f00",
+          "target": "0x18051cf30",
+          "owner": {
+            "start": "0x18051cf30",
+            "end_exclusive": "0x18051cfd7",
+            "length": 167,
+            "unwind_rva": "0x14b6a8"
+          }
+        },
+        {
+          "field": "0x18001c034",
+          "raw": "0x500fac",
+          "target": "0x18051cfe0",
+          "owner": {
+            "start": "0x18051cfe0",
+            "end_exclusive": "0x18051d087",
+            "length": 167,
+            "unwind_rva": "0x14b6a8"
+          }
+        },
+        {
+          "field": "0x18001c038",
+          "raw": "0x501058",
+          "target": "0x18051d090",
+          "owner": {
+            "start": "0x18051d090",
+            "end_exclusive": "0x18051d13c",
+            "length": 172,
+            "unwind_rva": "0x14b6a8"
+          }
+        },
+        {
+          "field": "0x18001c03c",
+          "raw": "0x501104",
+          "target": "0x18051d140",
+          "owner": {
+            "start": "0x18051d140",
+            "end_exclusive": "0x18051d1e7",
+            "length": 167,
+            "unwind_rva": "0x14b6a8"
+          }
+        }
+      ],
+      "relative_table_field": "0x18001c010",
+      "relative_table": "0x18001bfc0",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001bfc0",
+          "target": "0x1804b5550",
+          "owner": {
+            "start": "0x1804b5550",
+            "end_exclusive": "0x1804b5603",
+            "length": 179,
+            "unwind_rva": "0x14c060"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001bfc4",
+          "target": "0x1804b68c0",
+          "owner": {
+            "start": "0x1804b68c0",
+            "end_exclusive": "0x1804b6974",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        }
+      ]
+    },
+    {
+      "type_address": "0x18001bf60",
+      "bytes": "0000040118000000c0662a800100000003000100d6ece1d6608260800100000068826080010000007082608001000000a8bf01800100000022cf148001000000b0ffffff000000000000000218000000000000000000000000000000b7190bd690954900fca8490008805e0000000000",
+      "relative_code_pointer_candidates": [
+        {
+          "field": "0x18001bfc0",
+          "raw": "0x499590",
+          "target": "0x1804b5550",
+          "owner": {
+            "start": "0x1804b5550",
+            "end_exclusive": "0x1804b5603",
+            "length": 179,
+            "unwind_rva": "0x14c060"
+          }
+        },
+        {
+          "field": "0x18001bfc4",
+          "raw": "0x49a8fc",
+          "target": "0x1804b68c0",
+          "owner": {
+            "start": "0x1804b68c0",
+            "end_exclusive": "0x1804b6974",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        }
+      ],
+      "relative_table_field": "0x18001bfa0",
+      "relative_table": "0x18001bf50",
+      "table_entries": [
+        {
+          "index": 0,
+          "entry": "0x18001bf50",
+          "target": "0x1804b73c0",
+          "owner": {
+            "start": "0x1804b73c0",
+            "end_exclusive": "0x1804b7473",
+            "length": 179,
+            "unwind_rva": "0x14c060"
+          }
+        },
+        {
+          "index": 1,
+          "entry": "0x18001bf54",
+          "target": "0x1804b7990",
+          "owner": {
+            "start": "0x1804b7990",
+            "end_exclusive": "0x1804b7a44",
+            "length": 180,
+            "unwind_rva": "0x14bfa0"
+          }
+        },
+        {
+          "index": 2,
+          "entry": "0x18001bf58",
+          "target": "0x18051d810",
+          "owner": {
+            "start": "0x18051d810",
+            "end_exclusive": "0x18051d843",
+            "length": 51,
+            "unwind_rva": "0x14ae34"
+          }
+        }
+      ]
+    }
+  ],
+  "dispatch_cells": [
+    {
+      "address": "0x180305a30",
+      "bytes": "f8f35f8001000000db88d0ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18000e310",
+      "group_terminator": {
+        "address": "0x180305c10",
+        "slot": 0
+      }
+    },
+    {
+      "address": "0x180305a20",
+      "bytes": "f8f35f800100000053f4cfffffffffff",
+      "tag": 3,
+      "relative_target": "0x180004e78",
+      "group_terminator": {
+        "address": "0x180305c10",
+        "slot": 0
+      }
+    },
+    {
+      "address": "0x180307de0",
+      "bytes": "f8f35f80010000007bd0cfffffffffff",
+      "tag": 3,
+      "relative_target": "0x180004e60",
+      "group_terminator": {
+        "address": "0x180307f20",
+        "slot": 4
+      }
+    },
+    {
+      "address": "0x180307dd0",
+      "bytes": "f8f35f8001000000bbd0cfffffffffff",
+      "tag": 3,
+      "relative_target": "0x180004e90",
+      "group_terminator": {
+        "address": "0x180307f20",
+        "slot": 4
+      }
+    },
+    {
+      "address": "0x180308900",
+      "bytes": "f8f35f8001000000db98d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x1800221e0",
+      "group_terminator": {
+        "address": "0x180308970",
+        "slot": 0
+      }
+    },
+    {
+      "address": "0x1803077a0",
+      "bytes": "f8f35f80010000009b49d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x1803078f0",
+        "slot": 8
+      }
+    },
+    {
+      "address": "0x1803077b0",
+      "bytes": "f8f35f80010000008b49d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x1803078f0",
+        "slot": 8
+      }
+    },
+    {
+      "address": "0x1803083f0",
+      "bytes": "f8f35f80010000004b3dd1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x180308550",
+        "slot": 9
+      }
+    },
+    {
+      "address": "0x180305a10",
+      "bytes": "f8f35f80010000000366d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c018",
+      "group_terminator": {
+        "address": "0x180305c10",
+        "slot": 0
+      }
+    },
+    {
+      "address": "0x180307dc0",
+      "bytes": "f8f35f80010000007b43d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x180307f20",
+        "slot": 4
+      }
+    },
+    {
+      "address": "0x1803057e0",
+      "bytes": "f8f35f80010000005b69d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x1803057f0",
+        "slot": 0
+      }
+    },
+    {
+      "address": "0x1803058e0",
+      "bytes": "f8f35f80010000005b68d1ffffffffff",
+      "tag": 3,
+      "relative_target": "0x18001c140",
+      "group_terminator": {
+        "address": "0x180305a00",
+        "slot": 1
+      }
+    }
+  ],
+  "constants": [
+    {
+      "address": "0x180144818",
+      "bytes": "0000000000000040",
+      "double": 2.0
+    }
+  ],
+  "limitations": [
+    "Relative code pointers are candidates, not a complete EEType parser.",
+    "Dispatch cache tag3 corresponds to local relative type, tag2 to imported-indirect type in this image; terminal slot is a managed-interface ordinal, not the COM ABI slot."
+  ]
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#273b33">
+  <meta name="description" content="每天，给自己一扇看世界的窗。浏览、收藏和下载 Bing 每日图片。">
+  <title>Daily Picture · 每日一景</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6 6a8 8 0 0 1 13 3M5 15a8 8 0 0 0 13 3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v1"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14m8 0v6H4V6h6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 4v16M16 4v16"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#gallery">跳到图片</a>
+  <header class="app-header">
+    <a href="/" class="brand" aria-label="Daily Picture 首页"><img src="/icon.svg" width="38" height="38" alt=""><span>daily picture<span class="brand-caption">每 日 一 景</span></span></a>
+    <nav class="primary-nav" aria-label="图片分类">
+      <button id="browse-tab" class="nav-item active" aria-pressed="true"><svg class="icon"><use href="#i-grid"/></svg><span>每日精选</span></button>
+      <button id="favorites-tab" class="nav-item" aria-pressed="false"><svg class="icon"><use href="#i-heart"/></svg><span>我的收藏</span><span id="favorite-count" class="count">0</span></button>
+    </nav>
+    <div class="header-tools">
+      <label class="market-control"><svg class="icon"><use href="#i-globe"/></svg><span class="sr-only">图片地区</span><select id="market" aria-label="图片地区"><option value="zh-CN">中国</option><option value="en-US">美国</option><option value="en-GB">英国</option><option value="ja-JP">日本</option><option value="de-DE">德国</option><option value="fr-FR">法国</option></select></label>
+      <button id="refresh" class="icon-button" aria-label="刷新图片" title="刷新图片"><svg class="icon"><use href="#i-refresh"/></svg></button>
+      <button id="settings" class="icon-button" aria-label="浏览设置" title="浏览设置"><svg class="icon"><use href="#i-settings"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro-row"><div><p class="eyebrow">A LITTLE WONDER, EVERY DAY</p><h1 id="page-heading">每天，发现一点不一样。</h1></div><p class="edition" id="edition">DAILY JOURNAL <span>—</span></p></div>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <section id="gallery" class="gallery" aria-label="每日图片浏览器" tabindex="-1">
+      <img id="hero-image" class="hero-image" alt="" decoding="async" hidden>
+      <div class="image-shade"></div>
+      <div id="loading-state" class="loading-state"><span class="loader"></span><span>正在打开今天的风景…</span></div>
+      <div id="empty-state" class="empty-state" hidden><svg class="icon"><use href="#i-heart"/></svg><h2 id="empty-title">把喜欢的风景留下来</h2><p id="empty-description">点击图片上的爱心，建立自己的风景收藏。</p><button id="empty-action" class="light-button">去发现图片</button></div>
+      <div class="image-topbar" id="image-topbar" hidden><div class="image-label"><span class="live-dot"></span><span id="image-label">每日精选</span></div><div class="image-quick-actions"><button id="slideshow" class="glass-button" aria-label="开始幻灯片" title="幻灯片（每 8 秒）" aria-pressed="false"><svg class="icon"><use href="#i-play"/></svg></button><button id="fullscreen" class="glass-button" aria-label="全屏欣赏" title="全屏欣赏 · F"><svg class="icon"><use href="#i-expand"/></svg></button></div></div>
+      <button id="previous" class="gallery-arrow previous" aria-label="上一张图片" hidden><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button id="next" class="gallery-arrow next" aria-label="下一张图片" hidden><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <div id="image-error" class="image-error" role="status" hidden><span>图片未能加载</span><button id="retry-image" class="light-button">重新加载</button></div>
+      <div id="image-bottom" class="image-bottom" hidden>
+        <div class="image-copy"><div class="photo-date"><span id="photo-date"></span><span class="small-rule"></span><span id="photo-market"></span></div><h2 id="photo-title"></h2><p id="photo-description"></p><p id="photo-credit" class="photo-credit"></p></div>
+        <div class="image-actions"><button id="favorite" class="glass-button favorite-button" aria-label="收藏图片" aria-pressed="false" title="收藏图片 · L"><svg class="icon"><use href="#i-heart"/></svg></button><button id="details" class="glass-button" aria-label="图片详情" title="图片详情"><svg class="icon"><use href="#i-info"/></svg></button><button id="download" class="download-button"><svg class="icon"><use href="#i-download"/></svg><span>下载图片</span></button></div>
+      </div>
+      <span id="position" class="position" hidden></span>
+    </section>
+
+    <section class="filmstrip-section" aria-labelledby="filmstrip-title"><div class="section-heading"><div><h2 id="filmstrip-title">最近七日</h2><span id="filmstrip-subtitle">让美好，多停留一会儿</span></div><span class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> 切换风景</span></div><div id="filmstrip" class="filmstrip" aria-label="选择图片"></div></section>
+    <footer><p><span class="footer-dot"></span><span id="sync-status">正在连接 Bing…</span></p><p>影像来自 <a href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a><span class="footer-separator">/</span><button id="about">关于每日一景 <span>↗</span></button></p></footer>
+  </main>
+
+  <dialog id="download-dialog" aria-labelledby="download-title"><div class="dialog-heading"><div><p class="eyebrow">TAKE A LITTLE WONDER WITH YOU</p><h2 id="download-title">带走这片风景</h2></div><button class="icon-button close-dialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><p class="dialog-description">选择适合屏幕的尺寸，保存到下载文件夹。</p><div class="download-options"><button data-size="1920x1080"><span><strong>桌面壁纸</strong><small>1920 × 1080 · 横向</small></span><span class="option-tag">HD</span><svg class="icon"><use href="#i-download"/></svg></button><button data-size="UHD"><span><strong>超清原图</strong><small>请求 Bing 提供的最高分辨率</small></span><span class="option-tag">UHD</span><svg class="icon"><use href="#i-download"/></svg></button><button data-size="1080x1920"><span><strong>手机壁纸</strong><small>1080 × 1920 · 竖向裁切</small></span><span class="option-tag">MOBILE</span><svg class="icon"><use href="#i-download"/></svg></button></div><p class="dialog-note">尺寸以 Bing 实际返回为准。下载后可在系统设置中设为桌面或锁屏。</p></dialog>
+
+  <dialog id="details-dialog" aria-labelledby="details-title"><div class="dialog-heading"><div><p class="eyebrow">BEHIND THE PICTURE</p><h2 id="details-title">图片故事</h2></div><button class="icon-button close-dialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><p id="detail-description" class="detail-description"></p><dl class="detail-list"><div><dt>图片日期</dt><dd id="detail-date"></dd></div><div><dt>图片地区</dt><dd id="detail-market"></dd></div><div><dt>摄影与版权</dt><dd id="detail-credit"></dd></div></dl><a id="detail-source" class="primary-button" target="_blank" rel="noopener noreferrer">在 Bing 了解更多<svg class="icon"><use href="#i-link"/></svg></a></dialog>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><div><p class="eyebrow">MAKE YOURSELF AT HOME</p><h2 id="settings-title">浏览设置</h2></div><button class="icon-button close-dialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><label class="setting-row"><span><strong>每小时刷新</strong><small>页面可见时检查更新，返回页面时补查。</small></span><input id="auto-refresh" type="checkbox" role="switch"></label><label class="setting-row"><span><strong>完整显示图片</strong><small>保留原始比例；关闭后铺满画面。</small></span><input id="contain-image" type="checkbox" role="switch"></label><p class="dialog-note">收藏和偏好保存在当前浏览器。已浏览的图片可在离线时继续欣赏，缓存空间由浏览器管理。</p><button id="install" class="primary-button" hidden>安装为桌面应用<svg class="icon"><use href="#i-download"/></svg></button></dialog>
+
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-heading"><div><p class="eyebrow">DAILY PICTURE / WEB EDITION</p><h2 id="about-title">每天，一扇看世界的窗。</h2></div><button class="icon-button close-dialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><p class="detail-description">从遥远的山川到身边的细节，让每天多一点发现。浏览 Bing 每日图片，也把喜欢的瞬间收藏下来。</p><p class="dialog-description">这是依据 Daily Picture 行为分析独立实现的本地网页版，与原应用及 Microsoft 无关联。图片和版权说明来自 Bing，权利归原摄影师及相应权利人。</p><dl class="detail-list"><div><dt>快捷键</dt><dd>← → 切换 · L 收藏 · F 全屏 · Esc 关闭</dd></div><div><dt>本地收藏</dt><dd>保存在当前浏览器，不上传到服务器。</dd></div><div><dt>自动更新</dt><dd>页面开启并可见时检查更新。</dd></div></dl></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>请启用 JavaScript，以浏览每日图片。</noscript>
+</body>
+</html>

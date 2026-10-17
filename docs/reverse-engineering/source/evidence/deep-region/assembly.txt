@@ -1,0 +1,1482 @@
+Read-only region-selection investigation: exact installed .NET Native x64 DLL
+Target: C:\Program Files\WindowsApps\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\Duracellko.BingImage.Universal.dll
+SHA256: d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a
+Semantic labels for app-local framework routines are inferred from instruction flow
+and historical corefx sources; SharedLibrary import names are PDB-backed.
+accept-language-table-a.json is a selected window, not a complete function.
+
+accept-language-table-a.json
+ev_6c4f2cd860171115cf972627493560df88ba02b407cf096815028359986fcd5d
+pDj 750 @ 0x1804091ec
+0x1804091ec 488d154553ebff           lea rdx, qword [0x1802be538] ; literal='Accept-Language'
+0x1804091f3 4c8d15c690efff           lea r10, qword [0x1803022c0]
+0x1804091fa 41ff12                   call qword [r10]
+0x1804091fd 448be8                   mov r13d, eax
+0x180409200 410fbaf51f               btr r13d, 0x1f
+0x180409205 498b0c24                 mov rcx, qword [r12]
+0x180409209 488b7908                 mov rdi, qword [rcx+0x08]
+0x18040920d 4181fd00000080           cmp r13d, 0x80000000
+0x180409214 7509                     jnz 0x18040921f
+0x180409216 83ffff                   cmp edi, 0xffffffff
+0x180409219 0f84022c0000             jz 0x18040be21
+0x18040921f 418bc5                   mov eax, r13d
+0x180409222 99                       cdq
+0x180409223 f7ff                     idiv edi
+0x180409225 4c63f2                   movsxd r14, edx
+0x180409228 498bc6                   mov rax, r14
+0x18040922b 4c3bf7                   cmp r14, rdi
+0x18040922e 0f83cb2c0000             jnb 0x18040beff
+0x180409234 428b44b110               mov eax, dword [rcx+r14*4+0x10]
+0x180409239 85c0                     test eax, eax
+0x18040923b 7863                     js 0x1804092a0
+0x18040923d 488b16                   mov rdx, qword [rsi]
+0x180409240 4863f8                   movsxd rdi, eax
+0x180409243 483b7a08                 cmp rdi, qword [rdx+0x08]
+0x180409247 0f83b22c0000             jnb 0x18040beff
+0x18040924d 488d047f                 lea rax, qword [rdi+rdi*2]
+0x180409251 44396cc210               cmp dword [rdx+rax*8+0x10], r13d
+0x180409256 7529                     jnz 0x180409281
+0x180409258 488b4b28                 mov rcx, qword [rbx+0x28]
+0x18040925c 488d047f                 lea rax, qword [rdi+rdi*2]
+0x180409260 803900                   cmp byte [rcx], 0x00
+0x180409263 4c8d05ce52ebff           lea r8, qword [0x1802be538] ; literal='Accept-Language'
+0x18040926a 488b54c218               mov rdx, qword [rdx+rax*8+0x18]
+0x18040926f 4c8d15ba8eefff           lea r10, qword [0x180302130]
+0x180409276 41ff12                   call qword [r10]
+0x180409279 84c0                     test al, al
+0x18040927b 0f85b12c0000             jnz 0x18040bf32
+0x180409281 488b0e                   mov rcx, qword [rsi]
+0x180409284 483b7908                 cmp rdi, qword [rcx+0x08]
+0x180409288 0f83712c0000             jnb 0x18040beff
+0x18040928e 488d047f                 lea rax, qword [rdi+rdi*2]
+0x180409292 8b44c114                 mov eax, dword [rcx+rax*8+0x14]
+0x180409296 85c0                     test eax, eax
+0x180409298 7806                     js 0x1804092a0
+0x18040929a ff2568d7f0ff             jmp qword [0x180316a08]
+0x1804092a0 8b5324                   mov edx, dword [rbx+0x24]
+0x1804092a3 85d2                     test edx, edx
+0x1804092a5 7e2a                     jle 0x1804092d1
+0x1804092a7 4c634320                 movsxd r8, dword [rbx+0x20]
+0x1804092ab 488b0e                   mov rcx, qword [rsi]
+0x1804092ae 498bc0                   mov rax, r8
+0x1804092b1 4c3b4108                 cmp r8, qword [rcx+0x08]
+0x1804092b5 0f83442c0000             jnb 0x18040beff
+0x1804092bb 4b8d0440                 lea rax, qword [r8+r8*2]
+0x1804092bf 8b4cc114                 mov ecx, dword [rcx+rax*8+0x14]
+0x1804092c3 894b20                   mov dword [rbx+0x20], ecx
+0x1804092c6 8d42ff                   lea eax, qword [rdx-0x01]
+0x1804092c9 894324                   mov dword [rbx+0x24], eax
+0x1804092cc e92a010000               jmp 0x1804093fb
+0x1804092d1 8b4b18                   mov ecx, dword [rbx+0x18]
+0x1804092d4 488b06                   mov rax, qword [rsi]
+0x1804092d7 3b4808                   cmp ecx, dword [rax+0x08]
+0x1804092da 0f8510010000             jnz 0x1804093f0
+0x1804092e0 ff155a5fe9ff             call qword [0x18029f240]
+0x1804092e6 4c63e0                   movsxd r12, eax
+0x1804092e9 498bd4                   mov rdx, r12
+0x1804092ec 488d0d8566ceff           lea rcx, qword [0x1800ef978]
+0x1804092f3 ff155ff1e9ff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x1804092f9 4c8bf0                   mov r14, rax
+0x1804092fc 48634808                 movsxd rcx, dword [rax+0x08]
+0x180409300 85c9                     test ecx, ecx
+0x180409302 7e0a                     jle 0x18040930e
+0x180409304 488d7810                 lea rdi, qword [rax+0x10]
+0x180409308 4883c8ff                 or rax, 0xffffffffffffffff
+0x18040930c f3ab                     rep stosd
+0x18040930e 498bd4                   mov rdx, r12
+0x180409311 488d0d78e8ceff           lea rcx, qword [0x1800f7b90]
+0x180409318 ff153af1e9ff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x18040931e 4c8bf8                   mov r15, rax
+0x180409321 8b4b18                   mov ecx, dword [rbx+0x18]
+0x180409324 894c2420                 mov dword [rsp+0x20], ecx
+0x180409328 4533c9                   xor r9d, r9d
+0x18040932b 4c8bc0                   mov r8, rax
+0x18040932e 33d2                     xor edx, edx
+0x180409330 488b0e                   mov rcx, qword [rsi]
+0x180409333 ff15679de9ff             call qword [0x1802a30a0]
+0x180409339 837b1800                 cmp dword [rbx+0x18], 0x00
+0x18040933d 7e6d                     jle 0x1804093ac
+0x18040933f 4d8b5708                 mov r10, qword [r15+0x08]
+0x180409343 33ff                     xor edi, edi
+0x180409345 4863cf                   movsxd rcx, edi
+0x180409348 493bca                   cmp rcx, r10
+0x18040934b 0f83ae2b0000             jnb 0x18040beff
+0x180409351 488d0449                 lea rax, qword [rcx+rcx*2]
+0x180409355 41837cc71000             cmp dword [r15+rax*8+0x10], 0x00
+0x18040935b 7c42                     jl 0x18040939f
+0x18040935d 488d0449                 lea rax, qword [rcx+rcx*2]
+0x180409361 4d8d04c7                 lea r8, qword [r15+rax*8]
+0x180409365 4181781000000080         cmp dword [r8+0x10], 0x80000000
+0x18040936d 750a                     jnz 0x180409379
+0x18040936f 4183fcff                 cmp r12d, 0xffffffff
+0x180409373 0f84a82a0000             jz 0x18040be21
+0x180409379 418b4010                 mov eax, dword [r8+0x10]
+0x18040937d 99                       cdq
+0x18040937e 41f7fc                   idiv r12d
+0x180409381 4d8b4e08                 mov r9, qword [r14+0x08]
+0x180409385 4863ca                   movsxd rcx, edx
+0x180409388 493bc9                   cmp rcx, r9
+0x18040938b 0f836e2b0000             jnb 0x18040beff
+0x180409391 418b448e10               mov eax, dword [r14+rcx*4+0x10]
+0x180409396 41894014                 mov dword [r8+0x14], eax
+0x18040939a 41897c8e10               mov dword [r14+rcx*4+0x10], edi
+0x18040939f ffc7                     inc edi
+0x1804093a1 3b7b18                   cmp edi, dword [rbx+0x18]
+0x1804093a4 7d06                     jnl 0x1804093ac
+0x1804093a6 ff2564d6f0ff             jmp qword [0x180316a10]
+0x1804093ac 4c8d6308                 lea r12, qword [rbx+0x08]
+0x1804093b0 498bcc                   mov rcx, r12
+0x1804093b3 498bd6                   mov rdx, r14
+0x1804093b6 ff15a4f0e9ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804093bc 488bce                   mov rcx, rsi
+0x1804093bf 498bd7                   mov rdx, r15
+0x1804093c2 ff1598f0e9ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804093c8 498b0424                 mov rax, qword [r12]
+0x1804093cc 488b4808                 mov rcx, qword [rax+0x08]
+0x1804093d0 4181fd00000080           cmp r13d, 0x80000000
+0x1804093d7 7509                     jnz 0x1804093e2
+0x1804093d9 83f9ff                   cmp ecx, 0xffffffff
+0x1804093dc 0f843f2a0000             jz 0x18040be21
+0x1804093e2 418bc5                   mov eax, r13d
+0x1804093e5 99                       cdq
+0x1804093e6 f7f9                     idiv ecx
+0x1804093e8 448bf2                   mov r14d, edx
+0x1804093eb 4c8b7c2450               mov r15, qword [rsp+0x50]
+0x1804093f0 448b4318                 mov r8d, dword [rbx+0x18]
+0x1804093f4 418d4001                 lea eax, qword [r8+0x01]
+0x1804093f8 894318                   mov dword [rbx+0x18], eax
+0x1804093fb 488b0e                   mov rcx, qword [rsi]
+0x1804093fe 4963f8                   movsxd rdi, r8d
+0x180409401 483b7908                 cmp rdi, qword [rcx+0x08]
+0x180409405 0f83f42a0000             jnb 0x18040beff
+0x18040940b 488d047f                 lea rax, qword [rdi+rdi*2]
+0x18040940f 44896cc110               mov dword [rcx+rax*8+0x10], r13d
+0x180409414 4d8b1424                 mov r10, qword [r12]
+0x180409418 4d63ce                   movsxd r9, r14d
+0x18040941b 4d3b4a08                 cmp r9, qword [r10+0x08]
+0x18040941f 0f83da2a0000             jnb 0x18040beff
+0x180409425 488d047f                 lea rax, qword [rdi+rdi*2]
+0x180409429 488d0cc1                 lea rcx, qword [rcx+rax*8]
+0x18040942d 438b448a10               mov eax, dword [r10+r9*4+0x10]
+0x180409432 894114                   mov dword [rcx+0x14], eax
+0x180409435 488d4918                 lea rcx, qword [rcx+0x18]
+0x180409439 488d15f850ebff           lea rdx, qword [0x1802be538] ; literal='Accept-Language'
+0x180409440 ff151af0e9ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180409446 4c8b16                   mov r10, qword [rsi]
+0x180409449 493b7a08                 cmp rdi, qword [r10+0x08]
+0x18040944d 0f83ac2a0000             jnb 0x18040beff
+0x180409453 488d047f                 lea rax, qword [rdi+rdi*2]
+0x180409457 488d4804                 lea rcx, qword [rax+0x04]
+0x18040945b 498d0cca                 lea rcx, qword [r10+rcx*8]
+0x18040945f 498bd7                   mov rdx, r15
+0x180409462 ff15f8efe9ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180409468 498b1424                 mov rdx, qword [r12]
+0x18040946c 4c3b4a08                 cmp r9, qword [rdx+0x08]
+0x180409470 0f83892a0000             jnb 0x18040beff
+0x180409476 4689448a10               mov dword [rdx+r9*4+0x10], r8d
+0x18040947b ff431c                   inc dword [rbx+0x1c]
+0x18040947e 488b442430               mov rax, qword [rsp+0x30]
+0x180409483 4c8b7850                 mov r15, qword [rax+0x50]
+0x180409487 4c897c2458               mov qword [rsp+0x58], r15
+0x18040948c 4885d2                   test rdx, rdx
+0x18040948f 7563                     jnz 0x1804094f4
+0x180409491 33c9                     xor ecx, ecx
+0x180409493 ff15975de9ff             call qword [0x18029f230]
+0x180409499 4c63f0                   movsxd r14, eax
+0x18040949c 498bd6                   mov rdx, r14
+0x18040949f 488d0dd264ceff           lea rcx, qword [0x1800ef978]
+0x1804094a6 ff15acefe9ff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x1804094ac 488bd0                   mov rdx, rax
+0x1804094af 498bcc                   mov rcx, r12
+0x1804094b2 ff15a8efe9ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804094b8 498b3c24                 mov rdi, qword [r12]
+0x1804094bc 48634708                 movsxd rax, dword [rdi+0x08]
+0x1804094c0 85c0                     test eax, eax
+0x1804094c2 7e0d                     jle 0x1804094d1
+0x1804094c4 488bc8                   mov rcx, rax
+0x1804094c7 4883c710                 add rdi, 0x10
+0x1804094cb 4883c8ff                 or rax, 0xffffffffffffffff
+0x1804094cf f3ab                     rep stosd
+0x1804094d1 498bd6                   mov rdx, r14
+0x1804094d4 48                       invalid
+0x1804094d5 8d                       invalid
+0x1804094d6 0d                       invalid
+0x1804094d7 b5e6                     mov ch, 0xe6
+0x1804094d9 ce                       invalid
+
+cookie-behavior-property.json
+ev_cf36ad090f13dabf7db4b0b1c20622919b1f530713a19a7d7d726454ea5f8ec6
+pDj 67 @ 0x180419980
+0x180419980 4883ec38                 sub rsp, 0x38
+0x180419984 488d0d9550eaff           lea rcx, qword [0x1802bea20] ; literal='Windows.Foundation.Metadata.ApiInformation'
+0x18041998b 488d15ee3bbfff           lea rdx, qword [0x18000d580]
+0x180419992 ff15107fe8ff             call qword [0x1802a18a8]
+0x180419998 4c8d0df150eaff           lea r9, qword [0x1802bea90] ; literal='CookieUsageBehavior'
+0x18041999f 4c8d052a51eaff           lea r8, qword [0x1802bead0] ; literal='Windows.Web.Http.Filters.HttpBaseProtocolFilter'
+0x1804199a6 488d0ddb48cfff           lea rcx, qword [0x18010e288]
+0x1804199ad c74424200a000000         mov dword [rsp+0x20], 0x0a
+0x1804199b5 488bd0                   mov rdx, rax
+0x1804199b8 e813000000               call 0x1804199d0
+0x1804199bd 90                       nop
+0x1804199be 4883c438                 add rsp, 0x38
+0x1804199c2 c3                       ret
+
+cookie-support-lazy-init.json
+ev_8533a95199536ea6a592333590f9dcfca06e7ff73a02dbc39b5bf62f5103e6b1
+pDj 68 @ 0x180359e30
+0x180359e30 53                       push rbx
+0x180359e31 57                       push rdi
+0x180359e32 4883ec28                 sub rsp, 0x28
+0x180359e36 488d1543fb0b00           lea rdx, qword [0x180419980]
+0x180359e3d 33c9                     xor ecx, ecx
+0x180359e3f ff155375f4ff             call qword [0x1802a1398]
+0x180359e45 488bd8                   mov rbx, rax
+0x180359e48 488d0db1accfff           lea rcx, qword [0x180054b00]
+0x180359e4f ff15fbe5f4ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180359e55 488bf8                   mov rdi, rax
+0x180359e58 488bd3                   mov rdx, rbx
+0x180359e5b 488bc8                   mov rcx, rax
+0x180359e5e e8adfa0b00               call 0x180419910
+0x180359e63 488d057e02f5ff           lea rax, qword [0x1802aa0e8]
+0x180359e6a 488938                   mov qword [rax], rdi
+0x180359e6d 4883c428                 add rsp, 0x28
+0x180359e71 5f                       pop rdi
+0x180359e72 5b                       pop rbx
+0x180359e73 c3                       ret
+
+get-response-bridge.json
+ev_2eadebb2880e0278c11168417ffe5d2ab2aa0dbf09a9672af4df1a4536a0d10d
+pDj 279 @ 0x1804bfee0
+0x1804bfee0 53                       push rbx
+0x1804bfee1 56                       push rsi
+0x1804bfee2 57                       push rdi
+0x1804bfee3 4156                     push r14
+0x1804bfee5 4157                     push r15
+0x1804bfee7 4883ec40                 sub rsp, 0x40
+0x1804bfeeb 4c8bf1                   mov r14, rcx
+0x1804bfeee 33f6                     xor esi, esi
+0x1804bfef0 488b05a6e4c5ff           mov rax, qword [0x18011e39d]
+0x1804bfef7 488bf8                   mov rdi, rax
+0x1804bfefa 483930                   cmp qword [rax], rsi
+0x1804bfefd 754e                     jnz 0x1804bff4d
+0x1804bfeff 488d0daac3bbff           lea rcx, qword [0x18007c2b0]
+0x1804bff06 ff154485deff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804bff0c 488bd8                   mov rbx, rax
+0x1804bff0f 488bc8                   mov rcx, rax
+0x1804bff12 ff15c02ddeff             call qword [0x1802a2cd8]
+0x1804bff18 33c9                     xor ecx, ecx
+0x1804bff1a ff15f81adeff             call qword [0x1802a1a18]
+0x1804bff20 33c9                     xor ecx, ecx
+0x1804bff22 ff15e81adeff             call qword [0x1802a1a10]
+0x1804bff28 488d4b08                 lea rcx, qword [rbx+0x08]
+0x1804bff2c 8bd6                     mov edx, esi
+0x1804bff2e ff155485deff             call qword [sym.imp.mrt100_app.dll_RhpCheckedAssignRefEDX]
+0x1804bff34 48897310                 mov qword [rbx+0x10], rsi
+0x1804bff38 897318                   mov dword [rbx+0x18], esi
+0x1804bff3b 89731c                   mov dword [rbx+0x1c], esi
+0x1804bff3e 488bcf                   mov rcx, rdi
+0x1804bff41 488bd3                   mov rdx, rbx
+0x1804bff44 4533c0                   xor r8d, r8d
+0x1804bff47 ff15cb85deff             call qword [sym.imp.mrt100_app.dll_RhpCheckedLockCmpXchg]
+0x1804bff4d 4c8b3f                   mov r15, qword [rdi]
+0x1804bff50 488d1521d4deff           lea rdx, qword [0x1802ad378]
+0x1804bff57 ff15eb84deff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x1804bff5d 488d057ca4deff           lea rax, qword [0x1802aa3e0]
+0x1804bff64 488bd8                   mov rbx, rax
+0x1804bff67 488b7008                 mov rsi, qword [rax+0x08]
+0x1804bff6b 4885f6                   test rsi, rsi
+0x1804bff6e 7527                     jnz 0x1804bff97
+0x1804bff70 488b0df961deff           mov rcx, qword [0x1802a6170]
+0x1804bff77 ff15d384deff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804bff7d 488bf0                   mov rsi, rax
+0x1804bff80 4c8d05b9000000           lea r8, qword [0x1804c0040]
+0x1804bff87 488b13                   mov rdx, qword [rbx]
+0x1804bff8a 488bc8                   mov rcx, rax
+0x1804bff8d ff157d41deff             call qword [0x1802a4110]
+0x1804bff93 48897308                 mov qword [rbx+0x08], rsi
+0x1804bff97 488b7b10                 mov rdi, qword [rbx+0x10]
+0x1804bff9b 4885ff                   test rdi, rdi
+0x1804bff9e 7527                     jnz 0x1804bffc7
+0x1804bffa0 488d0d09a9bbff           lea rcx, qword [0x18007a8b0]
+0x1804bffa7 ff15a384deff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804bffad 488bf8                   mov rdi, rax
+0x1804bffb0 4c8d0549000000           lea r8, qword [0x1804c0000]
+0x1804bffb7 488b13                   mov rdx, qword [rbx]
+0x1804bffba 488bc8                   mov rcx, rax
+0x1804bffbd ff154d41deff             call qword [0x1802a4110]
+0x1804bffc3 48897b10                 mov qword [rbx+0x10], rdi
+0x1804bffc7 418b4718                 mov eax, dword [r15+0x18]
+0x1804bffcb 488d0ddec2bbff           lea rcx, qword [0x18007c2b0]
+0x1804bffd2 89442428                 mov dword [rsp+0x28], eax
+0x1804bffd6 4c89742420               mov qword [rsp+0x20], r14
+0x1804bffdb 4533c9                   xor r9d, r9d
+0x1804bffde 4c8bc7                   mov r8, rdi
+0x1804bffe1 488bd6                   mov rdx, rsi
+0x1804bffe4 ff158e11deff             call qword [0x1802a1178]
+0x1804bffea 90                       nop
+0x1804bffeb 4883c440                 add rsp, 0x40
+0x1804bffef 415f                     pop r15
+0x1804bfff1 415e                     pop r14
+0x1804bfff3 5f                       pop rdi
+0x1804bfff4 5e                       pop rsi
+0x1804bfff5 5b                       pop rbx
+0x1804bfff6 c3                       ret
+
+handler-constructor.json
+ev_b8dee5aef0ebb15a6dc2f07bd6b8a3a0af20d656ff34e734cd9b1ed073bcf2cb
+pDj 461 @ 0x18058b0b0
+0x18058b0b0 53                       push rbx
+0x18058b0b1 56                       push rsi
+0x18058b0b2 57                       push rdi
+0x18058b0b3 4156                     push r14
+0x18058b0b5 4157                     push r15
+0x18058b0b7 4883ec20                 sub rsp, 0x20
+0x18058b0bb 488bf9                   mov rdi, rcx
+0x18058b0be e8ed0a0000               call 0x18058bbb0
+0x18058b0c3 488d0d9e1ba9ff           lea rcx, qword [0x18001cc68]
+0x18058b0ca ff1580d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058b0d0 488bd8                   mov rbx, rax
+0x18058b0d3 488bc8                   mov rcx, rax
+0x18058b0d6 e8550b0000               call 0x18058bc30
+0x18058b0db 488d7708                 lea rsi, qword [rdi+0x08]
+0x18058b0df 488d0e                   lea rcx, qword [rsi]
+0x18058b0e2 488bd3                   mov rdx, rbx
+0x18058b0e5 ff1575d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x18058b0eb 488d0d2e7eabff           lea rcx, qword [0x180042f20]
+0x18058b0f2 ff1558d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058b0f8 488bd8                   mov rbx, rax
+0x18058b0fb 4c8b36                   mov r14, qword [rsi]
+0x18058b0fe 488bc8                   mov rcx, rax
+0x18058b101 e8aa0a0000               call 0x18058bbb0
+0x18058b106 4d85f6                   test r14, r14
+0x18058b109 0f845f010000             jz 0x18058b26e
+0x18058b10f 488d4b08                 lea rcx, qword [rbx+0x08]
+0x18058b113 498bd6                   mov rdx, r14
+0x18058b116 ff1544d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x18058b11c 4533f6                   xor r14d, r14d
+0x18058b11f 44897310                 mov dword [rbx+0x10], r14d
+0x18058b123 488d4f10                 lea rcx, qword [rdi+0x10]
+0x18058b127 488bd3                   mov rdx, rbx
+0x18058b12a ff1530d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x18058b130 4489771c                 mov dword [rdi+0x1c], r14d
+0x18058b134 488bcf                   mov rcx, rdi
+0x18058b137 e874040000               call 0x18058b5b0
+0x18058b13c c6472801                 mov byte [rdi+0x28], 0x01
+0x18058b140 488d0dc98fabff           lea rcx, qword [0x180044110]
+0x18058b147 ff1503d3d1ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058b14d 488bd8                   mov rbx, rax
+0x18058b150 488bc8                   mov rcx, rax
+0x18058b153 e828010000               call 0x18058b280
+0x18058b158 488d4f20                 lea rcx, qword [rdi+0x20]
+0x18058b15c 488bd3                   mov rdx, rbx
+0x18058b15f ff15fbd2d1ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x18058b165 488b16                   mov rdx, qword [rsi]
+0x18058b168 443832                   cmp byte [rdx], r14b
+0x18058b16b 4c8d3db665b8ff           lea r15, qword [0x180111728]
+0x18058b172 458d4e0b                 lea r9d, qword [r14+0x0b]
+0x18058b176 4533c0                   xor r8d, r8d
+0x18058b179 498bcf                   mov rcx, r15
+0x18058b17c e85fb1eeff               call 0x1804762e0
+0x18058b181 4489772c                 mov dword [rdi+0x2c], r14d
+0x18058b185 488d152421d2ff           lea rdx, qword [0x1802ad2b0]
+0x18058b18c ff15b6d2d1ff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x18058b192 488d0547f1d1ff           lea rax, qword [0x1802aa2e0]
+0x18058b199 4c3930                   cmp qword [rax], r14
+0x18058b19c 7446                     jz 0x18058b1e4
+0x18058b19e 33c9                     xor ecx, ecx
+0x18058b1a0 488d15c190abff           lea rdx, qword [0x180044268]
+0x18058b1a7 ff1573d3d1ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_IsInstanceOfClass]
+0x18058b1ad 4885c0                   test rax, rax
+0x18058b1b0 7432                     jz 0x18058b1e4
+0x18058b1b2 488b1e                   mov rbx, qword [rsi]
+0x18058b1b5 33c9                     xor ecx, ecx
+0x18058b1b7 488d15aa90abff           lea rdx, qword [0x180044268]
+0x18058b1be ff1534d3d1ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_CheckCastClass]
+0x18058b1c4 33d2                     xor edx, edx
+0x18058b1c6 e8f5f6ffff               call 0x18058a8c0
+0x18058b1cb 443833                   cmp byte [rbx], r14b
+0x18058b1ce 488d0d2b65b8ff           lea rcx, qword [0x180111700]
+0x18058b1d5 458d4e14                 lea r9d, qword [r14+0x14]
+0x18058b1d9 4c8bc0                   mov r8, rax
+0x18058b1dc 488bd3                   mov rdx, rbx
+0x18058b1df e81ca6edff               call 0x180465800
+0x18058b1e4 488b16                   mov rdx, qword [rsi]
+0x18058b1e7 443832                   cmp byte [rdx], r14b
+0x18058b1ea 41b909000000             mov r9d, 0x09
+0x18058b1f0 4533c0                   xor r8d, r8d
+0x18058b1f3 498bcf                   mov rcx, r15
+0x18058b1f6 e8e5b0eeff               call 0x1804762e0
+0x18058b1fb 488b16                   mov rdx, qword [rsi]
+0x18058b1fe 443832                   cmp byte [rdx], r14b
+0x18058b201 488d3d3065b8ff           lea rdi, qword [0x180111738]
+0x18058b208 41b80c000000             mov r8d, 0x0c
+0x18058b20e 488bcf                   mov rcx, rdi
+0x18058b211 e87a73e7ff               call 0x180402590
+0x18058b216 443830                   cmp byte [rax], r14b
+0x18058b219 488d1d3065b8ff           lea rbx, qword [0x180111750]
+0x18058b220 41b907000000             mov r9d, 0x07
+0x18058b226 458d41fa                 lea r8d, qword [r9-0x06]
+0x18058b22a 488bd0                   mov rdx, rax
+0x18058b22d 488bcb                   mov rcx, rbx
+0x18058b230 e85b71edff               call 0x180462390
+0x18058b235 488b16                   mov rdx, qword [rsi]
+0x18058b238 443832                   cmp byte [rdx], r14b
+0x18058b23b 41b80c000000             mov r8d, 0x0c
+0x18058b241 488bcf                   mov rcx, rdi
+0x18058b244 e84773e7ff               call 0x180402590
+0x18058b249 443830                   cmp byte [rax], r14b
+0x18058b24c 41b909000000             mov r9d, 0x09
+0x18058b252 458d41f8                 lea r8d, qword [r9-0x08]
+0x18058b256 488bd0                   mov rdx, rax
+0x18058b259 488bcb                   mov rcx, rbx
+0x18058b25c e82f71edff               call 0x180462390
+0x18058b261 90                       nop
+0x18058b262 4883c420                 add rsp, 0x20
+0x18058b266 415f                     pop r15
+0x18058b268 415e                     pop r14
+0x18058b26a 5f                       pop rdi
+0x18058b26b 5e                       pop rsi
+0x18058b26c 5b                       pop rbx
+0x18058b26d c3                       ret
+0x18058b26e e88d49e5ff               call 0x1803dfc00
+0x18058b273 488bc8                   mov rcx, rax
+0x18058b276 ff154cd2d1ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x18058b27c cc                       int3
+
+handler-cookie-init.json
+ev_a79aa3ac944f7978e9dd8d6efea6c89d1cbe9cc03a39536c7b67c50bdf79fba6
+pDj 22 @ 0x18058b5b0
+0x18058b5b0 55                       push rbp
+0x18058b5b1 4883ec20                 sub rsp, 0x20
+0x18058b5b5 488d6c2420               lea rbp, qword [rsp+0x20]
+0x18058b5ba e821000000               call 0x18058b5e0
+0x18058b5bf 90                       nop
+0x18058b5c0 488d6500                 lea rsp, qword [rbp]
+0x18058b5c4 5d                       pop rbp
+0x18058b5c5 c3                       ret
+
+handler-disable-managed-cookies.json
+ev_def6e82fcd7cdc75d635f659fb2ade5d619f8ca805ef83cb658c7ce4a6e614d3
+pDj 103 @ 0x18058aa20
+0x18058aa20 53                       push rbx
+0x18058aa21 57                       push rdi
+0x18058aa22 4883ec28                 sub rsp, 0x28
+0x18058aa26 0fb64119                 movzx eax, byte [rcx+0x19]
+0x18058aa2a 84c0                     test al, al
+0x18058aa2c 7512                     jnz 0x18058aa40
+0x18058aa2e 0fb64118                 movzx eax, byte [rcx+0x18]
+0x18058aa32 84c0                     test al, al
+0x18058aa34 7542                     jnz 0x18058aa78
+0x18058aa36 885128                   mov byte [rcx+0x28], dl
+0x18058aa39 4883c428                 add rsp, 0x28
+0x18058aa3d 5f                       pop rdi
+0x18058aa3e 5b                       pop rbx
+0x18058aa3f c3                       ret
+0x18058aa40 ff15a282d1ff             call qword [0x1802a2ce8]
+0x18058aa46 488bc8                   mov rcx, rax
+0x18058aa49 488b01                   mov rax, qword [rcx]
+0x18058aa4c 48ff5018                 call qword [rax+0x18]
+0x18058aa50 488bd8                   mov rbx, rax
+0x18058aa53 488b0d6ebcd1ff           mov rcx, qword [0x1802a66c8]
+0x18058aa5a ff15f0d9d1ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058aa60 488bf8                   mov rdi, rax
+0x18058aa63 488bd3                   mov rdx, rbx
+0x18058aa66 488bc8                   mov rcx, rax
+0x18058aa69 ff15b182d1ff             call qword [0x1802a2d20]
+0x18058aa6f 488bcf                   mov rcx, rdi
+0x18058aa72 ff1550dad1ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x18058aa78 e8a3fdffff               call 0x18058a820
+0x18058aa7d 488bc8                   mov rcx, rax
+0x18058aa80 ff1542dad1ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x18058aa86 cc                       int3
+
+handler-native-cookie-policy.json
+ev_355f838befebfc76a7b1976d3055fd3c208fe1363b721d33e37bd33911ad3a08
+pDj 152 @ 0x18058b5e0
+0x18058b5e0 56                       push rsi
+0x18058b5e1 57                       push rdi
+0x18058b5e2 4883ec28                 sub rsp, 0x28
+0x18058b5e6 488bf1                   mov rsi, rcx
+0x18058b5e9 488d15501bd2ff           lea rdx, qword [0x1802ad140]
+0x18058b5f0 ff1552ced1ff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x18058b5f6 488d05ebead1ff           lea rax, qword [0x1802aa0e8]
+0x18058b5fd 488b38                   mov rdi, qword [rax]
+0x18058b600 48837f0800               cmp qword [rdi+0x08], 0x00
+0x18058b605 743a                     jz 0x18058b641
+0x18058b607 488b4f08                 mov rcx, qword [rdi+0x08]
+0x18058b60b 488d1546feacff           lea rdx, qword [0x18005b458]
+0x18058b612 ff1508cfd1ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_IsInstanceOfClass]
+0x18058b618 4885c0                   test rax, rax
+0x18058b61b 7406                     jz 0x18058b623
+0x18058b61d 0fb64008                 movzx eax, byte [rax+0x08]
+0x18058b621 eb2c                     jmp 0x18058b64f
+0x18058b623 488b4f08                 mov rcx, qword [rdi+0x08]
+0x18058b627 488d15c2feacff           lea rdx, qword [0x18005b4f0]
+0x18058b62e ff15ecced1ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_IsInstanceOfClass]
+0x18058b634 488b4808                 mov rcx, qword [rax+0x08]
+0x18058b638 803900                   cmp byte [rcx], 0x00
+0x18058b63b ff152f96d1ff             call qword [0x1802a4c70]
+0x18058b641 ff15f991d1ff             call qword [0x1802a4840]
+0x18058b647 488bcf                   mov rcx, rdi
+0x18058b64a e831000000               call 0x18058b680
+0x18058b64f 84c0                     test al, al
+0x18058b651 741d                     jz 0x18058b670
+0x18058b653 488b5608                 mov rdx, qword [rsi+0x08]
+0x18058b657 803a00                   cmp byte [rdx], 0x00
+0x18058b65a 488d0d2761b8ff           lea rcx, qword [0x180111788]
+0x18058b661 41b907000000             mov r9d, 0x07
+0x18058b667 458d41fa                 lea r8d, qword [r9-0x06]
+0x18058b66b e8206dedff               call 0x180462390
+0x18058b670 90                       nop
+0x18058b671 4883c428                 add rsp, 0x28
+0x18058b675 5f                       pop rdi
+0x18058b676 5e                       pop rsi
+0x18058b677 c3                       ret
+
+http-request-allocate.json
+ev_fee189b7c7fdbf1ea6b68cf336febaa1d2f0a6a7e395cefe7d93e58896b89fe7
+pDj 46 @ 0x180583f60
+0x180583f60 53                       push rbx
+0x180583f61 57                       push rdi
+0x180583f62 4883ec28                 sub rsp, 0x28
+0x180583f66 488bfa                   mov rdi, rdx
+0x180583f69 488d0d9808acff           lea rcx, qword [0x180044808]
+0x180583f70 ff15da44d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180583f76 488bd8                   mov rbx, rax
+0x180583f79 488bd7                   mov rdx, rdi
+0x180583f7c 488bc8                   mov rcx, rax
+0x180583f7f e80c000000               call 0x180583f90
+0x180583f84 488bc3                   mov rax, rbx
+0x180583f87 4883c428                 add rsp, 0x28
+0x180583f8b 5f                       pop rdi
+0x180583f8c 5b                       pop rbx
+0x180583f8d c3                       ret
+
+http-request-constructor.json
+ev_c46663a34e8c43c20c696d813f6186c5ebbcde8d7b7a0e63d7c45b519af3ed6c
+pDj 143 @ 0x180583f90
+0x180583f90 53                       push rbx
+0x180583f91 56                       push rsi
+0x180583f92 57                       push rdi
+0x180583f93 4883ec20                 sub rsp, 0x20
+0x180583f97 488bf2                   mov rsi, rdx
+0x180583f9a 488bf9                   mov rdi, rcx
+0x180583f9d 488d0d3c0eacff           lea rcx, qword [0x180044de0]
+0x180583fa4 ff15a644d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180583faa 488bd8                   mov rbx, rax
+0x180583fad 488bc8                   mov rcx, rax
+0x180583fb0 ff1522edd1ff             call qword [0x1802a2cd8]
+0x180583fb6 488d4f08                 lea rcx, qword [rdi+0x08]
+0x180583fba 488bd3                   mov rdx, rbx
+0x180583fbd ff159d44d2ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180583fc3 488d153691d2ff           lea rdx, qword [0x1802ad100]
+0x180583fca ff157844d2ff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x180583fd0 488d05a960d2ff           lea rax, qword [0x1802aa080]
+0x180583fd7 488b10                   mov rdx, qword [rax]
+0x180583fda 488d4f18                 lea rcx, qword [rdi+0x18]
+0x180583fde 488b5208                 mov rdx, qword [rdx+0x08]
+0x180583fe2 ff157844d2ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180583fe8 c747205e010000           mov dword [rdi+0x20], 0x15e
+0x180583fef e82c000000               call 0x180584020
+0x180583ff4 488bd0                   mov rdx, rax
+0x180583ff7 488d4f38                 lea rcx, qword [rdi+0x38]
+0x180583ffb ff155f44d2ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180584001 488bcf                   mov rcx, rdi
+0x180584004 ff15ceecd1ff             call qword [0x1802a2cd8]
+0x18058400a 488d4f10                 lea rcx, qword [rdi+0x10]
+0x18058400e 488bd6                   mov rdx, rsi
+0x180584011 ff154944d2ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x180584017 4883c420                 add rsp, 0x20
+0x18058401b 5f                       pop rdi
+0x18058401c 5e                       pop rsi
+0x18058401d 5b                       pop rbx
+0x18058401e c3                       ret
+
+http-request-response-candidate.json
+ev_7731d8414ebd30d35037bbc75148720b50c088a291aa2262997d45596283d677
+pDj 711 @ 0x180584820
+0x180584820 81f9cf000000             cmp ecx, 0xcf
+0x180584826 0f8fc5000000             jnle 0x1805848f1
+0x18058482c 8d419c                   lea eax, qword [rcx-0x64]
+0x18058482f 83f803                   cmp eax, 0x03
+0x180584832 7339                     jnb 0x18058486d
+0x180584834 4863c8                   movsxd rcx, eax
+0x180584837 488d052218bcff           lea rax, qword [0x180146060]
+0x18058483e 48630c88                 movsxd rcx, dword [rax+rcx*4]
+0x180584842 4803c8                   add rcx, rax
+0x180584845 ffe1                     jmp rcx
+0x180584847 ebfe                     jmp 0x180584847
+0x180584849 488d0578d1d4ff           lea rax, qword [0x1802d19c8] ; literal='Continue'
+0x180584850 e991020000               jmp 0x180584ae6
+0x180584855 488d0594d1d4ff           lea rax, qword [0x1802d19f0] ; literal='Switching Protocols'
+0x18058485c e985020000               jmp 0x180584ae6
+0x180584861 488d05c8d1d4ff           lea rax, qword [0x1802d1a30] ; literal='Processing'
+0x180584868 e979020000               jmp 0x180584ae6
+0x18058486d 81c138ffffff             add ecx, 0xffffff38
+0x180584873 83f908                   cmp ecx, 0x08
+0x180584876 0f8368020000             jnb 0x180584ae4
+0x18058487c 4863c9                   movsxd rcx, ecx
+0x18058487f 488d05e617bcff           lea rax, qword [0x18014606c]
+0x180584886 48630c88                 movsxd rcx, dword [rax+rcx*4]
+0x18058488a 4803c8                   add rcx, rax
+0x18058488d ffe1                     jmp rcx
+0x18058488f ebfe                     jmp 0x18058488f
+0x180584891 488d05c8d1d4ff           lea rax, qword [0x1802d1a60]
+0x180584898 e949020000               jmp 0x180584ae6
+0x18058489d 488d05dcd1d4ff           lea rax, qword [0x1802d1a80] ; literal='Created'
+0x1805848a4 e93d020000               jmp 0x180584ae6
+0x1805848a9 488d05f8d1d4ff           lea rax, qword [0x1802d1aa8] ; literal='Accepted'
+0x1805848b0 e931020000               jmp 0x180584ae6
+0x1805848b5 488d0514d2d4ff           lea rax, qword [0x1802d1ad0] ; literal='Non-Authoritative Information'
+0x1805848bc e925020000               jmp 0x180584ae6
+0x1805848c1 488d0558d2d4ff           lea rax, qword [0x1802d1b20] ; literal='No Content'
+0x1805848c8 e919020000               jmp 0x180584ae6
+0x1805848cd 488d057cd2d4ff           lea rax, qword [0x1802d1b50] ; literal='Reset Content'
+0x1805848d4 e90d020000               jmp 0x180584ae6
+0x1805848d9 488d05a0d2d4ff           lea rax, qword [0x1802d1b80] ; literal='Partial Content'
+0x1805848e0 e901020000               jmp 0x180584ae6
+0x1805848e5 488d05ccd2d4ff           lea rax, qword [0x1802d1bb8] ; literal='Multi-Status'
+0x1805848ec e9f5010000               jmp 0x180584ae6
+0x1805848f1 8d81d4feffff             lea eax, qword [rcx-0x12c]
+0x1805848f7 83f808                   cmp eax, 0x08
+0x1805848fa 7369                     jnb 0x180584965
+0x1805848fc 4863c8                   movsxd rcx, eax
+0x1805848ff 488d058617bcff           lea rax, qword [0x18014608c]
+0x180584906 48630c88                 movsxd rcx, dword [rax+rcx*4]
+0x18058490a 4803c8                   add rcx, rax
+0x18058490d ffe1                     jmp rcx
+0x18058490f ebfe                     jmp 0x18058490f
+0x180584911 488d05d0d2d4ff           lea rax, qword [0x1802d1be8] ; literal='Multiple Choices'
+0x180584918 e9c9010000               jmp 0x180584ae6
+0x18058491d 488d05fcd2d4ff           lea rax, qword [0x1802d1c20] ; literal='Moved Permanently'
+0x180584924 e9bd010000               jmp 0x180584ae6
+0x180584929 488d0528d3d4ff           lea rax, qword [0x1802d1c58] ; literal='Found'
+0x180584930 e9b1010000               jmp 0x180584ae6
+0x180584935 488d053cd3d4ff           lea rax, qword [0x1802d1c78] ; literal='See Other'
+0x18058493c e9a5010000               jmp 0x180584ae6
+0x180584941 488d0558d3d4ff           lea rax, qword [0x1802d1ca0] ; literal='Not Modified'
+0x180584948 e999010000               jmp 0x180584ae6
+0x18058494d 488d057cd3d4ff           lea rax, qword [0x1802d1cd0] ; literal='Use Proxy'
+0x180584954 e98d010000               jmp 0x180584ae6
+0x180584959 488d0598d3d4ff           lea rax, qword [0x1802d1cf8] ; literal='Temporary Redirect'
+0x180584960 e981010000               jmp 0x180584ae6
+0x180584965 8d8170feffff             lea eax, qword [rcx-0x190]
+0x18058496b 83f81b                   cmp eax, 0x1b
+0x18058496e 0f8311010000             jnb 0x180584a85
+0x180584974 4863c8                   movsxd rcx, eax
+0x180584977 488d052e17bcff           lea rax, qword [0x1801460ac]
+0x18058497e 48630c88                 movsxd rcx, dword [rax+rcx*4]
+0x180584982 4803c8                   add rcx, rax
+0x180584985 ffe1                     jmp rcx
+0x180584987 ebfe                     jmp 0x180584987
+0x180584989 488d05a8d3d4ff           lea rax, qword [0x1802d1d38] ; literal='Bad Request'
+0x180584990 e951010000               jmp 0x180584ae6
+0x180584995 488d05ccd3d4ff           lea rax, qword [0x1802d1d68] ; literal='Unauthorized'
+0x18058499c e945010000               jmp 0x180584ae6
+0x1805849a1 488d05f0d3d4ff           lea rax, qword [0x1802d1d98] ; literal='Payment Required'
+0x1805849a8 e939010000               jmp 0x180584ae6
+0x1805849ad 488d051cd4d4ff           lea rax, qword [0x1802d1dd0] ; literal='Forbidden'
+0x1805849b4 e92d010000               jmp 0x180584ae6
+0x1805849b9 488d0538d4d4ff           lea rax, qword [0x1802d1df8] ; literal='Not Found'
+0x1805849c0 e921010000               jmp 0x180584ae6
+0x1805849c5 488d0554d4d4ff           lea rax, qword [0x1802d1e20] ; literal='Method Not Allowed'
+0x1805849cc e915010000               jmp 0x180584ae6
+0x1805849d1 488d0588d4d4ff           lea rax, qword [0x1802d1e60] ; literal='Not Acceptable'
+0x1805849d8 e909010000               jmp 0x180584ae6
+0x1805849dd 488d05b4d4d4ff           lea rax, qword [0x1802d1e98] ; literal='Proxy Authentication Required'
+0x1805849e4 e9fd000000               jmp 0x180584ae6
+0x1805849e9 488d05f8d4d4ff           lea rax, qword [0x1802d1ee8] ; literal='Request Timeout'
+0x1805849f0 e9f1000000               jmp 0x180584ae6
+0x1805849f5 488d0524d5d4ff           lea rax, qword [0x1802d1f20] ; literal='Conflict'
+0x1805849fc e9e5000000               jmp 0x180584ae6
+0x180584a01 488d0540d5d4ff           lea rax, qword [0x1802d1f48] ; literal='Gone'
+0x180584a08 e9d9000000               jmp 0x180584ae6
+0x180584a0d 488d0554d5d4ff           lea rax, qword [0x1802d1f68] ; literal='Length Required'
+0x180584a14 e9cd000000               jmp 0x180584ae6
+0x180584a19 488d0580d5d4ff           lea rax, qword [0x1802d1fa0] ; literal='Precondition Failed'
+0x180584a20 e9c1000000               jmp 0x180584ae6
+0x180584a25 488d05b4d5d4ff           lea rax, qword [0x1802d1fe0] ; literal='Request Entity Too Large'
+0x180584a2c e9b5000000               jmp 0x180584ae6
+0x180584a31 488d05f0d5d4ff           lea rax, qword [0x1802d2028] ; literal='Request-Uri Too Long'
+0x180584a38 e9a9000000               jmp 0x180584ae6
+0x180584a3d 488d0524d6d4ff           lea rax, qword [0x1802d2068] ; literal='Unsupported Media Type'
+0x180584a44 e99d000000               jmp 0x180584ae6
+0x180584a49 488d0560d6d4ff           lea rax, qword [0x1802d20b0] ; literal='Requested Range Not Satisfiable'
+0x180584a50 e991000000               jmp 0x180584ae6
+0x180584a55 488d05acd6d4ff           lea rax, qword [0x1802d2108] ; literal='Expectation Failed'
+0x180584a5c e985000000               jmp 0x180584ae6
+0x180584a61 488d05e0d6d4ff           lea rax, qword [0x1802d2148] ; literal='Unprocessable Entity'
+0x180584a68 eb7c                     jmp 0x180584ae6
+0x180584a6a 488d0517d7d4ff           lea rax, qword [0x1802d2188] ; literal='Locked'
+0x180584a71 eb73                     jmp 0x180584ae6
+0x180584a73 488d0536d7d4ff           lea rax, qword [0x1802d21b0] ; literal='Failed Dependency'
+0x180584a7a eb6a                     jmp 0x180584ae6
+0x180584a7c 488d0565d7d4ff           lea rax, qword [0x1802d21e8] ; literal='Upgrade Required'
+0x180584a83 eb61                     jmp 0x180584ae6
+0x180584a85 81c10cfeffff             add ecx, 0xfffffe0c
+0x180584a8b 83f908                   cmp ecx, 0x08
+0x180584a8e 7354                     jnb 0x180584ae4
+0x180584a90 4863c9                   movsxd rcx, ecx
+0x180584a93 488d057e16bcff           lea rax, qword [0x180146118]
+0x180584a9a 48630c88                 movsxd rcx, dword [rax+rcx*4]
+0x180584a9e 4803c8                   add rcx, rax
+0x180584aa1 ffe1                     jmp rcx
+0x180584aa3 ebfe                     jmp 0x180584aa3
+0x180584aa5 488d0574d7d4ff           lea rax, qword [0x1802d2220] ; literal='Internal Server Error'
+0x180584aac eb38                     jmp 0x180584ae6
+0x180584aae 488d05abd7d4ff           lea rax, qword [0x1802d2260] ; literal='Not Implemented'
+0x180584ab5 eb2f                     jmp 0x180584ae6
+0x180584ab7 488d05dad7d4ff           lea rax, qword [0x1802d2298] ; literal='Bad Gateway'
+0x180584abe eb26                     jmp 0x180584ae6
+0x180584ac0 488d0501d8d4ff           lea rax, qword [0x1802d22c8] ; literal='Service Unavailable'
+0x180584ac7 eb1d                     jmp 0x180584ae6
+0x180584ac9 488d0538d8d4ff           lea rax, qword [0x1802d2308] ; literal='Gateway Timeout'
+0x180584ad0 eb14                     jmp 0x180584ae6
+0x180584ad2 488d0567d8d4ff           lea rax, qword [0x1802d2340] ; literal='Http Version Not Supported'
+0x180584ad9 eb0b                     jmp 0x180584ae6
+0x180584adb 488d05aed8d4ff           lea rax, qword [0x1802d2390] ; literal='Insufficient Storage'
+0x180584ae2 eb02                     jmp 0x180584ae6
+0x180584ae4 33c0                     xor eax, eax
+0x180584ae6 c3                       ret
+
+http-request-send-candidate.json
+ev_766e1f72362d381c817e29527868782764dba9c423719e21edeed5219d11d574
+pDj 1216 @ 0x180584180
+0x180584180 55                       push rbp
+0x180584181 53                       push rbx
+0x180584182 56                       push rsi
+0x180584183 57                       push rdi
+0x180584184 4154                     push r12
+0x180584186 4155                     push r13
+0x180584188 4156                     push r14
+0x18058418a 4157                     push r15
+0x18058418c 4881ecc8000000           sub rsp, 0xc8
+0x180584193 488d6c2430               lea rbp, qword [rsp+0x30]
+0x180584198 48898de0000000           mov qword [rbp+0xe0], rcx
+0x18058419f 488bf1                   mov rsi, rcx
+0x1805841a2 33c0                     xor eax, eax
+0x1805841a4 48894560                 mov qword [rbp+0x60], rax
+0x1805841a8 48894568                 mov qword [rbp+0x68], rax
+0x1805841ac 48894508                 mov qword [rbp+0x08], rax
+0x1805841b0 48894510                 mov qword [rbp+0x10], rax
+0x1805841b4 48894548                 mov qword [rbp+0x48], rax
+0x1805841b8 48894550                 mov qword [rbp+0x50], rax
+0x1805841bc 48894570                 mov qword [rbp+0x70], rax
+0x1805841c0 48898580000000           mov qword [rbp+0x80], rax
+0x1805841c7 448b21                   mov r12d, dword [rcx]
+0x1805841ca 44896500                 mov dword [rbp], r12d
+0x1805841ce 33ff                     xor edi, edi
+0x1805841d0 48897d20                 mov qword [rbp+0x20], rdi
+0x1805841d4 48897d40                 mov qword [rbp+0x40], rdi
+0x1805841d8 90                       nop
+0x1805841d9 448bf7                   mov r14d, edi
+0x1805841dc 48897d18                 mov qword [rbp+0x18], rdi
+0x1805841e0 448bff                   mov r15d, edi
+0x1805841e3 4585e4                   test r12d, r12d
+0x1805841e6 0f84a2000000             jz 0x18058428e
+0x1805841ec 488b4118                 mov rax, qword [rcx+0x18]
+0x1805841f0 48397840                 cmp qword [rax+0x40], rdi
+0x1805841f4 760e                     jbe 0x180584204
+0x1805841f6 e8657a0000               call 0x18058bc60
+0x1805841fb 488bc8                   mov rcx, rax
+0x1805841fe ff15c442d2ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x180584204 488d0d9dedabff           lea rcx, qword [0x180042fa8]
+0x18058420b ff153f42d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180584211 4c8bf8                   mov r15, rax
+0x180584214 488bc8                   mov rcx, rax
+0x180584217 e8946e0000               call 0x18058b0b0
+0x18058421c 488d0d0536a9ff           lea rcx, qword [0x180017828]
+0x180584223 ff152742d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180584229 488bd8                   mov rbx, rax
+0x18058422c 488b5618                 mov rdx, qword [rsi+0x18]
+0x180584230 488b5218                 mov rdx, qword [rdx+0x18]
+0x180584234 488bc8                   mov rcx, rax
+0x180584237 e8245be9ff               call 0x180419d60
+0x18058423c 488d0d7d36a9ff           lea rcx, qword [0x1800178c0]
+0x180584243 ff150742d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180584249 4c8bf0                   mov r14, rax
+0x18058424c 4c8b4618                 mov r8, qword [rsi+0x18]
+0x180584250 4d8b4010                 mov r8, qword [r8+0x10]
+0x180584254 488bd3                   mov rdx, rbx
+0x180584257 488bc8                   mov rcx, rax
+0x18058425a e8616c0000               call 0x18058aec0
+0x18058425f 4c897518                 mov qword [rbp+0x18], r14
+0x180584263 488d0d1ee9abff           lea rcx, qword [0x180042b88]
+0x18058426a ff15e041d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x180584270 488bd8                   mov rbx, rax
+0x180584273 41b001                   mov r8b, 0x01
+0x180584276 498bd7                   mov rdx, r15
+0x180584279 488bc8                   mov rcx, rax
+0x18058427c e88f6a0000               call 0x18058ad10
+0x180584281 488d4e20                 lea rcx, qword [rsi+0x20]
+0x180584285 488bd3                   mov rdx, rbx
+0x180584288 ff15fa41d2ff             call qword [sym.imp.mrt100_app.dll_RhpCheckedAssignRefEDX]
+0x18058428e 90                       nop
+0x18058428f 4585e4                   test r12d, r12d
+0x180584292 0f847b020000             jz 0x180584513
+0x180584298 488b4618                 mov rax, qword [rsi+0x18]
+0x18058429c 4883785000               cmp qword [rax+0x50], 0x00
+0x1805842a1 7408                     jz 0x1805842ab
+0x1805842a3 33c9                     xor ecx, ecx
+0x1805842a5 ff151d42d2ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1805842ab 41803f00                 cmp byte [r15], 0x00
+0x1805842af 498bcf                   mov rcx, r15
+0x1805842b2 33d2                     xor edx, edx
+0x1805842b4 e8c7690000               call 0x18058ac80
+0x1805842b9 488b5618                 mov rdx, qword [rsi+0x18]
+0x1805842bd 488b5230                 mov rdx, qword [rdx+0x30]
+0x1805842c1 498bcf                   mov rcx, r15
+0x1805842c4 e8a7680000               call 0x18058ab70
+0x1805842c9 488b4618                 mov rax, qword [rsi+0x18]
+0x1805842cd 488b5028                 mov rdx, qword [rax+0x28]
+0x1805842d1 498bcf                   mov rcx, r15
+0x1805842d4 4885d2                   test rdx, rdx
+0x1805842d7 7407                     jz 0x1805842e0
+0x1805842d9 e8b2670000               call 0x18058aa90
+0x1805842de eb05                     jmp 0x1805842e5
+0x1805842e0 e83b670000               call 0x18058aa20
+0x1805842e5 488b4618                 mov rax, qword [rsi+0x18]
+0x1805842e9 488b5038                 mov rdx, qword [rax+0x38]
+0x1805842ed 498bcf                   mov rcx, r15
+0x1805842f0 4885d2                   test rdx, rdx
+0x1805842f3 7507                     jnz 0x1805842fc
+0x1805842f5 e896660000               call 0x18058a990
+0x1805842fa eb05                     jmp 0x180584301
+0x1805842fc e89f640000               call 0x18058a7a0
+0x180584301 488b4618                 mov rax, qword [rsi+0x18]
+0x180584305 488b4808                 mov rcx, qword [rax+0x08]
+0x180584309 803900                   cmp byte [rcx], 0x00
+0x18058430c e89ffaffff               call 0x180583db0
+0x180584311 4c8be0                   mov r12, rax
+0x180584314 48894528                 mov qword [rbp+0x28], rax
+0x180584318 48897d38                 mov qword [rbp+0x38], rdi
+0x18058431c 498bcc                   mov rcx, r12
+0x18058431f 488d157a52d8ff           lea rdx, qword [0x1803095a0]
+0x180584326 ff154441d2ff             call qword [sym.imp.mrt100_app.dll_RhpResolveInterfaceMethod]
+0x18058432c 4c8be8                   mov r13, rax
+0x18058432f 41803c2400               cmp byte [r12], 0x00
+0x180584334 498bcc                   mov rcx, r12
+0x180584337 49ffd5                   call r13
+0x18058433a 84c0                     test al, al
+0x18058433c 0f84e2000000             jz 0x180584424
+0x180584342 498bcc                   mov rcx, r12
+0x180584345 488d15d455d8ff           lea rdx, qword [0x180309920]
+0x18058434c ff151e41d2ff             call qword [sym.imp.mrt100_app.dll_RhpResolveInterfaceMethod]
+0x180584352 48894530                 mov qword [rbp+0x30], rax
+0x180584356 498bcc                   mov rcx, r12
+0x180584359 48ffd0                   call rax
+0x18058435c 488bc8                   mov rcx, rax
+0x18058435f 488b15aa23d2ff           mov rdx, qword [0x1802a6710]
+0x180584366 ff158c41d2ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_CheckCastClass]
+0x18058436c 4c8bf8                   mov r15, rax
+0x18058436f 488b4e18                 mov rcx, qword [rsi+0x18]
+0x180584373 803900                   cmp byte [rcx], 0x00
+0x180584376 488bd0                   mov rdx, rax
+0x180584379 e8a2630000               call 0x18058a720
+0x18058437e 84c0                     test al, al
+0x180584380 745d                     jz 0x1805843df
+0x180584382 49837e3000               cmp qword [r14+0x30], 0x00
+0x180584387 752f                     jnz 0x1805843b8
+0x180584389 ff1591edd1ff             call qword [0x1802a3120]
+0x18058438f 488bd8                   mov rbx, rax
+0x180584392 488d0d17e6abff           lea rcx, qword [0x1800429b0]
+0x180584399 ff15b140d2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058439f 488bf8                   mov rdi, rax
+0x1805843a2 488bd3                   mov rdx, rbx
+0x1805843a5 488bc8                   mov rcx, rax
+0x1805843a8 e863620000               call 0x18058a610
+0x1805843ad 488bd7                   mov rdx, rdi
+0x1805843b0 498bce                   mov rcx, r14
+0x1805843b3 e8e85e0000               call 0x18058a2a0
+0x1805843b8 498b4e30                 mov rcx, qword [r14+0x30]
+0x1805843bc 803900                   cmp byte [rcx], 0x00
+0x1805843bf e8cc360000               call 0x180587a90
+0x1805843c4 488bd8                   mov rbx, rax
+0x1805843c7 488b4e18                 mov rcx, qword [rsi+0x18]
+0x1805843cb 488b4908                 mov rcx, qword [rcx+0x08]
+0x1805843cf 803900                   cmp byte [rcx], 0x00
+0x1805843d2 498bd7                   mov rdx, r15
+0x1805843d5 e8565d0000               call 0x18058a130
+0x1805843da 803b00                   cmp byte [rbx], 0x00
+0x1805843dd eb25                     jmp 0x180584404
+0x1805843df 41803e00                 cmp byte [r14], 0x00
+0x1805843e3 498bce                   mov rcx, r14
+0x1805843e6 e8755e0000               call 0x18058a260
+0x1805843eb 488bd8                   mov rbx, rax
+0x1805843ee 488b4e18                 mov rcx, qword [rsi+0x18]
+0x1805843f2 488b4908                 mov rcx, qword [rcx+0x08]
+0x1805843f6 803900                   cmp byte [rcx], 0x00
+0x1805843f9 498bd7                   mov rdx, r15
+0x1805843fc e82f5d0000               call 0x18058a130
+0x180584401 803b00                   cmp byte [rbx], 0x00
+0x180584404 4c8bc0                   mov r8, rax
+0x180584407 498bd7                   mov rdx, r15
+0x18058440a 488bcb                   mov rcx, rbx
+0x18058440d e81e5b0000               call 0x180589f30
+0x180584412 498bcc                   mov rcx, r12
+0x180584415 49ffd5                   call r13
+0x180584418 84c0                     test al, al
+0x18058441a 488b4530                 mov rax, qword [rbp+0x30]
+0x18058441e 0f8532ffffff             jnz 0x180584356
+0x180584424 837d0000                 cmp dword [rbp], 0x00
+0x180584428 7d23                     jnl 0x18058444d
+0x18058442a 488b4d28                 mov rcx, qword [rbp+0x28]
+0x18058442e 488b151323d2ff           mov rdx, qword [0x1802a6748]
+0x180584435 ff15d540d2ff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_IsInstanceOfInterface]
+0x18058443b 4885c0                   test rax, rax
+0x18058443e 740d                     jz 0x18058444d
+0x180584440 488bc8                   mov rcx, rax
+0x180584443 4c8d156651d8ff           lea r10, qword [0x1803095b0]
+0x18058444a 41ff12                   call qword [r10]
+0x18058444d 488bb5e0000000           mov rsi, qword [rbp+0xe0]
+0x180584454 488b5e18                 mov rbx, qword [rsi+0x18]
+0x180584458 4c8b7e20                 mov r15, qword [rsi+0x20]
+0x18058445c 33ff                     xor edi, edi
+0x18058445e 40387b24                 cmp byte [rbx+0x24], dil
+0x180584462 448d7701                 lea r14d, qword [rdi+0x01]
+0x180584466 7403                     jz 0x18058446b
+0x180584468 448bf7                   mov r14d, edi
+0x18058446b 488b4b70                 mov rcx, qword [rbx+0x70]
+0x18058446f 803900                   cmp byte [rcx], 0x00
+0x180584472 ff1520bfd1ff             call qword [0x1802a0398] ; PDB=$13_System::Threading::CancellationTokenSource.get_Token
+0x180584478 41803f00                 cmp byte [r15], 0x00
+0x18058447c 498bcf                   mov rcx, r15
+0x18058447f 4c8bc8                   mov r9, rax
+0x180584482 458bc6                   mov r8d, r14d
+0x180584485 488b5518                 mov rdx, qword [rbp+0x18]
+0x180584489 e8921c0000               call 0x180586120
+0x18058448e 488d4b40                 lea rcx, qword [rbx+0x40]
+0x180584492 488bd0                   mov rdx, rax
+0x180584495 ff15c53fd2ff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x18058449b 488b4618                 mov rax, qword [rsi+0x18]
+0x18058449f 488b4840                 mov rcx, qword [rax+0x40]
+0x1805844a3 803900                   cmp byte [rcx], 0x00
+0x1805844a6 33c0                     xor eax, eax
+0x1805844a8 48894570                 mov qword [rbp+0x70], rax
+0x1805844ac 48894578                 mov qword [rbp+0x78], rax
+0x1805844b0 4533c0                   xor r8d, r8d
+0x1805844b3 4c898580000000           mov qword [rbp+0x80], r8
+0x1805844ba 48894d48                 mov qword [rbp+0x48], rcx
+0x1805844be 4c894550                 mov qword [rbp+0x50], r8
+0x1805844c2 48894d08                 mov qword [rbp+0x08], rcx
+0x1805844c6 4c894510                 mov qword [rbp+0x10], r8
+0x1805844ca ff15b8cdd1ff             call qword [0x1802a1288] ; PDB=$13_System::Threading::Tasks::Task.get_IsCompleted
+0x1805844d0 84c0                     test al, al
+0x1805844d2 7539                     jnz 0x18058450d
+0x1805844d4 897d00                   mov dword [rbp], edi
+0x1805844d7 893e                     mov dword [rsi], edi
+0x1805844d9 488d4e28                 lea rcx, qword [rsi+0x28]
+0x1805844dd 488b5508                 mov rdx, qword [rbp+0x08]
+0x1805844e1 ff15a13fd2ff             call qword [sym.imp.mrt100_app.dll_RhpCheckedAssignRefEDX]
+0x1805844e7 f20f104510               movsd xmm0, qword [rbp+0x10]
+0x1805844ec f20f114630               movsd qword [rsi+0x30], xmm0
+0x1805844f1 488d15e08cb8ff           lea rdx, qword [0x18010d1d8]
+0x1805844f8 488d4e08                 lea rcx, qword [rsi+0x08]
+0x1805844fc 4c8bce                   mov r9, rsi
+0x1805844ff 4c8d4508                 lea r8, qword [rbp+0x08]
+0x180584503 e8b861efff               call 0x18047a6c0
+0x180584508 e9f1000000               jmp 0x1805845fe
+0x18058450d 488b4d08                 mov rcx, qword [rbp+0x08]
+0x180584511 eb27                     jmp 0x18058453a
+0x180584513 488b4e28                 mov rcx, qword [rsi+0x28]
+0x180584517 48894d08                 mov qword [rbp+0x08], rcx
+0x18058451b 488b4630                 mov rax, qword [rsi+0x30]
+0x18058451f 48894510                 mov qword [rbp+0x10], rax
+0x180584523 33c0                     xor eax, eax
+0x180584525 48894628                 mov qword [rsi+0x28], rax
+0x180584529 48894630                 mov qword [rsi+0x30], rax
+0x18058452d c74500ffffffff           mov dword [rbp], 0xffffffff
+0x180584534 c706ffffffff             mov dword [rsi], 0xffffffff
+0x18058453a ff1570b5d1ff             call qword [0x18029fab0] ; PDB=$13_System::Runtime::CompilerServices::TaskAwaiter.ValidateEnd
+0x180584540 488b4508                 mov rax, qword [rbp+0x08]
+0x180584544 33c9                     xor ecx, ecx
+0x180584546 48894d08                 mov qword [rbp+0x08], rcx
+0x18058454a 48894d10                 mov qword [rbp+0x10], rcx
+0x18058454e 488b5848                 mov rbx, qword [rax+0x48]
+0x180584552 488d0d5703acff           lea rcx, qword [0x1800448b0]
+0x180584559 ff15f13ed2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x18058455f 4c8bf0                   mov r14, rax
+0x180584562 4c8b4618                 mov r8, qword [rsi+0x18]
+0x180584566 4d8b4828                 mov r9, qword [r8+0x28]
+0x18058456a 4d8b4010                 mov r8, qword [r8+0x10]
+0x18058456e 488bd3                   mov rdx, rbx
+0x180584571 488bc8                   mov rcx, rax
+0x180584574 e807060000               call 0x180584b80
+0x180584579 803b00                   cmp byte [rbx], 0x00
+0x18058457c 488bcb                   mov rcx, rbx
+0x18058457f e8dc050000               call 0x180584b60
+0x180584584 84c0                     test al, al
+0x180584586 7570                     jnz 0x1805845f8
+0x180584588 e8c3050000               call 0x180584b50
+0x18058458d 488bf0                   mov rsi, rax
+0x180584590 498bce                   mov rcx, r14
+0x180584593 e858050000               call 0x180584af0
+0x180584598 8bd8                     mov ebx, eax
+0x18058459a 488b0db71fd2ff           mov rcx, qword [0x1802a6558]
+0x1805845a1 ff15a93ed2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1805845a7 488bf8                   mov rdi, rax
+0x1805845aa 895808                   mov dword [rax+0x08], ebx
+0x1805845ad 498bce                   mov rcx, r14
+0x1805845b0 e8fb010000               call 0x1805847b0
+0x1805845b5 4c8bc0                   mov r8, rax
+0x1805845b8 488bd7                   mov rdx, rdi
+0x1805845bb 488bce                   mov rcx, rsi
+0x1805845be e8dd96f4ff               call 0x1804cdca0
+0x1805845c3 488bd8                   mov rbx, rax
+0x1805845c6 488d0d1b05acff           lea rcx, qword [0x180044ae8]
+0x1805845cd ff157d3ed2ff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1805845d3 488bf8                   mov rdi, rax
+0x1805845d6 4c89742420               mov qword [rsp+0x20], r14
+0x1805845db 41b907000000             mov r9d, 0x07
+0x1805845e1 4533c0                   xor r8d, r8d
+0x1805845e4 488bd3                   mov rdx, rbx
+0x1805845e7 488bc8                   mov rcx, rax
+0x1805845ea e861010000               call 0x180584750
+0x1805845ef 488bcf                   mov rcx, rdi
+0x1805845f2 ff15d03ed2ff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1805845f8 4c897520                 mov qword [rbp+0x20], r14
+0x1805845fc eb07                     jmp 0x180584605
+0x1805845fe e874000000               call 0x180584677
+0x180584603 eb27                     jmp 0x18058462c
+0x180584605 e86d000000               call 0x180584677
+0x18058460a 488b8de0000000           mov rcx, qword [rbp+0xe0]
+0x180584611 c701feffffff             mov dword [rcx], 0xfffffffe
+0x180584617 488d15fa9bacff           lea rdx, qword [0x18004e218]
+0x18058461e 4883c108                 add rcx, 0x08
+0x180584622 4c8b4520                 mov r8, qword [rbp+0x20]
+0x180584626 ff154caed1ff             call qword [0x18029f478] ; PDB=$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetResult
+0x18058462c 488da598000000           lea rsp, qword [rbp+0x98]
+0x180584633 415f                     pop r15
+0x180584635 415e                     pop r14
+0x180584637 415d                     pop r13
+0x180584639 415c                     pop r12
+0x18058463b 5f                       pop rdi
+0x18058463c 5e                       pop rsi
+0x18058463d 5b                       pop rbx
+0x18058463e 5d                       pop rbp
+0x18058463f c3                       ret
+
+native-filter-property-setter.json
+ev_3a44c69e5cca85efd294de3c2e54a014e7c183074a6e4b0f1cae105c8980d2d2
+pDj 52 @ 0x180462390
+0x180462390 4883ec28                 sub rsp, 0x28
+0x180462394 48894c2430               mov qword [rsp+0x30], rcx
+0x180462399 418bc1                   mov eax, r9d
+0x18046239c 4c8bd2                   mov r10, rdx
+0x18046239f 488b4c2430               mov rcx, qword [rsp+0x30]
+0x1804623a4 488b11                   mov rdx, qword [rcx]
+0x1804623a7 f6c201                   test dl, 0x01
+0x1804623aa 7404                     jz 0x1804623b0
+0x1804623ac 488b52ff                 mov rdx, qword [rdx-0x01]
+0x1804623b0 458bc8                   mov r9d, r8d
+0x1804623b3 448bc0                   mov r8d, eax
+0x1804623b6 498bca                   mov rcx, r10
+0x1804623b9 e812000000               call 0x1804623d0
+0x1804623be 90                       nop
+0x1804623bf 4883c428                 add rsp, 0x28
+0x1804623c3 c3                       ret
+
+request-builder.json
+ev_2fe974fadb4991c032ea151874e0f06c04f722ade1e4c1f9bdbe4c4ed66f7a73
+pDj 170 @ 0x1804c00d0
+0x1804c00d0 53                       push rbx
+0x1804c00d1 4883ec20                 sub rsp, 0x20
+0x1804c00d5 488bd9                   mov rbx, rcx
+0x1804c00d8 33d2                     xor edx, edx
+0x1804c00da ff15b0f0ddff             call qword [0x18029f190] ; PDB=$15_System::Uri.op_Equality
+0x1804c00e0 84c0                     test al, al
+0x1804c00e2 756b                     jnz 0x1804c014f
+0x1804c00e4 3803                     cmp byte [rbx], al
+0x1804c00e6 488bcb                   mov rcx, rbx
+0x1804c00e9 ff1589f0ddff             call qword [0x18029f178] ; PDB=$15_System::Uri.get_Scheme
+0x1804c00ef 488d155266e0ff           lea rdx, qword [0x1802c6748] ; literal='http'
+0x1804c00f6 488bc8                   mov rcx, rax
+0x1804c00f9 ff15112ddeff             call qword [0x1802a2e10]
+0x1804c00ff 84c0                     test al, al
+0x1804c0101 741d                     jz 0x1804c0120
+0x1804c0103 488bcb                   mov rcx, rbx
+0x1804c0106 ff156cf0ddff             call qword [0x18029f178] ; PDB=$15_System::Uri.get_Scheme
+0x1804c010c 488d155566e0ff           lea rdx, qword [0x1802c6768] ; literal='https'
+0x1804c0113 488bc8                   mov rcx, rax
+0x1804c0116 ff15f42cdeff             call qword [0x1802a2e10]
+0x1804c011c 84c0                     test al, al
+0x1804c011e 753d                     jnz 0x1804c015d
+0x1804c0120 33d2                     xor edx, edx
+0x1804c0122 488bcb                   mov rcx, rbx
+0x1804c0125 ff1565f0ddff             call qword [0x18029f190] ; PDB=$15_System::Uri.op_Equality
+0x1804c012b 84c0                     test al, al
+0x1804c012d 753c                     jnz 0x1804c016b
+0x1804c012f b201                     mov dl, 0x01
+0x1804c0131 488bcb                   mov rcx, rbx
+0x1804c0134 e867000000               call 0x1804c01a0
+0x1804c0139 488bc8                   mov rcx, rax
+0x1804c013c 488d15c546b8ff           lea rdx, qword [0x180044808]
+0x1804c0143 ff15af83deff             call qword [sym.imp.mrt100_app.dll_RhTypeCast_CheckCastClass]
+0x1804c0149 4883c420                 add rsp, 0x20
+0x1804c014d 5b                       pop rbx
+0x1804c014e c3                       ret
+0x1804c014f e8acfaf1ff               call 0x1803dfc00
+0x1804c0154 488bc8                   mov rcx, rax
+0x1804c0157 ff156b83deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c015d e81e000000               call 0x1804c0180
+0x1804c0162 488bc8                   mov rcx, rax
+0x1804c0165 ff155d83deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c016b e890faf1ff               call 0x1803dfc00
+0x1804c0170 488bc8                   mov rcx, rax
+0x1804c0173 ff154f83deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c0179 cc                       int3
+
+request-creator.json
+ev_02e56c1831668c95ed0030b0afaf05baec41e307aa8a4dfbf88e0c85727a207c
+pDj 73 @ 0x1804c0080
+0x1804c0080 53                       push rbx
+0x1804c0081 57                       push rdi
+0x1804c0082 4883ec28                 sub rsp, 0x28
+0x1804c0086 488bf9                   mov rdi, rcx
+0x1804c0089 4885c9                   test rcx, rcx
+0x1804c008c 742c                     jz 0x1804c00ba
+0x1804c008e 488b0df350deff           mov rcx, qword [0x1802a5188]
+0x1804c0095 ff15b583deff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804c009b 488bd8                   mov rbx, rax
+0x1804c009e 488bd7                   mov rdx, rdi
+0x1804c00a1 488bc8                   mov rcx, rax
+0x1804c00a4 ff1586f0ddff             call qword [0x18029f130] ; PDB=$15_System::Uri..ctor
+0x1804c00aa 488bcb                   mov rcx, rbx
+0x1804c00ad e81e000000               call 0x1804c00d0
+0x1804c00b2 90                       nop
+0x1804c00b3 4883c428                 add rsp, 0x28
+0x1804c00b7 5f                       pop rdi
+0x1804c00b8 5b                       pop rbx
+0x1804c00b9 c3                       ret
+0x1804c00ba e841fbf1ff               call 0x1803dfc00
+0x1804c00bf 488bc8                   mov rcx, rax
+0x1804c00c2 ff150084deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c00c8 cc                       int3
+
+request-default-prefix-list.json
+ev_4f260c69f34f93e177ed96b78f6f06f6a168336368dbfa79d34b7c56588b2d49
+pDj 753 @ 0x1804c06b0
+0x1804c06b0 55                       push rbp
+0x1804c06b1 53                       push rbx
+0x1804c06b2 56                       push rsi
+0x1804c06b3 57                       push rdi
+0x1804c06b4 4154                     push r12
+0x1804c06b6 4155                     push r13
+0x1804c06b8 4156                     push r14
+0x1804c06ba 4157                     push r15
+0x1804c06bc 4883ec68                 sub rsp, 0x68
+0x1804c06c0 488d6c2430               lea rbp, qword [rsp+0x30]
+0x1804c06c5 c6450000                 mov byte [rbp], 0x00
+0x1804c06c9 488d1558ccdeff           lea rdx, qword [0x1802ad328]
+0x1804c06d0 ff15727ddeff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x1804c06d6 488d05cb9cdeff           lea rax, qword [0x1802aa3a8]
+0x1804c06dd 488bf0                   mov rsi, rax
+0x1804c06e0 48894508                 mov qword [rbp+0x08], rax
+0x1804c06e4 488b00                   mov rax, qword [rax]
+0x1804c06e7 4885c0                   test rax, rax
+0x1804c06ea 0f859d020000             jnz 0x1804c098d
+0x1804c06f0 488b4e08                 mov rcx, qword [rsi+0x08]
+0x1804c06f4 48894d10                 mov qword [rbp+0x10], rcx
+0x1804c06f8 884500                   mov byte [rbp], al
+0x1804c06fb 488d5500                 lea rdx, qword [rbp]
+0x1804c06ff ff158b3ddeff             call qword [0x1802a4490]
+0x1804c0705 488b06                   mov rax, qword [rsi]
+0x1804c0708 4885c0                   test rax, rax
+0x1804c070b 0f8567020000             jnz 0x1804c0978
+0x1804c0711 488d0d8045b8ff           lea rcx, qword [0x180044c98]
+0x1804c0718 ff15327ddeff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804c071e 488bd8                   mov rbx, rax
+0x1804c0721 48894518                 mov qword [rbp+0x18], rax
+0x1804c0725 488bc8                   mov rcx, rax
+0x1804c0728 ff15aa25deff             call qword [0x1802a2cd8]
+0x1804c072e 488d0d6bcebaff           lea rcx, qword [0x18006d5a0]
+0x1804c0735 ff15157ddeff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804c073b 4c8bf0                   mov r14, rax
+0x1804c073e 488bc8                   mov rcx, rax
+0x1804c0741 ff159125deff             call qword [0x1802a2cd8]
+0x1804c0747 ba02000000               mov edx, 0x02
+0x1804c074c 488d0dfdb7c3ff           lea rcx, qword [0x1800fbf50]
+0x1804c0753 ff15ff7cdeff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x1804c0759 488bd0                   mov rdx, rax
+0x1804c075c 498d4e08                 lea rcx, qword [r14+0x08]
+0x1804c0760 ff15fa7cdeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0766 488d0d3b81b5ff           lea rcx, qword [0x1800188a8]
+0x1804c076d ff15dd7cdeff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804c0773 48894520                 mov qword [rbp+0x20], rax
+0x1804c0777 488d15ba60e0ff           lea rdx, qword [0x1802c6838] ; literal='http:'
+0x1804c077e 4c8bc3                   mov r8, rbx
+0x1804c0781 488bc8                   mov rcx, rax
+0x1804c0784 e89724f7ff               call 0x180432c20
+0x1804c0789 4d8b6e08                 mov r13, qword [r14+0x08]
+0x1804c078d 458b6610                 mov r12d, dword [r14+0x10]
+0x1804c0791 418b4508                 mov eax, dword [r13+0x08]
+0x1804c0795 443be0                   cmp r12d, eax
+0x1804c0798 0f85a6000000             jnz 0x1804c0844
+0x1804c079e 418d4c2401               lea ecx, qword [r12+0x01]
+0x1804c07a3 3bc1                     cmp eax, ecx
+0x1804c07a5 0f8d99000000             jnl 0x1804c0844
+0x1804c07ab bf04000000               mov edi, 0x04
+0x1804c07b0 49837d0800               cmp qword [r13+0x08], 0x00
+0x1804c07b5 7404                     jz 0x1804c07bb
+0x1804c07b7 03c0                     add eax, eax
+0x1804c07b9 eb02                     jmp 0x1804c07bd
+0x1804c07bb 8bc7                     mov eax, edi
+0x1804c07bd 3bc1                     cmp eax, ecx
+0x1804c07bf 7d02                     jnl 0x1804c07c3
+0x1804c07c1 8bc1                     mov eax, ecx
+0x1804c07c3 413bc4                   cmp eax, r12d
+0x1804c07c6 7d0f                     jnl 0x1804c07d7
+0x1804c07c8 ff15e20fdeff             call qword [0x1802a17b0]
+0x1804c07ce 488bc8                   mov rcx, rax
+0x1804c07d1 ff15f17cdeff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c07d7 413b4508                 cmp eax, dword [r13+0x08]
+0x1804c07db 746c                     jz 0x1804c0849
+0x1804c07dd 85c0                     test eax, eax
+0x1804c07df 7e3c                     jle 0x1804c081d
+0x1804c07e1 4863d0                   movsxd rdx, eax
+0x1804c07e4 488d0d65b7c3ff           lea rcx, qword [0x1800fbf50]
+0x1804c07eb ff15677cdeff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x1804c07f1 488bd8                   mov rbx, rax
+0x1804c07f4 4489642420               mov dword [rsp+0x20], r12d
+0x1804c07f9 4533c9                   xor r9d, r9d
+0x1804c07fc 4c8bc0                   mov r8, rax
+0x1804c07ff 33d2                     xor edx, edx
+0x1804c0801 498bcd                   mov rcx, r13
+0x1804c0804 ff159628deff             call qword [0x1802a30a0]
+0x1804c080a 498d4e08                 lea rcx, qword [r14+0x08]
+0x1804c080e 488bd3                   mov rdx, rbx
+0x1804c0811 ff15497cdeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0817 488b5d18                 mov rbx, qword [rbp+0x18]
+0x1804c081b eb2c                     jmp 0x1804c0849
+0x1804c081d 488b15bbcac5ff           mov rdx, qword [0x18011d2df]
+0x1804c0824 4883c2f0                 add rdx, 0xfffffffffffffff0
+0x1804c0828 ff151a7cdeff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x1804c082e 488b0592cac5ff           mov rax, qword [0x18011d2c7]
+0x1804c0835 498d4e08                 lea rcx, qword [r14+0x08]
+0x1804c0839 488b10                   mov rdx, qword [rax]
+0x1804c083c ff151e7cdeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0842 eb05                     jmp 0x1804c0849
+0x1804c0844 bf04000000               mov edi, 0x04
+0x1804c0849 498b5608                 mov rdx, qword [r14+0x08]
+0x1804c084d 49634e10                 movsxd rcx, dword [r14+0x10]
+0x1804c0851 8d4101                   lea eax, qword [rcx+0x01]
+0x1804c0854 41894610                 mov dword [r14+0x10], eax
+0x1804c0858 488bc1                   mov rax, rcx
+0x1804c085b 483b4a08                 cmp rcx, qword [rdx+0x08]
+0x1804c085f 0f830d010000             jnb 0x1804c0972
+0x1804c0865 4883c210                 add rdx, 0x10
+0x1804c0869 488d0cca                 lea rcx, qword [rdx+rcx*8]
+0x1804c086d 488b5520                 mov rdx, qword [rbp+0x20]
+0x1804c0871 ff15e97bdeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0877 41ff4614                 inc dword [r14+0x14]
+0x1804c087b 488d0d2680b5ff           lea rcx, qword [0x1800188a8]
+0x1804c0882 ff15c87bdeff             call qword [sym.imp.mrt100_app.dll_RhpNewFast]
+0x1804c0888 4c8be0                   mov r12, rax
+0x1804c088b 488d15c65fe0ff           lea rdx, qword [0x1802c6858] ; literal='https:'
+0x1804c0892 4c8bc3                   mov r8, rbx
+0x1804c0895 488bc8                   mov rcx, rax
+0x1804c0898 e88323f7ff               call 0x180432c20
+0x1804c089d 4d8b4608                 mov r8, qword [r14+0x08]
+0x1804c08a1 458b4e10                 mov r9d, dword [r14+0x10]
+0x1804c08a5 418b5008                 mov edx, dword [r8+0x08]
+0x1804c08a9 443bca                   cmp r9d, edx
+0x1804c08ac 0f858e000000             jnz 0x1804c0940
+0x1804c08b2 418d4901                 lea ecx, qword [r9+0x01]
+0x1804c08b6 3bd1                     cmp edx, ecx
+0x1804c08b8 0f8d82000000             jnl 0x1804c0940
+0x1804c08be 4983780800               cmp qword [r8+0x08], 0x00
+0x1804c08c3 7403                     jz 0x1804c08c8
+0x1804c08c5 8d3c12                   lea edi, qword [rdx+rdx*1]
+0x1804c08c8 3bf9                     cmp edi, ecx
+0x1804c08ca 7d02                     jnl 0x1804c08ce
+0x1804c08cc 8bf9                     mov edi, ecx
+0x1804c08ce 413bf9                   cmp edi, r9d
+0x1804c08d1 7d0f                     jnl 0x1804c08e2
+0x1804c08d3 ff15d70edeff             call qword [0x1802a17b0]
+0x1804c08d9 488bc8                   mov rcx, rax
+0x1804c08dc ff15e67bdeff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c08e2 3bfa                     cmp edi, edx
+0x1804c08e4 745a                     jz 0x1804c0940
+0x1804c08e6 85ff                     test edi, edi
+0x1804c08e8 7e31                     jle 0x1804c091b
+0x1804c08ea 418bd9                   mov ebx, r9d
+0x1804c08ed 4863d7                   movsxd rdx, edi
+0x1804c08f0 488d0d59b6c3ff           lea rcx, qword [0x1800fbf50]
+0x1804c08f7 ff155b7bdeff             call qword [sym.imp.mrt100_app.dll_RhpNewArray]
+0x1804c08fd 488bf8                   mov rdi, rax
+0x1804c0900 895c2420                 mov dword [rsp+0x20], ebx
+0x1804c0904 4533c9                   xor r9d, r9d
+0x1804c0907 4c8bc0                   mov r8, rax
+0x1804c090a 33d2                     xor edx, edx
+0x1804c090c 498b4e08                 mov rcx, qword [r14+0x08]
+0x1804c0910 ff158a27deff             call qword [0x1802a30a0]
+0x1804c0916 488bd7                   mov rdx, rdi
+0x1804c0919 eb1b                     jmp 0x1804c0936
+0x1804c091b 488b15bdc9c5ff           mov rdx, qword [0x18011d2df]
+0x1804c0922 4883c2f0                 add rdx, 0xfffffffffffffff0
+0x1804c0926 ff151c7bdeff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x1804c092c 488b0594c9c5ff           mov rax, qword [0x18011d2c7]
+0x1804c0933 488b10                   mov rdx, qword [rax]
+0x1804c0936 498d4e08                 lea rcx, qword [r14+0x08]
+0x1804c093a ff15207bdeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0940 498b5608                 mov rdx, qword [r14+0x08]
+0x1804c0944 49634e10                 movsxd rcx, dword [r14+0x10]
+0x1804c0948 8d4101                   lea eax, qword [rcx+0x01]
+0x1804c094b 41894610                 mov dword [r14+0x10], eax
+0x1804c094f 488bc1                   mov rax, rcx
+0x1804c0952 483b4a08                 cmp rcx, qword [rdx+0x08]
+0x1804c0956 731a                     jnb 0x1804c0972
+0x1804c0958 488d4a10                 lea rcx, qword [rdx+0x10]
+0x1804c095c 488d0cc1                 lea rcx, qword [rcx+rax*8]
+0x1804c0960 498bd4                   mov rdx, r12
+0x1804c0963 ff15f77adeff             call qword [sym.imp.mrt100_app.dll_RhpAssignRefEDX]
+0x1804c0969 41ff4614                 inc dword [r14+0x14]
+0x1804c096d 4c8936                   mov qword [rsi], r14
+0x1804c0970 eb06                     jmp 0x1804c0978
+0x1804c0972 ff15b806deff             call qword [0x1802a1030]
+0x1804c0978 90                       nop
+0x1804c0979 807d0000                 cmp byte [rbp], 0x00
+0x1804c097d 740a                     jz 0x1804c0989
+0x1804c097f 488b4d10                 mov rcx, qword [rbp+0x10]
+0x1804c0983 ff150f3bdeff             call qword [0x1802a4498]
+0x1804c0989 488b7508                 mov rsi, qword [rbp+0x08]
+0x1804c098d 488b06                   mov rax, qword [rsi]
+0x1804c0990 488d6538                 lea rsp, qword [rbp+0x38]
+0x1804c0994 415f                     pop r15
+0x1804c0996 415e                     pop r14
+0x1804c0998 415d                     pop r13
+0x1804c099a 415c                     pop r12
+0x1804c099c 5f                       pop rdi
+0x1804c099d 5e                       pop rsi
+0x1804c099e 5b                       pop rbx
+0x1804c099f 5d                       pop rbp
+0x1804c09a0 c3                       ret
+
+request-factory.json
+ev_fb78a62e07afb3ee13b97051042469842159a6d6246397d70400ba3565621869
+pDj 455 @ 0x1804c01a0
+0x1804c01a0 53                       push rbx
+0x1804c01a1 56                       push rsi
+0x1804c01a2 57                       push rdi
+0x1804c01a3 4154                     push r12
+0x1804c01a5 4155                     push r13
+0x1804c01a7 4156                     push r14
+0x1804c01a9 4157                     push r15
+0x1804c01ab 4883ec40                 sub rsp, 0x40
+0x1804c01af 0fb6da                   movzx ebx, dl
+0x1804c01b2 4c8bf9                   mov r15, rcx
+0x1804c01b5 488d15acd1deff           lea rdx, qword [0x1802ad368]
+0x1804c01bc ff158682deff             call qword [sym.imp.mrt100_app.dll_RhpCheckCctor2]
+0x1804c01c2 488d050fa2deff           lea rax, qword [0x1802aa3d8]
+0x1804c01c9 4c8be8                   mov r13, rax
+0x1804c01cc 488b08                   mov rcx, qword [rax]
+0x1804c01cf 803900                   cmp byte [rcx], 0x00
+0x1804c01d2 ff1560f3ddff             call qword [0x18029f538]
+0x1804c01d8 84c0                     test al, al
+0x1804c01da 7425                     jz 0x1804c0201
+0x1804c01dc 498bcf                   mov rcx, r15
+0x1804c01df 488b01                   mov rax, qword [rcx]
+0x1804c01e2 48ff5018                 call qword [rax+0x18]
+0x1804c01e6 4c8d05db65e0ff           lea r8, qword [0x1802c67c8] ; literal='Create'
+0x1804c01ed 488d15fc65e0ff           lea rdx, qword [0x1802c67f0] ; literal='WebRequest'
+0x1804c01f4 4c8bc8                   mov r9, rax
+0x1804c01f7 b905000000               mov ecx, 0x05
+0x1804c01fc e8bf070000               call 0x1804c09c0
+0x1804c0201 498bcf                   mov rcx, r15
+0x1804c0204 84db                     test bl, bl
+0x1804c0206 750b                     jnz 0x1804c0213
+0x1804c0208 41381f                   cmp byte [r15], bl
+0x1804c020b ff1547efddff             call qword [0x18029f158]
+0x1804c0211 eb1a                     jmp 0x1804c022d
+0x1804c0213 41803f00                 cmp byte [r15], 0x00
+0x1804c0217 ff155befddff             call qword [0x18029f178] ; PDB=$15_System::Uri.get_Scheme
+0x1804c021d 488d15fc65e0ff           lea rdx, qword [0x1802c6820]
+0x1804c0224 488bc8                   mov rcx, rax
+0x1804c0227 ff156b2ddeff             call qword [0x1802a2f98] ; PDB=System::String.Concat
+0x1804c022d 4c8be0                   mov r12, rax
+0x1804c0230 803800                   cmp byte [rax], 0x00
+0x1804c0233 488bc8                   mov rcx, rax
+0x1804c0236 ff150c2cdeff             call qword [0x1802a2e48]
+0x1804c023c 8bd8                     mov ebx, eax
+0x1804c023e 89442430                 mov dword [rsp+0x30], eax
+0x1804c0242 e869040000               call 0x1804c06b0
+0x1804c0247 488bf0                   mov rsi, rax
+0x1804c024a 8b4810                   mov ecx, dword [rax+0x10]
+0x1804c024d 85c9                     test ecx, ecx
+0x1804c024f 7e6f                     jle 0x1804c02c0
+0x1804c0251 33ff                     xor edi, edi
+0x1804c0253 3bf9                     cmp edi, ecx
+0x1804c0255 0f83fc000000             jnb 0x1804c0357
+0x1804c025b 488b4e08                 mov rcx, qword [rsi+0x08]
+0x1804c025f 4863c7                   movsxd rax, edi
+0x1804c0262 483b4108                 cmp rax, qword [rcx+0x08]
+0x1804c0266 0f83bd000000             jnb 0x1804c0329
+0x1804c026c 4c8b74c110               mov r14, qword [rcx+rax*8+0x10]
+0x1804c0271 498b4e08                 mov rcx, qword [r14+0x08]
+0x1804c0275 803900                   cmp byte [rcx], 0x00
+0x1804c0278 ff15ca2bdeff             call qword [0x1802a2e48]
+0x1804c027e 3bd8                     cmp ebx, eax
+0x1804c0280 7c35                     jl 0x1804c02b7
+0x1804c0282 498b5e08                 mov rbx, qword [r14+0x08]
+0x1804c0286 803b00                   cmp byte [rbx], 0x00
+0x1804c0289 488bcb                   mov rcx, rbx
+0x1804c028c ff15b62bdeff             call qword [0x1802a2e48]
+0x1804c0292 c744242805000000         mov dword [rsp+0x28], 0x05
+0x1804c029a 89442420                 mov dword [rsp+0x20], eax
+0x1804c029e 4533c9                   xor r9d, r9d
+0x1804c02a1 4d8bc4                   mov r8, r12
+0x1804c02a4 33d2                     xor edx, edx
+0x1804c02a6 488bcb                   mov rcx, rbx
+0x1804c02a9 ff15e12bdeff             call qword [0x1802a2e90]
+0x1804c02af 85c0                     test eax, eax
+0x1804c02b1 7420                     jz 0x1804c02d3
+0x1804c02b3 8b5c2430                 mov ebx, dword [rsp+0x30]
+0x1804c02b7 ffc7                     inc edi
+0x1804c02b9 8b4e10                   mov ecx, dword [rsi+0x10]
+0x1804c02bc 3bf9                     cmp edi, ecx
+0x1804c02be 7c95                     jl 0x1804c0255
+0x1804c02c0 498b4d00                 mov rcx, qword [r13]
+0x1804c02c4 803900                   cmp byte [rcx], 0x00
+0x1804c02c7 ff156bf2ddff             call qword [0x18029f538]
+0x1804c02cd 84c0                     test al, al
+0x1804c02cf 7478                     jz 0x1804c0349
+0x1804c02d1 eb5c                     jmp 0x1804c032f
+0x1804c02d3 498b4e10                 mov rcx, qword [r14+0x10]
+0x1804c02d7 803900                   cmp byte [rcx], 0x00
+0x1804c02da 498bd7                   mov rdx, r15
+0x1804c02dd 4c8d156c54e4ff           lea r10, qword [0x180305750]
+0x1804c02e4 41ff12                   call qword [r10]
+0x1804c02e7 488bd8                   mov rbx, rax
+0x1804c02ea 498b4d00                 mov rcx, qword [r13]
+0x1804c02ee 803900                   cmp byte [rcx], 0x00
+0x1804c02f1 ff1541f2ddff             call qword [0x18029f538]
+0x1804c02f7 84c0                     test al, al
+0x1804c02f9 741b                     jz 0x1804c0316
+0x1804c02fb 4c8d05c664e0ff           lea r8, qword [0x1802c67c8] ; literal='Create'
+0x1804c0302 488d15e764e0ff           lea rdx, qword [0x1802c67f0] ; literal='WebRequest'
+0x1804c0309 4c8bcb                   mov r9, rbx
+0x1804c030c b905000000               mov ecx, 0x05
+0x1804c0311 e85a000000               call 0x1804c0370
+0x1804c0316 488bc3                   mov rax, rbx
+0x1804c0319 4883c440                 add rsp, 0x40
+0x1804c031d 415f                     pop r15
+0x1804c031f 415e                     pop r14
+0x1804c0321 415d                     pop r13
+0x1804c0323 415c                     pop r12
+0x1804c0325 5f                       pop rdi
+0x1804c0326 5e                       pop rsi
+0x1804c0327 5b                       pop rbx
+0x1804c0328 c3                       ret
+0x1804c0329 ff15010ddeff             call qword [0x1802a1030]
+0x1804c032f 4c8d059264e0ff           lea r8, qword [0x1802c67c8] ; literal='Create'
+0x1804c0336 488d15b364e0ff           lea rdx, qword [0x1802c67f0] ; literal='WebRequest'
+0x1804c033d 4533c9                   xor r9d, r9d
+0x1804c0340 418d4905                 lea ecx, qword [r9+0x05]
+0x1804c0344 e827000000               call 0x1804c0370
+0x1804c0349 e832feffff               call 0x1804c0180
+0x1804c034e 488bc8                   mov rcx, rax
+0x1804c0351 ff157181deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c0357 ff151b14deff             call qword [0x1802a1778]
+0x1804c035d 488bc8                   mov rcx, rax
+0x1804c0360 ff156281deff             call qword [sym.imp.mrt100_app.dll_RhpThrowEx]
+0x1804c0366 cc                       int3

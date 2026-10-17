@@ -1,0 +1,257 @@
+{
+  "app": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "codeview": [
+      {
+        "guid": "fe1416b8-6dd3-4fcf-aff4-5d354d9fbfac",
+        "age": 1,
+        "path": "D:\\data\\PkgProc\\mupAwdZgJkaFwBR2iGOucg\\ExtractedBundle\\Duracellko.BingImage.Universal_1.4.13.0_x64\\Duracellko.BingImage.Universal.pdb",
+        "basename": "Duracellko.BingImage.Universal.pdb",
+        "symbol_key": "FE1416B86DD34FCFAFF45D354D9FBFAC1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/Duracellko.BingImage.Universal.pdb/FE1416B86DD34FCFAFF45D354D9FBFAC1/Duracellko.BingImage.Universal.pdb"
+      }
+    ]
+  },
+  "shared": {
+    "path": "C:\\Program Files\\WindowsApps\\Microsoft.NET.Native.Framework.1.7_1.7.27413.0_x64__8wekyb3d8bbwe\\SharedLibrary.dll",
+    "sha256": "078c83815b5b6be67a397e33f0bfe125708a933f0a034545fc6a088f5eb0ce6d",
+    "codeview": [
+      {
+        "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+        "age": 1,
+        "path": "f:\\ddSetup\\SD\\2\\setup\\msis\\x86ret\\enu\\netfx_ProjectNamd64\\TestILC\\ExternalFiles\\SharedAssemblyPath\\ret\\Native\\SharedLibrary.pdb",
+        "basename": "SharedLibrary.pdb",
+        "symbol_key": "FE6DCBB5864A4F9D8101638B869D98AE1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb"
+      }
+    ]
+  },
+  "custom_descriptors": [
+    {
+      "index": 0,
+      "eat_rva": "0x29f000",
+      "iat_rva": "0x29f000",
+      "count": 0,
+      "ordinary_eat_import": null
+    },
+    {
+      "index": 1,
+      "eat_rva": "0x2a8438",
+      "iat_rva": "0x29f008",
+      "count": 4737,
+      "ordinary_eat_import": {
+        "dll": "SharedLibrary.dll",
+        "va": "0x1802a8438",
+        "name": "$NEAT$",
+        "ordinal": null
+      }
+    }
+  ],
+  "neat_export": {
+    "va": "0x18010e1d0",
+    "rva": "0x10e1d0"
+  },
+  "shared_import_range": {
+    "start": "0x18029f008",
+    "end_exclusive": "0x1802a8410",
+    "count": 4737
+  },
+  "layout_source": "https://github.com/synacktiv/dotNIET/blob/main/dotNIET_plugin.py",
+  "symbol_validation": {
+    "pdb_path": "E:\\study\\rea\\daily-picture\\evidence\\deep-symbols\\SharedLibrary.pdb",
+    "pdb_sha256": "d3200600d44d7de49f986207738efab5823cc7ac4d0b9693d134982d02ef918a",
+    "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+    "pdb_stream_age": 3,
+    "dbi_age": 1,
+    "installed_pe_codeview_age": 1,
+    "all_section_headers_match": true,
+    "section_count": 22,
+    "public_symbol_records": 55968,
+    "unique_public_symbol_addresses": 43146,
+    "source_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb",
+    "note": "PDB stream age is 3; DBI age is 1 and matches the PE CodeView age. GUID and all 22 section layouts match the installed DLL."
+  },
+  "resolved_slots": [
+    {
+      "slot_va": "0x1802a1148",
+      "slot_file_offset": "0x2a0548",
+      "raw": "0x800000000000288b",
+      "neat_index": 10379,
+      "neat_entry_file_offset": "0x1179fc",
+      "resolved_rva": "0x5d0930",
+      "resolved_va": "0x1805d0930",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1805d0930",
+        "end_exclusive": "0x1805d0966",
+        "length": 54,
+        "unwind_rva": "0x16b450"
+      },
+      "bytes": "5356574883ec20488bfa488bf1488d0d6471a9ffff15be46ceff488bd84c8bc7",
+      "symbols": [
+        {
+          "name": "System::Action$1<$8_System::Runtime::InteropServices::WindowsRuntime::EventRegistrationToken>.ConstructClosedInstanceDelegate",
+          "flags": "function",
+          "record_offset": 5329280,
+          "section": 5,
+          "section_offset": 2517296
+        },
+        {
+          "name": "System::Action$1<$8_System::Runtime::InteropServices::WindowsRuntime::EventRegistrationToken>.ConstructClosedInstanceDelegate",
+          "flags": "procedure",
+          "record_offset": 6913932,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 2517296,
+          "type_index": "0x5e3e",
+          "length": 54
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1805d0930",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a46e8",
+      "slot_file_offset": "0x2a3ae8",
+      "raw": "0x800000000000568b",
+      "neat_index": 22155,
+      "neat_entry_file_offset": "0x1231fc",
+      "resolved_rva": "0x4974e0",
+      "resolved_va": "0x1804974e0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804974e0",
+        "end_exclusive": "0x1804975d6",
+        "length": 246,
+        "unwind_rva": "0x16cfcc"
+      },
+      "bytes": "555356415641574883ec60488d6c242048894d70498bf1498bd84c8bfa33c048",
+      "symbols": [
+        {
+          "name": "$8_System::Runtime::InteropServices::WindowsRuntime::WindowsRuntimeMarshal::ManagedEventRegistrationImpl.AddEventHandler<System.__Canon>",
+          "flags": "function",
+          "record_offset": 6542616,
+          "section": 5,
+          "section_offset": 1234144
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::WindowsRuntime::WindowsRuntimeMarshal::ManagedEventRegistrationImpl.AddEventHandler<System.__Canon>",
+          "flags": "procedure",
+          "record_offset": 13874568,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1234144,
+          "type_index": "0xaa13",
+          "length": 246
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x1804974e0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a4710",
+      "slot_file_offset": "0x2a3b10",
+      "raw": "0x80000000000056a0",
+      "neat_index": 22176,
+      "neat_entry_file_offset": "0x123250",
+      "resolved_rva": "0x44dac0",
+      "resolved_va": "0x18044dac0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x18044dac0",
+        "end_exclusive": "0x18044dc18",
+        "length": 344,
+        "unwind_rva": "0x16c724"
+      },
+      "bytes": "555357415641574883ec60488d6c24204c89858000000048894d704d8bf9498b",
+      "symbols": [
+        {
+          "name": "$8_System::Runtime::InteropServices::WindowsRuntime::WindowsRuntimeMarshal::NativeOrStaticEventRegistrationImpl.AddEventHandler<System.__Canon>",
+          "flags": "function",
+          "record_offset": 6542924,
+          "section": 5,
+          "section_offset": 932544
+        },
+        {
+          "name": "$8_System::Runtime::InteropServices::WindowsRuntime::WindowsRuntimeMarshal::NativeOrStaticEventRegistrationImpl.AddEventHandler<System.__Canon>",
+          "flags": "procedure",
+          "record_offset": 13888084,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 932544,
+          "type_index": "0xaa2e",
+          "length": 344
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x18044dac0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a5150",
+      "slot_file_offset": "0x2a4550",
+      "raw": "0x8000000000006af9",
+      "neat_index": 27385,
+      "neat_entry_file_offset": "0x1283b4",
+      "resolved_rva": "0x8d28",
+      "resolved_va": "0x180008d28",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0000000218000000000000000000000000000000623ec7a0f0ffffffffffffff",
+      "symbols": [
+        {
+          "name": "??_7INotifyPropertyChanged@ComponentModel@$7_System@@6B@",
+          "flags": "none",
+          "record_offset": 291768,
+          "section": 1,
+          "section_offset": 32040
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x180008d28",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a6748",
+      "slot_file_offset": "0x2a5b48",
+      "raw": "0x8000000000007d83",
+      "neat_index": 32131,
+      "neat_entry_file_offset": "0x12cddc",
+      "resolved_rva": "0x7760",
+      "resolved_va": "0x180007760",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "00000002180000000000000000000000000000004d07625c0000084118000000",
+      "symbols": [
+        {
+          "name": "??_7IDisposable@System@@6B@",
+          "flags": "none",
+          "record_offset": 302436,
+          "section": 1,
+          "section_offset": 26464
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x180007760",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    }
+  ],
+  "limitations": [
+    "No target or runtime binder execution; this maps shipped custom descriptors and SharedLibrary table bytes.",
+    "A resolved address alone does not establish its source method name; symbol or instruction corroboration is needed.",
+    "Per-address symbol records are capped at 64 with explicit total/truncation flags. Complete aliases remain in sharedlibrary-symbols.json; compiler folding can create thousands of aliases at a single ret instruction."
+  ]
+}

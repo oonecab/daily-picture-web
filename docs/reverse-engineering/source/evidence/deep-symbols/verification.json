@@ -1,0 +1,16 @@
+{
+  "app_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "shared_sha256": "078c83815b5b6be67a397e33f0bfe125708a933f0a034545fc6a088f5eb0ce6d",
+  "custom_import_slots": 4737,
+  "named_slots": 4480,
+  "direct_named_slots": 3518,
+  "unresolved_slots": 257,
+  "full_procedures": 41909,
+  "module_count": 7,
+  "llvm_prefix_procedures_cross_checked": 14638,
+  "all_custom_module_record_lengths_validated": true,
+  "notes": [
+    "LLVM 22.1.4 full --symbols dump stopped at an unsupported APSInt constant; its complete procedure prefix was independently checked against our raw parser.",
+    "The custom parser skips unneeded symbols by their validated framed length and parses only S_GPROC32/S_LPROC32; unsupported constants do not block later method records."
+  ]
+}

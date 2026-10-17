@@ -1,0 +1,535 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "readonly": true,
+  "rea": [
+    {
+      "path": "evidence/image-lifetime/bitmap-source-abi-dispatch.json",
+      "sha256": "996afc0914adeb24fa5d84ffee5ef2db7e956f1526e146a794aca831c0398518",
+      "evidence_id": "ev_f024ffa65789325187c6459a9c5601c16179f15b367fe431bd3de435ccca2bee",
+      "first_instruction": "0x180475f10",
+      "last_instruction": "0x180475fd3",
+      "instruction_count": 59,
+      "bytes_verified": 196,
+      "start_owner": {
+        "start": "0x180475f10",
+        "end_exclusive": "0x180475fd4",
+        "length": 196,
+        "unwind_rva": "0x14beb4"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/bitmapimage-constructor.json",
+      "sha256": "558140185e0b95be148f19825a0fa50e9df58bd1d7992433c0ed28e06157ae53",
+      "evidence_id": "ev_e5eb0e2cd5cd7e957efc8cd4205aafdeb41b8d8595a9eed79153f4676e3af780",
+      "first_instruction": "0x1804a9630",
+      "last_instruction": "0x1804a965d",
+      "instruction_count": 13,
+      "bytes_verified": 46,
+      "start_owner": {
+        "start": "0x1804a9630",
+        "end_exclusive": "0x1804a965e",
+        "length": 46,
+        "unwind_rva": "0x14adec"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/cached-image-stream-state.json",
+      "sha256": "51e22afff2cab3add57351b7ef2e1fe1a99ba9069aad45ec3ec90fb74fca25be",
+      "evidence_id": "ev_9acbc099a4924ea54692d10de0398393a9ce2c7c16739de999e6e6bdf099fba9",
+      "first_instruction": "0x1804bf630",
+      "last_instruction": "0x1804bf7a4",
+      "instruction_count": 99,
+      "bytes_verified": 373,
+      "start_owner": {
+        "start": "0x1804bf630",
+        "end_exclusive": "0x1804bf7a5",
+        "length": 373,
+        "unwind_rva": "0x14c0ec"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/cached-stream-entry.json",
+      "sha256": "71f8e38f5fe3a0405d0518063935c3838675c8d92dbaa2ca20978ef70008f785",
+      "evidence_id": "ev_10712590f9b9741a72b9bc1ca43ea29e0842c927102b3adae107d7048c52fc6c",
+      "first_instruction": "0x1804bf500",
+      "last_instruction": "0x1804bf628",
+      "instruction_count": 71,
+      "bytes_verified": 297,
+      "start_owner": {
+        "start": "0x1804bf500",
+        "end_exclusive": "0x1804bf629",
+        "length": 297,
+        "unwind_rva": "0x14bc7c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/dispatch-cell-thunk.json",
+      "sha256": "56a55f27db572352cb6f2a5f6f9e3477097fedd45936d28cc4a721f43ca0b3a7",
+      "evidence_id": "ev_1099d2d562634c12fa2c2a13f59dabbdd2501040440bda1449aefcd4c43ad3ea",
+      "first_instruction": "0x1805ff3f8",
+      "last_instruction": "0x1805ff407",
+      "instruction_count": 6,
+      "bytes_verified": 16,
+      "start_owner": null,
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-dispatch-run.json",
+      "sha256": "8324469e90e6e36bb24b4fcf01320476a1ab4d560657240cf4ddeb47292e96ee",
+      "evidence_id": "ev_cced93786d729f3d9ab1a757501826e51e634f0b5f0a931fd564423b7035b317",
+      "first_instruction": "0x1804c8500",
+      "last_instruction": "0x1804c85a1",
+      "instruction_count": 43,
+      "bytes_verified": 162,
+      "start_owner": {
+        "start": "0x1804c8500",
+        "end_exclusive": "0x1804c85a2",
+        "length": 162,
+        "unwind_rva": "0x14b10c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-exception.json",
+      "sha256": "837198a5ee1f533f991e1aa30c27d334e356c787c9b739c3b5093e8446dd7488",
+      "evidence_id": "ev_44d24f406b84f7c714d661a511843a8224a3c4284765128a77cbaa2621f57c6e",
+      "first_instruction": "0x1804c8434",
+      "last_instruction": "0x1804c845e",
+      "instruction_count": 10,
+      "bytes_verified": 43,
+      "start_owner": {
+        "start": "0x1804c8434",
+        "end_exclusive": "0x1804c845f",
+        "length": 43,
+        "unwind_rva": "0x14ae34"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-apply.json",
+      "sha256": "daca9b92c00eed5614e4d214162758ec4d7382ba5dc9de9cbd19d7abef6c96ba",
+      "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+      "first_instruction": "0x1804a8580",
+      "last_instruction": "0x1804a8681",
+      "instruction_count": 71,
+      "bytes_verified": 258,
+      "start_owner": {
+        "start": "0x1804a8580",
+        "end_exclusive": "0x1804a8682",
+        "length": 258,
+        "unwind_rva": "0x14bfc8"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-dispatched-action.json",
+      "sha256": "edae74d62dec823a4701ae323ca7a8b9ec5a7fa7024d1ae692e44add5e3da710",
+      "evidence_id": "ev_c114f1891491b0d5f65b915e86091150911d161598274b0a133797152c65428c",
+      "first_instruction": "0x1804a8560",
+      "last_instruction": "0x1804a8576",
+      "instruction_count": 7,
+      "bytes_verified": 23,
+      "start_owner": {
+        "start": "0x1804a8560",
+        "end_exclusive": "0x1804a8577",
+        "length": 23,
+        "unwind_rva": "0x14ae34"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-container-walk.json",
+      "sha256": "f544189cf7a50644158a78a9b1821ffb81cfe314c10ddb4bc890d89a2335814e",
+      "evidence_id": "ev_78521b4e2f43dace7e76d81845d7f81b2445df07841ba7064373d9267827ef44",
+      "first_instruction": "0x1804a86a0",
+      "last_instruction": "0x1804a86da",
+      "instruction_count": 15,
+      "bytes_verified": 59,
+      "start_owner": {
+        "start": "0x1804a86a0",
+        "end_exclusive": "0x1804a86db",
+        "length": 59,
+        "unwind_rva": "0x14adec"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-event-connection.json",
+      "sha256": "9cfc6c6d77dd0b8628f0229f1e3ac463c430c391f8bdd160dd4aca2de1984776",
+      "evidence_id": "ev_d4afc5a9f714254925682b36ed295de132ac505c5ed20ce9a1722ea7800468b6",
+      "first_instruction": "0x1804c8c40",
+      "last_instruction": "0x1804c8f0c",
+      "instruction_count": 164,
+      "bytes_verified": 717,
+      "start_owner": {
+        "start": "0x1804c8c40",
+        "end_exclusive": "0x1804c8f0d",
+        "length": 717,
+        "unwind_rva": "0x14af90"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-getters-load-entry.json",
+      "sha256": "736ef4006fcf850cd00cf5e77966743c1b7b2c9b2b0601e2370f35fa4a6fbd06",
+      "evidence_id": "ev_3cd8a20e3a769d5bcc275cf1048a86e6e7fc0c9415164f128e705377ec72aae4",
+      "first_instruction": "0x1804a89e0",
+      "last_instruction": "0x1804a8aea",
+      "instruction_count": 89,
+      "bytes_verified": 267,
+      "start_owner": {
+        "start": "0x1804a89e0",
+        "end_exclusive": "0x1804a89e8",
+        "length": 8,
+        "unwind_rva": "0x14ae24"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-item-constructor.json",
+      "sha256": "c614e66f249be354c7874c6012f38a711b872404fbc76e72e8b759678f93b175",
+      "evidence_id": "ev_56f06e3f886158a56cb455d7e554bec19423f8af6b2a2fe0663e282aade32026",
+      "first_instruction": "0x1804a3790",
+      "last_instruction": "0x1804a37c7",
+      "instruction_count": 19,
+      "bytes_verified": 56,
+      "start_owner": {
+        "start": "0x1804a3790",
+        "end_exclusive": "0x1804a37c8",
+        "length": 56,
+        "unwind_rva": "0x14ae08"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-items-collection-replacement.json",
+      "sha256": "857030121f8e2962d30b3c427db96f42edb5903f012d3ee95d4e6e94ebb027df",
+      "evidence_id": "ev_f6da16cc3f6d0f3e53cffe1194127dfa0211a8529c0277d02f53ab784d501aca",
+      "first_instruction": "0x1804a3290",
+      "last_instruction": "0x1804a3539",
+      "instruction_count": 187,
+      "bytes_verified": 682,
+      "start_owner": {
+        "start": "0x1804a3290",
+        "end_exclusive": "0x1804a353a",
+        "length": 682,
+        "unwind_rva": "0x14b0a0"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-load-state.json",
+      "sha256": "7f027976ace071f81ca561b4d6cf7e7f2f2de7f3dc3d3a33761562aeb1105cee",
+      "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+      "first_instruction": "0x1804a8af0",
+      "last_instruction": "0x1804a8d34",
+      "instruction_count": 154,
+      "bytes_verified": 581,
+      "start_owner": {
+        "start": "0x1804a8af0",
+        "end_exclusive": "0x1804a8ce3",
+        "length": 499,
+        "unwind_rva": "0x14b54c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-loaded-handler.json",
+      "sha256": "5481b5b3286b91707a155c0d656686d12ce228fd1fed006042f3c6395cf8f3f4",
+      "evidence_id": "ev_3c1d5c44432293bfac294956417df3cdc17821656579fb6f3117a3e34ef472f1",
+      "first_instruction": "0x1804c88e0",
+      "last_instruction": "0x1804c899b",
+      "instruction_count": 47,
+      "bytes_verified": 188,
+      "start_owner": {
+        "start": "0x1804c88e0",
+        "end_exclusive": "0x1804c899c",
+        "length": 188,
+        "unwind_rva": "0x14ae64"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-open-stream-wrapper.json",
+      "sha256": "430ee76e0d59477ff7e1a52138dd9a7e06e3326791d47d9e8ec585583f898a51",
+      "evidence_id": "ev_30cfa8969d131b4cf2186a18bea6a74ae1f2e86587aa9fafe22dbe98f5229371",
+      "first_instruction": "0x1804b8580",
+      "last_instruction": "0x1804b85b5",
+      "instruction_count": 17,
+      "bytes_verified": 54,
+      "start_owner": {
+        "start": "0x1804b8580",
+        "end_exclusive": "0x1804b85b6",
+        "length": 54,
+        "unwind_rva": "0x14adf4"
+      },
+      "interpretation": "Excluded candidate: FileIO activation wrapper, not StorageFile.OpenAsync."
+    },
+    {
+      "path": "evidence/image-lifetime/image-properties-and-load-gate.json",
+      "sha256": "a6b11063b11cc4ffcca02efc39f11f6184112bb91077ab777ae21d9ad37a4983",
+      "evidence_id": "ev_ad4ffda15da4836708da721b4eda20a7d84d407b0d02412f7b4ef9a1dbdd2231",
+      "first_instruction": "0x1804a9660",
+      "last_instruction": "0x1804a96ea",
+      "instruction_count": 60,
+      "bytes_verified": 139,
+      "start_owner": {
+        "start": "0x1804a9660",
+        "end_exclusive": "0x1804a9668",
+        "length": 8,
+        "unwind_rva": "0x14ae24"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-register.json",
+      "sha256": "bd421aa84531d8f2018f437326dbbce67a80a99fef96e403ceb94d60558f7549",
+      "evidence_id": "ev_47700ad48b500545855c0383ed3cee1d1dbc1e1f0c10133e8097933cf422615a",
+      "first_instruction": "0x1804c89a0",
+      "last_instruction": "0x1804c8a45",
+      "instruction_count": 45,
+      "bytes_verified": 166,
+      "start_owner": {
+        "start": "0x1804c89a0",
+        "end_exclusive": "0x1804c8a46",
+        "length": 166,
+        "unwind_rva": "0x14b10c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-unregister.json",
+      "sha256": "fb96eb9f8243ecd50af10d38c9ba42a33d2014b56038d69670cd929b68cb0412",
+      "evidence_id": "ev_0a1f4b57c42c8bc6970bad1264f090703a15f5b860e58de71d4214ffe4e74751",
+      "first_instruction": "0x1804c8780",
+      "last_instruction": "0x1804c87e5",
+      "instruction_count": 29,
+      "bytes_verified": 102,
+      "start_owner": {
+        "start": "0x1804c8780",
+        "end_exclusive": "0x1804c87e6",
+        "length": 102,
+        "unwind_rva": "0x14b7f4"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-accessors.json",
+      "sha256": "f0ec9ac850e90d55e2c96770a65a3815b462327d980481d05ada6113e95d3d0e",
+      "evidence_id": "ev_069f76e9b43ab4a3f4522c317ee2bfdd648ab01959b6ea39453966d4a5b2c6bf",
+      "first_instruction": "0x1804a8d40",
+      "last_instruction": "0x1804a8d94",
+      "instruction_count": 25,
+      "bytes_verified": 85,
+      "start_owner": {
+        "start": "0x1804a8d40",
+        "end_exclusive": "0x1804a8d95",
+        "length": 85,
+        "unwind_rva": "0x14adf4"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-change-state.json",
+      "sha256": "2266bab6157a80435199da810dce1d1b79ac627ff1f45ec88c7baf474c4ec180",
+      "evidence_id": "ev_e0cf60c428cf092be879d8bcf7b7ff4e4d1e3ca5a48966361c99884409840333",
+      "first_instruction": "0x1804c82d0",
+      "last_instruction": "0x1804c8433",
+      "instruction_count": 93,
+      "bytes_verified": 356,
+      "start_owner": {
+        "start": "0x1804c82d0",
+        "end_exclusive": "0x1804c8434",
+        "length": 356,
+        "unwind_rva": "0x14b58c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-property-callback.json",
+      "sha256": "d1594f5e0d444a1b5de384dbc0f8c16c39966c8226dfee5381b3e45acf81524b",
+      "evidence_id": "ev_bee24b57d968f1eb67e7dc16e0cb6700cb2995d82d39eb6463548820dee963d0",
+      "first_instruction": "0x1804c8220",
+      "last_instruction": "0x1804c82ca",
+      "instruction_count": 35,
+      "bytes_verified": 171,
+      "start_owner": {
+        "start": "0x1804c8220",
+        "end_exclusive": "0x1804c82cb",
+        "length": 171,
+        "unwind_rva": "0x14b6a8"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-stream-service-state.json",
+      "sha256": "d56ea1cd435d7a650690c2b26507896f257104465230b982f0ed479596f1d839",
+      "evidence_id": "ev_79746f961778dfd80c2b28ef0aaf8cba0de94d88e4314659ee71c46b93d3ba0f",
+      "first_instruction": "0x1804b81c0",
+      "last_instruction": "0x1804b84b2",
+      "instruction_count": 180,
+      "bytes_verified": 755,
+      "start_owner": {
+        "start": "0x1804b81c0",
+        "end_exclusive": "0x1804b84b3",
+        "length": 755,
+        "unwind_rva": "0x14c084"
+      },
+      "interpretation": "Excluded candidate: cached byte-array FileIO.WriteBytes state; not image-display stream production."
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-event-wrappers.json",
+      "sha256": "89425efd88faaa200c8e8359e206ae5f2f9e930fbe461af5fe5cb55a0e2f4a8e",
+      "evidence_id": "ev_dadf7d5e7ed2bebf929a24f2809686456082f19a1383a7a648a352c496b2de54",
+      "first_instruction": "0x1804c8f10",
+      "last_instruction": "0x1804c8f64",
+      "instruction_count": 31,
+      "bytes_verified": 85,
+      "start_owner": {
+        "start": "0x1804c8f10",
+        "end_exclusive": "0x1804c8f35",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-handler.json",
+      "sha256": "da96474eb5d11810a4606e0eb9dbd1f80dc3e6658b4032ce5a44f5cecb378479",
+      "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+      "first_instruction": "0x1804c86e0",
+      "last_instruction": "0x1804c877e",
+      "instruction_count": 43,
+      "bytes_verified": 159,
+      "start_owner": {
+        "start": "0x1804c86e0",
+        "end_exclusive": "0x1804c877f",
+        "length": 159,
+        "unwind_rva": "0x14ae08"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/mainpage-image-events.json",
+      "sha256": "204638ee878d312b4628f5034918154dfdf9cd5578dfd922d3782a5ae752ab13",
+      "evidence_id": "ev_62928e182c4d18062c389675b1d7301941c3a14efba41f90db5d88d369d702c4",
+      "first_instruction": "0x1804a62b0",
+      "last_instruction": "0x1804a658a",
+      "instruction_count": 222,
+      "bytes_verified": 731,
+      "start_owner": {
+        "start": "0x1804a62b0",
+        "end_exclusive": "0x1804a638a",
+        "length": 218,
+        "unwind_rva": "0x14ba10"
+      },
+      "interpretation": "Excluded candidate: XAML interop / URI bridge, not Image.Loaded or Image.Unloaded."
+    },
+    {
+      "path": "evidence/image-lifetime/manager-image-stream-entry.json",
+      "sha256": "4cc5c827efc924b84c4709be631e8ac553324a4e8fe3c4b13881d9f380b9484e",
+      "evidence_id": "ev_3645eec592047613c718dd175e3c13833652cf2fda9fa1641a05f4947dde4a11",
+      "first_instruction": "0x180517a70",
+      "last_instruction": "0x180517b75",
+      "instruction_count": 69,
+      "bytes_verified": 262,
+      "start_owner": {
+        "start": "0x180517a70",
+        "end_exclusive": "0x180517b76",
+        "length": 262,
+        "unwind_rva": "0x14b078"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/manager-stream-wrapper.json",
+      "sha256": "b2c9beada051f951637e4bea3f73ba3d6eb4b36ead80cfee8b1cd9d90921f39e",
+      "evidence_id": "ev_4c9b8b02ac26ac788f076d7a07fda235302bdf46db2a0051e65c671ed86fc9b4",
+      "first_instruction": "0x18051d1f0",
+      "last_instruction": "0x18051d30d",
+      "instruction_count": 70,
+      "bytes_verified": 286,
+      "start_owner": {
+        "start": "0x18051d1f0",
+        "end_exclusive": "0x18051d30e",
+        "length": 286,
+        "unwind_rva": "0x14b17c"
+      },
+      "interpretation": "See findings.json and image-loading-and-lifetime.md; filename is only an evidence label."
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-async.json",
+      "sha256": "a71faea146dee235275eb0d6525f7a5d1f560190ea1c76d7fd50acd1d2647d5a",
+      "evidence_id": "ev_66725fca519ee1939dacfd26e3cafb66ffcfa52fbf74c282e5b924ff6544aa82",
+      "first_instruction": "0x1804c1780",
+      "last_instruction": "0x1804c17ba",
+      "instruction_count": 15,
+      "bytes_verified": 59,
+      "start_owner": {
+        "start": "0x1804c1780",
+        "end_exclusive": "0x1804c17bb",
+        "length": 59,
+        "unwind_rva": "0x14adec"
+      },
+      "interpretation": "Excluded candidate: LockScreen.SetImageFileAsync wrapper, not StorageFile.OpenAsync."
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-bridge.json",
+      "sha256": "46a393e54b32b6b66951ef7206cb80a806fa95dbf5817d2667424c5a4ff957da",
+      "evidence_id": "ev_eaf87f1e47e5d05fac6f1cf36f17c6bc8d0c903b562ad997428de879537f04b4",
+      "first_instruction": "0x1804b85c0",
+      "last_instruction": "0x1804b86cd",
+      "instruction_count": 76,
+      "bytes_verified": 270,
+      "start_owner": {
+        "start": "0x1804b85c0",
+        "end_exclusive": "0x1804b86ce",
+        "length": 270,
+        "unwind_rva": "0x14c094"
+      },
+      "interpretation": "Excluded candidate: FileIO.WriteBytes bridge, not StorageFile.OpenAsync."
+    },
+    {
+      "path": "evidence/image-lifetime/storagefile-slot2-caller.json",
+      "sha256": "68d207ecb4fa520002cebfc425e77c652d6a3605299a3a6453b2d53029fd0932",
+      "evidence_id": "ev_11adc5136933232f08cd499807ec64a224c39ef922441b5ce583dc1363e2a5f4",
+      "first_instruction": "0x180512900",
+      "last_instruction": "0x180512abf",
+      "instruction_count": 113,
+      "bytes_verified": 448,
+      "start_owner": {
+        "start": "0x180512900",
+        "end_exclusive": "0x180512ac0",
+        "length": 448,
+        "unwind_rva": "0x14b1cc"
+      },
+      "interpretation": "Excluded candidate: file-to-file operation returning IAsyncAction, not stream open. Terminator-word guesses for managed interface slot order are not accepted."
+    },
+    {
+      "path": "evidence/image-lifetime/stream-storage-action-state.json",
+      "sha256": "9488ec22e44cfae5abf3e53961f90c389b1ef170eca7e77d1433470265468e5e",
+      "evidence_id": "ev_5803b85677bddf43ab68e7bb0573472f68a9d7f976f7a9924c08c28dab52806d",
+      "first_instruction": "0x1804c15f0",
+      "last_instruction": "0x1804c16a9",
+      "instruction_count": 55,
+      "bytes_verified": 186,
+      "start_owner": {
+        "start": "0x1804c15f0",
+        "end_exclusive": "0x1804c16aa",
+        "length": 186,
+        "unwind_rva": "0x14b4b0"
+      },
+      "interpretation": "Excluded candidate: lock-screen image-file operation; not display stream production."
+    }
+  ],
+  "rea_count": 33,
+  "decoded_instructions": 2232,
+  "decoded_bytes_verified": 8278,
+  "accepted_interpretation": "Only claims in findings/document are findings. Seven exploratory files are explicitly corrected/excluded above.",
+  "validation": "All REA instruction bytes compared against the currently installed target; full JSON retained unchanged."
+}

@@ -1,0 +1,1185 @@
+[
+  {
+    "path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+    "sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+    "types": [
+      {
+        "name": "IBackgroundExecutionManagerStatics",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "RequestAccessAsync",
+            "signature": "200015129C9D01118471"
+          },
+          {
+            "index": 1,
+            "name": "RequestAccessAsync",
+            "signature": "200115129C9D011184710E"
+          },
+          {
+            "index": 2,
+            "name": "RemoveAccess",
+            "signature": "200001"
+          },
+          {
+            "index": 3,
+            "name": "RemoveAccess",
+            "signature": "2001010E"
+          },
+          {
+            "index": 4,
+            "name": "GetAccessStatus",
+            "signature": "2000118471"
+          },
+          {
+            "index": 5,
+            "name": "GetAccessStatus",
+            "signature": "20011184710E"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003E57696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E4261636B67726F756E64457865637574696F6E4D616E616765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "010058EA26E8A966414D83D4B4C18C87B8460000",
+            "guid": "e826ea58-66a9-4d41-83d4-b4c18c87b846"
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTask",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "Run",
+            "signature": "200101128561"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "010034D5137D12FDCE438C22EA1FF13C06DF0000",
+            "guid": "7d13d534-fd12-43ce-8c22-ea1ff13c06df"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.WebHostHiddenAttribute",
+            "blob": "01000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTaskBuilder",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "put_TaskEntryPoint",
+            "signature": "2001010E"
+          },
+          {
+            "index": 1,
+            "name": "get_TaskEntryPoint",
+            "signature": "20000E"
+          },
+          {
+            "index": 2,
+            "name": "SetTrigger",
+            "signature": "20010112858D"
+          },
+          {
+            "index": 3,
+            "name": "AddCondition",
+            "signature": "200101128535"
+          },
+          {
+            "index": 4,
+            "name": "put_Name",
+            "signature": "2001010E"
+          },
+          {
+            "index": 5,
+            "name": "get_Name",
+            "signature": "20000E"
+          },
+          {
+            "index": 6,
+            "name": "Register",
+            "signature": "20001284A1"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01000E555103643E7245A93A84075A37C9170000",
+            "guid": "0351550e-3e64-4572-a93a-84075a37c917"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003957696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E4261636B67726F756E645461736B4275696C6465720000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTaskDeferral",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "Complete",
+            "signature": "200001"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01006D15CC9327AFD34D846E24EE40CADD250000",
+            "guid": "93cc156d-af27-4dd3-846e-24ee40cadd25"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003A57696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E4261636B67726F756E645461736B446566657272616C0000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTaskInstance",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_InstanceId",
+            "signature": "2000119CC5"
+          },
+          {
+            "index": 1,
+            "name": "get_Task",
+            "signature": "20001284A1"
+          },
+          {
+            "index": 2,
+            "name": "get_Progress",
+            "signature": "200009"
+          },
+          {
+            "index": 3,
+            "name": "put_Progress",
+            "signature": "20010109"
+          },
+          {
+            "index": 4,
+            "name": "get_TriggerDetails",
+            "signature": "20001C"
+          },
+          {
+            "index": 5,
+            "name": "add_Canceled",
+            "signature": "2001119C7D128485"
+          },
+          {
+            "index": 6,
+            "name": "remove_Canceled",
+            "signature": "200101119C7D"
+          },
+          {
+            "index": 7,
+            "name": "get_SuspendedCount",
+            "signature": "200009"
+          },
+          {
+            "index": 8,
+            "name": "GetDeferral",
+            "signature": "2000128495"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01007ADA5B86D82173458F32928A1B0641F60000",
+            "guid": "865bda7a-21d8-4573-8f32-928a1b0641f6"
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTaskRegistration",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_TaskId",
+            "signature": "2000119CC5"
+          },
+          {
+            "index": 1,
+            "name": "get_Name",
+            "signature": "20000E"
+          },
+          {
+            "index": 2,
+            "name": "add_Progress",
+            "signature": "2001119C7D12849D"
+          },
+          {
+            "index": 3,
+            "name": "remove_Progress",
+            "signature": "200101119C7D"
+          },
+          {
+            "index": 4,
+            "name": "add_Completed",
+            "signature": "2001119C7D128491"
+          },
+          {
+            "index": 5,
+            "name": "remove_Completed",
+            "signature": "200101119C7D"
+          },
+          {
+            "index": 6,
+            "name": "Unregister",
+            "signature": "20010102"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100C24C65106EA2BF438C121FB40DBFBFA00000",
+            "guid": "10654cc2-a26e-43bf-8c12-1fb40dbfbfa0"
+          }
+        ]
+      },
+      {
+        "name": "IBackgroundTaskRegistrationStatics",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_AllTasks",
+            "signature": "200015129CC902119CC5128571"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003E57696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E4261636B67726F756E645461736B526567697374726174696F6E0000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100692F544C00B0BA42A0936A563C65E3F80000",
+            "guid": "4c542f69-b000-42ba-a093-6a563c65e3f8"
+          }
+        ]
+      },
+      {
+        "name": "ISystemConditionFactory",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "Create",
+            "signature": "20011286F11186F5"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003357696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E53797374656D436F6E646974696F6E0000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100F1D169D2A705AE4987D716B2B8B9A5530000",
+            "guid": "d269d1f1-05a7-49ae-87d7-16b2b8b9a553"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "ITimeTriggerFactory",
+        "ns": "Windows.ApplicationModel.Background",
+        "methods": [
+          {
+            "index": 0,
+            "name": "Create",
+            "signature": "20021287050902"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002F57696E646F77732E4170706C69636174696F6E4D6F64656C2E4261636B67726F756E642E54696D65547269676765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100FE82C638549BE645B2F3269B87A6F7340000",
+            "guid": "38c682fe-9b54-45e6-b2f3-269b87a6f734"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+    "sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+    "types": [
+      {
+        "name": "ITileNotification",
+        "ns": "Windows.UI.Notifications",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_Content",
+            "signature": "20001297D9"
+          },
+          {
+            "index": 1,
+            "name": "put_ExpirationTime",
+            "signature": "200101151297510111979D"
+          },
+          {
+            "index": 2,
+            "name": "get_ExpirationTime",
+            "signature": "2000151297510111979D"
+          },
+          {
+            "index": 3,
+            "name": "put_Tag",
+            "signature": "2001010E"
+          },
+          {
+            "index": 4,
+            "name": "get_Tag",
+            "signature": "20000E"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100FAC8AEEBEC50184CB4D03AF02E5540AB0000",
+            "guid": "ebaec8fa-50ec-4c18-b4d0-3af02e5540ab"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002957696E646F77732E55492E4E6F74696669636174696F6E732E54696C654E6F74696669636174696F6E0000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "ITileNotificationFactory",
+        "ns": "Windows.UI.Notifications",
+        "methods": [
+          {
+            "index": 0,
+            "name": "CreateTileNotification",
+            "signature": "20011290151297D9"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002957696E646F77732E55492E4E6F74696669636174696F6E732E54696C654E6F74696669636174696F6E0000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01006EDDABC62849C846BDBF81A047DEA0D40000",
+            "guid": "c6abdd6e-4928-46c8-bdbf-81a047dea0d4"
+          }
+        ]
+      },
+      {
+        "name": "ITileUpdateManagerStatics",
+        "ns": "Windows.UI.Notifications",
+        "methods": [
+          {
+            "index": 0,
+            "name": "CreateTileUpdaterForApplication",
+            "signature": "2000129025"
+          },
+          {
+            "index": 1,
+            "name": "CreateTileUpdaterForApplication",
+            "signature": "20011290250E"
+          },
+          {
+            "index": 2,
+            "name": "CreateTileUpdaterForSecondaryTile",
+            "signature": "20011290250E"
+          },
+          {
+            "index": 3,
+            "name": "GetTemplateContent",
+            "signature": "20011297D9119019"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002A57696E646F77732E55492E4E6F74696669636174696F6E732E54696C655570646174654D616E616765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01005D9E15DAA93E86498D84B09D5E12276D0000",
+            "guid": "da159e5d-3ea9-4986-8d84-b09d5e12276d"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "ITileUpdater",
+        "ns": "Windows.UI.Notifications",
+        "methods": [
+          {
+            "index": 0,
+            "name": "Update",
+            "signature": "200101129015"
+          },
+          {
+            "index": 1,
+            "name": "Clear",
+            "signature": "200001"
+          },
+          {
+            "index": 2,
+            "name": "EnableNotificationQueue",
+            "signature": "20010102"
+          },
+          {
+            "index": 3,
+            "name": "get_Setting",
+            "signature": "2000118FE5"
+          },
+          {
+            "index": 4,
+            "name": "AddToSchedule",
+            "signature": "200101128FF5"
+          },
+          {
+            "index": 5,
+            "name": "RemoveFromSchedule",
+            "signature": "200101128FF5"
+          },
+          {
+            "index": 6,
+            "name": "GetScheduledTileNotifications",
+            "signature": "20001512971901128FF5"
+          },
+          {
+            "index": 7,
+            "name": "StartPeriodicUpdate",
+            "signature": "200201129799118FF1"
+          },
+          {
+            "index": 8,
+            "name": "StartPeriodicUpdate",
+            "signature": "20030112979911979D118FF1"
+          },
+          {
+            "index": 9,
+            "name": "StopPeriodicUpdate",
+            "signature": "200001"
+          },
+          {
+            "index": 10,
+            "name": "StartPeriodicUpdateBatch",
+            "signature": "2002011512971101129799118FF1"
+          },
+          {
+            "index": 11,
+            "name": "StartPeriodicUpdateBatch",
+            "signature": "200301151297110112979911979D118FF1"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01008BA44209911DEC449243C1E821C29A200000",
+            "guid": "0942a48b-1d91-44ec-9243-c1e821c29a20"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002457696E646F77732E55492E4E6F74696669636174696F6E732E54696C65557064617465720000",
+            "guid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "C:\\Windows\\System32\\WinMetadata\\Windows.System.winmd",
+    "sha256": "8d7502f61293fb05005539d21f5409919c8fbf1d092872ec8c1175b555ac4956",
+    "types": [
+      {
+        "name": "ILockScreenStatics",
+        "ns": "Windows.System.UserProfile",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_OriginalImageFile",
+            "signature": "20001287D5"
+          },
+          {
+            "index": 1,
+            "name": "GetImageStream",
+            "signature": "2000128835"
+          },
+          {
+            "index": 2,
+            "name": "SetImageFileAsync",
+            "signature": "200112878D1287DD"
+          },
+          {
+            "index": 3,
+            "name": "SetImageStreamAsync",
+            "signature": "200112878D128835"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100ADD3E93E07B6AE40B4267631D98212690000",
+            "guid": "3ee9d3ad-b607-40ae-b426-7631d9821269"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01003857696E646F77732E53797374656D2E5573657250726F66696C652E5573657250726F66696C654C6F636B53637265656E436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002557696E646F77732E53797374656D2E5573657250726F66696C652E4C6F636B53637265656E0000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IUserProfilePersonalizationSettings",
+        "ns": "Windows.System.UserProfile",
+        "methods": [
+          {
+            "index": 0,
+            "name": "TrySetLockScreenImageAsync",
+            "signature": "20011512877901021287E1"
+          },
+          {
+            "index": 1,
+            "name": "TrySetWallpaperImageAsync",
+            "signature": "20011512877901021287E1"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003D57696E646F77732E53797374656D2E5573657250726F66696C652E5573657250726F66696C65506572736F6E616C697A6174696F6E53657474696E67730000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100B4DAED8C9879D5468DD3184F1C5F9AB90000",
+            "guid": "8ceddab4-7998-46d5-8dd3-184f1c5f9ab9"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IUserProfilePersonalizationSettingsStatics",
+        "ns": "Windows.System.UserProfile",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_Current",
+            "signature": "2000128751"
+          },
+          {
+            "index": 1,
+            "name": "IsSupported",
+            "signature": "200002"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01003D57696E646F77732E53797374656D2E5573657250726F66696C652E5573657250726F66696C65506572736F6E616C697A6174696F6E53657474696E67730000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "010041B8AC9137504B459883BB772D08DD160000",
+            "guid": "91acb841-5037-454b-9883-bb772d08dd16"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+    "sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+    "types": [
+      {
+        "name": "IBitmapDecoder",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_BitmapContainerProperties",
+            "signature": "2000128279"
+          },
+          {
+            "index": 1,
+            "name": "get_DecoderInformation",
+            "signature": "2000128255"
+          },
+          {
+            "index": 2,
+            "name": "get_FrameCount",
+            "signature": "200009"
+          },
+          {
+            "index": 3,
+            "name": "GetPreviewAsync",
+            "signature": "200015128791011282E9"
+          },
+          {
+            "index": 4,
+            "name": "GetFrameAsync",
+            "signature": "2001151287910112826509"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100BA22EFAC741D914C9DFC9620745233E60000",
+            "guid": "acef22ba-1d74-4c91-9dfc-9620745233e6"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002657696E646F77732E47726170686963732E496D6167696E672E4269746D61704465636F6465720000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBitmapDecoderStatics",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_BmpDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 1,
+            "name": "get_JpegDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 2,
+            "name": "get_PngDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 3,
+            "name": "get_TiffDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 4,
+            "name": "get_GifDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 5,
+            "name": "get_JpegXRDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 6,
+            "name": "get_IcoDecoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 7,
+            "name": "GetDecoderInformationEnumerator",
+            "signature": "20001512879901128255"
+          },
+          {
+            "index": 8,
+            "name": "CreateAsync",
+            "signature": "200115128791011282591287A1"
+          },
+          {
+            "index": 9,
+            "name": "CreateAsync",
+            "signature": "200215128791011282591187E91287A1"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "010026CB8C43EFBC954EBAD623A822E58D010000",
+            "guid": "438ccb26-bcef-4e95-bad6-23a822e58d01"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002657696E646F77732E47726170686963732E496D6167696E672E4269746D61704465636F6465720000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBitmapEncoder",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_EncoderInformation",
+            "signature": "2000128255"
+          },
+          {
+            "index": 1,
+            "name": "get_BitmapProperties",
+            "signature": "2000128275"
+          },
+          {
+            "index": 2,
+            "name": "get_BitmapContainerProperties",
+            "signature": "2000128275"
+          },
+          {
+            "index": 3,
+            "name": "get_IsThumbnailGenerated",
+            "signature": "200002"
+          },
+          {
+            "index": 4,
+            "name": "put_IsThumbnailGenerated",
+            "signature": "20010102"
+          },
+          {
+            "index": 5,
+            "name": "get_GeneratedThumbnailWidth",
+            "signature": "200009"
+          },
+          {
+            "index": 6,
+            "name": "put_GeneratedThumbnailWidth",
+            "signature": "20010109"
+          },
+          {
+            "index": 7,
+            "name": "get_GeneratedThumbnailHeight",
+            "signature": "200009"
+          },
+          {
+            "index": 8,
+            "name": "put_GeneratedThumbnailHeight",
+            "signature": "20010109"
+          },
+          {
+            "index": 9,
+            "name": "get_BitmapTransform",
+            "signature": "2000128289"
+          },
+          {
+            "index": 10,
+            "name": "SetPixelData",
+            "signature": "20070111826D11824509090D0D1D05"
+          },
+          {
+            "index": 11,
+            "name": "GoToNextFrameAsync",
+            "signature": "200012879D"
+          },
+          {
+            "index": 12,
+            "name": "GoToNextFrameAsync",
+            "signature": "200112879D151287ED01151287F1020E12828D"
+          },
+          {
+            "index": 13,
+            "name": "FlushAsync",
+            "signature": "200012879D"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100E368C42BF8E1544B95E832919551CE620000",
+            "guid": "2bc468e3-e1f8-4b54-95e8-32919551ce62"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002657696E646F77732E47726170686963732E496D6167696E672E4269746D6170456E636F6465720000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBitmapEncoderStatics",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_BmpEncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 1,
+            "name": "get_JpegEncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 2,
+            "name": "get_PngEncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 3,
+            "name": "get_TiffEncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 4,
+            "name": "get_GifEncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 5,
+            "name": "get_JpegXREncoderId",
+            "signature": "20001187E9"
+          },
+          {
+            "index": 6,
+            "name": "GetEncoderInformationEnumerator",
+            "signature": "20001512879901128255"
+          },
+          {
+            "index": 7,
+            "name": "CreateAsync",
+            "signature": "2002151287910112825D1187E91287A1"
+          },
+          {
+            "index": 8,
+            "name": "CreateAsync",
+            "signature": "2003151287910112825D1187E91287A1151287ED01151287F1020E12828D"
+          },
+          {
+            "index": 9,
+            "name": "CreateForTranscodingAsync",
+            "signature": "2002151287910112825D1287A1128259"
+          },
+          {
+            "index": 10,
+            "name": "CreateForInPlacePropertyEncodingAsync",
+            "signature": "2001151287910112825D128259"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002657696E646F77732E47726170686963732E496D6167696E672E4269746D6170456E636F6465720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100A75643A7E4A4B94E8E40564DE7E1CCB20000",
+            "guid": "a74356a7-a4e4-4eb9-8e40-564de7e1ccb2"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IBitmapFrame",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "GetThumbnailAsync",
+            "signature": "200015128791011282E9"
+          },
+          {
+            "index": 1,
+            "name": "get_BitmapProperties",
+            "signature": "2000128279"
+          },
+          {
+            "index": 2,
+            "name": "get_BitmapPixelFormat",
+            "signature": "200011826D"
+          },
+          {
+            "index": 3,
+            "name": "get_BitmapAlphaMode",
+            "signature": "2000118245"
+          },
+          {
+            "index": 4,
+            "name": "get_DpiX",
+            "signature": "20000D"
+          },
+          {
+            "index": 5,
+            "name": "get_DpiY",
+            "signature": "20000D"
+          },
+          {
+            "index": 6,
+            "name": "get_PixelWidth",
+            "signature": "200009"
+          },
+          {
+            "index": 7,
+            "name": "get_PixelHeight",
+            "signature": "200009"
+          },
+          {
+            "index": 8,
+            "name": "get_OrientedPixelWidth",
+            "signature": "200009"
+          },
+          {
+            "index": 9,
+            "name": "get_OrientedPixelHeight",
+            "signature": "200009"
+          },
+          {
+            "index": 10,
+            "name": "GetPixelDataAsync",
+            "signature": "200015128791011282F1"
+          },
+          {
+            "index": 11,
+            "name": "GetPixelDataAsync",
+            "signature": "200515128791011282F111826D118245128289118295118291"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01001C9AA47281808D4391BC94ECFC8185C60000",
+            "guid": "72a49a1c-8081-438d-91bc-94ecfc8185c6"
+          }
+        ]
+      },
+      {
+        "name": "IBitmapTransform",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_ScaledWidth",
+            "signature": "200009"
+          },
+          {
+            "index": 1,
+            "name": "put_ScaledWidth",
+            "signature": "20010109"
+          },
+          {
+            "index": 2,
+            "name": "get_ScaledHeight",
+            "signature": "200009"
+          },
+          {
+            "index": 3,
+            "name": "put_ScaledHeight",
+            "signature": "20010109"
+          },
+          {
+            "index": 4,
+            "name": "get_InterpolationMode",
+            "signature": "2000118269"
+          },
+          {
+            "index": 5,
+            "name": "put_InterpolationMode",
+            "signature": "200101118269"
+          },
+          {
+            "index": 6,
+            "name": "get_Flip",
+            "signature": "2000118261"
+          },
+          {
+            "index": 7,
+            "name": "put_Flip",
+            "signature": "200101118261"
+          },
+          {
+            "index": 8,
+            "name": "get_Rotation",
+            "signature": "2000118281"
+          },
+          {
+            "index": 9,
+            "name": "put_Rotation",
+            "signature": "200101118281"
+          },
+          {
+            "index": 10,
+            "name": "get_Bounds",
+            "signature": "2000118249"
+          },
+          {
+            "index": 11,
+            "name": "put_Bounds",
+            "signature": "200101118249"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100445375AE68E2354DADCFE995D31A8D340000",
+            "guid": "ae755344-e268-4d35-adcf-e995d31a8d34"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002857696E646F77732E47726170686963732E496D6167696E672E4269746D61705472616E73666F726D0000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "IPixelDataProvider",
+        "ns": "Windows.Graphics.Imaging",
+        "methods": [
+          {
+            "index": 0,
+            "name": "DetachPixelData",
+            "signature": "20001D05"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100251F83DD5C1895459FB9CCBE6EC18A6F0000",
+            "guid": "dd831f25-185c-4595-9fb9-ccbe6ec18a6f"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002A57696E646F77732E47726170686963732E496D6167696E672E506978656C4461746150726F76696465720000",
+            "guid": null
+          }
+        ]
+      }
+    ]
+  }
+]

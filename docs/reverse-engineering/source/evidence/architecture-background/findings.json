@@ -1,0 +1,384 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "findings": [
+    {
+      "id": "BGA-01",
+      "title": "后台入口与整体执行图",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_c6da20d2dcb9a962ce95e8d2fff0a76c904d4e30c4e989a8be8d8355fa93252e",
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json",
+        "evidence/architecture-background/deferral-bridge.json",
+        "evidence/resources/original/AppxManifest.xml"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**[安装包清单](../evidence/resources/original/AppxManifest.xml) 将 `Duracellko.BingImage.Universal.Service.UpdateLiveTileBackgroundTask` 声明为后台入口，声明任务类型 `systemEvent`、`timer`，包包含 `internetClient` 能力。清单只能证明可用扩展声明，不能证明当前系统已成功登记或正在运行任务。\n\n**静态派生：**入口的主要状态机为 `0x1804c29b0`，包装器 `0x1804c2900` 使用 `AsyncVoidMethodBuilder`，与 `IBackgroundTask.Run` 的 void 契约一致。ABI 桥 `0x18055e200` 从 COM this 指针取得托管目标，经接口解析调用后台入口。整体关系如下：\n\n```mermaid\nflowchart TD\n    UI[MainPage Loaded] --> Register[请求后台权限、清理旧名、登记定时任务]\n    OS[Windows 后台激活] --> Run[Run：GetDeferral]\n    Run --> Construct[创建共享网络提供器与设置仓库]\n    Construct --> Tile[顺序 await 磁贴更新包装器]\n    Tile --> Lock[顺序 await 锁屏更新包装器]\n    Lock --> Desktop[顺序 await 桌面更新包装器]\n    Desktop --> Complete[最终 Complete deferral]\n    Tile --> A1[请求 archive n=1]\n    Lock --> LOn{锁屏自动开关}\n    LOn -->|开启| A2[独立请求 archive n=1]\n    Desktop --> DOn{桌面自动开关}\n    DOn -->|开启| A3[独立请求 archive n=1]\n    A1 --> Dedup[各自取第一张，与对应 Current URL 比较]\n    A2 --> Dedup\n    A3 --> Dedup\n    Dedup -->|新 URL| Download[各自下载、派生图像、调用系统]\n    Dedup -->|相同或无有效 URL| Skip[本分支结束]\n```\n\n此图的 Tile→Lock→Desktop 身份由构造参数、EEType 相对方法表、各个状态机的字符串与调用行为交叉确认，属于高置信静态派生，不是完整解码 .NET Native 虚调用元数据后的运行时证明。具体映射见 BGA-05。\n\nREA [background-entry-and-dispatch](../evidence/architecture-background/background-entry-and-dispatch.json)，完整证据 ID：`ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442`\n\nREA [deferral-bridge](../evidence/architecture-background/deferral-bridge.json)，完整证据 ID：`ev_c6da20d2dcb9a962ce95e8d2fff0a76c904d4e30c4e989a8be8d8355fa93252e`"
+    },
+    {
+      "id": "BGA-02",
+      "title": "前台何时登记后台任务",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9",
+        "ev_6aa94b16ebeccc1fa3b3c33eeda0c4e8fb1c09226a5eed8052d9302eca7afb86",
+        "ev_b7e1737ecdb5e8350a03db8d2da67a893bac45fc34cff46781aea1ef78382bb7"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/registration-exception.json",
+        "evidence/architecture-ui/mainpage-context-changed.json",
+        "evidence/background/task-registration.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**UI 专题恢复了 `0x180532060` 在页面 DataContext 为空时安装 Loaded handler；`0x180531fb0` 在 Loaded 回调内创建注册器并调用包装器 `0x1804a0800`。这条链连接了主页面初始化和后台注册；事件接口为 `IFrameworkElement.add_Loaded/remove_Loaded`，不能因旧证据文件名而误称 DataContextChanged。\n\n**已确认：**注册状态机 `0x1804a08a0` 获取 `BackgroundExecutionManager` 并调用 `RequestAccessAsync`，await 完成后进入旧任务清理和注册准备。`0x1804a095b` 的 GetResult 后到注册准备之间，未见针对返回权限枚举的显式条件分支。不能据此推断 Windows 必然批准注册。注册状态机异常 funclet `0x1804a0a76` 调用 `AsyncVoidMethodBuilder.SetException`，并非空 catch。\n\nREA [mainpage-context-changed](../evidence/architecture-ui/mainpage-context-changed.json)，完整证据 ID：`ev_b7e1737ecdb5e8350a03db8d2da67a893bac45fc34cff46781aea1ef78382bb7`\n\nREA [task-registration](../evidence/background/task-registration.json)，完整证据 ID：`ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9`\n\nREA [registration-exception](../evidence/architecture-background/registration-exception.json)，完整证据 ID：`ev_6aa94b16ebeccc1fa3b3c33eeda0c4e8fb1c09226a5eed8052d9302eca7afb86`"
+    },
+    {
+      "id": "BGA-03",
+      "title": "任务名、去重登记与旧名称清理",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_7c719583d48638766d6526248c091a9edcd4cbad0cea540aca6b29917601f6ff",
+        "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b",
+        "ev_f70bdc13e6209974c6cf2736ac5f74876b81f73e347bc0c479a646e3bfda5e16"
+      ],
+      "evidence_paths": [
+        "evidence/background/background-builder.json",
+        "evidence/background/background-task-find.json",
+        "evidence/background/old-task-unregister.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**注册路径传入任务名 `UpdateLiveTileTask` 与清单同名完整后台入口。`0x1804a0ab0` 先调用名称查找 `0x1804a0be0`；查到现有对象便跳过新 builder 路径。新 builder 路径分配 `Windows.ApplicationModel.Background.BackgroundTaskBuilder`，设名称、入口、触发器和条件后注册。\n\n**静态派生：**静态初始化 `0x18034e0d0` 创建只含 `UpdateLiveTileMaintenanceTask` 的数组；注册前将该数组交给 `0x1804a0f80`，后者逐名查找并在存在时传入 Boolean true 调用接口。结合对象类型与 API 形状，这是旧任务的 `Unregister(true)` 清理。它不支持“同时运行第二个维护任务”的结论；本次没有建立 `MaintenanceTrigger` 构造调用。已有登记对象的触发条件是否陈旧、系统是否真正删除旧任务均未动态验证。\n\nREA [background-builder](../evidence/background/background-builder.json)，完整证据 ID：`ev_7c719583d48638766d6526248c091a9edcd4cbad0cea540aca6b29917601f6ff`\n\nREA [background-task-find](../evidence/background/background-task-find.json)，完整证据 ID：`ev_f70bdc13e6209974c6cf2736ac5f74876b81f73e347bc0c479a646e3bfda5e16`\n\nREA [old-task-unregister](../evidence/background/old-task-unregister.json)，完整证据 ID：`ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b`"
+    },
+    {
+      "id": "BGA-04",
+      "title": "60 分钟重复触发与网络条件",
+      "confidence_labels_present": [
+        "已确认",
+        "未知"
+      ],
+      "evidence_ids": [
+        "ev_5851ce0242f869ac690d9bf4dcc68b9e073854b1eb15fc6c4301148a5f9d2d91",
+        "ev_8358ad6bb8aca5bebbd70f76799cf98093375f7d6ee02f3df89cbf97ed0c34ce",
+        "ev_9e770d83bef3f875364c68d76788aeb8951f8871baf9e8f745c5afee7590967f"
+      ],
+      "evidence_paths": [
+        "evidence/background/system-condition.json",
+        "evidence/background/time-trigger-factory.json",
+        "evidence/background/time-trigger.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804a098c–0x1804a0996` 向 TimeTrigger 构造包装器传 `60,false`。`0x1804a0d90` 定位 TimeTrigger 类，`0x1804a0dd0` 工厂包装传递两个参数。按 Microsoft API 契约，这是 freshnessTime=60 分钟、oneShot=false 的重复触发请求，不是“每小时一定执行”的观察。[TimeTrigger 构造契约](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.timetrigger.-ctor?view=winrt-26100)。\n\n**已确认：**两个 SystemCondition 构造参数分别为 `3` 和 `7`，均加入 builder 条件集合，对应 `InternetAvailable`、`FreeNetworkAvailable`（免费/非计费网络）。二者是登记条件，实际网络分类和系统调度历史未知。[SystemConditionType 枚举](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.systemconditiontype?view=winrt-26100)。\n\nREA [time-trigger](../evidence/background/time-trigger.json)，完整证据 ID：`ev_5851ce0242f869ac690d9bf4dcc68b9e073854b1eb15fc6c4301148a5f9d2d91`\n\nREA [time-trigger-factory](../evidence/background/time-trigger-factory.json)，完整证据 ID：`ev_9e770d83bef3f875364c68d76788aeb8951f8871baf9e8f745c5afee7590967f`\n\nREA [system-condition](../evidence/background/system-condition.json)，完整证据 ID：`ev_8358ad6bb8aca5bebbd70f76799cf98093375f7d6ee02f3df89cbf97ed0c34ce`"
+    },
+    {
+      "id": "BGA-05",
+      "title": "构造注入、共享对象与提供器身份",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_ccb68365e65666fbf80d599f452302075b6a4602a987f096323813f34351972f",
+        "ev_ce066679cc4d98bff78058fa0546df6c81acba745b0c014eb2f8e990fc9073f6"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/dependency-constructor-three.json",
+        "evidence/architecture-background/dependency-constructor-two.json",
+        "evidence/architecture-background/layout-evidence.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**Run 状态机分配下列 EEType，并经两个已解码构造器写入依赖字段。`0x180432c20` 将第二、第三参数写入 this+8、this+0x10；`0x180382c10` 再将第四参数写入 this+0x18。网络提供器与设置对象各创建一次，由三个更新提供器共同引用。\n\n| EEType 地址 | 静态派生角色 | 相关相对方法表中的目标 |\n|---|---|---|\n| `0x18001c1b0` | 设置仓库 | 三组 Current URL 和两组自动开关的读写方法 |\n| `0x18001c460` | 网络图像提供器 | `4bfb70` 下载、`4c0d00` 带数量的归档、`4c10c0` 默认归档 |\n| `0x18001c350` | 磁贴更新提供器 | `0x1804bd770` → 状态机 `0x1804bd810` |\n| `0x18001c2a0` | 锁屏更新提供器 | `0x1804c1bf0` → 状态机 `0x1804c1cb0`；另有手动入口及设置代理 |\n| `0x18001c3c0` | 桌面更新提供器 | `0x1804be170` → 状态机 `0x1804be230`；另有手动入口及设置代理 |\n| `0x18001bfd0` | 锁屏系统提供器 | `0x1804b5550`、`0x1804b68c0` |\n| `0x18001bf60` | 桌面系统提供器 | `0x1804b73c0`、`0x1804b7990`、`0x18051d810` |\n\n表中的数据来自类型地址+0x40 处 signed-relative 指针指向的独立方法数组，每项再以项地址加 signed-relative 值得到代码地址，目标均经 `.pdata` 核验。**不能把紧邻 EEType 后面的任意代码指针归给当前类型**；辅助文件还保留这种早期候选，但本表只使用 `relative_table` / `table_entries`。仍未完整恢复 NativeFormat 类型名和接口槽分派图，因此角色名保留为静态派生。\n\n原始布局、dispatch cell、常量见 [layout-evidence.json](../evidence/architecture-background/layout-evidence.json)；它是本地 PE 辅助解析产物，没有伪造 REA ID。构造参数的实际存储由下列 REA 记录支持。\n\nREA [dependency-constructor-two](../evidence/architecture-background/dependency-constructor-two.json)，完整证据 ID：`ev_ccb68365e65666fbf80d599f452302075b6a4602a987f096323813f34351972f`\n\nREA [dependency-constructor-three](../evidence/architecture-background/dependency-constructor-three.json)，完整证据 ID：`ev_ce066679cc4d98bff78058fa0546df6c81acba745b0c014eb2f8e990fc9073f6`"
+    },
+    {
+      "id": "BGA-06",
+      "title": "GetDeferral、顺序 await 和 Complete",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_6b283cb672e12123e49a70c855aa95d6e1b7e6185329045a253de0a974e3b44c",
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json",
+        "evidence/architecture-background/get-deferral-projection.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804c29ea` 通过 IBackgroundTaskInstance dispatch cell 取得对象，保存至状态机+0x30。投影方法 `0x1805a3a70` 的泛型上下文对应同接口，调用 WinRT ABI slot 14，即 `GetDeferral`。Run 在三个 await 之间保存自身状态；调用点依次为 `0x1804c2b66`、`0x1804c2bc5`、`0x1804c2c2b`，分别进入 `0x1804c26d0`、`0x1804c24a0`、`0x1804c2270` 包装器。这是串行等待，未见 Task.WhenAll。\n\n正常结束在 `0x1804c2ca4` 调用 Complete 包装器 `0x1804c2d40`；finally funclet `0x1804c2ce8` 对状态值做判断，结束/异常路径经 `0x1804c2cfd` 调用同一 Complete，而普通 await 暂停不完成 deferral。包装器使用 IBackgroundTaskDeferral ABI slot 6=`Complete`。随后正常路径完成 AsyncVoid builder，外层异常路径调用 SetException。此处能证明静态的资源生命周期设计，不能证明系统取消、进程终止等情况下实际回调完成。\n\nREA [get-deferral-projection](../evidence/architecture-background/get-deferral-projection.json)，完整证据 ID：`ev_6b283cb672e12123e49a70c855aa95d6e1b7e6185329045a253de0a974e3b44c`\n\nREA [background-entry-and-dispatch](../evidence/architecture-background/background-entry-and-dispatch.json)，完整证据 ID：`ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442`"
+    },
+    {
+      "id": "BGA-07",
+      "title": "异常隔离的准确边界",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生",
+        "未知"
+      ],
+      "evidence_ids": [
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**三个更新包装状态机 `0x1804c2770`、`0x1804c2540`、`0x1804c2310` 各有空的异常 funclet：`0x1804c281d`、`0x1804c25ed`、`0x1804c23bd` 返回正常 SetResult continuation。同时，它们也各有外层 SetException funclet。Run 自身亦有 `0x1804c2cd8` 返回正常结束 continuation 的 catch 分支及外层异常完成路径。\n\n**静态派生：**匹配这些 catch 的异常可被包装器吞掉，从而允许后续提供器继续执行。**未知：**托管 catch 的类型过滤元数据尚未恢复，所以不能写成 catch-all、所有网络错误都被忽略或三个分支一定都会执行。已查看范围没有建立自动重试、退避或 Cancel 事件订阅；这属于范围内未见，非全程序不存在的证明。\n\nREA [background-entry-and-dispatch](../evidence/architecture-background/background-entry-and-dispatch.json)，完整证据 ID：`ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442`"
+    },
+    {
+      "id": "BGA-08",
+      "title": "后台每个分支独立请求 n=1",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json",
+        "evidence/architecture-background/provider-and-settings.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**锁屏和桌面在取归档前都有两道 Boolean 门控。桌面在 `0x1804be2c7` 取得系统提供器字段+0x18，调用 cell `0x1803056d0` 后若返回 false 则退出；随后 `0x1804be2e0` 取得设置仓库字段+0x10，检查自动开关。锁屏对应 `0x1804c1d47` / cell `0x180305a10`，以及 `0x1804c1d60` 的设置检查。**静态派生：**第一道是系统提供器的支持性/可用性条件；完整虚调映射未解，不能无条件写成“两个分支都显式调用同一个 WinRT IsSupported”。BGA-01 图只画自动开关以保持简洁。\n\n**已确认：**磁贴状态机 `0x1804bd810` 在 `0x1804bd952`、锁屏状态机 `0x1804c1cb0` 在 `0x1804c1d80`、桌面状态机 `0x1804be230` 在 `0x1804be300` 均把归档数量参数设为 `1`。三个调用经过各自 dispatch cell，网络对象的方法表包含带数量入口 `0x1804c0d00`。其 URL 格式和 HTTP 行为详见网络专题。\n\n**静态派生：**Run 共享网络提供器对象，未共享一次取得的归档响应；三个启用的分支分别请求归档。前台默认无参入口取 7 张，不能套用到后台。默认两个自动开关键缺省为 false 时，锁屏/桌面在开关检查后直接退出，只有磁贴分支继续请求。若都开启且执行走到相应调用，最多有三次这里描述的单图归档调用；这是代码路径计数，不是实际抓包次数。\n\n**已确认：**每个分支先取得 archive，再比较 Current URL。相同 URL 可以省去后续图像下载和系统更新，但不能省掉已经发生的本分支归档调用。\n\nREA [provider-and-settings](../evidence/architecture-background/provider-and-settings.json)，完整证据 ID：`ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221`\n\nREA [background-entry-and-dispatch](../evidence/architecture-background/background-entry-and-dispatch.json)，完整证据 ID：`ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442`"
+    },
+    {
+      "id": "BGA-09",
+      "title": "第一张选择与 Current URL 去重",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_105b6abd3a86d44b5864cb5d9a864a7b24e46cd0f80ae88ad9a54ed9b4facccd",
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/archive-first-selector.json",
+        "evidence/architecture-background/provider-and-settings.json",
+        "evidence/architecture-background/tile-convert-and-select.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**磁贴 `0x1804bd1b0`、桌面 `0x1804be100`、锁屏 `0x1804c1b80` 三个选择器取 archive 中图像集合的第一项，取得 URL，再对空 URL 和对应 Current URL 比较。字符串比较常量 `5` 配合已恢复的 `String.Equals` 重载，语义为 `OrdinalIgnoreCase`；相同则返回 null，使调用者跳过下载。这里没有按日期排序、查找“今天”或取列表最后一项的逻辑。\n\n共享辅助函数 `0x1803eec30` 的语义为 FirstOrDefault：source 为 null 抛 `ArgumentNull(\"source\")`；列表 Count>0 取 index0，否则 null；非列表仅 MoveNext 一次并返回 Current，随后 Dispose 枚举器。原始泛型方法名未恢复，这一名称表示已确认的行为。\n\n```text\narchive = await provider.GetArchive(1)\nitem = FirstOrDefault(archive.images)\nnewUrl = item?.Url\nif IsNullOrEmpty(newUrl) or Equals(newUrl, currentUrl, OrdinalIgnoreCase):\n    return  # 本分支不再下载图像\nimage = await provider.DownloadImage(newUrl)\nawait apply(image)\nsettings.CurrentUrl = newUrl  # 必须走到 apply 的成功 continuation\n```\n\n伪代码省略文件准备、异常包装和各提供器差异，不是逐句反编译结果。领域转换 `0x1804b9190` 的细节由存储专题记录。\n\nREA [archive-first-selector](../evidence/architecture-background/archive-first-selector.json)，完整证据 ID：`ev_105b6abd3a86d44b5864cb5d9a864a7b24e46cd0f80ae88ad9a54ed9b4facccd`\n\nREA [tile-convert-and-select](../evidence/architecture-background/tile-convert-and-select.json)，完整证据 ID：`ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4`\n\nREA [provider-and-settings](../evidence/architecture-background/provider-and-settings.json)，完整证据 ID：`ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221`"
+    },
+    {
+      "id": "BGA-10",
+      "title": "磁贴更新的实际流水线",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生",
+        "未知"
+      ],
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297",
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/provider-and-settings.json",
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804bd810` 先确保 `LiveTiles` 目录，再请求单图 archive，转换并选择新 URL。如果需要更新，调用文件名助手 `0x1804a0060`，从网络提供器取得图像字节，经 `0x1804bc650` 包装的解码状态机和 `0x1804bbb00` 包装的保存状态机生成文件，再调用 `0x1804bb510` 发布通知。随后写 `CurrentLiveTileImageUrl`，最后进入旧磁贴文件清理。\n\n**静态派生：**这条路径以后台提供器下载得到的字节为输入，不要求先更新前台 `Images`/`ImageArchive.json` 主缓存。三个派生目录与主缓存的关系应依各自调用链判断。写入 Current URL 与清理顺序也有意义：若通知 API 或其前面的图像工作抛错，URL 写入不可达；如果 URL 已写入之后清理失败，该值可能保留。\n\n**已确认：**磁贴状态机自身的异常终点为 AsyncTaskMethodBuilder.SetException，是否被更外层隔离取决于 BGA-07 中尚未知类型的 catch。\n\nREA [provider-and-settings](../evidence/architecture-background/provider-and-settings.json)，完整证据 ID：`ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221`\n\nREA [tile-save-and-notification](../evidence/architecture-background/tile-save-and-notification.json)，完整证据 ID：`ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297`"
+    },
+    {
+      "id": "BGA-11",
+      "title": "解码、像素与 PNG 编码",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297",
+        "ev_c6a81a5d3fb6c9d934d07f551050575ed8befced4ebf9e4e515a79312ba6df57",
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/tile-convert-and-select.json",
+        "evidence/architecture-background/tile-encoder-set-pixels.json",
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**解码状态机 `0x1804bc790` 将输入字节组织为流，调用 BitmapDecoder/IBitmapFrame 路径取得像素数据，读取像素格式、alpha 模式、DPI、宽高，并 DetachPixelData 到字节数组。保存状态机 `0x1804bbbb0` 打开 `LiveTiles` 中的目标文件，建立 BitmapEncoder；`0x1804bbed7` 对应 `IBitmapEncoderStatics.PngEncoderId`，后续 CreateAsync 用该 GUID。它设 BitmapTransform，传入完整像素参数，最后 await FlushAsync。\n\n**已确认：**`0x1804bc200` SetPixelData 包装器把解码结果中的格式、alpha、尺寸、DPI 和像素字节转发到编码器。目标文件名来自 URL 的文件名助手，编码器格式独立由 PNG GUID 决定，因此名字沿用 `.jpg` 并不意味着文件内容仍是 JPEG。存储专题已有本地 `LiveTiles` 文件 PNG 头和 310×150 尺寸的旁证。\n\n**已确认：**打开的输出流有正常与 finally 释放路径。后续补证已确定解码调用为无参 GetPixelDataAsync，其 EXIF/色彩默认属于系统 API 契约，详见 BGA-21；实际特殊图片、损坏数据和不同编解码器的结果仍未运行验证。\n\nREA [tile-convert-and-select](../evidence/architecture-background/tile-convert-and-select.json)，完整证据 ID：`ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4`\n\nREA [tile-save-and-notification](../evidence/architecture-background/tile-save-and-notification.json)，完整证据 ID：`ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297`\n\nREA [tile-encoder-set-pixels](../evidence/architecture-background/tile-encoder-set-pixels.json)，完整证据 ID：`ev_c6a81a5d3fb6c9d934d07f551050575ed8befced4ebf9e4e515a79312ba6df57`"
+    },
+    {
+      "id": "BGA-12",
+      "title": "310×150 中心裁切与 Fant 插值",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_a00d5eb93ea8d850f16b612e677d184f8e96f44f32ca6d1542932554123e411e"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/abi-evidence.json",
+        "evidence/architecture-background/image-resize.json",
+        "evidence/architecture-background/system-winmd.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804bb330` 根据原始宽 w、高 h 执行整数计算：先让宽为 310，按比例计算高度；若高度不足 150，则改为高 150 并按比例计算宽。其后居中计算裁切矩形，最终 bounds 固定 310×150。\n\n```text\nscaledW = 310\nscaledH = floor(h * 310 / w)\nif scaledH < 150:\n    scaledH = 150\n    scaledW = floor(w * 150 / h)\nx = max(0, floor((scaledW - 310) / 2))\ny = max(0, floor((scaledH - 150) / 2))\nbounds = (x, y, 310, 150)\n```\n\n`0x1804bb430` 调用 transform 的 ScaledWidth、ScaledHeight、Bounds setters；`0x1804bb414` 传插值枚举 `3`，按 Windows.Graphics.Imaging 定义为 **Fant**。这是一种保持比例后裁切填满目标的管线，不是把原始画面任意拉伸成 310×150。计算是整数运算，不能写成无限精度浮点缩放。\n\nREA [image-resize](../evidence/architecture-background/image-resize.json)，完整证据 ID：`ev_a00d5eb93ea8d850f16b612e677d184f8e96f44f32ca6d1542932554123e411e`\n\nAPI 对照的 IID、槽序及源码存档见 [abi-evidence.json](../evidence/architecture-background/abi-evidence.json) 与 [本机 WinMD](../evidence/architecture-background/system-winmd.json)。"
+    },
+    {
+      "id": "BGA-13",
+      "title": "磁贴 XML、资源 URI 和两天过期时间",
+      "confidence_labels_present": [
+        "已确认",
+        "未知"
+      ],
+      "evidence_ids": [
+        "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/layout-evidence.json",
+        "evidence/architecture-background/tile-save-and-notification.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804bb510` 把文件名拼到 `ms-appdata:///local/LiveTiles/`，调用 TileUpdateManager.GetTemplateContent，模板枚举 `10` 对应 `TileWideImage`。代码获取 `image` 节点，设置 `src` 为上述 URI、`alt` 为本地化资源 `LiveTileText`。之后创建 TileNotification，通过当前应用的 TileUpdater 调用 Update。\n\n**已确认：**通知过期时间起点是本函数中调用 `DateTimeOffset.UtcNow` 得到的时刻，然后 `AddDays(2.0)`。`0x180144818` 的 double 原字节为 `0000000000000040`，即 2.0；随后 `0x1804bb6d0` 调用 ITileNotification.SetExpirationTime。它不是图片拍摄日期加两天，也不是调度器计划触发时刻加两天。\n\n**未知：**本次没有观察当前 Windows Shell 是否显示这类旧式磁贴、系统实际保留通知多久或调用最终结果。该函数范围没有建立启用通知队列或远程周期 feed 的行为。\n\nREA [tile-save-and-notification](../evidence/architecture-background/tile-save-and-notification.json)，完整证据 ID：`ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297`\n\n常量字节见 [layout-evidence.json](../evidence/architecture-background/layout-evidence.json)。"
+    },
+    {
+      "id": "BGA-14",
+      "title": "桌面/锁屏现代系统 API 与返回 Boolean",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_881031a01d5e7e4e0837d4b8601333bd619da146c96171ab47e185b0aebfce92",
+        "ev_94271ed3e40ff7b78535978d727e6d87b315b17fbc9a88eefc152dd5e6330e6c"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/desktop-personalization-apply.json",
+        "evidence/architecture-background/lockscreen-personalization-apply.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**桌面应用状态机 `0x1804b6d40` 取得 `UserProfilePersonalizationSettings.Current`，调用 `TrySetWallpaperImageAsync` 并 await Boolean。锁屏对应 `0x1804b4190`，调用 `TrySetLockScreenImageAsync`。接口 IID 与本机 WinMD 的方法序一致：前者 ABI slot7，后者 slot6。\n\n| 结果 | 本状态机后续行为 | 对上层 Current URL 的影响 |\n|---|---|---|\n| `true` | 读取已用文件的 Name；调用清理助手，保留该文件并删除目录中的其他候选文件；完成 await 链 | 只有随后上层 apply continuation 正常到达，才写新 URL；清理若仍抛错也可能阻止上层写入 |\n| `false` | 调用 DeleteAsync 删除这次尝试使用的文件；等待完成后抛 InvalidOperationException | 不会作为成功返回给上层，后续 Current URL 赋值不可达 |\n| API/文件/清理异常 | 异步状态机调用 SetException；交由外层 await/catch | 取决于抛错点；不能把 await 已结束等同于成功设图 |\n\nfalse 分支的异常消息分别为 `Setting of desktop background failed.` 与 `Setting of lock screen failed.`。若 false 分支的删除本身失败，则传播的是删除路径异常，未必到达自定义异常构造。底层已设成功但后续旧文件清理失败，也可能出现“系统图像已变、Current URL 未更新”的状态；这是控制流推出的可能性，没有做故障注入验证。\n\n桌面系统提供器的方法表把 `0x1804b73c0`/`0x1804b7990` 关联为字节输入与文件输入入口，前者状态机 `0x1804b7480` 准备 Wallpaper 目录及文件后进入这里。其他文件准备和清理规则见存储专题。[Microsoft 个性化 API](https://learn.microsoft.com/en-us/uwp/api/windows.system.userprofile.userprofilepersonalizationsettings?view=winrt-26100) 仅用于说明外部契约，应用控制流以上述机器码为依据。\n\nREA [desktop-personalization-apply](../evidence/architecture-background/desktop-personalization-apply.json)，完整证据 ID：`ev_94271ed3e40ff7b78535978d727e6d87b315b17fbc9a88eefc152dd5e6330e6c`\n\nREA [lockscreen-personalization-apply](../evidence/architecture-background/lockscreen-personalization-apply.json)，完整证据 ID：`ev_881031a01d5e7e4e0837d4b8601333bd619da146c96171ab47e185b0aebfce92`"
+    },
+    {
+      "id": "BGA-15",
+      "title": "能力检查、旧锁屏 API 与未支持实现",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6",
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+        "ev_db635d3433ce4d0069a503fff410c877118a715e052c6f088b2afc0b7781dd2c"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/personalization-providers.json",
+        "evidence/architecture-background/provider-and-settings.json",
+        "evidence/architecture-background/settings-and-capabilities.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x18051d810` 使用 UserProfilePersonalizationSettings 的静态 IsSupported 调用，状态/命令层还有代理方法。二进制也包含传统 `Windows.System.UserProfile.LockScreen` 路径：`0x1804c1510` 使用 ILockScreenStatics ABI slot9=`SetImageStreamAsync`；`0x1804c1780` 使用 slot8=`SetImageFileAsync`。相应异步状态机为 `0x1804c1380` 与 `0x1804c15f0`。\n\n**静态派生：**可确定存在不同平台/能力适配实现，不应把所有入口都描述成同一个现代 API。Run 中分配的 EEType 与方法数组已列于 BGA-05；完整平台选择策略和每种设备上实际使用哪个适配器尚未恢复。应用还包含 `SetDesktopBackgroundImage is not supported.` 的抛错实现，不能因为接口存在就断言任何 Windows/设备上都能自动换壁纸。\n\nREA [settings-and-capabilities](../evidence/architecture-background/settings-and-capabilities.json)，完整证据 ID：`ev_db635d3433ce4d0069a503fff410c877118a715e052c6f088b2afc0b7781dd2c`\n\nREA [personalization-providers](../evidence/architecture-background/personalization-providers.json)，完整证据 ID：`ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6`\n\nREA [provider-and-settings](../evidence/architecture-background/provider-and-settings.json)，完整证据 ID：`ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221`"
+    },
+    {
+      "id": "BGA-16",
+      "title": "自动开关的确切缺省行为",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e",
+        "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc"
+      ],
+      "evidence_paths": [
+        "evidence/background/desktop-settings-read.json",
+        "evidence/background/lockscreen-settings-read.json",
+        "evidence/deep-symbols/symbols-findings.md"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**两个 Boolean 键存于 ApplicationData.LocalSettings，写入前装箱。桌面写/读为 `0x18051d430`/`0x18051d510`，键 `UseBingImageAsDesktopBackground`；锁屏写/读为 `0x18051d650`/`0x18051d730`，键 `UseBingImageAsLockScreen`。两个读取函数在查不到对象时保留全零 Nullable<Boolean>，再调用已匹配 SharedLibrary PDB 的 `Nullable<Boolean>.GetValueOrDefault`，故键缺省时都返回 **false**。\n\n这是缺省逻辑，不是对用户当前开关状态的替代读取。先前本地状态快照只有 CurrentLiveTileImageUrl，而没有两个 Boolean 键，该快照与 false 缺省逻辑相容；后台实际运行时设置可能变化。后续精确符号恢复加强了最初仅依据 NEAT 辅助函数指令的结论，详见 [SharedLibrary 符号取证](../evidence/deep-symbols/symbols-findings.md)。\n\nREA [desktop-settings-read](../evidence/background/desktop-settings-read.json)，完整证据 ID：`ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e`\n\nREA [lockscreen-settings-read](../evidence/background/lockscreen-settings-read.json)，完整证据 ID：`ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc`"
+    },
+    {
+      "id": "BGA-17",
+      "title": "三个 Current URL 独立持久化",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043",
+        "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+        "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/background-entry-and-dispatch.json",
+        "evidence/architecture-background/provider-and-settings.json",
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**以下方法访问 LocalSettings 中各自的字符串键。不存在“换壁纸成功便顺便更新三个 URL”的依据。\n\n| 键 | 写函数 | 读函数 | 消费者 |\n|---|---|---|---|\n| CurrentLiveTileImageUrl | `0x1804be7f0` | `0x1804be880` | 磁贴选择器 |\n| CurrentDesktopBackgroundImageUrl | `0x1804be910` | `0x1804be9a0` | 桌面选择器 |\n| CurrentLockScreenImageUrl | `0x1804bea30` | `0x1804beac0` | 锁屏选择器 |\n\n**已确认：**新 URL 的持久化出现在对应应用操作 await 的成功 continuation。对桌面/锁屏，必须同时考虑 TrySet 的 Boolean 与清理步骤，详见 BGA-14；对磁贴，是发布通知调用后写 URL、再清理旧文件，详见 BGA-10。这些 URL 是去重状态，不能替代对系统当前壁纸、图像存在性或缓存完整性的验证。\n\nREA [url-settings-and-invalidation](../evidence/architecture-background/url-settings-and-invalidation.json)，完整证据 ID：`ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043`\n\nREA [provider-and-settings](../evidence/architecture-background/provider-and-settings.json)，完整证据 ID：`ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221`\n\nREA [background-entry-and-dispatch](../evidence/architecture-background/background-entry-and-dispatch.json)，完整证据 ID：`ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442`"
+    },
+    {
+      "id": "BGA-18",
+      "title": "旧 Roaming 锁屏设置迁移",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [
+        "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/url-settings-and-invalidation.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**`0x1804beb50` 同时取得 LocalSettings 与 RoamingSettings：前者在 ApplicationData ABI slot10，后者 slot11。对于给定键，如果 Roaming 值非 null，先将其写入 Local 的 Values，再将 Roaming 的同键赋 null。`0x1804bec80` 对 `UseBingImageAsLockScreen` 和 `CurrentLockScreenImageUrl` 调用这一助手。\n\n这是一条从旧漫游设置向本地设置迁移的路径。其赋值没有先判断 Local 是否已有值，因此非空旧值可覆盖 Local；对旧键的动作是“赋 null”，不能提升成已证实调用 Remove。证据文件名 `url-settings-and-invalidation` 是工作中早期命名，**最终语义为 URL 读写及设置迁移，不是把当前 URL 全部失效**。UI 启动侧的内联迁移见 UI/数据专题。\n\nREA [url-settings-and-invalidation](../evidence/architecture-background/url-settings-and-invalidation.json)，完整证据 ID：`ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043`"
+    },
+    {
+      "id": "BGA-19",
+      "title": "WinRT ABI 与框架符号依据",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [],
+      "evidence_paths": [
+        "evidence/architecture-background/abi-crosscheck.json",
+        "evidence/architecture-background/abi-evidence.json",
+        "evidence/architecture-background/system-winmd.json",
+        "evidence/deep-symbols/symbols-findings.md"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**本次将本机 `C:\\Windows\\System32\\WinMetadata` 中的 Windows.ApplicationModel、Windows.UI、Windows.System、Windows.Graphics WinMD 以 PEReader/MetadataReader 只读解析，保留文件 hash、GuidAttribute 原字节与 MethodDef 顺序，没有加载或执行目标程序集。共对照 23 个使用中的接口，IID 全部与 Microsoft windows-rs 生成接口定义相同。原始方法名字可能因重载投影重命名而不同，所以 `abi-crosscheck.json` 的“all_method_orders_match”是 false，不能引用成所有名字完全一致；本篇使用的具体 slot 均逐项核对。\n\n| 用途 | WinRT 接口/ABI slot |\n|---|---|\n| 后台访问请求 | IBackgroundExecutionManagerStatics.RequestAccessAsync / 6 |\n| 延长后台生命周期 | IBackgroundTaskInstance.GetDeferral / 14；IBackgroundTaskDeferral.Complete / 6 |\n| 获取现代个性化对象、支持性 | IUserProfilePersonalizationSettingsStatics.Current / 6；IsSupported / 7 |\n| 锁屏/桌面设置 | IUserProfilePersonalizationSettings.TrySetLockScreenImageAsync / 6；TrySetWallpaperImageAsync / 7 |\n| PNG 编码 | IBitmapEncoderStatics.PngEncoderId / 8；CreateAsync / 13 |\n| 像素处理 | IBitmapEncoder.BitmapTransform / 15；SetPixelData / 16；FlushAsync / 19 |\n| 裁切变换 | IBitmapTransform.SetScaledWidth / 7；SetScaledHeight / 9；SetInterpolationMode / 11；SetBounds / 17 |\n| 磁贴 XML/发布 | ITileUpdateManagerStatics.GetTemplateContent / 9；CreateTileUpdaterForApplication / 6；ITileUpdater.Update / 6 |\n| 过期时间 | ITileNotification.SetExpirationTime / 7 |\n\n这里的 slot 包括 IUnknown/IInspectable 前缀，是 **WinRT ABI slot**；不能与 .NET Native 托管 dispatch cell 中的接口方法编号混用。泛型上下文→接口的关联通过目标中字节 IID、EEType 指针与包装器参数共同建立。\n\n审计材料：[system-winmd.json](../evidence/architecture-background/system-winmd.json)、[abi-evidence.json](../evidence/architecture-background/abi-evidence.json)、[abi-crosscheck.json](../evidence/architecture-background/abi-crosscheck.json)。共享框架调用名来自精确 GUID/age 与节映射验证后的 Microsoft PDB，解析说明见 [symbols-findings.md](../evidence/deep-symbols/symbols-findings.md)。代码折叠可使一个地址有多个名称别名，文档没有把任一折叠别名当成目标应用的源码名。"
+    },
+    {
+      "id": "BGA-20",
+      "title": "复查范围与未解决问题",
+      "confidence_labels_present": [
+        "已确认"
+      ],
+      "evidence_ids": [],
+      "evidence_paths": [
+        "evidence/architecture-background/evidence-manifest.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "本篇补充的 REA 数据由 [bg_arch_inspect.py](../scripts/bg_arch_inspect.py) 按明确的地址和长度执行 `pDj`；没有进行整包全量分析。每份原始 JSON 保留命令、完整输出、证据 ID、目标前后 hash、完成状态。辅助汇总由 [bg_arch_publish.py](../scripts/bg_arch_publish.py) 生成，证据清单见 [evidence-manifest.json](../evidence/architecture-background/evidence-manifest.json)。局部数据/接口映射由 [bg_arch_layout.py](../scripts/bg_arch_layout.py)、[bg_arch_abi.py](../scripts/bg_arch_abi.py)、[bg_arch_winmd.ps1](../scripts/bg_arch_winmd.ps1) 保存。\n\n有两个必须保留的反汇编范围限制：`provider-and-settings.json` 从 `0x1804bd740` 开始，前缀位于此前 funclet 中间，本篇只使用 `0x1804bd770` 及之后已知 `.pdata` 函数；部分连续范围在末尾截断下一函数，本篇不依据该尾部推论。工具输出 complete 只表示命令执行完整，不代表范围自动覆盖所有逻辑函数或所有异常类型。\n\n尚未解决的具体问题：\n\n1. 主应用全部 NativeFormat 类型/字段名与虚调用槽映射；当前身份以构造、相对表和实际行为交叉恢复。\n2. 托管 catch 类型过滤；空 catch funclet 的存在已确认，catch-all 不成立。\n3. 运行时是否登记成功、后台调度次数、取消/终止历史、当前实际自动开关与系统策略影响。\n4. 所有平台适配器的选择条件，以及当前 Windows Shell 的磁贴显示行为。\n5. 带 EXIF 旋转/色彩配置图片的实测结果，以及网络/文件/系统 API 故障后的实机状态；无参解码重载及其默认契约已在 BGA-21 补证，本轮没有执行目标或注入故障。\n\n这些缺口不会改变已由指令确认的 n=1、三个独立 Current URL、顺序 await、缺省 false、310×150 PNG、两天通知期限和 TrySet(false) 抛错路径；它们限制的是完整源码恢复与运行时效果的声称。"
+    },
+    {
+      "id": "BGA-21",
+      "title": "无参像素解码、EXIF/色彩默认及尺寸边界",
+      "confidence_labels_present": [
+        "已确认",
+        "静态派生"
+      ],
+      "evidence_ids": [
+        "ev_b8f180218217ed13f4097fbfa3c4be90a94acf37eaa669ed4ad0c38e8ae28bb2",
+        "ev_bd70a3a278066e96c2cd4c73f21a0d83e825726d87b79bdd541422962cb043f6",
+        "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4"
+      ],
+      "evidence_paths": [
+        "evidence/architecture-background/tile-convert-and-select.json",
+        "evidence/lifecycle-supplement/decoder-contract.json",
+        "evidence/lifecycle-supplement/no-input-interface-slot.json",
+        "evidence/lifecycle-supplement/pixel-data-abi-bridge.json"
+      ],
+      "details_document": "docs/background-and-personalization.md",
+      "details_markdown": "**已确认：**状态机 `0x1804bc790` 在 `0x1804bc918` 将槽号设为 `16`，上下文 `0x18010f8f0` 首指针为 `0x18000d2a8`，后者已用 IID 对应到 IBitmapFrame。桥 `0x180402590` 把槽号传到 `0x180402630`，后者按 `vtable[slot]` 调用，只传 this 和输出指针。本机 WinMD 第 10 个方法（加 IInspectable 前缀后为槽 16）的签名是零输入参数，槽 17 才是五参数转换重载。因此这里实际调用 **GetPixelDataAsync()**。\n\n**外部 API 契约：**微软文档说明此无参重载使用帧的像素格式和 alpha 模式，尊重 EXIF 方向，并在存在嵌入配置时将颜色管理至 sRGB；它没有由应用显式指定的变换参数。[Microsoft GetPixelDataAsync 文档](https://learn.microsoft.com/en-us/uwp/api/windows.graphics.imaging.bitmapdecoder.getpixeldataasync)。这是已识别调用对应的系统契约，不能扩展成已观察所有图片的解码效果。\n\n**已确认：**应用随后在 `0x1804bc9fb` / `0x1804bca13` 读取槽 12/13，即原始 PixelWidth/PixelHeight，而不是已考虑方向的 OrientedPixelWidth/OrientedPixelHeight（槽 14/15），并把尺寸与像素数组共同转交 `0x180476f70`。**静态派生：**若 EXIF 旋转交换宽高，已定向像素排列与传入尺寸可能不一致；这是一项有条件的契约不匹配，未复现具体图片的错误输出。普通无旋转图片不能据此判错。\n\n机器可读补证：[decoder-contract.json](../evidence/lifecycle-supplement/decoder-contract.json)，包括原始指令字节断言、本机 WinMD 签名和 API 来源。该结论只针对磁贴 BitmapDecoder 管线，不自动适用于前台 BitmapImage.SetSourceAsync。\n\nREA [tile-convert-and-select](../evidence/architecture-background/tile-convert-and-select.json)，完整证据 ID：`ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4`\n\nREA [pixel-data-abi-bridge](../evidence/lifecycle-supplement/pixel-data-abi-bridge.json)，完整证据 ID：`ev_b8f180218217ed13f4097fbfa3c4be90a94acf37eaa669ed4ad0c38e8ae28bb2`\n\nREA [no-input-interface-slot](../evidence/lifecycle-supplement/no-input-interface-slot.json)，完整证据 ID：`ev_bd70a3a278066e96c2cd4c73f21a0d83e825726d87b79bdd541422962cb043f6`"
+    }
+  ]
+}

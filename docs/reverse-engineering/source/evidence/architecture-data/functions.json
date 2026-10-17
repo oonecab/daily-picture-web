@@ -1,0 +1,238 @@
+[
+  {
+    "address": "0x1804be7f0",
+    "role": "SettingsRepository 设置 CurrentLiveTileImageUrl",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804be872",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804be880",
+    "role": "SettingsRepository 读取 CurrentLiveTileImageUrl 并强制转换 String",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804be909",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804be910",
+    "role": "SettingsRepository 设置 CurrentDesktopBackgroundImageUrl",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804be992",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804be9a0",
+    "role": "SettingsRepository 读取 CurrentDesktopBackgroundImageUrl 并强制转换 String",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804bea29",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804bea30",
+    "role": "SettingsRepository 设置 CurrentLockScreenImageUrl",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804beab2",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804beac0",
+    "role": "SettingsRepository 读取 CurrentLockScreenImageUrl 并强制转换 String",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804beb49",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804beb50",
+    "role": "按键迁移非空 Roaming 值到 Local，然后向 Roaming 同键赋 null",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804bec78",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804bec80",
+    "role": "只迁移 UseBingImageAsLockScreen 与 CurrentLockScreenImageUrl 的包装函数",
+    "evidence_paths": [
+      "evidence/architecture-data/settings-url-and-migrate.json",
+      "evidence/architecture-data/abi-and-settings-types.json",
+      "evidence/architecture-data/settings-type-symbols.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804beca2",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x18051d430",
+    "role": "写入本地 UseBingImageAsDesktopBackground 布尔设置",
+    "evidence_paths": [
+      "evidence/background/desktop-settings-write.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x18051d4c8",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x18051d510",
+    "role": "读取本地 UseBingImageAsDesktopBackground：null 为 false，非空强转 Boolean",
+    "evidence_paths": [
+      "evidence/background/desktop-settings-read.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x18051d5c8",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x18051d650",
+    "role": "写入本地 UseBingImageAsLockScreen 布尔设置",
+    "evidence_paths": [
+      "evidence/background/lockscreen-settings-write.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x18051d6e8",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x18051d730",
+    "role": "读取本地 UseBingImageAsLockScreen：null 为 false，非空强转 Boolean",
+    "evidence_paths": [
+      "evidence/background/lockscreen-settings-read.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x18051d7e8",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804b53d0",
+    "role": "LockScreen 初始化异步状态：LocalFolder/CreateFolder/OpenIfExists",
+    "evidence_paths": [
+      "evidence/architecture-data/lockscreen-folder-init.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804b5512",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804b7240",
+    "role": "Wallpaper 初始化异步状态：LocalFolder/CreateFolder/OpenIfExists",
+    "evidence_paths": [
+      "evidence/architecture-data/wallpaper-folder-init.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804b7382",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804bd610",
+    "role": "LiveTiles 初始化异步状态：LocalFolder/CreateFolder/OpenIfExists",
+    "evidence_paths": [
+      "evidence/architecture-data/livetiles-folder-init.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804bd73e",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804bb1d0",
+    "role": "Images 初始化异步状态：LocalFolder/CreateFolder/OpenIfExists",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804bb2fe",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804b9190",
+    "role": "数据 archive 投影为图像领域列表；null collection 变空列表",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804b9501",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804b9510",
+    "role": "单张数据记录投影：复制 URL/Copyright，计算 FileName",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804b9573",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804b96b0",
+    "role": "读取本地 ImageArchive.json 异步状态；无文件返回 null",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804b9a6a",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804ba4b0",
+    "role": "保存 ImageArchive.json 异步状态；原名写 JSON",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804ba69f",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804ba8f0",
+    "role": "打开 archive 写入流的异步状态；StorageFolder 托管槽具体方法尚未恢复",
+    "evidence_paths": [
+      "evidence/deep-cache/storage-json.json"
+    ],
+    "confidence": "medium-high",
+    "pdata_end_exclusive": "0x1804bad1f",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  },
+  {
+    "address": "0x1804bf900",
+    "role": "从 LocalFolder/Images 按派生文件名取得图像 StorageFile",
+    "evidence_paths": [
+      "evidence/deep-cache/extra-cache.json"
+    ],
+    "confidence": "high",
+    "pdata_end_exclusive": "0x1804bfb37",
+    "name_provenance": "semantic reconstruction from instructions and metadata; not main-module PDB"
+  }
+]

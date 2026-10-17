@@ -1,0 +1,1921 @@
+[
+  {
+    "vaddr": 6443814276,
+    "paddr": 1360772,
+    "size": 134,
+    "length": 133,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "D:\\data\\PkgProc\\mupAwdZgJkaFwBR2iGOucg\\ExtractedBundle\\Duracellko.BingImage.Universal_1.4.13.0_x64\\Duracellko.BingImage.Universal.pdb"
+  },
+  {
+    "vaddr": 6444065794,
+    "paddr": 1612290,
+    "size": 41,
+    "length": 40,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "LDuracellko.BingImage.Universal.Serviceñ",
+    "blocks": [
+      "Basic Latin",
+      "Latin-1 Supplement"
+    ]
+  },
+  {
+    "vaddr": 6444066022,
+    "paddr": 1612518,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "4Duracellko.BingImage.Model"
+  },
+  {
+    "vaddr": 6444066511,
+    "paddr": 1613007,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ".Duracellko.BingImage.UI"
+  },
+  {
+    "vaddr": 6444066560,
+    "paddr": 1613056,
+    "size": 35,
+    "length": 33,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "<Duracellko.BingImage.UniversalÙ ",
+    "blocks": [
+      "Basic Latin",
+      "Latin-1 Supplement"
+    ]
+  },
+  {
+    "vaddr": 6444068092,
+    "paddr": 1614588,
+    "size": 46,
+    "length": 44,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "RDuracellko.BingImage.Universal.McgInteropÉF",
+    "blocks": [
+      "Basic Latin",
+      "Latin-1 Supplement"
+    ]
+  },
+  {
+    "vaddr": 6444074283,
+    "paddr": 1620779,
+    "size": 10,
+    "length": 10,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Duracellko"
+  },
+  {
+    "vaddr": 6444074351,
+    "paddr": 1620847,
+    "size": 29,
+    "length": 28,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "8Copyright © Duracellko 2013",
+    "blocks": [
+      "Basic Latin",
+      "Latin-1 Supplement"
+    ]
+  },
+  {
+    "vaddr": 6444191291,
+    "paddr": 1737787,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "D!.IBackgroundTaskInstanceg"
+  },
+  {
+    "vaddr": 6444191356,
+    "paddr": 1737852,
+    "size": 25,
+    "length": 25,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",BackgroundTaskDeferralgs"
+  },
+  {
+    "vaddr": 6444191389,
+    "paddr": 1737885,
+    "size": 16,
+    "length": 16,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "IBackgroundTaskg"
+  },
+  {
+    "vaddr": 6444191586,
+    "paddr": 1738082,
+    "size": 29,
+    "length": 29,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "6IBackgroundTaskRegistrationg"
+  },
+  {
+    "vaddr": 6444195074,
+    "paddr": 1741570,
+    "size": 52,
+    "length": 52,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ":UserProfileLockScreenContract&HttpResponseMessagegc"
+  },
+  {
+    "vaddr": 6444196608,
+    "paddr": 1743104,
+    "size": 14,
+    "length": 14,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "ImageArchive\u001b\b"
+  },
+  {
+    "vaddr": 6444198291,
+    "paddr": 1744787,
+    "size": 12,
+    "length": 11,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "LockScreen\u000b"
+  },
+  {
+    "vaddr": 6444199033,
+    "paddr": 1745529,
+    "size": 20,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "\"DesktopBackground\u000b"
+  },
+  {
+    "vaddr": 6444199247,
+    "paddr": 1745743,
+    "size": 8,
+    "length": 8,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "LiveTile"
+  },
+  {
+    "vaddr": 6444286814,
+    "paddr": 1833310,
+    "size": 44,
+    "length": 44,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "VDuracellko_BingImage_Universal_XamlTypeInfo"
+  },
+  {
+    "vaddr": 6444335383,
+    "paddr": 1881879,
+    "size": 7,
+    "length": 7,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Desktop"
+  },
+  {
+    "vaddr": 6444336490,
+    "paddr": 1882986,
+    "size": 31,
+    "length": 31,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "8UpdateLiveTileBackgroundTask\u001b\b"
+  },
+  {
+    "vaddr": 6444337546,
+    "paddr": 1884042,
+    "size": 29,
+    "length": 29,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E2<SetLockScreenImage>d__19g"
+  },
+  {
+    "vaddr": 6444337588,
+    "paddr": 1884084,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E@<SetDesktopBackgroundImage>d__20g"
+  },
+  {
+    "vaddr": 6444337691,
+    "paddr": 1884187,
+    "size": 179,
+    "length": 179,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(get_CanSetLockScreen6get_CanSetDesktopBackground8get_UseBingImageAsLockScreen8set_UseBingImageAsLockScreenFget_UseBingImageAsDesktopBackgroundFset_UseBingImageAsDesktopBackground"
+  },
+  {
+    "vaddr": 6444338012,
+    "paddr": 1884508,
+    "size": 21,
+    "length": 20,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "$SetLockScreenImage@"
+  },
+  {
+    "vaddr": 6444338052,
+    "paddr": 1884548,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2SetDesktopBackgroundImagegrCE"
+  },
+  {
+    "vaddr": 6444338122,
+    "paddr": 1884618,
+    "size": 20,
+    "length": 20,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "z!\"lockScreenManager"
+  },
+  {
+    "vaddr": 6444338144,
+    "paddr": 1884640,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "t!0desktopBackgroundManager"
+  },
+  {
+    "vaddr": 6444338174,
+    "paddr": 1884670,
+    "size": 18,
+    "length": 18,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "! CanSetLockScreen"
+  },
+  {
+    "vaddr": 6444338196,
+    "paddr": 1884692,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ".CanSetDesktopBackground"
+  },
+  {
+    "vaddr": 6444338224,
+    "paddr": 1884720,
+    "size": 25,
+    "length": 25,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0UseBingImageAsLockScreen"
+  },
+  {
+    "vaddr": 6444338257,
+    "paddr": 1884753,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">UseBingImageAsDesktopBackground"
+  },
+  {
+    "vaddr": 6444338403,
+    "paddr": 1884899,
+    "size": 287,
+    "length": 287,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "get_ErrorTitle$get_ImageFileTitle get_LiveTileText(get_SaveErrorMessage:get_SetLockScreenErrorMessageHget_SetDesktopBackgroundErrorMessage<get_DownloadImagesErrorMessage*get_ImageSavedMessage0get_LockScreenSetMessage>get_DesktopBackgroundSetMessage\"get_PrivacyPolicy(get_PrivacyPolicyUrl"
+  },
+  {
+    "vaddr": 6444338801,
+    "paddr": 1885297,
+    "size": 12,
+    "length": 12,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "LiveTileText"
+  },
+  {
+    "vaddr": 6444338838,
+    "paddr": 1885334,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2SetLockScreenErrorMessage"
+  },
+  {
+    "vaddr": 6444338868,
+    "paddr": 1885364,
+    "size": 33,
+    "length": 33,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "@SetDesktopBackgroundErrorMessage"
+  },
+  {
+    "vaddr": 6444338958,
+    "paddr": 1885454,
+    "size": 21,
+    "length": 21,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(LockScreenSetMessage"
+  },
+  {
+    "vaddr": 6444338983,
+    "paddr": 1885479,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "6DesktopBackgroundSetMessage"
+  },
+  {
+    "vaddr": 6444339054,
+    "paddr": 1885550,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "*BingLockScreenManager\u001b\b"
+  },
+  {
+    "vaddr": 6444339386,
+    "paddr": 1885882,
+    "size": 20,
+    "length": 20,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "&ILockScreenProvider"
+  },
+  {
+    "vaddr": 6444339439,
+    "paddr": 1885935,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",IBingLockScreenManager"
+  },
+  {
+    "vaddr": 6444339489,
+    "paddr": 1885985,
+    "size": 21,
+    "length": 21,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "$LockScreenProvider\u001b\b"
+  },
+  {
+    "vaddr": 6444340016,
+    "paddr": 1886512,
+    "size": 17,
+    "length": 17,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": " ImageArchiveData"
+  },
+  {
+    "vaddr": 6444341593,
+    "paddr": 1888089,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Kf20DesktopBackgroundManager\u001b\b"
+  },
+  {
+    "vaddr": 6444341921,
+    "paddr": 1888417,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "4IDesktopBackgroundProvider"
+  },
+  {
+    "vaddr": 6444341981,
+    "paddr": 1888477,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2IDesktopBackgroundManager"
+  },
+  {
+    "vaddr": 6444342034,
+    "paddr": 1888530,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ":FakeDesktopBackgroundProvider"
+  },
+  {
+    "vaddr": 6444343040,
+    "paddr": 1889536,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2DesktopBackgroundProvider\u001b\b"
+  },
+  {
+    "vaddr": 6444343427,
+    "paddr": 1889923,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "BPersonalizationLockScreenProvider\u001b\b"
+  },
+  {
+    "vaddr": 6444349299,
+    "paddr": 1895795,
+    "size": 283,
+    "length": 283,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "JSON Schema validation has been moved to its own package. See https://www.newtonsoft.com/jsonschema for more details.2get_ProcessDictionaryKeys2set_ProcessDictionaryKeys:get_ProcessExtensionDataNames:set_ProcessExtensionDataNames4get_OverrideSpecifiedNames4set_OverrideSpecifiedNames"
+  },
+  {
+    "vaddr": 6444418356,
+    "paddr": 1964852,
+    "size": 260,
+    "length": 260,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "DeclarationName\b?xml JsonNamespaceUriRhttp://james.newtonking.com/projects/jsonV<DeserializeRootElementName>k__BackingFieldH<WriteArrayAttribute>k__BackingField><OmitRootObject>k__BackingFieldP<EncodeSpecialCharacters>k__BackingField4DeserializeRootElementName"
+  },
+  {
+    "vaddr": 6444424887,
+    "paddr": 1971383,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(BackgroundTaskHelper\u001b\b"
+  },
+  {
+    "vaddr": 6444470921,
+    "paddr": 2017417,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E(<UpdateLiveTile>d__1\fc55"
+  },
+  {
+    "vaddr": 6444470968,
+    "paddr": 2017464,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E,<UpdateLockScreen>d__2\f\u000b"
+  },
+  {
+    "vaddr": 6444471017,
+    "paddr": 2017513,
+    "size": 33,
+    "length": 33,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E:<UpdateDesktopBackground>d__3\f"
+  },
+  {
+    "vaddr": 6444471108,
+    "paddr": 2017604,
+    "size": 16,
+    "length": 15,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "UpdateLiveTile@"
+  },
+  {
+    "vaddr": 6444471150,
+    "paddr": 2017646,
+    "size": 19,
+    "length": 18,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": " UpdateLockScreen@"
+  },
+  {
+    "vaddr": 6444471195,
+    "paddr": 2017691,
+    "size": 26,
+    "length": 25,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ".UpdateDesktopBackground@"
+  },
+  {
+    "vaddr": 6444471573,
+    "paddr": 2018069,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0<SetLockScreenImage>d__9\f"
+  },
+  {
+    "vaddr": 6444471622,
+    "paddr": 2018118,
+    "size": 31,
+    "length": 31,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E8<UpdateLockScreenImage>d__10"
+  },
+  {
+    "vaddr": 6444471707,
+    "paddr": 2018203,
+    "size": 33,
+    "length": 33,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E2<SetLockScreenImage>d__12\fsZ5k"
+  },
+  {
+    "vaddr": 6444471860,
+    "paddr": 2018356,
+    "size": 24,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "*UpdateLockScreenImage@"
+  },
+  {
+    "vaddr": 6444471899,
+    "paddr": 2018395,
+    "size": 27,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0GetNewLockScreenImageUrl@"
+  },
+  {
+    "vaddr": 6444471997,
+    "paddr": 2018493,
+    "size": 20,
+    "length": 20,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "!$lockScreenProvider"
+  },
+  {
+    "vaddr": 6444472037,
+    "paddr": 2018533,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0<SetLockScreenImage>d__2gc"
+  },
+  {
+    "vaddr": 6444472076,
+    "paddr": 2018572,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E0<SetLockScreenImage>d__3\f"
+  },
+  {
+    "vaddr": 6444472148,
+    "paddr": 2018644,
+    "size": 17,
+    "length": 16,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "GetImageArchive@"
+  },
+  {
+    "vaddr": 6444472209,
+    "paddr": 2018705,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "*<GetImageArchive>d__3\f["
+  },
+  {
+    "vaddr": 6444472265,
+    "paddr": 2018761,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E*<GetImageArchive>d__4"
+  },
+  {
+    "vaddr": 6444472389,
+    "paddr": 2018885,
+    "size": 31,
+    "length": 31,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "BingBaseUrl&http://www.bing.com"
+  },
+  {
+    "vaddr": 6444472421,
+    "paddr": 2018917,
+    "size": 77,
+    "length": 77,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "ImageArchiveUrlzhttp://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n={0}"
+  },
+  {
+    "vaddr": 6444472591,
+    "paddr": 2019087,
+    "size": 181,
+    "length": 181,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0get_CurrentLockScreenUrl0set_CurrentLockScreenUrl>get_CurrentDesktopBackgroundUrl>set_CurrentDesktopBackgroundUrl,get_CurrentLiveTileUrl,set_CurrentLiveTileUrl(CurrentLockScreenUrl"
+  },
+  {
+    "vaddr": 6444472778,
+    "paddr": 2019274,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "\t\"6CurrentDesktopBackgroundUrl"
+  },
+  {
+    "vaddr": 6444472813,
+    "paddr": 2019309,
+    "size": 22,
+    "length": 22,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "k\n\"$CurrentLiveTileUrl"
+  },
+  {
+    "vaddr": 6444472903,
+    "paddr": 2019399,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",<LoadImageArchive>d__3"
+  },
+  {
+    "vaddr": 6444472980,
+    "paddr": 2019476,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E,<SaveImageArchive>d__4\f"
+  },
+  {
+    "vaddr": 6444473375,
+    "paddr": 2019871,
+    "size": 40,
+    "length": 40,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E GetImageFileName LoadImageArchivegrCE"
+  },
+  {
+    "vaddr": 6444473420,
+    "paddr": 2019916,
+    "size": 19,
+    "length": 18,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": " SaveImageArchive@"
+  },
+  {
+    "vaddr": 6444473657,
+    "paddr": 2020153,
+    "size": 90,
+    "length": 89,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(ImageArchiveFileName\"ImageArchive.json ImagesFolderName\fImages2MigrateFromRoamingToLocal"
+  },
+  {
+    "vaddr": 6444473765,
+    "paddr": 2020261,
+    "size": 243,
+    "length": 243,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">UseBingImageAsLockScreenSettingLUseBingImageAsDesktopBackgroundSetting6CurrentLockScreenUrlSetting2CurrentLockScreenImageUrlDCurrentDesktopBackgroundUrlSetting@CurrentDesktopBackgroundImageUrl2CurrentLiveTileUrlSetting.CurrentLiveTileImageUrl"
+  },
+  {
+    "vaddr": 6444474269,
+    "paddr": 2020765,
+    "size": 33,
+    "length": 33,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "><SetDesktopBackgroundImage>d__9\f"
+  },
+  {
+    "vaddr": 6444474325,
+    "paddr": 2020821,
+    "size": 40,
+    "length": 40,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/EF<UpdateDesktopBackgroundImage>d__10g3"
+  },
+  {
+    "vaddr": 6444474377,
+    "paddr": 2020873,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E@<SetDesktopBackgroundImage>d__12g"
+  },
+  {
+    "vaddr": 6444474464,
+    "paddr": 2020960,
+    "size": 33,
+    "length": 33,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "8UpdateDesktopBackgroundImagegrCE"
+  },
+  {
+    "vaddr": 6444474502,
+    "paddr": 2020998,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">GetNewDesktopBackgroundImageUrlgrCE"
+  },
+  {
+    "vaddr": 6444474543,
+    "paddr": 2021039,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2desktopBackgroundProvider"
+  },
+  {
+    "vaddr": 6444474803,
+    "paddr": 2021299,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E0<SaveLiveTileImage>d__13\f"
+  },
+  {
+    "vaddr": 6444474939,
+    "paddr": 2021435,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",GetNewLiveTileImageUrl"
+  },
+  {
+    "vaddr": 6444474993,
+    "paddr": 2021489,
+    "size": 20,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "\"SaveLiveTileImage@"
+  },
+  {
+    "vaddr": 6444475140,
+    "paddr": 2021636,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ".LiveTileImageFolderName"
+  },
+  {
+    "vaddr": 6444475165,
+    "paddr": 2021661,
+    "size": 62,
+    "length": 62,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "LiveTiles*LocalImageFileUriBase<ms-appdata:///local/LiveTiles/"
+  },
+  {
+    "vaddr": 6444475558,
+    "paddr": 2022054,
+    "size": 34,
+    "length": 34,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "r><SetDesktopBackgroundImage>d__3\f"
+  },
+  {
+    "vaddr": 6444475625,
+    "paddr": 2022121,
+    "size": 34,
+    "length": 34,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E><SetDesktopBackgroundImage>d__4"
+  },
+  {
+    "vaddr": 6444475741,
+    "paddr": 2022237,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E.<SetWallpaperImage>d__6\f"
+  },
+  {
+    "vaddr": 6444475844,
+    "paddr": 2022340,
+    "size": 20,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "\"SetWallpaperImage@"
+  },
+  {
+    "vaddr": 6444475901,
+    "paddr": 2022397,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "6DesktopBackgroundFolderName"
+  },
+  {
+    "vaddr": 6444475930,
+    "paddr": 2022426,
+    "size": 10,
+    "length": 10,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Wallpaper\f"
+  },
+  {
+    "vaddr": 6444475963,
+    "paddr": 2022459,
+    "size": 27,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E0<SetLockScreenImage>d__4"
+  },
+  {
+    "vaddr": 6444476040,
+    "paddr": 2022536,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E0<SetLockScreenImage>d__6gc\fsg"
+  },
+  {
+    "vaddr": 6444476119,
+    "paddr": 2022615,
+    "size": 21,
+    "length": 21,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(LockScreenFolderName"
+  },
+  {
+    "vaddr": 6444492286,
+    "paddr": 2038782,
+    "size": 133,
+    "length": 133,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/Newtonsoft.Json.Bson for more details."
+  },
+  {
+    "vaddr": 6444495289,
+    "paddr": 2041785,
+    "size": 237,
+    "length": 236,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">get_IsLockScreenSettingsVisible>set_IsLockScreenSettingsVisibleBOnUseBingImageAsLockScreenChangedLget_IsDesktopBackgroundSettingsVisibleLset_IsDesktopBackgroundSettingsVisiblePOnUseBingImageAsDesktopBackgroundChanged\"get_GoBackCommand@"
+  },
+  {
+    "vaddr": 6444495600,
+    "paddr": 2042096,
+    "size": 155,
+    "length": 155,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "60useBingImageAsLockScreenX<IsLockScreenSettingsVisible>k__BackingField>useBingImageAsDesktopBackgroundf<IsDesktopBackgroundSettingsVisible>k__BackingField"
+  },
+  {
+    "vaddr": 6444495762,
+    "paddr": 2042258,
+    "size": 29,
+    "length": 29,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",6IsLockScreenSettingsVisible"
+  },
+  {
+    "vaddr": 6444495804,
+    "paddr": 2042300,
+    "size": 38,
+    "length": 38,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "#!,DIsDesktopBackgroundSettingsVisible"
+  },
+  {
+    "vaddr": 6444496338,
+    "paddr": 2042834,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E6<OnSetLockScreenImage>d__65"
+  },
+  {
+    "vaddr": 6444496392,
+    "paddr": 2042888,
+    "size": 42,
+    "length": 42,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/ED<OnSetDesktopBackgroundImage>d__66g3Jtg"
+  },
+  {
+    "vaddr": 6444496569,
+    "paddr": 2043065,
+    "size": 183,
+    "length": 183,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "set_IsBusy&get_ShowDescription&set_ShowDescription.get_NotificationMessage.set_NotificationMessage4get_IsSetLockScreenVisibleBget_IsSetDesktopBackgroundVisible.get_IsBackgroundVisible"
+  },
+  {
+    "vaddr": 6444496753,
+    "paddr": 2043249,
+    "size": 211,
+    "length": 211,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "get_SaveCommand$get_RefreshCommand:get_SetLockScreenImageCommand8CanSetLockScreenImageCommandHget_SetDesktopBackgroundImageCommandFCanSetDesktopBackgroundImageCommand.get_OpenSettingsCommand(get_OpenAboutCommand"
+  },
+  {
+    "vaddr": 6444497051,
+    "paddr": 2043547,
+    "size": 42,
+    "length": 42,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": " OnRefreshCommand(OnSetLockScreenImagegrCE"
+  },
+  {
+    "vaddr": 6444497098,
+    "paddr": 2043594,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "6OnSetDesktopBackgroundImagegrCE"
+  },
+  {
+    "vaddr": 6444497339,
+    "paddr": 2043835,
+    "size": 110,
+    "length": 110,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "refreshCommand2setLockScreenImageCommand@setDesktopBackgroundImageCommand&openSettingsCommand openAboutCommand"
+  },
+  {
+    "vaddr": 6444497662,
+    "paddr": 2044158,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "#A,,IsSetLockScreenVisible"
+  },
+  {
+    "vaddr": 6444497690,
+    "paddr": 2044186,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "A,:IsSetDesktopBackgroundVisible"
+  },
+  {
+    "vaddr": 6444497783,
+    "paddr": 2044279,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "C,2SetLockScreenImageCommand"
+  },
+  {
+    "vaddr": 6444497812,
+    "paddr": 2044308,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "sC,@SetDesktopBackgroundImageCommand"
+  },
+  {
+    "vaddr": 6444498199,
+    "paddr": 2044695,
+    "size": 24,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",RegisterBackgroundTask"
+  },
+  {
+    "vaddr": 6444500843,
+    "paddr": 2047339,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ":<RegisterBackgroundTasks>d__2"
+  },
+  {
+    "vaddr": 6444500897,
+    "paddr": 2047393,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "/E.RegisterBackgroundTasksgrCE"
+  },
+  {
+    "vaddr": 6444500932,
+    "paddr": 2047428,
+    "size": 42,
+    "length": 42,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",UpdateLiveTileTaskName$UpdateLiveTileTask"
+  },
+  {
+    "vaddr": 6444530812,
+    "paddr": 2077308,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "\b\f6<bingLockScreenManager>5__3"
+  },
+  {
+    "vaddr": 6444530843,
+    "paddr": 2077339,
+    "size": 34,
+    "length": 34,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "#m!<<desktopBackgroundManager>5__4"
+  },
+  {
+    "vaddr": 6444531376,
+    "paddr": 2077872,
+    "size": 28,
+    "length": 27,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "d0<LoadImageArchive>b__3_0@"
+  },
+  {
+    "vaddr": 6444532401,
+    "paddr": 2078897,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "{b\"&<wallpaperFile>5__3"
+  },
+  {
+    "vaddr": 6444532428,
+    "paddr": 2078924,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "*<wallpaperStream>5__4;"
+  },
+  {
+    "vaddr": 6444532555,
+    "paddr": 2079051,
+    "size": 47,
+    "length": 47,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "n\"(<lockScreenFile>5__3,<lockScreenStream>5__4;"
+  },
+  {
+    "vaddr": 6444554571,
+    "paddr": 2101067,
+    "size": 22,
+    "length": 22,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "(get_CanSetLockScreenM"
+  },
+  {
+    "vaddr": 6444554594,
+    "paddr": 2101090,
+    "size": 28,
+    "length": 28,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "6get_CanSetDesktopBackground"
+  },
+  {
+    "vaddr": 6444554624,
+    "paddr": 2101120,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "8get_UseBingImageAsLockScreenY"
+  },
+  {
+    "vaddr": 6444554655,
+    "paddr": 2101151,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "8set_UseBingImageAsLockScreenM"
+  },
+  {
+    "vaddr": 6444554686,
+    "paddr": 2101182,
+    "size": 37,
+    "length": 37,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Fget_UseBingImageAsDesktopBackgroundE"
+  },
+  {
+    "vaddr": 6444554724,
+    "paddr": 2101220,
+    "size": 36,
+    "length": 36,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "Fset_UseBingImageAsDesktopBackground"
+  },
+  {
+    "vaddr": 6444554853,
+    "paddr": 2101349,
+    "size": 19,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "$SetLockScreenImage"
+  },
+  {
+    "vaddr": 6444554873,
+    "paddr": 2101369,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2SetDesktopBackgroundImage"
+  },
+  {
+    "vaddr": 6444556646,
+    "paddr": 2103142,
+    "size": 19,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "$SetLockScreenImage"
+  },
+  {
+    "vaddr": 6444556672,
+    "paddr": 2103168,
+    "size": 19,
+    "length": 19,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "$SetLockScreenImage"
+  },
+  {
+    "vaddr": 6444556696,
+    "paddr": 2103192,
+    "size": 22,
+    "length": 22,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "*UpdateLockScreenImage"
+  },
+  {
+    "vaddr": 6444556727,
+    "paddr": 2103223,
+    "size": 15,
+    "length": 15,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "GetImageArchive"
+  },
+  {
+    "vaddr": 6444556750,
+    "paddr": 2103246,
+    "size": 15,
+    "length": 15,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "GetImageArchive"
+  },
+  {
+    "vaddr": 6444556790,
+    "paddr": 2103286,
+    "size": 25,
+    "length": 25,
+    "section": ".rdata",
+    "type": "utf8",
+    "string": "0get_CurrentLockScreenUrl"
+  },
+  {
+    "vaddr": 6444556817,
+    "paddr": 2103313,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "0set_CurrentLockScreenUrl\r"
+  },
+  {
+    "vaddr": 6444556844,
+    "paddr": 2103340,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">get_CurrentDesktopBackgroundUrl"
+  },
+  {
+    "vaddr": 6444556878,
+    "paddr": 2103374,
+    "size": 32,
+    "length": 32,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ">set_CurrentDesktopBackgroundUrl"
+  },
+  {
+    "vaddr": 6444556912,
+    "paddr": 2103408,
+    "size": 23,
+    "length": 23,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",get_CurrentLiveTileUrl"
+  },
+  {
+    "vaddr": 6444556937,
+    "paddr": 2103433,
+    "size": 24,
+    "length": 24,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": ",set_CurrentLiveTileUrl5"
+  },
+  {
+    "vaddr": 6444556962,
+    "paddr": 2103458,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2SetDesktopBackgroundImage"
+  },
+  {
+    "vaddr": 6444556990,
+    "paddr": 2103486,
+    "size": 26,
+    "length": 26,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "2SetDesktopBackgroundImage"
+  },
+  {
+    "vaddr": 6444557018,
+    "paddr": 2103514,
+    "size": 30,
+    "length": 30,
+    "section": ".rdata",
+    "type": "ascii",
+    "string": "8UpdateDesktopBackgroundImageu"
+  },
+  {
+    "vaddr": 6445267300,
+    "paddr": 2813284,
+    "size": 60,
+    "length": 29,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "UpdateLiveTileMaintenanceTask"
+  },
+  {
+    "vaddr": 6445297044,
+    "paddr": 2843028,
+    "size": 152,
+    "length": 75,
+    "section": ".data",
+    "type": "utf16le",
+    "string": ". For more information, visit http://go.microsoft.com/fwlink/?LinkId=623485"
+  },
+  {
+    "vaddr": 6445328516,
+    "paddr": 2874500,
+    "size": 20,
+    "length": 9,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://u@"
+  },
+  {
+    "vaddr": 6445348436,
+    "paddr": 2894420,
+    "size": 40,
+    "length": 19,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://www.bing.com"
+  },
+  {
+    "vaddr": 6445348564,
+    "paddr": 2894548,
+    "size": 36,
+    "length": 17,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "ImageArchive.json"
+  },
+  {
+    "vaddr": 6445348772,
+    "paddr": 2894756,
+    "size": 38,
+    "length": 18,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "UpdateLiveTileTask"
+  },
+  {
+    "vaddr": 6445348836,
+    "paddr": 2894820,
+    "size": 136,
+    "length": 67,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Universal.Service.UpdateLiveTileBackgroundTask"
+  },
+  {
+    "vaddr": 6445348996,
+    "paddr": 2894980,
+    "size": 116,
+    "length": 57,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Windows.ApplicationModel.Background.BackgroundTaskBuilder"
+  },
+  {
+    "vaddr": 6445349132,
+    "paddr": 2895116,
+    "size": 126,
+    "length": 62,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Windows.ApplicationModel.Background.BackgroundTaskRegistration"
+  },
+  {
+    "vaddr": 6445350516,
+    "paddr": 2896500,
+    "size": 66,
+    "length": 32,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "SetDesktopBackgroundErrorMessage"
+  },
+  {
+    "vaddr": 6445350604,
+    "paddr": 2896588,
+    "size": 56,
+    "length": 27,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "DesktopBackgroundSetMessage"
+  },
+  {
+    "vaddr": 6445350684,
+    "paddr": 2896668,
+    "size": 52,
+    "length": 25,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "SetLockScreenErrorMessage"
+  },
+  {
+    "vaddr": 6445350756,
+    "paddr": 2896740,
+    "size": 42,
+    "length": 20,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "LockScreenSetMessage"
+  },
+  {
+    "vaddr": 6445351644,
+    "paddr": 2897628,
+    "size": 284,
+    "length": 141,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "The given System.Uri cannot be converted into a Windows.Foundation.Uri. Please see http://go.microsoft.com/fwlink/?LinkID=215849 for details."
+  },
+  {
+    "vaddr": 6445352148,
+    "paddr": 2898132,
+    "size": 104,
+    "length": 51,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.UI.Converters.BooleanConverter"
+  },
+  {
+    "vaddr": 6445352276,
+    "paddr": 2898260,
+    "size": 110,
+    "length": 54,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.UI.Converters.VisibilityConverter"
+  },
+  {
+    "vaddr": 6445352412,
+    "paddr": 2898396,
+    "size": 122,
+    "length": 60,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.UI.Converters.NullToVisibilityConverter"
+  },
+  {
+    "vaddr": 6445352556,
+    "paddr": 2898540,
+    "size": 74,
+    "length": 36,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Views.AboutPage"
+  },
+  {
+    "vaddr": 6445352748,
+    "paddr": 2898732,
+    "size": 102,
+    "length": 50,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Views.ApplicationSettingsPage"
+  },
+  {
+    "vaddr": 6445352876,
+    "paddr": 2898860,
+    "size": 72,
+    "length": 35,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Views.MainPage"
+  },
+  {
+    "vaddr": 6445353268,
+    "paddr": 2899252,
+    "size": 64,
+    "length": 31,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "UseBingImageAsDesktopBackground"
+  },
+  {
+    "vaddr": 6445353356,
+    "paddr": 2899340,
+    "size": 50,
+    "length": 24,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "UseBingImageAsLockScreen"
+  },
+  {
+    "vaddr": 6445357620,
+    "paddr": 2903604,
+    "size": 22,
+    "length": 10,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "LockScreen"
+  },
+  {
+    "vaddr": 6445359212,
+    "paddr": 2905196,
+    "size": 76,
+    "length": 37,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Setting of desktop background failed."
+  },
+  {
+    "vaddr": 6445359308,
+    "paddr": 2905292,
+    "size": 20,
+    "length": 9,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Wallpaper"
+  },
+  {
+    "vaddr": 6445359700,
+    "paddr": 2905684,
+    "size": 62,
+    "length": 30,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "ms-appdata:///local/LiveTiles/"
+  },
+  {
+    "vaddr": 6445360068,
+    "paddr": 2906052,
+    "size": 26,
+    "length": 12,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "LiveTileText"
+  },
+  {
+    "vaddr": 6445360116,
+    "paddr": 2906100,
+    "size": 20,
+    "length": 9,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "LiveTiles"
+  },
+  {
+    "vaddr": 6445360636,
+    "paddr": 2906620,
+    "size": 88,
+    "length": 43,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "SetDesktopBackgroundImage is not supported."
+  },
+  {
+    "vaddr": 6445360748,
+    "paddr": 2906732,
+    "size": 48,
+    "length": 23,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "CurrentLiveTileImageUrl"
+  },
+  {
+    "vaddr": 6445360820,
+    "paddr": 2906804,
+    "size": 66,
+    "length": 32,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "CurrentDesktopBackgroundImageUrl"
+  },
+  {
+    "vaddr": 6445360908,
+    "paddr": 2906892,
+    "size": 52,
+    "length": 25,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "CurrentLockScreenImageUrl"
+  },
+  {
+    "vaddr": 6445361292,
+    "paddr": 2907276,
+    "size": 124,
+    "length": 61,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n={0}"
+  },
+  {
+    "vaddr": 6445361436,
+    "paddr": 2907420,
+    "size": 76,
+    "length": 37,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "Windows.System.UserProfile.LockScreen"
+  },
+  {
+    "vaddr": 6445362036,
+    "paddr": 2908020,
+    "size": 60,
+    "length": 29,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://www.w3.org/2000/xmlns/"
+  },
+  {
+    "vaddr": 6445362116,
+    "paddr": 2908100,
+    "size": 74,
+    "length": 36,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://www.w3.org/XML/1998/namespace"
+  },
+  {
+    "vaddr": 6445364284,
+    "paddr": 2910268,
+    "size": 84,
+    "length": 41,
+    "section": ".data",
+    "type": "utf16le",
+    "string": "http://james.newtonking.com/projects/json"
+  },
+  {
+    "vaddr": 6445551116,
+    "paddr": 3097100,
+    "size": 40,
+    "length": 39,
+    "section": ".data",
+    "type": "ascii",
+    "string": "Duracellko.BingImage.Universal.Service."
+  },
+  {
+    "vaddr": 6445563028,
+    "paddr": 3109012,
+    "size": 16,
+    "length": 15,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTask"
+  },
+  {
+    "vaddr": 6445563045,
+    "paddr": 3109029,
+    "size": 24,
+    "length": 23,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskInstance"
+  },
+  {
+    "vaddr": 6445563070,
+    "paddr": 3109054,
+    "size": 24,
+    "length": 23,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskDeferral"
+  },
+  {
+    "vaddr": 6445565100,
+    "paddr": 3111084,
+    "size": 28,
+    "length": 27,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration"
+  },
+  {
+    "vaddr": 6445566777,
+    "paddr": 3112761,
+    "size": 23,
+    "length": 22,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskBuilder"
+  },
+  {
+    "vaddr": 6445566801,
+    "paddr": 3112785,
+    "size": 35,
+    "length": 34,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistrationStatics"
+  },
+  {
+    "vaddr": 6445566854,
+    "paddr": 3112838,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>"
+  },
+  {
+    "vaddr": 6445566906,
+    "paddr": 3112890,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>"
+  },
+  {
+    "vaddr": 6445566971,
+    "paddr": 3112955,
+    "size": 30,
+    "length": 29,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>>"
+  },
+  {
+    "vaddr": 6445567037,
+    "paddr": 3113021,
+    "size": 30,
+    "length": 29,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>>"
+  },
+  {
+    "vaddr": 6445571907,
+    "paddr": 3117891,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>"
+  },
+  {
+    "vaddr": 6445571950,
+    "paddr": 3117934,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>"
+  },
+  {
+    "vaddr": 6445572032,
+    "paddr": 3118016,
+    "size": 19,
+    "length": 18,
+    "section": ".data",
+    "type": "ascii",
+    "string": "ILockScreenStatics"
+  },
+  {
+    "vaddr": 6445580527,
+    "paddr": 3126511,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "UpdateLiveTileBackgroundTask"
+  },
+  {
+    "vaddr": 6445580557,
+    "paddr": 3126541,
+    "size": 23,
+    "length": 22,
+    "section": ".data",
+    "type": "ascii",
+    "string": "BackgroundTaskDeferral"
+  },
+  {
+    "vaddr": 6445581514,
+    "paddr": 3127498,
+    "size": 22,
+    "length": 21,
+    "section": ".data",
+    "type": "ascii",
+    "string": "BackgroundTaskBuilder"
+  },
+  {
+    "vaddr": 6445581537,
+    "paddr": 3127521,
+    "size": 27,
+    "length": 26,
+    "section": ".data",
+    "type": "ascii",
+    "string": "BackgroundTaskRegistration"
+  },
+  {
+    "vaddr": 6445582506,
+    "paddr": 3128490,
+    "size": 11,
+    "length": 10,
+    "section": ".data",
+    "type": "ascii",
+    "string": "LockScreen"
+  },
+  {
+    "vaddr": 6445582604,
+    "paddr": 3128588,
+    "size": 30,
+    "length": 29,
+    "section": ".data",
+    "type": "ascii",
+    "string": "UserProfileLockScreenContract"
+  },
+  {
+    "vaddr": 6445592637,
+    "paddr": 3138621,
+    "size": 29,
+    "length": 28,
+    "section": ".data",
+    "type": "ascii",
+    "string": "IBackgroundTaskRegistration>"
+  },
+  {
+    "vaddr": 6445900048,
+    "paddr": 3439888,
+    "size": 2047,
+    "length": 2047,
+    "section": ".rsrc",
+    "type": "ascii",
+    "string": "Build Type: ret\r\n\r\nTool chain:\r\nilc.exe         : 1.7.25909.00 built by: PROJECTNGDR2\r\nnutc_driver.exe : 1.7.25909.00 built by: PROJECTNGDR2\r\nrhbind.exe      : 1.7.25909.0 built by: PROJECTNGDR2\r\nsg.exe          : 1.7.25909.00 built by: PROJECTNGDR2\r\n\r\nFramework:\r\nclrcompression.dll                                     : 1.0.24214.00 built by: PROJECTKREL\r\nDuracellko.BingImage.Model.dll                         : 1.0.0.0\r\nDuracellko.BingImage.UI.dll                            : 1.0.0.0\r\nMicrosoft.CSharp.dll                                   : 4.6.24705.01\r\nMicrosoft.VisualBasic.dll                              : 1.0.24212.01\r\nMicrosoft.Win32.Primitives.dll                         : 4.6.24705.01\r\nmscorlib.dll                                           : 4.6.24301.0\r\nNewtonsoft.Json.dll                                    : 12.0.1.22727\r\nSystem.AppContext.dll                                  : 4.6.24705.01\r\nSystem.Buffers.dll                                     : 4.6.24705.01\r\nSystem.Collections.Concurrent.dll                      : 4.6.23123.00\r\nSystem.Collections.dll                                 : 4.6.23123.00 built by: PROJECTKREL\r\nSystem.Collections.Immutable.dll                       : 1.0.24212.01\r\nSystem.Collections.NonGeneric.dll                      : 1.0.24212.01\r\nSystem.Collections.Specialized.dll                     : 1.0.24212.01\r\nSystem.ComponentModel.Annotations.dll                  : 1.0.24212.01\r\nSystem.ComponentModel.DataAnnotations.dll              : 4.6.24301.0\r\nSystem.ComponentModel.dll                              : 1.0.24212.01\r\nSystem.ComponentModel.EventBasedAsync.dll              : 1.0.24212.01\r\nSystem.ComponentModel.Primitives.dll                   : 4.6.24705.01\r\nSystem.ComponentModel.TypeConverter.dll                : 4.6.24705.01\r\nSystem.Console.dll                                     : 4.6.24705.01\r\nSystem.Core.dll                                        : 4.6.24301.0\r\nSystem.Data.Common.dll                                 : 1.0.24212.01\r\nSystem.Diagnostics.Contracts.dll               "
+  },
+  {
+    "vaddr": 6445911412,
+    "paddr": 3451252,
+    "size": 62,
+    "length": 30,
+    "section": ".rsrc",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Universal"
+  },
+  {
+    "vaddr": 6445911556,
+    "paddr": 3451396,
+    "size": 70,
+    "length": 34,
+    "section": ".rsrc",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Universal.exe"
+  },
+  {
+    "vaddr": 6445911664,
+    "paddr": 3451504,
+    "size": 56,
+    "length": 27,
+    "section": ".rsrc",
+    "type": "utf16le",
+    "string": "Copyright © Duracellko 2013",
+    "blocks": [
+      "Basic Latin",
+      "Latin-1 Supplement"
+    ]
+  },
+  {
+    "vaddr": 6445911804,
+    "paddr": 3451644,
+    "size": 70,
+    "length": 34,
+    "section": ".rsrc",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Universal.exe"
+  },
+  {
+    "vaddr": 6445911908,
+    "paddr": 3451748,
+    "size": 62,
+    "length": 30,
+    "section": ".rsrc",
+    "type": "utf16le",
+    "string": "Duracellko.BingImage.Universal"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "checked_utc": "2026-10-17T10:40:14.849017+00:00",
+  "target": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "bytes": 6566400,
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a"
+  },
+  "route": "REA execute-rizin-command -> bundled Rizin -> rz-ghidra; no target execution or GUI automation",
+  "process_local_setting": {
+    "key": "ghidra.sleighhome",
+    "value": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh"
+  },
+  "language": {
+    "processor": "x86",
+    "endian": "little",
+    "size": "64",
+    "variant": "default",
+    "version": "4.6",
+    "slafile": "x86-64.sla",
+    "processorspec": "x86-64.pspec",
+    "manualindexfile": "../manuals/x86.idx",
+    "id": "x86:LE:64:default"
+  },
+  "resources": [
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\cutter.exe",
+      "bytes": 4169216,
+      "sha256": "82942b867b2a348119978a70c1cf08bf166af2432c04d71e8018e2edb63b13e5"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\rizin.exe",
+      "bytes": 12288,
+      "sha256": "0b04fc8f44376f16a3f0cf4bd3402b7a28cd5dbc9cbd362840d765ac1712919f"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\core_ghidra.dll",
+      "bytes": 2558976,
+      "sha256": "98abf3213feb7105cee733da539ade180406fdc36736caa293e06b8724f823e2"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86.ldefs",
+      "bytes": 5511,
+      "sha256": "6459d981673d7591563c2823ce8a06f93a06034fde92375264388d31ecb508be"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64.sla",
+      "bytes": 487659,
+      "sha256": "d5adc314e2278228b380d8f653b2b579fa4a65986bb1d39b095e461fd5432481"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64.pspec",
+      "bytes": 11990,
+      "sha256": "ccaa11963e4d9ba93269c5cf8d75e619bbd9e15589093cc5b7c1ef69fc792c42"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64-win.cspec",
+      "bytes": 7719,
+      "sha256": "27fec453349e6aa8a613cb92a111ab91fb46c4b341fc24db69cf22749fbf4209"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64-gcc.cspec",
+      "bytes": 12595,
+      "sha256": "fbbce00ad9ed8c3055674b6117b5f14e85a917e7285ef59d2dc5ce9059dfc929"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64-golang.cspec",
+      "bytes": 13621,
+      "sha256": "c5de234f6a529150421166ee7906a60ea00f536607b9ea1761ee6d4d71829d9f"
+    },
+    {
+      "path": "E:\\Softwares\\Cutter-v2.5.0-Windows-x86_64\\lib\\rizin\\plugins\\rz_ghidra_sleigh\\x86-64-swift.cspec",
+      "bytes": 8529,
+      "sha256": "27ee386047e8f462be35f39885f2be342a6a209e2f68e65a8b5a7aed80fd8e51"
+    }
+  ],
+  "evidence_id": "ev_64e66ff34d536d1b60d2726a92ba035438f60c6e9ba8b19ff8b8517f0cc37cee",
+  "evidence_path": "evidence/rea/cutter-navigator-dispose-pseudocode.json",
+  "reconstruction_limit": "Pseudo-C only; inferred calling conventions, parameters, managed types, and exception regions need instruction/ABI confirmation. Resource hashes are supplemental identities, not fields automatically bound by the REA record.",
+  "prior_failure": "The previous default SLEIGH search did not resolve x86:LE:64:default; the resource directory is present and an explicit process-local path makes this focused probe succeed."
+}

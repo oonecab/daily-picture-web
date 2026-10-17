@@ -1,0 +1,443 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "document": "docs/image-loading-and-lifetime.md",
+  "method": "Read-only REA pDj + instruction-byte verification + local WinMD IID/ABI + matching SharedLibrary PDB; names are recovered semantic roles.",
+  "findings": [
+    {
+      "id": "IMG-01",
+      "title": "图片项字段和懒加载门控",
+      "confirmed": [
+        "图片项构造把记录写入+0x10、服务写入+0x18；ImageSource getter读取+0x20。",
+        "getter在+0x20为空时调用async-void入口，返回当时的+0x20；setter仅在引用改变时赋值并通知ImageSource。"
+      ],
+      "inferred": [
+        "getter触发的是显示解码任务；是否同步完成取决于异步操作的实际完成状态。"
+      ],
+      "unknown": [
+        "没有恢复完整原始C#类型定义；EEType大小不等于已证明每一个字段。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-item-constructor.json",
+          "evidence_id": "ev_56f06e3f886158a56cb455d7e554bec19423f8af6b2a2fe0663e282aade32026",
+          "addresses": [
+            "0x1804a3790"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-properties-and-load-gate.json",
+          "evidence_id": "ev_ad4ffda15da4836708da721b4eda20a7d84d407b0d02412f7b4ef9a1dbdd2231",
+          "addresses": [
+            "0x1804a9680"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-source-accessors.json",
+          "evidence_id": "ev_069f76e9b43ab4a3f4522c317ee2bfdd648ab01959b6ea39453966d4a5b2c6bf",
+          "addresses": [
+            "0x1804a8d40"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-getters-load-entry.json",
+          "evidence_id": "ev_3cd8a20e3a769d5bcc275cf1048a86e6e7fc0c9415164f128e705377ec72aae4",
+          "addresses": [
+            "0x1804a8a30"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMG-02",
+      "title": "本地文件流生产链",
+      "confirmed": [
+        "manager候选实现51d1f0→517a70检查imageInfo非空，取记录URL，调用storage4bf500→4bf630。",
+        "4bf630等待GetImageFile(4bf7e0)，向返回StorageFile的IRandomAccessStreamReference调用OpenReadAsync，CancellationToken.None桥接并等待，返回流对象。",
+        "UI LoadImage通过服务接口dispatch cell313d20获取流；cell类型与manager EEType接口类型4d88相同。"
+      ],
+      "inferred": [
+        "51d1f0是该UI服务调用的高置信候选实现；参数、返回流和服务字段一致。"
+      ],
+      "unknown": [
+        "未完整恢复.NET Native dispatch map，313d20到51d1f0的具体实现槽映射仍未证明；不能画成直接call。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/manager-stream-wrapper.json",
+          "evidence_id": "ev_4c9b8b02ac26ac788f076d7a07fda235302bdf46db2a0051e65c671ed86fc9b4",
+          "addresses": [
+            "0x18051d1f0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/manager-image-stream-entry.json",
+          "evidence_id": "ev_3645eec592047613c718dd175e3c13833652cf2fda9fa1641a05f4947dde4a11",
+          "addresses": [
+            "0x180517a70"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/cached-stream-entry.json",
+          "evidence_id": "ev_10712590f9b9741a72b9bc1ca43ea29e0842c927102b3adae107d7048c52fc6c",
+          "addresses": [
+            "0x1804bf500"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/cached-image-stream-state.json",
+          "evidence_id": "ev_9acbc099a4924ea54692d10de0398393a9ce2c7c16739de999e6e6bdf099fba9",
+          "addresses": [
+            "0x1804bf630"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/ownership-and-reference-audit.json",
+          "evidence_id": null,
+          "addresses": []
+        },
+        {
+          "path": "evidence/image-lifetime/abi-evidence.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-03",
+      "title": "BitmapImage创建与发布顺序",
+      "confirmed": [
+        "UI状态机取得流后才激活BitmapImage，调用IBitmapSource.SetSourceAsync(slot9)，await成功后才赋值ImageSource并发属性通知。",
+        "475f10明确以context+0封送参数、+8查receiver接口、+16封送返回值；因此10f328+8的IBitmapSource才是receiver。",
+        "构造中的__AttachAndRelease处理激活引用，不代表此处释放将要显示的BitmapImage。"
+      ],
+      "inferred": [],
+      "unknown": [
+        "没有采集实际解码耗时、像素格式、GPU资源或峰值内存。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+          "addresses": [
+            "0x1804a8af0",
+            "0x1804a8c00",
+            "0x1804a8c8e"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/bitmapimage-constructor.json",
+          "evidence_id": "ev_e5eb0e2cd5cd7e957efc8cd4205aafdeb41b8d8595a9eed79153f4676e3af780",
+          "addresses": [
+            "0x1804a9630"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/bitmap-source-abi-dispatch.json",
+          "evidence_id": "ev_f024ffa65789325187c6459a9c5601c16179f15b367fe431bd3de435ccca2bee",
+          "addresses": [
+            "0x180475f10"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/abi-evidence.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-04",
+      "title": "流具有显式Dispose边界",
+      "confirmed": [
+        "正常完成和finally funclet都对非空stream调用System.IDisposable.Dispose，异步挂起状态不执行该Dispose。",
+        "正常完成将状态机stream+0x28置空；ImageSource已发布到VM+0x20。",
+        "IDisposable的custom import2a6748由匹配SharedLibrary PDB解析确认。"
+      ],
+      "inferred": [
+        "临时读取流的寿命覆盖SetSourceAsync await；显示图片对象的寿命超过这次流操作。"
+      ],
+      "unknown": [
+        "未通过现场文件句柄或COM引用计数验证底层句柄实际释放时点。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+          "addresses": [
+            "0x1804a8c9b",
+            "0x1804a8ce3"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/dispose-type-import.json",
+          "evidence_id": null,
+          "addresses": []
+        },
+        {
+          "path": "evidence/image-lifetime/ownership-and-reference-audit.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-05",
+      "title": "Loaded和Unloaded管理SourceProperty观察回调",
+      "confirmed": [
+        "connector connectionId8将Image.Loaded接4c88e0、Image.Unloaded接4c86e0。",
+        "Loaded注册SourceProperty changed callback，将返回Int64 token装箱写入Image.Tag。",
+        "Unloaded从Tag取token，仅调用UnregisterPropertyChangedCallback；完整handler不清Tag、不清Image.Source或VM.ImageSource、不调用主VM Dispose、不取消加载。"
+      ],
+      "inferred": [],
+      "unknown": [
+        "不能由资源字符串或单个Unloaded handler推出控件容器虚拟化策略。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-event-connection.json",
+          "evidence_id": "ev_d4afc5a9f714254925682b36ed295de132ac505c5ed20ce9a1722ea7800468b6",
+          "addresses": [
+            "0x1804c8c40"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-loaded-handler.json",
+          "evidence_id": "ev_3c1d5c44432293bfac294956417df3cdc17821656579fb6f3117a3e34ef472f1",
+          "addresses": [
+            "0x1804c88e0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-unloaded-handler.json",
+          "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+          "addresses": [
+            "0x1804c86e0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-property-callback-register.json",
+          "evidence_id": "ev_47700ad48b500545855c0383ed3cee1d1dbc1e1f0c10133e8097933cf422615a",
+          "addresses": [
+            "0x1804c89a0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-property-callback-unregister.json",
+          "evidence_id": "ev_0a1f4b57c42c8bc6970bad1264f090703a15f5b860e58de71d4214ffe4e74751",
+          "addresses": [
+            "0x1804c8780"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/abi-evidence.json",
+          "evidence_id": null,
+          "addresses": []
+        },
+        {
+          "path": "evidence/image-lifetime/ownership-and-reference-audit.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-06",
+      "title": "图片Source改变后调度选择最后一项",
+      "confirmed": [
+        "callback以async-void方式捕获MainPage和Image；Image.Tag非空时，用CoreDispatcher.RunAsync(priority0=Normal)调度4a8560→4a8580。",
+        "apply读取Items最后一项；至少两项且与Page+0x58不同，并且Image父ContentPresenter.Content正好等于该项时，存Page+0x58，SelectedIndex依次设0、Count-1。",
+        "父节点只调用一次VisualTreeHelper.GetParent；没有递归遍历或资源回收API。"
+      ],
+      "inferred": [
+        "该回调实现图片源到达后的选中位置修正。",
+        "Page+0x58构成额外强引用，集合Clear以后可能仍保存前一代最后图片项。"
+      ],
+      "unknown": [
+        "不能由此证明用户实际看到闪动或实际发生泄漏；未测事件和调度执行次序。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-source-property-callback.json",
+          "evidence_id": "ev_bee24b57d968f1eb67e7dc16e0cb6700cb2995d82d39eb6463548820dee963d0",
+          "addresses": [
+            "0x1804c8220"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-source-change-state.json",
+          "evidence_id": "ev_e0cf60c428cf092be879d8bcf7b7ff4e4d1e3ca5a48966361c99884409840333",
+          "addresses": [
+            "0x1804c82d0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-callback-dispatch-run.json",
+          "evidence_id": "ev_cced93786d729f3d9ab1a757501826e51e634f0b5f0a931fd564423b7035b317",
+          "addresses": [
+            "0x1804c8500"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-change-dispatched-action.json",
+          "evidence_id": "ev_c114f1891491b0d5f65b915e86091150911d161598274b0a133797152c65428c",
+          "addresses": [
+            "0x1804a8560"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-change-apply.json",
+          "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+          "addresses": [
+            "0x1804a8580"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-container-walk.json",
+          "evidence_id": "ev_78521b4e2f43dace7e76d81845d7f81b2445df07841ba7064373d9267827ef44",
+          "addresses": [
+            "0x1804a86a0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/abi-evidence.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-07",
+      "title": "刷新集合与图片对象可达性",
+      "confirmed": [
+        "主VM4a3290清集合后逐记录新建图片项，未先逐旧图片项调用Dispose。",
+        "已核实的ImageSource setter直接调用处只有4a8c8e，参数是解码成功BitmapImage，没有传null。",
+        "已核实路径中，Unloaded只去观察回调；Page+0x58和未完成异步状态机仍可持有图片项或控件。"
+      ],
+      "inferred": [
+        "集合Clear只移除集合这一条引用，不等于BitmapImage立刻销毁；实际回收还取决于其余托管/WinRT/XAML引用。"
+      ],
+      "unknown": [
+        "没有全程序反射或间接调用可达图，不能断言全程序不存在其他清空路径。",
+        "未验证控件缓存、虚拟化、GC触发、COM最后Release、GPU资源回收时刻。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-items-collection-replacement.json",
+          "evidence_id": "ev_f6da16cc3f6d0f3e53cffe1194127dfa0211a8529c0277d02f53ab784d501aca",
+          "addresses": [
+            "0x1804a3290"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-unloaded-handler.json",
+          "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+          "addresses": [
+            "0x1804c86e0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-change-apply.json",
+          "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+          "addresses": [
+            "0x1804a8580"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/ownership-and-reference-audit.json",
+          "evidence_id": null,
+          "addresses": []
+        }
+      ]
+    },
+    {
+      "id": "IMG-08",
+      "title": "重复加载与取消边界",
+      "confirmed": [
+        "完整getter/async入口/状态机没有共享in-flight Task或正在加载门控；两个桥接点均传CancellationToken.None。",
+        "Image.Unloaded没有向图片项或状态机发送取消，也没有在UI加载完成赋值前检查Loaded状态。"
+      ],
+      "inferred": [
+        "如果ImageSource仍为空期间getter被反复调用，可以创建多个独立加载；这是静态可发生条件，未观测实际频率。",
+        "已排入Dispatcher的动作并未被Unloaded取消；Tag未清空不是可靠的当前Loaded标志。"
+      ],
+      "unknown": [
+        "不能据此声称实际每次翻页都会重复读盘，也不能断言应用已存在可观测内存泄漏。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-properties-and-load-gate.json",
+          "evidence_id": "ev_ad4ffda15da4836708da721b4eda20a7d84d407b0d02412f7b4ef9a1dbdd2231",
+          "addresses": [
+            "0x1804a9680"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-getters-load-entry.json",
+          "evidence_id": "ev_3cd8a20e3a769d5bcc275cf1048a86e6e7fc0c9415164f128e705377ec72aae4",
+          "addresses": [
+            "0x1804a8a30"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+          "addresses": [
+            "0x1804a8af0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-source-change-state.json",
+          "evidence_id": "ev_e0cf60c428cf092be879d8bcf7b7ff4e4d1e3ca5a48966361c99884409840333",
+          "addresses": [
+            "0x1804c82d0"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-unloaded-handler.json",
+          "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+          "addresses": [
+            "0x1804c86e0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMG-09",
+      "title": "显示加载错误与下载通知不同",
+      "confirmed": [
+        "LoadImage外层catch4a8d0a以及SourceProperty callback catch4c8434调用AsyncVoidMethodBuilder.SetException。",
+        "本轮完整显示加载路径没有DownloadImagesErrorMessage通知分支；流取得后发生错误仍存在finally Dispose。"
+      ],
+      "inferred": [
+        "赋值之前的失败让ImageSource保持空，下次getter仍会再次触发加载；如果PropertyChanged订阅者抛错，字段可能已经赋值。"
+      ],
+      "unknown": [
+        "最终异常呈现由运行时/同步上下文决定，未运行验证，不声称必然崩溃或必然弹窗。"
+      ],
+      "sources": [
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+          "addresses": [
+            "0x1804a8d0a"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-callback-exception.json",
+          "evidence_id": "ev_44d24f406b84f7c714d661a511843a8224a3c4284765128a77cbaa2621f57c6e",
+          "addresses": [
+            "0x1804c8434"
+          ]
+        },
+        {
+          "path": "evidence/image-lifetime/image-source-accessors.json",
+          "evidence_id": "ev_069f76e9b43ab4a3f4522c317ee2bfdd648ab01959b6ea39453966d4a5b2c6bf",
+          "addresses": [
+            "0x1804a8d40"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "checked_utc": "2026-10-17T10:57:56.397834+00:00",
+  "scope": "Documentation links, retained evidence identities, source hashes and function-map consistency. No target runtime test or full source recovery.",
+  "required_files": 16,
+  "markdown_documents": 14,
+  "local_links_checked": 432,
+  "curated_functions": 215,
+  "selected_direct_call_edges": 239,
+  "rea_evidence_records": 179,
+  "rea_instruction_byte_observations": 29144,
+  "invalid_decode_observations": 34,
+  "failures": [],
+  "document_hashes": [
+    {
+      "path": "README.md",
+      "bytes": 3859,
+      "sha256": "51713dc32e4b5deaa86510e9efc177df5632298e804459166ade22bfb61c1585"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 17758,
+      "sha256": "6a8dba0daba98b2c2a9535f4f21d0f0c6c184e762858028a1b1e931b14bf3b55"
+    },
+    {
+      "path": "ANALYSIS.md",
+      "bytes": 14737,
+      "sha256": "7f4ec3dc331fd88b77c0b79edb40a73a87ce75b16a3b305fe662704e504794db"
+    },
+    {
+      "path": "DEEP_ANALYSIS.md",
+      "bytes": 22055,
+      "sha256": "c5c6b489c4db6e97999698a3962999a644327f836d2c14781d0d41c8b6d3f638"
+    },
+    {
+      "path": "docs/background-and-personalization.md",
+      "bytes": 36795,
+      "sha256": "bcaa4e8d9bf41fd683f9c97f3631f5c1ada10d78028fd6ca8e12c1f0aa0835d0"
+    },
+    {
+      "path": "docs/coverage-and-evidence.md",
+      "bytes": 6674,
+      "sha256": "384082a4322a527e39c0cadb54758b989ae5da761ae581e600b69cc06767f419"
+    },
+    {
+      "path": "docs/data-model-and-storage.md",
+      "bytes": 33105,
+      "sha256": "224d31dfe7cfd4e34e06cc485335778e73d31e82978763364e73f3d9898816ae"
+    },
+    {
+      "path": "docs/image-loading-and-lifetime.md",
+      "bytes": 22157,
+      "sha256": "13122429aad2a8c146cf1124ded8ebfcf60eae2c9f7c9ebdb8e1835dc48476e3"
+    },
+    {
+      "path": "docs/methodology-and-reproduction.md",
+      "bytes": 8497,
+      "sha256": "d747285565bae73107cb639c620085a8796211e00a69f455f8b2845e37ef6c1a"
+    },
+    {
+      "path": "docs/network-and-download.md",
+      "bytes": 7414,
+      "sha256": "ae2b8bfe8664f4f31dcd8dbd53f142cf0b6eab1dac9baa51e2bed11b52bd12dd"
+    },
+    {
+      "path": "docs/packaging-and-dependencies.md",
+      "bytes": 6774,
+      "sha256": "56635205f43ffc0e88d5e27968c0ab5450ae9ffd8f0a0f55b002ffd28da99d05"
+    },
+    {
+      "path": "docs/suspend-and-resume.md",
+      "bytes": 21368,
+      "sha256": "fd6fb79a345517e5447a84257fc4b56de9e77c680687c6910eec7dd3d717b3c5"
+    },
+    {
+      "path": "docs/timers-and-disposal.md",
+      "bytes": 20905,
+      "sha256": "7f89024f0c1d1887e77272f22cdc4c1db42c3799ead3b14d9317166524743042"
+    },
+    {
+      "path": "docs/ui-and-lifecycle.md",
+      "bytes": 35484,
+      "sha256": "e0c6455c6c27431fdf129baeda09b2c7254bd1e73fe7329c834c9a7a1b3c867f"
+    }
+  ]
+}

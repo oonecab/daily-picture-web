@@ -1,0 +1,78 @@
+{
+  "evidence_namespace": "RES supplemental static artifact evidence; these are not REA Evidence IDs",
+  "identity": {
+    "app": "Daily Picture",
+    "package": "14403Duracellko.NET.BingImageoftheDay",
+    "version": "1.4.13.0",
+    "architecture": "x64",
+    "publisher_display": "Duracellko.NET"
+  },
+  "resources": {
+    "named_resources": 48,
+    "candidates": 52,
+    "strings": 33,
+    "path_candidates": 14,
+    "embedded_xbf": 5,
+    "language_qualifiers": [
+      "EN"
+    ],
+    "unresolved_packaged_path_candidates": [
+      "Properties\\Default.rd.xml",
+      "WinMetadata\\Windows.winmd"
+    ]
+  },
+  "observations": [
+    {
+      "id": "RES-01",
+      "source": "original/AppxManifest.xml",
+      "observation": "UWP Windows.Universal package; .NET Native Framework/Runtime 1.7 and VCLibs 140 dependencies; XAML build metadata; ilc.exe 1.7.25927.00; Universal EXE and DLL plus WinMD; sole declared capability internetClient."
+    },
+    {
+      "id": "RES-02",
+      "source": "original/AppxManifest.xml",
+      "observation": "windows.backgroundTasks entry point Duracellko.BingImage.Universal.Service.UpdateLiveTileBackgroundTask permits timer and systemEvent task types; in-process activation points to Universal.dll."
+    },
+    {
+      "id": "RES-03",
+      "source": "resources.detailed.xml",
+      "observation": "SDK decoded resource values explicitly describe Bing image-of-day display, live tile and daily lock-screen/desktop changes; actual timers and success are not proved by text."
+    },
+    {
+      "id": "RES-04",
+      "source": "resources.detailed.xml; original/Duracellko.BingImage.Universal.xr.xml; xbf-metadata.json",
+      "observation": "MainPage resource labels, command property names and XBF strings support Refresh, set desktop wallpaper, set lock screen, Save, Settings and About feature map; XR declares FlipView, image collection/index, busy state, notifications and visibility converters."
+    },
+    {
+      "id": "RES-05",
+      "source": "resources.detailed.xml; xbf-metadata.json",
+      "observation": "ApplicationSettingsPage XBF contains UseBingImageAsLockScreen and UseBingImageAsDesktopBackground property paths; corresponding resource strings describe daily changes."
+    },
+    {
+      "id": "RES-06",
+      "source": "xbf-metadata.json",
+      "observation": "AboutPage XBF contains http://www.bing.com and http://www.duracellko.net; privacy link URI resource is http://www.duracellko.net/privacy-policy. These are packaged UI URL values, not observed HTTP requests."
+    },
+    {
+      "id": "RES-07",
+      "source": "resource-candidates.json; xbf-metadata.json",
+      "observation": "48 named resources/52 candidates; 33 String candidates all EN; 5 XBF files extracted from EmbeddedData through SDK-generated Base64. XBF 2.1 metadata parsed with exact lengths and all declared section boundaries verified."
+    }
+  ],
+  "bounded_negative": "All 33 decoded application UI strings and all five parsed XBF metadata string tables were inspected. No explicit purchase, subscription, advertisement or telemetry UI/endpoint was identified in this resource-only scope. This is not a whole-program or runtime absence claim.",
+  "limitations": [
+    "XBF node streams were not decompiled; exact node bindings/control trees are not asserted from string-table co-occurrence alone.",
+    "Resource and manifest declarations are static intent, not proof that a feature ran successfully.",
+    "No app launch, UI changes, network capture, setting change, wall-paper change, target code execution or active REA target mutation.",
+    "Only selected installed package was inspected; optional separate language packages were not investigated.",
+    "Two PRI path candidates point to files absent from the installed inventory; this does not establish runtime failure because they may be unused build residue.",
+    "The primary DLL's implementation and actual backend data endpoints are outside this supplement."
+  ],
+  "source_snapshot_final_hashes": {
+    "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\AppxManifest.xml": "8a36184886dd86574a2cdb21fc9262e523b868d593ff3be8045eaf260ebb69ec",
+    "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\AppxBlockMap.xml": "7bc7e6364ad4cad7e3f9a478fe46884e1859f2497b4f88a929b6c078178167f8",
+    "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.xr.xml": "6b400baab83f3e85320b52ae3ae32feee9506659550ed5bc25d06d126eb6fea3",
+    "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\resources.pri": "cadfe7c1cbf6b9ef0c3c36dcb1791589159a7179c38e5376e104df3d5afb5775",
+    "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.Service.winmd": "05bf616aef50bccf643d6edf8b2111e0e8d68f659c75c3c468c6338360ad7f59"
+  },
+  "original_selected_sources_unchanged": true
+}

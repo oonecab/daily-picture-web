@@ -1,0 +1,835 @@
+{
+  "source_xml": "E:\\study\\rea\\daily-picture\\evidence\\resources\\resources.detailed.xml",
+  "source_xml_sha256": "4b4bd63692df4b7bad50e2ac26cfc9b9893e356a3f89583158b46b60eb6f1709",
+  "resource_count": 48,
+  "candidate_count": 52,
+  "candidates": [
+    {
+      "name": "SplashScreen.png",
+      "index": 1,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/SplashScreen.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\SplashScreen.scale-200.png"
+    },
+    {
+      "name": "Square150x150Logo.png",
+      "index": 2,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square150x150Logo.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\Square150x150Logo.scale-200.png"
+    },
+    {
+      "name": "Square44x44Logo.png",
+      "index": 3,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square44x44Logo.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "TargetSize",
+          "value": "48",
+          "priority": "300",
+          "scoreAsDefault": "0.5",
+          "index": "6"
+        }
+      ],
+      "value": "Assets\\Square44x44Logo.targetsize-48.png"
+    },
+    {
+      "name": "Square44x44Logo.png",
+      "index": 3,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square44x44Logo.png",
+      "candidate_ordinal": 1,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "TargetSize",
+          "value": "256",
+          "priority": "300",
+          "scoreAsDefault": "1.0",
+          "index": "5"
+        }
+      ],
+      "value": "Assets\\Square44x44Logo.targetsize-256.png"
+    },
+    {
+      "name": "Square44x44Logo.png",
+      "index": 3,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square44x44Logo.png",
+      "candidate_ordinal": 2,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "TargetSize",
+          "value": "24",
+          "priority": "300",
+          "scoreAsDefault": "0.5",
+          "index": "4"
+        }
+      ],
+      "value": "Assets\\Square44x44Logo.targetsize-24.png"
+    },
+    {
+      "name": "Square44x44Logo.png",
+      "index": 3,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square44x44Logo.png",
+      "candidate_ordinal": 3,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "TargetSize",
+          "value": "16",
+          "priority": "300",
+          "scoreAsDefault": "0.5",
+          "index": "3"
+        }
+      ],
+      "value": "Assets\\Square44x44Logo.targetsize-16.png"
+    },
+    {
+      "name": "Square44x44Logo.png",
+      "index": 3,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square44x44Logo.png",
+      "candidate_ordinal": 4,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\Square44x44Logo.scale-200.png"
+    },
+    {
+      "name": "Square71x71Logo.png",
+      "index": 4,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Square71x71Logo.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\Square71x71Logo.scale-200.png"
+    },
+    {
+      "name": "StoreLogo.png",
+      "index": 5,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/StoreLogo.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\StoreLogo.scale-200.png"
+    },
+    {
+      "name": "Wide310x150Logo.png",
+      "index": 6,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Assets/Wide310x150Logo.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [
+        {
+          "name": "Scale",
+          "value": "200",
+          "priority": "200",
+          "scoreAsDefault": "1.0",
+          "index": "2"
+        }
+      ],
+      "value": "Assets\\Wide310x150Logo.scale-200.png"
+    },
+    {
+      "name": "Background.png",
+      "index": 8,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Images/Background.png",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [],
+      "value": "Images\\Background.png"
+    },
+    {
+      "name": "Default.rd.xml",
+      "index": 9,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Properties/Default.rd.xml",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [],
+      "value": "Properties\\Default.rd.xml"
+    },
+    {
+      "name": "Resources.xbf",
+      "index": 10,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Resources/Resources.xbf",
+      "candidate_ordinal": 0,
+      "type": "EmbeddedData",
+      "qualifiers": [],
+      "path": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Resources\\Resources.xbf",
+      "size": 6276,
+      "sha256": "3b1d982d3c6603c574d6658dfbb305241569742b452c16478b1450a5f6ce70a9",
+      "magic_hex": "584246001810000060080000"
+    },
+    {
+      "name": "AboutPage.xbf",
+      "index": 11,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Views/AboutPage.xbf",
+      "candidate_ordinal": 0,
+      "type": "EmbeddedData",
+      "qualifiers": [],
+      "path": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\AboutPage.xbf",
+      "size": 8582,
+      "sha256": "89dfc543924a9045bda2752cc8e25f21bf8747ee8d2661e2426409f827326079",
+      "magic_hex": "5842460016060000641b0000"
+    },
+    {
+      "name": "ApplicationSettingsPage.xbf",
+      "index": 12,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Views/ApplicationSettingsPage.xbf",
+      "candidate_ordinal": 0,
+      "type": "EmbeddedData",
+      "qualifiers": [],
+      "path": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\ApplicationSettingsPage.xbf",
+      "size": 1916,
+      "sha256": "c1bd21dc511d9ac144d62cb7a8a55400e2e5ec3029d44b16967308558c82d45d",
+      "magic_hex": "584246007e050000f2010000"
+    },
+    {
+      "name": "MainPage.xbf",
+      "index": 13,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Views/MainPage.xbf",
+      "candidate_ordinal": 0,
+      "type": "EmbeddedData",
+      "qualifiers": [],
+      "path": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\MainPage.xbf",
+      "size": 3838,
+      "sha256": "e1ccd2bfd462cdce0c36aee059505f5b891cc1926846b5404dee69c0e768501b",
+      "magic_hex": "58424600c40a00002e040000"
+    },
+    {
+      "name": "Windows.winmd",
+      "index": 14,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/WinMetadata/Windows.winmd",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [],
+      "value": "WinMetadata\\Windows.winmd"
+    },
+    {
+      "name": "App.xbf",
+      "index": 0,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/App.xbf",
+      "candidate_ordinal": 0,
+      "type": "EmbeddedData",
+      "qualifiers": [],
+      "path": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\App.xbf",
+      "size": 1092,
+      "sha256": "8eabe35f7a6ad667bc1234db5496b8b7332373f46084d5c8ba5b8559092ed793",
+      "magic_hex": "5842460068030000d0000000"
+    },
+    {
+      "name": "Duracellko.BingImage.Universal.xr.xml",
+      "index": 7,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Files/Duracellko.BingImage.Universal.xr.xml",
+      "candidate_ordinal": 0,
+      "type": "Path",
+      "qualifiers": [],
+      "value": "Duracellko.BingImage.Universal.xr.xml"
+    },
+    {
+      "name": "Label",
+      "index": 15,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "About"
+    },
+    {
+      "name": "Text",
+      "index": 16,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationDescription/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Do you like Bing images? Do you like to see them every day? This application displays Bing image of the day at screen and in live tile. Additionally it can change your lock screen image and desktop wallpaper (Windows 10 only) every day. Very simple, but useful."
+    },
+    {
+      "name": "Text",
+      "index": 17,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationTitle/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Daily Picture"
+    },
+    {
+      "name": "Title",
+      "index": 18,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutSettings/Title",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "About"
+    },
+    {
+      "name": "Text",
+      "index": 20,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutTitle/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "About"
+    },
+    {
+      "name": "Title",
+      "index": 21,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ApplicationOptions/Title",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Options"
+    },
+    {
+      "name": "Text",
+      "index": 23,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/Copyright/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Copyright © Duracellko.NET 2013"
+    },
+    {
+      "name": "Content",
+      "index": 32,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyHyperlink/Content",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Privacy policy"
+    },
+    {
+      "name": "NavigateUri",
+      "index": 33,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyHyperlink/NavigateUri",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "http://www.duracellko.net/privacy-policy"
+    },
+    {
+      "name": "Label",
+      "index": 35,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/RefreshAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Refresh"
+    },
+    {
+      "name": "Label",
+      "index": 36,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SaveAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Save"
+    },
+    {
+      "name": "Label",
+      "index": 39,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetDesktopBackgroundImageAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Set desktop wallpaper"
+    },
+    {
+      "name": "Label",
+      "index": 41,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetLockScreenImageAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Set lock screen"
+    },
+    {
+      "name": "Label",
+      "index": 42,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SettingsAppBarButton/Label",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Settings"
+    },
+    {
+      "name": "Text",
+      "index": 43,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SettingsTitle/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Settings"
+    },
+    {
+      "name": "Text",
+      "index": 44,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsDesktopBackgroundDescription/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Change your desktop wallpaper to actual Bing image daily"
+    },
+    {
+      "name": "Text",
+      "index": 45,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsDesktopBackgroundTitle/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Use Bing image as desktop wallpaper"
+    },
+    {
+      "name": "Text",
+      "index": 46,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsLockScreenDescription/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Change your lock screen to actual Bing image daily"
+    },
+    {
+      "name": "Text",
+      "index": 47,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsLockScreenTitle/Text",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Use Bing image as lock screen"
+    },
+    {
+      "name": "AboutSettingsTitle",
+      "index": 19,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutSettingsTitle",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "About"
+    },
+    {
+      "name": "ApplicationOptionsTitle",
+      "index": 22,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ApplicationOptionsTitle",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Options"
+    },
+    {
+      "name": "DesktopBackgroundSetMessage",
+      "index": 24,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/DesktopBackgroundSetMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Desktop background was set successfully."
+    },
+    {
+      "name": "DownloadImagesErrorMessage",
+      "index": 25,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/DownloadImagesErrorMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Downloading of Bing images failed. Check your internet connection."
+    },
+    {
+      "name": "ErrorTitle",
+      "index": 26,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ErrorTitle",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Error"
+    },
+    {
+      "name": "ImageFileTitle",
+      "index": 27,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ImageFileTitle",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Image"
+    },
+    {
+      "name": "ImageSavedMessage",
+      "index": 28,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ImageSavedMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "File '{0}' was saved."
+    },
+    {
+      "name": "LiveTileText",
+      "index": 29,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/LiveTileText",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Daily Picture"
+    },
+    {
+      "name": "LockScreenSetMessage",
+      "index": 30,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/LockScreenSetMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Lock screen was set successfully."
+    },
+    {
+      "name": "PrivacyPolicy",
+      "index": 31,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicy",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Privacy Policy"
+    },
+    {
+      "name": "PrivacyPolicyUrl",
+      "index": 34,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyUrl",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "http://www.duracellko.net/privacy-policy"
+    },
+    {
+      "name": "SaveErrorMessage",
+      "index": 37,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SaveErrorMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Error saving image:\n{0}\n\nPlease, try again."
+    },
+    {
+      "name": "SetDesktopBackgroundErrorMessage",
+      "index": 38,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetDesktopBackgroundErrorMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Error setting your desktop background image:\n{0}"
+    },
+    {
+      "name": "SetLockScreenErrorMessage",
+      "index": 40,
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetLockScreenErrorMessage",
+      "candidate_ordinal": 0,
+      "type": "String",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "value": "Error setting your lock screen image:\n{0}"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "analysis_date": "2026-10-17",
+  "source_string_evidence_id": "ev_6d78ad2e69676f5465035956406fa0c999c69638c5261bbda476841afa86a391",
+  "findings": [
+    {
+      "id": "BG-01",
+      "confidence": "high",
+      "evidence_type": "decoded static instructions plus Microsoft API contract",
+      "conclusion": "The registration path constructs a recurring TimeTrigger with freshnessTime=60 minutes and oneShot=false.",
+      "observations": [
+        "0x1804a098c: xor r8d,r8d; 0x1804a098f: lea edx,[r8+0x3c]; 0x1804a0996: call 0x1804a0d90.",
+        "0x1804a0da6 references the Windows.ApplicationModel.Background.TimeTrigger runtime-class string; wrapper forwards interval and boolean to the factory.",
+        "0x1804a0df9..0x1804a0e24 normalizes the Boolean and passes interval=60 plus false to the activation-factory call."
+      ],
+      "evidence": [
+        "task-registration.json",
+        "time-trigger.json",
+        "time-trigger-factory.json"
+      ],
+      "api_source": "https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.timetrigger.-ctor?view=winrt-26100",
+      "limitation": "This establishes the static scheduling request, not successful registration or an observed hourly execution cadence; Windows scheduling and conditions apply."
+    },
+    {
+      "id": "BG-02",
+      "confidence": "high",
+      "evidence_type": "decoded static instructions plus Microsoft enum contract",
+      "conclusion": "The task has both InternetAvailable (3) and FreeNetworkAvailable (7) conditions.",
+      "observations": [
+        "0x1804a09ab passes edx=3; 0x1804a09c8 passes edx=7 to constructor 0x1804a0c90.",
+        "0x1804a0ca1 uses the Windows.ApplicationModel.Background.SystemCondition class string.",
+        "Two constructed objects are stored in a length-2 array; 0x1804a0a39 passes the array to the task builder helper; 0x1804a0b60..0x1804a0b7c iterates it."
+      ],
+      "evidence": [
+        "task-registration.json",
+        "system-condition.json",
+        "background-builder.json"
+      ],
+      "api_source": "https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.systemconditiontype?view=winrt-26100",
+      "limitation": "The numeric constants and constructor chain are decoded. Runtime network classification and trigger history were not observed."
+    },
+    {
+      "id": "BG-03",
+      "confidence": "high",
+      "evidence_type": "decoded static instructions and packaged runtime-class strings",
+      "conclusion": "The same path supplies task name UpdateLiveTileTask and entry point Duracellko.BingImage.Universal.Service.UpdateLiveTileBackgroundTask to a BackgroundTaskBuilder helper.",
+      "observations": [
+        "0x1804a0a32 loads task-name string object 0x1802c3798; 0x1804a0a3f loads entry-point string object 0x1802c37d8; 0x1804a0a46 calls 0x1804a0ab0.",
+        "0x1804a0bbe references Windows.ApplicationModel.Background.BackgroundTaskBuilder and activates it.",
+        "0x1804a0ad2 calls a lookup helper; if it returns non-null, 0x1804a0ada skips the builder path."
+      ],
+      "evidence": [
+        "task-registration.json",
+        "background-builder.json",
+        "background-builder-ctor.json",
+        "background-task-find.json"
+      ],
+      "limitation": "The name/entry-point/trigger data flow is visible; individual generic WinRT dispatch thunks do not carry recovered source symbols."
+    },
+    {
+      "id": "BG-04",
+      "confidence": "medium-high",
+      "evidence_type": "decoded static instructions; interface-dispatch semantics inferred",
+      "conclusion": "UpdateLiveTileMaintenanceTask is placed in a one-element list consumed before the recurring TimeTrigger registration. The path is consistent with legacy-task cleanup, not evidence of a second active maintenance trigger.",
+      "observations": [
+        "0x18034e0d5 creates a length-1 array; 0x18034e0ea loads UpdateLiveTileMaintenanceTask; array is stored at static 0x1802a8640.",
+        "0x1804a096d..0x1804a0977 loads that array and calls 0x1804a0f80.",
+        "0x1804a0fdd calls the same name-lookup helper; when non-null, 0x1804a0fe7 sets dl=1 and calls an interface method."
+      ],
+      "evidence": [
+        "maintenance-task.json",
+        "task-registration.json",
+        "old-task-unregister.json"
+      ],
+      "limitation": "Unregister(true) is an interpretation of the lookup/Boolean/interface-call shape. No MaintenanceTrigger constructor was established by this bounded analysis."
+    },
+    {
+      "id": "BG-05",
+      "confidence": "high",
+      "evidence_type": "decoded static instructions plus exact UTF-16 key strings",
+      "conclusion": "The application stores separate Boolean settings UseBingImageAsDesktopBackground and UseBingImageAsLockScreen through Windows.Storage.ApplicationData.",
+      "observations": [
+        "Desktop writer 0x18051d430 and lock-screen writer 0x18051d650 take the incoming Boolean in dl, box it at object offset +8, then pass it with the respective key.",
+        "Desktop reader is 0x18051d510; lock-screen reader is 0x18051d730. Both retrieve by key, cast a non-null object to Boolean, and build a two-byte nullable value.",
+        "Both readers initialize that two-byte value to zero and leave it zero when the key lookup returns null."
+      ],
+      "evidence": [
+        "desktop-settings-write.json",
+        "lockscreen-settings-write.json",
+        "desktop-settings-read.json",
+        "lockscreen-settings-read.json"
+      ],
+      "limitation": "These are reconstructed roles from argument/data flow, not recovered source method names."
+    },
+    {
+      "id": "BG-06",
+      "confidence": "high, with NEAT-binding caveat",
+      "evidence_type": "decoded caller instructions plus inferred .NET Native shared-table mapping",
+      "conclusion": "Both automatic wallpaper settings have a strongly supported false fallback when the stored key is absent.",
+      "observations": [
+        "Readers initialize a two-byte nullable value to 0, and call through slot 0x1802a2a20 with its address.",
+        "The source-file slot contains 0x800000000000411b. It is not a directly usable static function pointer.",
+        "The installed framework SharedLibrary.dll exports $NEAT$ as an RVA table. Its zero-based index 0x411b points to RVA 0x5687d0. REA decodes that candidate helper as movzx eax,byte [rcx+1]; ret.",
+        "The immediately previous NEAT entry checks the first byte and returns the second byte or throws, consistent with nullable get_Value; selected entry is consistent with GetValueOrDefault."
+      ],
+      "evidence": [
+        "desktop-settings-read.json",
+        "lockscreen-settings-read.json",
+        "address-index.json",
+        "sharedlibrary-ordinal.json",
+        "sharedlibrary-nullable-helper.json"
+      ],
+      "limitation": "The zero-based NEAT import binding is inferred from file format and matching helper semantics; the runtime binder was not traced. Therefore report as a strong static reconstruction, not proof that current user settings are off."
+    }
+  ],
+  "evidence": [
+    {
+      "file": "task-registration.json",
+      "evidence_id": "ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9",
+      "start": "0x1804a08a0",
+      "end_exclusive": "0x1804a0a76",
+      "decoded_instructions_in_scope": 117,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "maintenance-task.json",
+      "evidence_id": "ev_d8abe43ca766045dd04603fbd2d8ff313206cb8f3e130e7c5acd129b3f2f56d8",
+      "start": "0x18034e0d0",
+      "end_exclusive": "0x18034e10b",
+      "decoded_instructions_in_scope": 14,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "time-trigger.json",
+      "evidence_id": "ev_5851ce0242f869ac690d9bf4dcc68b9e073854b1eb15fc6c4301148a5f9d2d91",
+      "start": "0x1804a0d90",
+      "end_exclusive": "0x1804a0dce",
+      "decoded_instructions_in_scope": 21,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "desktop-settings-write.json",
+      "evidence_id": "ev_7084e6e44d29757c7880cdc784d6befef86e55f914dc8c3c59618477da2df0e9",
+      "start": "0x18051d430",
+      "end_exclusive": "0x18051d4c8",
+      "decoded_instructions_in_scope": 36,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "lockscreen-settings-write.json",
+      "evidence_id": "ev_0af13c153f19e30616e1011b6db241a4091bf306f23a888552a19a0c40b4b697",
+      "start": "0x18051d650",
+      "end_exclusive": "0x18051d6e8",
+      "decoded_instructions_in_scope": 36,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "desktop-settings-read.json",
+      "evidence_id": "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e",
+      "start": "0x18051d510",
+      "end_exclusive": "0x18051d5c8",
+      "decoded_instructions_in_scope": 40,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "lockscreen-settings-read.json",
+      "evidence_id": "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc",
+      "start": "0x18051d730",
+      "end_exclusive": "0x18051d7e8",
+      "decoded_instructions_in_scope": 40,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "background-builder.json",
+      "evidence_id": "ev_7c719583d48638766d6526248c091a9edcd4cbad0cea540aca6b29917601f6ff",
+      "start": "0x1804a0ab0",
+      "end_exclusive": "0x1804a0ba7",
+      "decoded_instructions_in_scope": 68,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "background-builder-ctor.json",
+      "evidence_id": "ev_f5e1aabcc5692c593bfba052d79b7c3aa6000b7aa403c21d59f782ccd75a3dd7",
+      "start": "0x1804a0bb0",
+      "end_exclusive": "0x1804a0bde",
+      "decoded_instructions_in_scope": 13,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "background-task-find.json",
+      "evidence_id": "ev_f70bdc13e6209974c6cf2736ac5f74876b81f73e347bc0c479a646e3bfda5e16",
+      "start": "0x1804a0be0",
+      "end_exclusive": "0x1804a0c8a",
+      "decoded_instructions_in_scope": 42,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "system-condition.json",
+      "evidence_id": "ev_8358ad6bb8aca5bebbd70f76799cf98093375f7d6ee02f3df89cbf97ed0c34ce",
+      "start": "0x1804a0c90",
+      "end_exclusive": "0x1804a0cc4",
+      "decoded_instructions_in_scope": 17,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "time-trigger-factory.json",
+      "evidence_id": "ev_9e770d83bef3f875364c68d76788aeb8951f8871baf9e8f745c5afee7590967f",
+      "start": "0x1804a0dd0",
+      "end_exclusive": "0x1804a0e93",
+      "decoded_instructions_in_scope": 49,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "old-task-unregister.json",
+      "evidence_id": "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b",
+      "start": "0x1804a0f80",
+      "end_exclusive": "0x1804a101d",
+      "decoded_instructions_in_scope": 50,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "desktop-viewmodel-write.json",
+      "evidence_id": "ev_59e733f5d0e177f69184f6689b81f80086e0a4501d05e418ab28b580728f9a44",
+      "start": "0x1804a9740",
+      "end_exclusive": "0x1804a97aa",
+      "decoded_instructions_in_scope": 32,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "lockscreen-viewmodel-write.json",
+      "evidence_id": "ev_b4382f5144f77cea90a318925283ca3ea14b9116ceb44b287cdfe589513028ca",
+      "start": "0x1804a97e0",
+      "end_exclusive": "0x1804a984a",
+      "decoded_instructions_in_scope": 32,
+      "completion": "complete",
+      "artifact_changed": false
+    },
+    {
+      "file": "sharedlibrary-nullable-helper.json",
+      "evidence_id": "ev_0dcc852c318088217b5626ae5497c5c14e4398c3d1bb5fcf5be717c4ce2764a4",
+      "start": "0x1805687d0",
+      "end_exclusive": "0x1805687d5",
+      "decoded_instructions_in_scope": 2,
+      "completion": "complete",
+      "artifact_changed": false
+    }
+  ],
+  "limitations": [
+    "Read-only file analysis; no application execution, setting change, background registration, or wallpaper change was performed.",
+    "No deep pseudocode is claimed. Rizin machine instructions are decoded through the REA CLI.",
+    "Addresses are preferred-image VAs; they are not live-process addresses.",
+    "Only assigned background registration and settings paths were inspected; this is not a complete binary audit.",
+    "The two settings-read raw REA outputs extend past their PE exception-table range; assembly.txt deliberately limits each to its function range."
+  ]
+}

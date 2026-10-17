@@ -1,0 +1,42 @@
+[
+  {
+    "file": "evidence\\deep-region\\framework-reference\\WebRequest.cs",
+    "upstream_blob_sha1": "a7e81ceb70b3fafac0d7804a015ecf696713b9f6",
+    "sha256": "a79e1a9bf87d68383871033327637e3334076d08b953c78a296acc69f803603d",
+    "length": 18136,
+    "verified_git_blob_sha1": true,
+    "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Requests/src/System/Net/WebRequest.cs",
+    "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/a7e81ceb70b3fafac0d7804a015ecf696713b9f6",
+    "authority": "Historical primary-source reference; not the exact installed framework source"
+  },
+  {
+    "file": "evidence\\deep-region\\framework-reference\\HttpWebRequest.cs",
+    "upstream_blob_sha1": "f77a6f6e135026ad551eef2c22314fe88c258bf6",
+    "sha256": "ba26942432889f8feed0980b4799c1b293c01500187761f34075d2fc632b4e3d",
+    "length": 17800,
+    "verified_git_blob_sha1": true,
+    "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Requests/src/System/Net/HttpWebRequest.cs",
+    "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/f77a6f6e135026ad551eef2c22314fe88c258bf6",
+    "authority": "Historical primary-source reference; not the exact installed framework source"
+  },
+  {
+    "file": "evidence\\deep-region\\framework-reference\\HttpClientHandler.cs",
+    "upstream_blob_sha1": "1d295596af742d7817780559b6487bf86886d179",
+    "sha256": "19d77a268c173498f323ae242f32db1653fc11a478da7532f912c4577fde8f4e",
+    "length": 27644,
+    "verified_git_blob_sha1": true,
+    "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Http/src/netcore50/System/Net/HttpClientHandler.cs",
+    "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/1d295596af742d7817780559b6487bf86886d179",
+    "authority": "Historical primary-source reference; not the exact installed framework source"
+  },
+  {
+    "file": "evidence\\deep-region\\framework-reference\\HttpHandlerToFilter.cs",
+    "upstream_blob_sha1": "acb369a0023b5abd69fa42af8f34b549be807607",
+    "sha256": "5403caba0e5936e39625f0a34e5d1e8ce2cc0c06ca97702b65a2e77a647ede83",
+    "length": 12429,
+    "verified_git_blob_sha1": true,
+    "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Http/src/netcore50/System/Net/HttpHandlerToFilter.cs",
+    "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/acb369a0023b5abd69fa42af8f34b549be807607",
+    "authority": "Historical primary-source reference; not the exact installed framework source"
+  }
+]

@@ -1,0 +1,1226 @@
+[
+  {
+    "address": "0x1804a1cb0",
+    "role": "页面名到 MainPage/SettingsPage/AboutPage 类型映射，未知名抛异常",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigation-page-resolver.json"
+    ],
+    "evidence_ids": [
+      "ev_7f6405f518a5e50239bba26e383d1ca925d780d4d9c8b09c4dbf69fc4cf8f76c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a1cb0",
+      "end_exclusive": "0x1804a1d4b",
+      "length": 155,
+      "unwind_rva": "0x14adec"
+    }
+  },
+  {
+    "address": "0x1804a1d50",
+    "role": "页面类型到 ViewModel 工厂；AboutPage 返回 null",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a1d50",
+      "end_exclusive": "0x1804a1de1",
+      "length": 145,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a1df0",
+    "role": "创建设置服务对象图与设置 ViewModel",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a1df0",
+      "end_exclusive": "0x1804a1f7d",
+      "length": 397,
+      "unwind_rva": "0x14afb4"
+    }
+  },
+  {
+    "address": "0x1804a1f80",
+    "role": "设置 ViewModel 构造：服务、导航器、GoBack 委托和初始布尔状态",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a1f80",
+      "end_exclusive": "0x1804a209a",
+      "length": 282,
+      "unwind_rva": "0x14af90"
+    }
+  },
+  {
+    "address": "0x1804a20a0",
+    "role": "设置页返回命令可执行查询：导航器存在并允许返回",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a20a0",
+      "end_exclusive": "0x1804a20c0",
+      "length": 32,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a20c0",
+    "role": "设置页返回命令执行：转发导航器",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a20c0",
+      "end_exclusive": "0x1804a20dd",
+      "length": 29,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a20e0",
+    "role": "创建主页面图片服务、磁贴服务与主 ViewModel",
+    "evidence_paths": [
+      "evidence/architecture-ui/viewmodel-factory.json"
+    ],
+    "evidence_ids": [
+      "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a20e0",
+      "end_exclusive": "0x1804a22bd",
+      "length": 477,
+      "unwind_rva": "0x14afb4"
+    }
+  },
+  {
+    "address": "0x1804a22c0",
+    "role": "主 ViewModel 构造：六命令、图片集合、初始加载与下载、5秒和1小时计时器",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-constructor.json"
+    ],
+    "evidence_ids": [
+      "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a22c0",
+      "end_exclusive": "0x1804a29a4",
+      "length": 1764,
+      "unwind_rva": "0x14afb4"
+    }
+  },
+  {
+    "address": "0x1804a2a90",
+    "role": "DownloadImages async-void 入口",
+    "evidence_paths": [
+      "evidence/architecture-ui/download-command-entry.json"
+    ],
+    "evidence_ids": [
+      "ev_705feafd01585943f6f151136f5ca4ddd2d4b98fcb92658b367a217c088cee4d"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2a90",
+      "end_exclusive": "0x1804a2b43",
+      "length": 179,
+      "unwind_rva": "0x14bfa0"
+    }
+  },
+  {
+    "address": "0x1804a2b50",
+    "role": "DownloadImages 状态机：重复下载门控、调用服务、重载图片、更新磁贴",
+    "evidence_paths": [
+      "evidence/architecture-ui/download-state-and-handlers.json"
+    ],
+    "evidence_ids": [
+      "ev_6e2e44448eb75f94fa8ab47b9c42f374f0816f81e48ecff693e7dc11c397e1b5"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2b50",
+      "end_exclusive": "0x1804a2d19",
+      "length": 457,
+      "unwind_rva": "0x14b54c"
+    }
+  },
+  {
+    "address": "0x1804a2d19",
+    "role": "下载失败：显示 DownloadImagesErrorMessage",
+    "evidence_paths": [
+      "evidence/architecture-ui/download-state-and-handlers.json"
+    ],
+    "evidence_ids": [
+      "ev_6e2e44448eb75f94fa8ab47b9c42f374f0816f81e48ecff693e7dc11c397e1b5"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2d19",
+      "end_exclusive": "0x1804a2d3a",
+      "length": 33,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a2d3a",
+    "role": "下载 finally：清下载标志并按加载标志恢复 IsBusy",
+    "evidence_paths": [
+      "evidence/architecture-ui/download-state-and-handlers.json"
+    ],
+    "evidence_ids": [
+      "ev_6e2e44448eb75f94fa8ab47b9c42f374f0816f81e48ecff693e7dc11c397e1b5"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2d3a",
+      "end_exclusive": "0x1804a2d69",
+      "length": 47,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a2d79",
+    "role": "下载外层异常：AsyncVoidMethodBuilder.SetException",
+    "evidence_paths": [
+      "evidence/architecture-ui/download-state-and-handlers.json"
+    ],
+    "evidence_ids": [
+      "ev_6e2e44448eb75f94fa8ab47b9c42f374f0816f81e48ecff693e7dc11c397e1b5"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2d79",
+      "end_exclusive": "0x1804a2da4",
+      "length": 43,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a2db0",
+    "role": "IsBusy setter：属性变更和四命令 CanExecuteChanged",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-property-and-refresh.json"
+    ],
+    "evidence_ids": [
+      "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2db0",
+      "end_exclusive": "0x1804a2e8c",
+      "length": 220,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a2e90",
+    "role": "通知替换：清旧值、停计时器、设新非空消息并开始计时",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-property-and-refresh.json"
+    ],
+    "evidence_ids": [
+      "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2e90",
+      "end_exclusive": "0x1804a2f42",
+      "length": 178,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a2f50",
+    "role": "NotificationMessage setter：去重和属性变更",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-property-and-refresh.json"
+    ],
+    "evidence_ids": [
+      "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2f50",
+      "end_exclusive": "0x1804a2fbc",
+      "length": 108,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a2fc0",
+    "role": "读取 DownloadImagesErrorMessage 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-property-and-refresh.json"
+    ],
+    "evidence_ids": [
+      "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a2fc0",
+      "end_exclusive": "0x1804a3045",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a31e0",
+    "role": "LoadImages async-void 入口（文件名保留初始候选名称）",
+    "evidence_paths": [
+      "evidence/architecture-ui/refresh-command-entry.json"
+    ],
+    "evidence_ids": [
+      "ev_17ba7054fb1aabe378a9e6d5691b149e8e680ea6f36bdc8eb6d3edd0fc5560a1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a31e0",
+      "end_exclusive": "0x1804a3286",
+      "length": 166,
+      "unwind_rva": "0x14b6a8"
+    }
+  },
+  {
+    "address": "0x1804a3290",
+    "role": "LoadImages 状态机：获取集合、重建图片 VM、选择末项和忙碌清理",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-property-and-refresh.json"
+    ],
+    "evidence_ids": [
+      "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3290",
+      "end_exclusive": "0x1804a353a",
+      "length": 682,
+      "unwind_rva": "0x14b0a0"
+    }
+  },
+  {
+    "address": "0x1804a357e",
+    "role": "LoadImages 外层异常：AsyncVoidMethodBuilder.SetException",
+    "evidence_paths": [
+      "evidence/architecture-ui/load-unhandled-exception.json"
+    ],
+    "evidence_ids": [
+      "ev_fec1cc61e065f226bd5c9f09e176f6e206b385f668c33d769b7d2550f3d9ac7d"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a357e",
+      "end_exclusive": "0x1804a35ac",
+      "length": 46,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a35b0",
+    "role": "SelectedIndex setter：属性通知并刷新选中项状态",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a35b0",
+      "end_exclusive": "0x1804a360c",
+      "length": 92,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a3610",
+    "role": "选中项变化：清 ShowDescription、读取描述、通知保存/锁屏/桌面命令",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3610",
+      "end_exclusive": "0x1804a3717",
+      "length": 263,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a3720",
+    "role": "Description setter：字符串比较并发属性事件",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3720",
+      "end_exclusive": "0x1804a378c",
+      "length": 108,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a3790",
+    "role": "图片项 ViewModel 构造：保存图片记录与服务",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3790",
+      "end_exclusive": "0x1804a37c8",
+      "length": 56,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a3910",
+    "role": "5秒通知计时器 Tick：停止计时并清空消息",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3910",
+      "end_exclusive": "0x1804a398d",
+      "length": 125,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a3990",
+    "role": "OpenAbout 命令：导航 AboutPage",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3990",
+      "end_exclusive": "0x1804a39b2",
+      "length": 34,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a39c0",
+    "role": "OpenSettings 命令：导航 ApplicationSettingsPage",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainvm-selection-navigation.json"
+    ],
+    "evidence_ids": [
+      "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a39c0",
+      "end_exclusive": "0x1804a39e2",
+      "length": 34,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a39f0",
+    "role": "桌面命令 CanExecute：选中项、非忙碌与服务能力",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a39f0",
+      "end_exclusive": "0x1804a3a20",
+      "length": 48,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a3a20",
+    "role": "设置桌面背景 async-void 命令入口",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3a20",
+      "end_exclusive": "0x1804a3ad3",
+      "length": 179,
+      "unwind_rva": "0x14bfa0"
+    }
+  },
+  {
+    "address": "0x1804a3ae0",
+    "role": "设置桌面背景状态机与成功/失败提示",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3ae0",
+      "end_exclusive": "0x1804a3cd1",
+      "length": 497,
+      "unwind_rva": "0x14b54c"
+    }
+  },
+  {
+    "address": "0x1804a3d30",
+    "role": "MessageDialog 构造桥接",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3d30",
+      "end_exclusive": "0x1804a3d6d",
+      "length": 61,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a3f20",
+    "role": "读取 ErrorTitle 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3f20",
+      "end_exclusive": "0x1804a3fa5",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a3fb0",
+    "role": "读取 SetDesktopBackgroundErrorMessage 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a3fb0",
+      "end_exclusive": "0x1804a4035",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a4040",
+    "role": "读取 DesktopBackgroundSetMessage 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/personalization-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4040",
+      "end_exclusive": "0x1804a40c5",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a4170",
+    "role": "锁屏命令 CanExecute：选中项、非忙碌与服务能力",
+    "evidence_paths": [
+      "evidence/architecture-ui/lockscreen-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4170",
+      "end_exclusive": "0x1804a41a0",
+      "length": 48,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a41a0",
+    "role": "设置锁屏 async-void 命令入口",
+    "evidence_paths": [
+      "evidence/architecture-ui/lockscreen-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a41a0",
+      "end_exclusive": "0x1804a4253",
+      "length": 179,
+      "unwind_rva": "0x14bfa0"
+    }
+  },
+  {
+    "address": "0x1804a4260",
+    "role": "设置锁屏状态机与成功/失败提示",
+    "evidence_paths": [
+      "evidence/architecture-ui/lockscreen-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4260",
+      "end_exclusive": "0x1804a4451",
+      "length": 497,
+      "unwind_rva": "0x14b54c"
+    }
+  },
+  {
+    "address": "0x1804a44b0",
+    "role": "读取 SetLockScreenErrorMessage 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/lockscreen-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a44b0",
+      "end_exclusive": "0x1804a4535",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a4540",
+    "role": "读取 LockScreenSetMessage 资源",
+    "evidence_paths": [
+      "evidence/architecture-ui/lockscreen-command-flow.json"
+    ],
+    "evidence_ids": [
+      "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4540",
+      "end_exclusive": "0x1804a45c5",
+      "length": 133,
+      "unwind_rva": "0x14bb04"
+    }
+  },
+  {
+    "address": "0x1804a4670",
+    "role": "Refresh.CanExecute：非 IsBusy",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-refresh-command-gates.json"
+    ],
+    "evidence_ids": [
+      "ev_70c1897b8458216c820a6aa03a0f16237a996820ab3070f60e907744d0389661"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4670",
+      "end_exclusive": "0x1804a467b",
+      "length": 11,
+      "unwind_rva": "0x14ae24"
+    }
+  },
+  {
+    "address": "0x1804a4680",
+    "role": "Refresh 执行：调用 DownloadImages 入口",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-refresh-command-gates.json"
+    ],
+    "evidence_ids": [
+      "ev_70c1897b8458216c820a6aa03a0f16237a996820ab3070f60e907744d0389661"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4680",
+      "end_exclusive": "0x1804a468f",
+      "length": 15,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a4690",
+    "role": "Save.CanExecute：SelectedIndex >= 0 且非 IsBusy",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-refresh-command-gates.json"
+    ],
+    "evidence_ids": [
+      "ev_70c1897b8458216c820a6aa03a0f16237a996820ab3070f60e907744d0389661"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4690",
+      "end_exclusive": "0x1804a46a8",
+      "length": 24,
+      "unwind_rva": "0x14ae24"
+    }
+  },
+  {
+    "address": "0x1804a46b0",
+    "role": "保存 async-void 命令入口",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-refresh-command-gates.json"
+    ],
+    "evidence_ids": [
+      "ev_70c1897b8458216c820a6aa03a0f16237a996820ab3070f60e907744d0389661"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a46b0",
+      "end_exclusive": "0x1804a4753",
+      "length": 163,
+      "unwind_rva": "0x14bfbc"
+    }
+  },
+  {
+    "address": "0x1804a4760",
+    "role": "保存状态机：FileSavePicker、取消分支、服务复制与消息",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-command-state.json"
+    ],
+    "evidence_ids": [
+      "ev_d232ff95fe48076c8ff64d19779dd846fe895a0f6dfa4ea1bcfb57d336b85914"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4760",
+      "end_exclusive": "0x1804a4c39",
+      "length": 1241,
+      "unwind_rva": "0x14b3bc"
+    }
+  },
+  {
+    "address": "0x1804a4c39",
+    "role": "保存错误捕获：记录异常供错误对话框格式化",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-command-state.json"
+    ],
+    "evidence_ids": [
+      "ev_d232ff95fe48076c8ff64d19779dd846fe895a0f6dfa4ea1bcfb57d336b85914"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4c39",
+      "end_exclusive": "0x1804a4c68",
+      "length": 47,
+      "unwind_rva": "0x14ae94"
+    }
+  },
+  {
+    "address": "0x1804a4c68",
+    "role": "保存外层异常：AsyncVoidMethodBuilder.SetException",
+    "evidence_paths": [
+      "evidence/architecture-ui/save-command-state.json"
+    ],
+    "evidence_ids": [
+      "ev_d232ff95fe48076c8ff64d19779dd846fe895a0f6dfa4ea1bcfb57d336b85914"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a4c68",
+      "end_exclusive": "0x1804a4c96",
+      "length": 46,
+      "unwind_rva": "0x14ae94"
+    }
+  },
+  {
+    "address": "0x1804a5080",
+    "role": "导航器初始化：SystemNavigationManager 与可选 HardwareButtons 事件",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigator-platform-init.json"
+    ],
+    "evidence_ids": [
+      "ev_461a1b4803e0cd73476faa53b81a6ae906f9a7d95402d082ab82fc24b2175a53"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a5080",
+      "end_exclusive": "0x1804a5272",
+      "length": 498,
+      "unwind_rva": "0x14ae64"
+    }
+  },
+  {
+    "address": "0x1804a6180",
+    "role": "MainPage.InitializeComponent 语义：一次性 ms-appx XAML 载入",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainpage-xaml-load.json"
+    ],
+    "evidence_ids": [
+      "ev_cf85e7041c6b9a81cb9998e31ff9157cad6487e29d78db47c0fd1c1e6c2c6ad0"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a6180",
+      "end_exclusive": "0x1804a61e6",
+      "length": 102,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a6750",
+    "role": "设置 Page 工厂及 XAML 载入",
+    "evidence_paths": [
+      "evidence/architecture-ui/settings-and-about-xaml-load.json"
+    ],
+    "evidence_ids": [
+      "ev_746d0306e1e64a11dab13d033ce72bd432b99f2ac7d0ea9b93cdabfce4c48fb6"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a6750",
+      "end_exclusive": "0x1804a67c7",
+      "length": 119,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a67d0",
+    "role": "AboutPage 工厂",
+    "evidence_paths": [
+      "evidence/architecture-ui/settings-and-about-xaml-load.json"
+    ],
+    "evidence_ids": [
+      "ev_746d0306e1e64a11dab13d033ce72bd432b99f2ac7d0ea9b93cdabfce4c48fb6"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a67d0",
+      "end_exclusive": "0x1804a67fe",
+      "length": 46,
+      "unwind_rva": "0x14adec"
+    }
+  },
+  {
+    "address": "0x1804a6800",
+    "role": "AboutPage.InitializeComponent 语义：一次性 XAML 载入",
+    "evidence_paths": [
+      "evidence/architecture-ui/settings-and-about-xaml-load.json"
+    ],
+    "evidence_ids": [
+      "ev_746d0306e1e64a11dab13d033ce72bd432b99f2ac7d0ea9b93cdabfce4c48fb6"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a6800",
+      "end_exclusive": "0x1804a6866",
+      "length": 102,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a8840",
+    "role": "命令对象双委托构造：execute 非空和可选 predicate",
+    "evidence_paths": [
+      "evidence/architecture-ui/command-event-plumbing.json"
+    ],
+    "evidence_ids": [
+      "ev_2411203e56e03275de03c3fa78e356d6ec066ed1b44b06e95946fae7ee1aa20e"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a8840",
+      "end_exclusive": "0x1804a88a7",
+      "length": 103,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a88b0",
+    "role": "命令对象单委托构造：execute 非空，predicate 置 null",
+    "evidence_paths": [
+      "evidence/architecture-ui/command-event-plumbing.json"
+    ],
+    "evidence_ids": [
+      "ev_2411203e56e03275de03c3fa78e356d6ec066ed1b44b06e95946fae7ee1aa20e"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a88b0",
+      "end_exclusive": "0x1804a890d",
+      "length": 93,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a8910",
+    "role": "Images.Count == 0；结合绑定合同推定为 IsBackgroundVisible getter",
+    "evidence_paths": [
+      "evidence/architecture-ui/command-canexecute.json"
+    ],
+    "evidence_ids": [
+      "ev_5289b4d901f42df14b254febb63aa0cea008ef1c459e279d63325dc6b86935c2"
+    ],
+    "confidence": "medium",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a8910",
+      "end_exclusive": "0x1804a892f",
+      "length": 31,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804a9740",
+    "role": "UseBingImageAsDesktopBackground setter：通知并调用服务",
+    "evidence_paths": [
+      "evidence/architecture-ui/settings-vm-writes.json"
+    ],
+    "evidence_ids": [
+      "ev_1f9de9bdce96c1bbca57201e0f50c3abbdc3eee87cd440b0cce8ffa3e771a360"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9740",
+      "end_exclusive": "0x1804a97aa",
+      "length": 106,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a97e0",
+    "role": "UseBingImageAsLockScreen setter：通知并调用服务",
+    "evidence_paths": [
+      "evidence/architecture-ui/settings-vm-writes.json"
+    ],
+    "evidence_ids": [
+      "ev_1f9de9bdce96c1bbca57201e0f50c3abbdc3eee87cd440b0cce8ffa3e771a360"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a97e0",
+      "end_exclusive": "0x1804a984a",
+      "length": 106,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x1804a9930",
+    "role": "NavigatorBase.Navigated：为 DataContext 空的页面创建 ViewModel，并转发导航事件",
+    "evidence_paths": [
+      "evidence/architecture-ui/frame-on-navigated.json"
+    ],
+    "evidence_ids": [
+      "ev_09badf7ad47e420a19444bc524803965e86ea0059cdcf465f03cb81fd358ada1"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9930",
+      "end_exclusive": "0x1804a9a5f",
+      "length": 303,
+      "unwind_rva": "0x14b150"
+    }
+  },
+  {
+    "address": "0x1804a9a60",
+    "role": "NavigateTo 封装：检查 disposed、解析页面类型并导航",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigator-base.json"
+    ],
+    "evidence_ids": [
+      "ev_b939d4042daeead7d5970785989e9b9d688a831ea690b4da753f086d68015eea"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9a60",
+      "end_exclusive": "0x1804a9abd",
+      "length": 93,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x1804a9ac0",
+    "role": "Frame.Navigate ABI 桥：WinRT TypeName 和参数转换",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigator-base.json"
+    ],
+    "evidence_ids": [
+      "ev_b939d4042daeead7d5970785989e9b9d688a831ea690b4da753f086d68015eea"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9ac0",
+      "end_exclusive": "0x1804a9b6e",
+      "length": 174,
+      "unwind_rva": "0x14bfdc"
+    }
+  },
+  {
+    "address": "0x1804a9c80",
+    "role": "带参数 NavigateTo：检查 disposed 后调用 Frame.Navigate",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigator-base.json"
+    ],
+    "evidence_ids": [
+      "ev_b939d4042daeead7d5970785989e9b9d688a831ea690b4da753f086d68015eea"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9c80",
+      "end_exclusive": "0x1804a9cd8",
+      "length": 88,
+      "unwind_rva": "0x14adec"
+    }
+  },
+  {
+    "address": "0x1804a9d10",
+    "role": "NavigatorBase 构造：非空 Frame、存储、订阅 Navigated",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigator-base.json"
+    ],
+    "evidence_ids": [
+      "ev_b939d4042daeead7d5970785989e9b9d688a831ea690b4da753f086d68015eea"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804a9d10",
+      "end_exclusive": "0x1804a9e36",
+      "length": 294,
+      "unwind_rva": "0x14ae64"
+    }
+  },
+  {
+    "address": "0x1804c8f70",
+    "role": "IFrameworkElement.remove_Loaded 槽44桥接",
+    "evidence_paths": [
+      "evidence/architecture-ui/data-context-event-wrappers.json"
+    ],
+    "evidence_ids": [
+      "ev_219ade3705fddb9b929e3ff8352e8b7ac932101c8c05f89c22ad74c9cfc08970"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804c8f70",
+      "end_exclusive": "0x1804c8f95",
+      "length": 37,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x1804c8fa0",
+    "role": "IFrameworkElement.add_Loaded 槽43桥接",
+    "evidence_paths": [
+      "evidence/architecture-ui/data-context-event-wrappers.json"
+    ],
+    "evidence_ids": [
+      "ev_219ade3705fddb9b929e3ff8352e8b7ac932101c8c05f89c22ad74c9cfc08970"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x1804c8fa0",
+      "end_exclusive": "0x1804c8fc5",
+      "length": 37,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x180531e90",
+    "role": "NavigatorBase.Dispose(bool) 语义：取消 Navigated 订阅并置 disposed",
+    "evidence_paths": [
+      "evidence/architecture-ui/app-constructor.json"
+    ],
+    "evidence_ids": [
+      "ev_bda048b4579340be4b5293ade7fd5e18a9436c60c289904e23e1dcdf18c68016"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x180531e90",
+      "end_exclusive": "0x180531f4f",
+      "length": 191,
+      "unwind_rva": "0x14ae08"
+    }
+  },
+  {
+    "address": "0x180531fb0",
+    "role": "MainPage.Loaded：创建后台注册器并调用注册入口 4a0800",
+    "evidence_paths": [
+      "evidence/architecture-ui/mainpage-context-changed.json"
+    ],
+    "evidence_ids": [
+      "ev_b7e1737ecdb5e8350a03db8d2da67a893bac45fc34cff46781aea1ef78382bb7"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x180531fb0",
+      "end_exclusive": "0x180531fd5",
+      "length": 37,
+      "unwind_rva": "0x14ae34"
+    }
+  },
+  {
+    "address": "0x180531fe0",
+    "role": "导航失败：拼接 Failed to load Page 与目标类型后抛异常",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigation-startup-events.json"
+    ],
+    "evidence_ids": [
+      "ev_54c1bb3769250104d07c6d40072c9e359db552ea4408e48ecfdd2964c8265690"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x180531fe0",
+      "end_exclusive": "0x180532035",
+      "length": 85,
+      "unwind_rva": "0x14adf4"
+    }
+  },
+  {
+    "address": "0x180532060",
+    "role": "App.Navigated：新 MainPage 且无 DataContext 时订阅 Loaded",
+    "evidence_paths": [
+      "evidence/architecture-ui/navigation-startup-events.json"
+    ],
+    "evidence_ids": [
+      "ev_54c1bb3769250104d07c6d40072c9e359db552ea4408e48ecfdd2964c8265690"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x180532060",
+      "end_exclusive": "0x18053218c",
+      "length": 300,
+      "unwind_rva": "0x14ae64"
+    }
+  },
+  {
+    "address": "0x180532190",
+    "role": "App 启动/激活处理：迁移两个键、建立 Frame、设置 UI Language、导航及激活 Window",
+    "evidence_paths": [
+      "evidence/architecture-ui/app-lifecycle-candidate.json"
+    ],
+    "evidence_ids": [
+      "ev_ec4ca01bd51f99b16983649e566c60e119d609e71611ae86e05593e3cb9324b2"
+    ],
+    "confidence": "high",
+    "name_origin": "由静态语义恢复的分析名称",
+    "pdata": {
+      "start": "0x180532190",
+      "end_exclusive": "0x180532555",
+      "length": 965,
+      "unwind_rva": "0x14b294"
+    }
+  }
+]

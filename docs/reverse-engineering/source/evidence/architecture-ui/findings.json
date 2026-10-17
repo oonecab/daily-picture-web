@@ -1,0 +1,237 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "method": "静态 REA 原生反汇编 + 原件 PRI/XBF/XR + 本机 WinMD IID/槽位校验",
+  "runtime_executed": false,
+  "constants": [
+    {
+      "address": "0x180144540",
+      "file_offset": "0x143b40",
+      "bytes": "0000000000001440",
+      "type": "IEEE754 little-endian double",
+      "value": 5.0,
+      "role": "通知显示时长",
+      "consumer": "TimeSpan.FromSeconds",
+      "evidence_path": "evidence/architecture-ui/mainvm-constructor.json",
+      "evidence_id": "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+    },
+    {
+      "address": "0x180144548",
+      "file_offset": "0x143b48",
+      "bytes": "000000000000f03f",
+      "type": "IEEE754 little-endian double",
+      "value": 1.0,
+      "role": "前台周期刷新间隔",
+      "consumer": "TimeSpan.FromHours",
+      "evidence_path": "evidence/architecture-ui/mainvm-constructor.json",
+      "evidence_id": "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+    }
+  ],
+  "findings": [
+    {
+      "id": "UIA-01",
+      "claim": "MainPage/Settings/About 的 XAML 载入和三个页面名解析",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainpage-xaml-load.json",
+          "id": "ev_cf85e7041c6b9a81cb9998e31ff9157cad6487e29d78db47c0fd1c1e6c2c6ad0"
+        },
+        {
+          "path": "evidence/architecture-ui/settings-and-about-xaml-load.json",
+          "id": "ev_746d0306e1e64a11dab13d033ce72bd432b99f2ac7d0ea9b93cdabfce4c48fb6"
+        },
+        {
+          "path": "evidence/architecture-ui/navigation-page-resolver.json",
+          "id": "ev_7f6405f518a5e50239bba26e383d1ca925d780d4d9c8b09c4dbf69fc4cf8f76c"
+        }
+      ]
+    },
+    {
+      "id": "UIA-02",
+      "claim": "启动分支建立 Frame；应用语言首项赋给 Frame.Language；导航 MainPage 后激活 Window",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/app-lifecycle-candidate.json",
+          "id": "ev_ec4ca01bd51f99b16983649e566c60e119d609e71611ae86e05593e3cb9324b2"
+        }
+      ]
+    },
+    {
+      "id": "UIA-03",
+      "claim": "MainPage Loaded 触发后台任务注册；Navigator.Navigated 按需创建 DataContext",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/navigation-startup-events.json",
+          "id": "ev_54c1bb3769250104d07c6d40072c9e359db552ea4408e48ecfdd2964c8265690"
+        },
+        {
+          "path": "evidence/architecture-ui/data-context-event-wrappers.json",
+          "id": "ev_219ade3705fddb9b929e3ff8352e8b7ac932101c8c05f89c22ad74c9cfc08970"
+        },
+        {
+          "path": "evidence/architecture-ui/mainpage-context-changed.json",
+          "id": "ev_b7e1737ecdb5e8350a03db8d2da67a893bac45fc34cff46781aea1ef78382bb7"
+        },
+        {
+          "path": "evidence/architecture-ui/frame-on-navigated.json",
+          "id": "ev_09badf7ad47e420a19444bc524803965e86ea0059cdcf465f03cb81fd358ada1"
+        }
+      ]
+    },
+    {
+      "id": "UIA-04",
+      "claim": "导航名/类型工厂、导航异常与 dispose 生命周期",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/navigation-page-resolver.json",
+          "id": "ev_7f6405f518a5e50239bba26e383d1ca925d780d4d9c8b09c4dbf69fc4cf8f76c"
+        },
+        {
+          "path": "evidence/architecture-ui/viewmodel-factory.json",
+          "id": "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+        },
+        {
+          "path": "evidence/architecture-ui/navigator-base.json",
+          "id": "ev_b939d4042daeead7d5970785989e9b9d688a831ea690b4da753f086d68015eea"
+        },
+        {
+          "path": "evidence/architecture-ui/app-constructor.json",
+          "id": "ev_bda048b4579340be4b5293ade7fd5e18a9436c60c289904e23e1dcdf18c68016"
+        }
+      ]
+    },
+    {
+      "id": "UIA-05",
+      "claim": "主 VM 对象图与六命令；初始化调用 LoadImages 和 DownloadImages；两计时器",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainvm-constructor.json",
+          "id": "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+        },
+        {
+          "path": "evidence/architecture-ui/download-command-entry.json",
+          "id": "ev_705feafd01585943f6f151136f5ca4ddd2d4b98fcb92658b367a217c088cee4d"
+        },
+        {
+          "path": "evidence/architecture-ui/timer-download-thunk.json",
+          "id": "ev_4cff0cacc642098971aabefc46ded9ce0ee85dcb820f637671d2a5a2126b726d"
+        }
+      ]
+    },
+    {
+      "id": "UIA-06",
+      "claim": "加载/下载异步协调、下载重复门控、图片重建与磁贴调用",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/download-state-and-handlers.json",
+          "id": "ev_6e2e44448eb75f94fa8ab47b9c42f374f0816f81e48ecff693e7dc11c397e1b5"
+        },
+        {
+          "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+          "id": "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+        },
+        {
+          "path": "evidence/architecture-ui/refresh-command-entry.json",
+          "id": "ev_17ba7054fb1aabe378a9e6d5691b149e8e680ea6f36bdc8eb6d3edd0fc5560a1"
+        },
+        {
+          "path": "evidence/architecture-ui/load-unhandled-exception.json",
+          "id": "ev_fec1cc61e065f226bd5c9f09e176f6e206b385f668c33d769b7d2550f3d9ac7d"
+        }
+      ]
+    },
+    {
+      "id": "UIA-07",
+      "claim": "SelectedIndex/IsBusy 通知与命令可执行门控",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainvm-selection-navigation.json",
+          "id": "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+        },
+        {
+          "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+          "id": "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+        },
+        {
+          "path": "evidence/architecture-ui/save-refresh-command-gates.json",
+          "id": "ev_70c1897b8458216c820a6aa03a0f16237a996820ab3070f60e907744d0389661"
+        },
+        {
+          "path": "evidence/architecture-ui/personalization-command-flow.json",
+          "id": "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+        },
+        {
+          "path": "evidence/architecture-ui/lockscreen-command-flow.json",
+          "id": "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+        }
+      ]
+    },
+    {
+      "id": "UIA-08",
+      "claim": "FileSavePicker 保存流程、取消路径、图片库默认位置、错误对话框",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/save-command-state.json",
+          "id": "ev_d232ff95fe48076c8ff64d19779dd846fe895a0f6dfa4ea1bcfb57d336b85914"
+        }
+      ]
+    },
+    {
+      "id": "UIA-09",
+      "claim": "桌面/锁屏操作的异步命令和提示处理",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/personalization-command-flow.json",
+          "id": "ev_ffe7627546246acd6f1c810c969b314cb4e138bca535c877bc2d6318e4dff45c"
+        },
+        {
+          "path": "evidence/architecture-ui/lockscreen-command-flow.json",
+          "id": "ev_287e407f178f62cb4ef106503aa21d23eed2e172124bba92a3be590a8f0feacf"
+        }
+      ]
+    },
+    {
+      "id": "UIA-10",
+      "claim": "5秒通知替换与清空机制",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainvm-constructor.json",
+          "id": "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+        },
+        {
+          "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+          "id": "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+        },
+        {
+          "path": "evidence/architecture-ui/mainvm-selection-navigation.json",
+          "id": "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+        }
+      ]
+    },
+    {
+      "id": "UIA-11",
+      "claim": "设置 ViewModel 创建与两个 setter 向服务传递布尔值",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/viewmodel-factory.json",
+          "id": "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+        },
+        {
+          "path": "evidence/architecture-ui/settings-vm-writes.json",
+          "id": "ev_1f9de9bdce96c1bbca57201e0f50c3abbdc3eee87cd440b0cce8ffa3e771a360"
+        }
+      ]
+    },
+    {
+      "id": "UIA-12",
+      "claim": "XBF/XR 中的绑定合同、资源字段与解析边界",
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "语义名称不是目标原始符号",
+    "XBF 节点流未完整解码；字符串邻接不等于控件树",
+    "未观察运行时 UI、网络、保存或壁纸操作",
+    "尚未恢复完整 App 构造/挂起/恢复与图片项渲染生命周期"
+  ]
+}

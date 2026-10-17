@@ -1,0 +1,422 @@
+[
+  {
+    "address": "0x1804a3790",
+    "role": "图片项构造：保存记录和服务",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-item-constructor.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a3790",
+      "end_exclusive": "0x1804a37c8",
+      "length": 56,
+      "unwind_rva": "0x14ae08"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a9680",
+    "role": "ImageSource懒加载getter",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-properties-and-load-gate.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a9680",
+      "end_exclusive": "0x1804a969e",
+      "length": 30,
+      "unwind_rva": "0x14adec"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8a30",
+    "role": "图片加载async-void入口",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-getters-load-entry.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8a30",
+      "end_exclusive": "0x1804a8aeb",
+      "length": 187,
+      "unwind_rva": "0x14bfa0"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8af0",
+    "role": "图片加载状态机：取流、创建BitmapImage、await解码、发布",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-load-state.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8af0",
+      "end_exclusive": "0x1804a8ce3",
+      "length": 499,
+      "unwind_rva": "0x14b54c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8ce3",
+    "role": "图片流finally Dispose funclet",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-load-state.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8ce3",
+      "end_exclusive": "0x1804a8d0a",
+      "length": 39,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8d0a",
+    "role": "图片加载异常转发funclet",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-load-state.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8d0a",
+      "end_exclusive": "0x1804a8d35",
+      "length": 43,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8d40",
+    "role": "ImageSource setter和PropertyChanged通知",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-source-accessors.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8d40",
+      "end_exclusive": "0x1804a8d95",
+      "length": 85,
+      "unwind_rva": "0x14adf4"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a9630",
+    "role": "BitmapImage WinRT激活/RCW附着",
+    "evidence_paths": [
+      "evidence/image-lifetime/bitmapimage-constructor.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a9630",
+      "end_exclusive": "0x1804a965e",
+      "length": 46,
+      "unwind_rva": "0x14adec"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x180475f10",
+    "role": "泛型WinRT对象参数调用桥接：context的参数/receiver/结果位置",
+    "evidence_paths": [
+      "evidence/image-lifetime/bitmap-source-abi-dispatch.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x180475f10",
+      "end_exclusive": "0x180475fd4",
+      "length": 196,
+      "unwind_rva": "0x14beb4"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x18051d1f0",
+    "role": "manager返回图片流的async入口；与UI接口槽具体映射待证",
+    "evidence_paths": [
+      "evidence/image-lifetime/manager-stream-wrapper.json"
+    ],
+    "confidence": "high_inference_for_ui_dispatch",
+    "pdata": {
+      "start": "0x18051d1f0",
+      "end_exclusive": "0x18051d30e",
+      "length": 286,
+      "unwind_rva": "0x14b17c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x180517a70",
+    "role": "manager图片记录URL到storage流调用状态机",
+    "evidence_paths": [
+      "evidence/image-lifetime/manager-image-stream-entry.json"
+    ],
+    "confidence": "confirmed_local_semantics",
+    "pdata": {
+      "start": "0x180517a70",
+      "end_exclusive": "0x180517b76",
+      "length": 262,
+      "unwind_rva": "0x14b078"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804bf500",
+    "role": "storage读本地图片流async入口",
+    "evidence_paths": [
+      "evidence/image-lifetime/cached-stream-entry.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804bf500",
+      "end_exclusive": "0x1804bf629",
+      "length": 297,
+      "unwind_rva": "0x14bc7c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804bf630",
+    "role": "storage等待GetImageFile后OpenReadAsync返回流",
+    "evidence_paths": [
+      "evidence/image-lifetime/cached-image-stream-state.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804bf630",
+      "end_exclusive": "0x1804bf7a5",
+      "length": 373,
+      "unwind_rva": "0x14c0ec"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8c40",
+    "role": "MainPage生成连接器，connectionId8注册Image事件",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-event-connection.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8c40",
+      "end_exclusive": "0x1804c8f0d",
+      "length": 717,
+      "unwind_rva": "0x14af90"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c88e0",
+    "role": "Image.Loaded注册SourceProperty callback并把token存Tag",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-loaded-handler.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c88e0",
+      "end_exclusive": "0x1804c899c",
+      "length": 188,
+      "unwind_rva": "0x14ae64"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c86e0",
+    "role": "Image.Unloaded按Tag token注销SourceProperty callback",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-unloaded-handler.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c86e0",
+      "end_exclusive": "0x1804c877f",
+      "length": 159,
+      "unwind_rva": "0x14ae08"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c89a0",
+    "role": "DependencyObject.RegisterPropertyChangedCallback桥接",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-property-callback-register.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c89a0",
+      "end_exclusive": "0x1804c8a46",
+      "length": 166,
+      "unwind_rva": "0x14b10c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8780",
+    "role": "DependencyObject.UnregisterPropertyChangedCallback桥接",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-property-callback-unregister.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8780",
+      "end_exclusive": "0x1804c87e6",
+      "length": 102,
+      "unwind_rva": "0x14b7f4"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8f10",
+    "role": "Image.Unloaded remove包装，仅证明事件注册账簿用的委托目标",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-unloaded-event-wrappers.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8f10",
+      "end_exclusive": "0x1804c8f35",
+      "length": 37,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8f40",
+    "role": "Image.Unloaded add包装",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-unloaded-event-wrappers.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8f40",
+      "end_exclusive": "0x1804c8f65",
+      "length": 37,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8220",
+    "role": "SourceProperty changed async-void入口",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-source-property-callback.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8220",
+      "end_exclusive": "0x1804c82cb",
+      "length": 171,
+      "unwind_rva": "0x14b6a8"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c82d0",
+    "role": "SourceProperty changed调度状态机，捕获Page/Image",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-source-change-state.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c82d0",
+      "end_exclusive": "0x1804c8434",
+      "length": 356,
+      "unwind_rva": "0x14b58c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8434",
+    "role": "SourceProperty changed异常转发funclet",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-callback-exception.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8434",
+      "end_exclusive": "0x1804c845f",
+      "length": 43,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804c8500",
+    "role": "CoreDispatcher.RunAsync桥接",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-callback-dispatch-run.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804c8500",
+      "end_exclusive": "0x1804c85a2",
+      "length": 162,
+      "unwind_rva": "0x14b10c"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8560",
+    "role": "调度闭包将Page/Image转交选中项处理",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-change-dispatched-action.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8560",
+      "end_exclusive": "0x1804a8577",
+      "length": 23,
+      "unwind_rva": "0x14ae34"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a8580",
+    "role": "最后一项Source到达后记忆该项并先选0再选末项",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-change-apply.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a8580",
+      "end_exclusive": "0x1804a8682",
+      "length": 258,
+      "unwind_rva": "0x14bfc8"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a86a0",
+    "role": "单步VisualTreeHelper.GetParent桥接",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-container-walk.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a86a0",
+      "end_exclusive": "0x1804a86db",
+      "length": 59,
+      "unwind_rva": "0x14adec"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  },
+  {
+    "address": "0x1804a3290",
+    "role": "重建图片项集合，清集合后构造新项",
+    "evidence_paths": [
+      "evidence/image-lifetime/image-items-collection-replacement.json"
+    ],
+    "confidence": "confirmed",
+    "pdata": {
+      "start": "0x1804a3290",
+      "end_exclusive": "0x1804a353a",
+      "length": 682,
+      "unwind_rva": "0x14b0a0"
+    },
+    "name_status": "Recovered semantic role, not an original application PDB symbol"
+  }
+]

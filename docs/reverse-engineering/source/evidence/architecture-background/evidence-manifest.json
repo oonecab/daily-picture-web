@@ -1,0 +1,254 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "evidence": [
+    {
+      "path": "evidence/architecture-background/archive-first-selector.json",
+      "evidence_id": "ev_105b6abd3a86d44b5864cb5d9a864a7b24e46cd0f80ae88ad9a54ed9b4facccd",
+      "sha256": "bce7cab946c2684071c1ba9ba53093b75eb9a927c77825e60ef61417870c0951",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/background-entry-and-dispatch.json",
+      "evidence_id": "ev_da4920146608d3bf7cd0f7d3726695cf5ad9fd9477814d6686ff57e77942f442",
+      "sha256": "ade268a3759c7b15d74b62237feb73f1d8a3eeb70e77d69f0a3a9e1fb7cb8a5a",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/deferral-bridge.json",
+      "evidence_id": "ev_c6da20d2dcb9a962ce95e8d2fff0a76c904d4e30c4e989a8be8d8355fa93252e",
+      "sha256": "e9ebcd63d11f020c5734ea59c8ff9f0fd528832bd53212ccfdcbd234a33d2361",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/dependency-constructor-three.json",
+      "evidence_id": "ev_ce066679cc4d98bff78058fa0546df6c81acba745b0c014eb2f8e990fc9073f6",
+      "sha256": "0f89bbf9505196bcbb333ac13bbadabddb36063431f508072556a613cc1a26e5",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/dependency-constructor-two.json",
+      "evidence_id": "ev_ccb68365e65666fbf80d599f452302075b6a4602a987f096323813f34351972f",
+      "sha256": "20139232ed09a9f3fa0d3af008e7e50d8ee557860a5337c53e03bc3e34e3a1f6",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/desktop-personalization-apply.json",
+      "evidence_id": "ev_94271ed3e40ff7b78535978d727e6d87b315b17fbc9a88eefc152dd5e6330e6c",
+      "sha256": "9ecccfdbfba3456cb454139d46424f8a22beeb5ce8c6a4a617359a44dd997c87",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/get-deferral-projection.json",
+      "evidence_id": "ev_6b283cb672e12123e49a70c855aa95d6e1b7e6185329045a253de0a974e3b44c",
+      "sha256": "e6b034103373478a6cbb6fa0c2e13e579f49740b3a2d6d0faeabc6840576a118",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/image-resize.json",
+      "evidence_id": "ev_a00d5eb93ea8d850f16b612e677d184f8e96f44f32ca6d1542932554123e411e",
+      "sha256": "4dd48843128294fabaaf1769b35bab4b1f9a95686303bbf9a750469138adbcf6",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/lockscreen-personalization-apply.json",
+      "evidence_id": "ev_881031a01d5e7e4e0837d4b8601333bd619da146c96171ab47e185b0aebfce92",
+      "sha256": "00a8009b91731d954518c6e77475c735386aa7f5ddc75663eec203c639d13f84",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/personalization-providers.json",
+      "evidence_id": "ev_12ea6056e23f38ee0002dcd147648bd1151c3828d07f2b24542e1f7fd8132fe6",
+      "sha256": "cf37fbf0156e55a0a1015552a891a9f7c7c0197f2000d1e51265d4d83b8fa3b4",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/provider-and-settings.json",
+      "evidence_id": "ev_bc24535a17b06fba860343253b735d371141c5794d94d9cd7713b4f70a085221",
+      "sha256": "a9721290afa6f5d072aed8d3fea7688bd9112216a893b9d4501117d873234df3",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/registration-exception.json",
+      "evidence_id": "ev_6aa94b16ebeccc1fa3b3c33eeda0c4e8fb1c09226a5eed8052d9302eca7afb86",
+      "sha256": "94da5b5ba4b3f827c74060980a68e139193dd2fd92d010a956e50be5fe72a73a",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/settings-and-capabilities.json",
+      "evidence_id": "ev_db635d3433ce4d0069a503fff410c877118a715e052c6f088b2afc0b7781dd2c",
+      "sha256": "6948373b70c7b8d4964c3e46f712daad0ebcb45d02505142823d12e0d258bb2d",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/tile-convert-and-select.json",
+      "evidence_id": "ev_f7cb78189e7fa80bdf07a5b544eabc24c14deb3a6f0ec5f5d7d3e65d77a4fdf4",
+      "sha256": "9b994b6d3643b10e590c4c40f31cf2d3437af6dbb68cc877fc9b15aea50aa88f",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/tile-encoder-set-pixels.json",
+      "evidence_id": "ev_c6a81a5d3fb6c9d934d07f551050575ed8befced4ebf9e4e515a79312ba6df57",
+      "sha256": "9cc68691d77c9b4b3d9b449fd3be20dc12835785f2f8675bf67eb6015ecda7ef",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/tile-save-and-notification.json",
+      "evidence_id": "ev_310f4bc00f7d69f8a60074914d2357b1f31dca6849ec15624b4d8c2becff2297",
+      "sha256": "aa404eef986d457532190b01393a510112db87f8135a5071f28e1e09a8818a1f",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-background/url-settings-and-invalidation.json",
+      "evidence_id": "ev_97aa7db13596a1ba55ea90ca7c3ae2613311d8220e687f6d806ac904c21d8043",
+      "sha256": "2ee733c27eea3f223ac3d5861b79e8765d3ef621e8fbda7db79f0eac88399f7e",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/architecture-ui/mainpage-context-changed.json",
+      "evidence_id": "ev_b7e1737ecdb5e8350a03db8d2da67a893bac45fc34cff46781aea1ef78382bb7",
+      "sha256": "54780f090888d65e7ed161f5d09cf992a8f237589f3eef490cde5176eb80a39a",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/background-builder.json",
+      "evidence_id": "ev_7c719583d48638766d6526248c091a9edcd4cbad0cea540aca6b29917601f6ff",
+      "sha256": "85efa5062679441201b113df9d19b0fa6b81bd73c93261cdce71f7af77b525b7",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/background-task-find.json",
+      "evidence_id": "ev_f70bdc13e6209974c6cf2736ac5f74876b81f73e347bc0c479a646e3bfda5e16",
+      "sha256": "602d65a0e87dafdc987c647a0a6f33c3c0e730aa4ba18d80f76745839abe2353",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/desktop-settings-read.json",
+      "evidence_id": "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e",
+      "sha256": "a3d86fbc3998ec0bb41eb695063e37ca795a0ea240cfb8069301e2967743aaed",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/desktop-settings-write.json",
+      "evidence_id": "ev_7084e6e44d29757c7880cdc784d6befef86e55f914dc8c3c59618477da2df0e9",
+      "sha256": "b5c1ba2d6a4b826f00e20f7553be8bcf833188531363e0161d2c5a707b996cf0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/lockscreen-settings-read.json",
+      "evidence_id": "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc",
+      "sha256": "bd6f5f26ddc9c191436f53c4c54dcd0598dd122f96e2e08e04d7b67220e4ae84",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/lockscreen-settings-write.json",
+      "evidence_id": "ev_0af13c153f19e30616e1011b6db241a4091bf306f23a888552a19a0c40b4b697",
+      "sha256": "e46690032dadcbc491c4e25e0683bab9dec21fdcb148deadd34905c9683168eb",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/old-task-unregister.json",
+      "evidence_id": "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b",
+      "sha256": "293410f3b02289738b733cbd7902a7075cd1fe02f23bde0930445a5a8b34ecb9",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/system-condition.json",
+      "evidence_id": "ev_8358ad6bb8aca5bebbd70f76799cf98093375f7d6ee02f3df89cbf97ed0c34ce",
+      "sha256": "76f3c9066e8185832607cdb570d00149d182d0f205a477a24517f6d88aebeb5f",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/task-registration.json",
+      "evidence_id": "ev_000e743c32ba3360d0389fb614ae3cbe9f26070bf94a762d0b323ea467de30c9",
+      "sha256": "f62678936b009cd6f6f8f4bfa1289b1da117d94e61b26b116c3a0adbc7f73986",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/time-trigger.json",
+      "evidence_id": "ev_5851ce0242f869ac690d9bf4dcc68b9e073854b1eb15fc6c4301148a5f9d2d91",
+      "sha256": "ab9c839623939877a4450af3c3503e8ee39f0b24d6f4a98d192c356f4bcca4ca",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/background/time-trigger-factory.json",
+      "evidence_id": "ev_9e770d83bef3f875364c68d76788aeb8951f8871baf9e8f745c5afee7590967f",
+      "sha256": "d5cdb12d9aafabb6bb73d9450007740df7139d326d4e929b6d4209f06e59a88f",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/lifecycle-supplement/no-input-interface-slot.json",
+      "evidence_id": "ev_bd70a3a278066e96c2cd4c73f21a0d83e825726d87b79bdd541422962cb043f6",
+      "sha256": "5a44920d28c0f6b6c7a5dd5d3bb92c99a8afd125d82cab91c5f58900d1b9e094",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    {
+      "path": "evidence/lifecycle-supplement/pixel-data-abi-bridge.json",
+      "evidence_id": "ev_b8f180218217ed13f4097fbfa3c4be90a94acf37eaa669ed4ad0c38e8ae28bb2",
+      "sha256": "a721c3f92b2006c1d4cbb502ec83e85915847293a62e54a418e4f62d8c379734",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    }
+  ]
+}

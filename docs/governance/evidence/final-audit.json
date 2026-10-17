@@ -1,0 +1,1775 @@
+{
+  "checked_utc": "2026-10-17T11:52:47.997569+00:00",
+  "target": "E:\\study\\rea\\daily-picture\\web",
+  "status": "passed",
+  "original_files_checked": 52,
+  "original_files_unchanged": 52,
+  "original_research_files_checked": 652,
+  "markdown_documents_checked": 50,
+  "local_links_checked": 573,
+  "created_files_count": 283,
+  "strict": {
+    "command": [
+      "D:\\ProgramData\\miniconda3\\python.exe",
+      "-X",
+      "utf8",
+      "E:\\dongdong\\codeup\\init-project-governance-skill\\init-project-governance\\scripts\\validate_project.py",
+      "E:\\study\\rea\\daily-picture\\web",
+      "--strict"
+    ],
+    "exit_code": 0,
+    "stdout": "项目治理校验通过。\n",
+    "stderr": ""
+  },
+  "repeat_preview": {
+    "command": [
+      "D:\\ProgramData\\miniconda3\\python.exe",
+      "-X",
+      "utf8",
+      "E:\\dongdong\\codeup\\init-project-governance-skill\\init-project-governance\\scripts\\init_project.py",
+      "--target",
+      "E:\\study\\rea\\daily-picture\\web"
+    ],
+    "exit_code": 0,
+    "stdout": "UNCHANGED .env.example\nUNCHANGED .gitattributes\nPRESERVE  .gitignore (显式声明的项目人工权威；仅检查结构，不替代内容评审)\nUNCHANGED .project-governance.json\nUNCHANGED AGENTS.md\nUNCHANGED CLAUDE.md\nPRESERVE  README.md (显式声明的项目人工权威；仅检查结构，不替代内容评审)\nUNCHANGED TECH.md\nUNCHANGED docs/README.md\nUNCHANGED docs/architecture/_template.md\nUNCHANGED docs/capabilities/external-integration.md\nUNCHANGED docs/capabilities/modular-architecture.md\nUNCHANGED docs/capabilities/web.md\nUNCHANGED docs/contracts/_template.md\nUNCHANGED docs/environments.md\nUNCHANGED docs/governance/CHANGE_TRIAGE.md\nUNCHANGED docs/governance/SECURITY.md\nUNCHANGED docs/governance/TESTING.md\nUNCHANGED docs/governance/WORKFLOW.md\nUNCHANGED docs/rules/README.md\nUNCHANGED docs/rules/_template.md\nUNCHANGED docs/testing/README.md\nUNCHANGED docs/testing/_template.md\nUNCHANGED issues/README.md\nUNCHANGED issues/_template.md\nUNCHANGED milestones/README.md\nUNCHANGED milestones/_template.md\nUNCHANGED plans/README.md\nUNCHANGED plans/_template.md\n\n当前仅为预览。请重新运行并添加 --apply 以写入这些变更。\n",
+    "stderr": ""
+  },
+  "repeat_preview_counts": {
+    "UNCHANGED": 27,
+    "PRESERVE": 2
+  },
+  "repeat_preview_preserved_bytes_and_mtimes": true,
+  "failures": [],
+  "original_files": [
+    {
+      "path": ".cache/archives/de-DE.json",
+      "bytes": 3738,
+      "sha256": "3a678134f72975a027123917e4ef938f92f9a71a00e0809ae8934cd760827404",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/archives/en-GB.json",
+      "bytes": 3713,
+      "sha256": "a5b5dec024fbdebd2e76715b89ce99f682b216c1a6bfcb03ea39271ca2d836f5",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/archives/en-US.json",
+      "bytes": 3744,
+      "sha256": "143645ff02d180516f67e3f1aaab2253c084542bf3fad9ca3a30d251f7a25d08",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/archives/fr-FR.json",
+      "bytes": 3723,
+      "sha256": "b3a12a89ea1a5a2860ebb4bff13a957a29ad69a3a57b70b605a808f097528145",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/archives/ja-JP.json",
+      "bytes": 4014,
+      "sha256": "b911277b725b088ee77fbd1e455764ce490b9fe8964b6f0acaa3cfc1e3dcf5eb",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/archives/zh-CN.json",
+      "bytes": 3875,
+      "sha256": "f9efa1a74defa30a12d028e401c2505f0ac16ee1c12b40e1c2c94e062b1a801d",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.AmmoniteFossils_EN-US6354038755_640x360.jpg",
+      "bytes": 79473,
+      "sha256": "df4a4048c4ba55ef47401b88f8467cc2f4334da2ceaa239072bb77928481ceec",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.AmmoniteFossils_FR-FR7395830779_640x360.jpg",
+      "bytes": 79473,
+      "sha256": "df4a4048c4ba55ef47401b88f8467cc2f4334da2ceaa239072bb77928481ceec",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.AmmoniteFossils_ZH-CN5825251327_1920x1080.jpg",
+      "bytes": 339974,
+      "sha256": "0ce308e170ae0234a092b8bbdd2caaff8f93804ceb547afada7d8a826d96a29c",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.AmmoniteFossils_ZH-CN5825251327_640x360.jpg",
+      "bytes": 79473,
+      "sha256": "df4a4048c4ba55ef47401b88f8467cc2f4334da2ceaa239072bb77928481ceec",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.BabcockSP_EN-US6068931791_640x360.jpg",
+      "bytes": 75838,
+      "sha256": "a93d12db7abe5253c35cee964c3968150be6b409f4ec1bf59c3814afae2643fe",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.BabcockSP_FR-FR9462539296_640x360.jpg",
+      "bytes": 75838,
+      "sha256": "a93d12db7abe5253c35cee964c3968150be6b409f4ec1bf59c3814afae2643fe",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.BabcockSP_ZH-CN5266848536_1920x1080.jpg",
+      "bytes": 340458,
+      "sha256": "c9d49305b1861b8bdea744e51984ac20749f9022d31db693b59937af94e3b338",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.BabcockSP_ZH-CN5266848536_640x360.jpg",
+      "bytes": 75838,
+      "sha256": "a93d12db7abe5253c35cee964c3968150be6b409f4ec1bf59c3814afae2643fe",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.ChauvetPaintingsFrance_EN-US6137200151_1920x1080.jpg",
+      "bytes": 333962,
+      "sha256": "faea9395e273f2690c43062b821bab896e08a28a61fd07a4ee4dfda369255b66",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.ChauvetPaintingsFrance_EN-US6137200151_640x360.jpg",
+      "bytes": 35250,
+      "sha256": "6709e29deea6952ffde1224f67584487aaf8fb491d0d30717c82ef987ec71030",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.ChauvetPaintingsFrance_ZH-CN3150703955_1920x1080.jpg",
+      "bytes": 333962,
+      "sha256": "faea9395e273f2690c43062b821bab896e08a28a61fd07a4ee4dfda369255b66",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.ChauvetPaintingsFrance_ZH-CN3150703955_640x360.jpg",
+      "bytes": 35250,
+      "sha256": "6709e29deea6952ffde1224f67584487aaf8fb491d0d30717c82ef987ec71030",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.MumblesSwansea2026_FR-FR6666496816_640x360.jpg",
+      "bytes": 41651,
+      "sha256": "4538f6fff7328fa590dd22a05f357764d3c205c74356c38d7d36e73a205f1dc7",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.MumblesSwansea2026_ZH-CN5419531039_1920x1080.jpg",
+      "bytes": 331113,
+      "sha256": "f26b9b3e55fdd4f8e05dbd77f355a126325adfacf201e733d86d50448c4a91bf",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.MumblesSwansea2026_ZH-CN5419531039_640x360.jpg",
+      "bytes": 41651,
+      "sha256": "4538f6fff7328fa590dd22a05f357764d3c205c74356c38d7d36e73a205f1dc7",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.PlitviceAutumn_EN-US6255909048_640x360.jpg",
+      "bytes": 73632,
+      "sha256": "6efbe1c677a38d6791e64a0fa1830f84bd92e00f7f188963959d0d1523b14e37",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.PlitviceAutumn_FR-FR7127723381_640x360.jpg",
+      "bytes": 73632,
+      "sha256": "6efbe1c677a38d6791e64a0fa1830f84bd92e00f7f188963959d0d1523b14e37",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.PlitviceAutumn_ZH-CN5646237897_1920x1080.jpg",
+      "bytes": 338761,
+      "sha256": "0dab80759521246896d70623602d8af9441a812b80d9c9f58e0e187f23391be0",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.PlitviceAutumn_ZH-CN5646237897_640x360.jpg",
+      "bytes": 73632,
+      "sha256": "6efbe1c677a38d6791e64a0fa1830f84bd92e00f7f188963959d0d1523b14e37",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SmilingSquirrel_FR-FR7350313584_1920x1080.jpg",
+      "bytes": 328798,
+      "sha256": "88b41c4244a8e100b623dc78dc8da1288ce6ef7325ebc522c0249d4e9d07df36",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SmilingSquirrel_FR-FR7350313584_640x360.jpg",
+      "bytes": 24902,
+      "sha256": "dfc5e8575b05cf293341acdff7c328418a1588ada624e8e020b6d4844982b0a1",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_EN-US3953128777_640x360.jpg",
+      "bytes": 56219,
+      "sha256": "7d072d80d8813ad3be0b614a7c42e373dfd0a1c7142d28b74254e2b19407d64a",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_FR-FR3895133232_640x360.jpg",
+      "bytes": 56219,
+      "sha256": "7d072d80d8813ad3be0b614a7c42e373dfd0a1c7142d28b74254e2b19407d64a",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_ZH-CN3002661429_1080x1920.jpg",
+      "bytes": 336712,
+      "sha256": "db006fdb69de285d99174eb33a87b44f48bc3ce7208ed3bac4749c2d134390ff",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_ZH-CN3002661429_1920x1080.jpg",
+      "bytes": 340562,
+      "sha256": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_ZH-CN3002661429_640x360.jpg",
+      "bytes": 56219,
+      "sha256": "7d072d80d8813ad3be0b614a7c42e373dfd0a1c7142d28b74254e2b19407d64a",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.SneffelsAutumn_ZH-CN3002661429_UHD.jpg",
+      "bytes": 3685052,
+      "sha256": "d66e62dcce2045eb9bc7704865ed6abfa181f77e4ad1c19dd5772c181929e651",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.WhiteHouse_EN-US6161912809_640x360.jpg",
+      "bytes": 46362,
+      "sha256": "10fbd607ab12ebc09e837abfd518a309ccc57bbad8c4888e7ee83bfc3eee78c8",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.WroclawPoland_EN-US7757698922_640x360.jpg",
+      "bytes": 50176,
+      "sha256": "1c5cbf82da938f824e6142423420bb2df8107c84e2ba4e34d0c0fa28e59c6b2c",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.WroclawPoland_FR-FR0061683282_640x360.jpg",
+      "bytes": 50176,
+      "sha256": "1c5cbf82da938f824e6142423420bb2df8107c84e2ba4e34d0c0fa28e59c6b2c",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.WroclawPoland_ZH-CN6042428292_1920x1080.jpg",
+      "bytes": 335160,
+      "sha256": "4956c184809dd0b64f403ea87e792ad05f06a7644e77b73228058d23c01ae107",
+      "unchanged": true
+    },
+    {
+      "path": ".cache/images/OHR.WroclawPoland_ZH-CN6042428292_640x360.jpg",
+      "bytes": 50176,
+      "sha256": "1c5cbf82da938f824e6142423420bb2df8107c84e2ba4e34d0c0fa28e59c6b2c",
+      "unchanged": true
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "dc2dc2f62de50a77f3dafdb2716843e684157c5edf50eb56ee19a88949ad07df",
+      "unchanged": true
+    },
+    {
+      "path": "lib/bing.mjs",
+      "bytes": 9748,
+      "sha256": "4306c2023048435950fef12ca131ae780105b97ab54aaa3d92cad8b7777d5b06",
+      "unchanged": true
+    },
+    {
+      "path": "package.json",
+      "bytes": 426,
+      "sha256": "023e726effb6076f885ad1a7a792d36d0a9eaf06af36cb505625e0c45edb0f01",
+      "unchanged": true
+    },
+    {
+      "path": "public/app.js",
+      "bytes": 20939,
+      "sha256": "4f10b629b1a2379680a20da162b4c136b016280bc95ee63b0d62f4c83710547f",
+      "unchanged": true
+    },
+    {
+      "path": "public/icon.svg",
+      "bytes": 280,
+      "sha256": "eb22140733dc8ebc3db4b055c705168c02e6634aaf583dd84466145d99502dd1",
+      "unchanged": true
+    },
+    {
+      "path": "public/index.html",
+      "bytes": 11452,
+      "sha256": "b6b4ba3ffb50a4e4556b8efd5cc0dc851e13bc4b43279c0cb26eb9b62706f3db",
+      "unchanged": true
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "bytes": 393,
+      "sha256": "ce3ec2985f3e808064734684b5976edd3fad6270d1a9b5dad224078abe52ea01",
+      "unchanged": true
+    },
+    {
+      "path": "public/styles.css",
+      "bytes": 17407,
+      "sha256": "1b2fbeeb3c14d505470b98f6ba77156eec756fdc3bb3bcd0742eff86dfd2f23c",
+      "unchanged": true
+    },
+    {
+      "path": "public/sw.js",
+      "bytes": 3035,
+      "sha256": "83baa8c355c0f44ec77efb1f5c52d900ea57f0299a529958b021d7566429a335",
+      "unchanged": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 7197,
+      "sha256": "550b07269082faa1fd302beb6c9ceb95e0098aa6f65c43dc6941d8046405f9ca",
+      "unchanged": true
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 4982,
+      "sha256": "b85435c722d1756315fc8a202a974d503f809ff38b5fb6767722d20982d849a5",
+      "unchanged": true
+    },
+    {
+      "path": "start.cmd",
+      "bytes": 309,
+      "sha256": "14b28dcbf2ce7ceb9ff3df2f3c5301d1a22897b66e1a0d1bee3e7fe120aacfc6",
+      "unchanged": true
+    },
+    {
+      "path": "test/app.test.mjs",
+      "bytes": 6951,
+      "sha256": "ec21767bed98d6efb7342e54f1b6c6eb4c0217fac0afa26c7990add765bb06a0",
+      "unchanged": true
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 5092,
+      "sha256": "b418e343d4c2e8f9d7790a4bca3e784db0ccc54e926832abc87af835f92eacb8",
+      "unchanged": true
+    }
+  ],
+  "created_files": [
+    {
+      "path": ".env.example",
+      "bytes": 317,
+      "sha256": "daa98f41922defbf6f92294184148eb122bcbe2a002d653226996e4ae914c418"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 442,
+      "sha256": "29d4ae422d1f592fcbed3ae7fa374ec2d0115db20f918f56049f611cdd0639e1"
+    },
+    {
+      "path": ".project-governance.json",
+      "bytes": 8936,
+      "sha256": "da6d1d02d0ac0901b195903de462c6bfb1a7d511368e0ae21c14cbd8deca1703"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3690,
+      "sha256": "e0e81ea8c89fadf2408a4d998ef5e780ed6c9d3ae2ea21e2d476626161c23e7b"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 414,
+      "sha256": "f1ca381b4637b3cb183e4136916fee480ccdbc82710eae525427f3306228fe0f"
+    },
+    {
+      "path": "docs/architecture/_template.md",
+      "bytes": 1687,
+      "sha256": "e6f46cee9d2916ac638400ae828d3bd06368bd14784c2514a6bb08b8d9c8ae6a"
+    },
+    {
+      "path": "docs/architecture/web-app.md",
+      "bytes": 3042,
+      "sha256": "060815e31742f03ba1d5858dfcda0df3eb69cda60a65ddeb5b915693314274ec"
+    },
+    {
+      "path": "docs/capabilities/external-integration.md",
+      "bytes": 1128,
+      "sha256": "204d3e2cecf016ecb11f9d57675d1354649eec4ed1127e8d86ea00ba405bfbc4"
+    },
+    {
+      "path": "docs/capabilities/modular-architecture.md",
+      "bytes": 1031,
+      "sha256": "5163f664dca87aa63d9f50253f465955845f0d4d97782b984120cc9c17c75023"
+    },
+    {
+      "path": "docs/capabilities/web.md",
+      "bytes": 996,
+      "sha256": "2711cefcebe9ab73677c832a70adcc4fe50d183ff05c66992f96288fdce16f6e"
+    },
+    {
+      "path": "docs/contracts/_template.md",
+      "bytes": 1590,
+      "sha256": "aac91e7a3f7751993fd412506731342a488562f2c2292ce0fdb4b81890fdb934"
+    },
+    {
+      "path": "docs/contracts/bing.md",
+      "bytes": 2983,
+      "sha256": "967b5d544b5ed707f3c71e1cfbe39b599c3621979456e39f24968e44b5a0e531"
+    },
+    {
+      "path": "docs/environments.md",
+      "bytes": 1195,
+      "sha256": "4e19767197ce058256b340db3d9434ec1e2cf70a5201b2ab5e5b097d8d493fd8"
+    },
+    {
+      "path": "docs/governance/CHANGE_TRIAGE.md",
+      "bytes": 2527,
+      "sha256": "bf21e3bd723ad97f6dcc178de9d49b90ca0c03b538863bbf99585322a4b44e1e"
+    },
+    {
+      "path": "docs/governance/evidence/final-audit.json",
+      "bytes": null,
+      "sha256": null,
+      "note": "Self inventory; digest deliberately omitted."
+    },
+    {
+      "path": "docs/governance/evidence/initialization-checks.json",
+      "bytes": 3904,
+      "sha256": "f5a7ab3ae18f5aee9fec015fc8bcb8d1c403a9eca1bbac33c02ca0e1b1544781"
+    },
+    {
+      "path": "docs/governance/INITIALIZATION.md",
+      "bytes": 5240,
+      "sha256": "79fac1fc6ae1f1a0fca110f934acca14d79e7dbfd05efcb4777a00c01b21395e"
+    },
+    {
+      "path": "docs/governance/SECURITY.md",
+      "bytes": 1723,
+      "sha256": "cf24accce1ff3c7676104f6a6b19210604980405c64dc2e750d3eb52265c7d10"
+    },
+    {
+      "path": "docs/governance/TESTING.md",
+      "bytes": 3276,
+      "sha256": "691a2b41f9fbbf6a839041848efa7ef59ea29ae3a62b376cc828f4461a38bd6f"
+    },
+    {
+      "path": "docs/governance/WORKFLOW.md",
+      "bytes": 2654,
+      "sha256": "408019ec4ff08f528c8c864905adb45c65f64b921009702b5f0170c9e09c7f75"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 2851,
+      "sha256": "790df32b21481ad494e66a5af0db6005243cf4d7376347dd541b1627f9b16af9"
+    },
+    {
+      "path": "docs/reverse-engineering/provenance.json",
+      "bytes": 180568,
+      "sha256": "cfb2296efbcd288029f96a2c3e99878d80fd537bebfe3a932c576730239c30d9"
+    },
+    {
+      "path": "docs/reverse-engineering/README.md",
+      "bytes": 3650,
+      "sha256": "1aa08d6877425afb3dd3c017f5e49ae66c4780074f81a246ac17621ef3d75188"
+    },
+    {
+      "path": "docs/reverse-engineering/source/ANALYSIS.md",
+      "bytes": 14737,
+      "sha256": "7f4ec3dc331fd88b77c0b79edb40a73a87ce75b16a3b305fe662704e504794db"
+    },
+    {
+      "path": "docs/reverse-engineering/source/ARCHITECTURE.md",
+      "bytes": 17758,
+      "sha256": "6a8dba0daba98b2c2a9535f4f21d0f0c6c184e762858028a1b1e931b14bf3b55"
+    },
+    {
+      "path": "docs/reverse-engineering/source/DEEP_ANALYSIS.md",
+      "bytes": 22055,
+      "sha256": "c5c6b489c4db6e97999698a3962999a644327f836d2c14781d0d41c8b6d3f638"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/architecture-ledger.json",
+      "bytes": 15382,
+      "sha256": "f1d0f7c1c11a8af672541d5b4785c3a3365bc364e67d4fb748980b0abc69bd3c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/background-and-personalization.md",
+      "bytes": 36795,
+      "sha256": "bcaa4e8d9bf41fd683f9c97f3631f5c1ada10d78028fd6ca8e12c1f0aa0835d0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/coverage-and-evidence.md",
+      "bytes": 6674,
+      "sha256": "384082a4322a527e39c0cadb54758b989ae5da761ae581e600b69cc06767f419"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/data-model-and-storage.md",
+      "bytes": 33105,
+      "sha256": "224d31dfe7cfd4e34e06cc485335778e73d31e82978763364e73f3d9898816ae"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/function-map.csv",
+      "bytes": 78507,
+      "sha256": "047f6a784a42d634b8e64438bfc65602697290898d919834e39284565dbbc8c6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/function-map.json",
+      "bytes": 572233,
+      "sha256": "3ecf55198a3dfdee573086092b3fe25c636075a745a72139bf56c23ededb3722"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/image-loading-and-lifetime.md",
+      "bytes": 22157,
+      "sha256": "13122429aad2a8c146cf1124ded8ebfcf60eae2c9f7c9ebdb8e1835dc48476e3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/methodology-and-reproduction.md",
+      "bytes": 8497,
+      "sha256": "d747285565bae73107cb639c620085a8796211e00a69f455f8b2845e37ef6c1a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/network-and-download.md",
+      "bytes": 7414,
+      "sha256": "ae2b8bfe8664f4f31dcd8dbd53f142cf0b6eab1dac9baa51e2bed11b52bd12dd"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/packaging-and-dependencies.md",
+      "bytes": 6774,
+      "sha256": "56635205f43ffc0e88d5e27968c0ab5450ae9ffd8f0a0f55b002ffd28da99d05"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/suspend-and-resume.md",
+      "bytes": 21368,
+      "sha256": "fd6fb79a345517e5447a84257fc4b56de9e77c680687c6910eec7dd3d717b3c5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/timers-and-disposal.md",
+      "bytes": 20905,
+      "sha256": "7f89024f0c1d1887e77272f22cdc4c1db42c3799ead3b14d9317166524743042"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/ui-and-lifecycle.md",
+      "bytes": 35484,
+      "sha256": "e0c6455c6c27431fdf129baeda09b2c7254bd1e73fe7329c834c9a7a1b3c867f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/docs/unknowns.json",
+      "bytes": 9505,
+      "sha256": "da5764ae781c669179ac635df41178bb153141375199aeb86f350cec7757a6e4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/abi-evidence.json",
+      "bytes": 58433,
+      "sha256": "0007c7f9269eb7a35efb4c02b100a7989f6748adde35278298ce8e83c4970239"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-allocation.json",
+      "bytes": 7972,
+      "sha256": "a1b14b56957806e17577edabfb4b38a0a139c5a1e5916656539f480a55676a75"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-constructor-pseudocode.json",
+      "bytes": 5218,
+      "sha256": "94f3a4335e0fa36d3588adf88db237f76de99c62bc576bc66ac5846efca99717"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-constructor-real.json",
+      "bytes": 61288,
+      "sha256": "fd0df710c5fdf69288e09183497bb8a593a24b11bee455eb63d515a7c14d226a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-dispose-pseudocode.json",
+      "bytes": 3858,
+      "sha256": "fa73727fb610222e7cc20c2ffdfff58d6e56ea78e23affe8f0455e002d810594"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-nearby.json",
+      "bytes": 249896,
+      "sha256": "2f11af8348591bbf783e72ac107de2654c210db9f26a36d03927af890ec35a62"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-start-and-interfaces.json",
+      "bytes": 97612,
+      "sha256": "53920fb7dbe096910be3dbd2bc52f93e8baf7c9d68246f6cdc708ac1ec655f8f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/app-start-cctor.json",
+      "bytes": 34390,
+      "sha256": "0b945e11604a2e825cabb0e7ae6bf5ccf17057b8b7769681c9d8513b85a70274"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/application-event-projections.json",
+      "bytes": 306844,
+      "sha256": "86950698101ab459cd665d9a4d2619f60b1f7c2d4041707aae1cac4472b2f633"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/application-start-projection.json",
+      "bytes": 16438,
+      "sha256": "03165095c246db0bb30a3c6bbc7279f75479e3ce3c31279012cbcf70f8176576"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/base-onlaunched-projection.json",
+      "bytes": 8324,
+      "sha256": "aee9a30c01b4389d4f2881dc79b99f5f7e7aece8d3a74225f05e3ed5bcc8dbd2"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/evidence-manifest.json",
+      "bytes": 6532,
+      "sha256": "66130541ab770558f4826a0121431c4e97fdfece7598b001e91770bea7729f30"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/findings.json",
+      "bytes": 25459,
+      "sha256": "cc73028b9a5ba399c842be2291c52150c9388632c5cd194bdbf0c311e6a694d1"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/functions.json",
+      "bytes": 13464,
+      "sha256": "2ec987fb6c1e9ca268173c792f41cd5833f62402d0665dc973fb53053ddd651f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/lifecycle-event-accessors.json",
+      "bytes": 248628,
+      "sha256": "273e8066f4198c6d5df337db72b1009149812b31ed9100fe0a9be4a1a3580538"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/onlaunched-interface-dispatch.json",
+      "bytes": 24126,
+      "sha256": "739d5cdcbaba5a4c64fb58582b130fa2116c24250a40c956065f9a37794e8c2c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/onlaunched-pseudocode.json",
+      "bytes": 10588,
+      "sha256": "8cb90441615ff807be07bbf2d7eb40c090731e62046896a5f9e54982b686876c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/reference-candidates.json",
+      "bytes": 16714,
+      "sha256": "38a24f3c94b2fb8d2e664f9d14c3f0dd2e0a49720f16fe71333c27cf7e2f7ad3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/suspending-pseudocode.json",
+      "bytes": 3240,
+      "sha256": "97b5bbcc924bf28bb8444cef259402ed459c0f6f2bdf311e8bb061f47735a4a4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/app-lifecycle/system-winmd.json",
+      "bytes": 58292,
+      "sha256": "7cf86914dd42f7f47b5aff1d30e65b6de606ff2d82e67bb0fbcd4c2b33a39fde"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture/documentation-validation.json",
+      "bytes": 2858,
+      "sha256": "d9dde891de2c0b08307b691e7a36e7cf1c2e3c60eb41bc8cdfee3a69cc8cc88d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture/NETNATIVEBUILDINFO.txt",
+      "bytes": 11038,
+      "sha256": "b06dca39cd39228af162c880766a7d53fcfcd61b369fd77b01663713ac6cc0fd"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture/package-layout.json",
+      "bytes": 32543,
+      "sha256": "39f684cca5a86ffaa372f0e3ef7fc045c9273a31fd960d8a9a4e1ea662c0079e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/abi-crosscheck.json",
+      "bytes": 32948,
+      "sha256": "b1b97138b508a99e125b63f2c723fdbb5a7f2a61098dde7c496338961630a031"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/abi-evidence.json",
+      "bytes": 61794,
+      "sha256": "89d4966e650e6ac7a15c2f08dcb8a594d25fc0cc795723cfeb684bc7f541c6e8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/archive-first-selector.json",
+      "bytes": 44198,
+      "sha256": "bce7cab946c2684071c1ba9ba53093b75eb9a927c77825e60ef61417870c0951"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/background-entry-and-dispatch.json",
+      "bytes": 776704,
+      "sha256": "ade268a3759c7b15d74b62237feb73f1d8a3eeb70e77d69f0a3a9e1fb7cb8a5a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/deferral-bridge.json",
+      "bytes": 18320,
+      "sha256": "e9ebcd63d11f020c5734ea59c8ff9f0fd528832bd53212ccfdcbd234a33d2361"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/dependency-constructor-three.json",
+      "bytes": 23096,
+      "sha256": "0f89bbf9505196bcbb333ac13bbadabddb36063431f508072556a613cc1a26e5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/dependency-constructor-two.json",
+      "bytes": 21504,
+      "sha256": "20139232ed09a9f3fa0d3af008e7e50d8ee557860a5337c53e03bc3e34e3a1f6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/desktop-personalization-apply.json",
+      "bytes": 180534,
+      "sha256": "9ecccfdbfba3456cb454139d46424f8a22beeb5ce8c6a4a617359a44dd997c87"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/evidence-manifest.json",
+      "bytes": 11865,
+      "sha256": "b1ec04af97d4c580e3abdb24a7a9ed58597dd348b036fa4b30fdf590b06c97f7"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/findings.json",
+      "bytes": 48692,
+      "sha256": "1ea9c36c3d6d13a954fb9f3a3707d6fd78378993daabbcfb67d784b281546352"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/functions.json",
+      "bytes": 26017,
+      "sha256": "d8dc7f954c8ba4d83f35aa06a726be793f837fc1ef3c84a3f5af91aba48edcc8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/get-deferral-projection.json",
+      "bytes": 7296,
+      "sha256": "e6b034103373478a6cbb6fa0c2e13e579f49740b3a2d6d0faeabc6840576a118"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/image-resize.json",
+      "bytes": 84510,
+      "sha256": "4dd48843128294fabaaf1769b35bab4b1f9a95686303bbf9a750469138adbcf6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/layout-evidence.json",
+      "bytes": 20265,
+      "sha256": "6a24a9bbf5ebeed56ef5c08c0947c6ccee23ca4c99bd73deb444788517e246ed"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/lockscreen-personalization-apply.json",
+      "bytes": 173324,
+      "sha256": "00a8009b91731d954518c6e77475c735386aa7f5ddc75663eec203c639d13f84"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/personalization-providers.json",
+      "bytes": 387258,
+      "sha256": "cf37fbf0156e55a0a1015552a891a9f7c7c0197f2000d1e51265d4d83b8fa3b4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/provider-and-settings.json",
+      "bytes": 760356,
+      "sha256": "a9721290afa6f5d072aed8d3fea7688bd9112216a893b9d4501117d873234df3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/registration-exception.json",
+      "bytes": 16092,
+      "sha256": "94da5b5ba4b3f827c74060980a68e139193dd2fd92d010a956e50be5fe72a73a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/settings-and-capabilities.json",
+      "bytes": 175432,
+      "sha256": "6948373b70c7b8d4964c3e46f712daad0ebcb45d02505142823d12e0d258bb2d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/system-winmd.json",
+      "bytes": 38193,
+      "sha256": "3c095affd985dea74da7aabf0bc2a2c60b3968f3f1e53850aa969ca3f74eefda"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/tile-convert-and-select.json",
+      "bytes": 844476,
+      "sha256": "9b994b6d3643b10e590c4c40f31cf2d3437af6dbb68cc877fc9b15aea50aa88f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/tile-encoder-set-pixels.json",
+      "bytes": 96276,
+      "sha256": "9cc68691d77c9b4b3d9b449fd3be20dc12835785f2f8675bf67eb6015ecda7ef"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/tile-save-and-notification.json",
+      "bytes": 502578,
+      "sha256": "aa404eef986d457532190b01393a510112db87f8135a5071f28e1e09a8818a1f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-background/url-settings-and-invalidation.json",
+      "bytes": 206148,
+      "sha256": "2ee733c27eea3f223ac3d5861b79e8765d3ef621e8fbda7db79f0eac88399f7e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/abi-and-settings-types.json",
+      "bytes": 15568,
+      "sha256": "e0d5bb6aa613632a74905db9f4d4c6486651c2af541b153a0a30232d4aa5074a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/evidence-manifest.json",
+      "bytes": 13781,
+      "sha256": "26ac8954e092107d3a281a6ae6b17c6883d286b0394892198788f088787ac8aa"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/findings.json",
+      "bytes": 6236,
+      "sha256": "17f9bd04b66656b46e87e4883f5a9292be5f08bd6de13555e7e6aa3df4920b01"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/functions.json",
+      "bytes": 9631,
+      "sha256": "4dec5ad4e6931e83e796190f88149a167593a91cb04bca409ea0a787222556a4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/model-observations.json",
+      "bytes": 2199,
+      "sha256": "5cceb620f3c4ade5cb812f2dccad8d4860d0d934cd354e85a4f4fc606619ea17"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/native-data-index.json",
+      "bytes": 32552,
+      "sha256": "400f9d4579c6c7b0284572fc76a907c79c38e2bc26d4322f4d1d6d281605e09e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/reuse-index.json",
+      "bytes": 4781,
+      "sha256": "f5b8397e2b00a02d8adeadbae205d01591ed625fda7d79f9a7b30fe85e9289a3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/reused-archive-load.asm",
+      "bytes": 14560,
+      "sha256": "54af1baf5b517139cb0a806aa87fe3f488623638ef840dacd85f327f3b8017d6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/reused-archive-save.asm",
+      "bytes": 44427,
+      "sha256": "34f312e8c82dd303d1c4f2c96320d6bb78b78e8e30adcc0935db90ce2a72edac"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/reused-get-image-file.asm",
+      "bytes": 8590,
+      "sha256": "debc85916a3c01f256cf55fb30d1e3e77f57006aca2db03a58ebd5c3d24eba4d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/reused-model-projection.asm",
+      "bytes": 14215,
+      "sha256": "263c4b8d707e0a19295826f15c7746a0368e7be7c2ce24ecf0a4b896dcce91e0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/settings-type-symbols.json",
+      "bytes": 6151,
+      "sha256": "16006b301a34703c76b117294a574ea5730b8e1d3dbd77080dd51d119d3e83d1"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-data/settings-url-and-migrate.json",
+      "bytes": 199400,
+      "sha256": "fb88f0761488d03e7361fc431625a81ef65638807a10b35fb7853b286fc10ab2"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/abi-evidence.json",
+      "bytes": 53700,
+      "sha256": "1d6581b16ac984735fd5cf30b36b1f57c157b3dbcfb5598848992001c9738b9e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/app-constructor.json",
+      "bytes": 33636,
+      "sha256": "9142cd8a2ccd8e6ad22894aed619c8e5da10d30a385d06d890bfa55633259813"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/app-lifecycle-candidate.json",
+      "bytes": 137858,
+      "sha256": "f3a1cc201483bea36d11fe67304afee8a94347aa257073f46cf36c54defab910"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/command-event-plumbing.json",
+      "bytes": 40480,
+      "sha256": "44955ddb63bc2c3e3850f9be766cdd6b2e7171a12eddf8d4e8762dabeeb050c8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/data-context-event-wrappers.json",
+      "bytes": 19608,
+      "sha256": "6d1bce90a1aeeaa98dde8e086cea0e78164a74d3da5583c49b8e6938d27e27d0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/download-command-entry.json",
+      "bytes": 24966,
+      "sha256": "0391870320b7a3ff077411076985008f8f68270e6a433665c2b5045c855a5045"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/download-state-and-handlers.json",
+      "bytes": 105680,
+      "sha256": "bce7a50b393a39909581b56dc051943e4adc1154d8a74e6d22b688018b014b58"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/findings.json",
+      "bytes": 9355,
+      "sha256": "791e7461b12dee7cfc57fc68c03c86f81e354c6ae39c1997d1512b242185710c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/frame-on-navigated.json",
+      "bytes": 50254,
+      "sha256": "b9ffb376c25ab554b7daa58bd2803c3e7524edbf9b821ebe326e1a1747367438"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/functions.json",
+      "bytes": 37658,
+      "sha256": "1c9014268a31f9c916b06de16fdc0db9bfffcc01a05a3ca49c38856a61a7fea6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/load-unhandled-exception.json",
+      "bytes": 8876,
+      "sha256": "a4a472c430d2aeb93ff2db61330baf459a8d343e38609520dced03de9d31c48b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/lockscreen-command-flow.json",
+      "bytes": 186034,
+      "sha256": "8374498404e0dc74b3081317baed21626157a790aa9ec82942c858acb5cc5101"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/mainpage-context-changed.json",
+      "bytes": 8198,
+      "sha256": "54780f090888d65e7ed161f5d09cf992a8f237589f3eef490cde5176eb80a39a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/mainpage-xaml-load.json",
+      "bytes": 18514,
+      "sha256": "416e5f5bc7801c8e4db42cb6a3a84c22707a4ec6a9d69a0d73f60bdfb5e1daa5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/mainvm-constructor.json",
+      "bytes": 249662,
+      "sha256": "33624c18abcd8b6d59aada642e4cd21d918f100a55758cacb60efa0c5d16e964"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/mainvm-property-and-refresh.json",
+      "bytes": 353482,
+      "sha256": "a1cdddd5c444ddabcb621fdc12ae03d054448c8cbc99b0a2ea1ca770b55cbde7"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/mainvm-selection-navigation.json",
+      "bytes": 210854,
+      "sha256": "fc66aa700855baa97ec916f79801e4a50fe642ee5c4e13aa9e231b7e5746f177"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/navigation-page-resolver.json",
+      "bytes": 26350,
+      "sha256": "82ff513dce6400fae480d0d04a785b14b4bae0d05d5875c0b65815afdf6f03be"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/navigation-startup-events.json",
+      "bytes": 72810,
+      "sha256": "475dfc410981fde279bab50bc9ea949c33357032e413d53b21c862a011af4490"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/navigator-base.json",
+      "bytes": 318020,
+      "sha256": "453ba6ec638b5bff2114d04f0b18acc96e37cfbf8413c74edfbd6c411dadac43"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/navigator-platform-init.json",
+      "bytes": 74774,
+      "sha256": "d545515739e68b1d32d7ae8c6f4bf17dbc9b2bb70f19290f9d4d0b44aa18f16e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/personalization-command-flow.json",
+      "bytes": 299932,
+      "sha256": "0a3c53e11b92feac47581b2885e9bfd488d0c0a8fe3c44fe583ee9e28ed6170e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/provenance.json",
+      "bytes": 15481,
+      "sha256": "32808324e0ef0e8d6cd6a5726a698c426a8eda81d3c942d683a5d6f4638ba3a9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/refresh-command-entry.json",
+      "bytes": 23738,
+      "sha256": "f7543b995a460d8f8d39ccdd691a838c2269c0bb1b3e8384305fa346fa97a775"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/resource-fields.json",
+      "bytes": 13863,
+      "sha256": "e5409030095e87e6bfee5c6c7583aad5ea69c2980dc7c3d0079308b63f423ab7"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/save-command-state.json",
+      "bytes": 206896,
+      "sha256": "2c8719b9054d0b3d8329383411bdfeac8ec3aece2f3a1f937c02c38fe9da3644"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/save-refresh-command-gates.json",
+      "bytes": 41156,
+      "sha256": "f6ec28a00c0d521362d2b0cb085e8afec1afe3a531115d7cc7f400629179feb9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/settings-and-about-xaml-load.json",
+      "bytes": 50612,
+      "sha256": "42d757c9e73556021aa96d9a6413b2942abfe4a805d96dbf9f39ac3e3a33c80f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/settings-vm-writes.json",
+      "bytes": 58760,
+      "sha256": "ab9ed917a2e01e42aa6fdacde0b1043a6b95542c00557aca8f15322a4953b91d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/system-winmd.json",
+      "bytes": 48947,
+      "sha256": "601734450e1ea91d5afc5510cd6624a2381782fa446e54deba4a7431726d204a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/timer-download-thunk.json",
+      "bytes": 2998,
+      "sha256": "26d39debc4ceb0b5fbaf236ffcecf4cdd731b6462aba5a248da4edbe7f3beba5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/architecture-ui/viewmodel-factory.json",
+      "bytes": 226186,
+      "sha256": "3b6ddc2cc69b0f80b340b21cf6845a22c0aa8a3bc3de3bd80d5457fa9036d5d0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/background-builder.json",
+      "bytes": 42794,
+      "sha256": "85efa5062679441201b113df9d19b0fa6b81bd73c93261cdce71f7af77b525b7"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/background-task-find.json",
+      "bytes": 28184,
+      "sha256": "602d65a0e87dafdc987c647a0a6f33c3c0e730aa4ba18d80f76745839abe2353"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/desktop-settings-read.json",
+      "bytes": 57864,
+      "sha256": "a3d86fbc3998ec0bb41eb695063e37ca795a0ea240cfb8069301e2967743aaed"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/findings.json",
+      "bytes": 13359,
+      "sha256": "43ad8b14da95c24777d7b68f63ebec45b9a730c5acd8a7fe5316026d0f4e5ea9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/lockscreen-settings-read.json",
+      "bytes": 55950,
+      "sha256": "bd6f5f26ddc9c191436f53c4c54dcd0598dd122f96e2e08e04d7b67220e4ae84"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/old-task-unregister.json",
+      "bytes": 32628,
+      "sha256": "293410f3b02289738b733cbd7902a7075cd1fe02f23bde0930445a5a8b34ecb9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/sharedlibrary-nullable-helper.json",
+      "bytes": 3425,
+      "sha256": "cdefe8a2ed1628408d34a099ee31a13329f734d55970fd3c1dd81011be92e30c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/system-condition.json",
+      "bytes": 12442,
+      "sha256": "76f3c9066e8185832607cdb570d00149d182d0f205a477a24517f6d88aebeb5f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/task-registration.json",
+      "bytes": 75350,
+      "sha256": "f62678936b009cd6f6f8f4bfa1289b1da117d94e61b26b116c3a0adbc7f73986"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/time-trigger-factory.json",
+      "bytes": 32318,
+      "sha256": "d5cdb12d9aafabb6bb73d9450007740df7139d326d4e929b6d4209f06e59a88f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/background/time-trigger.json",
+      "bytes": 14612,
+      "sha256": "ab9c839623939877a4450af3c3503e8ee39f0b24d6f4a98d192c356f4bcca4ca"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/abi-evidence.json",
+      "bytes": 23950,
+      "sha256": "f65f3124dfcea5f1822c5290a877eb364534e2e9e6a1cb949aa9558ce112e15e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/extra-cache.json",
+      "bytes": 570020,
+      "sha256": "8dd51bbbd46ec1d9f4bad8072302d968a6ca3c6f8d5a0a633f5e6f11575296cf"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/filename.json",
+      "bytes": 96578,
+      "sha256": "4661c3050fe5cfada8ef53de248f1809b5d47c4543c43226e50917b2f02129f2"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/findings.md",
+      "bytes": 18847,
+      "sha256": "11d3d92e30a5f56796861069f5e7ef76ff62229c91fe8225c7c24bd230aa0c93"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/personalization-cleanup.json",
+      "bytes": 788184,
+      "sha256": "a3fdbde60d18c58dc67f2c1bab2b67b6870425abd66d3baa03040d076f489483"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/storage-json.json",
+      "bytes": 2656578,
+      "sha256": "b82deaac369bc3e3a0c0560a86c755c8f108f6221b8fccf4856b12ae294559df"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-cache/tile-cleanup-call.json",
+      "bytes": 93652,
+      "sha256": "f4194b333bf1551866e3330e1cbf998913e14a6e143a15d5f13d6e4ab6007383"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-download/refresh-cleanup-sequence.json",
+      "bytes": 62846,
+      "sha256": "3f93e896d03f819d1dc4a23fa6b7e292eeebed7f5ed2c60f0465f2a3c6246b78"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-download/snapshot-walkthrough.json",
+      "bytes": 3123,
+      "sha256": "eca9e6bf19d908ad5db07845a7fc61f8a03266fafb8a8e558d53495e3305d399"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-download/update-cache-async-wrapper.json",
+      "bytes": 23846,
+      "sha256": "882e66056f95ae5c129a04678d36b1e40e0e9efda9dac7f3ef0ea5a55b23135c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-region/assembly.txt",
+      "bytes": 87101,
+      "sha256": "a7d951364b8ddd952c2390d096f08561e60a5a8e8c1f53f9e65d727160bc53f3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-region/framework-imports.json",
+      "bytes": 16628,
+      "sha256": "995ec9eef1f97127ac4ffe4549fc44937455cfc6b531c199bbc2535d0109f9e5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-region/framework-reference/source-provenance-validated.json",
+      "bytes": 2593,
+      "sha256": "7d22d3a75edb9b19e7f0417c23364bc4b7b4a0513a65c294d23fc1ddccf7ac42"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-region/region-findings.json",
+      "bytes": 27292,
+      "sha256": "f9da749602d271ada5dd57c960dbc0ebfc14ce3f9416eb349e0f9a546b81076a"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-symbols/download-archive-imports.json",
+      "bytes": 39976,
+      "sha256": "0717369a859fe1e51f8bc0c45e435ac6df3e121829c518681cb1bebb7663eea8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-symbols/named-custom-imports.json",
+      "bytes": 17021958,
+      "sha256": "2adeac0c112b51e02ebeda567d906d8c59099bd43ce4938a7e991e272c6b608c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-symbols/symbols-findings.json",
+      "bytes": 56170,
+      "sha256": "9a98e87bbdbd3500d310079032edfe584308ad4ae7f40fe554d76b12796b5d20"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-symbols/symbols-findings.md",
+      "bytes": 5097,
+      "sha256": "89192a7b907e8951cf0927271f71531d9668896f68eabaa800fa87335d70ce40"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/deep-symbols/verification.json",
+      "bytes": 805,
+      "sha256": "c9dc7f8044342ad0ed6de41235ef8383a1075c4aa639413c4e5cc24cb95cdf35"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/identity.json",
+      "bytes": 2551,
+      "sha256": "f5f3004c8281604e51d16633118499f5e308a1629748fcb28ed10c67fb1cd7b8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/abi-evidence.json",
+      "bytes": 48466,
+      "sha256": "eb1c6c62c321f65a0fdfea993fdd148fceccdae3676445a30358ea6122ab230c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/bitmap-source-abi-dispatch.json",
+      "bytes": 38188,
+      "sha256": "996afc0914adeb24fa5d84ffee5ef2db7e956f1526e146a794aca831c0398518"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/bitmapimage-constructor.json",
+      "bytes": 10332,
+      "sha256": "558140185e0b95be148f19825a0fa50e9df58bd1d7992433c0ed28e06157ae53"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/cached-image-stream-state.json",
+      "bytes": 64184,
+      "sha256": "51e22afff2cab3add57351b7ef2e1fe1a99ba9069aad45ec3ec90fb74fca25be"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/cached-stream-entry.json",
+      "bytes": 48080,
+      "sha256": "71f8e38f5fe3a0405d0518063935c3838675c8d92dbaa2ca20978ef70008f785"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/dispose-type-import.json",
+      "bytes": 4438,
+      "sha256": "94ba9d1f3b37087638d349a52b165f0492b6ea86982741659dc78ac9568f4d9b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/findings.json",
+      "bytes": 18031,
+      "sha256": "4c60c2b933729ddf42a01bd15ff76fb91e513c0a5b6754b4b0c55ab847cac6ee"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/functions.json",
+      "bytes": 13153,
+      "sha256": "44bcc42b2faab030c337e0ddfa555306c128722c0e8282dfb521b477057c9251"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-callback-dispatch-run.json",
+      "bytes": 28504,
+      "sha256": "8324469e90e6e36bb24b4fcf01320476a1ab4d560657240cf4ddeb47292e96ee"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-callback-exception.json",
+      "bytes": 8862,
+      "sha256": "837198a5ee1f533f991e1aa30c27d334e356c787c9b739c3b5093e8446dd7488"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-change-apply.json",
+      "bytes": 45450,
+      "sha256": "daca9b92c00eed5614e4d214162758ec4d7382ba5dc9de9cbd19d7abef6c96ba"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-change-dispatched-action.json",
+      "bytes": 6718,
+      "sha256": "edae74d62dec823a4701ae323ca7a8b9ec5a7fa7024d1ae692e44add5e3da710"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-container-walk.json",
+      "bytes": 11504,
+      "sha256": "f544189cf7a50644158a78a9b1821ffb81cfe314c10ddb4bc890d89a2335814e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-event-connection.json",
+      "bytes": 105186,
+      "sha256": "9cfc6c6d77dd0b8628f0229f1e3ac463c430c391f8bdd160dd4aca2de1984776"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-getters-load-entry.json",
+      "bytes": 51868,
+      "sha256": "736ef4006fcf850cd00cf5e77966743c1b7b2c9b2b0601e2370f35fa4a6fbd06"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-item-constructor.json",
+      "bytes": 13728,
+      "sha256": "c614e66f249be354c7874c6012f38a711b872404fbc76e72e8b759678f93b175"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-items-collection-replacement.json",
+      "bytes": 118584,
+      "sha256": "857030121f8e2962d30b3c427db96f42edb5903f012d3ee95d4e6e94ebb027df"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-load-state.json",
+      "bytes": 99350,
+      "sha256": "7f027976ace071f81ca561b4d6cf7e7f2f2de7f3dc3d3a33761562aeb1105cee"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-loaded-handler.json",
+      "bytes": 30850,
+      "sha256": "5481b5b3286b91707a155c0d656686d12ce228fd1fed006042f3c6395cf8f3f4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-properties-and-load-gate.json",
+      "bytes": 35916,
+      "sha256": "a6b11063b11cc4ffcca02efc39f11f6184112bb91077ab777ae21d9ad37a4983"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-property-callback-register.json",
+      "bytes": 29346,
+      "sha256": "bd421aa84531d8f2018f437326dbbce67a80a99fef96e403ceb94d60558f7549"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-property-callback-unregister.json",
+      "bytes": 19280,
+      "sha256": "fb96eb9f8243ecd50af10d38c9ba42a33d2014b56038d69670cd929b68cb0412"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-source-accessors.json",
+      "bytes": 18018,
+      "sha256": "f0ec9ac850e90d55e2c96770a65a3815b462327d980481d05ada6113e95d3d0e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-source-change-state.json",
+      "bytes": 60002,
+      "sha256": "2266bab6157a80435199da810dce1d1b79ac627ff1f45ec88c7baf474c4ec180"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-source-property-callback.json",
+      "bytes": 24346,
+      "sha256": "d1594f5e0d444a1b5de384dbc0f8c16c39966c8226dfee5381b3e45acf81524b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-unloaded-event-wrappers.json",
+      "bytes": 19608,
+      "sha256": "89425efd88faaa200c8e8359e206ae5f2f9e930fbe461af5fe5cb55a0e2f4a8e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/image-unloaded-handler.json",
+      "bytes": 28312,
+      "sha256": "da96474eb5d11810a4606e0eb9dbd1f80dc3e6658b4032ce5a44f5cecb378479"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/manager-image-stream-entry.json",
+      "bytes": 45434,
+      "sha256": "4cc5c827efc924b84c4709be631e8ac553324a4e8fe3c4b13881d9f380b9484e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/manager-stream-wrapper.json",
+      "bytes": 47448,
+      "sha256": "b2c9beada051f951637e4bea3f73ba3d6eb4b36ead80cfee8b1cd9d90921f39e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/ownership-and-reference-audit.json",
+      "bytes": 11145,
+      "sha256": "0fc54b1d1f385417ec09d7efe85d6b2a01d5a931c23954cada74e2f37f0e578c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/provenance.json",
+      "bytes": 23432,
+      "sha256": "7b297bcf4d23e8a6ca87f8cddbfcf420f555111a1aaf2284e9637672d4eaf329"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/image-lifetime/validation.json",
+      "bytes": 34255,
+      "sha256": "83ee249a1f3529808555812977b8565c0a640ec9c90cae063e63774bc7eda3e4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/index.json",
+      "bytes": 86957,
+      "sha256": "ff3fd913d3a1ebf4b2ea9e84c1ee6311d35b6da524ca674a8b16b0e7763d0d37"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/lifecycle-supplement/cutter-support.json",
+      "bytes": 3827,
+      "sha256": "dcf55d5ed26780a61163270a7deb4827452335a8f4405b8a01f94318cb116649"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/lifecycle-supplement/decoder-contract.json",
+      "bytes": 4095,
+      "sha256": "e8f87ca49c49189c5ab684437134f033f99f5b6035de1d55969422581ebfb810"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/lifecycle-supplement/no-input-interface-slot.json",
+      "bytes": 38672,
+      "sha256": "5a44920d28c0f6b6c7a5dd5d3bb92c99a8afd125d82cab91c5f58900d1b9e094"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/lifecycle-supplement/pixel-data-abi-bridge.json",
+      "bytes": 25158,
+      "sha256": "a721c3f92b2006c1d4cbb502ec83e85915847293a62e54a418e4f62d8c379734"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/local-state/findings.md",
+      "bytes": 6164,
+      "sha256": "e661287a15a7d1a8a3dd19b0436e1903bb31c6ded73166f6908658c83588db23"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/local-state/ImageArchive.observed.json",
+      "bytes": 1403,
+      "sha256": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/local-state/local-state.json",
+      "bytes": 19147,
+      "sha256": "900d8a372113037128ab60307f4b7cdadc63dbcc56d78f716ee8a8caf4cbaf9e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/native/disassembly.txt",
+      "bytes": 1806305,
+      "sha256": "40b1ef56e76d8492eae76f42cc98ce00498b70140963309f372a410955e331cb"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/native/selected-strings.json",
+      "bytes": 45236,
+      "sha256": "d453f38a4c8a551ef3e73a2331a8626940390298984c4ab3bb96726a79ff7c52"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/archive-count-caller-assembly.json",
+      "bytes": 37052,
+      "sha256": "87b57400e04f1e511298c21a71153679edb1b5aac10a79159b5da5205060c020"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/archive-url-assembly.json",
+      "bytes": 81412,
+      "sha256": "8d2a174f353dca1b30ad8a7b64dd453347156a91b10a623022904cacb8fe437e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/archive-wrapper-assembly.json",
+      "bytes": 47442,
+      "sha256": "68e8d63f0144fd2a5998498c6840cb27dc91ddf1e247a76d122e7aac012b5a76"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/cutter-navigator-dispose-pseudocode.json",
+      "bytes": 8080,
+      "sha256": "c6a7e2a84dbc4b64554d57a7b0064eb9fbc9b5af78e05c1c1f77940ab8bbcc90"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/dll-exports.json",
+      "bytes": 3396,
+      "sha256": "0b7bda831da2d18697810a559d4f5d2a4a774980268f3052760ae04cc64ae309"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/dll-strings.json",
+      "bytes": 20801138,
+      "sha256": "aa75b4a657d91984964a384981805e005c2e30a2eeadc5bc094a6992e7fae7cc"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/exe-imports.json",
+      "bytes": 2674,
+      "sha256": "645d598ff853b1f07deab7c248557e668228e833f518f382b82b6712d47679a0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/image-url-http-assembly.json",
+      "bytes": 143316,
+      "sha256": "de870ad4ad0b256b70259e0881bad8ee0d0aff6de188d0606f36435d69ab30c9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/rea/mcp-evidence-bundle.json",
+      "bytes": 27683,
+      "sha256": "3015bd59a8f557633b7ba3fc3220cf771f00cfd306fdebfabfc10f63ae7ee606"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/original/AppxManifest.xml",
+      "bytes": 4626,
+      "sha256": "8a36184886dd86574a2cdb21fc9262e523b868d593ff3be8045eaf260ebb69ec"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/original/Duracellko.BingImage.Universal.xr.xml",
+      "bytes": 10333,
+      "sha256": "6b400baab83f3e85320b52ae3ae32feee9506659550ed5bc25d06d126eb6fea3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/resource-candidates.json",
+      "bytes": 24615,
+      "sha256": "f98ef1fa28722191b5fb6c943071076d59d3a0c97ca99bfd77c689807996c6a3"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/resource-findings.json",
+      "bytes": 5127,
+      "sha256": "5222a9a2b22bcd3c6520c9e4149bbd37f04820c285c911ae73f73c20bfefb36d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/resources.detailed.xml",
+      "bytes": 63263,
+      "sha256": "4b4bd63692df4b7bad50e2ac26cfc9b9893e356a3f89583158b46b60eb6f1709"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/resources/xbf-metadata.json",
+      "bytes": 40230,
+      "sha256": "6fd1b1cc6d85f8eb4c6e654dc3dca9828c0daa6f14b82865c15b52453dad3e56"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/callsite-classification.json",
+      "bytes": 5273,
+      "sha256": "e143b7ae97f3d0fb558e9b90cbc6083109480190de7a28467f5b3ace4e662b53"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/dispose-reference-inventory.json",
+      "bytes": 250718,
+      "sha256": "4b429b6d2b7de8fcc9d1f8c1cfface42816b2cfa3812abc95221401a7f21e5f8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/evidence-manifest.json",
+      "bytes": 8734,
+      "sha256": "47e88e35924c4c7c061eec1803b83afb26c49c1f22a93236f69ae9f751fd3a55"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/findings.json",
+      "bytes": 11967,
+      "sha256": "39c6f4402cd274258783fd0bc9c191ffb1a52afb20c5bb4369dcbd3a8f410530"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/functions.json",
+      "bytes": 6385,
+      "sha256": "a143f3c3fe06459196419163a77dd5c4fac6da574ce4992edd9ce6f97ce66cba"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/interface-event-symbols.json",
+      "bytes": 9738,
+      "sha256": "0cb9e5969d2ef2eb9dc7dfd0ea8f16c26e4d3471d557f7533da1eced2420b6ca"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/mainvm-dispose-instructions.json",
+      "bytes": 16488,
+      "sha256": "da3c6d50a0a56a9aa91a1bc5d39328fee2a58ed19d92ea4998f0425f660c57ba"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/mainvm-dispose-pseudocode.json",
+      "bytes": 3128,
+      "sha256": "ec4cdc0f26ebb30a45cf7ef78420349d56f765621ea7ef743b7e6266e6d97218"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/navigator-forwarded-event.json",
+      "bytes": 21448,
+      "sha256": "8df5dba8144bc6e8972ca20f1157b563f764d8b6b9c976c5011a8a734e6e1e26"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/reference-inventory.json",
+      "bytes": 14834,
+      "sha256": "224c0094c734089df1254dac1f58dcb44281812beebc181911abc91dbc66145e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/suppress-finalize-symbol.json",
+      "bytes": 4872,
+      "sha256": "2b8ca82ccfb1a525985a63a53353928f0070017ae846124f0f744ed8f5e6a935"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/system-navigation-winmd.json",
+      "bytes": 4592,
+      "sha256": "fbc8bc26307201d9d890519b9678781f3b59f2d2e22b15be22c9888df8a9dad5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/timer-second-operation.json",
+      "bytes": 15784,
+      "sha256": "428a030a6d20d1d253b2cc8e2dc67df25f4a0eb834ac908fd1afe5ec15796cd0"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/type-and-abi-evidence.json",
+      "bytes": 9257,
+      "sha256": "a8afa8c143fbf6aa8eb1c0b4bf7daeae1d73ba952c1d3cb351b85d561a293508"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/unregister-enumerator-cleanup.json",
+      "bytes": 8002,
+      "sha256": "cc35d748f5b48449ba9a013b09b2b00c6582ec08f2336a34819a241570a2172b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/timer-cleanup/validation.json",
+      "bytes": 3065,
+      "sha256": "def564ec304b793ed0a968864c5f1162871ee4db7d67820440264ccb7ba903d8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/evidence/validation.json",
+      "bytes": 10468,
+      "sha256": "2ab8127999b135c0b9655822ffcfe5619b06df7dc9d503dbadfefcbb1fa30ef6"
+    },
+    {
+      "path": "docs/reverse-engineering/source/README.md",
+      "bytes": 3859,
+      "sha256": "51713dc32e4b5deaa86510e9efc177df5632298e804459166ade22bfb61c1585"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_abi.py",
+      "bytes": 3340,
+      "sha256": "70cb6e6a3c9ce88cffa215c698e36e7a83ece9339146d3c2e81f932e0799c9f5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_inspect.py",
+      "bytes": 2753,
+      "sha256": "fa3b09d07be0ed532ad4de032a86153bb835dc0324ecf2e7d08dc697929be4d9"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_pseudocode.py",
+      "bytes": 1484,
+      "sha256": "57762926f1f96ab6df2beb8eee9c43c0eb09c2da5ce83e5020fc087cfbf2f64b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_references.py",
+      "bytes": 3660,
+      "sha256": "3bf2d86301b43bec7f28539966e315cdf73611f743dc2da135f7fcee286b992c"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_validate.py",
+      "bytes": 3074,
+      "sha256": "3275424e6e62d0b1f13befa68317151f4cdd92b5189fe248749acaeac439c7d4"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/app_lifecycle_winmd.ps1",
+      "bytes": 4646,
+      "sha256": "54fe3ffd3a1346b68c96659d45bdf25f365409c9f1dda5dc886182adbe2829db"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/bg_arch_abi.py",
+      "bytes": 4230,
+      "sha256": "97a3d012817b95f81bfffa10681626c2397039901f2c49176af6dfe969b7b7f8"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/bg_arch_inspect.py",
+      "bytes": 2785,
+      "sha256": "331e1838f096417afad6f939272c9449e1b7a2643c77fa0b5b829e28375ad332"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/bg_arch_layout.py",
+      "bytes": 2365,
+      "sha256": "a9b6dbd8212af1cef85c69aaa9c816ddd750bffb529f294b6514d116bdb9e7b2"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/bg_arch_publish.py",
+      "bytes": 40841,
+      "sha256": "c267239f7366c12c0401c8423e43008b83cdd411b834f6c963e902e9926377b1"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/bg_arch_winmd.ps1",
+      "bytes": 4060,
+      "sha256": "f6f70c73d6045df6bbcc07113124b098b04c2380077e3279267a08b55e27350b"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/data_arch_evidence.py",
+      "bytes": 17646,
+      "sha256": "27784a188c27128057e107c707d7f3a63fbeb1545d9c1cbbd3a11c0bed3a335f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/data_arch_inspect.py",
+      "bytes": 1602,
+      "sha256": "6bc98bd57ba979f440cea2fa6f1b4ec5960257b83ae9623ecd4999d8d1127f90"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/deep_symbols_resolve.py",
+      "bytes": 11239,
+      "sha256": "1e91e0067c39430d6c8ae7e9067175fe0c974077c95ffeb3236f113b7d037da5"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/index_native.py",
+      "bytes": 3845,
+      "sha256": "2ddeaeb6729709ce80a6ed8515bb590a3e19a34728e02ff8eee40d6ff9abf827"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/rea_native.ps1",
+      "bytes": 1361,
+      "sha256": "866f88751fae822712f9cfebf98c881bd7c40ac6083012aa9f237b5c67cdf8ed"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_index.py",
+      "bytes": 3642,
+      "sha256": "ff7e9bcb7c95a31511e717367d3eba1e1800dd1bc43dfcecab8f584337c4e64d"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_inspect.py",
+      "bytes": 1981,
+      "sha256": "c4ab99132640671fd6bb6e6a28a5616e14ee6ec87c441125fa7bdfd42c577f9f"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_layout.py",
+      "bytes": 5030,
+      "sha256": "bb2410449e4480a9be894dc8aafbe1e7ca6c8a33ed5fe37950ea78b2d9f64f5e"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_report.py",
+      "bytes": 14179,
+      "sha256": "6ab9538e8c6318ab3bff924f1a1626a0858c53c2eada3fbae84a504721b72269"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_targets.py",
+      "bytes": 2907,
+      "sha256": "6c23ecda0995003b4336673ead4d1f5600cd9ae1562f7519ac31807d9c037b28"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/timer_cleanup_winmd.ps1",
+      "bytes": 1486,
+      "sha256": "f14c14b53a5ab08f00ad196283562df39dcd9aea05e54262ae279a571dfa3192"
+    },
+    {
+      "path": "docs/reverse-engineering/source/scripts/verify_evidence.py",
+      "bytes": 5316,
+      "sha256": "142ccdb9f87150524027f799c73c99cf1e0daccaf134d99ea8a93ecec85c7f77"
+    },
+    {
+      "path": "docs/reverse-engineering/web-mapping.md",
+      "bytes": 3878,
+      "sha256": "88f96ea5f1583887fff76a66ef07cb98f1913924591ce6633bb45bad8823e0aa"
+    },
+    {
+      "path": "docs/rules/_template.md",
+      "bytes": 1239,
+      "sha256": "536cbd065c1837d1aa5c470d3fbc0a1641d1526eeee1b452610d10f166e01ac9"
+    },
+    {
+      "path": "docs/rules/browser-state.md",
+      "bytes": 2080,
+      "sha256": "d95b2717cf5158a06b69de9e67874bd64f9e0e71a7c9948f26bef1e3074cdf2b"
+    },
+    {
+      "path": "docs/rules/cache.md",
+      "bytes": 3123,
+      "sha256": "5fedbc82eb6721985d67e6261036c77ddac202a3bd2bf646c0fc2b17240419b2"
+    },
+    {
+      "path": "docs/rules/catalog.md",
+      "bytes": 2741,
+      "sha256": "283337a4d34136344ddc375ffc9eec3181d8a3b121f1793d995cd04b823b698c"
+    },
+    {
+      "path": "docs/rules/README.md",
+      "bytes": 1709,
+      "sha256": "0eb268d9adcb56d47920d932981212cad90050f5307cc230288a9b49d9bd5193"
+    },
+    {
+      "path": "docs/testing/_template.md",
+      "bytes": 1880,
+      "sha256": "b9dea89ccf3201c37d5e07531ae9909cfcf3b33ce0454701c96dc0744a79968e"
+    },
+    {
+      "path": "docs/testing/current-baseline.md",
+      "bytes": 3158,
+      "sha256": "18c11c70e0bf2f465cf874ac6c72cc50b7bc975751834200867d45fb28167af7"
+    },
+    {
+      "path": "docs/testing/README.md",
+      "bytes": 1211,
+      "sha256": "9c370acc2cfb41912914712e4d598ae5d4607f6cd588158b5042fb5118252696"
+    },
+    {
+      "path": "issues/001-governance-adoption.md",
+      "bytes": 1829,
+      "sha256": "23203a4a307dcab2b19ca75517ce87b2411e4d5f9e47f243aa5b60dc1ef04217"
+    },
+    {
+      "path": "issues/002-upstream-connection.md",
+      "bytes": 1148,
+      "sha256": "2b68fe7a9c5513d8ca7536ea01e0363208954dc0f1a47467a12a6949b3b27c60"
+    },
+    {
+      "path": "issues/003-validation-gaps.md",
+      "bytes": 1392,
+      "sha256": "d98ad684db747d508494391bff2243fde949bbc8093d6f11353ae4e6483dc0b1"
+    },
+    {
+      "path": "issues/_template.md",
+      "bytes": 2048,
+      "sha256": "73aa7a4bd78b41129afc2545d70c54b92b30a3eb012b90805266db7ad712d6a2"
+    },
+    {
+      "path": "issues/README.md",
+      "bytes": 1648,
+      "sha256": "a7d6022965bf6d0b4b69b73da30f1af1f09adb8dd2a5490b90016df8b11aecdd"
+    },
+    {
+      "path": "milestones/001-local-web-baseline.md",
+      "bytes": 1025,
+      "sha256": "00c99059b8851c7dfa19fa9eb607bad8c9dbe4a3ad29786ea499b510c460b1ac"
+    },
+    {
+      "path": "milestones/_template.md",
+      "bytes": 1048,
+      "sha256": "6e727164643bb58adf89c0bfddd8354569f86106595f6290f0eda1ed5fd5fad9"
+    },
+    {
+      "path": "milestones/README.md",
+      "bytes": 865,
+      "sha256": "8918b4c1052cf32a4dc2a8de1343434f4574a86424d9e9fc7dc060c5b1e27bbe"
+    },
+    {
+      "path": "plans/001-governance-adoption.md",
+      "bytes": 1253,
+      "sha256": "29a530c535edecd3c7bec5f6180b081326f64d68686480c69a5fd57bd665ebc5"
+    },
+    {
+      "path": "plans/_template.md",
+      "bytes": 1569,
+      "sha256": "a712946651cfe2dff39135c522f46f2c87099ad02d7daa220a26f74e25857f82"
+    },
+    {
+      "path": "plans/README.md",
+      "bytes": 987,
+      "sha256": "1cbb8611c84e5f16ba824eaa782e309b54ad60efcee33a8afe3ab8839106c97d"
+    },
+    {
+      "path": "TECH.md",
+      "bytes": 4114,
+      "sha256": "74595b6e6b46e1d25a36b937db906702e4449e605bb048e64b742167d8b835e2"
+    },
+    {
+      "path": "tools/verify_research.py",
+      "bytes": 3974,
+      "sha256": "aecdb42dd86c1a8a3021fa603c5454292c96e71c43bf5bd5c09309b1f79d0ef7"
+    }
+  ]
+}

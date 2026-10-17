@@ -1,0 +1,231 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "files": [
+    {
+      "path": "docs/timers-and-disposal.md",
+      "bytes": 20905,
+      "sha256": "7f89024f0c1d1887e77272f22cdc4c1db42c3799ead3b14d9317166524743042"
+    },
+    {
+      "path": "evidence/app-lifecycle/app-constructor-real.json",
+      "bytes": 61288,
+      "sha256": "fd0df710c5fdf69288e09183497bb8a593a24b11bee455eb63d515a7c14d226a"
+    },
+    {
+      "path": "evidence/architecture-ui/app-constructor.json",
+      "bytes": 33636,
+      "sha256": "9142cd8a2ccd8e6ad22894aed619c8e5da10d30a385d06d890bfa55633259813"
+    },
+    {
+      "path": "evidence/architecture-ui/download-state-and-handlers.json",
+      "bytes": 105680,
+      "sha256": "bce7a50b393a39909581b56dc051943e4adc1154d8a74e6d22b688018b014b58"
+    },
+    {
+      "path": "evidence/architecture-ui/frame-on-navigated.json",
+      "bytes": 50254,
+      "sha256": "b9ffb376c25ab554b7daa58bd2803c3e7524edbf9b821ebe326e1a1747367438"
+    },
+    {
+      "path": "evidence/architecture-ui/lockscreen-command-flow.json",
+      "bytes": 186034,
+      "sha256": "8374498404e0dc74b3081317baed21626157a790aa9ec82942c858acb5cc5101"
+    },
+    {
+      "path": "evidence/architecture-ui/mainvm-constructor.json",
+      "bytes": 249662,
+      "sha256": "33624c18abcd8b6d59aada642e4cd21d918f100a55758cacb60efa0c5d16e964"
+    },
+    {
+      "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+      "bytes": 353482,
+      "sha256": "a1cdddd5c444ddabcb621fdc12ae03d054448c8cbc99b0a2ea1ca770b55cbde7"
+    },
+    {
+      "path": "evidence/architecture-ui/mainvm-selection-navigation.json",
+      "bytes": 210854,
+      "sha256": "fc66aa700855baa97ec916f79801e4a50fe642ee5c4e13aa9e231b7e5746f177"
+    },
+    {
+      "path": "evidence/architecture-ui/personalization-command-flow.json",
+      "bytes": 299932,
+      "sha256": "0a3c53e11b92feac47581b2885e9bfd488d0c0a8fe3c44fe583ee9e28ed6170e"
+    },
+    {
+      "path": "evidence/architecture-ui/save-command-state.json",
+      "bytes": 206896,
+      "sha256": "2c8719b9054d0b3d8329383411bdfeac8ec3aece2f3a1f937c02c38fe9da3644"
+    },
+    {
+      "path": "evidence/architecture-ui/timer-download-thunk.json",
+      "bytes": 2998,
+      "sha256": "26d39debc4ceb0b5fbaf236ffcecf4cdd731b6462aba5a248da4edbe7f3beba5"
+    },
+    {
+      "path": "evidence/architecture-ui/viewmodel-factory.json",
+      "bytes": 226186,
+      "sha256": "3b6ddc2cc69b0f80b340b21cf6845a22c0aa8a3bc3de3bd80d5457fa9036d5d0"
+    },
+    {
+      "path": "evidence/background/old-task-unregister.json",
+      "bytes": 32628,
+      "sha256": "293410f3b02289738b733cbd7902a7075cd1fe02f23bde0930445a5a8b34ecb9"
+    },
+    {
+      "path": "evidence/image-lifetime/image-load-state.json",
+      "bytes": 99350,
+      "sha256": "7f027976ace071f81ca561b4d6cf7e7f2f2de7f3dc3d3a33761562aeb1105cee"
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-handler.json",
+      "bytes": 28312,
+      "sha256": "da96474eb5d11810a4606e0eb9dbd1f80dc3e6658b4032ce5a44f5cecb378479"
+    },
+    {
+      "path": "evidence/timer-cleanup/callsite-classification.json",
+      "bytes": 5273,
+      "sha256": "e143b7ae97f3d0fb558e9b90cbc6083109480190de7a28467f5b3ace4e662b53"
+    },
+    {
+      "path": "evidence/timer-cleanup/dispose-reference-inventory.json",
+      "bytes": 250718,
+      "sha256": "4b429b6d2b7de8fcc9d1f8c1cfface42816b2cfa3812abc95221401a7f21e5f8"
+    },
+    {
+      "path": "evidence/timer-cleanup/findings.json",
+      "bytes": 11967,
+      "sha256": "39c6f4402cd274258783fd0bc9c191ffb1a52afb20c5bb4369dcbd3a8f410530"
+    },
+    {
+      "path": "evidence/timer-cleanup/functions.json",
+      "bytes": 6385,
+      "sha256": "a143f3c3fe06459196419163a77dd5c4fac6da574ce4992edd9ce6f97ce66cba"
+    },
+    {
+      "path": "evidence/timer-cleanup/interface-event-symbols.json",
+      "bytes": 9738,
+      "sha256": "0cb9e5969d2ef2eb9dc7dfd0ea8f16c26e4d3471d557f7533da1eced2420b6ca"
+    },
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-instructions.asm",
+      "bytes": 1227,
+      "sha256": "0b835d5ebb44f9c4ea862cc61f15b81f5976f00c4eb0158ffa8b5bcdf94693fc"
+    },
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-instructions.json",
+      "bytes": 16488,
+      "sha256": "da3c6d50a0a56a9aa91a1bc5d39328fee2a58ed19d92ea4998f0425f660c57ba"
+    },
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-pseudocode.c",
+      "bytes": 236,
+      "sha256": "4f81f7ed2959c015ee1d4007979fbc3d5206977da3b8175778146c979f7e075d"
+    },
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-pseudocode.json",
+      "bytes": 3128,
+      "sha256": "ec4cdc0f26ebb30a45cf7ef78420349d56f765621ea7ef743b7e6266e6d97218"
+    },
+    {
+      "path": "evidence/timer-cleanup/navigation-disposal-candidate.asm",
+      "bytes": 1348,
+      "sha256": "55e9de766533950f35dfc3631418ba1b2b62ff4f77c267537eb54cc47c4a75ce"
+    },
+    {
+      "path": "evidence/timer-cleanup/navigation-disposal-candidate.json",
+      "bytes": 16930,
+      "sha256": "5e05950ebe8c4d95977497b0c6534b00d0f53caf673f0888b9dbfeb9a902e256"
+    },
+    {
+      "path": "evidence/timer-cleanup/navigator-forwarded-event.asm",
+      "bytes": 1685,
+      "sha256": "d01cd419a0257a2fb48272b09f579eacda62dcf983b2fb646037393cce2fa753"
+    },
+    {
+      "path": "evidence/timer-cleanup/navigator-forwarded-event.json",
+      "bytes": 21448,
+      "sha256": "8df5dba8144bc6e8972ca20f1157b563f764d8b6b9c976c5011a8a734e6e1e26"
+    },
+    {
+      "path": "evidence/timer-cleanup/reference-inventory.json",
+      "bytes": 14834,
+      "sha256": "224c0094c734089df1254dac1f58dcb44281812beebc181911abc91dbc66145e"
+    },
+    {
+      "path": "evidence/timer-cleanup/suppress-finalize-symbol.json",
+      "bytes": 4872,
+      "sha256": "2b8ca82ccfb1a525985a63a53353928f0070017ae846124f0f744ed8f5e6a935"
+    },
+    {
+      "path": "evidence/timer-cleanup/system-navigation-winmd.json",
+      "bytes": 4592,
+      "sha256": "fbc8bc26307201d9d890519b9678781f3b59f2d2e22b15be22c9888df8a9dad5"
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-cleanup-and-adjacent.asm",
+      "bytes": 6561,
+      "sha256": "31c3c130f0f643e9e7888f0871026c641b8e689023ea2364696dc30fc0cf2a14"
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-cleanup-and-adjacent.json",
+      "bytes": 76812,
+      "sha256": "1a327d600052c4e6cc61078d6453c650833dab07eebf61f49fda1ba70aacb219"
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-second-operation.asm",
+      "bytes": 1157,
+      "sha256": "e3a3cd8cc29fcfefcf43c8fe551c3e5743dfb12ec7e129d0e656824970c1b4b3"
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-second-operation.json",
+      "bytes": 15784,
+      "sha256": "428a030a6d20d1d253b2cc8e2dc67df25f4a0eb834ac908fd1afe5ec15796cd0"
+    },
+    {
+      "path": "evidence/timer-cleanup/type-and-abi-evidence.json",
+      "bytes": 9257,
+      "sha256": "a8afa8c143fbf6aa8eb1c0b4bf7daeae1d73ba952c1d3cb351b85d561a293508"
+    },
+    {
+      "path": "evidence/timer-cleanup/unregister-enumerator-cleanup.asm",
+      "bytes": 474,
+      "sha256": "ad33ff9f8611f6e94af81bbe481de052c510f5cfdbc92a2cf95800accb66017f"
+    },
+    {
+      "path": "evidence/timer-cleanup/unregister-enumerator-cleanup.json",
+      "bytes": 8002,
+      "sha256": "cc35d748f5b48449ba9a013b09b2b00c6582ec08f2336a34819a241570a2172b"
+    },
+    {
+      "path": "scripts/timer_cleanup_index.py",
+      "bytes": 3642,
+      "sha256": "ff7e9bcb7c95a31511e717367d3eba1e1800dd1bc43dfcecab8f584337c4e64d"
+    },
+    {
+      "path": "scripts/timer_cleanup_inspect.py",
+      "bytes": 1981,
+      "sha256": "c4ab99132640671fd6bb6e6a28a5616e14ee6ec87c441125fa7bdfd42c577f9f"
+    },
+    {
+      "path": "scripts/timer_cleanup_layout.py",
+      "bytes": 5030,
+      "sha256": "bb2410449e4480a9be894dc8aafbe1e7ca6c8a33ed5fe37950ea78b2d9f64f5e"
+    },
+    {
+      "path": "scripts/timer_cleanup_report.py",
+      "bytes": 14179,
+      "sha256": "6ab9538e8c6318ab3bff924f1a1626a0858c53c2eada3fbae84a504721b72269"
+    },
+    {
+      "path": "scripts/timer_cleanup_targets.py",
+      "bytes": 2907,
+      "sha256": "6c23ecda0995003b4336673ead4d1f5600cd9ae1562f7519ac31807d9c037b28"
+    },
+    {
+      "path": "scripts/timer_cleanup_winmd.ps1",
+      "bytes": 1486,
+      "sha256": "f14c14b53a5ab08f00ad196283562df39dcd9aea05e54262ae279a571dfa3192"
+    }
+  ]
+}

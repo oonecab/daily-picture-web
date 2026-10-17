@@ -1,0 +1,485 @@
+{
+  "scope": "Read-only static region selection and HTTP customization path for Daily Picture 1.4.13 x64",
+  "target": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "length": 6566400
+  },
+  "boundary": {
+    "application_executed": false,
+    "bing_requests_sent": false,
+    "application_settings_modified": false,
+    "application_data_modified": false,
+    "rea_mcp_active_target_modified": false,
+    "method": "Independent REA CLI disassembly plus retained PE bytes and PDB-validated SharedLibrary custom imports"
+  },
+  "observations": [
+    {
+      "claim": "Archive URL construction formats only the item count into a fixed Bing archive URL; the observed call site does not append a market or country field.",
+      "native_range": "0x1804c0e20..0x1804c1006",
+      "evidence_file": "evidence/rea/archive-url-assembly.json",
+      "detail": "0x1804c0e89 calls request creator 0x1804c0080; 0x1804c0e94 immediately calls the response-task bridge 0x1804bfe90. There is no header/cookie write between these calls.",
+      "confidence": "observed path; excludes untraced runtime or backend changes"
+    },
+    {
+      "claim": "The culture argument in archive URL formatting is InvariantCulture. It formats the integer count; it does not by itself select an en-US Bing market.",
+      "imports": [
+        "0x1802a4758 -> System.Globalization.CultureInfo/FormatProvider.get_InvariantCulture (shared-code aliases)",
+        "0x1802a2f70 -> System.String.Format"
+      ],
+      "evidence_file": "evidence/deep-region/framework-imports.json",
+      "confidence": "PDB-backed imported names plus native caller data flow"
+    },
+    {
+      "claim": "The image-download path concatenates http://www.bing.com with the response image URL and uses the same request creator and response bridge.",
+      "native_range": "0x1804bfc90..0x1804bfdf5",
+      "evidence_file": "evidence/rea/image-url-http-assembly.json",
+      "detail": "String.Concat import 0x1802a2f98 is PDB-backed; calls at 0x1804bfcd3 and 0x1804bfcde go directly from creation to response task.",
+      "confidence": "observed path; metadata-returned URL can already contain a server-selected market in its filename"
+    },
+    {
+      "claim": "The shared request creator constructs a Uri, checks http/https, and dispatches through the WebRequest default-prefix factory; it does not add request-specific region values.",
+      "native_functions": [
+        "0x1804c0080",
+        "0x1804c00d0",
+        "0x1804c01a0",
+        "0x1804c06b0"
+      ],
+      "detail": "URI constructor/Scheme/Equality have matching PDB names. App-local WebRequest.CreateHttp semantic label is inferred from full body plus historical source. Default prefix list has http: and https: entries using the same allocated creator.",
+      "evidence": [
+        {
+          "evidence_id": "ev_02e56c1831668c95ed0030b0afaf05baec41e307aa8a4dfbf88e0c85727a207c",
+          "file": "evidence\\deep-region\\request-creator.json",
+          "sha256": "7d904211f9578479197acb017290824b93065bef7e5dce142613e0acaccb684a",
+          "command": "pDj 73 @ 0x1804c0080",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_2fe974fadb4991c032ea151874e0f06c04f722ade1e4c1f9bdbe4c4ed66f7a73",
+          "file": "evidence\\deep-region\\request-builder.json",
+          "sha256": "541e324f6968233b1a3cea0ddc070a369433c117ab8989e7ebf6f090ca42ec30",
+          "command": "pDj 170 @ 0x1804c00d0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_fb78a62e07afb3ee13b97051042469842159a6d6246397d70400ba3565621869",
+          "file": "evidence\\deep-region\\request-factory.json",
+          "sha256": "4537243bd558692a0ec607b800392905c93ca44d28c535a6419dc931d83bbfc7",
+          "command": "pDj 455 @ 0x1804c01a0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_4f260c69f34f93e177ed96b78f6f06f6a168336368dbfa79d34b7c56588b2d49",
+          "file": "evidence\\deep-region\\request-default-prefix-list.json",
+          "sha256": "be7a4c158e179435310307ce8b1612ee477f3a5e75e65cbd7fde4f327f723054",
+          "command": "pDj 753 @ 0x1804c06b0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        }
+      ],
+      "confidence": "observed instructions; framework semantic names strongly inferred"
+    },
+    {
+      "claim": "The default HttpWebRequest path uses an empty header collection and null CookieContainer; it passes its URI and method to the send state machine.",
+      "native_functions": [
+        "0x180583f60",
+        "0x180583f90",
+        "0x180584180"
+      ],
+      "detail": "Constructor allocates headers at request+0x08, stores URI at +0x10 and verb at +0x18, timeout350 at +0x20 and default proxy at +0x38. It does not initialize +0x28 to a cookie container. Allocation is managed zero-initialized. SendRequest reads +0x28 as cookie container and enumerates only +0x08 headers.",
+      "evidence": [
+        {
+          "evidence_id": "ev_fee189b7c7fdbf1ea6b68cf336febaa1d2f0a6a7e395cefe7d93e58896b89fe7",
+          "file": "evidence\\deep-region\\http-request-allocate.json",
+          "sha256": "631c86a3753898c567c687e75a631bfcb68aa8624174610194f6469bb2f7c138",
+          "command": "pDj 46 @ 0x180583f60",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_c46663a34e8c43c20c696d813f6186c5ebbcde8d7b7a0e63d7c45b519af3ed6c",
+          "file": "evidence\\deep-region\\http-request-constructor.json",
+          "sha256": "178a7ada729306e487cfd369d3f325c27b6d1063bc61908538077168adf225dc",
+          "command": "pDj 143 @ 0x180583f90",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_766e1f72362d381c817e29527868782764dba9c423719e21edeed5219d11d574",
+          "file": "evidence\\deep-region\\http-request-send-candidate.json",
+          "sha256": "3bec8bc6f7bad248d75be06aa31f99d166a49377e291ad800c4fe2a546d1a776",
+          "command": "pDj 1216 @ 0x180584180",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        }
+      ],
+      "confidence": "observed field operations; HttpWebRequest semantic mapping strongly inferred from full instruction sequence and matching historical source"
+    },
+    {
+      "claim": "For the null-cookie-container path, the framework explicitly disables managed cookies.",
+      "native_functions": [
+        "0x180584180",
+        "0x18058aa20"
+      ],
+      "detail": "0x1805842cd loads request+0x28 into rdx; zero branches to 0x1805842e0, calling 0x18058aa20 with dl=0. Setter writes handler+0x28 from dl after state checks.",
+      "evidence": [
+        {
+          "evidence_id": "ev_766e1f72362d381c817e29527868782764dba9c423719e21edeed5219d11d574",
+          "file": "evidence\\deep-region\\http-request-send-candidate.json",
+          "sha256": "3bec8bc6f7bad248d75be06aa31f99d166a49377e291ad800c4fe2a546d1a776",
+          "command": "pDj 1216 @ 0x180584180",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_def6e82fcd7cdc75d635f659fb2ade5d619f8ca805ef83cb658c7ce4a6e614d3",
+          "file": "evidence\\deep-region\\handler-disable-managed-cookies.json",
+          "sha256": "fd2900c1d448681a0321ca92ffa941b8d6d38b15b7688568fb22188da3d57099",
+          "command": "pDj 103 @ 0x18058aa20",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        }
+      ],
+      "confidence": "observed zero-argument data flow and setter write; UseCookies semantic name inferred"
+    },
+    {
+      "claim": "The WinRT handler initialization includes a feature-gated NoCookies policy, so automatic browser/system cookie inheritance is not a supported explanation of cached market labels on the traced path.",
+      "native_functions": [
+        "0x18058b0b0",
+        "0x18058b5b0",
+        "0x18058b5e0",
+        "0x180359e30",
+        "0x180419980"
+      ],
+      "detail": "Lazy callback 0x180419980 tests ApiInformation.IsPropertyPresent for Windows.Web.Http.Filters.HttpBaseProtocolFilter.CookieUsageBehavior. If supported, 0x18058b5e0 passes value1 and setter slot7 through the WinRT property bridge. Historical matching source labels this NoCookies; official enum docs define NoCookies=1. Manifest minimum OS10.0.10586 matches introduction of this API. This remains static branch behavior, not a captured packet.",
+      "evidence": [
+        {
+          "evidence_id": "ev_b8dee5aef0ebb15a6dc2f07bd6b8a3a0af20d656ff34e734cd9b1ed073bcf2cb",
+          "file": "evidence\\deep-region\\handler-constructor.json",
+          "sha256": "b6f1106a916a4f620614e905374a2845535cd619a392240ea9000149d31bb2cb",
+          "command": "pDj 461 @ 0x18058b0b0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_a79aa3ac944f7978e9dd8d6efea6c89d1cbe9cc03a39536c7b67c50bdf79fba6",
+          "file": "evidence\\deep-region\\handler-cookie-init.json",
+          "sha256": "dcbd26e031e8acab356a280f89d281ab14f4fa93971c734c7d66c120df2d694f",
+          "command": "pDj 22 @ 0x18058b5b0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_355f838befebfc76a7b1976d3055fd3c208fe1363b721d33e37bd33911ad3a08",
+          "file": "evidence\\deep-region\\handler-native-cookie-policy.json",
+          "sha256": "276625712fe900fa9f0241aa0ee912ca945d6f718dfa5edfa850288d1efb4816",
+          "command": "pDj 152 @ 0x18058b5e0",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_8533a95199536ea6a592333590f9dcfca06e7ff73a02dbc39b5bf62f5103e6b1",
+          "file": "evidence\\deep-region\\cookie-support-lazy-init.json",
+          "sha256": "69cb3055ab78da3ec62fdc5bb2c6740bbadf49281a861ea9a765aba8df484610",
+          "command": "pDj 68 @ 0x180359e30",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_cf36ad090f13dabf7db4b0b1c20622919b1f530713a19a7d7d726454ea5f8ec6",
+          "file": "evidence\\deep-region\\cookie-behavior-property.json",
+          "sha256": "2653bc8dddb37fd9c8c9fc2164b2ce9c701fdb78b436b50a3ec68b9f0bd5c374",
+          "command": "pDj 67 @ 0x180419980",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        },
+        {
+          "evidence_id": "ev_3a44c69e5cca85efd294de3c2e54a014e7c183074a6e4b0f1cae105c8980d2d2",
+          "file": "evidence\\deep-region\\native-filter-property-setter.json",
+          "sha256": "dbf9551bdf872057b98fb1a35821074ec53d936f57f9f03f0fa821fdf8a8f305",
+          "command": "pDj 52 @ 0x180462390",
+          "completion_status": "complete",
+          "artifact_changed": false,
+          "output_truncated": false
+        }
+      ],
+      "confidence": "observed native value and feature query; property semantics corroborated by primary source/docs; runtime branch not executed"
+    },
+    {
+      "claim": "The Accept-Language literal in this compiled binary is not evidence that this application chooses its market from UI culture.",
+      "detail": "Bounded candidate references place Accept-Language in large generic header-table code, while the observed application request call sites never set it. Framework ApplicationLanguages/Language/GeographicRegion literals likewise need a proved connection to the request path before attribution.",
+      "evidence_files": [
+        "evidence/deep-region/region-literal-index.json",
+        "evidence/deep-region/string-search.json",
+        "evidence/deep-region/accept-language-table-a.json"
+      ],
+      "confidence": "bounded negative at the traced request path; header-table selected window only"
+    }
+  ],
+  "bounded_negative_search": {
+    "evidence_file": "evidence/deep-region/region-literal-index.json",
+    "scope": "Entire target DLL, exact case-sensitive ASCII and UTF-16LE byte sequences",
+    "absent": [
+      "mkt=",
+      "cc=",
+      "setmkt=",
+      "setlang=",
+      "zh-CN",
+      "_EDGE_S",
+      "SRCHHPGUSR"
+    ],
+    "limit": "Cannot exclude dynamic synthesis, runtime/OS headers, external data or service-side behavior. en-US and generic globalization/header strings do exist and are not application market-selection proof."
+  },
+  "interpretation": {
+    "application": "No app-selected region value has been observed in the actual archive request construction/send path. The UI resource language is separate from the market selected in the server response.",
+    "server": "For this parameter-free request, the response determines which market image URL/metadata is used. Which combination of source IP, lower HTTP-stack headers, Bing fallback rules or other service context explains the observed market is unverified.",
+    "foreground_background": "No evidence here establishes distinct explicit foreground/background market policies. Cache filenames from different responses or times do not establish the cause. Compare actual call paths and captured request context before assigning a cause.",
+    "cookie_limit": "The traced policy disables managed cookies and feature-gates disabling automatic WinRT cookies; there was no runtime capture proving every actual on-wire Cookie header absent.",
+    "language_limit": "No observed application Accept-Language set is not proof that the final on-wire request lacks that header. Windows HttpBaseProtocolFilter can add headers below the exposed request collection."
+  },
+  "unknowns": [
+    "Actual outgoing Accept-Language and any headers added by the OS/proxy.",
+    "Actual network egress location and any foreground/background difference at response time.",
+    "Bing archive backend market-selection precedence/defaults for the requests that produced existing caches.",
+    "Runtime execution of the feature-support branch and actual final request/cookie headers.",
+    "Whether any untraced custom prefix registration or runtime intervention changes framework defaults."
+  ],
+  "primary_references": {
+    "historical_framework_sources": [
+      {
+        "file": "evidence\\deep-region\\framework-reference\\WebRequest.cs",
+        "upstream_blob_sha1": "a7e81ceb70b3fafac0d7804a015ecf696713b9f6",
+        "sha256": "a79e1a9bf87d68383871033327637e3334076d08b953c78a296acc69f803603d",
+        "length": 18136,
+        "verified_git_blob_sha1": true,
+        "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Requests/src/System/Net/WebRequest.cs",
+        "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/a7e81ceb70b3fafac0d7804a015ecf696713b9f6",
+        "authority": "Historical primary-source reference; not the exact installed framework source"
+      },
+      {
+        "file": "evidence\\deep-region\\framework-reference\\HttpWebRequest.cs",
+        "upstream_blob_sha1": "f77a6f6e135026ad551eef2c22314fe88c258bf6",
+        "sha256": "ba26942432889f8feed0980b4799c1b293c01500187761f34075d2fc632b4e3d",
+        "length": 17800,
+        "verified_git_blob_sha1": true,
+        "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Requests/src/System/Net/HttpWebRequest.cs",
+        "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/f77a6f6e135026ad551eef2c22314fe88c258bf6",
+        "authority": "Historical primary-source reference; not the exact installed framework source"
+      },
+      {
+        "file": "evidence\\deep-region\\framework-reference\\HttpClientHandler.cs",
+        "upstream_blob_sha1": "1d295596af742d7817780559b6487bf86886d179",
+        "sha256": "19d77a268c173498f323ae242f32db1653fc11a478da7532f912c4577fde8f4e",
+        "length": 27644,
+        "verified_git_blob_sha1": true,
+        "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Http/src/netcore50/System/Net/HttpClientHandler.cs",
+        "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/1d295596af742d7817780559b6487bf86886d179",
+        "authority": "Historical primary-source reference; not the exact installed framework source"
+      },
+      {
+        "file": "evidence\\deep-region\\framework-reference\\HttpHandlerToFilter.cs",
+        "upstream_blob_sha1": "acb369a0023b5abd69fa42af8f34b549be807607",
+        "sha256": "5403caba0e5936e39625f0a34e5d1e8ce2cc0c06ca97702b65a2e77a647ede83",
+        "length": 12429,
+        "verified_git_blob_sha1": true,
+        "source_url": "https://github.com/dotnet/corefx/blob/v1.0.0/src/System.Net.Http/src/netcore50/System/Net/HttpHandlerToFilter.cs",
+        "api_blob_url": "https://api.github.com/repos/dotnet/corefx/git/blobs/acb369a0023b5abd69fa42af8f34b549be807607",
+        "authority": "Historical primary-source reference; not the exact installed framework source"
+      }
+    ],
+    "api_docs": [
+      {
+        "url": "https://learn.microsoft.com/en-us/uwp/api/windows.web.http.filters.httpcookieusagebehavior?view=winrt-26100",
+        "supports": "Default=0; NoCookies=1; introduced10.0.10586 UniversalApiContract2.0"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/uwp/api/windows.web.http.filters.httpbaseprotocolfilter.cookieusagebehavior?view=winrt-26100",
+        "supports": "Automatic-cookie policy semantics and API introduction"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/uwp/api/windows.web.http.httpclient.defaultrequestheaders?view=winrt-26100",
+        "supports": "Exposed DefaultRequestHeaders does not enumerate all final-wire headers; HttpBaseProtocolFilter adds headers. Conceptual boundary only: this old .NET handler delegates directly to a filter."
+      }
+    ]
+  },
+  "evidence_inventory": {
+    "accept-language-table-a.json": {
+      "evidence_id": "ev_6c4f2cd860171115cf972627493560df88ba02b407cf096815028359986fcd5d",
+      "file": "evidence\\deep-region\\accept-language-table-a.json",
+      "sha256": "1f6486ba48f7622f4b97e6fcd0e629648f8e872b2e8ba389bd78aa1c20733a8f",
+      "command": "pDj 750 @ 0x1804091ec",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "cookie-behavior-property.json": {
+      "evidence_id": "ev_cf36ad090f13dabf7db4b0b1c20622919b1f530713a19a7d7d726454ea5f8ec6",
+      "file": "evidence\\deep-region\\cookie-behavior-property.json",
+      "sha256": "2653bc8dddb37fd9c8c9fc2164b2ce9c701fdb78b436b50a3ec68b9f0bd5c374",
+      "command": "pDj 67 @ 0x180419980",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "cookie-support-lazy-init.json": {
+      "evidence_id": "ev_8533a95199536ea6a592333590f9dcfca06e7ff73a02dbc39b5bf62f5103e6b1",
+      "file": "evidence\\deep-region\\cookie-support-lazy-init.json",
+      "sha256": "69cb3055ab78da3ec62fdc5bb2c6740bbadf49281a861ea9a765aba8df484610",
+      "command": "pDj 68 @ 0x180359e30",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "get-response-bridge.json": {
+      "evidence_id": "ev_2eadebb2880e0278c11168417ffe5d2ab2aa0dbf09a9672af4df1a4536a0d10d",
+      "file": "evidence\\deep-region\\get-response-bridge.json",
+      "sha256": "00f4d83a8f0e1d0ef5b7bf3d487dc0e50a491c5757694e0d0ce561fa7eadac52",
+      "command": "pDj 279 @ 0x1804bfee0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "handler-constructor.json": {
+      "evidence_id": "ev_b8dee5aef0ebb15a6dc2f07bd6b8a3a0af20d656ff34e734cd9b1ed073bcf2cb",
+      "file": "evidence\\deep-region\\handler-constructor.json",
+      "sha256": "b6f1106a916a4f620614e905374a2845535cd619a392240ea9000149d31bb2cb",
+      "command": "pDj 461 @ 0x18058b0b0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "handler-cookie-init.json": {
+      "evidence_id": "ev_a79aa3ac944f7978e9dd8d6efea6c89d1cbe9cc03a39536c7b67c50bdf79fba6",
+      "file": "evidence\\deep-region\\handler-cookie-init.json",
+      "sha256": "dcbd26e031e8acab356a280f89d281ab14f4fa93971c734c7d66c120df2d694f",
+      "command": "pDj 22 @ 0x18058b5b0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "handler-disable-managed-cookies.json": {
+      "evidence_id": "ev_def6e82fcd7cdc75d635f659fb2ade5d619f8ca805ef83cb658c7ce4a6e614d3",
+      "file": "evidence\\deep-region\\handler-disable-managed-cookies.json",
+      "sha256": "fd2900c1d448681a0321ca92ffa941b8d6d38b15b7688568fb22188da3d57099",
+      "command": "pDj 103 @ 0x18058aa20",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "handler-native-cookie-policy.json": {
+      "evidence_id": "ev_355f838befebfc76a7b1976d3055fd3c208fe1363b721d33e37bd33911ad3a08",
+      "file": "evidence\\deep-region\\handler-native-cookie-policy.json",
+      "sha256": "276625712fe900fa9f0241aa0ee912ca945d6f718dfa5edfa850288d1efb4816",
+      "command": "pDj 152 @ 0x18058b5e0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "http-request-allocate.json": {
+      "evidence_id": "ev_fee189b7c7fdbf1ea6b68cf336febaa1d2f0a6a7e395cefe7d93e58896b89fe7",
+      "file": "evidence\\deep-region\\http-request-allocate.json",
+      "sha256": "631c86a3753898c567c687e75a631bfcb68aa8624174610194f6469bb2f7c138",
+      "command": "pDj 46 @ 0x180583f60",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "http-request-constructor.json": {
+      "evidence_id": "ev_c46663a34e8c43c20c696d813f6186c5ebbcde8d7b7a0e63d7c45b519af3ed6c",
+      "file": "evidence\\deep-region\\http-request-constructor.json",
+      "sha256": "178a7ada729306e487cfd369d3f325c27b6d1063bc61908538077168adf225dc",
+      "command": "pDj 143 @ 0x180583f90",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "http-request-response-candidate.json": {
+      "evidence_id": "ev_7731d8414ebd30d35037bbc75148720b50c088a291aa2262997d45596283d677",
+      "file": "evidence\\deep-region\\http-request-response-candidate.json",
+      "sha256": "d6858d63451dedc9469fc097665eedade0829a7400ccf42c4e427a7768850ab8",
+      "command": "pDj 711 @ 0x180584820",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "http-request-send-candidate.json": {
+      "evidence_id": "ev_766e1f72362d381c817e29527868782764dba9c423719e21edeed5219d11d574",
+      "file": "evidence\\deep-region\\http-request-send-candidate.json",
+      "sha256": "3bec8bc6f7bad248d75be06aa31f99d166a49377e291ad800c4fe2a546d1a776",
+      "command": "pDj 1216 @ 0x180584180",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "native-filter-property-setter.json": {
+      "evidence_id": "ev_3a44c69e5cca85efd294de3c2e54a014e7c183074a6e4b0f1cae105c8980d2d2",
+      "file": "evidence\\deep-region\\native-filter-property-setter.json",
+      "sha256": "dbf9551bdf872057b98fb1a35821074ec53d936f57f9f03f0fa821fdf8a8f305",
+      "command": "pDj 52 @ 0x180462390",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "request-builder.json": {
+      "evidence_id": "ev_2fe974fadb4991c032ea151874e0f06c04f722ade1e4c1f9bdbe4c4ed66f7a73",
+      "file": "evidence\\deep-region\\request-builder.json",
+      "sha256": "541e324f6968233b1a3cea0ddc070a369433c117ab8989e7ebf6f090ca42ec30",
+      "command": "pDj 170 @ 0x1804c00d0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "request-creator.json": {
+      "evidence_id": "ev_02e56c1831668c95ed0030b0afaf05baec41e307aa8a4dfbf88e0c85727a207c",
+      "file": "evidence\\deep-region\\request-creator.json",
+      "sha256": "7d904211f9578479197acb017290824b93065bef7e5dce142613e0acaccb684a",
+      "command": "pDj 73 @ 0x1804c0080",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "request-default-prefix-list.json": {
+      "evidence_id": "ev_4f260c69f34f93e177ed96b78f6f06f6a168336368dbfa79d34b7c56588b2d49",
+      "file": "evidence\\deep-region\\request-default-prefix-list.json",
+      "sha256": "be7a4c158e179435310307ce8b1612ee477f3a5e75e65cbd7fde4f327f723054",
+      "command": "pDj 753 @ 0x1804c06b0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    },
+    "request-factory.json": {
+      "evidence_id": "ev_fb78a62e07afb3ee13b97051042469842159a6d6246397d70400ba3565621869",
+      "file": "evidence\\deep-region\\request-factory.json",
+      "sha256": "4537243bd558692a0ec607b800392905c93ca44d28c535a6419dc931d83bbfc7",
+      "command": "pDj 455 @ 0x1804c01a0",
+      "completion_status": "complete",
+      "artifact_changed": false,
+      "output_truncated": false
+    }
+  },
+  "final_target_hash_matches_expected": true,
+  "limitations": [
+    "REA pDj outputs are static instruction observations, not complete original source recovery or runtime execution.",
+    "Historical dotnet/corefx v1.0.0 code is used to interpret highly matching instruction sequences; it is not asserted byte-identical to the installed .NET Native1.7 framework.",
+    "No Bing requests were sent and no traffic was captured by this investigation.",
+    "Only selected functions/path and bounded literal searches were followed; no whole-program noninterference proof is claimed.",
+    "The selected Accept-Language disassembly ends mid-instruction and is not used for function-level completeness claims."
+  ]
+}

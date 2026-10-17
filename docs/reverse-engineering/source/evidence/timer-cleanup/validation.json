@@ -1,0 +1,79 @@
+{
+  "target_sha256_verified": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "rea_outputs": [
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-instructions.json",
+      "evidence_id": "ev_163276c9187267392694be367c0056754df21598e908fd1caf8df54ad55efcc9",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 23,
+      "instruction_bytes_compared": 78
+    },
+    {
+      "path": "evidence/timer-cleanup/mainvm-dispose-pseudocode.json",
+      "evidence_id": "ev_4b3a75a54721e188696dc5565892ba461d544fb32bda381682d6d3eac38bb00c",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 0,
+      "instruction_bytes_compared": 0
+    },
+    {
+      "path": "evidence/timer-cleanup/navigation-disposal-candidate.json",
+      "evidence_id": "ev_29978a864c9142819d002b4b4e69d5ceeeb2cccf2f7fe7b947b8016d4ec2d250",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 23,
+      "instruction_bytes_compared": 89
+    },
+    {
+      "path": "evidence/timer-cleanup/navigator-forwarded-event.json",
+      "evidence_id": "ev_9465589a2edf5c364ee2f4fc2ff5f03f64bd78a641be45a1ac09329117842ba5",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 31,
+      "instruction_bytes_compared": 124
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-cleanup-and-adjacent.json",
+      "evidence_id": "ev_c61690b988bc2f86ac336f99cf3f3cd721e1789b27ff667c5c571a4bab1f542b",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 131,
+      "instruction_bytes_compared": 320
+    },
+    {
+      "path": "evidence/timer-cleanup/timer-second-operation.json",
+      "evidence_id": "ev_7cb1d94d02794e42c9c65655a5536184cae35f22a2cead4f8f848b43a577b544",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 22,
+      "instruction_bytes_compared": 70
+    },
+    {
+      "path": "evidence/timer-cleanup/unregister-enumerator-cleanup.json",
+      "evidence_id": "ev_7526e44bc07292194bcec99d4c94d5daea3eb2b7e2aebbe4fb20eacf039f943b",
+      "complete": true,
+      "target_unchanged": true,
+      "instruction_count_compared": 9,
+      "instruction_bytes_compared": 29
+    }
+  ],
+  "function_starts_verified": 11,
+  "classification_count": 8,
+  "classification_instruction_presence": {
+    "0x1804a1009": true,
+    "0x1804a102a": true,
+    "0x1804a347c": true,
+    "0x1804a354d": true,
+    "0x1804a8caa": true,
+    "0x1804a8cfa": true,
+    "0x180531dea": true,
+    "0x180531f76": true
+  },
+  "document_local_links_verified": 43,
+  "missing_document_links": [],
+  "limits": [
+    "Exact byte comparisons validate transcription, not all semantic interpretations.",
+    "The early adjacent-code capture starts inside the preceding function; no claim relies on its leading partial instruction. MainVM Dispose additionally has its own exact 78-byte capture."
+  ]
+}

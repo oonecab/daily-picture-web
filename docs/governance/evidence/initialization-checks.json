@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-17",
+  "environment": {
+    "os": "Windows",
+    "node": "24.14.0",
+    "python": "3.12.1",
+    "governance_generator": "0.5.0"
+  },
+  "checks": [
+    {
+      "name": "strict-and-repeat-preview",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "f84ae9",
+        "wall_time_seconds": 0.6844585,
+        "exit_code": 0,
+        "original_token_count": 305,
+        "output": "项目治理校验通过。\r\nUNCHANGED .env.example\r\nUNCHANGED .gitattributes\r\nPRESERVE  .gitignore (显式声明的项目人工权威；仅检查结构，不替代内容评审)\r\nUNCHANGED .project-governance.json\r\nUNCHANGED AGENTS.md\r\nUNCHANGED CLAUDE.md\r\nPRESERVE  README.md (显式声明的项目人工权威；仅检查结构，不替代内容评审)\r\nUNCHANGED TECH.md\r\nUNCHANGED docs/README.md\r\nUNCHANGED docs/architecture/_template.md\r\nUNCHANGED docs/capabilities/external-integration.md\r\nUNCHANGED docs/capabilities/modular-architecture.md\r\nUNCHANGED docs/capabilities/web.md\r\nUNCHANGED docs/contracts/_template.md\r\nUNCHANGED docs/environments.md\r\nUNCHANGED docs/governance/CHANGE_TRIAGE.md\r\nUNCHANGED docs/governance/SECURITY.md\r\nUNCHANGED docs/governance/TESTING.md\r\nUNCHANGED docs/governance/WORKFLOW.md\r\nUNCHANGED docs/rules/README.md\r\nUNCHANGED docs/rules/_template.md\r\nUNCHANGED docs/testing/README.md\r\nUNCHANGED docs/testing/_template.md\r\nUNCHANGED issues/README.md\r\nUNCHANGED issues/_template.md\r\nUNCHANGED milestones/README.md\r\nUNCHANGED milestones/_template.md\r\nUNCHANGED plans/README.md\r\nUNCHANGED plans/_template.md\r\n\r\n当前仅为预览。请重新运行并添加 --apply 以写入这些变更。\r\n"
+      }
+    },
+    {
+      "name": "research-and-original-bytes",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "3bd4bf",
+        "wall_time_seconds": 1.2994103,
+        "exit_code": 0,
+        "original_token_count": 40,
+        "output": "{\r\n  \"files_checked\": 238,\r\n  \"local_markdown_links_checked\": 432,\r\n  \"external_references_declared\": 0,\r\n  \"original_compared\": true,\r\n  \"failures\": []\r\n}\r\n"
+      }
+    },
+    {
+      "name": "application-syntax",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "32fbdf",
+        "wall_time_seconds": 1.2253867,
+        "exit_code": 0,
+        "original_token_count": 37,
+        "output": "\n> daily-picture-web@1.0.0 check\n> node --check server.mjs && node --check lib/bing.mjs && node --check public/app.js && node --check public/sw.js\n\n"
+      }
+    },
+    {
+      "name": "existing-application-tests",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "01684d",
+        "wall_time_seconds": 2.2512517,
+        "exit_code": 0,
+        "original_token_count": 263,
+        "output": "\n> daily-picture-web@1.0.0 test\n> node --test test/*.test.mjs\n\n✔ market date uses the UTC publication instant, including US daylight-saving time (19.5991ms)\n✔ archive normalization preserves attribution and rejects arbitrary image hosts (1.746ms)\n✔ image validation rejects traversal, URL injection, and unknown sizes (0.3998ms)\n✔ concurrent archive requests share one upstream request and cache metadata (54.5296ms)\n✔ metadata-only changes are committed even when image IDs do not change (11.6567ms)\n✔ a transient connection failure is retried once within the original time budget (310.1215ms)\n✔ network failure returns explicitly stale data, including after service restart (622.799ms)\n✔ a corrupt archive cache can recover from the network (8.9787ms)\n✔ non-image responses cannot poison the image cache (5.074ms)\n✔ HTTP routes serve the app, reject writes and invalid hosts, and hide workspace files (70.3456ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1282.7243\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "evidence_id": "DP-LOCAL-STATE-20261017",
+  "collection_start_utc": "2026-10-17T08:32:01.706122+00:00",
+  "collection_end_utc": "2026-10-17T08:32:01.730049+00:00",
+  "source_root": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4",
+  "read_only": true,
+  "target_app_executed": false,
+  "hive_mounted": false,
+  "directory_inventory": [
+    "AC",
+    "AC\\INetCache",
+    "AC\\INetCookies",
+    "AC\\INetHistory",
+    "AC\\Temp",
+    "AppData",
+    "LocalCache",
+    "LocalState",
+    "LocalState\\Images",
+    "LocalState\\LiveTiles",
+    "LocalState\\LockScreen",
+    "LocalState\\Wallpaper",
+    "RoamingState",
+    "Settings",
+    "SystemAppData",
+    "TempState"
+  ],
+  "file_count": 16,
+  "total_file_bytes": 3162219,
+  "files": [
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\AC\\INetCache\\container.dat",
+      "relative_path": "AC\\INetCache\\container.dat",
+      "length": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_utc": "2023-11-03T14:52:52.138108+00:00",
+      "mtime_asia_shanghai": "2023-11-03T22:52:52.138108+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\ImageArchive.json",
+      "relative_path": "LocalState\\ImageArchive.json",
+      "length": 1403,
+      "sha256": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b",
+      "mtime_utc": "2026-10-16T16:58:17.345233+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:17.345233+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.AmmoniteFossils_EN-US6354038755_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.AmmoniteFossils_EN-US6354038755_1920x1080.jpg",
+      "length": 339974,
+      "sha256": "0ce308e170ae0234a092b8bbdd2caaff8f93804ceb547afada7d8a826d96a29c",
+      "mtime_utc": "2026-10-16T16:58:15.684783+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:15.684783+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "0ce308e170ae0234a092b8bbdd2caaff8f93804ceb547afada7d8a826d96a29c",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.BabcockSP_EN-US6068931791_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.BabcockSP_EN-US6068931791_1920x1080.jpg",
+      "length": 340458,
+      "sha256": "c9d49305b1861b8bdea744e51984ac20749f9022d31db693b59937af94e3b338",
+      "mtime_utc": "2026-10-16T16:58:16.941245+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:16.941245+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "c9d49305b1861b8bdea744e51984ac20749f9022d31db693b59937af94e3b338",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.CormorantsFlight_EN-US5972403355_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.CormorantsFlight_EN-US5972403355_1920x1080.jpg",
+      "length": 334416,
+      "sha256": "a854ecce747d34db6d5fab3052feb842094e499519f1e5012d5ea578744eb6d6",
+      "mtime_utc": "2026-10-16T16:58:17.336818+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:17.336818+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "a854ecce747d34db6d5fab3052feb842094e499519f1e5012d5ea578744eb6d6",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.PlitviceAutumn_EN-US6255909048_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.PlitviceAutumn_EN-US6255909048_1920x1080.jpg",
+      "length": 338761,
+      "sha256": "0dab80759521246896d70623602d8af9441a812b80d9c9f58e0e187f23391be0",
+      "mtime_utc": "2026-10-16T16:58:16.134869+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:16.134869+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "0dab80759521246896d70623602d8af9441a812b80d9c9f58e0e187f23391be0",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+      "length": 340562,
+      "sha256": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a",
+      "mtime_utc": "2026-10-16T16:58:14.819030+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:14.819030+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.WhiteHouse_EN-US6161912809_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.WhiteHouse_EN-US6161912809_1920x1080.jpg",
+      "length": 337780,
+      "sha256": "321c3c093c60d935d0015b487ddae60ac92992a5109d339e2f68848847971859",
+      "mtime_utc": "2026-10-16T16:58:16.519145+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:16.519145+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "321c3c093c60d935d0015b487ddae60ac92992a5109d339e2f68848847971859",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Images\\OHR.WroclawPoland_EN-US7757698922_1920x1080.jpg",
+      "relative_path": "LocalState\\Images\\OHR.WroclawPoland_EN-US7757698922_1920x1080.jpg",
+      "length": 335160,
+      "sha256": "4956c184809dd0b64f403ea87e792ad05f06a7644e77b73228058d23c01ae107",
+      "mtime_utc": "2026-10-16T16:58:15.253658+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:15.253658+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "4956c184809dd0b64f403ea87e792ad05f06a7644e77b73228058d23c01ae107",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\LiveTiles\\OHR.ChauvetPaintingsFrance_ZH-CN3150703955_1920x1080.jpg",
+      "relative_path": "LocalState\\LiveTiles\\OHR.ChauvetPaintingsFrance_ZH-CN3150703955_1920x1080.jpg",
+      "length": 86602,
+      "sha256": "a664129bc995b2b4cfbcbc4186bf038bc6fca816446675e82eac03af9b5d2c65",
+      "mtime_utc": "2026-10-17T02:59:25.362034+00:00",
+      "mtime_asia_shanghai": "2026-10-17T10:59:25.362034+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "PNG",
+        "width": 310,
+        "height": 150,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "a664129bc995b2b4cfbcbc4186bf038bc6fca816446675e82eac03af9b5d2c65",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\LockScreen\\OHR.BigMoon_ZH-CN2508603883_1920x1080.jpg",
+      "relative_path": "LocalState\\LockScreen\\OHR.BigMoon_ZH-CN2508603883_1920x1080.jpg",
+      "length": 333773,
+      "sha256": "c190be22599a201374bf9df71c57b77abafa9602b3cd70f8a22d099e702ffdd5",
+      "mtime_utc": "2025-07-20T05:07:27.254061+00:00",
+      "mtime_asia_shanghai": "2025-07-20T13:07:27.254061+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "c190be22599a201374bf9df71c57b77abafa9602b3cd70f8a22d099e702ffdd5",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Wallpaper\\OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+      "relative_path": "LocalState\\Wallpaper\\OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+      "length": 340562,
+      "sha256": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a",
+      "mtime_utc": "2026-10-16T16:58:14.819030+00:00",
+      "mtime_asia_shanghai": "2026-10-17T00:58:14.819030+08:00",
+      "stat_stable_during_read": true,
+      "image": {
+        "format": "JPEG",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      },
+      "sha256_after_collection": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\Settings\\roaming.lock",
+      "relative_path": "Settings\\roaming.lock",
+      "length": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_utc": "2023-11-03T14:46:57.412286+00:00",
+      "mtime_asia_shanghai": "2023-11-03T22:46:57.412286+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\Settings\\settings.dat",
+      "relative_path": "Settings\\settings.dat",
+      "length": 8192,
+      "sha256": "75d55a133159507db99a68371374229b55f6e21277293822f9da4761e1870707",
+      "mtime_utc": "2026-10-17T03:00:25.571691+00:00",
+      "mtime_asia_shanghai": "2026-10-17T11:00:25.571691+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "75d55a133159507db99a68371374229b55f6e21277293822f9da4761e1870707",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\Settings\\settings.dat.LOG1",
+      "relative_path": "Settings\\settings.dat.LOG1",
+      "length": 16384,
+      "sha256": "e29518acece8601ac6a3df3ec5fd5208e2612c18b9d70fb295efc834f7538752",
+      "mtime_utc": "2023-11-03T14:52:52.006108+00:00",
+      "mtime_asia_shanghai": "2023-11-03T22:52:52.006108+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "e29518acece8601ac6a3df3ec5fd5208e2612c18b9d70fb295efc834f7538752",
+      "bytes_unchanged_on_second_read": true
+    },
+    {
+      "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\Settings\\settings.dat.LOG2",
+      "relative_path": "Settings\\settings.dat.LOG2",
+      "length": 8192,
+      "sha256": "d6b816003c7d4f77ddc8f061efdba936e86184b40fd0d3d8658010c58587ad7c",
+      "mtime_utc": "2023-11-03T14:52:52.006108+00:00",
+      "mtime_asia_shanghai": "2023-11-03T22:52:52.006108+08:00",
+      "stat_stable_during_read": true,
+      "sha256_after_collection": "d6b816003c7d4f77ddc8f061efdba936e86184b40fd0d3d8658010c58587ad7c",
+      "bytes_unchanged_on_second_read": true
+    }
+  ],
+  "image_archive": {
+    "images": [
+      {
+        "url": "/th?id=OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "Mount Sneffels in the San Juan Mountains near Ridgway, Colorado (© lightphoto/Getty Images)"
+      },
+      {
+        "url": "/th?id=OHR.WroclawPoland_EN-US7757698922_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "View of the Wroclaw Market Square from the Witches' Bridge in Wroclaw, Poland (© Piotr Mitelski/Shutterstock)"
+      },
+      {
+        "url": "/th?id=OHR.AmmoniteFossils_EN-US6354038755_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "Ammonite fossils from the Jurassic Period (© J Nemchinova/Getty Images)"
+      },
+      {
+        "url": "/th?id=OHR.PlitviceAutumn_EN-US6255909048_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "Plitvice Lakes National Park, Croatia (© Jan Wlodarczyk/Alamy)"
+      },
+      {
+        "url": "/th?id=OHR.WhiteHouse_EN-US6161912809_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "White House Ruin at Canyon de Chelly National Monument in Arizona (© Ingo Arndt/Minden Pictures)"
+      },
+      {
+        "url": "/th?id=OHR.BabcockSP_EN-US6068931791_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "Glade Creek Grist Mill, Babcock State Park, West Virginia (© dszc/Getty Images)"
+      },
+      {
+        "url": "/th?id=OHR.CormorantsFlight_EN-US5972403355_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+        "copyright": "Double-crested cormorants over Monterey Bay, California (© Hiroya Minakuchi/Minden Pictures)"
+      }
+    ]
+  },
+  "settings_hive": {
+    "magic": "regf",
+    "sequence1": 1689,
+    "sequence2": 1689,
+    "sequence_numbers_equal": true,
+    "computed_header_checksum_hex": "0x719a842e",
+    "stored_header_checksum_hex": "0x719a842e",
+    "header_checksum_valid": true,
+    "header_last_write_filetime": {
+      "raw_100ns": 129821184195947362,
+      "utc": "2012-05-22T00:00:19.594736+00:00",
+      "asia_shanghai": "2012-05-22T08:00:19.594736+08:00"
+    },
+    "hbins_size": 4096,
+    "keys": [
+      {
+        "path": "Test",
+        "cell_offset_hex": "0x1020",
+        "flags_hex": "0x2c",
+        "last_write_filetime": {
+          "raw_100ns": 129821184085623124,
+          "utc": "2012-05-22T00:00:08.562312+00:00",
+          "asia_shanghai": "2012-05-22T08:00:08.562312+08:00"
+        },
+        "stable_subkey_count": 2,
+        "volatile_subkey_count": 0,
+        "value_count": 0,
+        "values": []
+      },
+      {
+        "path": "Test\\LocalState",
+        "cell_offset_hex": "0x1208",
+        "flags_hex": "0x20",
+        "last_write_filetime": {
+          "raw_100ns": 134366795654255361,
+          "utc": "2026-10-17T02:59:25.425536+00:00",
+          "asia_shanghai": "2026-10-17T10:59:25.425536+08:00"
+        },
+        "stable_subkey_count": 0,
+        "volatile_subkey_count": 0,
+        "value_count": 1,
+        "values": [
+          {
+            "name": "CurrentLiveTileImageUrl",
+            "type_hex": "0x5f5e10c",
+            "cell_offset_hex": "0x1108",
+            "data_offset_hex": "0x14ac",
+            "data_length": 200,
+            "raw_hex": "2f00740068003f00690064003d004f00480052002e0043006800610075007600650074005000610069006e00740069006e00670073004600720061006e00630065005f005a0048002d0043004e0033003100350030003700300033003900350035005f003100390032003000780031003000380030002e006a00700067002600720066003d004c006100440069006700750065005f003100390032003000780031003000380030002e006a007000670026007000690064003d0068007000000001539484e35ddd01",
+            "interpretation": "UWP UnicodeString with trailing update FILETIME",
+            "decoded_string": "/th?id=OHR.ChauvetPaintingsFrance_ZH-CN3150703955_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+            "setting_update_filetime": {
+              "raw_100ns": 134366795654255361,
+              "utc": "2026-10-17T02:59:25.425536+00:00",
+              "asia_shanghai": "2026-10-17T10:59:25.425536+08:00"
+            }
+          }
+        ]
+      },
+      {
+        "path": "Test\\RoamingState",
+        "cell_offset_hex": "0x1290",
+        "flags_hex": "0x20",
+        "last_write_filetime": {
+          "raw_100ns": 129821184137529699,
+          "utc": "2012-05-22T00:00:13.752969+00:00",
+          "asia_shanghai": "2012-05-22T08:00:13.752969+08:00"
+        },
+        "stable_subkey_count": 0,
+        "volatile_subkey_count": 0,
+        "value_count": 0,
+        "values": []
+      }
+    ],
+    "limitations": [
+      "Only allocated keys reachable from the stored root are parsed.",
+      "No transaction log replay or recovery, deleted-cell scan, reg load, or hive mounting.",
+      "This reads persisted file bytes; it cannot expose pending in-memory UWP settings.",
+      "Equal sequence numbers and a matching checksum are consistency checks, not an atomic live snapshot guarantee."
+    ]
+  },
+  "desktop_wallpaper_registry": {
+    "key": "HKCU\\Control Panel\\Desktop",
+    "value": "WallPaper",
+    "type": 1,
+    "points_inside_daily_picture_data": true,
+    "path": "C:\\Users\\wangq\\AppData\\Local\\Packages\\14403Duracellko.NET.BingImageoftheDay_1wy5t1va6xay4\\LocalState\\Wallpaper\\OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+    "limitation": "Configured registry path only; no desktop screenshot or display refresh was performed.",
+    "referenced_file_sha256": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a"
+  },
+  "limitations": [
+    "Each file was read and later rehashed. This is not a coordinated snapshot of a running application.",
+    "Files and timestamps describe recorded local state, not a captured network transaction or executed code path.",
+    "Absence of a setting here cannot establish the app's default setting or any independent OS-managed state."
+  ],
+  "format_reference": "https://github.com/williballenthin/python-registry/blob/master/Registry/RegistryParse.py"
+}

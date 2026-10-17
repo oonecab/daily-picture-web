@@ -1,0 +1,62 @@
+{
+  "scope": "Offline consistency check against retained snapshot; no application execution or current network request.",
+  "sources": [
+    {
+      "path": "evidence\\local-state\\ImageArchive.observed.json",
+      "sha256": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b"
+    },
+    {
+      "path": "evidence\\local-state\\local-state.json",
+      "sha256": "900d8a372113037128ab60307f4b7cdadc63dbcc56d78f716ee8a8caf4cbaf9e"
+    }
+  ],
+  "snapshot_collection_time": "2026-10-17T08:32:01.706122+00:00",
+  "rows": [
+    {
+      "url": "/th?id=OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.SneffelsAutumn_EN-US3953128777_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "9652c212d8afe26ca878ae6d27229064156e7e26e377eb2452c60c9a1c24c95a"
+    },
+    {
+      "url": "/th?id=OHR.WroclawPoland_EN-US7757698922_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.WroclawPoland_EN-US7757698922_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "4956c184809dd0b64f403ea87e792ad05f06a7644e77b73228058d23c01ae107"
+    },
+    {
+      "url": "/th?id=OHR.AmmoniteFossils_EN-US6354038755_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.AmmoniteFossils_EN-US6354038755_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "0ce308e170ae0234a092b8bbdd2caaff8f93804ceb547afada7d8a826d96a29c"
+    },
+    {
+      "url": "/th?id=OHR.PlitviceAutumn_EN-US6255909048_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.PlitviceAutumn_EN-US6255909048_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "0dab80759521246896d70623602d8af9441a812b80d9c9f58e0e187f23391be0"
+    },
+    {
+      "url": "/th?id=OHR.WhiteHouse_EN-US6161912809_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.WhiteHouse_EN-US6161912809_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "321c3c093c60d935d0015b487ddae60ac92992a5109d339e2f68848847971859"
+    },
+    {
+      "url": "/th?id=OHR.BabcockSP_EN-US6068931791_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.BabcockSP_EN-US6068931791_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "c9d49305b1861b8bdea744e51984ac20749f9022d31db693b59937af94e3b338"
+    },
+    {
+      "url": "/th?id=OHR.CormorantsFlight_EN-US5972403355_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "extracted_filename": "OHR.CormorantsFlight_EN-US5972403355_1920x1080.jpg",
+      "filename_present": true,
+      "file_sha256": "a854ecce747d34db6d5fab3052feb842094e499519f1e5012d5ea578744eb6d6"
+    }
+  ],
+  "referenced_files": 7,
+  "present_files": 7,
+  "extra_images_in_snapshot": [],
+  "conditional_prediction": "If a future archive contains the same URLs and those same filenames still exist, all seven individual image downloads are skipped. This does not predict the future server response or verify image validity."
+}

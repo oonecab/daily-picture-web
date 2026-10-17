@@ -1,0 +1,354 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "files": [
+    {
+      "path": "docs/data-model-and-storage.md",
+      "sha256": "224d31dfe7cfd4e34e06cc485335778e73d31e82978763364e73f3d9898816ae",
+      "length": 33105
+    },
+    {
+      "path": "evidence/architecture-data/abi-and-settings-types.json",
+      "sha256": "e0d5bb6aa613632a74905db9f4d4c6486651c2af541b153a0a30232d4aa5074a",
+      "length": 15568,
+      "evidence_id": "DP-DATA-ABI-20261017"
+    },
+    {
+      "path": "evidence/architecture-data/findings.json",
+      "sha256": "17f9bd04b66656b46e87e4883f5a9292be5f08bd6de13555e7e6aa3df4920b01",
+      "length": 6236,
+      "evidence_id": "DP-ARCHITECTURE-DATA-20261017"
+    },
+    {
+      "path": "evidence/architecture-data/functions.json",
+      "sha256": "4dec5ad4e6931e83e796190f88149a167593a91cb04bca409ea0a787222556a4",
+      "length": 9631
+    },
+    {
+      "path": "evidence/architecture-data/livetiles-folder-init.asm",
+      "sha256": "9117c078a8008a86509731787bd5e3b71fe37eb38d14d9db8fc7d8a7d3cdafb0",
+      "length": 4967
+    },
+    {
+      "path": "evidence/architecture-data/livetiles-folder-init.json",
+      "sha256": "be304e87c7e48aaa9b411b38d1d7059e81ada0f2c7baae85b383bbccc4a88d4f",
+      "length": 60300,
+      "evidence_id": "ev_36c4008c3403c9bbab5a9297d56f199987f56884f65200745619856d50e6a544",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/architecture-data/lockscreen-folder-init.asm",
+      "sha256": "99c98b2335dcc7cdcc96ba4818a701071d44dcb372751ba8febc9fb923b22f32",
+      "length": 5471
+    },
+    {
+      "path": "evidence/architecture-data/lockscreen-folder-init.json",
+      "sha256": "601c9636787a86ebe427b26a99886358541ad1cb00fa4d7bc6b0256890202126",
+      "length": 65754,
+      "evidence_id": "ev_6fd5dd25e7b82a80613aad05860eddb91dba0960a5380873b869f36b707dec4c",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/architecture-data/model-observations.json",
+      "sha256": "5cceb620f3c4ade5cb812f2dccad8d4860d0d934cd354e85a4f4fc606619ea17",
+      "length": 2199,
+      "evidence_id": "DP-DATA-MODEL-20261017"
+    },
+    {
+      "path": "evidence/architecture-data/native-data-index.json",
+      "sha256": "400f9d4579c6c7b0284572fc76a907c79c38e2bc26d4322f4d1d6d281605e09e",
+      "length": 32552
+    },
+    {
+      "path": "evidence/architecture-data/reuse-index.json",
+      "sha256": "f5b8397e2b00a02d8adeadbae205d01591ed625fda7d79f9a7b30fe85e9289a3",
+      "length": 4781
+    },
+    {
+      "path": "evidence/architecture-data/reused-archive-load.asm",
+      "sha256": "54af1baf5b517139cb0a806aa87fe3f488623638ef840dacd85f327f3b8017d6",
+      "length": 14560
+    },
+    {
+      "path": "evidence/architecture-data/reused-archive-save.asm",
+      "sha256": "34f312e8c82dd303d1c4f2c96320d6bb78b78e8e30adcc0935db90ce2a72edac",
+      "length": 44427
+    },
+    {
+      "path": "evidence/architecture-data/reused-desktop-boolean-read.asm",
+      "sha256": "60ab38600000e929736c5a3406c3400588aadbfc98896b67a9029e7ecd7a33f8",
+      "length": 2502
+    },
+    {
+      "path": "evidence/architecture-data/reused-desktop-boolean-write.asm",
+      "sha256": "2d1ab9905d1a2bf464952914d3e93ec9485a86c02157cb7cca884235737af1eb",
+      "length": 2153
+    },
+    {
+      "path": "evidence/architecture-data/reused-get-image-file.asm",
+      "sha256": "debc85916a3c01f256cf55fb30d1e3e77f57006aca2db03a58ebd5c3d24eba4d",
+      "length": 8590
+    },
+    {
+      "path": "evidence/architecture-data/reused-lockscreen-boolean-read.asm",
+      "sha256": "8697c69ca5cdd0c365f2ec21a1dcd377ff0fa439d3716f693b724f36af7992d8",
+      "length": 2505
+    },
+    {
+      "path": "evidence/architecture-data/reused-lockscreen-boolean-write.asm",
+      "sha256": "6e0ff27b4d45f7dc33f773f82f33c5484151fc1715ed2f97797f09f5cf93c18d",
+      "length": 2156
+    },
+    {
+      "path": "evidence/architecture-data/reused-model-projection.asm",
+      "sha256": "263c4b8d707e0a19295826f15c7746a0368e7be7c2ce24ecf0a4b896dcce91e0",
+      "length": 14215
+    },
+    {
+      "path": "evidence/architecture-data/settings-imports.json",
+      "sha256": "31f53b862e9516fe73c3e56c8f1a32a9e28261e0a3b153b478110fdc38867c85",
+      "length": 4955
+    },
+    {
+      "path": "evidence/architecture-data/settings-type-symbols.json",
+      "sha256": "16006b301a34703c76b117294a574ea5730b8e1d3dbd77080dd51d119d3e83d1",
+      "length": 6151
+    },
+    {
+      "path": "evidence/architecture-data/settings-url-and-migrate.asm",
+      "sha256": "0824d644e3ffebb06539a2dec08da56b45ebada5471453158b7faa44b8070fb6",
+      "length": 16339
+    },
+    {
+      "path": "evidence/architecture-data/settings-url-and-migrate.json",
+      "sha256": "fb88f0761488d03e7361fc431625a81ef65638807a10b35fb7853b286fc10ab2",
+      "length": 199400,
+      "evidence_id": "ev_47c402db3041bed79b42a93aef6ecf773a04a45de7384f3c0f44cbf8af89e42c",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/architecture-data/wallpaper-folder-init.asm",
+      "sha256": "1fd008f3a34af1ec347a5f85ec2e94c9a751b69caf3f83cc9e5d05f516e1ac29",
+      "length": 5471
+    },
+    {
+      "path": "evidence/architecture-data/wallpaper-folder-init.json",
+      "sha256": "099e071e3ada61d2c2424af9edb242f9538534e607884eb1c418447b50f61f78",
+      "length": 65754,
+      "evidence_id": "ev_34c80e84001e0add58f946c000694081dca32cf2bb3209264c649c418ec62738",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/architecture-ui/app-lifecycle-candidate.json",
+      "sha256": "f3a1cc201483bea36d11fe67304afee8a94347aa257073f46cf36c54defab910",
+      "length": 137858,
+      "evidence_id": "ev_ec4ca01bd51f99b16983649e566c60e119d609e71611ae86e05593e3cb9324b2",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/background/desktop-settings-read.json",
+      "sha256": "a3d86fbc3998ec0bb41eb695063e37ca795a0ea240cfb8069301e2967743aaed",
+      "length": 57864,
+      "evidence_id": "ev_2144bd36a54dd595233426738da38a329d73508193cd844dbb08d3d00aac944e",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/background/desktop-settings-write.json",
+      "sha256": "b5c1ba2d6a4b826f00e20f7553be8bcf833188531363e0161d2c5a707b996cf0",
+      "length": 24778,
+      "evidence_id": "ev_7084e6e44d29757c7880cdc784d6befef86e55f914dc8c3c59618477da2df0e9",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/background/lockscreen-settings-read.json",
+      "sha256": "bd6f5f26ddc9c191436f53c4c54dcd0598dd122f96e2e08e04d7b67220e4ae84",
+      "length": 55950,
+      "evidence_id": "ev_e8c846f651cf700550f3fc4cf9256a6413d2e64134ff0bc541e018138a9749bc",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/background/lockscreen-settings-write.json",
+      "sha256": "e46690032dadcbc491c4e25e0683bab9dec21fdcb148deadd34905c9683168eb",
+      "length": 24778,
+      "evidence_id": "ev_0af13c153f19e30616e1011b6db241a4091bf306f23a888552a19a0c40b4b697",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/abi-evidence.json",
+      "sha256": "f65f3124dfcea5f1822c5290a877eb364534e2e9e6a1cb949aa9558ce112e15e",
+      "length": 23950
+    },
+    {
+      "path": "evidence/deep-cache/archive-file-predicate.json",
+      "sha256": "9890f60072489811be590b10f381a2f52795f04f1f79ae13881e5082d17b8752",
+      "length": 9988,
+      "evidence_id": "ev_d49abee0c9b9b008e20bdea59903bf49e5db268e2c84c8a16089fab86924094f",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/extra-cache.json",
+      "sha256": "8dd51bbbd46ec1d9f4bad8072302d968a6ca3c6f8d5a0a633f5e6f11575296cf",
+      "length": 570020,
+      "evidence_id": "ev_6da75649a5d884360afb0fedf9861d1ad2efaaf237aed1981b2a4a37d3c18b7c",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/filename-predicate.json",
+      "sha256": "e28857e3127e9805e870ed287dde251086f0d1df1a55414d4064d1fcc9125dd8",
+      "length": 15876,
+      "evidence_id": "ev_879efc11f566e597ee7da70eef4e712d5be735bb6d2c2401948fa33cf9048f6a",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/filename.json",
+      "sha256": "4661c3050fe5cfada8ef53de248f1809b5d47c4543c43226e50917b2f02129f2",
+      "length": 96578,
+      "evidence_id": "ev_f55360c578fbe40de5b04f98d6e88f52f1236b01a38164bca11767e789445e80",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/findings.json",
+      "sha256": "7092349ed24d66f5885445ed77417c7be0ad3067501e83e27667824a0448a9cd",
+      "length": 22591
+    },
+    {
+      "path": "evidence/deep-cache/personalization-cleanup.json",
+      "sha256": "a3fdbde60d18c58dc67f2c1bab2b67b6870425abd66d3baa03040d076f489483",
+      "length": 788184,
+      "evidence_id": "ev_a7a43ad582f28f2f507cbf93269f50da20a286849c8cd943567c37114d0b4a08",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/storage-json.json",
+      "sha256": "b82deaac369bc3e3a0c0560a86c755c8f108f6221b8fccf4856b12ae294559df",
+      "length": 2656578,
+      "evidence_id": "ev_e559ec21919cdf6b212f0ca080a9bd67dc539290d48532d43846200b774840eb",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/tile-cleanup-call.json",
+      "sha256": "f4194b333bf1551866e3330e1cbf998913e14a6e143a15d5f13d6e4ab6007383",
+      "length": 93652,
+      "evidence_id": "ev_5da8eabffe4f547dbc424b08a85d8297e9b8b14cc28fceebffd429f78cc87a19",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/deep-cache/windows-storage-reference.rs",
+      "sha256": "ee65cab20fba2a47ccaeaa20c0e6695b24d2bd7e2a8ca3fdfd98d160428728ee",
+      "length": 395909
+    },
+    {
+      "path": "evidence/deep-download/refresh-cleanup-sequence.json",
+      "sha256": "3f93e896d03f819d1dc4a23fa6b7e292eeebed7f5ed2c60f0465f2a3c6246b78",
+      "length": 62846,
+      "evidence_id": "ev_942fda182a00886a8532bfe6e4e76dc47d0b6ddae19c7cad395d86bd8041c909",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "evidence/local-state/ImageArchive.observed.json",
+      "sha256": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b",
+      "length": 1403
+    },
+    {
+      "path": "evidence/local-state/local-state.json",
+      "sha256": "900d8a372113037128ab60307f4b7cdadc63dbcc56d78f716ee8a8caf4cbaf9e",
+      "length": 19147,
+      "evidence_id": "DP-LOCAL-STATE-20261017"
+    },
+    {
+      "path": "evidence/rea/dll-strings.json",
+      "sha256": "aa75b4a657d91984964a384981805e005c2e30a2eeadc5bc094a6992e7fae7cc",
+      "length": 20801138,
+      "evidence_id": "ev_6d78ad2e69676f5465035956406fa0c999c69638c5261bbda476841afa86a391",
+      "REA_status": {
+        "completion_status": "complete",
+        "output_truncated": false,
+        "artifact_changed": false
+      }
+    },
+    {
+      "path": "scripts/data_arch_evidence.py",
+      "sha256": "27784a188c27128057e107c707d7f3a63fbeb1545d9c1cbbd3a11c0bed3a335f",
+      "length": 17646
+    },
+    {
+      "path": "scripts/data_arch_index.py",
+      "sha256": "40477c6d333f3a3aff5cb18f4cb925793405db1d6941d28030398cffb8120583",
+      "length": 2268
+    },
+    {
+      "path": "scripts/data_arch_inspect.py",
+      "sha256": "6bc98bd57ba979f440cea2fa6f1b4ec5960257b83ae9623ecd4999d8d1127f90",
+      "length": 1602
+    }
+  ],
+  "note": "Generated artifact hashes bind the files on disk. Re-rendered ASM subsets preserve references to their full retained source REA JSON; they are not new REA IDs."
+}

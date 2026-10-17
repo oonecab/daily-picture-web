@@ -1,0 +1,396 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "functions": [
+    {
+      "address": "0x180461e40",
+      "end_exclusive": "0x180461e5f",
+      "role": "App初始化回调：按EEType1af90分配并调用构造",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-allocation.json"
+      ],
+      "evidence_ids": [
+        "ev_6fd03e9b8bdac1cee0953838946d4da5386a7b827142437a699bf00963748885"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180461e60",
+      "end_exclusive": "0x180461f5e",
+      "role": "App构造：Application初始化、主题、标志、Suspending订阅",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-constructor-real.json"
+      ],
+      "evidence_ids": [
+        "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180461f60",
+      "end_exclusive": "0x180461fb6",
+      "role": "App.OnSuspending：取操作/GetDeferral/立即Complete",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-constructor-real.json"
+      ],
+      "evidence_ids": [
+        "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x1804620c0",
+      "end_exclusive": "0x1804620e5",
+      "role": "IApplication.remove_Suspending ABI包装",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-event-projections.json"
+      ],
+      "evidence_ids": [
+        "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180462210",
+      "end_exclusive": "0x18046221f",
+      "role": "IApplication.add_Suspending委托目标外壳",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-event-projections.json"
+      ],
+      "evidence_ids": [
+        "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180462220",
+      "end_exclusive": "0x180462291",
+      "role": "IApplication.add_Suspending的ABI主体",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-event-projections.json"
+      ],
+      "evidence_ids": [
+        "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x1804624b0",
+      "end_exclusive": "0x1804624e0",
+      "role": "Windows.UI.Xaml.Application投影构造",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-event-projections.json"
+      ],
+      "evidence_ids": [
+        "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x1804624e0",
+      "end_exclusive": "0x180462601",
+      "role": "Application.CreateInstance及COM聚合/引用处理",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-event-projections.json"
+      ],
+      "evidence_ids": [
+        "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531ab0",
+      "end_exclusive": "0x180531b24",
+      "role": "构造缓存初始化委托并进入Application.Start",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-start-and-interfaces.json"
+      ],
+      "evidence_ids": [
+        "ev_455f62b34dbe737bb05565a7cbce5646da584e1adf939f57f2347e473ba55be9"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18034e000",
+      "end_exclusive": "0x18034e0c2",
+      "role": "Mcg初始化及Application.Start调用入口",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-start-cctor.json"
+      ],
+      "evidence_ids": [
+        "ev_83426cca2242473d189de474deb1714ace3b8bdb0ed993e71b8457ca879adf24"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180461dd0",
+      "end_exclusive": "0x180461e28",
+      "role": "IApplicationStatics.Start ABI桥",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/application-start-projection.json"
+      ],
+      "evidence_ids": [
+        "ev_9085c4f89f8264c8b0567d0a98b30cdbdad89a74209017dfe640bba479cab191"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x1804657d0",
+      "end_exclusive": "0x1804657f5",
+      "role": "基类IApplicationOverrides.OnLaunched投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/base-onlaunched-projection.json"
+      ],
+      "evidence_ids": [
+        "ev_c7ea8672e8f41aa29cc97cb28ec6f1dd3902e8b2e3acaf5e8d4f2dc47986b0a9"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180465800",
+      "end_exclusive": "0x180465870",
+      "role": "对象参数WinRT泛型调用桥，目标接口在context+8",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/onlaunched-interface-dispatch.json"
+      ],
+      "evidence_ids": [
+        "ev_e308beaad09b6a25db0575d918c826a49634db00232e7f01d3d80c86c65357ef"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531d30",
+      "end_exclusive": "0x180531d3b",
+      "role": "App组件初始化标志方法，无其他主体",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531dc0",
+      "end_exclusive": "0x180531e02",
+      "role": "App.Dispose(bool)语义：true时处理Navigator字段",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531f50",
+      "end_exclusive": "0x180531fa9",
+      "role": "App.Dispose语义：释放Navigator并清字段，SuppressFinalize装箱false",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531e60",
+      "end_exclusive": "0x180531e82",
+      "role": "Navigator.Dispose语义入口：Dispose(true)+SuppressFinalize(this)",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531e90",
+      "end_exclusive": "0x180531f4f",
+      "role": "Navigator.Dispose(bool)：取消Navigated并设置disposed",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x180531e10",
+      "end_exclusive": "0x180531e5e",
+      "role": "主VM Dispose语义：Stop两只DispatcherTimer",
+      "confidence": "derived-high",
+      "evidence_paths": [
+        "evidence/app-lifecycle/app-nearby.json"
+      ],
+      "evidence_ids": [
+        "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e4e0",
+      "end_exclusive": "0x18051e505",
+      "role": "IApplication.add_Resuming框架投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e4b0",
+      "end_exclusive": "0x18051e4d5",
+      "role": "IApplication.remove_Resuming框架投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e270",
+      "end_exclusive": "0x18051e27f",
+      "role": "IApplication2.add_LeavingBackground框架投影外壳",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e280",
+      "end_exclusive": "0x18051e2f1",
+      "role": "IApplication2.add_LeavingBackground框架投影主体",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e240",
+      "end_exclusive": "0x18051e265",
+      "role": "IApplication2.remove_LeavingBackground框架投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e340",
+      "end_exclusive": "0x18051e34f",
+      "role": "IApplication2.add_EnteredBackground框架投影外壳",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e350",
+      "end_exclusive": "0x18051e3c1",
+      "role": "IApplication2.add_EnteredBackground框架投影主体",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e310",
+      "end_exclusive": "0x18051e335",
+      "role": "IApplication2.remove_EnteredBackground框架投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e410",
+      "end_exclusive": "0x18051e41f",
+      "role": "IApplication.add_UnhandledException框架投影外壳",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e420",
+      "end_exclusive": "0x18051e491",
+      "role": "IApplication.add_UnhandledException框架投影主体",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    },
+    {
+      "address": "0x18051e3e0",
+      "end_exclusive": "0x18051e405",
+      "role": "IApplication.remove_UnhandledException框架投影",
+      "confidence": "confirmed",
+      "evidence_paths": [
+        "evidence/app-lifecycle/lifecycle-event-accessors.json"
+      ],
+      "evidence_ids": [
+        "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853"
+      ],
+      "name_kind": "semantic-role"
+    }
+  ]
+}

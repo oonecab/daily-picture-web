@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-17T10:01:13.135852+00:00",
+  "target": {
+    "bytes": 6566400,
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a"
+  },
+  "resource_evidence_id": "ev_7190476dc5c405c3e39167420a1ddfb2c0c4f45fead5855596cc2814a8a188ed",
+  "buildinfo": {
+    "resource_type": "NETNATIVEBUILDINFO",
+    "payload": {
+      "location": {
+        "bytes": 11038,
+        "offset": 3439888
+      },
+      "rva": 3449104,
+      "sha256": "b06dca39cd39228af162c880766a7d53fcfcd61b369fd77b01663713ac6cc0fd"
+    },
+    "raw_path": "evidence/architecture/NETNATIVEBUILDINFO.bin",
+    "text_path": "evidence/architecture/NETNATIVEBUILDINFO.txt",
+    "toolchain": [
+      {
+        "name": "ilc.exe",
+        "version_text": "1.7.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "nutc_driver.exe",
+        "version_text": "1.7.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "rhbind.exe",
+        "version_text": "1.7.25909.0 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "sg.exe",
+        "version_text": "1.7.25909.00 built by: PROJECTNGDR2"
+      }
+    ],
+    "input_assemblies": [
+      {
+        "name": "clrcompression.dll",
+        "version_text": "1.0.24214.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "Duracellko.BingImage.Model.dll",
+        "version_text": "1.0.0.0"
+      },
+      {
+        "name": "Duracellko.BingImage.UI.dll",
+        "version_text": "1.0.0.0"
+      },
+      {
+        "name": "Microsoft.CSharp.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "Microsoft.VisualBasic.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "Microsoft.Win32.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "mscorlib.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "Newtonsoft.Json.dll",
+        "version_text": "12.0.1.22727"
+      },
+      {
+        "name": "System.AppContext.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Buffers.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Collections.Concurrent.dll",
+        "version_text": "4.6.23123.00"
+      },
+      {
+        "name": "System.Collections.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Collections.Immutable.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Collections.NonGeneric.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Collections.Specialized.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ComponentModel.Annotations.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ComponentModel.DataAnnotations.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.ComponentModel.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ComponentModel.EventBasedAsync.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ComponentModel.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.ComponentModel.TypeConverter.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Console.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Core.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Data.Common.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Diagnostics.Contracts.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Diagnostics.Debug.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Diagnostics.DiagnosticSource.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Diagnostics.StackTrace.dll",
+        "version_text": "1.0.24301.01"
+      },
+      {
+        "name": "System.Diagnostics.Tools.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Diagnostics.Tracing.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Dynamic.Runtime.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Globalization.Calendars.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Globalization.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Globalization.Extensions.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.IO.Compression.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.IO.Compression.ZipFile.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.IO.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.IO.FileSystem.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.IO.FileSystem.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.IO.IsolatedStorage.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.IO.UnmanagedMemoryStream.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Linq.dll",
+        "version_text": "4.6.23123.00"
+      },
+      {
+        "name": "System.Linq.Expressions.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Linq.Parallel.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Linq.Queryable.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Net.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Net.Http.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Net.Http.Rtc.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Net.NameResolution.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Net.NetworkInformation.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Net.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Net.Requests.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Net.Sockets.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Net.WebHeaderCollection.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Net.WebSockets.Client.dll",
+        "version_text": "1.0.25920.05"
+      },
+      {
+        "name": "System.Net.WebSockets.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Numerics.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Numerics.Vectors.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Numerics.Vectors.WindowsRuntime.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ObjectModel.dll",
+        "version_text": "4.6.23123.00"
+      },
+      {
+        "name": "System.Private.CompatQuirks.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.CompilerServices.ICastable.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.Augments.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.CompilerServices.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.DeveloperExperience.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.Diagnostics.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.dll",
+        "version_text": "4.6.25909.00 built by: DDBLD295D-dlab"
+      },
+      {
+        "name": "System.Private.CoreLib.DynamicDelegate.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.InteropServices.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.Reflection.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.Threading.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.CoreLib.WinRTInterop.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.DataContractSerialization.dll",
+        "version_text": "1.0.25009.02"
+      },
+      {
+        "name": "System.Private.DeveloperExperience.AppX.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.DispatchProxy.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.ILToolchain.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.Interop.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.Interop.Extensions.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.MCG.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.PortableServiceModelThunks.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.PortableThunks.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.Reflection.Augments.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.Reflection.Extensibility.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.Reflection.MissingMetadataException.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.ServiceModel.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.Private.Threading.AsyncCausalitySupport.dll",
+        "version_text": "4.6.25909.0"
+      },
+      {
+        "name": "System.Private.TypeLoader.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Private.Uri.dll",
+        "version_text": "1.0.27413.02"
+      },
+      {
+        "name": "System.Private.WinRTInterop.CoreLib.dll",
+        "version_text": "4.6.25909.00 built by: PROJECTNGDR2"
+      },
+      {
+        "name": "System.Reflection.Context.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Reflection.DispatchProxy.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Reflection.dll",
+        "version_text": "4.6.23123.0"
+      },
+      {
+        "name": "System.Reflection.Emit.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Reflection.Extensions.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Reflection.Metadata.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Reflection.Primitives.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Reflection.TypeExtensions.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Resources.ResourceManager.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Runtime.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Runtime.Extensions.dll",
+        "version_text": "4.6.23123.00 built by: PROJECTKREL"
+      },
+      {
+        "name": "System.Runtime.Handles.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.InteropServices.dll",
+        "version_text": "4.6.23123.0"
+      },
+      {
+        "name": "System.Runtime.InteropServices.RuntimeInformation.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.InteropServices.WindowsRuntime.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Runtime.Numerics.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.Serialization.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Runtime.Serialization.Formatters.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.Serialization.Json.dll",
+        "version_text": "1.0.25009.02"
+      },
+      {
+        "name": "System.Runtime.Serialization.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.Serialization.Xml.dll",
+        "version_text": "1.0.25009.02"
+      },
+      {
+        "name": "System.Runtime.WindowsRuntime.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Runtime.WindowsRuntime.UI.Xaml.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Security.Claims.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Security.Cryptography.Algorithms.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Security.Cryptography.Cng.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Security.Cryptography.Encoding.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Security.Cryptography.Primitives.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Security.Cryptography.X509Certificates.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Security.Principal.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.ServiceModel.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.ServiceModel.Duplex.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.ServiceModel.Http.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.ServiceModel.NetTcp.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.ServiceModel.Primitives.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.ServiceModel.Security.dll",
+        "version_text": "1.0.26719.05"
+      },
+      {
+        "name": "System.ServiceModel.Web.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Text.Encoding.CodePages.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Text.Encoding.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Text.Encoding.Extensions.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Text.RegularExpressions.dll",
+        "version_text": "4.6.23123.00"
+      },
+      {
+        "name": "System.Threading.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Threading.Overlapped.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Threading.Tasks.Dataflow.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Threading.Tasks.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Threading.Tasks.Extensions.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Threading.Tasks.Parallel.dll",
+        "version_text": "1.0.24212.01"
+      },
+      {
+        "name": "System.Threading.Timer.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Windows.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Xml.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Xml.Linq.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Xml.ReaderWriter.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Xml.Serialization.dll",
+        "version_text": "4.6.24301.0"
+      },
+      {
+        "name": "System.Xml.XDocument.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Xml.XmlDocument.dll",
+        "version_text": "4.6.24705.01"
+      },
+      {
+        "name": "System.Xml.XmlSerializer.dll",
+        "version_text": "1.0.24212.01"
+      }
+    ]
+  },
+  "installed_files": [
+    {
+      "relative_path": "05DBE9EA-EF75-43DB-8A03-27898B59D1E9",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "is_symlink": false,
+      "current_size": 0,
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "AppxBlockMap.xml",
+      "size": 10216,
+      "sha256": "7bc7e6364ad4cad7e3f9a478fe46884e1859f2497b4f88a929b6c078178167f8",
+      "is_symlink": false,
+      "current_size": 10216,
+      "current_sha256": "7bc7e6364ad4cad7e3f9a478fe46884e1859f2497b4f88a929b6c078178167f8",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "AppxManifest.xml",
+      "size": 4626,
+      "sha256": "8a36184886dd86574a2cdb21fc9262e523b868d593ff3be8045eaf260ebb69ec",
+      "is_symlink": false,
+      "current_size": 4626,
+      "current_sha256": "8a36184886dd86574a2cdb21fc9262e523b868d593ff3be8045eaf260ebb69ec",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "AppxMetadata\\CodeIntegrity.cat",
+      "size": 11850,
+      "sha256": "c0b3bcb3d1d46658b6e8d52bc5c6b19c56e79aa9a575cde2d33cba48dc186f50",
+      "is_symlink": false,
+      "current_size": 11850,
+      "current_sha256": "c0b3bcb3d1d46658b6e8d52bc5c6b19c56e79aa9a575cde2d33cba48dc186f50",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "AppxSignature.p7x",
+      "size": 11209,
+      "sha256": "12a447fdaefcb830dd40f7014005b519ec9f99c4ef379484dcad5e251de07cd5",
+      "is_symlink": false,
+      "current_size": 11209,
+      "current_sha256": "12a447fdaefcb830dd40f7014005b519ec9f99c4ef379484dcad5e251de07cd5",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\SplashScreen.scale-200.png",
+      "size": 15104,
+      "sha256": "ecbb23197d921c0184775b72ac4fb9dfe7f76f7926c5b8de34048e4cf57036bc",
+      "is_symlink": false,
+      "current_size": 15104,
+      "current_sha256": "ecbb23197d921c0184775b72ac4fb9dfe7f76f7926c5b8de34048e4cf57036bc",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square150x150Logo.scale-200.png",
+      "size": 6766,
+      "sha256": "82b88366ef7fd4227d9c40e4f9017b8ad824915d8d33997ddc67c71aa6390847",
+      "is_symlink": false,
+      "current_size": 6766,
+      "current_sha256": "82b88366ef7fd4227d9c40e4f9017b8ad824915d8d33997ddc67c71aa6390847",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square44x44Logo.scale-200.png",
+      "size": 1914,
+      "sha256": "173a25d03b0f878be2f679c788f571a6f0cc3c2efcc31f53417c037a3687c17c",
+      "is_symlink": false,
+      "current_size": 1914,
+      "current_sha256": "173a25d03b0f878be2f679c788f571a6f0cc3c2efcc31f53417c037a3687c17c",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square44x44Logo.targetsize-16.png",
+      "size": 439,
+      "sha256": "c0136607538edcaf16ebe7b5c335dbe67aa18cab1c248350c243c4ffccabd8cf",
+      "is_symlink": false,
+      "current_size": 439,
+      "current_sha256": "c0136607538edcaf16ebe7b5c335dbe67aa18cab1c248350c243c4ffccabd8cf",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square44x44Logo.targetsize-24.png",
+      "size": 598,
+      "sha256": "49a7e471a9341a017f8ad1ad88befeebcb2f26dcc3107c810ff54b15ff4b5a79",
+      "is_symlink": false,
+      "current_size": 598,
+      "current_sha256": "49a7e471a9341a017f8ad1ad88befeebcb2f26dcc3107c810ff54b15ff4b5a79",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square44x44Logo.targetsize-256.png",
+      "size": 5942,
+      "sha256": "885f525e729d8470e49eb6a3ce0e0db992229167734c2fbdd517b23a7787b217",
+      "is_symlink": false,
+      "current_size": 5942,
+      "current_sha256": "885f525e729d8470e49eb6a3ce0e0db992229167734c2fbdd517b23a7787b217",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square44x44Logo.targetsize-48.png",
+      "size": 1091,
+      "sha256": "788c31edb6141dfa0d871165fb1c1f4e76af7aca65442597eaf37c8309c8ff70",
+      "is_symlink": false,
+      "current_size": 1091,
+      "current_sha256": "788c31edb6141dfa0d871165fb1c1f4e76af7aca65442597eaf37c8309c8ff70",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Square71x71Logo.scale-200.png",
+      "size": 3163,
+      "sha256": "2d51d70999b0fc43a2cc4e0607fe1da4ac5a0be991ab542e814c352d81ff25a2",
+      "is_symlink": false,
+      "current_size": 3163,
+      "current_sha256": "2d51d70999b0fc43a2cc4e0607fe1da4ac5a0be991ab542e814c352d81ff25a2",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\StoreLogo.scale-200.png",
+      "size": 2238,
+      "sha256": "2288d374cb4e773849dad46a121ac77a6d789f6e56e7bdc1687fcf404adcf532",
+      "is_symlink": false,
+      "current_size": 2238,
+      "current_sha256": "2288d374cb4e773849dad46a121ac77a6d789f6e56e7bdc1687fcf404adcf532",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Assets\\Wide310x150Logo.scale-200.png",
+      "size": 7430,
+      "sha256": "fde38553ab518aa75fd2d8378cb1f38113384ffd9732bd28e9d8c64c4cbb85ee",
+      "is_symlink": false,
+      "current_size": 7430,
+      "current_sha256": "fde38553ab518aa75fd2d8378cb1f38113384ffd9732bd28e9d8c64c4cbb85ee",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "clrcompression.dll",
+      "size": 65720,
+      "sha256": "2650be72a7a2d05d38bf47ae54d92777fd235520d81f29f8d6255e17ee34faf5",
+      "is_symlink": false,
+      "current_size": 65720,
+      "current_sha256": "2650be72a7a2d05d38bf47ae54d92777fd235520d81f29f8d6255e17ee34faf5",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Duracellko.BingImage.Universal.dll",
+      "size": 6566400,
+      "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+      "is_symlink": false,
+      "current_size": 6566400,
+      "current_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Duracellko.BingImage.Universal.exe",
+      "size": 15872,
+      "sha256": "e33e341d62ad2bfe2a513c50604ec1293e37cf34dfebb9489cab25623ed2948a",
+      "is_symlink": false,
+      "current_size": 15872,
+      "current_sha256": "e33e341d62ad2bfe2a513c50604ec1293e37cf34dfebb9489cab25623ed2948a",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Duracellko.BingImage.Universal.Service.winmd",
+      "size": 3584,
+      "sha256": "05bf616aef50bccf643d6edf8b2111e0e8d68f659c75c3c468c6338360ad7f59",
+      "is_symlink": false,
+      "current_size": 3584,
+      "current_sha256": "05bf616aef50bccf643d6edf8b2111e0e8d68f659c75c3c468c6338360ad7f59",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Duracellko.BingImage.Universal.xr.xml",
+      "size": 10333,
+      "sha256": "6b400baab83f3e85320b52ae3ae32feee9506659550ed5bc25d06d126eb6fea3",
+      "is_symlink": false,
+      "current_size": 10333,
+      "current_sha256": "6b400baab83f3e85320b52ae3ae32feee9506659550ed5bc25d06d126eb6fea3",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "Images\\Background.png",
+      "size": 4354,
+      "sha256": "a12b50b9952c8a588679aa4cb5e392b355efbf1388921df929c8c519e8c714f9",
+      "is_symlink": false,
+      "current_size": 4354,
+      "current_sha256": "a12b50b9952c8a588679aa4cb5e392b355efbf1388921df929c8c519e8c714f9",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "microsoft.system.package.metadata\\resources.4d964df6.pri",
+      "size": 4712,
+      "sha256": "1e64ef561cf876001691e04fa9b069600c30d709a2cc953e8c362267278e6896",
+      "is_symlink": false,
+      "current_size": 4712,
+      "current_sha256": "1e64ef561cf876001691e04fa9b069600c30d709a2cc953e8c362267278e6896",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "microsoft.system.package.metadata\\S-1-5-21-3222555229-2729884269-2282798191-1001-MergedResources-4.pri",
+      "size": 4712,
+      "sha256": "1e64ef561cf876001691e04fa9b069600c30d709a2cc953e8c362267278e6896",
+      "is_symlink": false,
+      "current_size": 4712,
+      "current_sha256": "1e64ef561cf876001691e04fa9b069600c30d709a2cc953e8c362267278e6896",
+      "unchanged_from_first_snapshot": true
+    },
+    {
+      "relative_path": "resources.pri",
+      "size": 28008,
+      "sha256": "cadfe7c1cbf6b9ef0c3c36dcb1791589159a7179c38e5376e104df3d5afb5775",
+      "is_symlink": false,
+      "current_size": 28008,
+      "current_sha256": "cadfe7c1cbf6b9ef0c3c36dcb1791589159a7179c38e5376e104df3d5afb5775",
+      "unchanged_from_first_snapshot": true
+    }
+  ],
+  "manifest_identity": {
+    "Name": "14403Duracellko.NET.BingImageoftheDay",
+    "Publisher": "CN=BE1D07CA-D5E4-406B-9A96-6AFF9F35F5E5",
+    "Version": "1.4.13.0",
+    "ProcessorArchitecture": "x64"
+  },
+  "manifest_dependencies": [
+    {
+      "Name": "Windows.Universal",
+      "MinVersion": "10.0.10586.0",
+      "MaxVersionTested": "10.0.17134.0"
+    },
+    {
+      "Name": "Microsoft.NET.Native.Framework.1.7",
+      "MinVersion": "1.7.25531.0",
+      "Publisher": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+    },
+    {
+      "Name": "Microsoft.NET.Native.Runtime.1.7",
+      "MinVersion": "1.7.25531.0",
+      "Publisher": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+    },
+    {
+      "Name": "Microsoft.VCLibs.140.00",
+      "MinVersion": "14.0.22929.0",
+      "Publisher": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+    }
+  ],
+  "manifest_build_metadata": [
+    {
+      "Name": "TargetFrameworkMoniker",
+      "Value": ".NETCore,Version=v5.0"
+    },
+    {
+      "Name": "VisualStudio",
+      "Version": "15.0"
+    },
+    {
+      "Name": "VisualStudioEdition",
+      "Value": "Microsoft Visual Studio Enterprise 2017"
+    },
+    {
+      "Name": "OperatingSystem",
+      "Version": "10.0.17763.1 (WinBuild.160101.0800)"
+    },
+    {
+      "Name": "Microsoft.Build.AppxPackage.dll",
+      "Version": "15.0.28307.104"
+    },
+    {
+      "Name": "ProjectGUID",
+      "Value": "{0E47E9B1-EC15-4F6A-9284-A910CED72112}"
+    },
+    {
+      "Name": "ilc.exe",
+      "Version": "1.7.25927.00 built by: PROJECTNGDR2"
+    },
+    {
+      "Name": "OptimizingToolset",
+      "Value": "ilc.exe"
+    },
+    {
+      "Name": "UseDotNetNativeSharedAssemblyFrameworkPackage",
+      "Value": "True"
+    },
+    {
+      "Name": "UniversalGenericsOptOut",
+      "Value": "false"
+    },
+    {
+      "Name": "ShortcutGenericAnalysis",
+      "Value": "false"
+    },
+    {
+      "Name": "Microsoft.Windows.UI.Xaml.Build.Tasks.dll",
+      "Version": "15.0.28307.102"
+    },
+    {
+      "Name": "WindowsDesktop",
+      "Version": "10.0.17134.0"
+    },
+    {
+      "Name": "WindowsMobile",
+      "Version": "10.0.17134.0"
+    },
+    {
+      "Name": "MakePri.exe",
+      "Version": "10.0.17134.12 (WinBuild.160101.0800)"
+    }
+  ],
+  "loader_imports": {
+    "evidence_id": "ev_74bb49b2f72ec9411154aacfbc1245f5d9494d45588dc9411da024d2b20df8db",
+    "modules": {
+      "SharedLibrary.dll": [
+        "CreateCommandLine",
+        "CtorCharArrayStartLength",
+        "CtorCharPtrStartLength",
+        "CtorCharArray",
+        "CtorCharCount",
+        "$NEAT$"
+      ],
+      "mrt100_app.dll": [
+        "RhpCheckCctor2",
+        "RhpNewFast",
+        "RhpNewArray",
+        "RhpAssignRefEDX",
+        "RhpInitialInterfaceDispatch",
+        "RhpResolveInterfaceMethod",
+        "RhTypeCast_CheckArrayStore",
+        "RhpNewFinalizable",
+        "RhpCheckedAssignRefEDX",
+        "RhpReversePInvoke",
+        "RhpReversePInvokeReturn",
+        "RhpPInvokeExceptionGuard",
+        "RhpSuppressGcStress",
+        "RhpRegisterModule",
+        "RhpUnsuppressGcStress",
+        "RhTypeCast_IsInstanceOf",
+        "RhpThrowEx",
+        "RhpRethrow",
+        "RhpCopyMultibyteWithWriteBarrier",
+        "RhTypeCast_CheckCast",
+        "RhTypeCast_CheckVectorElemAddr",
+        "RhTypeCast_CheckCastInterface",
+        "RhTypeCast_CheckCastClass",
+        "RhTypeCast_CheckCastArray",
+        "RhTypeCast_IsInstanceOfArray",
+        "RhTypeCast_IsInstanceOfInterface",
+        "RhpCheckedLockCmpXchg",
+        "RhTypeCast_IsInstanceOfClass",
+        "RhpCheckedXchg",
+        "RhTypeCast_CheckUnbox",
+        "RhAllocLocal",
+        "RhpCopyAnyWithWriteBarrier",
+        "RhpInitMultibyte",
+        "RhBoxAny",
+        "RhUnboxAny",
+        "RhHandleGet",
+        "RhHandleSet",
+        "RhArrayStoreCheckAny",
+        "RhpGetThread",
+        "RhpTrapThreads",
+        "RhpWaitForSuspend",
+        "RhpWaitForGC",
+        "RhpDblRemRev",
+        "RhpCopyMultibyte",
+        "RhpLoopHijack"
+      ],
+      "api-ms-win-core-winrt-l1-1-0.dll": [
+        "RoInitialize"
+      ],
+      "OleAut32.dll": [
+        "SysFreeString",
+        "SysStringLen"
+      ],
+      "api-ms-win-core-com-l1-1-0.dll": [
+        "CoTaskMemAlloc"
+      ],
+      "api-ms-win-core-winrt-robuffer-l1-1-0.dll": [
+        "RoGetBufferMarshaler"
+      ],
+      "api-ms-win-core-localization-l1-2-0.dll": [
+        "FormatMessageW",
+        "ResolveLocaleName",
+        "IsValidLocaleName"
+      ],
+      "ntdll.dll": [
+        "RtlIpv6AddressToStringExW",
+        "RtlIpv4AddressToStringExW"
+      ]
+    },
+    "imported_symbol_count": 61
+  },
+  "scope_notes": [
+    "Input assembly names come from the NETNATIVEBUILDINFO resource; they are not original solution/project files or proof that each assembly is loaded as a separate runtime module.",
+    "Build-info ilc version and Appx build metadata are distinct observations and may differ; this script does not infer a build chronology.",
+    "Framework input list is compiler provenance, not a reachable-feature inventory, a live module list, or a security SBOM.",
+    "Current bytes are read only; no application or library code is executed."
+  ]
+}

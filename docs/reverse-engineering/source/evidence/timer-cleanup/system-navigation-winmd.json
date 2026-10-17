@@ -1,0 +1,139 @@
+[
+  {
+    "path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+    "sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+    "types": [
+      {
+        "name": "AppViewBackButtonVisibility",
+        "ns": "Windows.UI.Core",
+        "methods": [],
+        "fields": [
+          {
+            "name": "value__",
+            "constantType": null,
+            "constantBytes": null
+          },
+          {
+            "name": "Visible",
+            "constantType": "Int32",
+            "constantBytes": "00000000"
+          },
+          {
+            "name": "Collapsed",
+            "constantType": "Int32",
+            "constantBytes": "01000000"
+          },
+          {
+            "name": "Disabled",
+            "constantType": "Int32",
+            "constantBytes": "02000000"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "ISystemNavigationManager",
+        "ns": "Windows.UI.Core",
+        "methods": [
+          {
+            "index": 0,
+            "name": "add_BackRequested",
+            "signature": "20011196D91512977D01128765"
+          },
+          {
+            "index": 1,
+            "name": "remove_BackRequested",
+            "signature": "2001011196D9"
+          }
+        ],
+        "fields": [],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002757696E646F77732E55492E436F72652E53797374656D4E617669676174696F6E4D616E616765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01001831029350CFA642970669107FA122E10000",
+            "guid": "93023118-cf50-42a6-9706-69107fa122e1"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      },
+      {
+        "name": "ISystemNavigationManager2",
+        "ns": "Windows.UI.Core",
+        "methods": [
+          {
+            "index": 0,
+            "name": "get_AppViewBackButtonVisibility",
+            "signature": "200011875D"
+          },
+          {
+            "index": 1,
+            "name": "put_AppViewBackButtonVisibility",
+            "signature": "20010111875D"
+          }
+        ],
+        "fields": [],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002757696E646F77732E55492E436F72652E53797374656D4E617669676174696F6E4D616E616765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "01000104518CBE67AE499509671C1E54A3890000",
+            "guid": "8c510401-67be-49ae-9509-671c1e54a389"
+          }
+        ]
+      },
+      {
+        "name": "ISystemNavigationManagerStatics",
+        "ns": "Windows.UI.Core",
+        "methods": [
+          {
+            "index": 0,
+            "name": "GetForCurrentView",
+            "signature": "20001288D1"
+          }
+        ],
+        "fields": [],
+        "attributes": [
+          {
+            "name": "Windows.Foundation.Metadata.ExclusiveToAttribute",
+            "blob": "01002757696E646F77732E55492E436F72652E53797374656D4E617669676174696F6E4D616E616765720000",
+            "guid": null
+          },
+          {
+            "name": "Windows.Foundation.Metadata.GuidAttribute",
+            "blob": "0100CEB552DCE0BE05438C5468228ED683B50000",
+            "guid": "dc52b5ce-bee0-4305-8c54-68228ed683b5"
+          },
+          {
+            "name": "Windows.Foundation.Metadata.ContractVersionAttribute",
+            "blob": "01002757696E646F77732E466F756E646174696F6E2E556E6976657273616C417069436F6E7472616374000001000000",
+            "guid": null
+          }
+        ]
+      }
+    ]
+  }
+]

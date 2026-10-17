@@ -1,0 +1,1654 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "metadata_file": "evidence\\image-lifetime\\system-winmd.json",
+  "interfaces": [
+    {
+      "name": "IContentControl",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "a26dd1dc-cd44-435c-be94-01d6241c231c",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100DCD16DA244CD5C43BE9401D6241C231C0000",
+        "guid": "a26dd1dc-cd44-435c-be94-01d6241c231c"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e28a0",
+          "iid_file_offset": "0x2e1ca0",
+          "preceding_type_pointer": "0x18000ac38",
+          "surrounding_bytes": "38ac00800100000088ac0080010000000000000000000000dcd16da244cd5c43be9401d6241c231c01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Content",
+          "signature": "20001C"
+        },
+        {
+          "slot": 7,
+          "name": "put_Content",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 8,
+          "name": "get_ContentTemplate",
+          "signature": "200012A175"
+        },
+        {
+          "slot": 9,
+          "name": "put_ContentTemplate",
+          "signature": "20010112A175"
+        },
+        {
+          "slot": 10,
+          "name": "get_ContentTemplateSelector",
+          "signature": "20001288B5"
+        },
+        {
+          "slot": 11,
+          "name": "put_ContentTemplateSelector",
+          "signature": "2001011288B5"
+        },
+        {
+          "slot": 12,
+          "name": "get_ContentTransitions",
+          "signature": "200012ADA9"
+        },
+        {
+          "slot": 13,
+          "name": "put_ContentTransitions",
+          "signature": "20010112ADA9"
+        }
+      ]
+    },
+    {
+      "name": "IContentPresenter",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "79fde5b4-cd37-491c-8845-daf472defff6",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100B4E5FD7937CD1C498845DAF472DEFFF60000",
+        "guid": "79fde5b4-cd37-491c-8845-daf472defff6"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e2420",
+          "iid_file_offset": "0x2e1820",
+          "preceding_type_pointer": "0x18000b6b8",
+          "surrounding_bytes": "b8b600800100000098e70180010000000000000000000000b4e5fd7937cd1c498845daf472defff601000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Content",
+          "signature": "20001C"
+        },
+        {
+          "slot": 7,
+          "name": "put_Content",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 8,
+          "name": "get_ContentTemplate",
+          "signature": "200012A175"
+        },
+        {
+          "slot": 9,
+          "name": "put_ContentTemplate",
+          "signature": "20010112A175"
+        },
+        {
+          "slot": 10,
+          "name": "get_ContentTemplateSelector",
+          "signature": "20001288B5"
+        },
+        {
+          "slot": 11,
+          "name": "put_ContentTemplateSelector",
+          "signature": "2001011288B5"
+        },
+        {
+          "slot": 12,
+          "name": "get_ContentTransitions",
+          "signature": "200012ADA9"
+        },
+        {
+          "slot": 13,
+          "name": "put_ContentTransitions",
+          "signature": "20010112ADA9"
+        },
+        {
+          "slot": 14,
+          "name": "get_FontSize",
+          "signature": "20000D"
+        },
+        {
+          "slot": 15,
+          "name": "put_FontSize",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 16,
+          "name": "get_FontFamily",
+          "signature": "200012ADFD"
+        },
+        {
+          "slot": 17,
+          "name": "put_FontFamily",
+          "signature": "20010112ADFD"
+        },
+        {
+          "slot": 18,
+          "name": "get_FontWeight",
+          "signature": "200011B425"
+        },
+        {
+          "slot": 19,
+          "name": "put_FontWeight",
+          "signature": "20010111B425"
+        },
+        {
+          "slot": 20,
+          "name": "get_FontStyle",
+          "signature": "200011B421"
+        },
+        {
+          "slot": 21,
+          "name": "put_FontStyle",
+          "signature": "20010111B421"
+        },
+        {
+          "slot": 22,
+          "name": "get_FontStretch",
+          "signature": "200011B43D"
+        },
+        {
+          "slot": 23,
+          "name": "put_FontStretch",
+          "signature": "20010111B43D"
+        },
+        {
+          "slot": 24,
+          "name": "get_CharacterSpacing",
+          "signature": "200008"
+        },
+        {
+          "slot": 25,
+          "name": "put_CharacterSpacing",
+          "signature": "20010108"
+        },
+        {
+          "slot": 26,
+          "name": "get_Foreground",
+          "signature": "200012A021"
+        },
+        {
+          "slot": 27,
+          "name": "put_Foreground",
+          "signature": "20010112A021"
+        }
+      ]
+    },
+    {
+      "name": "IImage",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "495b7402-9af3-4e50-aa90-03388f3086d2",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010002745B49F39A504EAA9003388F3086D20000",
+        "guid": "495b7402-9af3-4e50-aa90-03388f3086d2"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4020",
+          "iid_file_offset": "0x2e3420",
+          "preceding_type_pointer": "0x18000b860",
+          "surrounding_bytes": "60b800800100000060f3018001000000000000000000000002745b49f39a504eaa9003388f3086d201000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Source",
+          "signature": "200012B029"
+        },
+        {
+          "slot": 7,
+          "name": "put_Source",
+          "signature": "20010112B029"
+        },
+        {
+          "slot": 8,
+          "name": "get_Stretch",
+          "signature": "200011B1BD"
+        },
+        {
+          "slot": 9,
+          "name": "put_Stretch",
+          "signature": "20010111B1BD"
+        },
+        {
+          "slot": 10,
+          "name": "get_NineGrid",
+          "signature": "200011B361"
+        },
+        {
+          "slot": 11,
+          "name": "put_NineGrid",
+          "signature": "20010111B361"
+        },
+        {
+          "slot": 12,
+          "name": "get_PlayToSource",
+          "signature": "200012B449"
+        },
+        {
+          "slot": 13,
+          "name": "add_ImageFailed",
+          "signature": "200111B3C512A35D"
+        },
+        {
+          "slot": 14,
+          "name": "remove_ImageFailed",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 15,
+          "name": "add_ImageOpened",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 16,
+          "name": "remove_ImageOpened",
+          "signature": "20010111B3C5"
+        }
+      ]
+    },
+    {
+      "name": "IImageStatics",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "89903772-c336-43d1-9d51-c3bbd5d5d691",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01007237908936C3D1439D51C3BBD5D5D6910000",
+        "guid": "89903772-c336-43d1-9d51-c3bbd5d5d691"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e3fe0",
+          "iid_file_offset": "0x2e33e0",
+          "preceding_type_pointer": "0x18000b848",
+          "surrounding_bytes": "48b8008001000000000000000000000000000000000000007237908936c3d1439d51c3bbd5d5d69101000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_SourceProperty",
+          "signature": "200012A185"
+        },
+        {
+          "slot": 7,
+          "name": "get_StretchProperty",
+          "signature": "200012A185"
+        },
+        {
+          "slot": 8,
+          "name": "get_NineGridProperty",
+          "signature": "200012A185"
+        },
+        {
+          "slot": 9,
+          "name": "get_PlayToSourceProperty",
+          "signature": "200012A185"
+        }
+      ]
+    },
+    {
+      "name": "IItemsControl",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "f4a91dd8-d979-4381-8652-bda0342a765e",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100D81DA9F479D981438652BDA0342A765E0000",
+        "guid": "f4a91dd8-d979-4381-8652-bda0342a765e"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e40e0",
+          "iid_file_offset": "0x2e34e0",
+          "preceding_type_pointer": "0x18000b878",
+          "surrounding_bytes": "78b800800100000070f40180010000000000000000000000d81da9f479d981438652bda0342a765e01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_ItemsSource",
+          "signature": "20001C"
+        },
+        {
+          "slot": 7,
+          "name": "put_ItemsSource",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 8,
+          "name": "get_Items",
+          "signature": "2000129719"
+        },
+        {
+          "slot": 9,
+          "name": "get_ItemTemplate",
+          "signature": "200012A175"
+        },
+        {
+          "slot": 10,
+          "name": "put_ItemTemplate",
+          "signature": "20010112A175"
+        },
+        {
+          "slot": 11,
+          "name": "get_ItemTemplateSelector",
+          "signature": "20001288B5"
+        },
+        {
+          "slot": 12,
+          "name": "put_ItemTemplateSelector",
+          "signature": "2001011288B5"
+        },
+        {
+          "slot": 13,
+          "name": "get_ItemsPanel",
+          "signature": "2000129721"
+        },
+        {
+          "slot": 14,
+          "name": "put_ItemsPanel",
+          "signature": "200101129721"
+        },
+        {
+          "slot": 15,
+          "name": "get_DisplayMemberPath",
+          "signature": "20000E"
+        },
+        {
+          "slot": 16,
+          "name": "put_DisplayMemberPath",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 17,
+          "name": "get_ItemContainerStyle",
+          "signature": "200012B335"
+        },
+        {
+          "slot": 18,
+          "name": "put_ItemContainerStyle",
+          "signature": "20010112B335"
+        },
+        {
+          "slot": 19,
+          "name": "get_ItemContainerStyleSelector",
+          "signature": "2000129F29"
+        },
+        {
+          "slot": 20,
+          "name": "put_ItemContainerStyleSelector",
+          "signature": "200101129F29"
+        },
+        {
+          "slot": 21,
+          "name": "get_ItemContainerGenerator",
+          "signature": "200012971D"
+        },
+        {
+          "slot": 22,
+          "name": "get_ItemContainerTransitions",
+          "signature": "200012ADA9"
+        },
+        {
+          "slot": 23,
+          "name": "put_ItemContainerTransitions",
+          "signature": "20010112ADA9"
+        },
+        {
+          "slot": 24,
+          "name": "get_GroupStyle",
+          "signature": "20001512B43101128935"
+        },
+        {
+          "slot": 25,
+          "name": "get_GroupStyleSelector",
+          "signature": "2000128939"
+        },
+        {
+          "slot": 26,
+          "name": "put_GroupStyleSelector",
+          "signature": "200101128939"
+        },
+        {
+          "slot": 27,
+          "name": "get_IsGrouping",
+          "signature": "200002"
+        }
+      ]
+    },
+    {
+      "name": "ISelector",
+      "namespace": "Windows.UI.Xaml.Controls.Primitives",
+      "iid": "e30eb3a5-b36b-42dc-8527-cd25136c083c",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100A5B30EE36BB3DC428527CD25136C083C0000",
+        "guid": "e30eb3a5-b36b-42dc-8527-cd25136c083c"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e43a0",
+          "iid_file_offset": "0x2e37a0",
+          "preceding_type_pointer": "0x18000ba48",
+          "surrounding_bytes": "48ba008001000000b8f70180010000000000000000000000a5b30ee36bb3dc428527cd25136c083c01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_SelectedIndex",
+          "signature": "200008"
+        },
+        {
+          "slot": 7,
+          "name": "put_SelectedIndex",
+          "signature": "20010108"
+        },
+        {
+          "slot": 8,
+          "name": "get_SelectedItem",
+          "signature": "20001C"
+        },
+        {
+          "slot": 9,
+          "name": "put_SelectedItem",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 10,
+          "name": "get_SelectedValue",
+          "signature": "20001C"
+        },
+        {
+          "slot": 11,
+          "name": "put_SelectedValue",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 12,
+          "name": "get_SelectedValuePath",
+          "signature": "20000E"
+        },
+        {
+          "slot": 13,
+          "name": "put_SelectedValuePath",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 14,
+          "name": "get_IsSynchronizedWithCurrentItem",
+          "signature": "20001512B40D0102"
+        },
+        {
+          "slot": 15,
+          "name": "put_IsSynchronizedWithCurrentItem",
+          "signature": "2001011512B40D0102"
+        },
+        {
+          "slot": 16,
+          "name": "add_SelectionChanged",
+          "signature": "200111B3C5129EE5"
+        },
+        {
+          "slot": 17,
+          "name": "remove_SelectionChanged",
+          "signature": "20010111B3C5"
+        }
+      ]
+    },
+    {
+      "name": "IDependencyObject",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "5c526665-f60e-4912-af59-5fe0680f089d",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01006566525C0EF61249AF595FE0680F089D0000",
+        "guid": "5c526665-f60e-4912-af59-5fe0680f089d"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802dde20",
+          "iid_file_offset": "0x2dd220",
+          "preceding_type_pointer": "0x180006c48",
+          "surrounding_bytes": "486c008001000000e06b00800100000000000000000000006566525c0ef61249af595fe0680f089d01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetValue",
+          "signature": "20011C12A185"
+        },
+        {
+          "slot": 7,
+          "name": "SetValue",
+          "signature": "20020112A1851C"
+        },
+        {
+          "slot": 8,
+          "name": "ClearValue",
+          "signature": "20010112A185"
+        },
+        {
+          "slot": 9,
+          "name": "ReadLocalValue",
+          "signature": "20011C12A185"
+        },
+        {
+          "slot": 10,
+          "name": "GetAnimationBaseValue",
+          "signature": "20011C12A185"
+        },
+        {
+          "slot": 11,
+          "name": "get_Dispatcher",
+          "signature": "200012B4F5"
+        }
+      ]
+    },
+    {
+      "name": "IDependencyObject2",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "29fed85d-3d22-43a1-add0-17027c08b212",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01005DD8FE29223DA143ADD017027C08B2120000",
+        "guid": "29fed85d-3d22-43a1-add0-17027c08b212"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802ddee0",
+          "iid_file_offset": "0x2dd2e0",
+          "preceding_type_pointer": "0x180006c30",
+          "surrounding_bytes": "306c008001000000e06b00800100000000000000000000005dd8fe29223da143add017027c08b21201000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "RegisterPropertyChangedCallback",
+          "signature": "20020A12A18512A189"
+        },
+        {
+          "slot": 7,
+          "name": "UnregisterPropertyChangedCallback",
+          "signature": "20020112A1850A"
+        }
+      ]
+    },
+    {
+      "name": "IFrameworkElement",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01009BD091A3994A7C4B9D8D6FA5D01F6FBF0000",
+        "guid": "a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e0420",
+          "iid_file_offset": "0x2df820",
+          "preceding_type_pointer": "0x180007648",
+          "surrounding_bytes": "4876008001000000007500800100000000000000000000009bd091a3994a7c4b9d8d6fa5d01f6fbf01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Triggers",
+          "signature": "200012B36D"
+        },
+        {
+          "slot": 7,
+          "name": "get_Resources",
+          "signature": "200012874D"
+        },
+        {
+          "slot": 8,
+          "name": "put_Resources",
+          "signature": "20010112874D"
+        },
+        {
+          "slot": 9,
+          "name": "get_Tag",
+          "signature": "20001C"
+        },
+        {
+          "slot": 10,
+          "name": "put_Tag",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 11,
+          "name": "get_Language",
+          "signature": "20000E"
+        },
+        {
+          "slot": 12,
+          "name": "put_Language",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 13,
+          "name": "get_ActualWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 14,
+          "name": "get_ActualHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 15,
+          "name": "get_Width",
+          "signature": "20000D"
+        },
+        {
+          "slot": 16,
+          "name": "put_Width",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 17,
+          "name": "get_Height",
+          "signature": "20000D"
+        },
+        {
+          "slot": 18,
+          "name": "put_Height",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 19,
+          "name": "get_MinWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 20,
+          "name": "put_MinWidth",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 21,
+          "name": "get_MaxWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 22,
+          "name": "put_MaxWidth",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 23,
+          "name": "get_MinHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 24,
+          "name": "put_MinHeight",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 25,
+          "name": "get_MaxHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 26,
+          "name": "put_MaxHeight",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 27,
+          "name": "get_HorizontalAlignment",
+          "signature": "200011A39D"
+        },
+        {
+          "slot": 28,
+          "name": "put_HorizontalAlignment",
+          "signature": "20010111A39D"
+        },
+        {
+          "slot": 29,
+          "name": "get_VerticalAlignment",
+          "signature": "200011B385"
+        },
+        {
+          "slot": 30,
+          "name": "put_VerticalAlignment",
+          "signature": "20010111B385"
+        },
+        {
+          "slot": 31,
+          "name": "get_Margin",
+          "signature": "200011B361"
+        },
+        {
+          "slot": 32,
+          "name": "put_Margin",
+          "signature": "20010111B361"
+        },
+        {
+          "slot": 33,
+          "name": "get_Name",
+          "signature": "20000E"
+        },
+        {
+          "slot": 34,
+          "name": "put_Name",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 35,
+          "name": "get_BaseUri",
+          "signature": "200012B3F1"
+        },
+        {
+          "slot": 36,
+          "name": "get_DataContext",
+          "signature": "20001C"
+        },
+        {
+          "slot": 37,
+          "name": "put_DataContext",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 38,
+          "name": "get_Style",
+          "signature": "200012B335"
+        },
+        {
+          "slot": 39,
+          "name": "put_Style",
+          "signature": "20010112B335"
+        },
+        {
+          "slot": 40,
+          "name": "get_Parent",
+          "signature": "20001209"
+        },
+        {
+          "slot": 41,
+          "name": "get_FlowDirection",
+          "signature": "200011A361"
+        },
+        {
+          "slot": 42,
+          "name": "put_FlowDirection",
+          "signature": "20010111A361"
+        },
+        {
+          "slot": 43,
+          "name": "add_Loaded",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 44,
+          "name": "remove_Loaded",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 45,
+          "name": "add_Unloaded",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 46,
+          "name": "remove_Unloaded",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 47,
+          "name": "add_SizeChanged",
+          "signature": "200111B3C512B329"
+        },
+        {
+          "slot": 48,
+          "name": "remove_SizeChanged",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 49,
+          "name": "add_LayoutUpdated",
+          "signature": "200111B3C51512B3C9011C"
+        },
+        {
+          "slot": 50,
+          "name": "remove_LayoutUpdated",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 51,
+          "name": "FindName",
+          "signature": "20011C0E"
+        },
+        {
+          "slot": 52,
+          "name": "SetBinding",
+          "signature": "20020112A18512A0B5"
+        }
+      ]
+    },
+    {
+      "name": "IVisualTreeHelperStatics",
+      "namespace": "Windows.UI.Xaml.Media",
+      "iid": "e75758c4-d25d-4b1d-971f-596f17f12baa",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100C45857E75DD21D4B971F596F17F12BAA0000",
+        "guid": "e75758c4-d25d-4b1d-971f-596f17f12baa"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e89a0",
+          "iid_file_offset": "0x2e7da0",
+          "preceding_type_pointer": "0x180008e58",
+          "surrounding_bytes": "588e00800100000000000000000000000000000000000000c45857e75dd21d4b971f596f17f12baa01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "FindElementsInHostCoordinates",
+          "signature": "20021512B4050112875911B3FD128759"
+        },
+        {
+          "slot": 7,
+          "name": "FindElementsInHostCoordinates",
+          "signature": "20021512B4050112875911B3F9128759"
+        },
+        {
+          "slot": 8,
+          "name": "FindElementsInHostCoordinates",
+          "signature": "20031512B4050112875911B3FD12875902"
+        },
+        {
+          "slot": 9,
+          "name": "FindElementsInHostCoordinates",
+          "signature": "20031512B4050112875911B3F912875902"
+        },
+        {
+          "slot": 10,
+          "name": "GetChild",
+          "signature": "20021209120908"
+        },
+        {
+          "slot": 11,
+          "name": "GetChildrenCount",
+          "signature": "2001081209"
+        },
+        {
+          "slot": 12,
+          "name": "GetParent",
+          "signature": "200112091209"
+        },
+        {
+          "slot": 13,
+          "name": "DisconnectChildrenRecursive",
+          "signature": "200101128759"
+        }
+      ]
+    },
+    {
+      "name": "IBitmapImage",
+      "namespace": "Windows.UI.Xaml.Media.Imaging",
+      "iid": "31af3271-e3b4-442d-a341-4c0226b2725b",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01007132AF31B4E32D44A3414C0226B2725B0000",
+        "guid": "31af3271-e3b4-442d-a341-4c0226b2725b"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e7160",
+          "iid_file_offset": "0x2e6560",
+          "preceding_type_pointer": "0x180008f20",
+          "surrounding_bytes": "208f00800100000088da01800100000000000000000000007132af31b4e32d44a3414c0226b2725b01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_CreateOptions",
+          "signature": "200011B02D"
+        },
+        {
+          "slot": 7,
+          "name": "put_CreateOptions",
+          "signature": "20010111B02D"
+        },
+        {
+          "slot": 8,
+          "name": "get_UriSource",
+          "signature": "200012B3F1"
+        },
+        {
+          "slot": 9,
+          "name": "put_UriSource",
+          "signature": "20010112B3F1"
+        },
+        {
+          "slot": 10,
+          "name": "get_DecodePixelWidth",
+          "signature": "200008"
+        },
+        {
+          "slot": 11,
+          "name": "put_DecodePixelWidth",
+          "signature": "20010108"
+        },
+        {
+          "slot": 12,
+          "name": "get_DecodePixelHeight",
+          "signature": "200008"
+        },
+        {
+          "slot": 13,
+          "name": "put_DecodePixelHeight",
+          "signature": "20010108"
+        },
+        {
+          "slot": 14,
+          "name": "add_DownloadProgress",
+          "signature": "200111B3C512B041"
+        },
+        {
+          "slot": 15,
+          "name": "remove_DownloadProgress",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 16,
+          "name": "add_ImageOpened",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 17,
+          "name": "remove_ImageOpened",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 18,
+          "name": "add_ImageFailed",
+          "signature": "200111B3C512A35D"
+        },
+        {
+          "slot": 19,
+          "name": "remove_ImageFailed",
+          "signature": "20010111B3C5"
+        }
+      ]
+    },
+    {
+      "name": "IBitmapSource",
+      "namespace": "Windows.UI.Xaml.Media.Imaging",
+      "iid": "23d86411-202f-41b2-8c5b-a8a3b333800b",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01001164D8232F20B2418C5BA8A3B333800B0000",
+        "guid": "23d86411-202f-41b2-8c5b-a8a3b333800b"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e7120",
+          "iid_file_offset": "0x2e6520",
+          "preceding_type_pointer": "0x180008f08",
+          "surrounding_bytes": "088f008001000000f0d901800100000000000000000000001164d8232f20b2418c5ba8a3b333800b01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_PixelWidth",
+          "signature": "200008"
+        },
+        {
+          "slot": 7,
+          "name": "get_PixelHeight",
+          "signature": "200008"
+        },
+        {
+          "slot": 8,
+          "name": "SetSource",
+          "signature": "20010112B46D"
+        },
+        {
+          "slot": 9,
+          "name": "SetSourceAsync",
+          "signature": "200112B46512B46D"
+        }
+      ]
+    },
+    {
+      "name": "IStorageFile",
+      "namespace": "Windows.Storage",
+      "iid": "fa3f6186-4214-428c-a64c-14c9ac7315ea",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010086613FFA14428C42A64C14C9AC7315EA0000",
+        "guid": "fa3f6186-4214-428c-a64c-14c9ac7315ea"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4c60",
+          "iid_file_offset": "0x2e4060",
+          "preceding_type_pointer": "0x18000c940",
+          "surrounding_bytes": "40c9008001000000e8c7008001000000000000000000000086613ffa14428c42a64c14c9ac7315ea01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_FileType",
+          "signature": "20000E"
+        },
+        {
+          "slot": 7,
+          "name": "get_ContentType",
+          "signature": "20000E"
+        },
+        {
+          "slot": 8,
+          "name": "OpenAsync",
+          "signature": "200115128581011285151180AD"
+        },
+        {
+          "slot": 9,
+          "name": "OpenTransactedWriteAsync",
+          "signature": "200015128581011284A9"
+        },
+        {
+          "slot": 10,
+          "name": "CopyAsync",
+          "signature": "20011512858101128481128181"
+        },
+        {
+          "slot": 11,
+          "name": "CopyAsync",
+          "signature": "200215128581011284811281810E"
+        },
+        {
+          "slot": 12,
+          "name": "CopyAsync",
+          "signature": "200315128581011284811281810E118219"
+        },
+        {
+          "slot": 13,
+          "name": "CopyAndReplaceAsync",
+          "signature": "200112858D12816D"
+        },
+        {
+          "slot": 14,
+          "name": "MoveAsync",
+          "signature": "200112858D128181"
+        },
+        {
+          "slot": 15,
+          "name": "MoveAsync",
+          "signature": "200212858D1281810E"
+        },
+        {
+          "slot": 16,
+          "name": "MoveAsync",
+          "signature": "200312858D1281810E118219"
+        },
+        {
+          "slot": 17,
+          "name": "MoveAndReplaceAsync",
+          "signature": "200112858D12816D"
+        }
+      ]
+    },
+    {
+      "name": "IInputStream",
+      "namespace": "Windows.Storage.Streams",
+      "iid": "905a0fe2-bc53-11df-8c49-001e4fc686da",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100E20F5A9053BCDF118C49001E4FC686DA0000",
+        "guid": "905a0fe2-bc53-11df-8c49-001e4fc686da"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4e60",
+          "iid_file_offset": "0x2e4260",
+          "preceding_type_pointer": "0x18000cc50",
+          "surrounding_bytes": "50cc00800100000018340280010000000000000000000000e20f5a9053bcdf118c49001e4fc686da0100000000000000c049568001000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "ReadAsync",
+          "signature": "2003151285B1021284E1091284E10911852D"
+        }
+      ]
+    },
+    {
+      "name": "IRandomAccessStream",
+      "namespace": "Windows.Storage.Streams",
+      "iid": "905a0fe1-bc53-11df-8c49-001e4fc686da",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100E10F5A9053BCDF118C49001E4FC686DA0000",
+        "guid": "905a0fe1-bc53-11df-8c49-001e4fc686da"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4e20",
+          "iid_file_offset": "0x2e4220",
+          "preceding_type_pointer": "0x18000cc00",
+          "surrounding_bytes": "00cc00800100000040330280010000000000000000000000e10f5a9053bcdf118c49001e4fc686da0100000000000000004a568001000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Size",
+          "signature": "20000B"
+        },
+        {
+          "slot": 7,
+          "name": "put_Size",
+          "signature": "2001010B"
+        },
+        {
+          "slot": 8,
+          "name": "GetInputStreamAt",
+          "signature": "20011285090B"
+        },
+        {
+          "slot": 9,
+          "name": "GetOutputStreamAt",
+          "signature": "20011285110B"
+        },
+        {
+          "slot": 10,
+          "name": "get_Position",
+          "signature": "20000B"
+        },
+        {
+          "slot": 11,
+          "name": "Seek",
+          "signature": "2001010B"
+        },
+        {
+          "slot": 12,
+          "name": "CloneStream",
+          "signature": "2000128515"
+        },
+        {
+          "slot": 13,
+          "name": "get_CanRead",
+          "signature": "200002"
+        },
+        {
+          "slot": 14,
+          "name": "get_CanWrite",
+          "signature": "200002"
+        }
+      ]
+    },
+    {
+      "name": "IRandomAccessStreamReference",
+      "namespace": "Windows.Storage.Streams",
+      "iid": "33ee3134-1dd6-4e3a-8067-d1c162e8642b",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01003431EE33D61D3A4E8067D1C162E8642B0000",
+        "guid": "33ee3134-1dd6-4e3a-8067-d1c162e8642b"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4da0",
+          "iid_file_offset": "0x2e41a0",
+          "preceding_type_pointer": "0x18000c988",
+          "surrounding_bytes": "88c9008001000000e8c700800100000000000000000000003431ee33d61d3a4e8067d1c162e8642b01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "OpenReadAsync",
+          "signature": "20001512858101128525"
+        }
+      ]
+    },
+    {
+      "name": "IRandomAccessStreamWithContentType",
+      "namespace": "Windows.Storage.Streams",
+      "iid": "cc254827-4b3d-438f-9232-10c76bc7e038",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100274825CC3D4B8F43923210C76BC7E0380000",
+        "guid": "cc254827-4b3d-438f-9232-10c76bc7e038"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4de0",
+          "iid_file_offset": "0x2e41e0",
+          "preceding_type_pointer": "0x18000cbc8",
+          "surrounding_bytes": "c8cb00800100000000000000000000000000000000000000274825cc3d4b8f43923210c76bc7e03801000000000000000000000000000000"
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "ICoreDispatcher",
+      "namespace": "Windows.UI.Core",
+      "iid": "60db2fa8-b705-4fde-a7d6-ebbb1891d39e",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100A82FDB6005B7DE4FA7D6EBBB1891D39E0000",
+        "guid": "60db2fa8-b705-4fde-a7d6-ebbb1891d39e"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802dde60",
+          "iid_file_offset": "0x2dd260",
+          "preceding_type_pointer": "0x18000c028",
+          "surrounding_bytes": "28c0008001000000e0bf0080010000000000000000000000a82fdb6005b7de4fa7d6ebbb1891d39e01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_HasThreadAccess",
+          "signature": "200002"
+        },
+        {
+          "slot": 7,
+          "name": "ProcessEvents",
+          "signature": "200101118799"
+        },
+        {
+          "slot": 8,
+          "name": "RunAsync",
+          "signature": "20021296E11187891287D1"
+        },
+        {
+          "slot": 9,
+          "name": "RunIdleAsync",
+          "signature": "20011296E112889D"
+        }
+      ]
+    }
+  ],
+  "contexts": {
+    "0x18010f2e0": {
+      "qwords": [
+        "0x18000b878",
+        "0x18000b3e8",
+        "0x73764d77"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000b878",
+          "interfaces": [
+            "IItemsControl"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-change-apply.json",
+          "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+          "instruction": "0x1804a85a1"
+        }
+      ]
+    },
+    "0x18010f2f8": {
+      "qwords": [
+        "0x18000b6b8",
+        "0xffffffff8e797b4b",
+        "0x180006be0"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000b6b8",
+          "interfaces": [
+            "IContentPresenter"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-change-apply.json",
+          "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+          "instruction": "0x1804a861e"
+        }
+      ]
+    },
+    "0x18010e178": {
+      "qwords": [
+        "0x18000ba48",
+        "0xffffffff9cb6ad13",
+        "0x18000c940"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000ba48",
+          "interfaces": [
+            "ISelector"
+          ]
+        },
+        {
+          "context_offset": "0x10",
+          "pointer": "0x18000c940",
+          "interfaces": [
+            "IStorageFile"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-change-apply.json",
+          "evidence_id": "ev_a718072c66afad22081beae4abfd02ae6d23fd393f8796f60537787897c4d845",
+          "instruction": "0x1804a8645"
+        }
+      ]
+    },
+    "0x18010f308": {
+      "qwords": [
+        "0x180006be0",
+        "0x180008e58",
+        "0x180006be0"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x8",
+          "pointer": "0x180008e58",
+          "interfaces": [
+            "IVisualTreeHelperStatics"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-container-walk.json",
+          "evidence_id": "ev_78521b4e2f43dace7e76d81845d7f81b2445df07841ba7064373d9267827ef44",
+          "instruction": "0x1804a86bc"
+        }
+      ]
+    },
+    "0x18010f328": {
+      "qwords": [
+        "0x18000cc00",
+        "0x180008f08",
+        "0x1802a5ad9"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000cc00",
+          "interfaces": [
+            "IRandomAccessStream"
+          ]
+        },
+        {
+          "context_offset": "0x8",
+          "pointer": "0x180008f08",
+          "interfaces": [
+            "IBitmapSource"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7",
+          "instruction": "0x1804a8bef"
+        }
+      ]
+    },
+    "0x1801101a0": {
+      "qwords": [
+        "0x18000b848",
+        "0x180006c98",
+        "0x26210305"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000b848",
+          "interfaces": [
+            "IImageStatics"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-loaded-handler.json",
+          "evidence_id": "ev_3c1d5c44432293bfac294956417df3cdc17821656579fb6f3117a3e34ef472f1",
+          "instruction": "0x1804c891c"
+        },
+        {
+          "file": "evidence\\image-lifetime\\image-unloaded-handler.json",
+          "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+          "instruction": "0x1804c8730"
+        }
+      ]
+    },
+    "0x18010e018": {
+      "qwords": [
+        "0x180007648",
+        "0xffffffffc3969a4b",
+        "0x180007648"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        },
+        {
+          "context_offset": "0x10",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-loaded-handler.json",
+          "evidence_id": "ev_3c1d5c44432293bfac294956417df3cdc17821656579fb6f3117a3e34ef472f1",
+          "instruction": "0x1804c8979"
+        }
+      ]
+    },
+    "0x18010df20": {
+      "qwords": [
+        "0x180007648",
+        "0xfffffffffd33d892",
+        "0x18000adc8"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-source-change-state.json",
+          "evidence_id": "ev_e0cf60c428cf092be879d8bcf7b7ff4e4d1e3ca5a48966361c99884409840333",
+          "instruction": "0x1804c8352"
+        },
+        {
+          "file": "evidence\\image-lifetime\\image-unloaded-handler.json",
+          "evidence_id": "ev_9fb1a0e8c14d142beb292ee27bad1e3b2dfbe6fcee70df050adb64521f25420d",
+          "instruction": "0x1804c86ff"
+        }
+      ]
+    },
+    "0x180110188": {
+      "qwords": [
+        "0x180006c48",
+        "0x18000bfe0",
+        "0xffffffffd65f6b22"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x180006c48",
+          "interfaces": [
+            "IDependencyObject"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-source-change-state.json",
+          "evidence_id": "ev_e0cf60c428cf092be879d8bcf7b7ff4e4d1e3ca5a48966361c99884409840333",
+          "instruction": "0x1804c836b"
+        }
+      ]
+    },
+    "0x1801101d0": {
+      "qwords": [
+        "0x180007648",
+        "0xffffffffd2f73638",
+        "0x180007648"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        },
+        {
+          "context_offset": "0x10",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-unloaded-event-wrappers.json",
+          "evidence_id": "ev_dadf7d5e7ed2bebf929a24f2809686456082f19a1383a7a648a352c496b2de54",
+          "instruction": "0x1804c8f17"
+        }
+      ]
+    },
+    "0x1801101e0": {
+      "qwords": [
+        "0x180007648",
+        "0x7ec4caa1",
+        "0x1803143d0"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x180007648",
+          "interfaces": [
+            "IFrameworkElement"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\image-unloaded-event-wrappers.json",
+          "evidence_id": "ev_dadf7d5e7ed2bebf929a24f2809686456082f19a1383a7a648a352c496b2de54",
+          "instruction": "0x1804c8f47"
+        }
+      ]
+    },
+    "0x18010fb30": {
+      "qwords": [
+        "0x18000c940",
+        "0x18000c608",
+        "0x1802a5ad9"
+      ],
+      "matches": [
+        {
+          "context_offset": "0x0",
+          "pointer": "0x18000c940",
+          "interfaces": [
+            "IStorageFile"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "file": "evidence\\image-lifetime\\storage-file-open-async.json",
+          "evidence_id": "ev_66725fca519ee1939dacfd26e3cafb66ffcfa52fbf74c282e5b924ff6544aa82",
+          "instruction": "0x1804c179c"
+        }
+      ]
+    }
+  },
+  "limitation": "Local system WinMD supplies stable IID and declared method ABI order, not exact app source. Selected interfaces derive from IInspectable (six base slots). The first three qwords at each referenced context are candidates; they may belong to adjacent contexts, so matching alone does not identify the receiver. Helper 0x180475f10 proves its context+0 argument type, +8 receiver interface, +16 result type. Each call requires instruction/argument analysis. Native type handles are validated through the pointer 24 bytes before the literal IID. No app code or WinRT API was executed."
+}

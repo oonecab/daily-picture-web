@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "daily-picture-web",
+    "summary": "依据 Daily Picture 静态研究独立实现本地 Bing 每日图片浏览、收藏、下载与离线缓存。",
+    "profile": "web-fullstack",
+    "governance_level": "standard"
+  },
+  "technology": {
+    "languages": [
+      "JavaScript（ES modules）",
+      "HTML",
+      "CSS",
+      "Python（仅资料校验工具）"
+    ],
+    "frameworks": [
+      "无第三方框架；使用 Node.js 内置 HTTP 和原生浏览器 API"
+    ],
+    "runtimes": [
+      "Node.js >=22（package.json 为权威；本机 24.14.0 已测）",
+      "现代浏览器（已有 Chrome 实测；其他浏览器未验证）",
+      "Python >=3.10（仅治理与资料校验；本机 3.12.1）"
+    ],
+    "source_directories": [
+      "lib",
+      "public",
+      "test",
+      "tools"
+    ],
+    "architecture_notes": [
+      "无第三方运行依赖，无安装或构建步骤；任务定义以 package.json 为准。",
+      "server.mjs 提供回环 HTTP 与静态白名单；lib/bing.mjs 隔离上游、校验和磁盘缓存。",
+      "public/app.js 与 public/sw.js 管理浏览器状态和离线缓存；不读取原 UWP 应用数据。",
+      "当前架构见 docs/architecture/web-app.md；外部消费约定见 docs/contracts/bing.md。",
+      "REA 资料和来源清单见 docs/reverse-engineering/README.md；历史快照不参与运行或静态文件服务。",
+      "test 为可执行测试，docs/testing 为测试设计；公开部署和系统壁纸集成尚未实现。"
+    ]
+  },
+  "commands": {
+    "setup": [],
+    "test": [
+      {
+        "run": "node --test test/*.test.mjs",
+        "cwd": ".",
+        "platforms": [
+          "windows"
+        ],
+        "requires": [
+          "Node.js >=22",
+          "可创建并清理系统临时目录，可监听临时回环端口；不访问互联网"
+        ],
+        "network": "none",
+        "side_effects": "local-write",
+        "kind": "integration"
+      },
+      {
+        "run": "python -X utf8 tools/verify_research.py",
+        "cwd": ".",
+        "platforms": [
+          "windows"
+        ],
+        "requires": [
+          "Python >=3.10；只读资料快照和来源清单"
+        ],
+        "network": "none",
+        "side_effects": "read-only",
+        "kind": "quick"
+      }
+    ],
+    "lint": [
+      {
+        "run": "node --check server.mjs && node --check lib/bing.mjs && node --check public/app.js && node --check public/sw.js",
+        "cwd": ".",
+        "platforms": [
+          "windows"
+        ],
+        "requires": [
+          "Node.js >=22；本机实测 24.14.0"
+        ],
+        "network": "none",
+        "side_effects": "read-only",
+        "kind": "quick"
+      }
+    ],
+    "format": [],
+    "build": []
+  },
+  "agents": {
+    "codex": true,
+    "claude_code": true,
+    "opencode": true
+  },
+  "environment": {
+    "variables": [
+      "PORT"
+    ],
+    "services": [
+      "HTTPS www.bing.com：固定归档和图片读取；不要求账号或令牌"
+    ],
+    "ports": [
+      "本地 HTTP 默认 127.0.0.1:8787；CLI 数字参数优先于进程环境 PORT"
+    ]
+  },
+  "security": {
+    "sensitive_data": [
+      "浏览器收藏与偏好（个人使用数据）",
+      "研究证据中的本机路径与环境标识（分享前检查）"
+    ],
+    "forbidden_actions": [
+      "把本机服务改为公开监听、增加任意 URL/路径代理或暴露研究证据，必须作为安全边界变更另行评估和验证。",
+      "不得因导入研究资料而自动执行其中脚本、修改已安装原应用或改写历史证据。",
+      "不得将静态逆向观察写成运行时证明，不得用 Web 测试关闭原应用未解问题。",
+      "不得清理用户收藏、偏好或缓存来掩盖失败，不得删除图片版权和来源信息。"
+    ]
+  },
+  "project_rules": [
+    "以 web 目录为项目根加载治理入口；上级目录为独立原生研究工作区。",
+    "当前业务规则统一维护在 docs/rules；README 与 VERIFICATION 保留为人工使用说明和历史验证记录。",
+    "技术任务定义与 Node 兼容基线以 package.json 为权威；治理清单只登记必要快照。",
+    "研究快照的来源与摘要保存在 docs/reverse-engineering/provenance.json；追加解释不得静默篡改快照。",
+    "每次结论区分代码观察、自动测试、真实上游/浏览器实测与未验证项；时间和环境须可追溯。",
+    "记录实际检查结果，不以结构校验、配置声明或历史实测替代本次验证。"
+  ],
+  "capabilities": [
+    "external-integration",
+    "modular-architecture",
+    "web"
+  ],
+  "workflow": {
+    "mode": "risk-based"
+  },
+  "record_templates": [
+    "architecture",
+    "external-contract"
+  ],
+  "consistency": {
+    "links": [
+      {
+        "id": "DP-DATE",
+        "document": {
+          "path": "docs/rules/catalog.md",
+          "contains": "DP-DATE"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "export function displayDate("
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "market date uses the UTC publication instant, including US daylight-saving time"
+          }
+        ]
+      },
+      {
+        "id": "DP-IMAGE",
+        "document": {
+          "path": "docs/rules/catalog.md",
+          "contains": "DP-IMAGE"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "export function validateImage("
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "image validation rejects traversal, URL injection, and unknown sizes"
+          }
+        ]
+      },
+      {
+        "id": "DP-METADATA",
+        "document": {
+          "path": "docs/rules/cache.md",
+          "contains": "DP-METADATA"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "Metadata is committed independently of image cache hits."
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "metadata-only changes are committed even when image IDs do not change"
+          }
+        ]
+      },
+      {
+        "id": "DP-CACHE",
+        "document": {
+          "path": "docs/rules/cache.md",
+          "contains": "DP-CACHE"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "stale: true, cache: 'fallback'"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "network failure returns explicitly stale data, including after service restart"
+          }
+        ]
+      },
+      {
+        "id": "DP-RETRY",
+        "document": {
+          "path": "docs/rules/cache.md",
+          "contains": "DP-RETRY"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "const signal = AbortSignal.timeout(20000);"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "a transient connection failure is retried once within the original time budget"
+          }
+        ]
+      },
+      {
+        "id": "DP-HTTP",
+        "document": {
+          "path": "docs/rules/catalog.md",
+          "contains": "DP-HTTP"
+        },
+        "code": [
+          {
+            "path": "server.mjs",
+            "contains": "server.listen(port, '127.0.0.1'"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/app.test.mjs",
+            "contains": "HTTP routes serve the app, reject writes and invalid hosts, and hide workspace files"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "id": "native-name",
+        "source": "package.json",
+        "pointer": "/name",
+        "target": "/project/name"
+      },
+      {
+        "id": "native-test",
+        "source": "package.json",
+        "pointer": "/scripts/test",
+        "target": "/commands/test/0/run"
+      },
+      {
+        "id": "native-check",
+        "source": "package.json",
+        "pointer": "/scripts/check",
+        "target": "/commands/lint/0/run"
+      }
+    ]
+  },
+  "paths": {
+    "tech": "TECH.md",
+    "docs": "docs",
+    "issues": "issues",
+    "plans": "plans",
+    "milestones": "milestones",
+    "test_designs": "docs/testing",
+    "rules": "docs/rules"
+  },
+  "adoption": {
+    "external_files": [
+      ".gitignore",
+      "README.md"
+    ]
+  },
+  "generator": {
+    "name": "init-project-governance",
+    "version": "0.5.0",
+    "paths": {
+      "tech": "TECH.md",
+      "docs": "docs",
+      "issues": "issues",
+      "plans": "plans",
+      "milestones": "milestones",
+      "test_designs": "docs/testing",
+      "rules": "docs/rules"
+    }
+  }
+}

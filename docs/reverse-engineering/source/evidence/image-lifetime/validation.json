@@ -1,0 +1,841 @@
+{
+  "validated_at": "2026-10-17T10:49:58.122827+00:00",
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "readonly": true,
+  "success": true,
+  "rea_files": 33,
+  "instructions": 2232,
+  "instruction_bytes": 8278,
+  "findings": 9,
+  "source_references": 43,
+  "functions_at_pdata_starts": 28,
+  "local_winmd_hashes_validated": 4,
+  "document_links_checked": 41,
+  "links": [
+    {
+      "label": "结论清单",
+      "target": "../evidence/image-lifetime/findings.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\findings.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "来源与排除项",
+      "target": "../evidence/image-lifetime/provenance.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\provenance.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "函数索引",
+      "target": "../evidence/image-lifetime/functions.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\functions.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "WinMD/ABI 对照",
+      "target": "../evidence/image-lifetime/abi-evidence.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\abi-evidence.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "引用和字段审计",
+      "target": "../evidence/image-lifetime/ownership-and-reference-audit.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\ownership-and-reference-audit.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "验证结果",
+      "target": "../evidence/image-lifetime/validation.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\validation.json",
+      "generated_by_this_check": true
+    },
+    {
+      "label": "图片项构造",
+      "target": "../evidence/image-lifetime/image-item-constructor.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-item-constructor.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "getter",
+      "target": "../evidence/image-lifetime/image-properties-and-load-gate.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-properties-and-load-gate.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "async 入口",
+      "target": "../evidence/image-lifetime/image-getters-load-entry.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-getters-load-entry.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "setter",
+      "target": "../evidence/image-lifetime/image-source-accessors.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-source-accessors.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "数据与存储专题 DATA-07",
+      "target": "data-model-and-storage.md",
+      "resolved": "E:\\study\\rea\\daily-picture\\docs\\data-model-and-storage.md",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "manager 入口",
+      "target": "../evidence/image-lifetime/manager-stream-wrapper.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\manager-stream-wrapper.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "manager 状态机",
+      "target": "../evidence/image-lifetime/manager-image-stream-entry.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\manager-image-stream-entry.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "storage 入口",
+      "target": "../evidence/image-lifetime/cached-stream-entry.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\cached-stream-entry.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "storage 状态机",
+      "target": "../evidence/image-lifetime/cached-image-stream-state.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\cached-image-stream-state.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "分派 cell 和类型原始字节",
+      "target": "../evidence/image-lifetime/ownership-and-reference-audit.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\ownership-and-reference-audit.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "完整 UI 加载状态机及 finally/catch",
+      "target": "../evidence/image-lifetime/image-load-state.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-load-state.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "BitmapImage 构造",
+      "target": "../evidence/image-lifetime/bitmapimage-constructor.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\bitmapimage-constructor.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "WinRT 泛型桥",
+      "target": "../evidence/image-lifetime/bitmap-source-abi-dispatch.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\bitmap-source-abi-dispatch.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "IDisposable PDB 解析",
+      "target": "../evidence/image-lifetime/dispose-type-import.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\dispose-type-import.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "本机 ABI 对照",
+      "target": "../evidence/image-lifetime/abi-evidence.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\abi-evidence.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "连接器",
+      "target": "../evidence/image-lifetime/image-event-connection.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-event-connection.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "Loaded",
+      "target": "../evidence/image-lifetime/image-loaded-handler.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-loaded-handler.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "Unloaded",
+      "target": "../evidence/image-lifetime/image-unloaded-handler.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-unloaded-handler.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "注册桥",
+      "target": "../evidence/image-lifetime/image-property-callback-register.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-property-callback-register.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "注销桥",
+      "target": "../evidence/image-lifetime/image-property-callback-unregister.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-property-callback-unregister.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "Unloaded 事件包装",
+      "target": "../evidence/image-lifetime/image-unloaded-event-wrappers.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-unloaded-event-wrappers.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "回调入口",
+      "target": "../evidence/image-lifetime/image-source-property-callback.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-source-property-callback.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "回调状态机",
+      "target": "../evidence/image-lifetime/image-source-change-state.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-source-change-state.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "RunAsync 桥",
+      "target": "../evidence/image-lifetime/image-callback-dispatch-run.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-callback-dispatch-run.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "闭包动作",
+      "target": "../evidence/image-lifetime/image-change-dispatched-action.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-change-dispatched-action.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "选择位置及字段写入",
+      "target": "../evidence/image-lifetime/image-change-apply.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-change-apply.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "单步 GetParent",
+      "target": "../evidence/image-lifetime/image-container-walk.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-container-walk.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "集合重建",
+      "target": "../evidence/image-lifetime/image-items-collection-replacement.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-items-collection-replacement.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "字段和引用审计，含扫描范围",
+      "target": "../evidence/image-lifetime/ownership-and-reference-audit.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\ownership-and-reference-audit.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "挂起与恢复",
+      "target": "suspend-and-resume.md",
+      "resolved": "E:\\study\\rea\\daily-picture\\docs\\suspend-and-resume.md",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "计时器与 Dispose",
+      "target": "timers-and-disposal.md",
+      "resolved": "E:\\study\\rea\\daily-picture\\docs\\timers-and-disposal.md",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "加载状态机，含 `0x1804a8ce3` / `0x1804a8d0a`",
+      "target": "../evidence/image-lifetime/image-load-state.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-load-state.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "setter 的赋值/通知顺序",
+      "target": "../evidence/image-lifetime/image-source-accessors.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-source-accessors.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "callback 完整异常 funclet",
+      "target": "../evidence/image-lifetime/image-callback-exception.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\image-callback-exception.json",
+      "generated_by_this_check": false
+    },
+    {
+      "label": "provenance.json",
+      "target": "../evidence/image-lifetime/provenance.json",
+      "resolved": "E:\\study\\rea\\daily-picture\\evidence\\image-lifetime\\provenance.json",
+      "generated_by_this_check": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/image-loading-and-lifetime.md",
+      "sha256": "13122429aad2a8c146cf1124ded8ebfcf60eae2c9f7c9ebdb8e1835dc48476e3",
+      "bytes": 22157
+    },
+    {
+      "path": "evidence/image-lifetime/abi-evidence.json",
+      "sha256": "eb1c6c62c321f65a0fdfea993fdd148fceccdae3676445a30358ea6122ab230c",
+      "bytes": 48466
+    },
+    {
+      "path": "evidence/image-lifetime/bitmap-source-abi-dispatch-imports.json",
+      "sha256": "a7855350ab04d686b779f7598fbdc00ebc17c8bec8d18b4500cd3e26c46f796b",
+      "bytes": 3830
+    },
+    {
+      "path": "evidence/image-lifetime/bitmap-source-abi-dispatch.asm",
+      "sha256": "be97c8a64393548cc0e2f9c89d9dbda3c04a383ad41409733427f69864417431",
+      "bytes": 3720
+    },
+    {
+      "path": "evidence/image-lifetime/bitmap-source-abi-dispatch.json",
+      "sha256": "996afc0914adeb24fa5d84ffee5ef2db7e956f1526e146a794aca831c0398518",
+      "bytes": 38188
+    },
+    {
+      "path": "evidence/image-lifetime/bitmapimage-constructor-imports.json",
+      "sha256": "d2e3f156735acdc4b1ef4e1a2e745e37641f615d62267bbd8c8307060926099a",
+      "bytes": 4041
+    },
+    {
+      "path": "evidence/image-lifetime/bitmapimage-constructor.asm",
+      "sha256": "43954b16bcf597d94855bd5d072ec99c4de6e8042a1ea75275503f29a87faa73",
+      "bytes": 1023
+    },
+    {
+      "path": "evidence/image-lifetime/bitmapimage-constructor.json",
+      "sha256": "558140185e0b95be148f19825a0fa50e9df58bd1d7992433c0ed28e06157ae53",
+      "bytes": 10332
+    },
+    {
+      "path": "evidence/image-lifetime/cached-image-stream-state-imports.json",
+      "sha256": "00ededfd6ada20d2cabbdc5774be92238683955349f211df5e2f12d96491a2bf",
+      "bytes": 5076
+    },
+    {
+      "path": "evidence/image-lifetime/cached-image-stream-state.asm",
+      "sha256": "0a0575a94e942992e84ae787f66b279f1d9f1c445dcf49bc09582a6b855254a9",
+      "bytes": 6304
+    },
+    {
+      "path": "evidence/image-lifetime/cached-image-stream-state.json",
+      "sha256": "51e22afff2cab3add57351b7ef2e1fe1a99ba9069aad45ec3ec90fb74fca25be",
+      "bytes": 64184
+    },
+    {
+      "path": "evidence/image-lifetime/cached-stream-entry-imports.json",
+      "sha256": "db3d5d3b9e7618c422f8dad259e5841979c50a74a9570916627b8b46629ca05c",
+      "bytes": 8639
+    },
+    {
+      "path": "evidence/image-lifetime/cached-stream-entry.asm",
+      "sha256": "87317d29b75a8fd68b158ea46e5923bc3e45bb1d986aeedfdc2339eb8c4aac46",
+      "bytes": 4745
+    },
+    {
+      "path": "evidence/image-lifetime/cached-stream-entry.json",
+      "sha256": "71f8e38f5fe3a0405d0518063935c3838675c8d92dbaa2ca20978ef70008f785",
+      "bytes": 48080
+    },
+    {
+      "path": "evidence/image-lifetime/dispatch-cell-thunk-imports.json",
+      "sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/image-lifetime/dispatch-cell-thunk.asm",
+      "sha256": "11c93ec99a57b3571a201ac59d956ffbfb61a56375b501e2a10849e199d93aa0",
+      "bytes": 426
+    },
+    {
+      "path": "evidence/image-lifetime/dispatch-cell-thunk.json",
+      "sha256": "56a55f27db572352cb6f2a5f6f9e3477097fedd45936d28cc4a721f43ca0b3a7",
+      "bytes": 5748
+    },
+    {
+      "path": "evidence/image-lifetime/dispose-type-import.json",
+      "sha256": "94ba9d1f3b37087638d349a52b165f0492b6ea86982741659dc78ac9568f4d9b",
+      "bytes": 4438
+    },
+    {
+      "path": "evidence/image-lifetime/findings.json",
+      "sha256": "4c60c2b933729ddf42a01bd15ff76fb91e513c0a5b6754b4b0c55ab847cac6ee",
+      "bytes": 18031
+    },
+    {
+      "path": "evidence/image-lifetime/functions.json",
+      "sha256": "44bcc42b2faab030c337e0ddfa555306c128722c0e8282dfb521b477057c9251",
+      "bytes": 13153
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-dispatch-run-imports.json",
+      "sha256": "afe330ee9cfb35509331c04d7e0a92f1024b96da3af8f9985a4a11808d4f98b2",
+      "bytes": 3832
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-dispatch-run.asm",
+      "sha256": "7dff34c6e1da8f0c3a0fe5e8e6c97b460b34076441b788c1b4d74f1955e05404",
+      "bytes": 2866
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-dispatch-run.json",
+      "sha256": "8324469e90e6e36bb24b4fcf01320476a1ab4d560657240cf4ddeb47292e96ee",
+      "bytes": 28504
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-exception-imports.json",
+      "sha256": "710a9f97b689ba0448bfe7dbbe8bc1ce639c3b9b659be5fa9bd36a4f162e51e2",
+      "bytes": 1297
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-exception.asm",
+      "sha256": "64b390eec8ade4e03ed6c3bb7fcc22f97fc673916eb9f91de77b4681925f3063",
+      "bytes": 741
+    },
+    {
+      "path": "evidence/image-lifetime/image-callback-exception.json",
+      "sha256": "837198a5ee1f533f991e1aa30c27d334e356c787c9b739c3b5093e8446dd7488",
+      "bytes": 8862
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-apply-imports.json",
+      "sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-apply.asm",
+      "sha256": "0bf7ddb474c0d9bf83064517d5581415a93fe8d6596a9e50ab0fa9c326b24b65",
+      "bytes": 3987
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-apply.json",
+      "sha256": "daca9b92c00eed5614e4d214162758ec4d7382ba5dc9de9cbd19d7abef6c96ba",
+      "bytes": 45450
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-dispatched-action-imports.json",
+      "sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-dispatched-action.asm",
+      "sha256": "b177062de2d1c319c5d15200bfa85c17e25b25d9536e5f8afbca77ece836ff5b",
+      "bytes": 462
+    },
+    {
+      "path": "evidence/image-lifetime/image-change-dispatched-action.json",
+      "sha256": "edae74d62dec823a4701ae323ca7a8b9ec5a7fa7024d1ae692e44add5e3da710",
+      "bytes": 6718
+    },
+    {
+      "path": "evidence/image-lifetime/image-container-walk-imports.json",
+      "sha256": "3e43802edbe375a07e8c525ff6fa6f1b23a32180cc2a2de99cb4ceffe25f787a",
+      "bytes": 1284
+    },
+    {
+      "path": "evidence/image-lifetime/image-container-walk.asm",
+      "sha256": "f5ddf521dd84aefc8d8be74dcfc54d4c964b44d2c58ecc7e551b76649797f5ac",
+      "bytes": 1017
+    },
+    {
+      "path": "evidence/image-lifetime/image-container-walk.json",
+      "sha256": "f544189cf7a50644158a78a9b1821ffb81cfe314c10ddb4bc890d89a2335814e",
+      "bytes": 11504
+    },
+    {
+      "path": "evidence/image-lifetime/image-event-connection-imports.json",
+      "sha256": "38e5504dd6b87887780f169bf4ac1078f9515dde741e122a30ea7cf0212d5d51",
+      "bytes": 18349
+    },
+    {
+      "path": "evidence/image-lifetime/image-event-connection.asm",
+      "sha256": "84677f655558745bf3d701f895fe018cce72ae5055ab552f922bed80cb106bda",
+      "bytes": 11267
+    },
+    {
+      "path": "evidence/image-lifetime/image-event-connection.json",
+      "sha256": "9cfc6c6d77dd0b8628f0229f1e3ac463c430c391f8bdd160dd4aca2de1984776",
+      "bytes": 105186
+    },
+    {
+      "path": "evidence/image-lifetime/image-getters-load-entry-imports.json",
+      "sha256": "7cfbc13cfa4d32d62cf82ae91a2432b2047355fa92acf115d55ea5f6ddcfcf8b",
+      "bytes": 3803
+    },
+    {
+      "path": "evidence/image-lifetime/image-getters-load-entry.asm",
+      "sha256": "66d498b034c6a8b80114927a9e568e401b45cc7f0275507060999021af9b4d9c",
+      "bytes": 4928
+    },
+    {
+      "path": "evidence/image-lifetime/image-getters-load-entry.json",
+      "sha256": "736ef4006fcf850cd00cf5e77966743c1b7b2c9b2b0601e2370f35fa4a6fbd06",
+      "bytes": 51868
+    },
+    {
+      "path": "evidence/image-lifetime/image-item-constructor-imports.json",
+      "sha256": "2e094d28bde87c706f1aaea6809ee8db9e23ce28574ac2f7365be9e0b347618a",
+      "bytes": 16508
+    },
+    {
+      "path": "evidence/image-lifetime/image-item-constructor.asm",
+      "sha256": "9cc2536a378f4fb29908ec6130f25e6d11b5c700acc3096fd36d4942e69a82b1",
+      "bytes": 1192
+    },
+    {
+      "path": "evidence/image-lifetime/image-item-constructor.json",
+      "sha256": "c614e66f249be354c7874c6012f38a711b872404fbc76e72e8b759678f93b175",
+      "bytes": 13728
+    },
+    {
+      "path": "evidence/image-lifetime/image-items-collection-replacement-imports.json",
+      "sha256": "0258487a4aa4ee43a7cf5f4dfd4bf90d99b6b8b39d80711467c8d5535ee740f9",
+      "bytes": 24301
+    },
+    {
+      "path": "evidence/image-lifetime/image-items-collection-replacement.asm",
+      "sha256": "b1abd47717d5c240b25dbc41687411822c4d326a8df827fa4d91a509bf0305cf",
+      "bytes": 11778
+    },
+    {
+      "path": "evidence/image-lifetime/image-items-collection-replacement.json",
+      "sha256": "857030121f8e2962d30b3c427db96f42edb5903f012d3ee95d4e6e94ebb027df",
+      "bytes": 118584
+    },
+    {
+      "path": "evidence/image-lifetime/image-load-state-imports.json",
+      "sha256": "bee823a81214f7bceaac57a861efcdd37ff2c2338a5a4ac66578918ca3249c41",
+      "bytes": 32183
+    },
+    {
+      "path": "evidence/image-lifetime/image-load-state.asm",
+      "sha256": "598f0570ebae0d543a218176748b9dd60c4305d1fb8c31f19da68d6539fe58a4",
+      "bytes": 9711
+    },
+    {
+      "path": "evidence/image-lifetime/image-load-state.json",
+      "sha256": "7f027976ace071f81ca561b4d6cf7e7f2f2de7f3dc3d3a33761562aeb1105cee",
+      "bytes": 99350
+    },
+    {
+      "path": "evidence/image-lifetime/image-loaded-handler-imports.json",
+      "sha256": "cff5e8a502016a408fff7c14d7d5352b6ea81068c5bc8862a03ae9440efa9bb8",
+      "bytes": 2508
+    },
+    {
+      "path": "evidence/image-lifetime/image-loaded-handler.asm",
+      "sha256": "0204390a6dfd130e5ee9e93b2a13f3f5663f7a7a15eb1f1dffee629aed23bbdd",
+      "bytes": 2894
+    },
+    {
+      "path": "evidence/image-lifetime/image-loaded-handler.json",
+      "sha256": "5481b5b3286b91707a155c0d656686d12ce228fd1fed006042f3c6395cf8f3f4",
+      "bytes": 30850
+    },
+    {
+      "path": "evidence/image-lifetime/image-open-stream-wrapper-imports.json",
+      "sha256": "3e43802edbe375a07e8c525ff6fa6f1b23a32180cc2a2de99cb4ceffe25f787a",
+      "bytes": 1284
+    },
+    {
+      "path": "evidence/image-lifetime/image-open-stream-wrapper.asm",
+      "sha256": "71a77b617e9c60fbbede5e85db1ef5957c815710405ee6a7fa84d45fdc9397a2",
+      "bytes": 1077
+    },
+    {
+      "path": "evidence/image-lifetime/image-open-stream-wrapper.json",
+      "sha256": "430ee76e0d59477ff7e1a52138dd9a7e06e3326791d47d9e8ec585583f898a51",
+      "bytes": 12394
+    },
+    {
+      "path": "evidence/image-lifetime/image-properties-and-load-gate-imports.json",
+      "sha256": "72c7f5911af7ff208921a1e10182dfd6127f5552a7c09416eb6d72f7cc2654fd",
+      "bytes": 18598
+    },
+    {
+      "path": "evidence/image-lifetime/image-properties-and-load-gate.asm",
+      "sha256": "d813d7fc9fdcedf38764fd1a15de3f9aed7041f80721255ece16713490d88619",
+      "bytes": 3345
+    },
+    {
+      "path": "evidence/image-lifetime/image-properties-and-load-gate.json",
+      "sha256": "a6b11063b11cc4ffcca02efc39f11f6184112bb91077ab777ae21d9ad37a4983",
+      "bytes": 35916
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-register-imports.json",
+      "sha256": "72998bff285bca484d65df4888c790d2444671818cdcf840690e4d4d1b253c66",
+      "bytes": 3834
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-register.asm",
+      "sha256": "15f5498fcbf0d8e8e4738f0bfd7ddc7f506e63ef1a17d372961db3e01625beb4",
+      "bytes": 2922
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-register.json",
+      "sha256": "bd421aa84531d8f2018f437326dbbce67a80a99fef96e403ceb94d60558f7549",
+      "bytes": 29346
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-unregister-imports.json",
+      "sha256": "f25c7ad77543a68369b34f9a4a224d62f74711fe8382e577d7a60cd9c9fa5ce6",
+      "bytes": 2551
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-unregister.asm",
+      "sha256": "f9acfb12d81f666d5084e86a66b3790c690155d6bc792400e0f8ecb88a0390ac",
+      "bytes": 1790
+    },
+    {
+      "path": "evidence/image-lifetime/image-property-callback-unregister.json",
+      "sha256": "fb96eb9f8243ecd50af10d38c9ba42a33d2014b56038d69670cd929b68cb0412",
+      "bytes": 19280
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-accessors-imports.json",
+      "sha256": "72c7f5911af7ff208921a1e10182dfd6127f5552a7c09416eb6d72f7cc2654fd",
+      "bytes": 18598
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-accessors.asm",
+      "sha256": "0044494f68e3d8aefc3783118efe1b6b9a910554e7a9345c0a2bc356429e1e11",
+      "bytes": 1787
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-accessors.json",
+      "sha256": "f0ec9ac850e90d55e2c96770a65a3815b462327d980481d05ada6113e95d3d0e",
+      "bytes": 18018
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-change-state-imports.json",
+      "sha256": "1c50c9e047c07fe43c2fcf6c15d630c82dba4b0f44b3615f593d6a7c11550f68",
+      "bytes": 44885
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-change-state.asm",
+      "sha256": "649207a51aabaa05306a342d32f6fb612e93e86c648fbb2247875399118e0b87",
+      "bytes": 5936
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-change-state.json",
+      "sha256": "2266bab6157a80435199da810dce1d1b79ac627ff1f45ec88c7baf474c4ec180",
+      "bytes": 60002
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-property-callback-imports.json",
+      "sha256": "7cfbc13cfa4d32d62cf82ae91a2432b2047355fa92acf115d55ea5f6ddcfcf8b",
+      "bytes": 3803
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-property-callback.asm",
+      "sha256": "fcfbfb60ec0b3a0766e2dec7ffcbd52c12140f0c75346b85816a6f7525c87672",
+      "bytes": 2427
+    },
+    {
+      "path": "evidence/image-lifetime/image-source-property-callback.json",
+      "sha256": "d1594f5e0d444a1b5de384dbc0f8c16c39966c8226dfee5381b3e45acf81524b",
+      "bytes": 24346
+    },
+    {
+      "path": "evidence/image-lifetime/image-stream-service-state-imports.json",
+      "sha256": "7b347aae839acd8bd04331e9863cd3f0befdae8e26d52a4f4a6ae8ff231b22f9",
+      "bytes": 34383
+    },
+    {
+      "path": "evidence/image-lifetime/image-stream-service-state.asm",
+      "sha256": "928a26db10d81375aec638822e29a21e9c721e0e945e4abf8c5d5cc171b9c78b",
+      "bytes": 11748
+    },
+    {
+      "path": "evidence/image-lifetime/image-stream-service-state.json",
+      "sha256": "d56ea1cd435d7a650690c2b26507896f257104465230b982f0ed479596f1d839",
+      "bytes": 115380
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-event-wrappers-imports.json",
+      "sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-event-wrappers.asm",
+      "sha256": "298a3af620b883aafb3c5f922ed3375ad74d2624a77e0e0164d3541ed13fdcff",
+      "bytes": 1592
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-event-wrappers.json",
+      "sha256": "89425efd88faaa200c8e8359e206ae5f2f9e930fbe461af5fe5cb55a0e2f4a8e",
+      "bytes": 19608
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-handler-imports.json",
+      "sha256": "3e43802edbe375a07e8c525ff6fa6f1b23a32180cc2a2de99cb4ceffe25f787a",
+      "bytes": 1284
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-handler.asm",
+      "sha256": "0d7df6ef0b02db8199353e3e4ee22e0ce2fcb1efce8cf769e2ef98d7ab47fbd0",
+      "bytes": 2582
+    },
+    {
+      "path": "evidence/image-lifetime/image-unloaded-handler.json",
+      "sha256": "da96474eb5d11810a4606e0eb9dbd1f80dc3e6658b4032ce5a44f5cecb378479",
+      "bytes": 28312
+    },
+    {
+      "path": "evidence/image-lifetime/mainpage-image-events-imports.json",
+      "sha256": "1952c95c5fb1b14a177e79eee4d071a71cac7cab1ec5d4485356e7de15d9842b",
+      "bytes": 11317
+    },
+    {
+      "path": "evidence/image-lifetime/mainpage-image-events.asm",
+      "sha256": "1095b22e18bc83af8714757df7869be2982f9e3c0649a2b5932b3d855b72775b",
+      "bytes": 13404
+    },
+    {
+      "path": "evidence/image-lifetime/mainpage-image-events.json",
+      "sha256": "204638ee878d312b4628f5034918154dfdf9cd5578dfd922d3782a5ae752ab13",
+      "bytes": 134366
+    },
+    {
+      "path": "evidence/image-lifetime/manager-image-stream-entry-imports.json",
+      "sha256": "49bcc1547b20c03979213c8ce84b0e92034c569f9fb5fd4850a0d3d18d6e66ee",
+      "bytes": 4851
+    },
+    {
+      "path": "evidence/image-lifetime/manager-image-stream-entry.asm",
+      "sha256": "730fa03bb0d266a334ac4be3ec4f01c3d9e93b4950a88aaf614c645c0927dd5d",
+      "bytes": 4449
+    },
+    {
+      "path": "evidence/image-lifetime/manager-image-stream-entry.json",
+      "sha256": "4cc5c827efc924b84c4709be631e8ac553324a4e8fe3c4b13881d9f380b9484e",
+      "bytes": 45434
+    },
+    {
+      "path": "evidence/image-lifetime/manager-stream-wrapper-imports.json",
+      "sha256": "db3d5d3b9e7618c422f8dad259e5841979c50a74a9570916627b8b46629ca05c",
+      "bytes": 8639
+    },
+    {
+      "path": "evidence/image-lifetime/manager-stream-wrapper.asm",
+      "sha256": "b294e4b80e0e0b2c58bac9148d1a0b2ae3d7cf31b4c6f6eb603dd7490bfa0dbe",
+      "bytes": 4681
+    },
+    {
+      "path": "evidence/image-lifetime/manager-stream-wrapper.json",
+      "sha256": "b2c9beada051f951637e4bea3f73ba3d6eb4b36ead80cfee8b1cd9d90921f39e",
+      "bytes": 47448
+    },
+    {
+      "path": "evidence/image-lifetime/ownership-and-reference-audit.json",
+      "sha256": "0fc54b1d1f385417ec09d7efe85d6b2a01d5a931c23954cada74e2f37f0e578c",
+      "bytes": 11145
+    },
+    {
+      "path": "evidence/image-lifetime/provenance.json",
+      "sha256": "7b297bcf4d23e8a6ca87f8cddbfcf420f555111a1aaf2284e9637672d4eaf329",
+      "bytes": 23432
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-context-candidates.json",
+      "sha256": "5f71518128f3abcfb383007800d31b0b6e458208239958d52ff60424b5a6be15",
+      "bytes": 3073
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-dispatch-candidates.json",
+      "sha256": "0c4b38042e0b4158d831be743bd8b9cffc2be12f3b1eeb14969246291826633d",
+      "bytes": 2661
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-async-imports.json",
+      "sha256": "3e43802edbe375a07e8c525ff6fa6f1b23a32180cc2a2de99cb4ceffe25f787a",
+      "bytes": 1284
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-async.asm",
+      "sha256": "fa4422d06d762527c56b3ee6dadef01342b6d84b784678e18c63169247cf5aee",
+      "bytes": 1016
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-async.json",
+      "sha256": "a71faea146dee235275eb0d6525f7a5d1f560190ea1c76d7fd50acd1d2647d5a",
+      "bytes": 11478
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-bridge-imports.json",
+      "sha256": "39d12ebd4abd70e11bc1316c29858d1b4ea29b872c53d5146673e6615eb20538",
+      "bytes": 5128
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-bridge.asm",
+      "sha256": "34750e3a6571f7d2893c82a504a00a1a7c928136a2db95929234f925dcefe977",
+      "bytes": 4790
+    },
+    {
+      "path": "evidence/image-lifetime/storage-file-open-bridge.json",
+      "sha256": "46a393e54b32b6b66951ef7206cb80a806fa95dbf5817d2667424c5a4ff957da",
+      "bytes": 48970
+    },
+    {
+      "path": "evidence/image-lifetime/storagefile-slot2-caller-imports.json",
+      "sha256": "4e36d8205d1c1e96f446a5857e21f66acfee742e2e78d519fb658ce33c008e53",
+      "bytes": 31906
+    },
+    {
+      "path": "evidence/image-lifetime/storagefile-slot2-caller.asm",
+      "sha256": "0c4e93a5c241b1ae90684bf7299aecd92538b81aa55ec109eaee3e68b3266d56",
+      "bytes": 7439
+    },
+    {
+      "path": "evidence/image-lifetime/storagefile-slot2-caller.json",
+      "sha256": "68d207ecb4fa520002cebfc425e77c652d6a3605299a3a6453b2d53029fd0932",
+      "bytes": 73522
+    },
+    {
+      "path": "evidence/image-lifetime/stream-storage-action-state-imports.json",
+      "sha256": "98a353acf34b0a6424972628cb9aa530bdcd4ea24c80151824affb1da1fee7e7",
+      "bytes": 28382
+    },
+    {
+      "path": "evidence/image-lifetime/stream-storage-action-state.asm",
+      "sha256": "20b9b6a159bdbb213b1f367bc4405ecd4948a927fd78c9e20932367406feae88",
+      "bytes": 3588
+    },
+    {
+      "path": "evidence/image-lifetime/stream-storage-action-state.json",
+      "sha256": "9488ec22e44cfae5abf3e53961f90c389b1ef170eca7e77d1433470265468e5e",
+      "bytes": 36002
+    },
+    {
+      "path": "evidence/image-lifetime/system-winmd.json",
+      "sha256": "03a499cdab5e17f5efaf6e22383d0efc6a8ee5c2c15245883ea5837f6f3ad51c",
+      "bytes": 46888
+    },
+    {
+      "path": "scripts/image_lifetime_abi.py",
+      "sha256": "a988727ad1d6f07c090dca871f828195d51b3b373b119d19b862b632ca6388d2",
+      "bytes": 3499
+    },
+    {
+      "path": "scripts/image_lifetime_audit.py",
+      "sha256": "9c824afa634bc14e6e38c8069c9e3be5c38f739db534360f5d0283a107dff9db",
+      "bytes": 7249
+    },
+    {
+      "path": "scripts/image_lifetime_catalog.py",
+      "sha256": "12388e29db4fb74d90a4cf04c3af66ecbf85aac2f81b4d21ad24456f67638819",
+      "bytes": 12434
+    },
+    {
+      "path": "scripts/image_lifetime_rea.py",
+      "sha256": "3c256e51c0c58fc827b7de04df8f8cbf0181dc055ab28231203d0f57b7226a8e",
+      "bytes": 3953
+    },
+    {
+      "path": "scripts/image_lifetime_validate.py",
+      "sha256": "cc62ac7adfeee0316da6a7a7a2310d4703c5bba3ea225863957440134599f57c",
+      "bytes": 3629
+    },
+    {
+      "path": "scripts/image_lifetime_winmd.ps1",
+      "sha256": "70464b80615b6d3b18b56d74b15fb875e8fd680fa9226fd12938ebbdfbc50489",
+      "bytes": 4393
+    }
+  ],
+  "limit": "Validation proves retained instruction bytes, file identities, cited instruction offsets, .pdata starts, and link existence. It is not dynamic execution or proof of inferred dispatch targets/GC behavior."
+}

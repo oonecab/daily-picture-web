@@ -1,0 +1,325 @@
+{
+  "evidence_id": "DP-DATA-ABI-20261017",
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "reference": {
+    "path": "evidence/deep-cache/windows-storage-reference.rs",
+    "sha256": "ee65cab20fba2a47ccaeaa20c0e6695b24d2bd7e2a8ca3fdfd98d160428728ee",
+    "length": 395909,
+    "url": "https://raw.githubusercontent.com/microsoft/windows-rs/master/crates/libs/windows/src/Windows/Storage/mod.rs"
+  },
+  "interfaces": [
+    {
+      "name": "IApplicationDataStatics",
+      "iid": "5612147b-e843-45e3-94d8-06169e3c8e17",
+      "contexts": [
+        {
+          "va": "0x18010f488",
+          "file_offset": "0x10ea88",
+          "value": "0x18000cbb0",
+          "import_info": null,
+          "target_function": null
+        }
+      ],
+      "iid_records": [
+        {
+          "iid_file_offset": "0x2e7fe0",
+          "iid_va": "0x1802e8be0",
+          "record_eetype_pointer": "0x18000cbb0",
+          "record_bytes": "b0cb008001000000000000000000000000000000000000007b14125643e8e34594d806169e3c8e170100000000000000"
+        }
+      ],
+      "abi_methods": [
+        {
+          "slot": 6,
+          "name": "Current"
+        }
+      ],
+      "reference_declaration": "pub struct IApplicationDataStatics_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Current: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IApplicationData",
+      "iid": "c3da6fb7-b744-4b45-b0b8-223a0938d0dc",
+      "contexts": [
+        {
+          "va": "0x18010fa20",
+          "file_offset": "0x10f020",
+          "value": "0x18000cb00",
+          "import_info": null,
+          "target_function": null
+        },
+        {
+          "va": "0x18010f4a0",
+          "file_offset": "0x10eaa0",
+          "value": "0x18000cb00",
+          "import_info": null,
+          "target_function": null
+        }
+      ],
+      "iid_records": [
+        {
+          "iid_file_offset": "0x2e8020",
+          "iid_va": "0x1802e8c20",
+          "record_eetype_pointer": "0x18000cb00",
+          "record_bytes": "00cb008001000000b8ca0080010000000000000000000000b76fdac344b7454bb0b8223a0938d0dc0100000000000000"
+        }
+      ],
+      "abi_methods": [
+        {
+          "slot": 6,
+          "name": "Version"
+        },
+        {
+          "slot": 7,
+          "name": "SetVersionAsync"
+        },
+        {
+          "slot": 8,
+          "name": "ClearAllAsync"
+        },
+        {
+          "slot": 9,
+          "name": "ClearAsync"
+        },
+        {
+          "slot": 10,
+          "name": "LocalSettings"
+        },
+        {
+          "slot": 11,
+          "name": "RoamingSettings"
+        },
+        {
+          "slot": 12,
+          "name": "LocalFolder"
+        },
+        {
+          "slot": 13,
+          "name": "RoamingFolder"
+        },
+        {
+          "slot": 14,
+          "name": "TemporaryFolder"
+        },
+        {
+          "slot": 15,
+          "name": "DataChanged"
+        },
+        {
+          "slot": 16,
+          "name": "RemoveDataChanged"
+        },
+        {
+          "slot": 17,
+          "name": "SignalDataChanged"
+        },
+        {
+          "slot": 18,
+          "name": "RoamingStorageQuota"
+        }
+      ],
+      "reference_declaration": "pub struct IApplicationData_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Version: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u32) -> windows_core::HRESULT,\n    pub SetVersionAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, u32, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub ClearAllAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub ClearAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, ApplicationDataLocality, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub LocalSettings: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RoamingSettings: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Search\")]\n    pub LocalFolder: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    LocalFolder: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub RoamingFolder: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    RoamingFolder: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub TemporaryFolder: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    TemporaryFolder: usize,\n    pub DataChanged: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut i64) -> windows_core::HRESULT,\n    pub RemoveDataChanged: unsafe extern \"system\" fn(*mut core::ffi::c_void, i64) -> windows_core::HRESULT,\n    pub SignalDataChanged: unsafe extern \"system\" fn(*mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub RoamingStorageQuota: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut u64) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IApplicationDataContainer",
+      "iid": "c5aefd1e-f467-40ba-8566-ab640a441e1d",
+      "contexts": [
+        {
+          "va": "0x18010fa38",
+          "file_offset": "0x10f038",
+          "value": "0x18000cb98",
+          "import_info": null,
+          "target_function": null
+        }
+      ],
+      "iid_records": [
+        {
+          "iid_file_offset": "0x2e8060",
+          "iid_va": "0x1802e8c60",
+          "record_eetype_pointer": "0x18000cb98",
+          "record_bytes": "98cb00800100000050cb00800100000000000000000000001efdaec567f4ba408566ab640a441e1d0100000000000000"
+        }
+      ],
+      "abi_methods": [
+        {
+          "slot": 6,
+          "name": "Name"
+        },
+        {
+          "slot": 7,
+          "name": "Locality"
+        },
+        {
+          "slot": 8,
+          "name": "Values"
+        },
+        {
+          "slot": 9,
+          "name": "Containers"
+        },
+        {
+          "slot": 10,
+          "name": "CreateContainer"
+        },
+        {
+          "slot": 11,
+          "name": "DeleteContainer"
+        }
+      ],
+      "reference_declaration": "pub struct IApplicationDataContainer_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    pub Name: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub Locality: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut ApplicationDataLocality) -> windows_core::HRESULT,\n    #[cfg(feature = \"Foundation_Collections\")]\n    pub Values: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Foundation_Collections\"))]\n    Values: usize,\n    pub Containers: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub CreateContainer: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, ApplicationDataCreateDisposition, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    pub DeleteContainer: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    },
+    {
+      "name": "IStorageFolder",
+      "iid": "72d1cb78-b3ef-4f75-a80b-6fd9dae2944b",
+      "contexts": [
+        {
+          "va": "0x18010f4b8",
+          "file_offset": "0x10eab8",
+          "value": "0x18000ca60",
+          "import_info": null,
+          "target_function": null
+        }
+      ],
+      "iid_records": [
+        {
+          "iid_file_offset": "0x2e4660",
+          "iid_va": "0x1802e5260",
+          "record_eetype_pointer": "0x18000ca60",
+          "record_bytes": "60ca008001000000e8c9008001000000000000000000000078cbd172efb3754fa80b6fd9dae2944b0100000000000000"
+        }
+      ],
+      "abi_methods": [
+        {
+          "slot": 6,
+          "name": "CreateFileAsyncOverloadDefaultOptions"
+        },
+        {
+          "slot": 7,
+          "name": "CreateFileAsync"
+        },
+        {
+          "slot": 8,
+          "name": "CreateFolderAsyncOverloadDefaultOptions"
+        },
+        {
+          "slot": 9,
+          "name": "CreateFolderAsync"
+        },
+        {
+          "slot": 10,
+          "name": "GetFileAsync"
+        },
+        {
+          "slot": 11,
+          "name": "GetFolderAsync"
+        },
+        {
+          "slot": 12,
+          "name": "GetItemAsync"
+        },
+        {
+          "slot": 13,
+          "name": "GetFilesAsyncOverloadDefaultOptionsStartAndCount"
+        },
+        {
+          "slot": 14,
+          "name": "GetFoldersAsyncOverloadDefaultOptionsStartAndCount"
+        },
+        {
+          "slot": 15,
+          "name": "GetItemsAsyncOverloadDefaultStartAndCount"
+        }
+      ],
+      "reference_declaration": "pub struct IStorageFolder_Vtbl {\n    pub base__: windows_core::IInspectable_Vtbl,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateFileAsyncOverloadDefaultOptions: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateFileAsyncOverloadDefaultOptions: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub CreateFileAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, CreationCollisionOption, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    CreateFileAsync: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub CreateFolderAsyncOverloadDefaultOptions: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    CreateFolderAsyncOverloadDefaultOptions: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub CreateFolderAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, CreationCollisionOption, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    CreateFolderAsync: usize,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub GetFileAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    GetFileAsync: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub GetFolderAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    GetFolderAsync: usize,\n    pub GetItemAsync: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(feature = \"Storage_Streams\")]\n    pub GetFilesAsyncOverloadDefaultOptionsStartAndCount: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Streams\"))]\n    GetFilesAsyncOverloadDefaultOptionsStartAndCount: usize,\n    #[cfg(feature = \"Storage_Search\")]\n    pub GetFoldersAsyncOverloadDefaultOptionsStartAndCount: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n    #[cfg(not(feature = \"Storage_Search\"))]\n    GetFoldersAsyncOverloadDefaultOptionsStartAndCount: usize,\n    pub GetItemsAsyncOverloadDefaultStartAndCount: unsafe extern \"system\" fn(*mut core::ffi::c_void, *mut *mut core::ffi::c_void) -> windows_core::HRESULT,\n}"
+    }
+  ],
+  "dictionary_dispatch_cells": [
+    {
+      "cell_va": "0x180305860",
+      "bytes": "f8f35f80010000007a17faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -387206,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305870",
+      "bytes": "f8f35f80010000006a17faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -387222,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305880",
+      "bytes": "f8f35f80010000005a17faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -387238,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305890",
+      "bytes": "f8f35f80010000004a17faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -387254,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305e90",
+      "bytes": "f8f35f80010000004a11faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -388790,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305ea0",
+      "bytes": "f8f35f80010000003a11faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -388806,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305eb0",
+      "bytes": "f8f35f80010000002a11faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -388822,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305ec0",
+      "bytes": "f8f35f80010000001a11faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -388838,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    },
+    {
+      "cell_va": "0x180305ed0",
+      "bytes": "f8f35f80010000000a11faffffffffff",
+      "stub": "0x1805ff3f8",
+      "relative_raw_signed": -388854,
+      "tagged_type_reference": "0x1802a6fe2",
+      "low_tag": 2,
+      "import_slot_after_clearing_tag": "0x1802a6fe0"
+    }
+  ],
+  "import_type_evidence": "evidence/architecture-data/settings-type-symbols.json",
+  "limitations": [
+    "IID record/context matches and ABI slots establish the Windows interface calls. This is static evidence, not invocation tracing.",
+    "Dispatch-cell tag recovery identifies IDictionary<string,object>; it is not a general reconstruction of every managed method slot.",
+    "A null dictionary assignment is recorded as assignment, not assumed to be Remove."
+  ]
+}

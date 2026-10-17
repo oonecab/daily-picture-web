@@ -1,0 +1,159 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "scope": [
+    "0x1804a0000 <= candidate instruction < 0x1804ab000",
+    "0x180531000 <= candidate instruction < 0x180532500"
+  ],
+  "candidate_dispatch_cells_all_image": 544,
+  "classified_calls": [
+    {
+      "cell": "0x180304900",
+      "instruction": "0x1804a1009",
+      "owner": {
+        "start": "0x1804a0f80",
+        "end": "0x1804a101d",
+        "length": 157,
+        "unwind_rva": "0x14b4b0"
+      },
+      "object_source": "旧后台任务名单枚举器",
+      "evidence": [
+        {
+          "path": "evidence/background/old-task-unregister.json",
+          "evidence_id": "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180304910",
+      "instruction": "0x1804a102a",
+      "owner": {
+        "start": "0x1804a101d",
+        "end": "0x1804a103a",
+        "length": 29,
+        "unwind_rva": "0x14ae34"
+      },
+      "object_source": "同一枚举器的异常清理 funclet",
+      "evidence": [
+        {
+          "path": "evidence/timer-cleanup/unregister-enumerator-cleanup.json",
+          "evidence_id": "ev_7526e44bc07292194bcec99d4c94d5daea3eb2b7e2aebbe4fb20eacf039f943b"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180304960",
+      "instruction": "0x1804a347c",
+      "owner": {
+        "start": "0x1804a3290",
+        "end": "0x1804a353a",
+        "length": 682,
+        "unwind_rva": "0x14b0a0"
+      },
+      "object_source": "LoadImages 中图片记录集合的枚举器",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+          "evidence_id": "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180304970",
+      "instruction": "0x1804a354d",
+      "owner": {
+        "start": "0x1804a353a",
+        "end": "0x1804a355d",
+        "length": 35,
+        "unwind_rva": "0x14ae34"
+      },
+      "object_source": "同一集合枚举器的异常清理 funclet",
+      "evidence": [
+        {
+          "path": "evidence/architecture-ui/mainvm-property-and-refresh.json",
+          "evidence_id": "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180304bc0",
+      "instruction": "0x1804a8caa",
+      "owner": {
+        "start": "0x1804a8af0",
+        "end": "0x1804a8ce3",
+        "length": 499,
+        "unwind_rva": "0x14b54c"
+      },
+      "object_source": "图片项 LoadImage 返回的流",
+      "evidence": [
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180304bd0",
+      "instruction": "0x1804a8cfa",
+      "owner": {
+        "start": "0x1804a8ce3",
+        "end": "0x1804a8d0a",
+        "length": 39,
+        "unwind_rva": "0x14ae34"
+      },
+      "object_source": "同一流的异常清理 funclet",
+      "evidence": [
+        {
+          "path": "evidence/image-lifetime/image-load-state.json",
+          "evidence_id": "ev_e9792c87f1429739b8c258554e52f2abb6165fd3441243bf7064ca02fab073f7"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180308880",
+      "instruction": "0x180531dea",
+      "owner": {
+        "start": "0x180531dc0",
+        "end": "0x180531e02",
+        "length": 66,
+        "unwind_rva": "0x14adec"
+      },
+      "object_source": "App+0x58 中的 Navigator",
+      "evidence": [
+        {
+          "path": "evidence/timer-cleanup/timer-cleanup-and-adjacent.json",
+          "evidence_id": "ev_c61690b988bc2f86ac336f99cf3f3cd721e1789b27ff667c5c571a4bab1f542b"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    },
+    {
+      "cell": "0x180308890",
+      "instruction": "0x180531f76",
+      "owner": {
+        "start": "0x180531f50",
+        "end": "0x180531fa9",
+        "length": 89,
+        "unwind_rva": "0x14adec"
+      },
+      "object_source": "App+0x58 中的 Navigator",
+      "evidence": [
+        {
+          "path": "evidence/timer-cleanup/navigation-disposal-candidate.json",
+          "evidence_id": "ev_29978a864c9142819d002b4b4e69d5ceeeb2cccf2f7fe7b947b8016d4ec2d250"
+        }
+      ],
+      "instruction_present_in_complete_REA": true
+    }
+  ],
+  "limits": [
+    "Selected application/UI code windows, not a universal proof that all interface calls in the image were interpreted.",
+    "Tagged dispatch-cell interpretation and object source both matter; unrelated stream/enumerator disposal is not MainVM cleanup."
+  ]
+}

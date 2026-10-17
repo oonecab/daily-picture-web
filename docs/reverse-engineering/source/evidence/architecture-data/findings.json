@@ -1,0 +1,152 @@
+{
+  "evidence_id": "DP-ARCHITECTURE-DATA-20261017",
+  "recorded_utc": "2026-10-17T10:10:47.853554+00:00",
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "read_only_target": true,
+  "target_execution": false,
+  "settings_written": false,
+  "cache_written": false,
+  "hive_mounted": false,
+  "document": "docs/data-model-and-storage.md",
+  "claims": [
+    {
+      "id": "DATA-01",
+      "confidence": "high",
+      "conclusion": "持久化分为 LocalState 文件与 LocalSettings 对象键值；核心对象关系由 JSON、类型字符串和投影代码交叉定位。",
+      "evidence_relative_to_architecture_data": [
+        "model-observations.json",
+        "abi-and-settings-types.json"
+      ]
+    },
+    {
+      "id": "DATA-02",
+      "confidence": "high-observation / medium-high-type-identity",
+      "conclusion": "本地 archive 快照为 images 数组，元素只有 url/copyright 字符串；领域投影另计算 FileName。",
+      "evidence_relative_to_architecture_data": [
+        "model-observations.json",
+        "native-data-index.json",
+        "reuse-index.json"
+      ]
+    },
+    {
+      "id": "DATA-03",
+      "confidence": "high",
+      "conclusion": "投影拒绝 null archive，将 null images 转成空列表；坏 URL 和 null 项没有转换为空项的分支。",
+      "evidence_relative_to_architecture_data": [
+        "reuse-index.json"
+      ]
+    },
+    {
+      "id": "DATA-04",
+      "confidence": "high",
+      "conclusion": "ImageArchive.json 不存在时返回 null，旧 URL 投影变空列表；打开/读取/反序列化异常传播。",
+      "evidence_relative_to_architecture_data": [
+        "reuse-index.json"
+      ]
+    },
+    {
+      "id": "DATA-05",
+      "confidence": "high / archive-create-mode-medium-high",
+      "conclusion": "JSON 按原文件名写入；未见应用层临时文件重命名事务。托管 CreateFile 槽未完全恢复。",
+      "evidence_relative_to_architecture_data": [
+        "reuse-index.json"
+      ]
+    },
+    {
+      "id": "DATA-06",
+      "confidence": "high",
+      "conclusion": "Images/LockScreen/Wallpaper/LiveTiles 均以 LocalFolder + OpenIfExists 初始化。",
+      "evidence_relative_to_architecture_data": [
+        "lockscreen-folder-init.json",
+        "wallpaper-folder-init.json",
+        "livetiles-folder-init.json",
+        "abi-and-settings-types.json"
+      ]
+    },
+    {
+      "id": "DATA-07",
+      "confidence": "high",
+      "conclusion": "文件名来自首个不区分大小写的 id 查询键；无 id 时 Path.GetFileName 原 URL；命中检查不验证图像内容。",
+      "evidence_relative_to_architecture_data": [
+        "../deep-cache/filename.json",
+        "../deep-cache/filename-predicate.json",
+        "../deep-cache/storage-json.json"
+      ]
+    },
+    {
+      "id": "DATA-08",
+      "confidence": "high",
+      "conclusion": "下载协调器初始化并读旧索引后请求新 archive，串行下载；至少一张实际保存且循环成功才写新索引。",
+      "evidence_relative_to_architecture_data": [
+        "../deep-cache/storage-json.json",
+        "../deep-download/refresh-cleanup-sequence.json"
+      ]
+    },
+    {
+      "id": "DATA-09",
+      "confidence": "high",
+      "conclusion": "Images 清理保留持久化 archive 导出的文件名；派生目录保留一个给定名称。比较均忽略大小写。",
+      "evidence_relative_to_architecture_data": [
+        "../deep-cache/extra-cache.json",
+        "../deep-cache/personalization-cleanup.json",
+        "../deep-cache/tile-cleanup-call.json"
+      ]
+    },
+    {
+      "id": "DATA-10",
+      "confidence": "high",
+      "conclusion": "三个 Current*ImageUrl 键均在 LocalSettings；读取强转 String，写入未作 URL 规范化。",
+      "evidence_relative_to_architecture_data": [
+        "settings-url-and-migrate.json",
+        "abi-and-settings-types.json",
+        "settings-type-symbols.json"
+      ]
+    },
+    {
+      "id": "DATA-11",
+      "confidence": "high",
+      "conclusion": "两自动设置布尔值在 LocalSettings，读取 null 默认 false；非空值强转 Boxed_Boolean，错误类型不被本地吞掉。",
+      "evidence_relative_to_architecture_data": [
+        "reuse-index.json",
+        "settings-type-symbols.json"
+      ]
+    },
+    {
+      "id": "DATA-12",
+      "confidence": "high",
+      "conclusion": "启动迁移仅两个锁屏键：非空 Roaming 值覆盖 Local，再给 Roaming 同键赋 null；无本地存在检查。",
+      "evidence_relative_to_architecture_data": [
+        "settings-url-and-migrate.json",
+        "abi-and-settings-types.json",
+        "../architecture-ui/app-lifecycle-candidate.json"
+      ]
+    },
+    {
+      "id": "DATA-13",
+      "confidence": "high-observation",
+      "conclusion": "持久化设置快照仅见 CurrentLiveTileImageUrl；不能据此断言当前内存、UI 状态或历史配置。",
+      "evidence_relative_to_architecture_data": [
+        "../local-state/local-state.json"
+      ]
+    },
+    {
+      "id": "DATA-14",
+      "confidence": "high-static / runtime-unverified",
+      "conclusion": "图片、archive、删除、设置迁移不是一个整体事务；失败可留下部分写入、旧索引或部分残留文件。",
+      "evidence_relative_to_architecture_data": [
+        "settings-url-and-migrate.json",
+        "../deep-cache/storage-json.json",
+        "../deep-cache/extra-cache.json",
+        "../deep-download/refresh-cleanup-sequence.json"
+      ]
+    }
+  ],
+  "limits": [
+    "No full native field/type metadata graph or main-module PDB.",
+    "No live failure injection or app API execution.",
+    "Exact catch type in FileHelper.DeleteOldFiles remains unknown.",
+    "Archive CreateFile managed dispatch slot is not independently resolved.",
+    "Null assignment semantics in underlying roaming store are not equated to explicit Remove."
+  ]
+}

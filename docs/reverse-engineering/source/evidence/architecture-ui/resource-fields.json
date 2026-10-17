@@ -1,0 +1,469 @@
+{
+  "source": "evidence/resources/resource-candidates.json",
+  "sha256": "f98ef1fa28722191b5fb6c943071076d59d3a0c97ca99bfd77c689807996c6a3",
+  "count": 33,
+  "fields": [
+    {
+      "key": "AboutApplicationAppBarButton/Label",
+      "value": "About",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationAppBarButton/Label"
+    },
+    {
+      "key": "AboutApplicationDescription/Text",
+      "value": "Do you like Bing images? Do you like to see them every day? This application displays Bing image of the day at screen and in live tile. Additionally it can change your lock screen image and desktop wallpaper (Windows 10 only) every day. Very simple, but useful.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationDescription/Text"
+    },
+    {
+      "key": "AboutApplicationTitle/Text",
+      "value": "Daily Picture",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutApplicationTitle/Text"
+    },
+    {
+      "key": "AboutSettings/Title",
+      "value": "About",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutSettings/Title"
+    },
+    {
+      "key": "AboutTitle/Text",
+      "value": "About",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutTitle/Text"
+    },
+    {
+      "key": "ApplicationOptions/Title",
+      "value": "Options",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ApplicationOptions/Title"
+    },
+    {
+      "key": "Copyright/Text",
+      "value": "Copyright © Duracellko.NET 2013",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/Copyright/Text"
+    },
+    {
+      "key": "PrivacyPolicyHyperlink/Content",
+      "value": "Privacy policy",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyHyperlink/Content"
+    },
+    {
+      "key": "PrivacyPolicyHyperlink/NavigateUri",
+      "value": "http://www.duracellko.net/privacy-policy",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyHyperlink/NavigateUri"
+    },
+    {
+      "key": "RefreshAppBarButton/Label",
+      "value": "Refresh",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/RefreshAppBarButton/Label"
+    },
+    {
+      "key": "SaveAppBarButton/Label",
+      "value": "Save",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SaveAppBarButton/Label"
+    },
+    {
+      "key": "SetDesktopBackgroundImageAppBarButton/Label",
+      "value": "Set desktop wallpaper",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetDesktopBackgroundImageAppBarButton/Label"
+    },
+    {
+      "key": "SetLockScreenImageAppBarButton/Label",
+      "value": "Set lock screen",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetLockScreenImageAppBarButton/Label"
+    },
+    {
+      "key": "SettingsAppBarButton/Label",
+      "value": "Settings",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SettingsAppBarButton/Label"
+    },
+    {
+      "key": "SettingsTitle/Text",
+      "value": "Settings",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SettingsTitle/Text"
+    },
+    {
+      "key": "UseBingImageAsDesktopBackgroundDescription/Text",
+      "value": "Change your desktop wallpaper to actual Bing image daily",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsDesktopBackgroundDescription/Text"
+    },
+    {
+      "key": "UseBingImageAsDesktopBackgroundTitle/Text",
+      "value": "Use Bing image as desktop wallpaper",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsDesktopBackgroundTitle/Text"
+    },
+    {
+      "key": "UseBingImageAsLockScreenDescription/Text",
+      "value": "Change your lock screen to actual Bing image daily",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsLockScreenDescription/Text"
+    },
+    {
+      "key": "UseBingImageAsLockScreenTitle/Text",
+      "value": "Use Bing image as lock screen",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/UseBingImageAsLockScreenTitle/Text"
+    },
+    {
+      "key": "AboutSettingsTitle",
+      "value": "About",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/AboutSettingsTitle"
+    },
+    {
+      "key": "ApplicationOptionsTitle",
+      "value": "Options",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ApplicationOptionsTitle"
+    },
+    {
+      "key": "DesktopBackgroundSetMessage",
+      "value": "Desktop background was set successfully.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/DesktopBackgroundSetMessage"
+    },
+    {
+      "key": "DownloadImagesErrorMessage",
+      "value": "Downloading of Bing images failed. Check your internet connection.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/DownloadImagesErrorMessage"
+    },
+    {
+      "key": "ErrorTitle",
+      "value": "Error",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ErrorTitle"
+    },
+    {
+      "key": "ImageFileTitle",
+      "value": "Image",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ImageFileTitle"
+    },
+    {
+      "key": "ImageSavedMessage",
+      "value": "File '{0}' was saved.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/ImageSavedMessage"
+    },
+    {
+      "key": "LiveTileText",
+      "value": "Daily Picture",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/LiveTileText"
+    },
+    {
+      "key": "LockScreenSetMessage",
+      "value": "Lock screen was set successfully.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/LockScreenSetMessage"
+    },
+    {
+      "key": "PrivacyPolicy",
+      "value": "Privacy Policy",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicy"
+    },
+    {
+      "key": "PrivacyPolicyUrl",
+      "value": "http://www.duracellko.net/privacy-policy",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/PrivacyPolicyUrl"
+    },
+    {
+      "key": "SaveErrorMessage",
+      "value": "Error saving image:\n{0}\n\nPlease, try again.",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SaveErrorMessage"
+    },
+    {
+      "key": "SetDesktopBackgroundErrorMessage",
+      "value": "Error setting your desktop background image:\n{0}",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetDesktopBackgroundErrorMessage"
+    },
+    {
+      "key": "SetLockScreenErrorMessage",
+      "value": "Error setting your lock screen image:\n{0}",
+      "qualifiers": [
+        {
+          "name": "Language",
+          "value": "EN",
+          "priority": "700",
+          "scoreAsDefault": "1.0",
+          "index": "1"
+        }
+      ],
+      "uri": "ms-resource://14403Duracellko.NET.BingImageoftheDay/Resources/SetLockScreenErrorMessage"
+    }
+  ]
+}

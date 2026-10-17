@@ -1,0 +1,1876 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "metadata_file": "evidence\\app-lifecycle\\system-winmd.json",
+  "interfaces": [
+    {
+      "name": "IContentControl",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "a26dd1dc-cd44-435c-be94-01d6241c231c",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100DCD16DA244CD5C43BE9401D6241C231C0000",
+        "guid": "a26dd1dc-cd44-435c-be94-01d6241c231c"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e28a0",
+          "iid_file_offset": "0x2e1ca0",
+          "preceding_type_pointer": "0x18000ac38",
+          "surrounding_bytes": "38ac00800100000088ac0080010000000000000000000000dcd16da244cd5c43be9401d6241c231c01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Content",
+          "signature": "20001C"
+        },
+        {
+          "slot": 7,
+          "name": "put_Content",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 8,
+          "name": "get_ContentTemplate",
+          "signature": "200012A175"
+        },
+        {
+          "slot": 9,
+          "name": "put_ContentTemplate",
+          "signature": "20010112A175"
+        },
+        {
+          "slot": 10,
+          "name": "get_ContentTemplateSelector",
+          "signature": "20001288B5"
+        },
+        {
+          "slot": 11,
+          "name": "put_ContentTemplateSelector",
+          "signature": "2001011288B5"
+        },
+        {
+          "slot": 12,
+          "name": "get_ContentTransitions",
+          "signature": "200012ADA9"
+        },
+        {
+          "slot": 13,
+          "name": "put_ContentTransitions",
+          "signature": "20010112ADA9"
+        }
+      ]
+    },
+    {
+      "name": "IFrame",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "68ea500b-3fe9-4735-b6a0-e7601933b089",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01000B50EA68E93F3547B6A0E7601933B0890000",
+        "guid": "68ea500b-3fe9-4735-b6a0-e7601933b089"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4aa0",
+          "iid_file_offset": "0x2e3ea0",
+          "preceding_type_pointer": "0x18000b960",
+          "surrounding_bytes": "60b900800100000000f901800100000000000000000000000b50ea68e93f3547b6a0e7601933b08901000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_CacheSize",
+          "signature": "200008"
+        },
+        {
+          "slot": 7,
+          "name": "put_CacheSize",
+          "signature": "20010108"
+        },
+        {
+          "slot": 8,
+          "name": "get_CanGoBack",
+          "signature": "200002"
+        },
+        {
+          "slot": 9,
+          "name": "get_CanGoForward",
+          "signature": "200002"
+        },
+        {
+          "slot": 10,
+          "name": "get_CurrentSourcePageType",
+          "signature": "200011A925"
+        },
+        {
+          "slot": 11,
+          "name": "get_SourcePageType",
+          "signature": "200011A925"
+        },
+        {
+          "slot": 12,
+          "name": "put_SourcePageType",
+          "signature": "20010111A925"
+        },
+        {
+          "slot": 13,
+          "name": "get_BackStackDepth",
+          "signature": "200008"
+        },
+        {
+          "slot": 14,
+          "name": "add_Navigated",
+          "signature": "200111B3C512B225"
+        },
+        {
+          "slot": 15,
+          "name": "remove_Navigated",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 16,
+          "name": "add_Navigating",
+          "signature": "200111B3C512B22D"
+        },
+        {
+          "slot": 17,
+          "name": "remove_Navigating",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 18,
+          "name": "add_NavigationFailed",
+          "signature": "200111B3C512B23D"
+        },
+        {
+          "slot": 19,
+          "name": "remove_NavigationFailed",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 20,
+          "name": "add_NavigationStopped",
+          "signature": "200111B3C512B245"
+        },
+        {
+          "slot": 21,
+          "name": "remove_NavigationStopped",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 22,
+          "name": "GoBack",
+          "signature": "200001"
+        },
+        {
+          "slot": 23,
+          "name": "GoForward",
+          "signature": "200001"
+        },
+        {
+          "slot": 24,
+          "name": "Navigate",
+          "signature": "20020211A9251C"
+        },
+        {
+          "slot": 25,
+          "name": "GetNavigationState",
+          "signature": "20000E"
+        },
+        {
+          "slot": 26,
+          "name": "SetNavigationState",
+          "signature": "2001010E"
+        }
+      ]
+    },
+    {
+      "name": "IFrameFactory",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "02ee93d4-448e-469e-9799-0a8a1f70f171",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100D493EE028E449E4697990A8A1F70F1710000",
+        "guid": "02ee93d4-448e-469e-9799-0a8a1f70f171"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4a60",
+          "iid_file_offset": "0x2e3e60",
+          "preceding_type_pointer": "0x18000b948",
+          "surrounding_bytes": "48b900800100000000000000000000000000000000000000d493ee028e449e4697990a8a1f70f17101000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateInstance",
+          "signature": "20021289151C101C"
+        }
+      ]
+    },
+    {
+      "name": "IPage",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "c4b27075-e641-453e-824d-012fc7cf95cf",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01007570B2C441E63E45824D012FC7CF95CF0000",
+        "guid": "c4b27075-e641-453e-824d-012fc7cf95cf"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e2860",
+          "iid_file_offset": "0x2e1c60",
+          "preceding_type_pointer": "0x18000b718",
+          "surrounding_bytes": "18b700800100000000b301800100000000000000000000007570b2c441e63e45824d012fc7cf95cf01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Frame",
+          "signature": "2000128915"
+        },
+        {
+          "slot": 7,
+          "name": "get_NavigationCacheMode",
+          "signature": "200011B231"
+        },
+        {
+          "slot": 8,
+          "name": "put_NavigationCacheMode",
+          "signature": "20010111B231"
+        },
+        {
+          "slot": 9,
+          "name": "get_TopAppBar",
+          "signature": "2000128769"
+        },
+        {
+          "slot": 10,
+          "name": "put_TopAppBar",
+          "signature": "200101128769"
+        },
+        {
+          "slot": 11,
+          "name": "get_BottomAppBar",
+          "signature": "2000128769"
+        },
+        {
+          "slot": 12,
+          "name": "put_BottomAppBar",
+          "signature": "200101128769"
+        }
+      ]
+    },
+    {
+      "name": "IPageOverrides",
+      "namespace": "Windows.UI.Xaml.Controls",
+      "iid": "230b9cb8-3419-4306-aabe-4a8e680d3627",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100B89C0B2319340643AABE4A8E680D36270000",
+        "guid": "230b9cb8-3419-4306-aabe-4a8e680d3627"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e2a20",
+          "iid_file_offset": "0x2e1e20",
+          "preceding_type_pointer": "0x18000b730",
+          "surrounding_bytes": "30b700800100000000b30180010000000000000000000000b89c0b2319340643aabe4a8e680d362701000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "OnNavigatedFrom",
+          "signature": "20010112B235"
+        },
+        {
+          "slot": 7,
+          "name": "OnNavigatedTo",
+          "signature": "20010112B235"
+        },
+        {
+          "slot": 8,
+          "name": "OnNavigatingFrom",
+          "signature": "20010112B229"
+        }
+      ]
+    },
+    {
+      "name": "IApplication",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "74b861a1-7487-46a9-9a6e-c78b512726c5",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100A161B8748774A9469A6EC78B512726C50000",
+        "guid": "74b861a1-7487-46a9-9a6e-c78b512726c5"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802ddda0",
+          "iid_file_offset": "0x2dd1a0",
+          "preceding_type_pointer": "0x180007f68",
+          "surrounding_bytes": "687f00800100000090b00180010000000000000000000000a161b8748774a9469a6ec78b512726c501000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Resources",
+          "signature": "200012874D"
+        },
+        {
+          "slot": 7,
+          "name": "put_Resources",
+          "signature": "20010112874D"
+        },
+        {
+          "slot": 8,
+          "name": "get_DebugSettings",
+          "signature": "200012A17D"
+        },
+        {
+          "slot": 9,
+          "name": "get_RequestedTheme",
+          "signature": "20001131"
+        },
+        {
+          "slot": 10,
+          "name": "put_RequestedTheme",
+          "signature": "2001011131"
+        },
+        {
+          "slot": 11,
+          "name": "add_UnhandledException",
+          "signature": "200111B3C512B379"
+        },
+        {
+          "slot": 12,
+          "name": "remove_UnhandledException",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 13,
+          "name": "add_Suspending",
+          "signature": "200111B3C512B33D"
+        },
+        {
+          "slot": 14,
+          "name": "remove_Suspending",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 15,
+          "name": "add_Resuming",
+          "signature": "200111B3C51512B3C9011C"
+        },
+        {
+          "slot": 16,
+          "name": "remove_Resuming",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 17,
+          "name": "Exit",
+          "signature": "200001"
+        }
+      ]
+    },
+    {
+      "name": "IApplication2",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "019104be-522a-5904-f52f-de72010429e0",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100BE0491012A520459F52FDE72010429E00000",
+        "guid": "019104be-522a-5904-f52f-de72010429e0"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de660",
+          "iid_file_offset": "0x2dda60",
+          "preceding_type_pointer": "0x180008100",
+          "surrounding_bytes": "008100800100000090b00180010000000000000000000000be0491012a520459f52fde72010429e001000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_FocusVisualKind",
+          "signature": "200011A369"
+        },
+        {
+          "slot": 7,
+          "name": "put_FocusVisualKind",
+          "signature": "20010111A369"
+        },
+        {
+          "slot": 8,
+          "name": "get_RequiresPointerMode",
+          "signature": "2000112D"
+        },
+        {
+          "slot": 9,
+          "name": "put_RequiresPointerMode",
+          "signature": "200101112D"
+        },
+        {
+          "slot": 10,
+          "name": "add_LeavingBackground",
+          "signature": "200111B3C512A929"
+        },
+        {
+          "slot": 11,
+          "name": "remove_LeavingBackground",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 12,
+          "name": "add_EnteredBackground",
+          "signature": "200111B3C512A34D"
+        },
+        {
+          "slot": 13,
+          "name": "remove_EnteredBackground",
+          "signature": "20010111B3C5"
+        }
+      ]
+    },
+    {
+      "name": "IApplicationFactory",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "93bbe361-be5a-4ee3-b4a3-95118dc97a89",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010061E3BB935ABEE34EB4A395118DC97A890000",
+        "guid": "93bbe361-be5a-4ee3-b4a3-95118dc97a89"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802ddca0",
+          "iid_file_offset": "0x2dd0a0",
+          "preceding_type_pointer": "0x180007ee0",
+          "surrounding_bytes": "e07e0080010000000000000000000000000000000000000061e3bb935abee34eb4a395118dc97a8901000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateInstance",
+          "signature": "200212151C101C"
+        }
+      ]
+    },
+    {
+      "name": "IApplicationOverrides",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "25f99ff7-9347-459a-9fac-b2d0e11c1a0f",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100F79FF92547939A459FACB2D0E11C1A0F0000",
+        "guid": "25f99ff7-9347-459a-9fac-b2d0e11c1a0f"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de3e0",
+          "iid_file_offset": "0x2dd7e0",
+          "preceding_type_pointer": "0x1800080e8",
+          "surrounding_bytes": "e88000800100000090b00180010000000000000000000000f79ff92547939a459facb2d0e11c1a0f0100000000000000b062568001000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "OnActivated",
+          "signature": "20010112B3CD"
+        },
+        {
+          "slot": 7,
+          "name": "OnLaunched",
+          "signature": "20010112B3D1"
+        },
+        {
+          "slot": 8,
+          "name": "OnFileActivated",
+          "signature": "20010112B3D5"
+        },
+        {
+          "slot": 9,
+          "name": "OnSearchActivated",
+          "signature": "20010112B3D9"
+        },
+        {
+          "slot": 10,
+          "name": "OnShareTargetActivated",
+          "signature": "20010112B3DD"
+        },
+        {
+          "slot": 11,
+          "name": "OnFileOpenPickerActivated",
+          "signature": "20010112B3E1"
+        },
+        {
+          "slot": 12,
+          "name": "OnFileSavePickerActivated",
+          "signature": "20010112B3E5"
+        },
+        {
+          "slot": 13,
+          "name": "OnCachedFileUpdaterActivated",
+          "signature": "20010112B3E9"
+        },
+        {
+          "slot": 14,
+          "name": "OnWindowCreated",
+          "signature": "20010112B3B1"
+        }
+      ]
+    },
+    {
+      "name": "IApplicationStatics",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "06499997-f7b4-45fe-b763-7577d1d3cb4a",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010097994906B4F7FE45B7637577D1D3CB4A0000",
+        "guid": "06499997-f7b4-45fe-b763-7577d1d3cb4a"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802ddce0",
+          "iid_file_offset": "0x2dd0e0",
+          "preceding_type_pointer": "0x18001d308",
+          "surrounding_bytes": "08d30180010000000000000000000000000000000000000097994906b4f7fe45b7637577d1d3cb4a01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Current",
+          "signature": "20001215"
+        },
+        {
+          "slot": 7,
+          "name": "Start",
+          "signature": "2001011225"
+        },
+        {
+          "slot": 8,
+          "name": "LoadComponent",
+          "signature": "2002011C12B3F1"
+        },
+        {
+          "slot": 9,
+          "name": "LoadComponent",
+          "signature": "2003011C12B3F1119B65"
+        }
+      ]
+    },
+    {
+      "name": "IDispatcherTimer",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "d160ce46-cd22-4f5f-8c97-40e61da3e2dc",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010046CE60D122CD5F4F8C9740E61DA3E2DC0000",
+        "guid": "d160ce46-cd22-4f5f-8c97-40e61da3e2dc"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e67e0",
+          "iid_file_offset": "0x2e5be0",
+          "preceding_type_pointer": "0x1800084e0",
+          "surrounding_bytes": "e084008001000000c0d2018001000000000000000000000046ce60d122cd5f4f8c9740e61da3e2dc01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Interval",
+          "signature": "200011B411"
+        },
+        {
+          "slot": 7,
+          "name": "put_Interval",
+          "signature": "20010111B411"
+        },
+        {
+          "slot": 8,
+          "name": "get_IsEnabled",
+          "signature": "200002"
+        },
+        {
+          "slot": 9,
+          "name": "add_Tick",
+          "signature": "200111B3C51512B3C9011C"
+        },
+        {
+          "slot": 10,
+          "name": "remove_Tick",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 11,
+          "name": "Start",
+          "signature": "200001"
+        },
+        {
+          "slot": 12,
+          "name": "Stop",
+          "signature": "200001"
+        }
+      ]
+    },
+    {
+      "name": "IFrameworkElement",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01009BD091A3994A7C4B9D8D6FA5D01F6FBF0000",
+        "guid": "a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e0420",
+          "iid_file_offset": "0x2df820",
+          "preceding_type_pointer": "0x180007648",
+          "surrounding_bytes": "4876008001000000007500800100000000000000000000009bd091a3994a7c4b9d8d6fa5d01f6fbf01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Triggers",
+          "signature": "200012B36D"
+        },
+        {
+          "slot": 7,
+          "name": "get_Resources",
+          "signature": "200012874D"
+        },
+        {
+          "slot": 8,
+          "name": "put_Resources",
+          "signature": "20010112874D"
+        },
+        {
+          "slot": 9,
+          "name": "get_Tag",
+          "signature": "20001C"
+        },
+        {
+          "slot": 10,
+          "name": "put_Tag",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 11,
+          "name": "get_Language",
+          "signature": "20000E"
+        },
+        {
+          "slot": 12,
+          "name": "put_Language",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 13,
+          "name": "get_ActualWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 14,
+          "name": "get_ActualHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 15,
+          "name": "get_Width",
+          "signature": "20000D"
+        },
+        {
+          "slot": 16,
+          "name": "put_Width",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 17,
+          "name": "get_Height",
+          "signature": "20000D"
+        },
+        {
+          "slot": 18,
+          "name": "put_Height",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 19,
+          "name": "get_MinWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 20,
+          "name": "put_MinWidth",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 21,
+          "name": "get_MaxWidth",
+          "signature": "20000D"
+        },
+        {
+          "slot": 22,
+          "name": "put_MaxWidth",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 23,
+          "name": "get_MinHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 24,
+          "name": "put_MinHeight",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 25,
+          "name": "get_MaxHeight",
+          "signature": "20000D"
+        },
+        {
+          "slot": 26,
+          "name": "put_MaxHeight",
+          "signature": "2001010D"
+        },
+        {
+          "slot": 27,
+          "name": "get_HorizontalAlignment",
+          "signature": "200011A39D"
+        },
+        {
+          "slot": 28,
+          "name": "put_HorizontalAlignment",
+          "signature": "20010111A39D"
+        },
+        {
+          "slot": 29,
+          "name": "get_VerticalAlignment",
+          "signature": "200011B385"
+        },
+        {
+          "slot": 30,
+          "name": "put_VerticalAlignment",
+          "signature": "20010111B385"
+        },
+        {
+          "slot": 31,
+          "name": "get_Margin",
+          "signature": "200011B361"
+        },
+        {
+          "slot": 32,
+          "name": "put_Margin",
+          "signature": "20010111B361"
+        },
+        {
+          "slot": 33,
+          "name": "get_Name",
+          "signature": "20000E"
+        },
+        {
+          "slot": 34,
+          "name": "put_Name",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 35,
+          "name": "get_BaseUri",
+          "signature": "200012B3F1"
+        },
+        {
+          "slot": 36,
+          "name": "get_DataContext",
+          "signature": "20001C"
+        },
+        {
+          "slot": 37,
+          "name": "put_DataContext",
+          "signature": "2001011C"
+        },
+        {
+          "slot": 38,
+          "name": "get_Style",
+          "signature": "200012B335"
+        },
+        {
+          "slot": 39,
+          "name": "put_Style",
+          "signature": "20010112B335"
+        },
+        {
+          "slot": 40,
+          "name": "get_Parent",
+          "signature": "20001209"
+        },
+        {
+          "slot": 41,
+          "name": "get_FlowDirection",
+          "signature": "200011A361"
+        },
+        {
+          "slot": 42,
+          "name": "put_FlowDirection",
+          "signature": "20010111A361"
+        },
+        {
+          "slot": 43,
+          "name": "add_Loaded",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 44,
+          "name": "remove_Loaded",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 45,
+          "name": "add_Unloaded",
+          "signature": "200111B3C512B2B5"
+        },
+        {
+          "slot": 46,
+          "name": "remove_Unloaded",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 47,
+          "name": "add_SizeChanged",
+          "signature": "200111B3C512B329"
+        },
+        {
+          "slot": 48,
+          "name": "remove_SizeChanged",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 49,
+          "name": "add_LayoutUpdated",
+          "signature": "200111B3C51512B3C9011C"
+        },
+        {
+          "slot": 50,
+          "name": "remove_LayoutUpdated",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 51,
+          "name": "FindName",
+          "signature": "20011C0E"
+        },
+        {
+          "slot": 52,
+          "name": "SetBinding",
+          "signature": "20020112A18512A0B5"
+        }
+      ]
+    },
+    {
+      "name": "IFrameworkElement2",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "f19104be-422a-4904-a52f-ee72010429e5",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100BE0491F12A420449A52FEE72010429E50000",
+        "guid": "f19104be-422a-4904-a52f-ee72010429e5"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e0560",
+          "iid_file_offset": "0x2df960",
+          "preceding_type_pointer": "0x180007618",
+          "surrounding_bytes": "187600800100000000750080010000000000000000000000be0491f12a420449a52fee72010429e501000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_RequestedTheme",
+          "signature": "200011A349"
+        },
+        {
+          "slot": 7,
+          "name": "put_RequestedTheme",
+          "signature": "20010111A349"
+        },
+        {
+          "slot": 8,
+          "name": "add_DataContextChanged",
+          "signature": "200111B3C51512B4150212875D12A171"
+        },
+        {
+          "slot": 9,
+          "name": "remove_DataContextChanged",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 10,
+          "name": "GetBindingExpression",
+          "signature": "200112A0C112A185"
+        }
+      ]
+    },
+    {
+      "name": "IWindow",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "3276167d-c9f6-462d-9de2-ae4c1fd8c2e5",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01007D167632F6C92D469DE2AE4C1FD8C2E50000",
+        "guid": "3276167d-c9f6-462d-9de2-ae4c1fd8c2e5"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e8720",
+          "iid_file_offset": "0x2e7b20",
+          "preceding_type_pointer": "0x180007ec8",
+          "surrounding_bytes": "c87e008001000000807e00800100000000000000000000007d167632f6c92d469de2ae4c1fd8c2e501000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Bounds",
+          "signature": "200011B3F9"
+        },
+        {
+          "slot": 7,
+          "name": "get_Visible",
+          "signature": "200002"
+        },
+        {
+          "slot": 8,
+          "name": "get_Content",
+          "signature": "2000128759"
+        },
+        {
+          "slot": 9,
+          "name": "put_Content",
+          "signature": "200101128759"
+        },
+        {
+          "slot": 10,
+          "name": "get_CoreWindow",
+          "signature": "200012B515"
+        },
+        {
+          "slot": 11,
+          "name": "get_Dispatcher",
+          "signature": "200012B4F5"
+        },
+        {
+          "slot": 12,
+          "name": "add_Activated",
+          "signature": "200111B3C512B3A9"
+        },
+        {
+          "slot": 13,
+          "name": "remove_Activated",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 14,
+          "name": "add_Closed",
+          "signature": "200111B3C512B3AD"
+        },
+        {
+          "slot": 15,
+          "name": "remove_Closed",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 16,
+          "name": "add_SizeChanged",
+          "signature": "200111B3C512B3B5"
+        },
+        {
+          "slot": 17,
+          "name": "remove_SizeChanged",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 18,
+          "name": "add_VisibilityChanged",
+          "signature": "200111B3C512B3B9"
+        },
+        {
+          "slot": 19,
+          "name": "remove_VisibilityChanged",
+          "signature": "20010111B3C5"
+        },
+        {
+          "slot": 20,
+          "name": "Activate",
+          "signature": "200001"
+        },
+        {
+          "slot": 21,
+          "name": "Close",
+          "signature": "200001"
+        }
+      ]
+    },
+    {
+      "name": "IWindowStatics",
+      "namespace": "Windows.UI.Xaml",
+      "iid": "93328409-4ea1-4afa-83dc-0c4e73e88bb1",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010009843293A14EFA4A83DC0C4E73E88BB10000",
+        "guid": "93328409-4ea1-4afa-83dc-0c4e73e88bb1"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e86e0",
+          "iid_file_offset": "0x2e7ae0",
+          "preceding_type_pointer": "0x1800084f8",
+          "surrounding_bytes": "f8840080010000000000000000000000000000000000000009843293a14efa4a83dc0c4e73e88bb101000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Current",
+          "signature": "200012B3A5"
+        }
+      ]
+    },
+    {
+      "name": "INavigationEventArgs",
+      "namespace": "Windows.UI.Xaml.Navigation",
+      "iid": "b6aa9834-6691-44d1-bdf7-58820c27b0d0",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01003498AAB69166D144BDF758820C27B0D00000",
+        "guid": "b6aa9834-6691-44d1-bdf7-58820c27b0d0"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e2a60",
+          "iid_file_offset": "0x2e1e60",
+          "preceding_type_pointer": "0x180008840",
+          "surrounding_bytes": "4088008001000000f88700800100000000000000000000003498aab69166d144bdf758820c27b0d001000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Content",
+          "signature": "20001C"
+        },
+        {
+          "slot": 7,
+          "name": "get_Parameter",
+          "signature": "20001C"
+        },
+        {
+          "slot": 8,
+          "name": "get_SourcePageType",
+          "signature": "200011A925"
+        },
+        {
+          "slot": 9,
+          "name": "get_NavigationMode",
+          "signature": "200011B241"
+        },
+        {
+          "slot": 10,
+          "name": "get_Uri",
+          "signature": "200012B3F1"
+        },
+        {
+          "slot": 11,
+          "name": "put_Uri",
+          "signature": "20010112B3F1"
+        }
+      ]
+    },
+    {
+      "name": "INavigationFailedEventArgs",
+      "namespace": "Windows.UI.Xaml.Navigation",
+      "iid": "11c1dff7-36c2-4102-b2ef-0217a97289b3",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.Xaml.winmd",
+      "winmd_sha256": "9cbc4e3d674bc8673491383fd6ab75a3f88f56d071310a4f6d777a13db618bd0",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100F7DFC111C2360241B2EF0217A97289B30000",
+        "guid": "11c1dff7-36c2-4102-b2ef-0217a97289b3"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e4a20",
+          "iid_file_offset": "0x2e3e20",
+          "preceding_type_pointer": "0x180008970",
+          "surrounding_bytes": "708900800100000028890080010000000000000000000000f7dfc111c2360241b2ef0217a97289b301000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Exception",
+          "signature": "200011B545"
+        },
+        {
+          "slot": 7,
+          "name": "get_Handled",
+          "signature": "200002"
+        },
+        {
+          "slot": 8,
+          "name": "put_Handled",
+          "signature": "20010102"
+        },
+        {
+          "slot": 9,
+          "name": "get_SourcePageType",
+          "signature": "200011A925"
+        }
+      ]
+    },
+    {
+      "name": "IApplicationLanguagesStatics",
+      "namespace": "Windows.Globalization",
+      "iid": "75b40847-0a4c-4a92-9565-fd63c95f7aed",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Globalization.winmd",
+      "winmd_sha256": "20b61e0833653a306c904a7495c7a2e5c3714d1b71b08388e8c87a84e10986ab",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01004708B4754C0A924A9565FD63C95F7AED0000",
+        "guid": "75b40847-0a4c-4a92-9565-fd63c95f7aed"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e8960",
+          "iid_file_offset": "0x2e7d60",
+          "preceding_type_pointer": "0x18000d568",
+          "surrounding_bytes": "68d5008001000000000000000000000000000000000000004708b4754c0a924a9565fd63c95f7aed01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_PrimaryLanguageOverride",
+          "signature": "20000E"
+        },
+        {
+          "slot": 7,
+          "name": "put_PrimaryLanguageOverride",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 8,
+          "name": "get_Languages",
+          "signature": "2000151281B1010E"
+        },
+        {
+          "slot": 9,
+          "name": "get_ManifestLanguages",
+          "signature": "2000151281B1010E"
+        }
+      ]
+    },
+    {
+      "name": "IFileSavePicker",
+      "namespace": "Windows.Storage.Pickers",
+      "iid": "3286ffcb-617f-4cc5-af6a-b3fdf29ad145",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Storage.winmd",
+      "winmd_sha256": "411e2cb7fdb34d5bcd558b60ad3cd3e63ef16ce76ef08c2f14a6391b0ee975d3",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100CBFF86327F61C54CAF6AB3FDF29AD1450000",
+        "guid": "3286ffcb-617f-4cc5-af6a-b3fdf29ad145"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e7220",
+          "iid_file_offset": "0x2e6620",
+          "preceding_type_pointer": "0x18000cc88",
+          "surrounding_bytes": "88cc008001000000e8060280010000000000000000000000cbff86327f61c54caf6ab3fdf29ad14501000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_SettingsIdentifier",
+          "signature": "20000E"
+        },
+        {
+          "slot": 7,
+          "name": "put_SettingsIdentifier",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 8,
+          "name": "get_SuggestedStartLocation",
+          "signature": "2000118275"
+        },
+        {
+          "slot": 9,
+          "name": "put_SuggestedStartLocation",
+          "signature": "200101118275"
+        },
+        {
+          "slot": 10,
+          "name": "get_CommitButtonText",
+          "signature": "20000E"
+        },
+        {
+          "slot": 11,
+          "name": "put_CommitButtonText",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 12,
+          "name": "get_FileTypeChoices",
+          "signature": "200015128599020E151285B5010E"
+        },
+        {
+          "slot": 13,
+          "name": "get_DefaultFileExtension",
+          "signature": "20000E"
+        },
+        {
+          "slot": 14,
+          "name": "put_DefaultFileExtension",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 15,
+          "name": "get_SuggestedSaveFile",
+          "signature": "2000128481"
+        },
+        {
+          "slot": 16,
+          "name": "put_SuggestedSaveFile",
+          "signature": "200101128481"
+        },
+        {
+          "slot": 17,
+          "name": "get_SuggestedFileName",
+          "signature": "20000E"
+        },
+        {
+          "slot": 18,
+          "name": "put_SuggestedFileName",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 19,
+          "name": "PickSaveFileAsync",
+          "signature": "20001512858101128481"
+        }
+      ]
+    },
+    {
+      "name": "IMessageDialog",
+      "namespace": "Windows.UI.Popups",
+      "iid": "33f59b01-5325-43ab-9ab3-bdae440e4121",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100019BF5332553AB439AB3BDAE440E41210000",
+        "guid": "33f59b01-5325-43ab-9ab3-bdae440e4121"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e73e0",
+          "iid_file_offset": "0x2e67e0",
+          "preceding_type_pointer": "0x18000be18",
+          "surrounding_bytes": "18be00800100000090000280010000000000000000000000019bf5332553ab439ab3bdae440e412101000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Title",
+          "signature": "20000E"
+        },
+        {
+          "slot": 7,
+          "name": "put_Title",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 8,
+          "name": "get_Commands",
+          "signature": "2000151296E901129085"
+        },
+        {
+          "slot": 9,
+          "name": "get_DefaultCommandIndex",
+          "signature": "200009"
+        },
+        {
+          "slot": 10,
+          "name": "put_DefaultCommandIndex",
+          "signature": "20010109"
+        },
+        {
+          "slot": 11,
+          "name": "get_CancelCommandIndex",
+          "signature": "200009"
+        },
+        {
+          "slot": 12,
+          "name": "put_CancelCommandIndex",
+          "signature": "20010109"
+        },
+        {
+          "slot": 13,
+          "name": "get_Content",
+          "signature": "20000E"
+        },
+        {
+          "slot": 14,
+          "name": "put_Content",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 15,
+          "name": "ShowAsync",
+          "signature": "20001512977101129085"
+        },
+        {
+          "slot": 16,
+          "name": "get_Options",
+          "signature": "2000119091"
+        },
+        {
+          "slot": 17,
+          "name": "put_Options",
+          "signature": "200101119091"
+        }
+      ]
+    },
+    {
+      "name": "IMessageDialogFactory",
+      "namespace": "Windows.UI.Popups",
+      "iid": "2d161777-a66f-4ea5-bb87-793ffa4941f2",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01007717162D6FA6A54EBB87793FFA4941F20000",
+        "guid": "2d161777-a66f-4ea5-bb87-793ffa4941f2"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802e73a0",
+          "iid_file_offset": "0x2e67a0",
+          "preceding_type_pointer": "0x1800200d8",
+          "surrounding_bytes": "d800028001000000000000000000000000000000000000007717162d6fa6a54ebb87793ffa4941f201000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Create",
+          "signature": "200112908D0E"
+        },
+        {
+          "slot": 7,
+          "name": "CreateWithTitle",
+          "signature": "200212908D0E0E"
+        }
+      ]
+    },
+    {
+      "name": "IActivatedEventArgs",
+      "namespace": "Windows.ApplicationModel.Activation",
+      "iid": "cf651713-cd08-4fd8-b697-a281b6544e2e",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100131765CF08CDD84FB697A281B6544E2E0000",
+        "guid": "cf651713-cd08-4fd8-b697-a281b6544e2e"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de420",
+          "iid_file_offset": "0x2dd820",
+          "preceding_type_pointer": "0x18000e498",
+          "surrounding_bytes": "98e400800100000030e80080010000000000000000000000131765cf08cdd84fb697a281b6544e2e01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Kind",
+          "signature": "20001115"
+        },
+        {
+          "slot": 7,
+          "name": "get_PreviousExecutionState",
+          "signature": "20001119"
+        },
+        {
+          "slot": 8,
+          "name": "get_SplashScreen",
+          "signature": "20001281BD"
+        }
+      ]
+    },
+    {
+      "name": "ILaunchActivatedEventArgs",
+      "namespace": "Windows.ApplicationModel.Activation",
+      "iid": "fbc93e26-a14a-4b4f-82b0-33bed920af52",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100263EC9FB4AA14F4B82B033BED920AF520000",
+        "guid": "fbc93e26-a14a-4b4f-82b0-33bed920af52"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de460",
+          "iid_file_offset": "0x2dd860",
+          "preceding_type_pointer": "0x18000e478",
+          "surrounding_bytes": "78e400800100000028e40080010000000000000000000000263ec9fb4aa14f4b82b033bed920af5201000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Arguments",
+          "signature": "20000E"
+        },
+        {
+          "slot": 7,
+          "name": "get_TileId",
+          "signature": "20000E"
+        }
+      ]
+    },
+    {
+      "name": "IEnteredBackgroundEventArgs",
+      "namespace": "Windows.ApplicationModel",
+      "iid": "f722dcc2-9827-403d-aaed-ecca9ac17398",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100C2DC22F727983D40AAEDECCA9AC173980000",
+        "guid": "f722dcc2-9827-403d-aaed-ecca9ac17398"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de760",
+          "iid_file_offset": "0x2ddb60",
+          "preceding_type_pointer": "0x18000dc80",
+          "surrounding_bytes": "80dc00800100000000000000000000000000000000000000c2dc22f727983d40aaedecca9ac1739801000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetDeferral",
+          "signature": "2000129C3D"
+        }
+      ]
+    },
+    {
+      "name": "ILeavingBackgroundEventArgs",
+      "namespace": "Windows.ApplicationModel",
+      "iid": "39c6ec9a-ae6e-46f9-a07a-cfc23f88733e",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "01009AECC6396EAEF946A07ACFC23F88733E0000",
+        "guid": "39c6ec9a-ae6e-46f9-a07a-cfc23f88733e"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de6e0",
+          "iid_file_offset": "0x2ddae0",
+          "preceding_type_pointer": "0x18000dbe8",
+          "surrounding_bytes": "e8db008001000000000000000000000000000000000000009aecc6396eaef946a07acfc23f88733e01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetDeferral",
+          "signature": "2000129C3D"
+        }
+      ]
+    },
+    {
+      "name": "ISuspendingDeferral",
+      "namespace": "Windows.ApplicationModel",
+      "iid": "59140509-8bc9-4eb4-b636-dabdc4f46f66",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010009051459C98BB44EB636DABDC4F46F660000",
+        "guid": "59140509-8bc9-4eb4-b636-dabdc4f46f66"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de3a0",
+          "iid_file_offset": "0x2dd7a0",
+          "preceding_type_pointer": "0x18000db50",
+          "surrounding_bytes": "50db00800100000008db008001000000000000000000000009051459c98bb44eb636dabdc4f46f6601000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Complete",
+          "signature": "200001"
+        }
+      ]
+    },
+    {
+      "name": "ISuspendingEventArgs",
+      "namespace": "Windows.ApplicationModel",
+      "iid": "96061c05-2dba-4d08-b0bd-2b30a131c6aa",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "0100051C0696BA2D084DB0BD2B30A131C6AA0000",
+        "guid": "96061c05-2dba-4d08-b0bd-2b30a131c6aa"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de320",
+          "iid_file_offset": "0x2dd720",
+          "preceding_type_pointer": "0x18000da20",
+          "surrounding_bytes": "20da008001000000d8d90080010000000000000000000000051c0696ba2d084db0bd2b30a131c6aa01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_SuspendingOperation",
+          "signature": "200012991D"
+        }
+      ]
+    },
+    {
+      "name": "ISuspendingOperation",
+      "namespace": "Windows.ApplicationModel",
+      "iid": "9da4ca41-20e1-4e9b-9f65-a9f435340c3a",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "guid_attribute": {
+        "name": "Windows.Foundation.Metadata.GuidAttribute",
+        "blob": "010041CAA49DE1209B4E9F65A9F435340C3A0000",
+        "guid": "9da4ca41-20e1-4e9b-9f65-a9f435340c3a"
+      },
+      "iid_hits": [
+        {
+          "iid_va": "0x1802de360",
+          "iid_file_offset": "0x2dd760",
+          "preceding_type_pointer": "0x18000dab8",
+          "surrounding_bytes": "b8da00800100000070da008001000000000000000000000041caa49de1209b4e9f65a9f435340c3a01000000000000000000000000000000"
+        }
+      ],
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetDeferral",
+          "signature": "2000129915"
+        },
+        {
+          "slot": 7,
+          "name": "get_Deadline",
+          "signature": "2000119C31"
+        }
+      ]
+    }
+  ],
+  "contexts": {
+    "0x18010dea0": {
+      "pointer": "0x180007f68",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplication"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-constructor-real.json",
+          "evidence_id": "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+          "instruction": "0x180461e71"
+        },
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e067"
+        }
+      ]
+    },
+    "0x18010ed70": {
+      "pointer": "0x18000da20",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "ISuspendingEventArgs"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-constructor-real.json",
+          "evidence_id": "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+          "instruction": "0x180461f6b"
+        }
+      ]
+    },
+    "0x18010ed88": {
+      "pointer": "0x18000dab8",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "ISuspendingOperation"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-constructor-real.json",
+          "evidence_id": "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+          "instruction": "0x180461f83"
+        }
+      ]
+    },
+    "0x18010eda0": {
+      "pointer": "0x18000db50",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "ISuspendingDeferral"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-constructor-real.json",
+          "evidence_id": "ev_11c7cd42de48d8f11f696e3fb7ba27b733f3f064d817224782bae89dbd45da0e",
+          "instruction": "0x180461f9b"
+        }
+      ]
+    },
+    "0x18010f128": {
+      "pointer": "0x1800084e0",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IDispatcherTimer"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-nearby.json",
+          "evidence_id": "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640",
+          "instruction": "0x180531e23"
+        }
+      ]
+    },
+    "0x180110718": {
+      "pointer": "0x180008970",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "INavigationFailedEventArgs"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-nearby.json",
+          "evidence_id": "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640",
+          "instruction": "0x180532047"
+        }
+      ]
+    },
+    "0x18010f348": {
+      "pointer": "0x180008840",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "INavigationEventArgs"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-nearby.json",
+          "evidence_id": "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640",
+          "instruction": "0x180532073"
+        }
+      ]
+    },
+    "0x18010df20": {
+      "pointer": "0x180007648",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IFrameworkElement"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\app-nearby.json",
+          "evidence_id": "ev_6dfb89df91968c1ff858cb3bd985aeae45a7c2cc07096b251cdad77e5c021640",
+          "instruction": "0x1805320a4"
+        }
+      ]
+    },
+    "0x18010deb0": {
+      "pointer": "0x180007f68",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplication"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\application-event-projections.json",
+          "evidence_id": "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e",
+          "instruction": "0x1804620c7"
+        },
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e3e7"
+        },
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e4b7"
+        }
+      ]
+    },
+    "0x18010de60": {
+      "pointer": "0x180007ee0",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplicationFactory"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\application-event-projections.json",
+          "evidence_id": "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e",
+          "instruction": "0x180462517"
+        },
+        {
+          "file": "evidence\\app-lifecycle\\application-event-projections.json",
+          "evidence_id": "ev_e6619ac275b45bfd79a802c4eb21843e27b9de923b34bdd32ae0dfec4ffe786e",
+          "instruction": "0x180462596"
+        }
+      ]
+    },
+    "0x18010ef38": {
+      "pointer": "0x1800080e8",
+      "type_offset": 8,
+      "offset_basis": "0x180465840 loads context+8 as callee interface",
+      "interfaces": [
+        "IApplicationOverrides"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\base-onlaunched-projection.json",
+          "evidence_id": "ev_c7ea8672e8f41aa29cc97cb28ec6f1dd3902e8b2e3acaf5e8d4f2dc47986b0a9",
+          "instruction": "0x1804657d7"
+        }
+      ]
+    },
+    "0x18010de88": {
+      "pointer": "0x180007f68",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplication"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e0c7"
+        }
+      ]
+    },
+    "0x1801104c8": {
+      "pointer": "0x180008100",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplication2"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e247"
+        },
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e317"
+        }
+      ]
+    },
+    "0x18010dec0": {
+      "pointer": "0x180007f68",
+      "type_offset": 0,
+      "offset_basis": "first generic-context type pointer",
+      "interfaces": [
+        "IApplication"
+      ],
+      "references": [
+        {
+          "file": "evidence\\app-lifecycle\\lifecycle-event-accessors.json",
+          "evidence_id": "ev_0770b88bee78dd34926e473776098a0a11c36de70fc1a6372c9fc15f3d771853",
+          "instruction": "0x18051e4e7"
+        }
+      ]
+    }
+  },
+  "limitation": "Local system WinMD supplies stable IID and declared method ABI order, not exact app source. Selected interfaces derive from IInspectable (six base slots). Native generic contexts reference the type pointer 24 bytes before a literal IID. Calls still require instruction/argument analysis. No app code or WinRT API was executed."
+}

@@ -1,0 +1,1209 @@
+{
+  "interfaces": 23,
+  "all_guids_match": true,
+  "all_method_orders_match": false,
+  "records": [
+    {
+      "name": "IBackgroundExecutionManagerStatics",
+      "iid": "e826ea58-66a9-4d41-83d4-b4c18c87b846",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "RequestAccessAsync",
+          "signature": "200015129C9D01118471"
+        },
+        {
+          "slot": 7,
+          "name": "RequestAccessAsync",
+          "signature": "200115129C9D011184710E"
+        },
+        {
+          "slot": 8,
+          "name": "RemoveAccess",
+          "signature": "200001"
+        },
+        {
+          "slot": 9,
+          "name": "RemoveAccess",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 10,
+          "name": "GetAccessStatus",
+          "signature": "2000118471"
+        },
+        {
+          "slot": 11,
+          "name": "GetAccessStatus",
+          "signature": "20011184710E"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "RequestAccessAsync",
+        "RequestAccessAsync",
+        "RemoveAccess",
+        "RemoveAccess",
+        "GetAccessStatus",
+        "GetAccessStatus"
+      ],
+      "reference_names": [
+        "RequestAccessAsync",
+        "RequestAccessForApplicationAsync",
+        "RemoveAccess",
+        "RemoveAccessForApplication",
+        "GetAccessStatus",
+        "GetAccessStatusForApplication"
+      ]
+    },
+    {
+      "name": "IBackgroundTask",
+      "iid": "7d13d534-fd12-43ce-8c22-ea1ff13c06df",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Run",
+          "signature": "200101128561"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Run"
+      ],
+      "reference_names": [
+        "Run"
+      ]
+    },
+    {
+      "name": "IBackgroundTaskBuilder",
+      "iid": "0351550e-3e64-4572-a93a-84075a37c917",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "put_TaskEntryPoint",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 7,
+          "name": "get_TaskEntryPoint",
+          "signature": "20000E"
+        },
+        {
+          "slot": 8,
+          "name": "SetTrigger",
+          "signature": "20010112858D"
+        },
+        {
+          "slot": 9,
+          "name": "AddCondition",
+          "signature": "200101128535"
+        },
+        {
+          "slot": 10,
+          "name": "put_Name",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 11,
+          "name": "get_Name",
+          "signature": "20000E"
+        },
+        {
+          "slot": 12,
+          "name": "Register",
+          "signature": "20001284A1"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "SetTaskEntryPoint",
+        "TaskEntryPoint",
+        "SetTrigger",
+        "AddCondition",
+        "SetName",
+        "Name",
+        "Register"
+      ],
+      "reference_names": [
+        "SetTaskEntryPoint",
+        "TaskEntryPoint",
+        "SetTrigger",
+        "AddCondition",
+        "SetName",
+        "Name",
+        "Register"
+      ]
+    },
+    {
+      "name": "IBackgroundTaskDeferral",
+      "iid": "93cc156d-af27-4dd3-846e-24ee40cadd25",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Complete",
+          "signature": "200001"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Complete"
+      ],
+      "reference_names": [
+        "Complete"
+      ]
+    },
+    {
+      "name": "IBackgroundTaskInstance",
+      "iid": "865bda7a-21d8-4573-8f32-928a1b0641f6",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_InstanceId",
+          "signature": "2000119CC5"
+        },
+        {
+          "slot": 7,
+          "name": "get_Task",
+          "signature": "20001284A1"
+        },
+        {
+          "slot": 8,
+          "name": "get_Progress",
+          "signature": "200009"
+        },
+        {
+          "slot": 9,
+          "name": "put_Progress",
+          "signature": "20010109"
+        },
+        {
+          "slot": 10,
+          "name": "get_TriggerDetails",
+          "signature": "20001C"
+        },
+        {
+          "slot": 11,
+          "name": "add_Canceled",
+          "signature": "2001119C7D128485"
+        },
+        {
+          "slot": 12,
+          "name": "remove_Canceled",
+          "signature": "200101119C7D"
+        },
+        {
+          "slot": 13,
+          "name": "get_SuspendedCount",
+          "signature": "200009"
+        },
+        {
+          "slot": 14,
+          "name": "GetDeferral",
+          "signature": "2000128495"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "InstanceId",
+        "Task",
+        "Progress",
+        "SetProgress",
+        "TriggerDetails",
+        "Canceled",
+        "RemoveCanceled",
+        "SuspendedCount",
+        "GetDeferral"
+      ],
+      "reference_names": [
+        "InstanceId",
+        "Task",
+        "Progress",
+        "SetProgress",
+        "TriggerDetails",
+        "Canceled",
+        "RemoveCanceled",
+        "SuspendedCount",
+        "GetDeferral"
+      ]
+    },
+    {
+      "name": "IBackgroundTaskRegistration",
+      "iid": "10654cc2-a26e-43bf-8c12-1fb40dbfbfa0",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_TaskId",
+          "signature": "2000119CC5"
+        },
+        {
+          "slot": 7,
+          "name": "get_Name",
+          "signature": "20000E"
+        },
+        {
+          "slot": 8,
+          "name": "add_Progress",
+          "signature": "2001119C7D12849D"
+        },
+        {
+          "slot": 9,
+          "name": "remove_Progress",
+          "signature": "200101119C7D"
+        },
+        {
+          "slot": 10,
+          "name": "add_Completed",
+          "signature": "2001119C7D128491"
+        },
+        {
+          "slot": 11,
+          "name": "remove_Completed",
+          "signature": "200101119C7D"
+        },
+        {
+          "slot": 12,
+          "name": "Unregister",
+          "signature": "20010102"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "TaskId",
+        "Name",
+        "Progress",
+        "RemoveProgress",
+        "Completed",
+        "RemoveCompleted",
+        "Unregister"
+      ],
+      "reference_names": [
+        "TaskId",
+        "Name",
+        "Progress",
+        "RemoveProgress",
+        "Completed",
+        "RemoveCompleted",
+        "Unregister"
+      ]
+    },
+    {
+      "name": "IBackgroundTaskRegistrationStatics",
+      "iid": "4c542f69-b000-42ba-a093-6a563c65e3f8",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_AllTasks",
+          "signature": "200015129CC902119CC5128571"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "AllTasks"
+      ],
+      "reference_names": [
+        "AllTasks"
+      ]
+    },
+    {
+      "name": "ISystemConditionFactory",
+      "iid": "d269d1f1-05a7-49ae-87d7-16b2b8b9a553",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Create",
+          "signature": "20011286F11186F5"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Create"
+      ],
+      "reference_names": [
+        "Create"
+      ]
+    },
+    {
+      "name": "ITimeTriggerFactory",
+      "iid": "38c682fe-9b54-45e6-b2f3-269b87a6f734",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.ApplicationModel.winmd",
+      "winmd_sha256": "765112ed93f5548292a4e21f272b7cd44a28d182acea8be7eef07ed1bdb5f947",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Create",
+          "signature": "20021287050902"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Create"
+      ],
+      "reference_names": [
+        "Create"
+      ]
+    },
+    {
+      "name": "ITileNotification",
+      "iid": "ebaec8fa-50ec-4c18-b4d0-3af02e5540ab",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Content",
+          "signature": "20001297D9"
+        },
+        {
+          "slot": 7,
+          "name": "put_ExpirationTime",
+          "signature": "200101151297510111979D"
+        },
+        {
+          "slot": 8,
+          "name": "get_ExpirationTime",
+          "signature": "2000151297510111979D"
+        },
+        {
+          "slot": 9,
+          "name": "put_Tag",
+          "signature": "2001010E"
+        },
+        {
+          "slot": 10,
+          "name": "get_Tag",
+          "signature": "20000E"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Content",
+        "SetExpirationTime",
+        "ExpirationTime",
+        "SetTag",
+        "Tag"
+      ],
+      "reference_names": [
+        "Content",
+        "SetExpirationTime",
+        "ExpirationTime",
+        "SetTag",
+        "Tag"
+      ]
+    },
+    {
+      "name": "ITileNotificationFactory",
+      "iid": "c6abdd6e-4928-46c8-bdbf-81a047dea0d4",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateTileNotification",
+          "signature": "20011290151297D9"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "CreateTileNotification"
+      ],
+      "reference_names": [
+        "CreateTileNotification"
+      ]
+    },
+    {
+      "name": "ITileUpdateManagerStatics",
+      "iid": "da159e5d-3ea9-4986-8d84-b09d5e12276d",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "CreateTileUpdaterForApplication",
+          "signature": "2000129025"
+        },
+        {
+          "slot": 7,
+          "name": "CreateTileUpdaterForApplication",
+          "signature": "20011290250E"
+        },
+        {
+          "slot": 8,
+          "name": "CreateTileUpdaterForSecondaryTile",
+          "signature": "20011290250E"
+        },
+        {
+          "slot": 9,
+          "name": "GetTemplateContent",
+          "signature": "20011297D9119019"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "CreateTileUpdaterForApplication",
+        "CreateTileUpdaterForApplication",
+        "CreateTileUpdaterForSecondaryTile",
+        "GetTemplateContent"
+      ],
+      "reference_names": [
+        "CreateTileUpdaterForApplication",
+        "CreateTileUpdaterForApplicationWithId",
+        "CreateTileUpdaterForSecondaryTile",
+        "GetTemplateContent"
+      ]
+    },
+    {
+      "name": "ITileUpdater",
+      "iid": "0942a48b-1d91-44ec-9243-c1e821c29a20",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.UI.winmd",
+      "winmd_sha256": "fb7faf12404e7a6f905249edb93a401adcdc7d7da5b0f8c2d4ac78de5ac08073",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "Update",
+          "signature": "200101129015"
+        },
+        {
+          "slot": 7,
+          "name": "Clear",
+          "signature": "200001"
+        },
+        {
+          "slot": 8,
+          "name": "EnableNotificationQueue",
+          "signature": "20010102"
+        },
+        {
+          "slot": 9,
+          "name": "get_Setting",
+          "signature": "2000118FE5"
+        },
+        {
+          "slot": 10,
+          "name": "AddToSchedule",
+          "signature": "200101128FF5"
+        },
+        {
+          "slot": 11,
+          "name": "RemoveFromSchedule",
+          "signature": "200101128FF5"
+        },
+        {
+          "slot": 12,
+          "name": "GetScheduledTileNotifications",
+          "signature": "20001512971901128FF5"
+        },
+        {
+          "slot": 13,
+          "name": "StartPeriodicUpdate",
+          "signature": "200201129799118FF1"
+        },
+        {
+          "slot": 14,
+          "name": "StartPeriodicUpdate",
+          "signature": "20030112979911979D118FF1"
+        },
+        {
+          "slot": 15,
+          "name": "StopPeriodicUpdate",
+          "signature": "200001"
+        },
+        {
+          "slot": 16,
+          "name": "StartPeriodicUpdateBatch",
+          "signature": "2002011512971101129799118FF1"
+        },
+        {
+          "slot": 17,
+          "name": "StartPeriodicUpdateBatch",
+          "signature": "200301151297110112979911979D118FF1"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "Update",
+        "Clear",
+        "EnableNotificationQueue",
+        "Setting",
+        "AddToSchedule",
+        "RemoveFromSchedule",
+        "GetScheduledTileNotifications",
+        "StartPeriodicUpdate",
+        "StartPeriodicUpdate",
+        "StopPeriodicUpdate",
+        "StartPeriodicUpdateBatch",
+        "StartPeriodicUpdateBatch"
+      ],
+      "reference_names": [
+        "Update",
+        "Clear",
+        "EnableNotificationQueue",
+        "Setting",
+        "AddToSchedule",
+        "RemoveFromSchedule",
+        "GetScheduledTileNotifications",
+        "StartPeriodicUpdate",
+        "StartPeriodicUpdateAtTime",
+        "StopPeriodicUpdate",
+        "StartPeriodicUpdateBatch",
+        "StartPeriodicUpdateBatchAtTime"
+      ]
+    },
+    {
+      "name": "ILockScreenStatics",
+      "iid": "3ee9d3ad-b607-40ae-b426-7631d9821269",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.System.winmd",
+      "winmd_sha256": "8d7502f61293fb05005539d21f5409919c8fbf1d092872ec8c1175b555ac4956",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_OriginalImageFile",
+          "signature": "20001287D5"
+        },
+        {
+          "slot": 7,
+          "name": "GetImageStream",
+          "signature": "2000128835"
+        },
+        {
+          "slot": 8,
+          "name": "SetImageFileAsync",
+          "signature": "200112878D1287DD"
+        },
+        {
+          "slot": 9,
+          "name": "SetImageStreamAsync",
+          "signature": "200112878D128835"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "OriginalImageFile",
+        "GetImageStream",
+        "SetImageFileAsync",
+        "SetImageStreamAsync"
+      ],
+      "reference_names": [
+        "OriginalImageFile",
+        "GetImageStream",
+        "SetImageFileAsync",
+        "SetImageStreamAsync"
+      ]
+    },
+    {
+      "name": "IUserProfilePersonalizationSettings",
+      "iid": "8ceddab4-7998-46d5-8dd3-184f1c5f9ab9",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.System.winmd",
+      "winmd_sha256": "8d7502f61293fb05005539d21f5409919c8fbf1d092872ec8c1175b555ac4956",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "TrySetLockScreenImageAsync",
+          "signature": "20011512877901021287E1"
+        },
+        {
+          "slot": 7,
+          "name": "TrySetWallpaperImageAsync",
+          "signature": "20011512877901021287E1"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "TrySetLockScreenImageAsync",
+        "TrySetWallpaperImageAsync"
+      ],
+      "reference_names": [
+        "TrySetLockScreenImageAsync",
+        "TrySetWallpaperImageAsync"
+      ]
+    },
+    {
+      "name": "IUserProfilePersonalizationSettingsStatics",
+      "iid": "91acb841-5037-454b-9883-bb772d08dd16",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.System.winmd",
+      "winmd_sha256": "8d7502f61293fb05005539d21f5409919c8fbf1d092872ec8c1175b555ac4956",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_Current",
+          "signature": "2000128751"
+        },
+        {
+          "slot": 7,
+          "name": "IsSupported",
+          "signature": "200002"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "Current",
+        "IsSupported"
+      ],
+      "reference_names": [
+        "Current",
+        "IsSupported"
+      ]
+    },
+    {
+      "name": "IBitmapDecoder",
+      "iid": "acef22ba-1d74-4c91-9dfc-9620745233e6",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_BitmapContainerProperties",
+          "signature": "2000128279"
+        },
+        {
+          "slot": 7,
+          "name": "get_DecoderInformation",
+          "signature": "2000128255"
+        },
+        {
+          "slot": 8,
+          "name": "get_FrameCount",
+          "signature": "200009"
+        },
+        {
+          "slot": 9,
+          "name": "GetPreviewAsync",
+          "signature": "200015128791011282E9"
+        },
+        {
+          "slot": 10,
+          "name": "GetFrameAsync",
+          "signature": "2001151287910112826509"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "BitmapContainerProperties",
+        "DecoderInformation",
+        "FrameCount",
+        "GetPreviewAsync",
+        "GetFrameAsync"
+      ],
+      "reference_names": [
+        "BitmapContainerProperties",
+        "DecoderInformation",
+        "FrameCount",
+        "GetPreviewAsync",
+        "GetFrameAsync"
+      ]
+    },
+    {
+      "name": "IBitmapDecoderStatics",
+      "iid": "438ccb26-bcef-4e95-bad6-23a822e58d01",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_BmpDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 7,
+          "name": "get_JpegDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 8,
+          "name": "get_PngDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 9,
+          "name": "get_TiffDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 10,
+          "name": "get_GifDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 11,
+          "name": "get_JpegXRDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 12,
+          "name": "get_IcoDecoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 13,
+          "name": "GetDecoderInformationEnumerator",
+          "signature": "20001512879901128255"
+        },
+        {
+          "slot": 14,
+          "name": "CreateAsync",
+          "signature": "200115128791011282591287A1"
+        },
+        {
+          "slot": 15,
+          "name": "CreateAsync",
+          "signature": "200215128791011282591187E91287A1"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "BmpDecoderId",
+        "JpegDecoderId",
+        "PngDecoderId",
+        "TiffDecoderId",
+        "GifDecoderId",
+        "JpegXRDecoderId",
+        "IcoDecoderId",
+        "GetDecoderInformationEnumerator",
+        "CreateAsync",
+        "CreateAsync"
+      ],
+      "reference_names": [
+        "BmpDecoderId",
+        "JpegDecoderId",
+        "PngDecoderId",
+        "TiffDecoderId",
+        "GifDecoderId",
+        "JpegXRDecoderId",
+        "IcoDecoderId",
+        "GetDecoderInformationEnumerator",
+        "CreateAsync",
+        "CreateWithIdAsync"
+      ]
+    },
+    {
+      "name": "IBitmapEncoder",
+      "iid": "2bc468e3-e1f8-4b54-95e8-32919551ce62",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_EncoderInformation",
+          "signature": "2000128255"
+        },
+        {
+          "slot": 7,
+          "name": "get_BitmapProperties",
+          "signature": "2000128275"
+        },
+        {
+          "slot": 8,
+          "name": "get_BitmapContainerProperties",
+          "signature": "2000128275"
+        },
+        {
+          "slot": 9,
+          "name": "get_IsThumbnailGenerated",
+          "signature": "200002"
+        },
+        {
+          "slot": 10,
+          "name": "put_IsThumbnailGenerated",
+          "signature": "20010102"
+        },
+        {
+          "slot": 11,
+          "name": "get_GeneratedThumbnailWidth",
+          "signature": "200009"
+        },
+        {
+          "slot": 12,
+          "name": "put_GeneratedThumbnailWidth",
+          "signature": "20010109"
+        },
+        {
+          "slot": 13,
+          "name": "get_GeneratedThumbnailHeight",
+          "signature": "200009"
+        },
+        {
+          "slot": 14,
+          "name": "put_GeneratedThumbnailHeight",
+          "signature": "20010109"
+        },
+        {
+          "slot": 15,
+          "name": "get_BitmapTransform",
+          "signature": "2000128289"
+        },
+        {
+          "slot": 16,
+          "name": "SetPixelData",
+          "signature": "20070111826D11824509090D0D1D05"
+        },
+        {
+          "slot": 17,
+          "name": "GoToNextFrameAsync",
+          "signature": "200012879D"
+        },
+        {
+          "slot": 18,
+          "name": "GoToNextFrameAsync",
+          "signature": "200112879D151287ED01151287F1020E12828D"
+        },
+        {
+          "slot": 19,
+          "name": "FlushAsync",
+          "signature": "200012879D"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "EncoderInformation",
+        "BitmapProperties",
+        "BitmapContainerProperties",
+        "IsThumbnailGenerated",
+        "SetIsThumbnailGenerated",
+        "GeneratedThumbnailWidth",
+        "SetGeneratedThumbnailWidth",
+        "GeneratedThumbnailHeight",
+        "SetGeneratedThumbnailHeight",
+        "BitmapTransform",
+        "SetPixelData",
+        "GoToNextFrameAsync",
+        "GoToNextFrameAsync",
+        "FlushAsync"
+      ],
+      "reference_names": [
+        "EncoderInformation",
+        "BitmapProperties",
+        "BitmapContainerProperties",
+        "IsThumbnailGenerated",
+        "SetIsThumbnailGenerated",
+        "GeneratedThumbnailWidth",
+        "SetGeneratedThumbnailWidth",
+        "GeneratedThumbnailHeight",
+        "SetGeneratedThumbnailHeight",
+        "BitmapTransform",
+        "SetPixelData",
+        "GoToNextFrameAsync",
+        "GoToNextFrameWithEncodingOptionsAsync",
+        "FlushAsync"
+      ]
+    },
+    {
+      "name": "IBitmapEncoderStatics",
+      "iid": "a74356a7-a4e4-4eb9-8e40-564de7e1ccb2",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_BmpEncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 7,
+          "name": "get_JpegEncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 8,
+          "name": "get_PngEncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 9,
+          "name": "get_TiffEncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 10,
+          "name": "get_GifEncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 11,
+          "name": "get_JpegXREncoderId",
+          "signature": "20001187E9"
+        },
+        {
+          "slot": 12,
+          "name": "GetEncoderInformationEnumerator",
+          "signature": "20001512879901128255"
+        },
+        {
+          "slot": 13,
+          "name": "CreateAsync",
+          "signature": "2002151287910112825D1187E91287A1"
+        },
+        {
+          "slot": 14,
+          "name": "CreateAsync",
+          "signature": "2003151287910112825D1187E91287A1151287ED01151287F1020E12828D"
+        },
+        {
+          "slot": 15,
+          "name": "CreateForTranscodingAsync",
+          "signature": "2002151287910112825D1287A1128259"
+        },
+        {
+          "slot": 16,
+          "name": "CreateForInPlacePropertyEncodingAsync",
+          "signature": "2001151287910112825D128259"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "BmpEncoderId",
+        "JpegEncoderId",
+        "PngEncoderId",
+        "TiffEncoderId",
+        "GifEncoderId",
+        "JpegXREncoderId",
+        "GetEncoderInformationEnumerator",
+        "CreateAsync",
+        "CreateAsync",
+        "CreateForTranscodingAsync",
+        "CreateForInPlacePropertyEncodingAsync"
+      ],
+      "reference_names": [
+        "BmpEncoderId",
+        "JpegEncoderId",
+        "PngEncoderId",
+        "TiffEncoderId",
+        "GifEncoderId",
+        "JpegXREncoderId",
+        "GetEncoderInformationEnumerator",
+        "CreateAsync",
+        "CreateWithEncodingOptionsAsync",
+        "CreateForTranscodingAsync",
+        "CreateForInPlacePropertyEncodingAsync"
+      ]
+    },
+    {
+      "name": "IBitmapFrame",
+      "iid": "72a49a1c-8081-438d-91bc-94ecfc8185c6",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "GetThumbnailAsync",
+          "signature": "200015128791011282E9"
+        },
+        {
+          "slot": 7,
+          "name": "get_BitmapProperties",
+          "signature": "2000128279"
+        },
+        {
+          "slot": 8,
+          "name": "get_BitmapPixelFormat",
+          "signature": "200011826D"
+        },
+        {
+          "slot": 9,
+          "name": "get_BitmapAlphaMode",
+          "signature": "2000118245"
+        },
+        {
+          "slot": 10,
+          "name": "get_DpiX",
+          "signature": "20000D"
+        },
+        {
+          "slot": 11,
+          "name": "get_DpiY",
+          "signature": "20000D"
+        },
+        {
+          "slot": 12,
+          "name": "get_PixelWidth",
+          "signature": "200009"
+        },
+        {
+          "slot": 13,
+          "name": "get_PixelHeight",
+          "signature": "200009"
+        },
+        {
+          "slot": 14,
+          "name": "get_OrientedPixelWidth",
+          "signature": "200009"
+        },
+        {
+          "slot": 15,
+          "name": "get_OrientedPixelHeight",
+          "signature": "200009"
+        },
+        {
+          "slot": 16,
+          "name": "GetPixelDataAsync",
+          "signature": "200015128791011282F1"
+        },
+        {
+          "slot": 17,
+          "name": "GetPixelDataAsync",
+          "signature": "200515128791011282F111826D118245128289118295118291"
+        }
+      ],
+      "same_order": false,
+      "local_names": [
+        "GetThumbnailAsync",
+        "BitmapProperties",
+        "BitmapPixelFormat",
+        "BitmapAlphaMode",
+        "DpiX",
+        "DpiY",
+        "PixelWidth",
+        "PixelHeight",
+        "OrientedPixelWidth",
+        "OrientedPixelHeight",
+        "GetPixelDataAsync",
+        "GetPixelDataAsync"
+      ],
+      "reference_names": [
+        "GetThumbnailAsync",
+        "BitmapProperties",
+        "BitmapPixelFormat",
+        "BitmapAlphaMode",
+        "DpiX",
+        "DpiY",
+        "PixelWidth",
+        "PixelHeight",
+        "OrientedPixelWidth",
+        "OrientedPixelHeight",
+        "GetPixelDataAsync",
+        "GetPixelDataTransformedAsync"
+      ]
+    },
+    {
+      "name": "IBitmapTransform",
+      "iid": "ae755344-e268-4d35-adcf-e995d31a8d34",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "get_ScaledWidth",
+          "signature": "200009"
+        },
+        {
+          "slot": 7,
+          "name": "put_ScaledWidth",
+          "signature": "20010109"
+        },
+        {
+          "slot": 8,
+          "name": "get_ScaledHeight",
+          "signature": "200009"
+        },
+        {
+          "slot": 9,
+          "name": "put_ScaledHeight",
+          "signature": "20010109"
+        },
+        {
+          "slot": 10,
+          "name": "get_InterpolationMode",
+          "signature": "2000118269"
+        },
+        {
+          "slot": 11,
+          "name": "put_InterpolationMode",
+          "signature": "200101118269"
+        },
+        {
+          "slot": 12,
+          "name": "get_Flip",
+          "signature": "2000118261"
+        },
+        {
+          "slot": 13,
+          "name": "put_Flip",
+          "signature": "200101118261"
+        },
+        {
+          "slot": 14,
+          "name": "get_Rotation",
+          "signature": "2000118281"
+        },
+        {
+          "slot": 15,
+          "name": "put_Rotation",
+          "signature": "200101118281"
+        },
+        {
+          "slot": 16,
+          "name": "get_Bounds",
+          "signature": "2000118249"
+        },
+        {
+          "slot": 17,
+          "name": "put_Bounds",
+          "signature": "200101118249"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "ScaledWidth",
+        "SetScaledWidth",
+        "ScaledHeight",
+        "SetScaledHeight",
+        "InterpolationMode",
+        "SetInterpolationMode",
+        "Flip",
+        "SetFlip",
+        "Rotation",
+        "SetRotation",
+        "Bounds",
+        "SetBounds"
+      ],
+      "reference_names": [
+        "ScaledWidth",
+        "SetScaledWidth",
+        "ScaledHeight",
+        "SetScaledHeight",
+        "InterpolationMode",
+        "SetInterpolationMode",
+        "Flip",
+        "SetFlip",
+        "Rotation",
+        "SetRotation",
+        "Bounds",
+        "SetBounds"
+      ]
+    },
+    {
+      "name": "IPixelDataProvider",
+      "iid": "dd831f25-185c-4595-9fb9-ccbe6ec18a6f",
+      "winmd_path": "C:\\Windows\\System32\\WinMetadata\\Windows.Graphics.winmd",
+      "winmd_sha256": "35cf2dd94183f594e0d227c205a9e47217fb729c56a4fb456a9bb497547ff3e1",
+      "methods": [
+        {
+          "slot": 6,
+          "name": "DetachPixelData",
+          "signature": "20001D05"
+        }
+      ],
+      "same_order": true,
+      "local_names": [
+        "DetachPixelData"
+      ],
+      "reference_names": [
+        "DetachPixelData"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "evidence_id": "DP-DATA-MODEL-20261017",
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "source_archive": {
+    "path": "evidence/local-state/ImageArchive.observed.json",
+    "sha256": "c3be13096bc893f9cba52998905b70273187a88bb7008e909a692d066aab828b",
+    "length": 1403
+  },
+  "source_snapshot": {
+    "path": "evidence/local-state/local-state.json",
+    "sha256": "900d8a372113037128ab60307f4b7cdadc63dbcc56d78f716ee8a8caf4cbaf9e",
+    "length": 19147,
+    "evidence_id": "DP-LOCAL-STATE-20261017"
+  },
+  "snapshot_utc": "2026-10-17T08:32:01.706122+00:00",
+  "top_level_type": "dict",
+  "top_level_keys": [
+    "images"
+  ],
+  "image_count": 7,
+  "image_object_key_sets": [
+    [
+      "url",
+      "copyright"
+    ]
+  ],
+  "observed_field_types": {
+    "images": "array",
+    "images[].url": "string",
+    "images[].copyright": "string"
+  },
+  "projection": {
+    "constructor": "0x1804b9190",
+    "selector": "0x1804b9510",
+    "input_collection_offset": "0x8",
+    "output_collection_offset": "0x8",
+    "item_copies": [
+      {
+        "input": "0x8",
+        "output": "0x8",
+        "semantic_field": "URL"
+      },
+      {
+        "input": "0x10",
+        "output": "0x10",
+        "semantic_field": "Copyright"
+      }
+    ],
+    "computed_item_field": {
+      "offset": "0x18",
+      "value": "GetImageFileName(output.Url)"
+    },
+    "output_item_eetype": "0x180004d58",
+    "output_item_base_size_from_eetype": 40,
+    "input_null": "ArgumentNullException",
+    "input_images_null": "new empty list",
+    "input_item_null": "no explicit guard before dereference"
+  },
+  "limitations": [
+    "Observed keys describe the persisted local snapshot, not the complete Bing service response contract.",
+    "NativeFormat type-name strings and field offsets support semantic model roles; a full type-to-EEType/field metadata graph was not decoded.",
+    "Offsets are native x64 implementation layout, not a portable serialization format.",
+    "Serializer attributes, converters, custom contract resolvers, and all accepted malformed-JSON cases are not completely recovered."
+  ]
+}

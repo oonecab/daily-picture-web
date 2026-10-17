@@ -1,0 +1,497 @@
+{
+  "app": {
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "codeview": [
+      {
+        "guid": "fe1416b8-6dd3-4fcf-aff4-5d354d9fbfac",
+        "age": 1,
+        "path": "D:\\data\\PkgProc\\mupAwdZgJkaFwBR2iGOucg\\ExtractedBundle\\Duracellko.BingImage.Universal_1.4.13.0_x64\\Duracellko.BingImage.Universal.pdb",
+        "basename": "Duracellko.BingImage.Universal.pdb",
+        "symbol_key": "FE1416B86DD34FCFAFF45D354D9FBFAC1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/Duracellko.BingImage.Universal.pdb/FE1416B86DD34FCFAFF45D354D9FBFAC1/Duracellko.BingImage.Universal.pdb"
+      }
+    ]
+  },
+  "shared": {
+    "path": "C:\\Program Files\\WindowsApps\\Microsoft.NET.Native.Framework.1.7_1.7.27413.0_x64__8wekyb3d8bbwe\\SharedLibrary.dll",
+    "sha256": "078c83815b5b6be67a397e33f0bfe125708a933f0a034545fc6a088f5eb0ce6d",
+    "codeview": [
+      {
+        "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+        "age": 1,
+        "path": "f:\\ddSetup\\SD\\2\\setup\\msis\\x86ret\\enu\\netfx_ProjectNamd64\\TestILC\\ExternalFiles\\SharedAssemblyPath\\ret\\Native\\SharedLibrary.pdb",
+        "basename": "SharedLibrary.pdb",
+        "symbol_key": "FE6DCBB5864A4F9D8101638B869D98AE1",
+        "symbol_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb"
+      }
+    ]
+  },
+  "custom_descriptors": [
+    {
+      "index": 0,
+      "eat_rva": "0x29f000",
+      "iat_rva": "0x29f000",
+      "count": 0,
+      "ordinary_eat_import": null
+    },
+    {
+      "index": 1,
+      "eat_rva": "0x2a8438",
+      "iat_rva": "0x29f008",
+      "count": 4737,
+      "ordinary_eat_import": {
+        "dll": "SharedLibrary.dll",
+        "va": "0x1802a8438",
+        "name": "$NEAT$",
+        "ordinal": null
+      }
+    }
+  ],
+  "neat_export": {
+    "va": "0x18010e1d0",
+    "rva": "0x10e1d0"
+  },
+  "shared_import_range": {
+    "start": "0x18029f008",
+    "end_exclusive": "0x1802a8410",
+    "count": 4737
+  },
+  "layout_source": "https://github.com/synacktiv/dotNIET/blob/main/dotNIET_plugin.py",
+  "symbol_validation": {
+    "pdb_path": "E:\\study\\rea\\daily-picture\\evidence\\deep-symbols\\SharedLibrary.pdb",
+    "pdb_sha256": "d3200600d44d7de49f986207738efab5823cc7ac4d0b9693d134982d02ef918a",
+    "guid": "fe6dcbb5-864a-4f9d-8101-638b869d98ae",
+    "pdb_stream_age": 3,
+    "dbi_age": 1,
+    "installed_pe_codeview_age": 1,
+    "all_section_headers_match": true,
+    "section_count": 22,
+    "public_symbol_records": 55968,
+    "unique_public_symbol_addresses": 43146,
+    "source_url": "https://msdl.microsoft.com/download/symbols/SharedLibrary.pdb/FE6DCBB5864A4F9D8101638B869D98AE1/SharedLibrary.pdb",
+    "note": "PDB stream age is 3; DBI age is 1 and matches the PE CodeView age. GUID and all 22 section layouts match the installed DLL."
+  },
+  "resolved_slots": [
+    {
+      "slot_va": "0x18029f130",
+      "slot_file_offset": "0x29e530",
+      "raw": "0x8000000000000416",
+      "neat_index": 1046,
+      "neat_entry_file_offset": "0x10e828",
+      "resolved_rva": "0x45f6e0",
+      "resolved_va": "0x18045f6e0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x18045f6e0",
+        "end_exclusive": "0x18045f70c",
+        "length": 44,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec284885d2741441b9010000004533c0e899060000904883c428c3e8def6",
+      "symbols": [
+        {
+          "name": "$15_System::Uri..ctor",
+          "flags": "procedure",
+          "record_offset": 917332,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1005280,
+          "type_index": "0x1d9b",
+          "length": 44
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f178",
+      "slot_file_offset": "0x29e578",
+      "raw": "0x8000000000000429",
+      "neat_index": 1065,
+      "neat_entry_file_offset": "0x10e874",
+      "resolved_rva": "0x65f3f0",
+      "resolved_va": "0x18065f3f0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x18065f3f0",
+        "end_exclusive": "0x18065f414",
+        "length": 36,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec28488b41184885c0750ee84ecee4ff488bc8ff157d5cc5ff488b401848",
+      "symbols": [
+        {
+          "name": "$15_System::Uri.get_Scheme",
+          "flags": "function",
+          "record_offset": 4255672,
+          "section": 5,
+          "section_offset": 3101680
+        },
+        {
+          "name": "$15_System::Uri.get_Scheme",
+          "flags": "procedure",
+          "record_offset": 929652,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 3101680,
+          "type_index": "0x1db5",
+          "length": 36
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f190",
+      "slot_file_offset": "0x29e590",
+      "raw": "0x8000000000000434",
+      "neat_index": 1076,
+      "neat_entry_file_offset": "0x10e8a0",
+      "resolved_rva": "0x660490",
+      "resolved_va": "0x180660490",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180660490",
+        "end_exclusive": "0x1806604c0",
+        "length": 48,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec28488bc2483bc87504b001eb1b4885c974144885c0740f488bd1488bc8",
+      "symbols": [
+        {
+          "name": "$15_System::Uri.op_Equality",
+          "flags": "function",
+          "record_offset": 4256364,
+          "section": 5,
+          "section_offset": 3105936
+        },
+        {
+          "name": "$15_System::Uri.op_Equality",
+          "flags": "procedure",
+          "record_offset": 935236,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 3105936,
+          "type_index": "0x1dcd",
+          "length": 48
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029f478",
+      "slot_file_offset": "0x29e878",
+      "raw": "0x8000000000000750",
+      "neat_index": 1872,
+      "neat_entry_file_offset": "0x10f510",
+      "resolved_rva": "0x411ff0",
+      "resolved_va": "0x180411ff0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180411ff0",
+        "end_exclusive": "0x1804120c3",
+        "length": 211,
+        "unwind_rva": "0x16b450"
+      },
+      "bytes": "5356574883ec204889542448498bf0488d7908488b1f4885db754f488b442448",
+      "symbols": [
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetResult",
+          "flags": "function",
+          "record_offset": 4700392,
+          "section": 5,
+          "section_offset": 688112
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::AsyncTaskMethodBuilder$1<System::__Canon>.SetResult",
+          "flags": "procedure",
+          "record_offset": 1302124,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 688112,
+          "type_index": "0x2354",
+          "length": 211
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x18029fab0",
+      "slot_file_offset": "0x29eeb0",
+      "raw": "0x8000000000000d40",
+      "neat_index": 3392,
+      "neat_entry_file_offset": "0x110cd0",
+      "resolved_rva": "0x4d5b90",
+      "resolved_va": "0x1804d5b90",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804d5b90",
+        "end_exclusive": "0x1804d5bae",
+        "length": 30,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec288b413025000000113d000000017405e808000000904883c428c3cccc",
+      "symbols": [
+        {
+          "name": "$13_System::Runtime::CompilerServices::TaskAwaiter.ValidateEnd",
+          "flags": "function",
+          "record_offset": 4080000,
+          "section": 5,
+          "section_offset": 1489808
+        },
+        {
+          "name": "$13_System::Runtime::CompilerServices::TaskAwaiter.ValidateEnd",
+          "flags": "procedure",
+          "record_offset": 2300476,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1489808,
+          "type_index": "0x301b",
+          "length": 30
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a0398",
+      "slot_file_offset": "0x29f798",
+      "raw": "0x800000000000155c",
+      "neat_index": 5468,
+      "neat_entry_file_offset": "0x112d40",
+      "resolved_rva": "0x655910",
+      "resolved_va": "0x180655910",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180655910",
+        "end_exclusive": "0x180655926",
+        "length": 22,
+        "unwind_rva": "0x16b440"
+      },
+      "bytes": "534883ec20488bd9e8e307eaff488bc34883c4205bc3cccccccccccccccccccc",
+      "symbols": [
+        {
+          "name": "$13_System::Threading::CancellationTokenSource.get_Token",
+          "flags": "function",
+          "record_offset": 4085728,
+          "section": 5,
+          "section_offset": 3062032
+        },
+        {
+          "name": "$13_System::Threading::CancellationTokenSource.get_Token",
+          "flags": "procedure",
+          "record_offset": 3741824,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 3062032,
+          "type_index": "0x40da",
+          "length": 22
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a1288",
+      "slot_file_offset": "0x2a0688",
+      "raw": "0x8000000000002b4a",
+      "neat_index": 11082,
+      "neat_entry_file_offset": "0x1184f8",
+      "resolved_rva": "0x4a5890",
+      "resolved_va": "0x1804a5890",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804a5890",
+        "end_exclusive": "0x1804a58a1",
+        "length": 17,
+        "unwind_rva": "0x16b4a0"
+      },
+      "bytes": "8b4130a900006001770433c0eb02b001c3cccccccccccccccccccccccccccccc",
+      "symbols": [
+        {
+          "name": "$13_System::Threading::Tasks::Task.get_IsCompleted",
+          "flags": "function",
+          "record_offset": 4119292,
+          "section": 5,
+          "section_offset": 1292432
+        },
+        {
+          "name": "$13_System::Threading::Tasks::Task.get_IsCompleted",
+          "flags": "procedure",
+          "record_offset": 7353628,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1292432,
+          "type_index": "0x3018",
+          "length": 17
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2cd8",
+      "slot_file_offset": "0x2a20d8",
+      "raw": "0x8000000000004197",
+      "neat_index": 16791,
+      "neat_entry_file_offset": "0x11de2c",
+      "resolved_rva": "0x6bf430",
+      "resolved_va": "0x1806bf430",
+      "resolved_section": ".text",
+      "owner": null,
+      "bytes": "e95b9ce3ffcccccce9539ce3ffcccccce9fb45daffcccccce9439ce3ffcccccc",
+      "symbols": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2f70",
+      "slot_file_offset": "0x2a2370",
+      "raw": "0x80000000000042d0",
+      "neat_index": 17104,
+      "neat_entry_file_offset": "0x11e310",
+      "resolved_rva": "0x4824e0",
+      "resolved_va": "0x1804824e0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1804824e0",
+        "end_exclusive": "0x180482553",
+        "length": 115,
+        "unwind_rva": "0x16b4ec"
+      },
+      "bytes": "5356574883ec60498bd8488bfa488bf133c033d2448d4020488d4c2420ff1515",
+      "symbols": [
+        {
+          "name": "System::String.Format",
+          "flags": "procedure",
+          "record_offset": 11206340,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1148128,
+          "type_index": "0x8917",
+          "length": 115
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a2f98",
+      "slot_file_offset": "0x2a2398",
+      "raw": "0x80000000000042d9",
+      "neat_index": 17113,
+      "neat_entry_file_offset": "0x11e334",
+      "resolved_rva": "0x426e40",
+      "resolved_va": "0x180426e40",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x180426e40",
+        "end_exclusive": "0x180426ebf",
+        "length": 127,
+        "unwind_rva": "0x16b5c0"
+      },
+      "bytes": "53565741564883ec28488bfa488bf14885c97446448b71084585f6743d4885d2",
+      "symbols": [
+        {
+          "name": "System::String.Concat",
+          "flags": "procedure",
+          "record_offset": 11211848,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 773696,
+          "type_index": "0x8925",
+          "length": 127
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a3120",
+      "slot_file_offset": "0x2a2520",
+      "raw": "0x8000000000004677",
+      "neat_index": 18039,
+      "neat_entry_file_offset": "0x11f1ac",
+      "resolved_rva": "0x6cfac8",
+      "resolved_va": "0x1806cfac8",
+      "resolved_section": ".text",
+      "owner": null,
+      "bytes": "e96311ddffcccccce94baaf1ffcccccce9d334f6ffcccccc4883c108e9079fdb",
+      "symbols": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a4758",
+      "slot_file_offset": "0x2a3b58",
+      "raw": "0x80000000000058cf",
+      "neat_index": 22735,
+      "neat_entry_file_offset": "0x123b0c",
+      "resolved_rva": "0x5125a0",
+      "resolved_va": "0x1805125a0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x1805125a0",
+        "end_exclusive": "0x1805125c1",
+        "length": 33,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec28488d1515a1daffff156f2adaff488d056046daff488b40084883c428",
+      "symbols": [
+        {
+          "name": "System::Globalization::FormatProvider.get_InvariantCulture",
+          "flags": "function",
+          "record_offset": 3343320,
+          "section": 5,
+          "section_offset": 1738144
+        },
+        {
+          "name": "System::Globalization::CultureInfo.get_InvariantCulture",
+          "flags": "function",
+          "record_offset": 3386492,
+          "section": 5,
+          "section_offset": 1738144
+        },
+        {
+          "name": "System::Globalization::FormatProvider.get_InvariantCulture",
+          "flags": "procedure",
+          "record_offset": 13915304,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1738144,
+          "type_index": "0x80cc",
+          "length": 33
+        },
+        {
+          "name": "System::Globalization::CultureInfo.get_InvariantCulture",
+          "flags": "procedure",
+          "record_offset": 14326864,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 1738144,
+          "type_index": "0x1559",
+          "length": 33
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a5188",
+      "slot_file_offset": "0x2a4588",
+      "raw": "0x8000000000006b1c",
+      "neat_index": 27420,
+      "neat_entry_file_offset": "0x128440",
+      "resolved_rva": "0x1ca50",
+      "resolved_va": "0x18001ca50",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0000200148000000b874008001000000030000001c1b949e5047428001000000",
+      "symbols": [
+        {
+          "name": "??_7Uri@$15_System@@6B@",
+          "flags": "none",
+          "record_offset": 446224,
+          "section": 1,
+          "section_offset": 113232
+        }
+      ],
+      "status": "resolved-by-validated-custom-descriptor"
+    }
+  ],
+  "limitations": [
+    "No target or runtime binder execution; this maps shipped custom descriptors and SharedLibrary table bytes.",
+    "A resolved address alone does not establish its source method name; symbol or instruction corroboration is needed."
+  ]
+}

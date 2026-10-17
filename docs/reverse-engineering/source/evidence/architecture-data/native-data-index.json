@@ -1,0 +1,1045 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "source_evidence_id": "ev_6d78ad2e69676f5465035956406fa0c999c69638c5261bbda476841afa86a391",
+  "selected_literals": [
+    {
+      "vaddr": 6445348564,
+      "paddr": 2894548,
+      "size": 36,
+      "length": 17,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "ImageArchive.json"
+    },
+    {
+      "vaddr": 6445353268,
+      "paddr": 2899252,
+      "size": 64,
+      "length": 31,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "UseBingImageAsDesktopBackground"
+    },
+    {
+      "vaddr": 6445353356,
+      "paddr": 2899340,
+      "size": 50,
+      "length": 24,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "UseBingImageAsLockScreen"
+    },
+    {
+      "vaddr": 6445357532,
+      "paddr": 2903516,
+      "size": 64,
+      "length": 31,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "Windows.Storage.ApplicationData"
+    },
+    {
+      "vaddr": 6445357620,
+      "paddr": 2903604,
+      "size": 22,
+      "length": 10,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "LockScreen"
+    },
+    {
+      "vaddr": 6445359308,
+      "paddr": 2905292,
+      "size": 20,
+      "length": 9,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "Wallpaper"
+    },
+    {
+      "vaddr": 6445359380,
+      "paddr": 2905364,
+      "size": 14,
+      "length": 6,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "Images"
+    },
+    {
+      "vaddr": 6445360116,
+      "paddr": 2906100,
+      "size": 20,
+      "length": 9,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "LiveTiles"
+    },
+    {
+      "vaddr": 6445360748,
+      "paddr": 2906732,
+      "size": 48,
+      "length": 23,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentLiveTileImageUrl"
+    },
+    {
+      "vaddr": 6445360820,
+      "paddr": 2906804,
+      "size": 66,
+      "length": 32,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentDesktopBackgroundImageUrl"
+    },
+    {
+      "vaddr": 6445360908,
+      "paddr": 2906892,
+      "size": 52,
+      "length": 25,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentLockScreenImageUrl"
+    }
+  ],
+  "references": [
+    {
+      "literal": "ImageArchive.json",
+      "instruction_candidate": "0x1804a0239",
+      "target": "0x1802c36c8",
+      "owner": {
+        "start": "0x1804a0220",
+        "end": "0x1804a0255",
+        "length": 53,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d158834e2ff"
+    },
+    {
+      "literal": "UseBingImageAsDesktopBackground",
+      "instruction_candidate": "0x1804a9767",
+      "target": "0x1802c4928",
+      "owner": {
+        "start": "0x1804a9740",
+        "end": "0x1804a97aa",
+        "length": 106,
+        "unwind_rva": "0x14ae08"
+      },
+      "bytes": "488d15bab1e1ff"
+    },
+    {
+      "literal": "UseBingImageAsLockScreen",
+      "instruction_candidate": "0x1804a9807",
+      "target": "0x1802c4980",
+      "owner": {
+        "start": "0x1804a97e0",
+        "end": "0x1804a984a",
+        "length": 106,
+        "unwind_rva": "0x14ae08"
+      },
+      "bytes": "488d1572b1e1ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804b5405",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804b53d0",
+        "end": "0x1804b5512",
+        "length": 322,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "488d0dc405e1ff"
+    },
+    {
+      "literal": "LockScreen",
+      "instruction_candidate": "0x1804b5451",
+      "target": "0x1802c5a28",
+      "owner": {
+        "start": "0x1804b53d0",
+        "end": "0x1804b5512",
+        "length": 322,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "4c8d05d005e1ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804b7275",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804b7240",
+        "end": "0x1804b7382",
+        "length": 322,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "488d0d54e7e0ff"
+    },
+    {
+      "literal": "Wallpaper",
+      "instruction_candidate": "0x1804b72c1",
+      "target": "0x1802c60c0",
+      "owner": {
+        "start": "0x1804b7240",
+        "end": "0x1804b7382",
+        "length": 322,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "4c8d05f8ede0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804b82be",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804b81c0",
+        "end": "0x1804b84b3",
+        "length": 755,
+        "unwind_rva": "0x14c084"
+      },
+      "bytes": "488d0d0bd7e0ff"
+    },
+    {
+      "literal": "Images",
+      "instruction_candidate": "0x1804b8308",
+      "target": "0x1802c6108",
+      "owner": {
+        "start": "0x1804b81c0",
+        "end": "0x1804b84b3",
+        "length": 755,
+        "unwind_rva": "0x14c084"
+      },
+      "bytes": "4c8d05f9dde0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804b8a18",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804b8970",
+        "end": "0x1804b8c0f",
+        "length": 671,
+        "unwind_rva": "0x14b54c"
+      },
+      "bytes": "488d0db1cfe0ff"
+    },
+    {
+      "literal": "Images",
+      "instruction_candidate": "0x1804b8a62",
+      "target": "0x1802c6108",
+      "owner": {
+        "start": "0x1804b8970",
+        "end": "0x1804b8c0f",
+        "length": 671,
+        "unwind_rva": "0x14b54c"
+      },
+      "bytes": "4c8d059fd6e0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804b9773",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804b96b0",
+        "end": "0x1804b9a6a",
+        "length": 954,
+        "unwind_rva": "0x14c0a8"
+      },
+      "bytes": "488d0d56c2e0ff"
+    },
+    {
+      "literal": "ImageArchive.json",
+      "instruction_candidate": "0x1804b98bb",
+      "target": "0x1802c36c8",
+      "owner": {
+        "start": "0x1804b96b0",
+        "end": "0x1804b9a6a",
+        "length": 954,
+        "unwind_rva": "0x14c0a8"
+      },
+      "bytes": "4c8d05069ee0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804ba516",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804ba4b0",
+        "end": "0x1804ba69f",
+        "length": 495,
+        "unwind_rva": "0x14b478"
+      },
+      "bytes": "488d0db3b4e0ff"
+    },
+    {
+      "literal": "ImageArchive.json",
+      "instruction_candidate": "0x1804ba550",
+      "target": "0x1802c36c8",
+      "owner": {
+        "start": "0x1804ba4b0",
+        "end": "0x1804ba69f",
+        "length": 495,
+        "unwind_rva": "0x14b478"
+      },
+      "bytes": "488d157191e0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bb201",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bb1d0",
+        "end": "0x1804bb2fe",
+        "length": 302,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "488d0dc8a7e0ff"
+    },
+    {
+      "literal": "Images",
+      "instruction_candidate": "0x1804bb24d",
+      "target": "0x1802c6108",
+      "owner": {
+        "start": "0x1804bb1d0",
+        "end": "0x1804bb2fe",
+        "length": 302,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "4c8d05b4aee0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bbc7a",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      },
+      "bytes": "488d0d4f9de0ff"
+    },
+    {
+      "literal": "LiveTiles",
+      "instruction_candidate": "0x1804bbcc4",
+      "target": "0x1802c63e8",
+      "owner": {
+        "start": "0x1804bbbb0",
+        "end": "0x1804bc101",
+        "length": 1361,
+        "unwind_rva": "0x14c0fc"
+      },
+      "bytes": "4c8d051da7e0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bd33a",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bd2d0",
+        "end": "0x1804bd49f",
+        "length": 463,
+        "unwind_rva": "0x14b4c0"
+      },
+      "bytes": "488d0d8f86e0ff"
+    },
+    {
+      "literal": "LiveTiles",
+      "instruction_candidate": "0x1804bd37e",
+      "target": "0x1802c63e8",
+      "owner": {
+        "start": "0x1804bd2d0",
+        "end": "0x1804bd49f",
+        "length": 463,
+        "unwind_rva": "0x14b4c0"
+      },
+      "bytes": "4c8d056390e0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bd641",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bd610",
+        "end": "0x1804bd73e",
+        "length": 302,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "488d0d8883e0ff"
+    },
+    {
+      "literal": "LiveTiles",
+      "instruction_candidate": "0x1804bd68d",
+      "target": "0x1802c63e8",
+      "owner": {
+        "start": "0x1804bd610",
+        "end": "0x1804bd73e",
+        "length": 302,
+        "unwind_rva": "0x14b10c"
+      },
+      "bytes": "4c8d05548de0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804be7f8",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804be7f0",
+        "end": "0x1804be872",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d0dd171e0ff"
+    },
+    {
+      "literal": "CurrentLiveTileImageUrl",
+      "instruction_candidate": "0x1804be85a",
+      "target": "0x1802c6660",
+      "owner": {
+        "start": "0x1804be7f0",
+        "end": "0x1804be872",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d15ff7de0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804be884",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804be880",
+        "end": "0x1804be909",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d0d4571e0ff"
+    },
+    {
+      "literal": "CurrentLiveTileImageUrl",
+      "instruction_candidate": "0x1804be8e3",
+      "target": "0x1802c6660",
+      "owner": {
+        "start": "0x1804be880",
+        "end": "0x1804be909",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d15767de0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804be918",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804be910",
+        "end": "0x1804be992",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d0db170e0ff"
+    },
+    {
+      "literal": "CurrentDesktopBackgroundImageUrl",
+      "instruction_candidate": "0x1804be97a",
+      "target": "0x1802c66a8",
+      "owner": {
+        "start": "0x1804be910",
+        "end": "0x1804be992",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d15277de0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804be9a4",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804be9a0",
+        "end": "0x1804bea29",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d0d2570e0ff"
+    },
+    {
+      "literal": "CurrentDesktopBackgroundImageUrl",
+      "instruction_candidate": "0x1804bea03",
+      "target": "0x1802c66a8",
+      "owner": {
+        "start": "0x1804be9a0",
+        "end": "0x1804bea29",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d159e7ce0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bea38",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bea30",
+        "end": "0x1804beab2",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d0d916fe0ff"
+    },
+    {
+      "literal": "CurrentLockScreenImageUrl",
+      "instruction_candidate": "0x1804bea9a",
+      "target": "0x1802c6700",
+      "owner": {
+        "start": "0x1804bea30",
+        "end": "0x1804beab2",
+        "length": 130,
+        "unwind_rva": "0x14adec"
+      },
+      "bytes": "488d155f7ce0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804beac4",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804beac0",
+        "end": "0x1804beb49",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d0d056fe0ff"
+    },
+    {
+      "literal": "CurrentLockScreenImageUrl",
+      "instruction_candidate": "0x1804beb23",
+      "target": "0x1802c6700",
+      "owner": {
+        "start": "0x1804beac0",
+        "end": "0x1804beb49",
+        "length": 137,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d15d67be0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804beb65",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804beb50",
+        "end": "0x1804bec78",
+        "length": 296,
+        "unwind_rva": "0x14af90"
+      },
+      "bytes": "488d0d646ee0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bebaf",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804beb50",
+        "end": "0x1804bec78",
+        "length": 296,
+        "unwind_rva": "0x14af90"
+      },
+      "bytes": "488d0d1a6ee0ff"
+    },
+    {
+      "literal": "UseBingImageAsLockScreen",
+      "instruction_candidate": "0x1804bec84",
+      "target": "0x1802c4980",
+      "owner": {
+        "start": "0x1804bec80",
+        "end": "0x1804beca2",
+        "length": 34,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d0df55ce0ff"
+    },
+    {
+      "literal": "CurrentLockScreenImageUrl",
+      "instruction_candidate": "0x1804bec90",
+      "target": "0x1802c6700",
+      "owner": {
+        "start": "0x1804bec80",
+        "end": "0x1804beca2",
+        "length": 34,
+        "unwind_rva": "0x14ae34"
+      },
+      "bytes": "488d0d697ae0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bf115",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bed50",
+        "end": "0x1804bf3fa",
+        "length": 1706,
+        "unwind_rva": "0x14b534"
+      },
+      "bytes": "488d0db468e0ff"
+    },
+    {
+      "literal": "Images",
+      "instruction_candidate": "0x1804bf15f",
+      "target": "0x1802c6108",
+      "owner": {
+        "start": "0x1804bed50",
+        "end": "0x1804bf3fa",
+        "length": 1706,
+        "unwind_rva": "0x14b534"
+      },
+      "bytes": "4c8d05a26fe0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x1804bf97f",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x1804bf900",
+        "end": "0x1804bfb37",
+        "length": 567,
+        "unwind_rva": "0x14c0ec"
+      },
+      "bytes": "488d0d4a60e0ff"
+    },
+    {
+      "literal": "Images",
+      "instruction_candidate": "0x1804bf9c9",
+      "target": "0x1802c6108",
+      "owner": {
+        "start": "0x1804bf900",
+        "end": "0x1804bfb37",
+        "length": 567,
+        "unwind_rva": "0x14c0ec"
+      },
+      "bytes": "4c8d053867e0ff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x18051d439",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x18051d430",
+        "end": "0x18051d4c8",
+        "length": 152,
+        "unwind_rva": "0x14adf4"
+      },
+      "bytes": "488d0d9085daff"
+    },
+    {
+      "literal": "UseBingImageAsDesktopBackground",
+      "instruction_candidate": "0x18051d4af",
+      "target": "0x1802c4928",
+      "owner": {
+        "start": "0x18051d430",
+        "end": "0x18051d4c8",
+        "length": 152,
+        "unwind_rva": "0x14adf4"
+      },
+      "bytes": "488d157274daff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x18051d51b",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x18051d510",
+        "end": "0x18051d5c8",
+        "length": 184,
+        "unwind_rva": "0x14ae94"
+      },
+      "bytes": "488d0dae84daff"
+    },
+    {
+      "literal": "UseBingImageAsDesktopBackground",
+      "instruction_candidate": "0x18051d57a",
+      "target": "0x1802c4928",
+      "owner": {
+        "start": "0x18051d510",
+        "end": "0x18051d5c8",
+        "length": 184,
+        "unwind_rva": "0x14ae94"
+      },
+      "bytes": "488d15a773daff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x18051d659",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x18051d650",
+        "end": "0x18051d6e8",
+        "length": 152,
+        "unwind_rva": "0x14adf4"
+      },
+      "bytes": "488d0d7083daff"
+    },
+    {
+      "literal": "UseBingImageAsLockScreen",
+      "instruction_candidate": "0x18051d6cf",
+      "target": "0x1802c4980",
+      "owner": {
+        "start": "0x18051d650",
+        "end": "0x18051d6e8",
+        "length": 152,
+        "unwind_rva": "0x14adf4"
+      },
+      "bytes": "488d15aa72daff"
+    },
+    {
+      "literal": "Windows.Storage.ApplicationData",
+      "instruction_candidate": "0x18051d73b",
+      "target": "0x1802c59d0",
+      "owner": {
+        "start": "0x18051d730",
+        "end": "0x18051d7e8",
+        "length": 184,
+        "unwind_rva": "0x14ae94"
+      },
+      "bytes": "488d0d8e82daff"
+    },
+    {
+      "literal": "UseBingImageAsLockScreen",
+      "instruction_candidate": "0x18051d79a",
+      "target": "0x1802c4980",
+      "owner": {
+        "start": "0x18051d730",
+        "end": "0x18051d7e8",
+        "length": 184,
+        "unwind_rva": "0x14ae94"
+      },
+      "bytes": "488d15df71daff"
+    },
+    {
+      "literal": "UseBingImageAsLockScreen",
+      "instruction_candidate": "0x1805321bb",
+      "target": "0x1802c4980",
+      "owner": {
+        "start": "0x180532190",
+        "end": "0x180532555",
+        "length": 965,
+        "unwind_rva": "0x14b294"
+      },
+      "bytes": "488d0dbe27d9ff"
+    },
+    {
+      "literal": "CurrentLockScreenImageUrl",
+      "instruction_candidate": "0x1805321c7",
+      "target": "0x1802c6700",
+      "owner": {
+        "start": "0x180532190",
+        "end": "0x180532555",
+        "length": 965,
+        "unwind_rva": "0x14b294"
+      },
+      "bytes": "488d0d3245d9ff"
+    }
+  ],
+  "metadata_strings": [
+    {
+      "vaddr": 6444340016,
+      "paddr": 1886512,
+      "size": 17,
+      "length": 17,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": " ImageArchiveData"
+    },
+    {
+      "vaddr": 6444340105,
+      "paddr": 1886601,
+      "size": 13,
+      "length": 13,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "BingImageData"
+    },
+    {
+      "vaddr": 6444340336,
+      "paddr": 1886832,
+      "size": 24,
+      "length": 24,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "*LocalBingImageStorage\u001b\b"
+    },
+    {
+      "vaddr": 6444471327,
+      "paddr": 2017823,
+      "size": 9,
+      "length": 9,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "copyright"
+    },
+    {
+      "vaddr": 6444472591,
+      "paddr": 2019087,
+      "size": 181,
+      "length": 181,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "0get_CurrentLockScreenUrl0set_CurrentLockScreenUrl>get_CurrentDesktopBackgroundUrl>set_CurrentDesktopBackgroundUrl,get_CurrentLiveTileUrl,set_CurrentLiveTileUrl(CurrentLockScreenUrl"
+    },
+    {
+      "vaddr": 6444472778,
+      "paddr": 2019274,
+      "size": 30,
+      "length": 30,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "\t\"6CurrentDesktopBackgroundUrl"
+    },
+    {
+      "vaddr": 6444472813,
+      "paddr": 2019309,
+      "size": 22,
+      "length": 22,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "k\n\"$CurrentLiveTileUrl"
+    },
+    {
+      "vaddr": 6444473657,
+      "paddr": 2020153,
+      "size": 90,
+      "length": 89,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "(ImageArchiveFileName\"ImageArchive.json ImagesFolderName\fImages2MigrateFromRoamingToLocal"
+    },
+    {
+      "vaddr": 6444473765,
+      "paddr": 2020261,
+      "size": 243,
+      "length": 243,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": ">UseBingImageAsLockScreenSettingLUseBingImageAsDesktopBackgroundSetting6CurrentLockScreenUrlSetting2CurrentLockScreenImageUrlDCurrentDesktopBackgroundUrlSetting@CurrentDesktopBackgroundImageUrl2CurrentLiveTileUrlSetting.CurrentLiveTileImageUrl"
+    },
+    {
+      "vaddr": 6444556790,
+      "paddr": 2103286,
+      "size": 25,
+      "length": 25,
+      "section": ".rdata",
+      "type": "utf8",
+      "string": "0get_CurrentLockScreenUrl"
+    },
+    {
+      "vaddr": 6444556817,
+      "paddr": 2103313,
+      "size": 26,
+      "length": 26,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": "0set_CurrentLockScreenUrl\r"
+    },
+    {
+      "vaddr": 6444556844,
+      "paddr": 2103340,
+      "size": 32,
+      "length": 32,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": ">get_CurrentDesktopBackgroundUrl"
+    },
+    {
+      "vaddr": 6444556878,
+      "paddr": 2103374,
+      "size": 32,
+      "length": 32,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": ">set_CurrentDesktopBackgroundUrl"
+    },
+    {
+      "vaddr": 6444556912,
+      "paddr": 2103408,
+      "size": 23,
+      "length": 23,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": ",get_CurrentLiveTileUrl"
+    },
+    {
+      "vaddr": 6444556937,
+      "paddr": 2103433,
+      "size": 24,
+      "length": 24,
+      "section": ".rdata",
+      "type": "ascii",
+      "string": ",set_CurrentLiveTileUrl5"
+    },
+    {
+      "vaddr": 6445360748,
+      "paddr": 2906732,
+      "size": 48,
+      "length": 23,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentLiveTileImageUrl"
+    },
+    {
+      "vaddr": 6445360820,
+      "paddr": 2906804,
+      "size": 66,
+      "length": 32,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentDesktopBackgroundImageUrl"
+    },
+    {
+      "vaddr": 6445360908,
+      "paddr": 2906892,
+      "size": 52,
+      "length": 25,
+      "section": ".data",
+      "type": "utf16le",
+      "string": "CurrentLockScreenImageUrl"
+    }
+  ],
+  "metadata_windows": [
+    {
+      "start": "0x1801cd2c0",
+      "end": "0x1801cd510",
+      "hex": "02d763e72304732a32b32a320293bb0b990700432432c32432000002f32a3299070043243203253202cbce2b00023b2b32990700632532d3253202d3a7210002832b328b0204cb2b320307119751586400008b0204cb2c3203071197915a6400008b02043b2f322b131107710d25000020496d61676541726368697665446174611922007ba421b32f3200000293bb0b19220033a521f32f3202cbb504000293bb0b020ba62153303200000293bb0b000ba72173303204a33032c330320002e330326753626400001a42696e67496d6167654461746119220083a821b1a502cbb504000293bb0b19220033a921b1a502cbb504000293bb0b00c3ac2153680604e3ac2153313200027331320023ad215368060473ad21bb31320002db3132264953657474696e67735265706f7369746f7279193700233232fbd90f000000193700eb3232b1a502cbb5040000193700b33332fbd90f000000193700b33432b1a502cbb5040000193700b33532fbd90f0000001937006b3632b1a502cbb50400000023373253680604cb3732eb37320000000b383253680604eb38320b39320000002b393253680604c33932e3393200002a4c6f63616c42696e67496d61676553746f726167651b0881d7133903cb7706eb1f14000083c51000084bc50611d3033a327b3a3206f33a32433b32933b3200000000000293bb0b1b0880d7636c08cb7706e33b32000083c51000043bf11193f1110c23f211e326329b3c32eb3c323b3d328b3d3200000002d763e72304db3d321b3e320293bb0b1b0880d7636c08cb77065b3e32000083c51000043bf11193",
+      "ascii_segments": [
+        "s*2",
+        "C$2",
+        "C$2",
+        ";+2",
+        "c%2",
+        "QXd",
+        ";/2+",
+        " ImageArchiveData",
+        "!S02",
+        "!s02",
+        "02gSbd",
+        "BingImageData",
+        "!Sh",
+        "!S12",
+        "s12",
+        "!Sh",
+        "12&ISettingsRepository",
+        "#22",
+        "k62",
+        "#72Sh",
+        "82Sh",
+        "+92Sh",
+        "*LocalBingImageStorage",
+        ":2{:2",
+        ":2C;2",
+        "<2;=2",
+        "[>2"
+      ]
+    },
+    {
+      "start": "0x1801ed370",
+      "end": "0x1801ed450",
+      "hex": "70646174654c6f636b53637265656e4000d753414502a70374210000020bc82100006772434502c35139002e5570646174654465736b746f704261636b67726f756e644000d753414502a7e3a221000002bbc821000067724345020b5239006b020eeb6c0500d7c37a1bd7a1a4720e5f457175616c73185f47657448617368436f64651a3c2e63746f723e625f5f305f304000a7a3d60c02a783832100a7130421e7e3a472c733a572000675726c12636f70797269676874e7c3a572a7a3da0ce713a6723bf111fb8c1093f111fb8c10e763a67212696d616765496e666fa7a3",
+      "ascii_segments": [
+        "pdateLockScreen@",
+        "SAE",
+        "grCE",
+        ".UpdateDesktopBackground@",
+        "SAE",
+        "grCE",
+        "_Equals",
+        "_GetHashCode",
+        "<.ctor>b__0_0@",
+        "url",
+        "copyright",
+        "imageInfo"
+      ]
+    },
+    {
+      "start": "0x1801ed8c0",
+      "end": "0x1801edfc0",
+      "hex": "744000e703bc7200004000d743040402e703bc7200e703bc7240e703bc720004b30322022b04226753bc72025b5e390011d3eb2103025b06226753bc7202a35e390002e306226753bc7202eb5e3900306765745f43757272656e744c6f636b53637265656e55726c307365745f43757272656e744c6f636b53637265656e55726c3e6765745f43757272656e744465736b746f704261636b67726f756e6455726c3e7365745f43757272656e744465736b746f704261636b67726f756e6455726c2c6765745f43757272656e744c69766554696c6555726c2c7365745f43757272656e744c69766554696c6555726c2843757272656e744c6f636b53637265656e55726c043b0922029b09223643757272656e744465736b746f704261636b67726f756e6455726c040b0a22026b0a222443757272656e744c69766554696c6555726c04db0a22023b0b220d0200335f39fb5f390213ca3300000d02005b60392361390253c41c00006cd31f238361390000002c6b6a33a361390000002cc361391362390000002c3c4c6f6164496d616765417263686976653e645f5f3302336239c3623900000002039622e36239000000027b9b220363390000000233d3222363390000006783c67267b22e4567e3c67267d22f452c3c53617665496d616765417263686976653e645f5f340ca363390b6439000000020396222363390000006753c87267b22e4567b3c87267d22f452c3c496e697469616c697a65496d616765733e645f5f35020396228b64390000006753c97267b22e4567b3c97267d22f450d02000b6539fb5f390213ca330000223c457869737473496d6167653e645f5f36029b6539d36539000000027b9b22e3623900000067e3cb7267b22e456743cc7267d22f45243c476574496d61676546696c653e645f5f370c5b942253663900000067e3cc7267b22e456743cd7267d22f451e3c4c6f6164496d6167653e645f5f380ce394224bc721000000027b9b223b0c3200000067a3cd7267b22e456703ce7267d22f451e3c53617665496d6167653e645f5f396763ce7267b22e4567c3ce7267d22f452c3c44656c6574654f6c64496d616765733e645f5f313002936739c38e32000000027b9b228b64390000000233d322e3623900000002cb3a343b6839000000026bd322430d3200000067b3d07267b22e456713d17267d22f4520476574496d61676546696c654e616d65204c6f6164496d616765417263686976656772434502bb6839002053617665496d616765417263686976654000d753414502a7e38021000002a36339000067724345020369390020496e697469616c697a65496d6167657367724345024b69390016457869737473496d6167654000e7235e4502d78397020067724345029369390018476574496d61676546696c654000e7b3d37202d7839702006772434502036a39004000e7731f6402d78397020067724345024b6a39004000d753414504d7839702e7c37f1b000004735a3500006772434502936a39001e44656c6574654f6c64496d616765736772434502db6a39001a476574557269517565727949640002236b39000028496d6167654172636869766546696c654e616d6522496d616765417263686976652e6a736f6e20496d61676573466f6c6465724e616d650c496d61676573324d69677261746546726f6d526f616d696e67546f4c6f63616c0000d743040402d7839702000002436b3900003e55736542696e67496d61676541734c6f636b53637265656e53657474696e674c55736542696e67496d61676541734465736b746f704261636b67726f756e6453657474696e673643757272656e744c6f636b53637265656e55726c53657474696e673243757272656e744c6f636b53637265656e496d61676555726c4443757272656e744465736b746f704261636b67726f756e6455726c53657474696e674043757272656e744465736b746f704261636b67726f756e64496d61676555726c3243757272656e744c69766554696c6555726c53657474696e672e43757272656e744c69766554696c65496d61676555726c0453282202b32822042329220283292204f3292202532a22283c44656c6574654f6c6446696c65733e645f5f300ca36b39c362390000000cdb6b390307110000000243e2223b68390000006733d87267b22e456793d87267d22f45203c436f707953747265616d3e645f5f310c1b3e336b58390000000cc31d306b5839000000027b6c39136d3900000002336d39136d390000006793db7267b22e4567f3db7267d22f451c44656c6574654f6c6446696c65730000d753414504a723e405d7839702000002a36b3900000004db6b39000067724345022b6e390014436f707953747265616d0000d753414504a7d3770ca7d3770c000004c31d3000006772434502736e39003e3c5365744465736b746f704261636b67726f756e64496d6167653e645f5f390ce394",
+      "ascii_segments": [
+        "\"gS",
+        "[^9",
+        "\"gS",
+        "\"gS",
+        "0get_CurrentLockScreenUrl0set_CurrentLockScreenUrl>get_CurrentDesktopBackgroundUrl>set_CurrentDesktopBackgroundUrl,get_CurrentLiveTileUrl,set_CurrentLiveTileUrl(CurrentLockScreenUrl",
+        "\"6CurrentDesktopBackgroundUrl",
+        "\"$CurrentLiveTileUrl",
+        "3_9",
+        "[`9#a9",
+        ",kj3",
+        ",<LoadImageArchive>d__3",
+        "3b9",
+        "\"#c9",
+        ".Eg",
+        "/E,<SaveImageArchive>d__4",
+        "\"#c9",
+        ".Eg",
+        "/E,<InitializeImages>d__5",
+        ".Eg",
+        "\"<ExistsImage>d__6",
+        ".EgC",
+        "/E$<GetImageFile>d__7",
+        "\"Sf9",
+        ".EgC",
+        "<LoadImage>d__8",
+        ".Eg",
+        "<SaveImage>d__9gc",
+        ".Eg",
+        "/E,<DeleteOldImages>d__10",
+        ":4;h9",
+        ".Eg",
+        "/E GetImageFileName LoadImageArchivegrCE",
+        " SaveImageArchive@",
+        "SAE",
+        "grCE",
+        " InitializeImagesgrCE",
+        "Ki9",
+        "ExistsImage@",
+        "#^E",
+        "grCE",
+        "GetImageFile@",
+        "grCE",
+        "grCE",
+        "Kj9",
+        "SAE",
+        "sZ5",
+        "grCE",
+        "DeleteOldImagesgrCE",
+        "GetUriQueryId",
+        "#k9",
+        "(ImageArchiveFileName\"ImageArchive.json ImagesFolderName",
+        "Images2MigrateFromRoamingToLocal",
+        "Ck9",
+        ">UseBingImageAsLockScreenSettingLUseBingImageAsDesktopBackgroundSetting6CurrentLockScreenUrlSetting2CurrentLockScreenImageUrlDCurrentDesktopBackgroundUrlSetting@CurrentDesktopBackgroundImageUrl2CurrentLiveTileUrlSetting.CurrentLiveTileImageUrl",
+        "S(\"",
+        "#)\"",
+        "S*\"(<DeleteOldFiles>d__0",
+        "\";h9",
+        ".Eg",
+        "/E <CopyStream>d__1",
+        ">3kX9",
+        "0kX9",
+        "{l9",
+        "3m9",
+        ".Eg",
+        "DeleteOldFiles",
+        "SAE",
+        "grCE",
+        "+n9",
+        "CopyStream",
+        "SAE",
+        "grCE",
+        "sn9",
+        "><SetDesktopBackgroundImage>d__9"
+      ]
+    }
+  ],
+  "limitation": "RIP-relative byte candidates require instruction decoding. NativeFormat string proximity alone does not prove field ownership."
+}

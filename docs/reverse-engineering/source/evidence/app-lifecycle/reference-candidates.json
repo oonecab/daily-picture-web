@@ -1,0 +1,614 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "contexts": {
+    "0x18010de88": "IApplication",
+    "0x18010dea0": "IApplication",
+    "0x18010deb0": "IApplication",
+    "0x18010dec0": "IApplication",
+    "0x1801104a8": "IApplication",
+    "0x1801104c8": "IApplication2",
+    "0x18010ef40": "IApplicationOverrides",
+    "0x1801103e8": "IApplicationOverrides",
+    "0x180110400": "IApplicationOverrides",
+    "0x180110418": "IApplicationOverrides",
+    "0x180110430": "IApplicationOverrides",
+    "0x180110448": "IApplicationOverrides",
+    "0x180110460": "IApplicationOverrides",
+    "0x180110478": "IApplicationOverrides",
+    "0x180110490": "IApplicationOverrides",
+    "0x18010eda0": "ISuspendingDeferral",
+    "0x18010ed70": "ISuspendingEventArgs",
+    "0x18010ed88": "ISuspendingOperation"
+  },
+  "code_candidates": [
+    {
+      "address": "0x18034e084",
+      "target": "0x180461e40",
+      "label": "method",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18034e000",
+        "end_exclusive": "0x18034e0c2",
+        "length": 194,
+        "unwind_rva": "0x14ade0"
+      }
+    },
+    {
+      "address": "0x18034e0b5",
+      "target": "0x180461dd0",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x18034e000",
+        "end_exclusive": "0x18034e0c2",
+        "length": 194,
+        "unwind_rva": "0x14ade0"
+      }
+    },
+    {
+      "address": "0x180461e54",
+      "target": "0x180461e60",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x180461e40",
+        "end_exclusive": "0x180461e5f",
+        "length": 31,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x180461e71",
+      "target": "0x18010dea0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461e60",
+        "end_exclusive": "0x180461f5e",
+        "length": 254,
+        "unwind_rva": "0x14ae64"
+      }
+    },
+    {
+      "address": "0x180461ea4",
+      "target": "0x180462210",
+      "label": "method",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461e60",
+        "end_exclusive": "0x180461f5e",
+        "length": 254,
+        "unwind_rva": "0x14ae64"
+      }
+    },
+    {
+      "address": "0x180461eb7",
+      "target": "0x1804620c0",
+      "label": "method",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461e60",
+        "end_exclusive": "0x180461f5e",
+        "length": 254,
+        "unwind_rva": "0x14ae64"
+      }
+    },
+    {
+      "address": "0x180461eda",
+      "target": "0x180461f60",
+      "label": "method",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461e60",
+        "end_exclusive": "0x180461f5e",
+        "length": 254,
+        "unwind_rva": "0x14ae64"
+      }
+    },
+    {
+      "address": "0x180461f6b",
+      "target": "0x18010ed70",
+      "label": "ISuspendingEventArgs",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461f60",
+        "end_exclusive": "0x180461fb6",
+        "length": 86,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x180461f83",
+      "target": "0x18010ed88",
+      "label": "ISuspendingOperation",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461f60",
+        "end_exclusive": "0x180461fb6",
+        "length": 86,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x180461f9b",
+      "target": "0x18010eda0",
+      "label": "ISuspendingDeferral",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180461f60",
+        "end_exclusive": "0x180461fb6",
+        "length": 86,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x1804620c7",
+      "target": "0x18010deb0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x1804620c0",
+        "end_exclusive": "0x1804620e5",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051dea2",
+      "target": "0x180461dd0",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x18051de80",
+        "end_exclusive": "0x18051deae",
+        "length": 46,
+        "unwind_rva": "0x14adec"
+      }
+    },
+    {
+      "address": "0x18051e067",
+      "target": "0x18010dea0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e060",
+        "end_exclusive": "0x18051e085",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e0c7",
+      "target": "0x18010de88",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e0c0",
+        "end_exclusive": "0x18051e0df",
+        "length": 31,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e247",
+      "target": "0x1801104c8",
+      "label": "IApplication2",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e240",
+        "end_exclusive": "0x18051e265",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e274",
+      "target": "0x18051e280",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x18051e270",
+        "end_exclusive": "0x18051e27f",
+        "length": 15,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e317",
+      "target": "0x1801104c8",
+      "label": "IApplication2",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e310",
+        "end_exclusive": "0x18051e335",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e344",
+      "target": "0x18051e350",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x18051e340",
+        "end_exclusive": "0x18051e34f",
+        "length": 15,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e3e7",
+      "target": "0x18010deb0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e3e0",
+        "end_exclusive": "0x18051e405",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e414",
+      "target": "0x18051e420",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x18051e410",
+        "end_exclusive": "0x18051e41f",
+        "length": 15,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e4b7",
+      "target": "0x18010deb0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e4b0",
+        "end_exclusive": "0x18051e4d5",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x18051e4e7",
+      "target": "0x18010dec0",
+      "label": "IApplication",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x18051e4e0",
+        "end_exclusive": "0x18051e505",
+        "length": 37,
+        "unwind_rva": "0x14ae34"
+      }
+    },
+    {
+      "address": "0x180531ae6",
+      "target": "0x180461e40",
+      "label": "method",
+      "kind": "rip-memory",
+      "owner": {
+        "start": "0x180531ab0",
+        "end_exclusive": "0x180531b24",
+        "length": 116,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "address": "0x180531b17",
+      "target": "0x180461dd0",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x180531ab0",
+        "end_exclusive": "0x180531b24",
+        "length": 116,
+        "unwind_rva": "0x14adf4"
+      }
+    },
+    {
+      "address": "0x180531e6d",
+      "target": "0x180531e90",
+      "label": "method",
+      "kind": "direct-control",
+      "owner": {
+        "start": "0x180531e60",
+        "end_exclusive": "0x180531e82",
+        "length": 34,
+        "unwind_rva": "0x14adec"
+      }
+    }
+  ],
+  "data_candidates": [
+    {
+      "address": "0x18001af44",
+      "target": "0x180531f50",
+      "kind": "relative32"
+    },
+    {
+      "address": "0x18001bdb0",
+      "target": "0x180531e60",
+      "kind": "relative32"
+    },
+    {
+      "address": "0x1801dd165",
+      "target": "0x18051e420",
+      "kind": "relative32"
+    }
+  ],
+  "types": [
+    {
+      "address": "0x18001af90",
+      "bytes": "000030017800000090b001800100000004000700c1f45d5a2887608001000000688260800100000070826080010000009021538001000000697f2a8001000000687f008001000000e8800080010000000081008001000000f88100800100000049672a800100000018b0018001000000801d53800100000010cf14800100000028ffffff000000000000000218000000",
+      "vslot_count": 4,
+      "interface_count": 7,
+      "base_pointer": "0x18001b090",
+      "vtable": [
+        {
+          "slot": 0,
+          "address": "0x18001afa8",
+          "value": "0x180608728"
+        },
+        {
+          "slot": 1,
+          "address": "0x18001afb0",
+          "value": "0x180608268"
+        },
+        {
+          "slot": 2,
+          "address": "0x18001afb8",
+          "value": "0x180608270"
+        },
+        {
+          "slot": 3,
+          "address": "0x18001afc0",
+          "value": "0x180532190"
+        }
+      ],
+      "interfaces": [
+        {
+          "index": 0,
+          "address": "0x18001afc8",
+          "value": "0x1802a7f69"
+        },
+        {
+          "index": 1,
+          "address": "0x18001afd0",
+          "value": "0x180007f68"
+        },
+        {
+          "index": 2,
+          "address": "0x18001afd8",
+          "value": "0x1800080e8"
+        },
+        {
+          "index": 3,
+          "address": "0x18001afe0",
+          "value": "0x180008100"
+        },
+        {
+          "index": 4,
+          "address": "0x18001afe8",
+          "value": "0x1800081f8"
+        },
+        {
+          "index": 5,
+          "address": "0x18001aff0",
+          "value": "0x1802a6749"
+        },
+        {
+          "index": 6,
+          "address": "0x18001aff8",
+          "value": "0x18001b018"
+        }
+      ]
+    },
+    {
+      "address": "0x18001b090",
+      "bytes": "0000240160000000a8512a80010000000400050098935de1288760800100000068826080010000007082608001000000d057468001000000697f2a8001000000687f008001000000e8800080010000000081008001000000f88100800100000014cf14800100000038ffffff000000000000040018000000c0662a8001000000",
+      "vslot_count": 4,
+      "interface_count": 5,
+      "base_pointer": "0x1802a51a8",
+      "vtable": [
+        {
+          "slot": 0,
+          "address": "0x18001b0a8",
+          "value": "0x180608728"
+        },
+        {
+          "slot": 1,
+          "address": "0x18001b0b0",
+          "value": "0x180608268"
+        },
+        {
+          "slot": 2,
+          "address": "0x18001b0b8",
+          "value": "0x180608270"
+        },
+        {
+          "slot": 3,
+          "address": "0x18001b0c0",
+          "value": "0x1804657d0"
+        }
+      ],
+      "interfaces": [
+        {
+          "index": 0,
+          "address": "0x18001b0c8",
+          "value": "0x1802a7f69"
+        },
+        {
+          "index": 1,
+          "address": "0x18001b0d0",
+          "value": "0x180007f68"
+        },
+        {
+          "index": 2,
+          "address": "0x18001b0d8",
+          "value": "0x1800080e8"
+        },
+        {
+          "index": 3,
+          "address": "0x18001b0e0",
+          "value": "0x180008100"
+        },
+        {
+          "index": 4,
+          "address": "0x18001b0e8",
+          "value": "0x1800081f8"
+        }
+      ]
+    },
+    {
+      "address": "0x18001bd50",
+      "bytes": "0000300020000000e0bd018001000000060002006579f790608260800100000068826080010000007082608001000000b01c4a8001000000501d4a8001000000301c4a8001000000206100800100000049672a8001000000401d538001000000b0605100acdc4800c8de4800945d480020df480000000000",
+      "vslot_count": 6,
+      "interface_count": 2,
+      "base_pointer": "0x18001bde0",
+      "vtable": [
+        {
+          "slot": 0,
+          "address": "0x18001bd68",
+          "value": "0x180608260"
+        },
+        {
+          "slot": 1,
+          "address": "0x18001bd70",
+          "value": "0x180608268"
+        },
+        {
+          "slot": 2,
+          "address": "0x18001bd78",
+          "value": "0x180608270"
+        },
+        {
+          "slot": 3,
+          "address": "0x18001bd80",
+          "value": "0x1804a1cb0"
+        },
+        {
+          "slot": 4,
+          "address": "0x18001bd88",
+          "value": "0x1804a1d50"
+        },
+        {
+          "slot": 5,
+          "address": "0x18001bd90",
+          "value": "0x1804a1c30"
+        }
+      ],
+      "interfaces": [
+        {
+          "index": 0,
+          "address": "0x18001bd98",
+          "value": "0x180006120"
+        },
+        {
+          "index": 1,
+          "address": "0x18001bda0",
+          "value": "0x1802a6749"
+        }
+      ]
+    }
+  ],
+  "exact_shared_bindings": [
+    {
+      "slot_va": "0x1802a6748",
+      "slot_file_offset": "0x2a5b48",
+      "raw": "0x8000000000007d83",
+      "neat_index": 32131,
+      "neat_entry_file_offset": "0x12cddc",
+      "resolved_rva": "0x7760",
+      "resolved_va": "0x180007760",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "00000002180000000000000000000000000000004d07625c0000084118000000",
+      "symbols": [
+        {
+          "name": "??_7IDisposable@System@@6B@",
+          "flags": "none",
+          "record_offset": 302436,
+          "section": 1,
+          "section_offset": 26464
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x180007760",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a6380",
+      "slot_file_offset": "0x2a5780",
+      "raw": "0x8000000000007aa0",
+      "neat_index": 31392,
+      "neat_entry_file_offset": "0x12c250",
+      "resolved_rva": "0xc1e8",
+      "resolved_va": "0x18000c1e8",
+      "resolved_section": ".rdata",
+      "owner": null,
+      "bytes": "0000081118000000887400800100000003000400e72cb8d4a8ff6c8001000000",
+      "symbols": [
+        {
+          "name": "??_7Boxed_Boolean@System@@6B@",
+          "flags": "none",
+          "record_offset": 298760,
+          "section": 1,
+          "section_offset": 45544
+        }
+      ],
+      "symbol_record_count": 1,
+      "symbols_truncated": false,
+      "symbol_address": "0x18000c1e8",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    },
+    {
+      "slot_va": "0x1802a27d8",
+      "slot_file_offset": "0x2a1bd8",
+      "raw": "0x8000000000003d19",
+      "neat_index": 15641,
+      "neat_entry_file_offset": "0x11cc34",
+      "resolved_rva": "0x45a0c0",
+      "resolved_va": "0x18045a0c0",
+      "resolved_section": ".text",
+      "owner": {
+        "start": "0x18045a0c0",
+        "end_exclusive": "0x18045a0e4",
+        "length": 36,
+        "unwind_rva": "0x16b448"
+      },
+      "bytes": "4883ec284885c9740cff1581b1e5ff904883c428c3e8064d0300488bc8ff15a5",
+      "symbols": [
+        {
+          "name": "System::GC.SuppressFinalize",
+          "flags": "function",
+          "record_offset": 3237096,
+          "section": 5,
+          "section_offset": 983232
+        },
+        {
+          "name": "System::GC.SuppressFinalize",
+          "flags": "procedure",
+          "record_offset": 10030764,
+          "stream": 17,
+          "section": 5,
+          "section_offset": 983232,
+          "type_index": "0x7d9c",
+          "length": 36
+        }
+      ],
+      "symbol_record_count": 2,
+      "symbols_truncated": false,
+      "symbol_address": "0x18045a0c0",
+      "symbol_trace": [],
+      "status": "resolved-by-validated-custom-descriptor"
+    }
+  ],
+  "limitation": "Code/data byte hits are candidates until decoded. Header counts agree with examined EEType layout; this is not complete NativeFormat dispatch metadata recovery."
+}

@@ -1,0 +1,163 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "image_base": "0x180000000",
+  "functions": [
+    {
+      "address": "0x180531e10",
+      "end_exclusive": "0x180531e5e",
+      "role": "主 ViewModel Dispose：双 Stop 后 SuppressFinalize(this)",
+      "evidence_paths": [
+        "evidence/timer-cleanup/mainvm-dispose-instructions.json",
+        "evidence/timer-cleanup/mainvm-dispose-pseudocode.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_163276c9187267392694be367c0056754df21598e908fd1caf8df54ad55efcc9",
+        "ev_4b3a75a54721e188696dc5565892ba461d544fb32bda381682d6d3eac38bb00c"
+      ],
+      "confidence": "derived-high",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x18053eb80",
+      "end_exclusive": "0x18053ebc6",
+      "role": "主 ViewModel bool 清理候选：disposing=true 才双 Stop",
+      "evidence_paths": [
+        "evidence/timer-cleanup/timer-second-operation.json"
+      ],
+      "evidence_ids": [
+        "ev_7cb1d94d02794e42c9c65655a5536184cae35f22a2cead4f8f848b43a577b544"
+      ],
+      "confidence": "derived-high",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a1c30",
+      "end_exclusive": "0x1804a1cac",
+      "role": "Navigator 导航后覆盖方法：按 CanGoBack 设置系统返回按钮",
+      "evidence_paths": [
+        "evidence/timer-cleanup/navigator-forwarded-event.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_9465589a2edf5c364ee2f4fc2ff5f03f64bd78a641be45a1ac09329117842ba5"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a38b0",
+      "end_exclusive": "0x1804a38d5",
+      "role": "DispatcherTimer.remove_Tick 投影包装器",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-selection-navigation.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a38e0",
+      "end_exclusive": "0x1804a3905",
+      "role": "DispatcherTimer.add_Tick 投影包装器",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-selection-navigation.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a3910",
+      "end_exclusive": "0x1804a398d",
+      "role": "通知 Tick：Stop 通知计时器并清空通知",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-selection-navigation.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_6c990d88120eed1a8a55b347f36aae7c2edc4c4e56fc1677797ac35539b06384"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a2e90",
+      "end_exclusive": "0x1804a2f42",
+      "role": "显示通知：替换消息并 Stop/有条件 Start 通知计时器",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-property-and-refresh.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_937c8d79fee30a39d849d4b17e2de267ee75c422a55ae353bf2e451fba332cd9"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a22c0",
+      "end_exclusive": "0x1804a29a4",
+      "role": "主 ViewModel 构造：两计时器和绑定实例 Tick 委托",
+      "evidence_paths": [
+        "evidence/architecture-ui/mainvm-constructor.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_b935c2021cb366198b42f33074e5afebf0cec6e15c9eb31b98e4fd8fb5df33d2"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a20e0",
+      "end_exclusive": "0x1804a22bd",
+      "role": "主 ViewModel 工厂：分配依赖和新 VM",
+      "evidence_paths": [
+        "evidence/architecture-ui/viewmodel-factory.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_f63b5d05cdcc8d83acf39dffd39d44f6549c26bb5bc17bf5f52737d4907fcfb1"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a9930",
+      "end_exclusive": "0x1804a9a5f",
+      "role": "Navigator.Frame.Navigated：DataContext 空才创建 VM，随后转交导航回调",
+      "evidence_paths": [
+        "evidence/architecture-ui/frame-on-navigated.json",
+        "evidence/timer-cleanup/type-and-abi-evidence.json"
+      ],
+      "evidence_ids": [
+        "ev_09badf7ad47e420a19444bc524803965e86ea0059cdcf465f03cb81fd358ada1"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    },
+    {
+      "address": "0x1804a101d",
+      "end_exclusive": "0x1804a103a",
+      "role": "后台任务枚举器的 IDisposable 异常清理 funclet",
+      "evidence_paths": [
+        "evidence/timer-cleanup/unregister-enumerator-cleanup.json",
+        "evidence/background/old-task-unregister.json"
+      ],
+      "evidence_ids": [
+        "ev_7526e44bc07292194bcec99d4c94d5daea3eb2b7e2aebbe4fb20eacf039f943b",
+        "ev_e4baf15ed4edb5e66c73b6a49f3850435a9e33258767e4465fc158211313dc8b"
+      ],
+      "confidence": "confirmed",
+      "name_kind": "semantic-role-not-original-source-symbol"
+    }
+  ]
+}

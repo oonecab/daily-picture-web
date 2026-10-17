@@ -1,0 +1,1588 @@
+[
+  {
+    "source": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\App.xbf",
+    "sha256": "8eabe35f7a6ad667bc1234db5496b8b7332373f46084d5c8ba5b8559092ed793",
+    "size": 1092,
+    "version": [
+      2,
+      1
+    ],
+    "metadata_size": 872,
+    "node_stream_size": 208,
+    "metadata_offsets": {
+      "strings": 132,
+      "assemblies": 796,
+      "type_namespaces": 808,
+      "types": 820,
+      "properties": 860,
+      "xml_namespaces": 864
+    },
+    "strings": [
+      {
+        "index": 0,
+        "file_offset": 136,
+        "utf16_offset": 140,
+        "utf16_code_units": 57,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      },
+      {
+        "index": 1,
+        "file_offset": 256,
+        "utf16_offset": 260,
+        "utf16_code_units": 44,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml"
+      },
+      {
+        "index": 2,
+        "file_offset": 350,
+        "utf16_offset": 354,
+        "utf16_code_units": 26,
+        "value": "using:Duracellko.BingImage"
+      },
+      {
+        "index": 3,
+        "file_offset": 408,
+        "utf16_offset": 412,
+        "utf16_code_units": 40,
+        "value": "using:Duracellko.BingImage.UI.Converters"
+      },
+      {
+        "index": 4,
+        "file_offset": 494,
+        "utf16_offset": 498,
+        "utf16_code_units": 25,
+        "value": "/Resources/Resources.xaml"
+      },
+      {
+        "index": 5,
+        "file_offset": 550,
+        "utf16_offset": 554,
+        "utf16_code_units": 16,
+        "value": "BooleanConverter"
+      },
+      {
+        "index": 6,
+        "file_offset": 588,
+        "utf16_offset": 592,
+        "utf16_code_units": 14,
+        "value": "System.Windows"
+      },
+      {
+        "index": 7,
+        "file_offset": 622,
+        "utf16_offset": 626,
+        "utf16_code_units": 34,
+        "value": "Duracellko.BingImage.UI.Converters"
+      },
+      {
+        "index": 8,
+        "file_offset": 696,
+        "utf16_offset": 700,
+        "utf16_code_units": 19,
+        "value": "VisibilityConverter"
+      },
+      {
+        "index": 9,
+        "file_offset": 740,
+        "utf16_offset": 744,
+        "utf16_code_units": 25,
+        "value": "NullToVisibilityConverter"
+      }
+    ],
+    "tables": {
+      "assemblies": [
+        {
+          "index": 0,
+          "file_offset": 800,
+          "raw": [
+            1,
+            6
+          ],
+          "name": "System.Windows"
+        }
+      ],
+      "type_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 812,
+          "raw": [
+            0,
+            7
+          ],
+          "name": "Duracellko.BingImage.UI.Converters"
+        }
+      ],
+      "types": [
+        {
+          "index": 0,
+          "file_offset": 824,
+          "raw": [
+            0,
+            0,
+            5
+          ],
+          "name": "BooleanConverter"
+        },
+        {
+          "index": 1,
+          "file_offset": 836,
+          "raw": [
+            0,
+            0,
+            8
+          ],
+          "name": "VisibilityConverter"
+        },
+        {
+          "index": 2,
+          "file_offset": 848,
+          "raw": [
+            0,
+            0,
+            9
+          ],
+          "name": "NullToVisibilityConverter"
+        }
+      ],
+      "properties": [],
+      "xml_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 868,
+          "raw": [
+            0
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        },
+        {
+          "index": 1,
+          "file_offset": 872,
+          "raw": [
+            1
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml"
+        },
+        {
+          "index": 2,
+          "file_offset": 876,
+          "raw": [
+            2
+          ],
+          "name": "using:Duracellko.BingImage"
+        },
+        {
+          "index": 3,
+          "file_offset": 880,
+          "raw": [
+            3
+          ],
+          "name": "using:Duracellko.BingImage.UI.Converters"
+        }
+      ]
+    },
+    "all_metadata_boundaries_validated": true,
+    "node_stream_decoded": false
+  },
+  {
+    "source": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Resources\\Resources.xbf",
+    "sha256": "3b1d982d3c6603c574d6658dfbb305241569742b452c16478b1450a5f6ce70a9",
+    "size": 6276,
+    "version": [
+      2,
+      1
+    ],
+    "metadata_size": 4120,
+    "node_stream_size": 2144,
+    "metadata_offsets": {
+      "strings": 132,
+      "assemblies": 4100,
+      "type_namespaces": 4104,
+      "types": 4108,
+      "properties": 4112,
+      "xml_namespaces": 4116
+    },
+    "strings": [
+      {
+        "index": 0,
+        "file_offset": 136,
+        "utf16_offset": 140,
+        "utf16_code_units": 57,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      },
+      {
+        "index": 1,
+        "file_offset": 256,
+        "utf16_offset": 260,
+        "utf16_code_units": 44,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml"
+      },
+      {
+        "index": 2,
+        "file_offset": 350,
+        "utf16_offset": 354,
+        "utf16_code_units": 26,
+        "value": "using:Duracellko.BingImage"
+      },
+      {
+        "index": 3,
+        "file_offset": 408,
+        "utf16_offset": 412,
+        "utf16_code_units": 32,
+        "value": "ToggleButtonBackgroundThemeBrush"
+      },
+      {
+        "index": 4,
+        "file_offset": 478,
+        "utf16_offset": 482,
+        "utf16_code_units": 32,
+        "value": "ToggleButtonForegroundThemeBrush"
+      },
+      {
+        "index": 5,
+        "file_offset": 548,
+        "utf16_offset": 552,
+        "utf16_code_units": 28,
+        "value": "ToggleButtonBorderThemeBrush"
+      },
+      {
+        "index": 6,
+        "file_offset": 610,
+        "utf16_offset": 614,
+        "utf16_code_units": 32,
+        "value": "ToggleButtonBorderThemeThickness"
+      },
+      {
+        "index": 7,
+        "file_offset": 680,
+        "utf16_offset": 684,
+        "utf16_code_units": 29,
+        "value": "ContentControlThemeFontFamily"
+      },
+      {
+        "index": 8,
+        "file_offset": 744,
+        "utf16_offset": 748,
+        "utf16_code_units": 27,
+        "value": "ControlContentThemeFontSize"
+      },
+      {
+        "index": 9,
+        "file_offset": 804,
+        "utf16_offset": 808,
+        "utf16_code_units": 12,
+        "value": "CommonStates"
+      },
+      {
+        "index": 10,
+        "file_offset": 834,
+        "utf16_offset": 838,
+        "utf16_code_units": 6,
+        "value": "Normal"
+      },
+      {
+        "index": 11,
+        "file_offset": 852,
+        "utf16_offset": 856,
+        "utf16_code_units": 11,
+        "value": "PointerOver"
+      },
+      {
+        "index": 12,
+        "file_offset": 880,
+        "utf16_offset": 884,
+        "utf16_code_units": 6,
+        "value": "Border"
+      },
+      {
+        "index": 13,
+        "file_offset": 898,
+        "utf16_offset": 902,
+        "utf16_code_units": 10,
+        "value": "Background"
+      },
+      {
+        "index": 14,
+        "file_offset": 924,
+        "utf16_offset": 928,
+        "utf16_code_units": 43,
+        "value": "ToggleButtonPointerOverBackgroundThemeBrush"
+      },
+      {
+        "index": 15,
+        "file_offset": 1016,
+        "utf16_offset": 1020,
+        "utf16_code_units": 7,
+        "value": "Pressed"
+      },
+      {
+        "index": 16,
+        "file_offset": 1036,
+        "utf16_offset": 1040,
+        "utf16_code_units": 39,
+        "value": "ToggleButtonPressedBackgroundThemeBrush"
+      },
+      {
+        "index": 17,
+        "file_offset": 1120,
+        "utf16_offset": 1124,
+        "utf16_code_units": 16,
+        "value": "ContentPresenter"
+      },
+      {
+        "index": 18,
+        "file_offset": 1158,
+        "utf16_offset": 1162,
+        "utf16_code_units": 10,
+        "value": "Foreground"
+      },
+      {
+        "index": 19,
+        "file_offset": 1184,
+        "utf16_offset": 1188,
+        "utf16_code_units": 39,
+        "value": "ToggleButtonPressedForegroundThemeBrush"
+      },
+      {
+        "index": 20,
+        "file_offset": 1268,
+        "utf16_offset": 1272,
+        "utf16_code_units": 8,
+        "value": "Disabled"
+      },
+      {
+        "index": 21,
+        "file_offset": 1290,
+        "utf16_offset": 1294,
+        "utf16_code_units": 11,
+        "value": "BorderBrush"
+      },
+      {
+        "index": 22,
+        "file_offset": 1318,
+        "utf16_offset": 1322,
+        "utf16_code_units": 36,
+        "value": "ToggleButtonDisabledBorderThemeBrush"
+      },
+      {
+        "index": 23,
+        "file_offset": 1396,
+        "utf16_offset": 1400,
+        "utf16_code_units": 40,
+        "value": "ToggleButtonDisabledForegroundThemeBrush"
+      },
+      {
+        "index": 24,
+        "file_offset": 1482,
+        "utf16_offset": 1486,
+        "utf16_code_units": 7,
+        "value": "Checked"
+      },
+      {
+        "index": 25,
+        "file_offset": 1502,
+        "utf16_offset": 1506,
+        "utf16_code_units": 39,
+        "value": "ToggleButtonCheckedBackgroundThemeBrush"
+      },
+      {
+        "index": 26,
+        "file_offset": 1586,
+        "utf16_offset": 1590,
+        "utf16_code_units": 35,
+        "value": "ToggleButtonCheckedBorderThemeBrush"
+      },
+      {
+        "index": 27,
+        "file_offset": 1662,
+        "utf16_offset": 1666,
+        "utf16_code_units": 39,
+        "value": "ToggleButtonCheckedForegroundThemeBrush"
+      },
+      {
+        "index": 28,
+        "file_offset": 1746,
+        "utf16_offset": 1750,
+        "utf16_code_units": 18,
+        "value": "CheckedPointerOver"
+      },
+      {
+        "index": 29,
+        "file_offset": 1788,
+        "utf16_offset": 1792,
+        "utf16_code_units": 50,
+        "value": "ToggleButtonCheckedPointerOverBackgroundThemeBrush"
+      },
+      {
+        "index": 30,
+        "file_offset": 1894,
+        "utf16_offset": 1898,
+        "utf16_code_units": 46,
+        "value": "ToggleButtonCheckedPointerOverBorderThemeBrush"
+      },
+      {
+        "index": 31,
+        "file_offset": 1992,
+        "utf16_offset": 1996,
+        "utf16_code_units": 14,
+        "value": "CheckedPressed"
+      },
+      {
+        "index": 32,
+        "file_offset": 2026,
+        "utf16_offset": 2030,
+        "utf16_code_units": 46,
+        "value": "ToggleButtonCheckedPressedBackgroundThemeBrush"
+      },
+      {
+        "index": 33,
+        "file_offset": 2124,
+        "utf16_offset": 2128,
+        "utf16_code_units": 42,
+        "value": "ToggleButtonCheckedPressedBorderThemeBrush"
+      },
+      {
+        "index": 34,
+        "file_offset": 2214,
+        "utf16_offset": 2218,
+        "utf16_code_units": 46,
+        "value": "ToggleButtonCheckedPressedForegroundThemeBrush"
+      },
+      {
+        "index": 35,
+        "file_offset": 2312,
+        "utf16_offset": 2316,
+        "utf16_code_units": 15,
+        "value": "CheckedDisabled"
+      },
+      {
+        "index": 36,
+        "file_offset": 2348,
+        "utf16_offset": 2352,
+        "utf16_code_units": 47,
+        "value": "ToggleButtonCheckedDisabledBackgroundThemeBrush"
+      },
+      {
+        "index": 37,
+        "file_offset": 2448,
+        "utf16_offset": 2452,
+        "utf16_code_units": 47,
+        "value": "ToggleButtonCheckedDisabledForegroundThemeBrush"
+      },
+      {
+        "index": 38,
+        "file_offset": 2548,
+        "utf16_offset": 2552,
+        "utf16_code_units": 13,
+        "value": "Indeterminate"
+      },
+      {
+        "index": 39,
+        "file_offset": 2580,
+        "utf16_offset": 2584,
+        "utf16_code_units": 24,
+        "value": "IndeterminatePointerOver"
+      },
+      {
+        "index": 40,
+        "file_offset": 2634,
+        "utf16_offset": 2638,
+        "utf16_code_units": 20,
+        "value": "IndeterminatePressed"
+      },
+      {
+        "index": 41,
+        "file_offset": 2680,
+        "utf16_offset": 2684,
+        "utf16_code_units": 21,
+        "value": "IndeterminateDisabled"
+      },
+      {
+        "index": 42,
+        "file_offset": 2728,
+        "utf16_offset": 2732,
+        "utf16_code_units": 11,
+        "value": "FocusStates"
+      },
+      {
+        "index": 43,
+        "file_offset": 2756,
+        "utf16_offset": 2760,
+        "utf16_code_units": 7,
+        "value": "Focused"
+      },
+      {
+        "index": 44,
+        "file_offset": 2776,
+        "utf16_offset": 2780,
+        "utf16_code_units": 16,
+        "value": "FocusVisualWhite"
+      },
+      {
+        "index": 45,
+        "file_offset": 2814,
+        "utf16_offset": 2818,
+        "utf16_code_units": 7,
+        "value": "Opacity"
+      },
+      {
+        "index": 46,
+        "file_offset": 2834,
+        "utf16_offset": 2838,
+        "utf16_code_units": 1,
+        "value": "0"
+      },
+      {
+        "index": 47,
+        "file_offset": 2842,
+        "utf16_offset": 2846,
+        "utf16_code_units": 16,
+        "value": "FocusVisualBlack"
+      },
+      {
+        "index": 48,
+        "file_offset": 2880,
+        "utf16_offset": 2884,
+        "utf16_code_units": 9,
+        "value": "Unfocused"
+      },
+      {
+        "index": 49,
+        "file_offset": 2904,
+        "utf16_offset": 2908,
+        "utf16_code_units": 14,
+        "value": "PointerFocused"
+      },
+      {
+        "index": 50,
+        "file_offset": 2938,
+        "utf16_offset": 2942,
+        "utf16_code_units": 32,
+        "value": "FocusVisualWhiteStrokeThemeBrush"
+      },
+      {
+        "index": 51,
+        "file_offset": 3008,
+        "utf16_offset": 3012,
+        "utf16_code_units": 32,
+        "value": "FocusVisualBlackStrokeThemeBrush"
+      },
+      {
+        "index": 52,
+        "file_offset": 3078,
+        "utf16_offset": 3082,
+        "utf16_code_units": 8,
+        "value": "SemiBold"
+      },
+      {
+        "index": 53,
+        "file_offset": 3100,
+        "utf16_offset": 3104,
+        "utf16_code_units": 39,
+        "value": "ToggleSwitchCurtainBackgroundThemeBrush"
+      },
+      {
+        "index": 54,
+        "file_offset": 3184,
+        "utf16_offset": 3188,
+        "utf16_code_units": 26,
+        "value": "AppBarBackgroundThemeBrush"
+      },
+      {
+        "index": 55,
+        "file_offset": 3242,
+        "utf16_offset": 3246,
+        "utf16_code_units": 30,
+        "value": "AppBarItemForegroundThemeBrush"
+      },
+      {
+        "index": 56,
+        "file_offset": 3308,
+        "utf16_offset": 3312,
+        "utf16_code_units": 22,
+        "value": "AppBarBorderThemeBrush"
+      },
+      {
+        "index": 57,
+        "file_offset": 3358,
+        "utf16_offset": 3362,
+        "utf16_code_units": 38,
+        "value": "AppBarItemDisabledForegroundThemeBrush"
+      },
+      {
+        "index": 58,
+        "file_offset": 3440,
+        "utf16_offset": 3444,
+        "utf16_code_units": 44,
+        "value": "ProgressBarIndeterminateForegroundThemeBrush"
+      },
+      {
+        "index": 59,
+        "file_offset": 3534,
+        "utf16_offset": 3538,
+        "utf16_code_units": 50,
+        "value": "ToggleSwitchCurtainPointerOverBackgroundThemeBrush"
+      },
+      {
+        "index": 60,
+        "file_offset": 3640,
+        "utf16_offset": 3644,
+        "utf16_code_units": 41,
+        "value": "AppBarItemPointerOverBackgroundThemeBrush"
+      },
+      {
+        "index": 61,
+        "file_offset": 3728,
+        "utf16_offset": 3732,
+        "utf16_code_units": 37,
+        "value": "AppBarItemPressedForegroundThemeBrush"
+      },
+      {
+        "index": 62,
+        "file_offset": 3808,
+        "utf16_offset": 3812,
+        "utf16_code_units": 41,
+        "value": "AppBarItemPointerOverForegroundThemeBrush"
+      },
+      {
+        "index": 63,
+        "file_offset": 3896,
+        "utf16_offset": 3900,
+        "utf16_code_units": 46,
+        "value": "ToggleSwitchCurtainPressedBackgroundThemeBrush"
+      },
+      {
+        "index": 64,
+        "file_offset": 3994,
+        "utf16_offset": 3998,
+        "utf16_code_units": 25,
+        "value": "ProgressBarThemeMinHeight"
+      },
+      {
+        "index": 65,
+        "file_offset": 4050,
+        "utf16_offset": 4054,
+        "utf16_code_units": 22,
+        "value": "RoundToggleButtonStyle"
+      }
+    ],
+    "tables": {
+      "assemblies": [],
+      "type_namespaces": [],
+      "types": [],
+      "properties": [],
+      "xml_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 4120,
+          "raw": [
+            0
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        },
+        {
+          "index": 1,
+          "file_offset": 4124,
+          "raw": [
+            1
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml"
+        },
+        {
+          "index": 2,
+          "file_offset": 4128,
+          "raw": [
+            2
+          ],
+          "name": "using:Duracellko.BingImage"
+        }
+      ]
+    },
+    "all_metadata_boundaries_validated": true,
+    "node_stream_decoded": false
+  },
+  {
+    "source": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\AboutPage.xbf",
+    "sha256": "89dfc543924a9045bda2752cc8e25f21bf8747ee8d2661e2426409f827326079",
+    "size": 8582,
+    "version": [
+      2,
+      1
+    ],
+    "metadata_size": 1558,
+    "node_stream_size": 7012,
+    "metadata_offsets": {
+      "strings": 132,
+      "assemblies": 1530,
+      "type_namespaces": 1534,
+      "types": 1538,
+      "properties": 1542,
+      "xml_namespaces": 1546
+    },
+    "strings": [
+      {
+        "index": 0,
+        "file_offset": 136,
+        "utf16_offset": 140,
+        "utf16_code_units": 57,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      },
+      {
+        "index": 1,
+        "file_offset": 256,
+        "utf16_offset": 260,
+        "utf16_code_units": 44,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml"
+      },
+      {
+        "index": 2,
+        "file_offset": 350,
+        "utf16_offset": 354,
+        "utf16_code_units": 32,
+        "value": "using:Duracellko.BingImage.Views"
+      },
+      {
+        "index": 3,
+        "file_offset": 420,
+        "utf16_offset": 424,
+        "utf16_code_units": 50,
+        "value": "http://schemas.microsoft.com/expression/blend/2008"
+      },
+      {
+        "index": 4,
+        "file_offset": 526,
+        "utf16_offset": 530,
+        "utf16_code_units": 59,
+        "value": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+      },
+      {
+        "index": 5,
+        "file_offset": 650,
+        "utf16_offset": 654,
+        "utf16_code_units": 35,
+        "value": "ApplicationPageBackgroundThemeBrush"
+      },
+      {
+        "index": 6,
+        "file_offset": 726,
+        "utf16_offset": 730,
+        "utf16_code_units": 10,
+        "value": "AboutTitle"
+      },
+      {
+        "index": 7,
+        "file_offset": 752,
+        "utf16_offset": 756,
+        "utf16_code_units": 20,
+        "value": "HeaderTextBlockStyle"
+      },
+      {
+        "index": 8,
+        "file_offset": 798,
+        "utf16_offset": 802,
+        "utf16_code_units": 26,
+        "value": "SettingsFlyoutSectionStyle"
+      },
+      {
+        "index": 9,
+        "file_offset": 856,
+        "utf16_offset": 860,
+        "utf16_code_units": 21,
+        "value": "AboutApplicationTitle"
+      },
+      {
+        "index": 10,
+        "file_offset": 904,
+        "utf16_offset": 908,
+        "utf16_code_units": 23,
+        "value": "SubheaderTextBlockStyle"
+      },
+      {
+        "index": 11,
+        "file_offset": 956,
+        "utf16_offset": 960,
+        "utf16_code_units": 4,
+        "value": "Bold"
+      },
+      {
+        "index": 12,
+        "file_offset": 970,
+        "utf16_offset": 974,
+        "utf16_code_units": 27,
+        "value": "AboutApplicationDescription"
+      },
+      {
+        "index": 13,
+        "file_offset": 1030,
+        "utf16_offset": 1034,
+        "utf16_code_units": 18,
+        "value": "BodyTextBlockStyle"
+      },
+      {
+        "index": 14,
+        "file_offset": 1072,
+        "utf16_offset": 1076,
+        "utf16_code_units": 19,
+        "value": "http://www.bing.com"
+      },
+      {
+        "index": 15,
+        "file_offset": 1116,
+        "utf16_offset": 1120,
+        "utf16_code_units": 6,
+        "value": "layer1"
+      },
+      {
+        "index": 16,
+        "file_offset": 1134,
+        "utf16_offset": 1138,
+        "utf16_code_units": 8,
+        "value": "path2998"
+      },
+      {
+        "index": 17,
+        "file_offset": 1156,
+        "utf16_offset": 1160,
+        "utf16_code_units": 12,
+        "value": "flowRoot3000"
+      },
+      {
+        "index": 18,
+        "file_offset": 1186,
+        "utf16_offset": 1190,
+        "utf16_code_units": 8,
+        "value": "path3009"
+      },
+      {
+        "index": 19,
+        "file_offset": 1208,
+        "utf16_offset": 1212,
+        "utf16_code_units": 8,
+        "value": "path3011"
+      },
+      {
+        "index": 20,
+        "file_offset": 1230,
+        "utf16_offset": 1234,
+        "utf16_code_units": 8,
+        "value": "path3013"
+      },
+      {
+        "index": 21,
+        "file_offset": 1252,
+        "utf16_offset": 1256,
+        "utf16_code_units": 8,
+        "value": "path3015"
+      },
+      {
+        "index": 22,
+        "file_offset": 1274,
+        "utf16_offset": 1278,
+        "utf16_code_units": 25,
+        "value": "http://www.duracellko.net"
+      },
+      {
+        "index": 23,
+        "file_offset": 1330,
+        "utf16_offset": 1334,
+        "utf16_code_units": 19,
+        "value": "TitleTextBlockStyle"
+      },
+      {
+        "index": 24,
+        "file_offset": 1374,
+        "utf16_offset": 1378,
+        "utf16_code_units": 14,
+        "value": "Duracellko.NET"
+      },
+      {
+        "index": 25,
+        "file_offset": 1408,
+        "utf16_offset": 1412,
+        "utf16_code_units": 22,
+        "value": "PrivacyPolicyHyperlink"
+      },
+      {
+        "index": 26,
+        "file_offset": 1458,
+        "utf16_offset": 1462,
+        "utf16_code_units": 9,
+        "value": "Copyright"
+      },
+      {
+        "index": 27,
+        "file_offset": 1482,
+        "utf16_offset": 1486,
+        "utf16_code_units": 21,
+        "value": "CaptionTextBlockStyle"
+      }
+    ],
+    "tables": {
+      "assemblies": [],
+      "type_namespaces": [],
+      "types": [],
+      "properties": [],
+      "xml_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 1550,
+          "raw": [
+            0
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        },
+        {
+          "index": 1,
+          "file_offset": 1554,
+          "raw": [
+            1
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml"
+        },
+        {
+          "index": 2,
+          "file_offset": 1558,
+          "raw": [
+            2
+          ],
+          "name": "using:Duracellko.BingImage.Views"
+        },
+        {
+          "index": 3,
+          "file_offset": 1562,
+          "raw": [
+            3
+          ],
+          "name": "http://schemas.microsoft.com/expression/blend/2008"
+        },
+        {
+          "index": 4,
+          "file_offset": 1566,
+          "raw": [
+            4
+          ],
+          "name": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+        }
+      ]
+    },
+    "all_metadata_boundaries_validated": true,
+    "node_stream_decoded": false
+  },
+  {
+    "source": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\ApplicationSettingsPage.xbf",
+    "sha256": "c1bd21dc511d9ac144d62cb7a8a55400e2e5ec3029d44b16967308558c82d45d",
+    "size": 1916,
+    "version": [
+      2,
+      1
+    ],
+    "metadata_size": 1406,
+    "node_stream_size": 498,
+    "metadata_offsets": {
+      "strings": 132,
+      "assemblies": 1378,
+      "type_namespaces": 1382,
+      "types": 1386,
+      "properties": 1390,
+      "xml_namespaces": 1394
+    },
+    "strings": [
+      {
+        "index": 0,
+        "file_offset": 136,
+        "utf16_offset": 140,
+        "utf16_code_units": 57,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      },
+      {
+        "index": 1,
+        "file_offset": 256,
+        "utf16_offset": 260,
+        "utf16_code_units": 44,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml"
+      },
+      {
+        "index": 2,
+        "file_offset": 350,
+        "utf16_offset": 354,
+        "utf16_code_units": 32,
+        "value": "using:Duracellko.BingImage.Views"
+      },
+      {
+        "index": 3,
+        "file_offset": 420,
+        "utf16_offset": 424,
+        "utf16_code_units": 50,
+        "value": "http://schemas.microsoft.com/expression/blend/2008"
+      },
+      {
+        "index": 4,
+        "file_offset": 526,
+        "utf16_offset": 530,
+        "utf16_code_units": 59,
+        "value": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+      },
+      {
+        "index": 5,
+        "file_offset": 650,
+        "utf16_offset": 654,
+        "utf16_code_units": 35,
+        "value": "ApplicationPageBackgroundThemeBrush"
+      },
+      {
+        "index": 6,
+        "file_offset": 726,
+        "utf16_offset": 730,
+        "utf16_code_units": 13,
+        "value": "SettingsTitle"
+      },
+      {
+        "index": 7,
+        "file_offset": 758,
+        "utf16_offset": 762,
+        "utf16_code_units": 20,
+        "value": "HeaderTextBlockStyle"
+      },
+      {
+        "index": 8,
+        "file_offset": 804,
+        "utf16_offset": 808,
+        "utf16_code_units": 26,
+        "value": "SettingsFlyoutSectionStyle"
+      },
+      {
+        "index": 9,
+        "file_offset": 862,
+        "utf16_offset": 866,
+        "utf16_code_units": 29,
+        "value": "UseBingImageAsLockScreenTitle"
+      },
+      {
+        "index": 10,
+        "file_offset": 926,
+        "utf16_offset": 930,
+        "utf16_code_units": 19,
+        "value": "TitleTextBlockStyle"
+      },
+      {
+        "index": 11,
+        "file_offset": 970,
+        "utf16_offset": 974,
+        "utf16_code_units": 35,
+        "value": "UseBingImageAsLockScreenDescription"
+      },
+      {
+        "index": 12,
+        "file_offset": 1046,
+        "utf16_offset": 1050,
+        "utf16_code_units": 18,
+        "value": "BodyTextBlockStyle"
+      },
+      {
+        "index": 13,
+        "file_offset": 1088,
+        "utf16_offset": 1092,
+        "utf16_code_units": 24,
+        "value": "UseBingImageAsLockScreen"
+      },
+      {
+        "index": 14,
+        "file_offset": 1142,
+        "utf16_offset": 1146,
+        "utf16_code_units": 36,
+        "value": "UseBingImageAsDesktopBackgroundTitle"
+      },
+      {
+        "index": 15,
+        "file_offset": 1220,
+        "utf16_offset": 1224,
+        "utf16_code_units": 42,
+        "value": "UseBingImageAsDesktopBackgroundDescription"
+      },
+      {
+        "index": 16,
+        "file_offset": 1310,
+        "utf16_offset": 1314,
+        "utf16_code_units": 31,
+        "value": "UseBingImageAsDesktopBackground"
+      }
+    ],
+    "tables": {
+      "assemblies": [],
+      "type_namespaces": [],
+      "types": [],
+      "properties": [],
+      "xml_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 1398,
+          "raw": [
+            0
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        },
+        {
+          "index": 1,
+          "file_offset": 1402,
+          "raw": [
+            1
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml"
+        },
+        {
+          "index": 2,
+          "file_offset": 1406,
+          "raw": [
+            2
+          ],
+          "name": "using:Duracellko.BingImage.Views"
+        },
+        {
+          "index": 3,
+          "file_offset": 1410,
+          "raw": [
+            3
+          ],
+          "name": "http://schemas.microsoft.com/expression/blend/2008"
+        },
+        {
+          "index": 4,
+          "file_offset": 1414,
+          "raw": [
+            4
+          ],
+          "name": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+        }
+      ]
+    },
+    "all_metadata_boundaries_validated": true,
+    "node_stream_decoded": false
+  },
+  {
+    "source": "E:\\study\\rea\\daily-picture\\evidence\\resources\\extracted\\Views\\MainPage.xbf",
+    "sha256": "e1ccd2bfd462cdce0c36aee059505f5b891cc1926846b5404dee69c0e768501b",
+    "size": 3838,
+    "version": [
+      2,
+      1
+    ],
+    "metadata_size": 2756,
+    "node_stream_size": 1070,
+    "metadata_offsets": {
+      "strings": 132,
+      "assemblies": 2728,
+      "type_namespaces": 2732,
+      "types": 2736,
+      "properties": 2740,
+      "xml_namespaces": 2744
+    },
+    "strings": [
+      {
+        "index": 0,
+        "file_offset": 136,
+        "utf16_offset": 140,
+        "utf16_code_units": 57,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      },
+      {
+        "index": 1,
+        "file_offset": 256,
+        "utf16_offset": 260,
+        "utf16_code_units": 44,
+        "value": "http://schemas.microsoft.com/winfx/2006/xaml"
+      },
+      {
+        "index": 2,
+        "file_offset": 350,
+        "utf16_offset": 354,
+        "utf16_code_units": 26,
+        "value": "using:Duracellko.BingImage"
+      },
+      {
+        "index": 3,
+        "file_offset": 408,
+        "utf16_offset": 412,
+        "utf16_code_units": 50,
+        "value": "http://schemas.microsoft.com/expression/blend/2008"
+      },
+      {
+        "index": 4,
+        "file_offset": 514,
+        "utf16_offset": 518,
+        "utf16_code_units": 59,
+        "value": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+      },
+      {
+        "index": 5,
+        "file_offset": 638,
+        "utf16_offset": 642,
+        "utf16_code_units": 11,
+        "value": "Description"
+      },
+      {
+        "index": 6,
+        "file_offset": 666,
+        "utf16_offset": 670,
+        "utf16_code_units": 19,
+        "value": "RefreshAppBarButton"
+      },
+      {
+        "index": 7,
+        "file_offset": 710,
+        "utf16_offset": 714,
+        "utf16_code_units": 14,
+        "value": "RefreshCommand"
+      },
+      {
+        "index": 8,
+        "file_offset": 744,
+        "utf16_offset": 748,
+        "utf16_code_units": 7,
+        "value": "Refresh"
+      },
+      {
+        "index": 9,
+        "file_offset": 764,
+        "utf16_offset": 768,
+        "utf16_code_units": 37,
+        "value": "SetDesktopBackgroundImageAppBarButton"
+      },
+      {
+        "index": 10,
+        "file_offset": 844,
+        "utf16_offset": 848,
+        "utf16_code_units": 32,
+        "value": "SetDesktopBackgroundImageCommand"
+      },
+      {
+        "index": 11,
+        "file_offset": 914,
+        "utf16_offset": 918,
+        "utf16_code_units": 9,
+        "value": "NewWindow"
+      },
+      {
+        "index": 12,
+        "file_offset": 938,
+        "utf16_offset": 942,
+        "utf16_code_units": 29,
+        "value": "IsSetDesktopBackgroundVisible"
+      },
+      {
+        "index": 13,
+        "file_offset": 1002,
+        "utf16_offset": 1006,
+        "utf16_code_units": 19,
+        "value": "VisibilityConverter"
+      },
+      {
+        "index": 14,
+        "file_offset": 1046,
+        "utf16_offset": 1050,
+        "utf16_code_units": 30,
+        "value": "SetLockScreenImageAppBarButton"
+      },
+      {
+        "index": 15,
+        "file_offset": 1112,
+        "utf16_offset": 1116,
+        "utf16_code_units": 25,
+        "value": "SetLockScreenImageCommand"
+      },
+      {
+        "index": 16,
+        "file_offset": 1168,
+        "utf16_offset": 1172,
+        "utf16_code_units": 13,
+        "value": "SetLockScreen"
+      },
+      {
+        "index": 17,
+        "file_offset": 1200,
+        "utf16_offset": 1204,
+        "utf16_code_units": 22,
+        "value": "IsSetLockScreenVisible"
+      },
+      {
+        "index": 18,
+        "file_offset": 1250,
+        "utf16_offset": 1254,
+        "utf16_code_units": 16,
+        "value": "SaveAppBarButton"
+      },
+      {
+        "index": 19,
+        "file_offset": 1288,
+        "utf16_offset": 1292,
+        "utf16_code_units": 11,
+        "value": "SaveCommand"
+      },
+      {
+        "index": 20,
+        "file_offset": 1316,
+        "utf16_offset": 1320,
+        "utf16_code_units": 4,
+        "value": "Save"
+      },
+      {
+        "index": 21,
+        "file_offset": 1330,
+        "utf16_offset": 1334,
+        "utf16_code_units": 23,
+        "value": "SettingsAppBarSeparator"
+      },
+      {
+        "index": 22,
+        "file_offset": 1382,
+        "utf16_offset": 1386,
+        "utf16_code_units": 20,
+        "value": "SettingsAppBarButton"
+      },
+      {
+        "index": 23,
+        "file_offset": 1428,
+        "utf16_offset": 1432,
+        "utf16_code_units": 19,
+        "value": "OpenSettingsCommand"
+      },
+      {
+        "index": 24,
+        "file_offset": 1472,
+        "utf16_offset": 1476,
+        "utf16_code_units": 7,
+        "value": "Setting"
+      },
+      {
+        "index": 25,
+        "file_offset": 1492,
+        "utf16_offset": 1496,
+        "utf16_code_units": 25,
+        "value": "SaveAppBarButtonSecondary"
+      },
+      {
+        "index": 26,
+        "file_offset": 1548,
+        "utf16_offset": 1552,
+        "utf16_code_units": 29,
+        "value": "SettingsAppBarButtonSecondary"
+      },
+      {
+        "index": 27,
+        "file_offset": 1612,
+        "utf16_offset": 1616,
+        "utf16_code_units": 28,
+        "value": "AboutApplicationAppBarButton"
+      },
+      {
+        "index": 28,
+        "file_offset": 1674,
+        "utf16_offset": 1678,
+        "utf16_code_units": 16,
+        "value": "OpenAboutCommand"
+      },
+      {
+        "index": 29,
+        "file_offset": 1712,
+        "utf16_offset": 1716,
+        "utf16_code_units": 35,
+        "value": "ApplicationPageBackgroundThemeBrush"
+      },
+      {
+        "index": 30,
+        "file_offset": 1788,
+        "utf16_offset": 1792,
+        "utf16_code_units": 8,
+        "value": "Large720"
+      },
+      {
+        "index": 31,
+        "file_offset": 1810,
+        "utf16_offset": 1814,
+        "utf16_code_units": 39,
+        "value": "SaveAppBarButton.(UIElement.Visibility)"
+      },
+      {
+        "index": 32,
+        "file_offset": 1894,
+        "utf16_offset": 1898,
+        "utf16_code_units": 7,
+        "value": "Visible"
+      },
+      {
+        "index": 33,
+        "file_offset": 1914,
+        "utf16_offset": 1918,
+        "utf16_code_units": 48,
+        "value": "SaveAppBarButtonSecondary.(UIElement.Visibility)"
+      },
+      {
+        "index": 34,
+        "file_offset": 2016,
+        "utf16_offset": 2020,
+        "utf16_code_units": 9,
+        "value": "Collapsed"
+      },
+      {
+        "index": 35,
+        "file_offset": 2040,
+        "utf16_offset": 2044,
+        "utf16_code_units": 46,
+        "value": "SettingsAppBarSeparator.(UIElement.Visibility)"
+      },
+      {
+        "index": 36,
+        "file_offset": 2138,
+        "utf16_offset": 2142,
+        "utf16_code_units": 43,
+        "value": "SettingsAppBarButton.(UIElement.Visibility)"
+      },
+      {
+        "index": 37,
+        "file_offset": 2230,
+        "utf16_offset": 2234,
+        "utf16_code_units": 52,
+        "value": "SettingsAppBarButtonSecondary.(UIElement.Visibility)"
+      },
+      {
+        "index": 38,
+        "file_offset": 2340,
+        "utf16_offset": 2344,
+        "utf16_code_units": 0,
+        "value": ""
+      },
+      {
+        "index": 39,
+        "file_offset": 2346,
+        "utf16_offset": 2350,
+        "utf16_code_units": 1,
+        "value": "6"
+      },
+      {
+        "index": 40,
+        "file_offset": 2354,
+        "utf16_offset": 2358,
+        "utf16_code_units": 22,
+        "value": "/Images/Background.png"
+      },
+      {
+        "index": 41,
+        "file_offset": 2404,
+        "utf16_offset": 2408,
+        "utf16_code_units": 19,
+        "value": "IsBackgroundVisible"
+      },
+      {
+        "index": 42,
+        "file_offset": 2448,
+        "utf16_offset": 2452,
+        "utf16_code_units": 14,
+        "value": "imagesFlipView"
+      },
+      {
+        "index": 43,
+        "file_offset": 2482,
+        "utf16_offset": 2486,
+        "utf16_code_units": 6,
+        "value": "Images"
+      },
+      {
+        "index": 44,
+        "file_offset": 2500,
+        "utf16_offset": 2504,
+        "utf16_code_units": 13,
+        "value": "SelectedIndex"
+      },
+      {
+        "index": 45,
+        "file_offset": 2532,
+        "utf16_offset": 2536,
+        "utf16_code_units": 11,
+        "value": "ImageSource"
+      },
+      {
+        "index": 46,
+        "file_offset": 2560,
+        "utf16_offset": 2564,
+        "utf16_code_units": 19,
+        "value": "NotificationMessage"
+      },
+      {
+        "index": 47,
+        "file_offset": 2604,
+        "utf16_offset": 2608,
+        "utf16_code_units": 25,
+        "value": "NullToVisibilityConverter"
+      },
+      {
+        "index": 48,
+        "file_offset": 2660,
+        "utf16_offset": 2664,
+        "utf16_code_units": 6,
+        "value": "IsBusy"
+      },
+      {
+        "index": 49,
+        "file_offset": 2678,
+        "utf16_offset": 2682,
+        "utf16_code_units": 16,
+        "value": "BooleanConverter"
+      },
+      {
+        "index": 50,
+        "file_offset": 2716,
+        "utf16_offset": 2720,
+        "utf16_code_units": 3,
+        "value": "not"
+      }
+    ],
+    "tables": {
+      "assemblies": [],
+      "type_namespaces": [],
+      "types": [],
+      "properties": [],
+      "xml_namespaces": [
+        {
+          "index": 0,
+          "file_offset": 2748,
+          "raw": [
+            0
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        },
+        {
+          "index": 1,
+          "file_offset": 2752,
+          "raw": [
+            1
+          ],
+          "name": "http://schemas.microsoft.com/winfx/2006/xaml"
+        },
+        {
+          "index": 2,
+          "file_offset": 2756,
+          "raw": [
+            2
+          ],
+          "name": "using:Duracellko.BingImage"
+        },
+        {
+          "index": 3,
+          "file_offset": 2760,
+          "raw": [
+            3
+          ],
+          "name": "http://schemas.microsoft.com/expression/blend/2008"
+        },
+        {
+          "index": 4,
+          "file_offset": 2764,
+          "raw": [
+            4
+          ],
+          "name": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+        }
+      ]
+    },
+    "all_metadata_boundaries_validated": true,
+    "node_stream_decoded": false
+  }
+]

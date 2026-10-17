@@ -1,0 +1,226 @@
+{
+  "observed_at_utc": "2026-10-17T10:53:57.521807+00:00",
+  "evidence_records": 179,
+  "rizin_records": 174,
+  "decoded_instructions_byte_checked": 29144,
+  "unique_instruction_observations": 26135,
+  "artifact_count": 3,
+  "failures": [],
+  "provider_limitations": [
+    {
+      "path": "evidence\\rea\\archive-url-decompiler-probe.json",
+      "stderr": "Ghidra Decompiler Error: No sleigh specification for x86:LE:64:default\r\n"
+    },
+    {
+      "path": "evidence\\rea\\cutter-ghidra-configuration.json",
+      "stderr": "ERROR: Command 'e??ghidra' does not exist.\r\nERROR: Displaying the help of command 'e'.\r\n\r\nERROR: \u001b[36mUsage: \u001b[0m\u001b[37me\u001b[0m[?]\u001b[33m\u001b[0m   \u001b[32m# List/get/set config evaluable vars\u001b[0m\r\n| \u001b[37me\u001b[33m <key>[=<val|?>] [<key>[=<val|?>] ...]] \u001b[32m# Get/Set value of config variable <key>\u001b[0m\r\n| \u001b[37mel\u001b[0m[jqlJ]\u001b[33m [<key>]       \u001b[32m# List config variables with their descriptions\u001b[0m\r\n| \u001b[37me-\u001b[33m                     \u001b[32m# Reset config variables\u001b[0m\r\n| \u001b[37me!\u001b[33m <key>               \u001b[32m# Invert the boolean value of config variable <key>\u001b[0m\r\n| \u001b[37mec\u001b[0m[?]\u001b[33m                  \u001b[32m# Set color for given key (prompt, offset, ...)\u001b[0m\r\n| \u001b[37mee\u001b[33m <key>               \u001b[32m# Open editor to change the value of config variable <key>\u001b[0m\r\n| \u001b[37mer\u001b[33m <key>               \u001b[32m# Set config variable <key> as read-only\u001b[0m\r\n| \u001b[37mes\u001b[33m [<key>]             \u001b[32m# List all config variable spaces or sub-keys/sub-spaces if a <key> is provided\u001b[0m\r\n| \u001b[37met\u001b[33m <key>               \u001b[32m# Show type of given config variable <key>\u001b[0m\r\n\r\nDetailed help for \u001b[37me\u001b[33m <key>[=<val|?>] [<key>[=<val|?>] ...]]\u001b[0m is provided by e??.\r\n"
+    }
+  ],
+  "disassembly_decode_limits": [
+    {
+      "path": "evidence\\background\\desktop-settings-read.json",
+      "address": "0x18051d63b",
+      "bytes": "4c",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\background\\desktop-settings-read.json",
+      "address": "0x18051d63c",
+      "bytes": "8d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\background\\desktop-settings-read.json",
+      "address": "0x18051d63d",
+      "bytes": "15",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\background\\lockscreen-settings-read.json",
+      "address": "0x18051d85b",
+      "bytes": "4c",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\background\\lockscreen-settings-read.json",
+      "address": "0x18051d85c",
+      "bytes": "8d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\background\\lockscreen-settings-read.json",
+      "address": "0x18051d85d",
+      "bytes": "15",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-download\\refresh-entry-state.json",
+      "address": "0x180518bee",
+      "bytes": "ff",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-download\\refresh-entry-state.json",
+      "address": "0x180518bef",
+      "bytes": "15",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-download\\refresh-entry-state.json",
+      "address": "0x180518bf0",
+      "bytes": "bc",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\contains-comparer.json",
+      "address": "0x18047e2bb",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\contains-comparer.json",
+      "address": "0x18047e2bc",
+      "bytes": "8d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\contains-comparer.json",
+      "address": "0x18047e2bd",
+      "bytes": "0d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\contains-comparer.json",
+      "address": "0x18047e2be",
+      "bytes": "ce",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\contains-comparer.json",
+      "address": "0x18047e2bf",
+      "bytes": "7f",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\materialize.json",
+      "address": "0x18041fc9d",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\materialize.json",
+      "address": "0x18041fc9e",
+      "bytes": "8d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\materialize.json",
+      "address": "0x18041fc9f",
+      "bytes": "4c",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\tile-cleanup-call.json",
+      "address": "0x1804bd4fe",
+      "bytes": "ff",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-cache\\tile-cleanup-call.json",
+      "address": "0x1804bd4ff",
+      "bytes": "15",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-region\\accept-language-table-a.json",
+      "address": "0x1804094d4",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-region\\accept-language-table-a.json",
+      "address": "0x1804094d5",
+      "bytes": "8d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-region\\accept-language-table-a.json",
+      "address": "0x1804094d6",
+      "bytes": "0d",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\deep-region\\accept-language-table-a.json",
+      "address": "0x1804094d9",
+      "bytes": "ce",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-ui\\mainvm-property-and-refresh.json",
+      "address": "0x1804a3579",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\background-entry-and-dispatch.json",
+      "address": "0x1804c2d7e",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\background-entry-and-dispatch.json",
+      "address": "0x1804c2d7f",
+      "bytes": "89",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\dependency-constructor-three.json",
+      "address": "0x180382c6d",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\dependency-constructor-three.json",
+      "address": "0x180382c6e",
+      "bytes": "89",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\dependency-constructor-three.json",
+      "address": "0x180382c6f",
+      "bytes": "4c",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\desktop-personalization-apply.json",
+      "address": "0x1804b70ee",
+      "bytes": "49",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\desktop-personalization-apply.json",
+      "address": "0x1804b70ef",
+      "bytes": "ff",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\architecture-background\\tile-convert-and-select.json",
+      "address": "0x1804bd74d",
+      "bytes": "c7",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\app-lifecycle\\app-start-and-interfaces.json",
+      "address": "0x180531cbe",
+      "bytes": "48",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    },
+    {
+      "path": "evidence\\app-lifecycle\\app-start-and-interfaces.json",
+      "address": "0x180531cbf",
+      "bytes": "8b",
+      "reason": "Invalid decoding or byte-window boundary; not used to claim a complete function."
+    }
+  ],
+  "scope": "Integrity and decoded byte verification only; no target execution, C# source recovery, or behavioral test. Instruction counts include byte-window padding; invalid decodes are separately listed and are not semantic evidence."
+}

@@ -1,0 +1,309 @@
+{
+  "target": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+  "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "base": "0x180000000",
+  "image_item_eetype": {
+    "va": "0x180006080",
+    "file_offset": "0x5680",
+    "bytes": "0000200030000000d86000800100000003000100b5f52b4360826080010000006882608001000000708260800100000051512a8001000000d8294e00942a4e00f0ffffffffffffff080000000000000001000000000000000000240118000000",
+    "size": 96,
+    "base_size": 48,
+    "boundary": "EEType allocation size is not an exhaustive recovered field declaration; field roles require decoded instructions."
+  },
+  "manager_eetype": {
+    "va": "0x18001c078",
+    "file_offset": "0x1b678",
+    "bytes": "0000240130000000c0662a8001000000030001009de119fe608260800100000068826080010000007082608001000000884d00800100000006cf14800100000078ffffff00000000",
+    "size": 72
+  },
+  "contexts": [
+    {
+      "va": "0x18010f328",
+      "file_offset": "0x10e928",
+      "bytes": "00cc008001000000088f008001000000d95a2a8001000000",
+      "size": 24
+    },
+    {
+      "va": "0x18010f308",
+      "file_offset": "0x10e908",
+      "bytes": "e06b008001000000588e008001000000e06b008001000000",
+      "size": 24
+    },
+    {
+      "va": "0x18010f2e0",
+      "file_offset": "0x10e8e0",
+      "bytes": "78b8008001000000e8b3008001000000",
+      "size": 16
+    },
+    {
+      "va": "0x18010f2f8",
+      "file_offset": "0x10e8f8",
+      "bytes": "b8b60080010000004b7b798effffffff",
+      "size": 16
+    },
+    {
+      "va": "0x18010e178",
+      "file_offset": "0x10d778",
+      "bytes": "48ba00800100000013adb69cffffffff",
+      "size": 16
+    }
+  ],
+  "dispatch_cells": [
+    {
+      "va": "0x180313d20",
+      "file_offset": "0x313120",
+      "bytes": "f8f35f80010000006310cfffffffffff",
+      "size": 16,
+      "stub": "0x1805ff3f8",
+      "stub_meaning": "RhpInitialInterfaceDispatch; see dispatch-cell-thunk.json",
+      "relative_payload": -3207069,
+      "tagged_type_address": "0x180004d8b",
+      "tag": 3,
+      "type_address": "0x180004d88",
+      "known_interface": null,
+      "method_slot": "Not decoded. Only IRandomAccessStreamReference and IDisposable have a single declared interface method here. No terminator word is used as a WinRT ABI slot."
+    },
+    {
+      "va": "0x180305710",
+      "file_offset": "0x304b10",
+      "bytes": "f8f35f80010000007372d0ffffffffff",
+      "size": 16,
+      "stub": "0x1805ff3f8",
+      "stub_meaning": "RhpInitialInterfaceDispatch; see dispatch-cell-thunk.json",
+      "relative_payload": -3116429,
+      "tagged_type_address": "0x18000c98b",
+      "tag": 3,
+      "type_address": "0x18000c988",
+      "known_interface": "IRandomAccessStreamReference",
+      "method_slot": "Not decoded. Only IRandomAccessStreamReference and IDisposable have a single declared interface method here. No terminator word is used as a WinRT ABI slot."
+    },
+    {
+      "va": "0x180304bc0",
+      "file_offset": "0x303fc0",
+      "bytes": "f8f35f8001000000821bfaffffffffff",
+      "size": 16,
+      "stub": "0x1805ff3f8",
+      "stub_meaning": "RhpInitialInterfaceDispatch; see dispatch-cell-thunk.json",
+      "relative_payload": -386174,
+      "tagged_type_address": "0x1802a674a",
+      "tag": 2,
+      "type_address": "0x1802a6748",
+      "known_interface": "System.IDisposable via custom import",
+      "method_slot": "Not decoded. Only IRandomAccessStreamReference and IDisposable have a single declared interface method here. No terminator word is used as a WinRT ABI slot."
+    },
+    {
+      "va": "0x180304bd0",
+      "file_offset": "0x303fd0",
+      "bytes": "f8f35f8001000000721bfaffffffffff",
+      "size": 16,
+      "stub": "0x1805ff3f8",
+      "stub_meaning": "RhpInitialInterfaceDispatch; see dispatch-cell-thunk.json",
+      "relative_payload": -386190,
+      "tagged_type_address": "0x1802a674a",
+      "tag": 2,
+      "type_address": "0x1802a6748",
+      "known_interface": "System.IDisposable via custom import",
+      "method_slot": "Not decoded. Only IRandomAccessStreamReference and IDisposable have a single declared interface method here. No terminator word is used as a WinRT ABI slot."
+    },
+    {
+      "va": "0x180308190",
+      "file_offset": "0x307590",
+      "bytes": "f8f35f8001000000ab47d0ffffffffff",
+      "size": 16,
+      "stub": "0x1805ff3f8",
+      "stub_meaning": "RhpInitialInterfaceDispatch; see dispatch-cell-thunk.json",
+      "relative_payload": -3127381,
+      "tagged_type_address": "0x18000c943",
+      "tag": 3,
+      "type_address": "0x18000c940",
+      "known_interface": "IStorageFile",
+      "method_slot": "Not decoded. Only IRandomAccessStreamReference and IDisposable have a single declared interface method here. No terminator word is used as a WinRT ABI slot."
+    }
+  ],
+  "connection_table": {
+    "va": "0x1801448c0",
+    "file_offset": "0x143ec0",
+    "bytes": "af433800d1433800f343380015443800374438005c44380081443800a6443800",
+    "size": 32,
+    "cases": [
+      {
+        "connection_id": 1,
+        "jump_table_entry": "0x1801448c0",
+        "branch": "0x1804c8c6f"
+      },
+      {
+        "connection_id": 2,
+        "jump_table_entry": "0x1801448c4",
+        "branch": "0x1804c8c91"
+      },
+      {
+        "connection_id": 3,
+        "jump_table_entry": "0x1801448c8",
+        "branch": "0x1804c8cb3"
+      },
+      {
+        "connection_id": 4,
+        "jump_table_entry": "0x1801448cc",
+        "branch": "0x1804c8cd5"
+      },
+      {
+        "connection_id": 5,
+        "jump_table_entry": "0x1801448d0",
+        "branch": "0x1804c8cf7"
+      },
+      {
+        "connection_id": 6,
+        "jump_table_entry": "0x1801448d4",
+        "branch": "0x1804c8d1c"
+      },
+      {
+        "connection_id": 7,
+        "jump_table_entry": "0x1801448d8",
+        "branch": "0x1804c8d41"
+      },
+      {
+        "connection_id": 8,
+        "jump_table_entry": "0x1801448dc",
+        "branch": "0x1804c8d66"
+      }
+    ]
+  },
+  "getter_and_setter_reference_scan": [
+    {
+      "at": "0x1804a8c8e",
+      "target": "0x1804a8d40",
+      "kind": "direct call/jump",
+      "bytes": "e8ad000000",
+      "owner": {
+        "start": "0x1804a8af0",
+        "end_exclusive": "0x1804a8ce3",
+        "length": 499,
+        "unwind_rva": "0x14b54c"
+      },
+      "decoded_file": "evidence/image-lifetime/image-load-state.json",
+      "decoded_instruction": "call 0x1804a8d40",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x1804a968f",
+      "target": "0x1804a8a30",
+      "kind": "direct call/jump",
+      "bytes": "e89cf3ffff",
+      "owner": {
+        "start": "0x1804a9680",
+        "end_exclusive": "0x1804a969e",
+        "length": 30,
+        "unwind_rva": "0x14adec"
+      },
+      "decoded_file": "evidence/image-lifetime/image-properties-and-load-gate.json",
+      "decoded_instruction": "call 0x1804a8a30",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x1804bf66d",
+      "target": "0x1804bf7e0",
+      "kind": "direct call/jump",
+      "bytes": "e86e010000",
+      "owner": {
+        "start": "0x1804bf630",
+        "end_exclusive": "0x1804bf7a5",
+        "length": 373,
+        "unwind_rva": "0x14c0ec"
+      },
+      "decoded_file": "evidence/image-lifetime/cached-image-stream-state.json",
+      "decoded_instruction": "call 0x1804bf7e0",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x18051272a",
+      "target": "0x1804bf7e0",
+      "kind": "direct call/jump",
+      "bytes": "e8b1d0faff",
+      "owner": {
+        "start": "0x1805126b0",
+        "end_exclusive": "0x18051282b",
+        "length": 379,
+        "unwind_rva": "0x14c0ec"
+      },
+      "decoded_file": null,
+      "decoded_instruction": null,
+      "boundary": "Byte-scan candidate; not accepted as a call-site claim"
+    },
+    {
+      "at": "0x1805129a9",
+      "target": "0x1804bf7e0",
+      "kind": "direct call/jump",
+      "bytes": "e832cefaff",
+      "owner": {
+        "start": "0x180512900",
+        "end_exclusive": "0x180512ac0",
+        "length": 448,
+        "unwind_rva": "0x14b1cc"
+      },
+      "decoded_file": "evidence/image-lifetime/storagefile-slot2-caller.json",
+      "decoded_instruction": "call 0x1804bf7e0",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x180517ade",
+      "target": "0x1804bf500",
+      "kind": "direct call/jump",
+      "bytes": "e81d7afaff",
+      "owner": {
+        "start": "0x180517a70",
+        "end_exclusive": "0x180517b76",
+        "length": 262,
+        "unwind_rva": "0x14b078"
+      },
+      "decoded_file": "evidence/image-lifetime/manager-image-stream-entry.json",
+      "decoded_instruction": "call 0x1804bf500",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x180517c2a",
+      "target": "0x1804bf7e0",
+      "kind": "direct call/jump",
+      "bytes": "e8b17bfaff",
+      "owner": {
+        "start": "0x180517bb0",
+        "end_exclusive": "0x180517d2b",
+        "length": 379,
+        "unwind_rva": "0x14c0ec"
+      },
+      "decoded_file": null,
+      "decoded_instruction": null,
+      "boundary": "Byte-scan candidate; not accepted as a call-site claim"
+    },
+    {
+      "at": "0x18051d2d1",
+      "target": "0x180517a70",
+      "kind": "direct call/jump",
+      "bytes": "e89aa7ffff",
+      "owner": {
+        "start": "0x18051d1f0",
+        "end_exclusive": "0x18051d30e",
+        "length": 286,
+        "unwind_rva": "0x14b17c"
+      },
+      "decoded_file": "evidence/image-lifetime/manager-stream-wrapper.json",
+      "decoded_instruction": "call 0x180517a70",
+      "boundary": "Decoded instruction verified"
+    },
+    {
+      "at": "0x180608360",
+      "target": "0x180517a70",
+      "kind": "direct call/jump",
+      "bytes": "e90bf7f0ff",
+      "owner": null,
+      "decoded_file": null,
+      "decoded_instruction": null,
+      "boundary": "Byte-scan candidate; not accepted as a call-site claim"
+    }
+  ],
+  "scan_boundary": "All executable-section bytes scanned for direct E8/E9 and selected RIP patterns. This does not enumerate reflection, virtual/interface, native binding callbacks, or arbitrary computed calls and is not a global no-caller proof.",
+  "field_boundaries": {
+    "ImageItemVM+0x20": "Confirmed ImageSource: getter 4a9680, setter 4a8d40. Only decoded direct setter call is 4a8c8e with completed BitmapImage; no decoded call passes null.",
+    "MainPage+0x58": "Confirmed memo of last item in callback apply 4a8580; that method replaces it with the current last item, never clears it.",
+    "main_vm_collection": "4a3290 clears existing collection and creates new image item VMs without enumerating old items for IDisposable. Clear removes collection references; it is not an assertion that all external references disappear."
+  }
+}

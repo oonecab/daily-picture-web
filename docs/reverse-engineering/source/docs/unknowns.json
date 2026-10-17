@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "target_sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+  "scope": "明确保留的未解问题；不是已恢复行为或漏洞清单。新探针只作为后续选项，本次未执行目标程序。",
+  "unknowns": [
+    {
+      "id": "U-01",
+      "domain": "source-and-symbols",
+      "question": "原始解决方案、项目引用、全部应用方法名与源码签名是什么？",
+      "status": "partial",
+      "known": "安装包、编译输入组件和重点功能的语义函数地址已记录；应用精确 PDB 查询返回 404。",
+      "next_evidence": "原作者源码/符号，或完整解析本版本 NativeFormat 类型与方法映射。",
+      "references": ["docs/packaging-and-dependencies.md", "evidence/deep-symbols/symbols-findings.json"]
+    },
+    {
+      "id": "U-02",
+      "domain": "xaml",
+      "question": "完整 XBF 控件树、每个绑定表达式与连接事件的精确关系是什么？",
+      "status": "partial",
+      "known": "五份 XBF 元数据和 XR 保留声明已解析；启动/命令的若干 native 调用已追踪。",
+      "next_evidence": "适用于该 XBF 2.1 版本的完整 node stream 解码及其与生成连接代码的验证。",
+      "references": ["docs/ui-and-lifecycle.md", "evidence/resources/xbf-metadata.json"]
+    },
+    {
+      "id": "U-03",
+      "domain": "http-runtime",
+      "question": "目标实际发送的最终头、Cookie、重定向链与代理行为是什么？",
+      "status": "unobserved-runtime",
+      "known": "应用请求模板与默认发送路径已恢复；客户端无显式 market 参数且默认关闭 cookie 路径。",
+      "next_evidence": "对目标自身请求的被动运行时捕获；把系统补头与应用赋值分开。",
+      "references": ["docs/network-and-download.md", "evidence/deep-region/region-findings.json"]
+    },
+    {
+      "id": "U-04",
+      "domain": "bing-service",
+      "question": "Bing 服务端在该请求环境中如何选择地区及其权重？",
+      "status": "external-service",
+      "known": "客户端采用服务端返回的图片 URL；文件名的 EN-US/ZH-CN 只代表返回标识。",
+      "next_evidence": "在已捕获请求上下文基础上，对出口、请求语言和服务端参数逐一控制的比较；不能用独立请求冒充目标请求。",
+      "references": ["docs/network-and-download.md", "evidence/local-state/local-state.json"]
+    },
+    {
+      "id": "U-05",
+      "domain": "managed-exceptions",
+      "question": "派生目录清理和后台包装器中已见 catch 的精确托管类型是什么？",
+      "status": "partial",
+      "known": "已见成功 continuation 的空 catch 路径；不能推广为 catch-all。",
+      "next_evidence": "本版本 .NET Native managed EH 类型表解析，或精确匹配的应用符号。",
+      "references": ["docs/background-and-personalization.md", "evidence/deep-cache/findings.md"]
+    },
+    {
+      "id": "U-06",
+      "domain": "archive-storage-abi",
+      "question": "归档保存助手的虚调用 cell 0x180305620 到具体接口槽的完整映射是什么？",
+      "status": "partial",
+      "known": "ImageArchive.json、模式值 1、返回 StorageFile、写流与 StreamWriter 已见；CreateFileAsync/ReplaceExisting 是强推断。图片字节保存的 ReplaceExisting 则已确证。",
+      "next_evidence": "解析该调用点对应的 interface dispatch/type map，并用 IStorageFolder ABI 核实。",
+      "references": ["docs/data-model-and-storage.md", "evidence/deep-cache/findings.md"]
+    },
+    {
+      "id": "U-07",
+      "domain": "failure-runtime",
+      "question": "磁盘写入、下载与清理被中断时的实际持久化字节与恢复行为是什么？",
+      "status": "unobserved-runtime",
+      "known": "提交次序和异常传播静态可见，没有整体事务或已见回滚；故障后残留为控制流推导。",
+      "next_evidence": "隔离副本中的受控故障实验及前后状态对照；不能在真实配置上直接制造破坏。",
+      "references": ["docs/data-model-and-storage.md", "docs/network-and-download.md"]
+    },
+    {
+      "id": "U-08",
+      "domain": "scheduler-and-system-effects",
+      "question": "本机任务当前是否注册、何时实际执行，以及壁纸/锁屏/磁贴更新是否成功？",
+      "status": "unobserved-runtime",
+      "known": "任务注册请求、系统条件、更新控制流和部分既存状态可见；不代表观察到每小时执行或每次系统调用成功。",
+      "next_evidence": "只读调度状态/事件和目标运行记录；区分 TrySet 返回值、设置中持久化路径及屏幕实际效果。",
+      "references": ["docs/background-and-personalization.md", "evidence/background/findings.json", "evidence/local-state/local-state.json"]
+    },
+    {
+      "id": "U-09",
+      "domain": "application-lifecycle",
+      "question": "App/MainVM 的显式 Dispose 在何种间接路径被调用，OS 挂起、终止和恢复时对象与在途操作的现场行为是什么？",
+      "status": "partial",
+      "known": "App 构造和 Suspending 的真实订阅已恢复；handler 完整已解正常路径仅 GetDeferral 后立即 Complete，无保存/等待/Stop/Dispose；托管 EH 表尚未完整解析。OnLaunched 读取 PreviousExecutionState 后无恢复分支。App.Dispose 清理 Navigator，Navigator 只解除自己的 Frame.Navigated；MainVM.Dispose 双 Stop，无 Tick 退订或字段清空。已覆盖链未连接到 MainVM 自动释放。Resuming/EnteredBackground 等仅确认框架投影，未建立应用订阅。",
+      "next_evidence": "解析尚未覆盖的托管分派/激活入口；通过目标事件顺序、计时器及对象可达性记录检验显式释放调用者、系统保留/终止进程与在途异步操作。方法表可分派不证明系统自动调用，静态扫描未命中也不证明全程序不存在。",
+      "references": ["docs/suspend-and-resume.md", "docs/timers-and-disposal.md", "evidence/app-lifecycle/findings.json", "evidence/app-lifecycle/reference-candidates.json", "evidence/timer-cleanup/dispose-reference-inventory.json"]
+    },
+    {
+      "id": "U-10",
+      "domain": "image-rendering-lifecycle",
+      "question": "图片服务接口的完整 Native dispatch、FlipView 虚拟化及 BitmapImage/页面持有对象最终释放的运行时机是什么？",
+      "status": "partial",
+      "known": "已恢复 ImageSource 为 null 时发起异步加载、等待图片服务流、创建 BitmapImage、await SetSourceAsync、发布属性及 finally 释放流。Image Loaded/Unloaded 只管理 SourceProperty 回调令牌；Unloaded 不清 VM.ImageSource、不取消加载。Source 变化回调还可将匹配项存到 MainPage+0x58，使其在集合清空后仍可能可达。底层缓存文件查找和 OpenReadAsync 路径已定位，上层服务接口到具体方法的完整映射仍有边界。",
+      "next_evidence": "完成相关 Native interface dispatch 实现映射；在可观察的目标运行中记录加载重入、卸载期间续体、FlipView 容器复用及页面/VM/BitmapImage 可达性和渲染资源变化。不能以 Unloaded、流 Dispose 或集合 Clear 代替 GC/显存释放证据。",
+      "references": ["docs/image-loading-and-lifetime.md", "evidence/image-lifetime/ownership-and-reference-audit.json", "evidence/image-lifetime/image-load-state.json", "evidence/image-lifetime/image-unloaded-handler.json"]
+    },
+    {
+      "id": "U-11",
+      "domain": "platform-adapter-selection",
+      "question": "所有设备/能力条件下具体选择哪个锁屏、桌面适配器？",
+      "status": "partial",
+      "known": "已识别现代 TrySet API、传统 LockScreen API 与不支持实现；Run 分配的提供器和两道前置布尔门控有静态证据，完整平台选择策略尚未恢复。",
+      "next_evidence": "完整关联构造工厂、系统提供器条件、接口分派和各适配器入口，并用对应平台运行记录验证。",
+      "references": ["docs/background-and-personalization.md", "evidence/architecture-background/layout-evidence.json", "evidence/architecture-background/personalization-providers.json"]
+    },
+    {
+      "id": "U-12",
+      "domain": "image-decoder-defaults",
+      "question": "磁贴对旋转 EXIF、内嵌色彩配置和异常图像的实际输出是什么，像素方向与尺寸解释是否一致？",
+      "status": "partial",
+      "known": "已由 WinMD 方法签名、slot16 和无输入桥确证无参 GetPixelDataAsync()；公开合同使用帧像素格式/alpha，遵循 EXIF，含内嵌配置时转换到 sRGB。随后实际读取 PixelWidth/PixelHeight（slots12/13），并进行310x150中心裁切、Fant与PNG编码。方向导致宽高交换时可能不一致属于条件性推导，未复现。",
+      "next_evidence": "用方向、色彩配置和损坏方式不同的隔离样本观察实际转换结果；核对原始尺寸与有向像素布局。前台 BitmapImage 路径应单独验证，不能复用磁贴结论。",
+      "references": ["docs/background-and-personalization.md", "evidence/lifecycle-supplement/decoder-contract.json", "evidence/lifecycle-supplement/pixel-data-abi-bridge.json", "evidence/lifecycle-supplement/no-input-interface-slot.json", "evidence/architecture-background/tile-convert-and-select.json", "evidence/architecture-background/system-winmd.json"]
+    }
+  ]
+}

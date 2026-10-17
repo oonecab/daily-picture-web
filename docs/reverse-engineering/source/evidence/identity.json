@@ -1,0 +1,58 @@
+[
+  {
+    "name": "AppxBlockMap.xml",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\AppxBlockMap.xml",
+    "bytes": 10216,
+    "sha256": "7bc7e6364ad4cad7e3f9a478fe46884e1859f2497b4f88a929b6c078178167f8",
+    "file_version": null,
+    "product_version": null
+  },
+  {
+    "name": "AppxManifest.xml",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\AppxManifest.xml",
+    "bytes": 4626,
+    "sha256": "8a36184886dd86574a2cdb21fc9262e523b868d593ff3be8045eaf260ebb69ec",
+    "file_version": null,
+    "product_version": null
+  },
+  {
+    "name": "Duracellko.BingImage.Universal.dll",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.dll",
+    "bytes": 6566400,
+    "sha256": "d9c4f3d1803ed27c3da21c1e70164423166c1460f53f0020f4ac2c68b413033a",
+    "file_version": "1.0.0.0",
+    "product_version": "1.0.0.0"
+  },
+  {
+    "name": "Duracellko.BingImage.Universal.exe",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.exe",
+    "bytes": 15872,
+    "sha256": "e33e341d62ad2bfe2a513c50604ec1293e37cf34dfebb9489cab25623ed2948a",
+    "file_version": "1.0.0.0",
+    "product_version": "1.0.0.0"
+  },
+  {
+    "name": "Duracellko.BingImage.Universal.Service.winmd",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.Service.winmd",
+    "bytes": 3584,
+    "sha256": "05bf616aef50bccf643d6edf8b2111e0e8d68f659c75c3c468c6338360ad7f59",
+    "file_version": "1.0.0.0",
+    "product_version": "1.0.0.0"
+  },
+  {
+    "name": "Duracellko.BingImage.Universal.xr.xml",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\Duracellko.BingImage.Universal.xr.xml",
+    "bytes": 10333,
+    "sha256": "6b400baab83f3e85320b52ae3ae32feee9506659550ed5bc25d06d126eb6fea3",
+    "file_version": null,
+    "product_version": null
+  },
+  {
+    "name": "resources.pri",
+    "path": "C:\\Program Files\\WindowsApps\\14403Duracellko.NET.BingImageoftheDay_1.4.13.0_x64__1wy5t1va6xay4\\resources.pri",
+    "bytes": 28008,
+    "sha256": "cadfe7c1cbf6b9ef0c3c36dcb1791589159a7179c38e5376e104df3d5afb5775",
+    "file_version": null,
+    "product_version": null
+  }
+]

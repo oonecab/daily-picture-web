@@ -1,0 +1,12 @@
+.cache/
+.runtime/
+test-output/
+node_modules/
+
+# Local configuration and Python maintenance artifacts.
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
