@@ -1,6 +1,6 @@
 # 005：手机体验修复上线
 
-- 状态：in-progress；目标日期：2026-10-19（Asia/Shanghai）。
+- 状态：completed；完成日期：2026-10-19（Asia/Shanghai）。
 - 组成：[问题 009](../issues/009-mobile-release.md)、[计划 005](../plans/005-mobile-release.md)、[发布验收](../docs/testing/mobile-release.md)。
 
 ## 验收条件
@@ -12,4 +12,4 @@
 
 ## 证据状态
 
-本地功能验收已完成，发布证据待 [验收记录](../docs/testing/mobile-release.md) 回填。实体 iPhone、系统安装和长期缓存压力沿用既有验证范围。
+功能提交 3f1bfd5 已推送并发布为 `20261019T214608-3f1bfd5`；本地与服务器 27/27 回归通过，生产 13 个源文件与 Git 一致，6 个公网静态响应摘要一致。手机尺寸和桌面实际浏览器路径通过，服务配置及状态目录保留，旧版可回滚。证据见 [验收记录](../docs/testing/mobile-release.md)。记录提交后的最终 Git 读回随交付说明报告。实体 iPhone、系统安装和长期缓存压力沿用既有验证范围。

@@ -1,6 +1,6 @@
 # 009：手机全屏与页脚修复发布
 
-- 状态：in-progress；日期：2026-10-19（Asia/Shanghai）。
+- 状态：resolved；日期：2026-10-19（Asia/Shanghai）。
 - 类型：正式发布、生产部署；风险档位：重要变更。
 - 授权：用户明确要求将本次修复提交推送到远端，并部署到现有服务器。
 - 关联：[修复 008](008-mobile-fullscreen-footer.md)、[计划 005](../plans/005-mobile-release.md)、[发布验收](../docs/testing/mobile-release.md)、[里程碑 005](../milestones/005-mobile-release.md)。
@@ -24,3 +24,6 @@ required：同步 TECH、环境清单、架构、README 和 `.project-governance
 ## 活动记录
 
 - 2026-10-19：核对远端、现有运行版本、服务用户、Node v24.22.0、Nginx 配置与缓存位置；开始发布准备。
+- 2026-10-19：功能提交 `3f1bfd54863c87b9af020b0b8672f98584658065` 已通过现有 SSH 身份正常推送 main，远端 SHA 读回一致。运行包来自该提交，13 个源文件及发布元数据在服务器校验通过；服务用户执行语法检查及 27/27 回归通过。
+- 2026-10-19 21:47（Asia/Shanghai）：激活 `20261019T214608-3f1bfd5`，服务与 Nginx active，保留旧版本 `20261017-eb0c4d4`。公网浏览器验证及 6 个静态资源摘要一致；服务配置摘要一致、缓存路径保持原位置。详细证据见 [发布验收](../docs/testing/mobile-release.md)。
+- 2026-10-19：应用提交的本地 HEAD、origin/main 和远端 main 一致，工作区干净；随后追加本条及关联验收文档。交付前再次核对最终记录提交的远端 SHA、工作区及运行文件一致性。

@@ -9,11 +9,11 @@
 | ID | 验收目标 | 结果 |
 | --- | --- | --- |
 | REL-01 | 登记语法、27 项回归、研究完整性检查 | check、27/27、研究 238 文件 / 432 引用通过，退出码均为 0 |
-| REL-02 | 暂存文件边界、凭据扫描、提交、普通推送与远端 SHA | 待执行 |
-| REL-03 | 运行包来自提交、服务器 SHA-256、运行环境回归 | 待执行 |
-| REL-04 | 保留旧目录、原子切换、服务/回环/HTTPS 健康 | 待执行 |
-| REL-05 | 公网运行文件摘要、手机全屏回退与页脚实际渲染 | 待执行 |
-| REL-06 | 最终 Git HEAD/远端一致、生产运行树一致、工作区干净 | 待执行 |
+| REL-02 | 暂存文件边界、凭据扫描、提交、普通推送与远端 SHA | 24 文件定向扫描 0 命中；3f1bfd5 经 SSH 正常推送，main SHA 读回一致 |
+| REL-03 | 运行包来自提交、服务器 SHA-256、运行环境回归 | 13 个源文件和 RELEASE.json 摘要通过；服务用户语法检查及 27/27 回归通过 |
+| REL-04 | 保留旧目录、原子切换、服务/回环/HTTPS 健康 | 新版已激活；两服务 active；回环和 HTTPS health 正常；旧版本与配置快照保留 |
+| REL-05 | 公网运行文件摘要、手机全屏回退与页脚实际渲染 | 6 个 HTTPS 响应摘要匹配；手机回退与桌面原生全屏、切图、恢复、页脚入口通过 |
+| REL-06 | Git HEAD/远端一致、生产运行树一致、工作区干净 | 应用提交三方 SHA 一致且工作区干净；13 个源文件逐项匹配。后续仅追加本验收文档，最终记录提交读回随交付报告 |
 
 ## 额外工具与边界
 
@@ -25,4 +25,23 @@
 
 ## 发布记录
 
-应用提交、发布目录、摘要与最终结果在实际执行后追加。本次在源代码提交后部署；若后续只追加验收文档，比较最终 HEAD 的运行文件与已部署版本，记录两者关系。
+- 应用提交：[3f1bfd54863c87b9af020b0b8672f98584658065](https://github.com/oonecab/daily-picture-web/commit/3f1bfd54863c87b9af020b0b8672f98584658065)。首次 HTTPS 推送因本机缺少凭据退出；现有 SSH 身份验证后正常推送成功，未重写远端历史。
+- 当前版本：`/var/www/dailypicture.zzzping.top/releases/20261019T214608-3f1bfd5`；current 与运行进程 cwd 均指向此目录。
+- 运行包 SHA-256：`5f1802f49ca0924b4d8e4fae2d6a294feee5888ad3d770b0bd6dab7a938f5305`。包从 git archive 生成，排除开发缓存和本地配置。
+- 激活时间：2026-10-19 21:47:36（Asia/Shanghai）。重启后的第一次就绪探测暂时拒绝连接，重试成功；最终 health 为 ok=true、app=daily-picture-web。应用版本字段仍为 1.1.0，发布身份以提交和文件摘要判定。
+- 服务以 dailypicture 运行，仅监听 127.0.0.1:8787；Nginx 和应用 active。激活后目标服务 warning 级别日志无条目。systemd/Nginx 配置摘要与发布前一致。
+- 回滚目标：`/var/www/dailypicture.zzzping.top/releases/20261017-eb0c4d4`。新目录 `.deployment/` 中保留旧目标、配置快照、配置摘要与本次包；`.cache` 继续指向 `/var/lib/daily-picture`。
+
+正式域名的 `/`、`/app.js`、`/styles.css`、`/sw.js`、`/icon.svg`、`/manifest.webmanifest` 均通过浏览器 HTTPS 取得并计算摘要，与发布 Git 文件一致。重点文件为：
+
+| 文件 | SHA-256 |
+| --- | --- |
+| public/index.html | b8b2f9fcc8a44b32ad0ab9118121e3406b1e7ffa0c18a329476cd511ec6943e9 |
+| public/app.js | f4d53d399503f75fc19951540ab614d36688b69712d52e1e393550c8c1f36b0c |
+| public/styles.css | 7ff587a5af8ec02825e0cf428b7a91edca43174382048bfecbeb3d0d20f5cd17 |
+
+浏览器实际显示 15 张图片，主图解码为 1920×1080。模拟全屏接口缺失后，393×852 视口内 gallery 覆盖完整可用区域、图片 contain、退出按钮可见，切图由 01/15 到 02/15。退出后 scrollY 从 160 恢复到 160，焦点回到全屏按钮，背景解除锁定。页脚宽度无溢出，三个入口高 44px，SVG 和链接属性正确，关于弹窗开关正常。桌面 1280×900 的 document.fullscreenElement 为 gallery，实际 Esc 后退出并解除锁定。
+
+截图已实际查看；本机附件位于忽略目录 `test-output/release-20261019/`，包括 `public-mobile-fullscreen.png`、`public-footer.png`、`public-evidence.json` 和 `server-readback.txt`。手机路径为 Chromium 的尺寸/接口模拟，实体 iPhone 仍需用户设备复核。
+
+发布后只追加问题、计划、里程碑与本验收记录；最终交付前再次比较 HEAD 的全部 13 个运行包源文件与已发布摘要，核对远端及干净工作区。此类记录提交不改变运行文件。
