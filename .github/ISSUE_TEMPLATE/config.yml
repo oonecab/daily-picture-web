@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 安全漏洞（私密报告）
+    url: https://github.com/oonecab/daily-picture-web/security/advisories/new
+    about: 向维护者私下报告安全问题；请勿在公开 Issue 中提交利用细节或凭据。
+  - name: 贡献指南
+    url: https://github.com/oonecab/daily-picture-web/blob/main/CONTRIBUTING.md
+    about: 查看本地启动、检查命令和提交改动的说明。

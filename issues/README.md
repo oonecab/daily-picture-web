@@ -27,5 +27,6 @@
 | 007 | 最近十五日归档与首页 GitHub 入口 | [问题 007](007-fifteen-day-archive.md) |
 | 008 | 手机全屏回退与页脚图标 | [问题 008](008-mobile-fullscreen-footer.md) |
 | 009 | 手机体验修复发布 | [问题 009](009-mobile-release.md) |
+| 010 | GitHub 社区资料与反馈入口 | [问题 010](010-community-standards.md) |
 
-当前没有外部问题跟踪服务；由项目维护者在本目录维护。既有记录编号保留，后续新文件可采用上方建议命名。
+对外反馈使用 [GitHub Issues](https://github.com/oonecab/daily-picture-web/issues)；本目录由维护者保存需要关联规则、计划和验收的项目记录，并按需链接对应 GitHub Issue。既有记录编号保留，后续新文件可采用上方建议命名。

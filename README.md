@@ -99,6 +99,10 @@ npm test
 
 手机全屏与页脚修复见 [2026-10-19 验证记录](docs/testing/mobile-fullscreen-footer.md)。点击图片右上角全屏按钮即可欣赏完整比例图片；浏览器不提供或拒绝原生全屏时，自动铺满网页可用视口，点击右上角关闭按钮返回原阅读位置。键盘支持 F 切换、Esc 退出。手机地址栏与系统状态栏由浏览器控制，网页回退模式不能强制隐藏；横屏可为横向照片提供更大的显示面积。
 
+## 参与与反馈
+
+欢迎通过 [Issue 模板](https://github.com/oonecab/daily-picture-web/issues/new/choose)反馈问题或提出建议。参与开发请先阅读[贡献指南](CONTRIBUTING.md)与[行为准则](CODE_OF_CONDUCT.md)；安全问题请按[安全政策](SECURITY.md)私密报告。
+
 ## 许可证与来源
 
 项目自行实现的代码及自行撰写的项目文档采用 [MIT License](LICENSE)，允许使用、修改、分发和商用，并要求保留版权与许可证声明。版权行使用 `Daily Picture Web contributors`。

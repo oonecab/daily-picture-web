@@ -27,6 +27,7 @@
 | 想了解的内容 | 权威入口 |
 | --- | --- |
 | 启动和使用 | [原 README](../README.md) |
+| 贡献、社区行为与漏洞报告 | [贡献指南](../CONTRIBUTING.md)、[行为准则](../CODE_OF_CONDUCT.md)、[安全政策](../SECURITY.md) |
 | 开源许可证与第三方范围 | [MIT License](../LICENSE)、[第三方说明](../THIRD_PARTY_NOTICES.md) |
 | 当前技术与架构 | [TECH](../TECH.md)、[Web 架构](architecture/web-app.md) |
 | 生产环境与发布 | [环境事实](environments.md)、[发布与回滚](deployment.md) |

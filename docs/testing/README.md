@@ -20,3 +20,5 @@
 1.1.0 归档扩展与首页仓库入口：[fifteen-day-archive.md](fifteen-day-archive.md)。
 
 手机修复：[本地验收](mobile-fullscreen-footer.md) / [发布验收](mobile-release.md)。
+
+社区资料：[社区文件、反馈入口与远端验收](community-standards.md)。

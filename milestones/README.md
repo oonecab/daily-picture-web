@@ -19,3 +19,5 @@
 1.1.0 功能扩展：[004 最近十五日浏览与项目入口](004-fifteen-day-archive.md)。
 
 手机体验上线：[005 全屏与页脚修复发布](005-mobile-release.md)。
+
+社区资料：[006 GitHub 社区资料就绪](006-community-standards.md)。

@@ -20,3 +20,5 @@
 十五日窗口扩展：[004 最近十五日与 GitHub 入口](004-fifteen-day-archive.md)。
 
 手机体验上线：[005 发布计划](005-mobile-release.md)。
+
+社区资料：[006 社区资料与反馈入口](006-community-standards.md)。
