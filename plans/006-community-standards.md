@@ -1,6 +1,6 @@
 # 实施计划：社区资料与反馈入口
 
-- 状态：`in-progress`
+- 状态：`completed`
 - 关联问题单：[问题 010](../issues/010-community-standards.md)
 - 目标里程碑：[里程碑 006](../milestones/006-community-standards.md)
 - 负责人：项目维护者
@@ -14,7 +14,7 @@
 1. `[completed]` 核对本地/远端基线、现有规范和 GitHub 管理入口。
 2. `[completed]` 编写社区文件及轻量表单，核实私密联系渠道，更新 About 和漏洞报告设置。
 3. `[completed]` 验证命令、YAML、链接、第三方许可和变更范围，完成本地检查。
-4. `[in-progress]` 提交推送，读回远端与社区页面，记录实际结果。
+4. `[completed]` 提交 b7f1fa1 已推送，远端 SHA 一致，社区八项全部识别；结果与验证边界已记录。
 
 ## 文档同步计划
 

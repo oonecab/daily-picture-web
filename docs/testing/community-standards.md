@@ -14,10 +14,10 @@
 | COM-01 | 支持的文件位置、完整内容、真实联系渠道与第三方许可 | 根目录社区文件与 .github 模板完整；行为反馈邮箱由用户提供，准则由项目撰写，无第三方文本引入 |
 | COM-02 | YAML 可解析、表单字段唯一且必填信息合理、文档链接有效 | 3 份 YAML 解析通过；18 个变更文件的 92 个本地文档链接有效，无未填写字段 |
 | COM-03 | 贡献说明与真实命令一致，语法/Node 回归/研究资料检查通过 | npm run check 通过，npm test 27/27 通过，研究 238 文件/432 引用检查通过 |
-| COM-04 | About 生效、私密漏洞入口可用、社区页面识别所有文件 | About 与私密漏洞入口已生效；社区文件识别待推送后验证 |
-| COM-05 | 提交范围与凭据检查、普通推送、HEAD/远端一致和工作区状态 | 18 个候选文件定向凭据模式扫描 0 命中，diff --check 通过；提交/推送待完成 |
+| COM-04 | About 生效、私密漏洞入口可用、社区页面识别所有文件 | About 与私密漏洞入口已生效；公开 Community Standards 八项全部 Added，截图已查看 |
+| COM-05 | 提交范围与凭据检查、普通推送、HEAD/远端一致和工作区状态 | 18 个候选文件定向凭据模式扫描 0 命中，diff --check 通过；b7f1fa1 普通推送成功，HEAD/origin/main/远端 main 一致，工作区干净 |
 
-本次基线失败由实际缺失文件与 GitHub 页面证明；不添加复刻文档内容的运行测试。YAML 与链接检查作为本次维护验证；浏览器查看表单但不提交测试 Issue、PR 或漏洞报告。
+本次基线失败由实际缺失文件与 GitHub 页面证明；不添加复刻文档内容的运行测试。YAML 与链接检查作为本次维护验证；未提交测试 Issue、PR 或漏洞报告。
 
 本地环境为 macOS / Node v24.21.0 / Python 3.14.6。YAML 使用系统 Ruby 的 Psych 3.1.0 `safe_load` 解析并核对模板元数据、唯一字段 ID 和必填属性。最初 Python 缺少 PyYAML，且当前 Psych 没有 `safe_load_file` 方法，随后采用 `safe_load(File.read(...))` 完成检查，未增加项目依赖。
 
@@ -31,6 +31,16 @@
 
 2026-10-19 22:41 Asia/Shanghai 的本地核对记录保存在忽略目录 `test-output/community-20261019/prepush.json`：18 个候选文件，92 个有效本地链接，无未填写字段，定向凭据模式扫描 0 命中。扫描不构成完整安全审计。运行代码、测试、package.json 和环境配置均无变化，应用无需重新部署。
 
+## 远端与浏览器结果
+
+社区资料提交：[b7f1fa19c9e0b743cd25e698c6047a07d10bba5e](https://github.com/oonecab/daily-picture-web/commit/b7f1fa19c9e0b743cd25e698c6047a07d10bba5e)。通过已有 GitHub SSH 身份普通推送到 main，未修改持久化 remote 配置或重写历史；提交后本地 HEAD、origin/main 和 `git ls-remote origin refs/heads/main` 均为该 SHA，工作区干净。
+
+公开 [Community Standards](https://github.com/oonecab/daily-picture-web/community) 已显示 Description、README、Code of conduct、Contributing、License、Security policy、Issue templates、Pull request template 八项全部 Added。实际查看了 1440×1050 截图，保存在忽略目录 `test-output/community-20261019/community-standards.png`。
+
+Issue 入口的匿名浏览器访问先遇连接中断，重试后到达 GitHub 登录页面，这是创建 Issue 所需的登录门槛。表单的填写和提交交互未实测；已完成 YAML 结构、必填字段、链接和 GitHub 在线识别验证，不将这些结果扩大为完整交互测试。
+
+最后仅追加本验收及问题、计划、里程碑状态；最终记录提交的 SHA 和工作区/远端一致性在交付前再次读回。
+
 ## 文档影响与退出条件
 
-新政策各有单一入口，导航与内部规范只链接引用。运行栈、环境和业务规则不变，相关权威文档无需修改。全部必要检查及远端读回完成后填写结果；无法执行的项目说明原因，不计通过。
+新政策各有单一入口，导航与内部规范只链接引用。运行栈、环境和业务规则不变，相关权威文档无需修改。必要的结构、内容、社区识别与远端验证已完成；表单交互和邮件投递的验证范围如上记录。
