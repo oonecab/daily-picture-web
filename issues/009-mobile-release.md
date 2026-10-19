@@ -1,0 +1,26 @@
+# 009：手机全屏与页脚修复发布
+
+- 状态：in-progress；日期：2026-10-19（Asia/Shanghai）。
+- 类型：正式发布、生产部署；风险档位：重要变更。
+- 授权：用户明确要求将本次修复提交推送到远端，并部署到现有服务器。
+- 关联：[修复 008](008-mobile-fullscreen-footer.md)、[计划 005](../plans/005-mobile-release.md)、[发布验收](../docs/testing/mobile-release.md)、[里程碑 005](../milestones/005-mobile-release.md)。
+
+## 范围与当前事实
+
+本地 main 与 origin/main 均为 ec35db0。现有生产目录采用 releases/current，当前版本为 `20261017-eb0c4d4`；服务 `daily-picture.service` 以 dailypicture 用户运行，Nginx 通过 HTTPS 转发到 127.0.0.1:8787，缓存独立保存在 `/var/lib/daily-picture`。现有服务端代码与本地字节一致。
+
+发布内容为全屏回退、退出恢复、页脚 SVG 和相应测试、文档。沿用现有服务配置与数据目录；建立独立版本目录，校验后切换 current，失败恢复旧链接并重启服务。保留 standard 治理：授权明确、范围单一、发布可回滚，应用无数据迁移。
+
+## 文档影响
+
+required：同步 TECH、环境清单、架构、README 和 `.project-governance.json` 中过时的“尚未公开部署”描述，记录实测的既有 Nginx/systemd 拓扑；`.env.example` 说明服务沿用 PORT。此次记录既有环境，不安装或替换核心运行栈。新增发布计划、验收与里程碑，并补齐导航索引。
+
+## 完成条件与风险
+
+27 项回归及登记检查通过，暂存内容经过凭据检查，普通推送成功；新目录运行文件摘要与 Git 相同，服务器检查和回归通过，HTTPS 页面与手机交互验证通过。最终核对 HEAD、origin/main、远端 main 和工作区。生产运行文件必须与最终 Git 版本一致；发布后的验收文档可独立追加提交。
+
+回滚单位为旧版本目录、current 链接和原服务配置；缓存继续复用。实体 iPhone 验证仍单独记录。严格治理校验需区分仓库 schema 与本机校验器版本，不能删除合法字段来通过旧工具。
+
+## 活动记录
+
+- 2026-10-19：核对远端、现有运行版本、服务用户、Node v24.22.0、Nginx 配置与缓存位置；开始发布准备。

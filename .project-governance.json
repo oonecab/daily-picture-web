@@ -33,7 +33,7 @@
       "public/app.js 与 public/sw.js 管理浏览器状态和离线缓存；不读取原 UWP 应用数据。",
       "当前架构见 docs/architecture/web-app.md；外部消费约定见 docs/contracts/bing.md。",
       "REA 资料和来源清单见 docs/reverse-engineering/README.md；历史快照不参与运行或静态文件服务。",
-      "test 为可执行测试，docs/testing 为测试设计；公开部署和系统壁纸集成尚未实现。"
+      "test 为可执行测试，docs/testing 为测试设计；公网经 Nginx HTTPS 转发到回环 Node 服务，系统壁纸集成尚未实现。"
     ]
   },
   "commands": {
@@ -95,10 +95,12 @@
       "PORT"
     ],
     "services": [
-      "HTTPS www.bing.com：固定归档和图片读取；不要求账号或令牌"
+      "HTTPS www.bing.com：固定归档和图片读取；不要求账号或令牌",
+      "生产 Nginx HTTPS 反向代理与 daily-picture.service；部署事实见 docs/environments.md"
     ],
     "ports": [
-      "本地 HTTP 默认 127.0.0.1:8787；CLI 数字参数优先于进程环境 PORT"
+      "Node HTTP 默认 127.0.0.1:8787；CLI 数字参数优先于进程环境 PORT",
+      "生产 Nginx 443 提供 HTTPS，80 重定向至 HTTPS；反向代理到 127.0.0.1:8787"
     ]
   },
   "security": {

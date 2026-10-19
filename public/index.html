@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#273b33">
   <meta name="description" content="每天，给自己一扇看世界的窗。浏览、收藏和下载 Bing 每日图片。">
   <title>Daily Picture · 每日一景</title>
@@ -49,7 +49,7 @@
       <div class="image-shade"></div>
       <div id="loading-state" class="loading-state"><span class="loader"></span><span>正在打开今天的风景…</span></div>
       <div id="empty-state" class="empty-state" hidden><svg class="icon"><use href="#i-heart"/></svg><h2 id="empty-title">把喜欢的风景留下来</h2><p id="empty-description">点击图片上的爱心，建立自己的风景收藏。</p><button id="empty-action" class="light-button">去发现图片</button></div>
-      <div class="image-topbar" id="image-topbar" hidden><div class="image-label"><span class="live-dot"></span><span id="image-label">每日精选</span></div><div class="image-quick-actions"><button id="slideshow" class="glass-button" aria-label="开始幻灯片" title="幻灯片（每 8 秒）" aria-pressed="false"><svg class="icon"><use href="#i-play"/></svg></button><button id="fullscreen" class="glass-button" aria-label="全屏欣赏" title="全屏欣赏 · F"><svg class="icon"><use href="#i-expand"/></svg></button></div></div>
+      <div class="image-topbar" id="image-topbar" hidden><div class="image-label"><span class="live-dot"></span><span id="image-label">每日精选</span></div><div class="image-quick-actions"><button id="slideshow" class="glass-button" aria-label="开始幻灯片" title="幻灯片（每 8 秒）" aria-pressed="false"><svg class="icon"><use href="#i-play"/></svg></button><button id="fullscreen" class="glass-button" aria-label="全屏欣赏" aria-pressed="false" title="全屏欣赏 · F"><svg class="icon"><use href="#i-expand"/></svg></button></div></div>
       <button id="previous" class="gallery-arrow previous" aria-label="上一张图片" hidden><svg class="icon"><use href="#i-arrow"/></svg></button>
       <button id="next" class="gallery-arrow next" aria-label="下一张图片" hidden><svg class="icon"><use href="#i-arrow"/></svg></button>
       <div id="image-error" class="image-error" role="status" hidden><span>图片未能加载</span><button id="retry-image" class="light-button">重新加载</button></div>
@@ -61,7 +61,14 @@
     </section>
 
     <section class="filmstrip-section" aria-labelledby="filmstrip-title"><div class="section-heading"><div><h2 id="filmstrip-title">最近十五日</h2><span id="filmstrip-subtitle">让美好，多停留一会儿</span></div><span class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> 切换风景</span></div><div id="filmstrip" class="filmstrip" aria-label="选择图片"></div></section>
-    <footer><p><span class="footer-dot"></span><span id="sync-status">正在连接 Bing…</span></p><p>影像来自 <a href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a><span class="footer-separator">/</span><a id="github-link" href="https://github.com/oonecab/daily-picture-web" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a><span class="footer-separator">/</span><button id="about">关于每日一景 <span>↗</span></button></p></footer>
+    <footer>
+      <p><span class="footer-dot"></span><span id="sync-status">正在连接 Bing…</span></p>
+      <p class="footer-links">
+        <span class="footer-attribution">影像来自 <a class="footer-link" href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing<svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></a></span>
+        <a id="github-link" class="footer-link" href="https://github.com/oonecab/daily-picture-web" target="_blank" rel="noopener noreferrer">GitHub 源码<svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></a>
+        <button id="about" class="footer-link">关于每日一景<svg class="icon" aria-hidden="true"><use href="#i-info"/></svg></button>
+      </p>
+    </footer>
   </main>
 
   <dialog id="download-dialog" aria-labelledby="download-title"><div class="dialog-heading"><div><p class="eyebrow">TAKE A LITTLE WONDER WITH YOU</p><h2 id="download-title">带走这片风景</h2></div><button class="icon-button close-dialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><p class="dialog-description">选择适合屏幕的尺寸，保存到下载文件夹。</p><div class="download-options"><button data-size="1920x1080"><span><strong>桌面壁纸</strong><small>1920 × 1080 · 横向</small></span><span class="option-tag">HD</span><svg class="icon"><use href="#i-download"/></svg></button><button data-size="UHD"><span><strong>超清原图</strong><small>请求 Bing 提供的最高分辨率</small></span><span class="option-tag">UHD</span><svg class="icon"><use href="#i-download"/></svg></button><button data-size="1080x1920"><span><strong>手机壁纸</strong><small>1080 × 1920 · 竖向裁切</small></span><span class="option-tag">MOBILE</span><svg class="icon"><use href="#i-download"/></svg></button></div><p class="dialog-note">尺寸以 Bing 实际返回为准。下载后可在系统设置中设为桌面或锁屏。</p></dialog>

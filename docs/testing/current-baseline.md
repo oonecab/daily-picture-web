@@ -41,6 +41,8 @@ python -X utf8 tools/verify_research.py
 
 1.1.0 新增六项测试，共 16 项；旧实现的失败证明及修改后的自动检查、真实上游和浏览器结果见 [最近十五日验收](fifteen-day-archive.md)。不覆盖或改写初版证据。
 
+2026-10-19 手机修复追加 [browser-ui.test.mjs](../../test/browser-ui.test.mjs) 的 11 项浏览器状态回归，合计 27 项。测试执行完整 app.js，以隔离 DOM 和 Fullscreen API 替身覆盖接口缺失/拒绝/禁用、标准/前缀退出、焦点/滚动/背景恢复、空列表/收藏、弹窗和异步请求边界。实际视口、图片渲染与桌面原生全屏另行使用浏览器验证，见 [手机全屏与页脚验收](mobile-fullscreen-footer.md)。
+
 ## 后续验收边界
 
 开放项见 [问题 003](../../issues/003-validation-gaps.md)：实际一小时刷新、真实手机触摸、其他浏览器、PWA 系统安装、最终下载文件以及长期缓存压力。测试名称不能超出断言范围，例如共享 AbortSignal 测试不是实际等待 20 秒超时的端到端证明。

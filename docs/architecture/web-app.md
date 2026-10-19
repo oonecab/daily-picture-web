@@ -1,6 +1,6 @@
 # 本地 Web 架构
 
-状态：**CURRENT**。依据为 2026-10-17 当前源码；实际运行证据见 [原验证记录](../../VERIFICATION.md)，维护规则见 [规则目录](../rules/README.md)。这是独立实现，原生 UWP 架构仅为 [LEGACY 设计参考](../reverse-engineering/README.md)。尚未实施的部署/账号/桌面集成不属于 CURRENT。
+状态：**CURRENT**。应用源码基线建立于 2026-10-17，生产拓扑于 2026-10-19 现场核对。实际运行证据见 [原验证记录](../../VERIFICATION.md) 和 [发布验收](../testing/mobile-release.md)，维护规则见 [规则目录](../rules/README.md)。这是独立实现，原生 UWP 架构仅为 [LEGACY 设计参考](../reverse-engineering/README.md)。账号与桌面集成仍属后续方向。
 
 ## 模块及数据所有权
 
@@ -11,6 +11,7 @@
 | `public/app.js` | 展示、下载、收藏、偏好、模态框和可见性计时器 | 同源 localStorage、页面内存、下载 Blob URL | 本地 `/api/*`、DOM 与浏览器 API |
 | `public/sw.js` | 网络失败回退、外壳/归档/图片缓存 | 浏览器 Cache Storage | 同源 GET、浏览器缓存 API |
 | `test/app.test.mjs` | 合约和边界回归 | 独立临时目录和临时本机端口 | 导入服务与适配模块、假上游；不需要真实 Bing |
+| `test/browser-ui.test.mjs` | 完整前端脚本的全屏状态回归 | 隔离 DOM/浏览器 API 替身 | Node 内置 vm；真实布局另用浏览器验证 |
 | `docs/reverse-engineering/source` | 历史静态资料 | 只读证据快照 | 仅供阅读，不被应用导入或静态服务暴露 |
 
 ```mermaid
@@ -40,4 +41,4 @@ flowchart LR
 
 服务退出不维持后台任务；浏览器页面关闭后不继续每日更新。服务磁盘与浏览器存储分别管理，清理其中一方不会自动清理另一方。改变端口会改变浏览器来源，收藏/缓存随之隔离。
 
-目前无数据库服务、用户账号、第三方运行依赖、打包步骤或公开部署。未来若增加桌面辅助服务、跨设备同步或外网监听，应另建 TARGET 架构记录、授权模型与迁移/回退计划，通过验证后才更新 CURRENT。1.1.0 沿用上述模块边界，不新增运行依赖。
+目前应用无数据库服务、用户账号、第三方运行依赖或打包步骤。现有公网实例由 Nginx 提供 TLS，再转发至回环 Node 服务；systemd 管理进程，版本目录与缓存分离，详见 [环境事实](../environments.md) 与 [发布方式](../deployment.md)。未来若增加桌面辅助服务、跨设备同步或改变 Node 监听边界，应另建 TARGET 架构记录、授权模型与迁移/回退计划，通过验证后才更新 CURRENT。1.1.0 沿用上述应用模块边界。

@@ -43,7 +43,7 @@
 - public/app.js 与 public/sw.js 管理浏览器状态和离线缓存；不读取原 UWP 应用数据。
 - 当前架构见 docs/architecture/web-app.md；外部消费约定见 docs/contracts/bing.md。
 - REA 资料和来源清单见 docs/reverse-engineering/README.md；历史快照不参与运行或静态文件服务。
-- test 为可执行测试，docs/testing 为测试设计；公开部署和系统壁纸集成尚未实现。
+- test 为可执行测试，docs/testing 为测试设计；公网经 Nginx HTTPS 转发到回环 Node 服务，系统壁纸集成尚未实现。
 
 ## 项目类型约束
 
@@ -63,6 +63,7 @@
 
 ## 已确认的技术细节
 
+- [部署环境与运行方式](docs/environments.md) / [发布与回滚](docs/deployment.md)。
 - [当前 Web 架构](docs/architecture/web-app.md)：模块职责、依赖方向和数据所有权。
 - [Bing 消费契约](docs/contracts/bing.md)：固定上游端点与字段转换。
 - [业务规则](docs/rules/README.md)：日期、来源、缓存、重试及浏览器生命周期。

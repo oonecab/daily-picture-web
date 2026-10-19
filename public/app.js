@@ -25,6 +25,7 @@ const state = {
   favorites: Array.isArray(savedFavorites) ? savedFavorites.filter(validImage).slice(0, 200) : [],
   fetchedAt: null, lastCheck: 0, stale: false, busy: false, request: null, generation: 0,
   heroGeneration: 0, slideshow: null, refreshTimer: null, toastTimer: null, installPrompt: null,
+  fullscreenView: null,
 };
 const downloadUrls = new Set();
 function images() { return state.mode === 'favorites' ? state.favorites : state.images; }
@@ -40,7 +41,7 @@ function toast(message) {
   $('toast').hidden = false;
   // Keep notifications visible when a modal is in the top layer.
   const modal = document.querySelector('dialog[open]');
-  (modal || document.body).append($('toast'));
+  (modal || nativeFullscreenElement() || document.body).append($('toast'));
   state.toastTimer = setTimeout(() => { $('toast').hidden = true; }, 4500);
 }
 function status() {
@@ -103,13 +104,16 @@ function renderSelection() {
   $('image-error').hidden = true;
   $('hero-image').hidden = true;
   state.heroGeneration++;
-  for (const id of ['image-topbar', 'image-bottom', 'position']) $(id).hidden = !item;
+  for (const id of ['image-bottom', 'position']) $(id).hidden = !item;
+  // Keep the exit control available until a native fullscreen exit completes.
+  $('image-topbar').hidden = !item && !state.fullscreenView;
   $('previous').hidden = $('next').hidden = list.length < 2;
   $('slideshow').disabled = list.length < 2;
   favoriteButton();
   $('empty-state').hidden = Boolean(item) || (state.busy && state.mode === 'browse');
   $('loading-state').hidden = Boolean(!item && (!state.busy || state.mode === 'favorites'));
   if (!item) {
+    exitFullscreenView();
     const favorites = state.mode === 'favorites';
     $('empty-title').textContent = favorites ? '把喜欢的风景留下来' : '风景正在路上';
     $('empty-description').textContent = favorites ? '点击图片上的爱心，建立自己的风景收藏。' : '暂时无法连接 Bing。检查网络后，再试一次。';
@@ -218,7 +222,7 @@ function toggleFavorite() {
 }
 async function openDialog(id) {
   stopSlideshow();
-  if (document.fullscreenElement) await document.exitFullscreen().catch(() => {});
+  if (!await exitFullscreenView()) return;
   $(id).showModal();
 }
 function stopSlideshow() {
@@ -243,13 +247,82 @@ function scheduleRefresh() {
     state.refreshTimer = setInterval(() => { if (!state.busy && Date.now() - state.lastCheck >= HOUR) loadArchive(); }, 60000);
   }
 }
-async function fullscreen() {
-  try {
-    if (document.fullscreenElement) await document.exitFullscreen();
-    else if ($('gallery').requestFullscreen) await $('gallery').requestFullscreen();
-    else toast('当前浏览器不支持全屏，可使用浏览器的全屏功能。');
-  } catch { toast('无法进入全屏，请通过浏览器窗口欣赏图片。'); }
+function nativeFullscreenElement() {
+  return document.fullscreenElement || document.webkitFullscreenElement;
 }
+function fullscreenButton(active) {
+  const button = $('fullscreen');
+  button.setAttribute('aria-pressed', String(active));
+  button.setAttribute('aria-label', active ? '退出全屏' : '全屏欣赏');
+  button.title = active ? '退出全屏 · Esc' : '全屏欣赏 · F';
+  button.replaceChildren(icon(active ? 'close' : 'expand'));
+}
+function restoreFullscreenView() {
+  const view = state.fullscreenView;
+  if (!view) return;
+  state.fullscreenView = null;
+  $('gallery').classList.remove('is-fullscreen');
+  $('gallery').removeAttribute('role');
+  $('gallery').removeAttribute('aria-modal');
+  $('image-topbar').hidden = !selected();
+  document.documentElement.classList.remove('viewer-open');
+  document.body.classList.remove('viewer-open');
+  document.body.style.top = view.bodyTop;
+  for (const [element, inert] of view.background) element.inert = inert;
+  fullscreenButton(false);
+  if ($('toast').parentElement === $('gallery')) document.body.append($('toast'));
+  window.scrollTo(view.x, view.y);
+  const focus = view.focus && !view.focus.closest('[hidden]') ? view.focus : $('gallery');
+  focus.focus({ preventScroll: true });
+}
+async function exitFullscreenView() {
+  if (nativeFullscreenElement() === $('gallery')) {
+    try {
+      await (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } catch {
+      toast('请使用浏览器的退出全屏按钮返回。');
+      return false;
+    }
+  }
+  restoreFullscreenView();
+  return true;
+}
+async function fullscreen() {
+  if (state.fullscreenView) return exitFullscreenView();
+  if (!selected()) return;
+  const gallery = $('gallery');
+  const view = {
+    x: window.scrollX, y: window.scrollY, focus: document.activeElement,
+    bodyTop: document.body.style.top, native: false,
+    background: [...document.querySelectorAll('.app-header, .skip-link, main > :not(#gallery)')].map((element) => [element, element.inert]),
+  };
+  state.fullscreenView = view;
+  document.body.style.top = `${-view.y}px`;
+  document.documentElement.classList.add('viewer-open');
+  document.body.classList.add('viewer-open');
+  gallery.classList.add('is-fullscreen');
+  gallery.setAttribute('role', 'dialog');
+  gallery.setAttribute('aria-modal', 'true');
+  for (const [element] of view.background) element.inert = true;
+  fullscreenButton(true);
+  $('fullscreen').focus({ preventScroll: true });
+  // The viewport viewer is ready immediately, including on mobile browsers
+  // without an element Fullscreen API or when a native request is rejected.
+  const request = gallery.requestFullscreen || gallery.webkitRequestFullscreen;
+  const enabled = gallery.requestFullscreen ? document.fullscreenEnabled : document.webkitFullscreenEnabled;
+  if (request && enabled !== false) {
+    try { await request.call(gallery); } catch { /* Keep the viewport viewer. */ }
+    // A pending native request may finish after the user has closed the viewer.
+    if (!state.fullscreenView && nativeFullscreenElement() === gallery) await exitFullscreenView();
+  }
+}
+function syncFullscreen() {
+  if (!state.fullscreenView) return;
+  if (nativeFullscreenElement() === $('gallery')) state.fullscreenView.native = true;
+  else if (state.fullscreenView.native) restoreFullscreenView();
+}
+document.addEventListener('fullscreenchange', syncFullscreen);
+document.addEventListener('webkitfullscreenchange', syncFullscreen);
 async function download(size) {
   const item = selected(); if (!item) return;
   const buttons = document.querySelectorAll('[data-size]');
@@ -314,6 +387,13 @@ $('auto-refresh').addEventListener('change', () => { state.autoRefresh = $('auto
 $('contain-image').addEventListener('change', () => { state.contain = $('contain-image').checked; $('gallery').classList.toggle('contain', state.contain); saveSettings(); });
 document.addEventListener('keydown', (event) => {
   if (document.querySelector('dialog[open]') || event.ctrlKey || event.metaKey || event.altKey || ['INPUT', 'SELECT', 'TEXTAREA'].includes(event.target.tagName)) return;
+  if (state.fullscreenView && event.key === 'Escape') { event.preventDefault(); exitFullscreenView(); return; }
+  if (state.fullscreenView && event.key === 'Tab') {
+    const controls = [...$('gallery').querySelectorAll('button:not([disabled])')].filter((button) => !button.closest('[hidden]'));
+    const first = controls[0]; const last = controls.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  }
   if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
   if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
   if (event.key.toLowerCase() === 'l') toggleFavorite();

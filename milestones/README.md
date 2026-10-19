@@ -17,3 +17,5 @@
 源码发布：[002 GitHub 首次发布](002-initial-publication.md)。
 
 1.1.0 功能扩展：[004 最近十五日浏览与项目入口](004-fifteen-day-archive.md)。
+
+手机体验上线：[005 全屏与页脚修复发布](005-mobile-release.md)。
