@@ -1,6 +1,6 @@
 # 011：环境文档链接与生产信息公开范围
 
-- 状态：`in-progress`；创建日期：2026-10-20（Asia/Shanghai）；负责人：项目维护者。
+- 状态：`resolved`；创建日期：2026-10-20（Asia/Shanghai）；负责人：项目维护者。
 - 变更类型：`security | environment | user-visible`；风险档位：重要变更，涉及公开资料中的运维信息与远端推送。
 - 关联：[计划 007](../plans/007-public-environment-docs.md)、[验收设计](../docs/testing/public-environment-docs.md)、[里程碑 007](../milestones/007-public-environment-docs.md)。
 - 决策记录：none；应用架构及运行边界不变。
@@ -33,3 +33,4 @@ GitHub 渲染中仅 Bing 域名文字构成链接；当前受版本管理文件�
 
 - 2026-10-20：核对干净工作区与相关权威文档，确认自动链接和多处运维信息重复问题，开始保留本机私有副本并修正文档。
 - 2026-10-20：完成文档联动与 8 份本机私有副本核对；27 项回归、研究完整性、文档链接和配置一致性通过。GitHub Markdown 渲染确认链接修正，已核实提交身份与 oonecab 推送账户，准备提交。
+- 2026-10-20：修正提交 `79064fcce411a7f33544fe988fb0b56f2e771664` 正常推送 main，作者与提交者均符合用户指定身份；HEAD、origin/main、远端 main 一致且工作区干净。GitHub 主分支 DOM 和截图确认链接及公开范围修正。随后仅追加本次验收结果，最终记录提交读回见交付说明。
