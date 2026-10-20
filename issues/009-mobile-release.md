@@ -28,3 +28,5 @@ required：同步 TECH、环境清单、架构、README 和 `.project-governance
 - 2026-10-19 21:47（Asia/Shanghai）：激活应用提交 `3f1bfd5` 对应的版本，应用与反向代理 active，保留旧版本。公网浏览器验证及 6 个静态资源摘要一致；服务配置摘要一致、缓存路径保持原位置。详细证据见 [发布验收](../docs/testing/mobile-release.md)。
 - 2026-10-19：应用提交的本地 HEAD、origin/main 和远端 main 一致，工作区干净；随后追加本条及关联验收文档。交付前再次核对最终记录提交的远端 SHA、工作区及运行文件一致性。
 - 2026-10-20：按[问题 011](011-public-environment-docs.md)调整公开范围，实例运维标识转存私有记录；原发布结论保留。
+
+2026-10-20 身份统一补充：本文保留当时的提交号与验收事实；当前历史对应及账号关联见 [身份修正验收](../docs/testing/git-identity-correction.md)。

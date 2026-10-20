@@ -19,3 +19,5 @@
 ## 文档与测试
 
 全屏行为的失败证明、回归与本地浏览器证据见 [手机修复验收](../docs/testing/mobile-fullscreen-footer.md)。本轮重复登记的语法、27 项回归和研究完整性检查，服务器执行同一语法/回归；发布验收额外检查 Git、摘要、服务、HTTP/TLS 和真实页面。同步文件清单及结果见 [发布验收](../docs/testing/mobile-release.md)。
+
+2026-10-20 身份统一补充：本文保留当时的提交号与验收事实；当前历史对应及账号关联见 [身份修正验收](../docs/testing/git-identity-correction.md)。

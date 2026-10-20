@@ -47,3 +47,5 @@
 截图已实际查看；本机附件位于忽略目录 `test-output/release-20261019/`，包括 `public-mobile-fullscreen.png`、`public-footer.png`、`public-evidence.json` 和 `server-readback.txt`。手机路径为 Chromium 的尺寸/接口模拟，实体 iPhone 仍需用户设备复核。
 
 发布后只追加问题、计划、里程碑与本验收记录；最终交付前再次比较 HEAD 的全部 13 个运行包源文件与已发布摘要，核对远端及干净工作区。此类记录提交不改变运行文件。
+
+2026-10-20 身份统一补充：本文保留当时的提交号与验收事实；当前历史对应及账号关联见 [身份修正验收](git-identity-correction.md)。
