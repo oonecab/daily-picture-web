@@ -26,3 +26,5 @@
 公开环境文档：[链接、公开范围与 Git 交付验收](public-environment-docs.md)。
 
 1.1.1：[缓存与资源可靠性验收](cache-resource-reliability.md)。
+
+1.1.1 上线：[发布验收](reliability-release.md)。

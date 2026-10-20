@@ -31,6 +31,7 @@
 | 开源许可证与第三方范围 | [MIT License](../LICENSE)、[第三方说明](../THIRD_PARTY_NOTICES.md) |
 | 当前技术与架构 | [TECH](../TECH.md)、[Web 架构](architecture/web-app.md) |
 | 运行环境与自部署 | [环境事实与配置要求](environments.md)、[发布与回滚](deployment.md) |
+| 1.1.1 发布结果 | [可靠性修复发布验收](testing/reliability-release.md) |
 | 前期 REA 分析 | [研究导航](reverse-engineering/README.md)、[原生→Web 对应表](reverse-engineering/web-mapping.md) |
 | 数据来源与字段 | [Bing 契约](contracts/bing.md) |
 | 日期、缓存、重试、浏览器状态 | [规则目录](rules/README.md) |
