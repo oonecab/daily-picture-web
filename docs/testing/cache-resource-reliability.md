@@ -1,6 +1,6 @@
 # 缓存与资源可靠性验收
 
-状态：本地验收通过，待 Git 交付；日期：2026-10-20（Asia/Shanghai）。关联：[问题 012](../../issues/012-cache-resource-reliability.md)、[计划 008](../../plans/008-cache-resource-reliability.md)。
+状态：本地验收及修复提交交付通过；日期：2026-10-20（Asia/Shanghai）。关联：[问题 012](../../issues/012-cache-resource-reliability.md)、[计划 008](../../plans/008-cache-resource-reliability.md)。
 
 ## 测试设计
 
@@ -30,6 +30,8 @@
 - ETag 的强/弱、多值、通配 GET 返回 304 且无响应体；过期标识返回 200；HEAD 和 API 原缓存策略通过回归。
 
 本机完整日志、JSON 与截图位于 Git 忽略的 `test-output/reliability-fix-20261020/`。测试源码随仓库提交；临时夹具服务在验收后关闭。
+
+提交前公开资料检查覆盖 337 个候选文件、136 个修改文档本地链接、3 项命令事实和 8 项规则引用；已知实例标识和凭据模式均无命中，私有资料及本机测试输出未进入候选文件。修复提交 [`8c1124a002671404f7447f9cb18d672c23fb0ab8`](https://github.com/oonecab/daily-picture-web/commit/8c1124a002671404f7447f9cb18d672c23fb0ab8) 通过账户 oonecab 推送 main，作者/提交者符合用户指定身份；HEAD、origin/main 与 `ls-remote` 读回同一提交，工作区干净。之后仅追加交付记录，不改变已验证运行代码。
 
 ### 边界
 

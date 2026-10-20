@@ -1,10 +1,10 @@
 # 008：缓存与资源可靠性修复计划
 
-- 状态：`in-progress`；关联：[问题 012](../issues/012-cache-resource-reliability.md)、[里程碑 008](../milestones/008-cache-resource-reliability.md)。
+- 状态：`completed`；关联：[问题 012](../issues/012-cache-resource-reliability.md)、[里程碑 008](../milestones/008-cache-resource-reliability.md)。
 
 1. `[done]` 新增回归在旧实现上确认 13 项失败，另确认流式正文超时失败。
 2. `[done]` 完成五项修复与持久化兼容，更新规则、契约和使用说明。
 3. `[done]` 48 项回归、登记检查、隔离负载与真实浏览器通过；公开资料检查无新增凭据或实例标识，验收记录区分本地与生产边界。
-4. `[in-progress]` 使用指定身份提交推送，核对本地、跟踪分支、远端提交和干净工作区。
+4. `[done]` 修复提交 `8c1124a` 使用指定身份推送 main，本地、跟踪分支、远端读回一致且工作区干净；交付记录随后单独提交。
 
 生产实例、真实上游压力与 Git 历史重写均不属于本次交付。无数据库、技术栈或环境变量迁移。
