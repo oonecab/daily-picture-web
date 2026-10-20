@@ -29,5 +29,6 @@
 | 009 | 手机体验修复发布 | [问题 009](009-mobile-release.md) |
 | 010 | GitHub 社区资料与反馈入口 | [问题 010](010-community-standards.md) |
 | 011 | 环境文档链接与生产信息公开范围 | [问题 011](011-public-environment-docs.md) |
+| 012 | 缓存恢复、上游资源限制与切图交互 | [问题 012](012-cache-resource-reliability.md) |
 
 对外反馈使用 [GitHub Issues](https://github.com/oonecab/daily-picture-web/issues)；本目录由维护者保存需要关联规则、计划和验收的项目记录，并按需链接对应 GitHub Issue。既有记录编号保留，后续新文件可采用上方建议命名。

@@ -23,3 +23,5 @@
 社区资料：[006 GitHub 社区资料就绪](006-community-standards.md)。
 
 公开环境文档：[007 文档与运维信息分离](007-public-environment-docs.md)。
+
+缓存与资源可靠性：[008 源码补丁](008-cache-resource-reliability.md)。

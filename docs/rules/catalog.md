@@ -1,6 +1,6 @@
 # 图片目录、市场与日期规则
 
-状态：CURRENT；基线版本：1.1.0；生效日期：2026-10-17；维护角色：项目维护者。
+状态：CURRENT；基线版本：1.1.1；生效日期：2026-10-20；维护角色：项目维护者。
 
 权威范围：当前 Web 行为。代码入口 [lib/bing.mjs](../../lib/bing.mjs)，回归入口 [test/app.test.mjs](../../test/app.test.mjs)。改变本文件规则须同改实现、测试设计及必要的用户说明；原生研究只作来源。
 
@@ -30,7 +30,10 @@ CLI 只监听 `127.0.0.1`，Host 仅允许 `localhost` / `127.0.0.1`。请求仅
 
 资料、磁盘缓存、治理配置与工作区路径不得暴露为通用静态目录。修改访问范围、代理目标、CSP 或新增写入操作属于边界变化，需按完整变更流程处理。
 
+1.1.1 的静态白名单资源提供内容 SHA-256 强 ETag，继续使用 `Cache-Control: no-cache`。GET/HEAD 的 If-None-Match 支持弱比较、逗号列表和 `*`，命中返回无响应体的 304；不匹配返回 200，HEAD 仍省略响应体。API 不复用此条件请求策略，归档仍 no-store，图片仍 public/max-age/immutable。服务资源队列满时返回 JSON 503 与 `Retry-After: 5`，不得缓存错误响应。
+
 ## 变更记录（只追加）
 
 - 2026-10-17：依据现有代码建立 DP-DATE / DP-IMAGE / DP-HTTP 文档基线，未改变行为；[问题 001](../../issues/001-governance-adoption.md)。
 - 2026-10-17：1.1.0 新增 DP-ARCHIVE，单批校验扩大到 8 项，两批合并最多 15 项；DP-DATE / DP-HTTP 不变；[问题 007](../../issues/007-fifteen-day-archive.md)。
+- 2026-10-20：1.1.1 DP-HTTP 增加静态条件请求及资源繁忙响应；[问题 012](../../issues/012-cache-resource-reliability.md)。

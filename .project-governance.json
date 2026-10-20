@@ -242,7 +242,7 @@
         "code": [
           {
             "path": "lib/bing.mjs",
-            "contains": "const signal = AbortSignal.timeout(20000);"
+            "contains": "const signal = AbortSignal.timeout(requestTimeoutMs);"
           }
         ],
         "tests": [
@@ -251,6 +251,12 @@
             "contains": "a transient connection failure is retried once within the original time budget"
           }
         ]
+      },
+      {
+        "id": "DP-RESOURCE",
+        "document": { "path": "docs/rules/cache.md", "contains": "DP-RESOURCE" },
+        "code": [{ "path": "lib/bing.mjs", "contains": "maxConcurrent = 4, maxQueued = 32" }],
+        "tests": [{ "path": "test/resource-limits.test.mjs", "contains": "different images share bounded upstream capacity and reject queue overflow" }]
       },
       {
         "id": "DP-HTTP",

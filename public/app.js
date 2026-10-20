@@ -3,6 +3,7 @@ const MARKET_NAMES = { 'zh-CN': '中国', 'en-US': '美国', 'en-GB': '英国', 
 const HOUR = 3600000;
 const KEY = 'daily-picture-v1';
 let storageWarning = false;
+let offlineCacheWarning = false;
 
 function readStored(key, fallback) {
   try { return JSON.parse(localStorage.getItem(`${KEY}:${key}`)) ?? fallback; } catch { return fallback; }
@@ -65,9 +66,30 @@ function icon(name, className = 'icon') {
   svg.append(use);
   return svg;
 }
+let stripList, stripMode, stripBusy, stripFavorites;
+let stripIndex = -1;
+let stripNodes = [];
 function renderStrip() {
+  const list = images();
+  if (stripList === list && stripMode === state.mode && (list.length || stripBusy === state.busy)) {
+    stripNodes[stripIndex]?.button.setAttribute('aria-pressed', 'false');
+    stripNodes[state.index]?.button.setAttribute('aria-pressed', 'true');
+    stripIndex = state.index;
+    if (stripFavorites !== state.favorites) {
+      stripNodes.forEach((node, index) => {
+        const active = liked(list[index]);
+        if (active && !node.heart) { node.heart = icon('heart', 'icon thumb-heart'); node.frame.append(node.heart); }
+        else if (!active && node.heart) { node.heart.remove(); node.heart = null; }
+      });
+      stripFavorites = state.favorites;
+    }
+    return;
+  }
+  const focused = stripNodes.findIndex((node) => node.button === document.activeElement);
+  const focusedId = focused >= 0 ? stripList[focused]?.id : null;
+  stripNodes = [];
   const fragment = document.createDocumentFragment();
-  images().forEach((item, index) => {
+  list.forEach((item, index) => {
     const button = document.createElement('button');
     button.className = 'thumbnail';
     button.setAttribute('aria-label', `${shortDate(item.date)}：${item.title}`);
@@ -82,13 +104,15 @@ function renderStrip() {
     if (index === 0 && state.mode === 'browse') {
       const badge = document.createElement('span'); badge.className = 'thumb-tag'; badge.textContent = '最新'; frame.append(badge);
     }
-    if (liked(item)) frame.append(icon('heart', 'icon thumb-heart'));
+    const heart = liked(item) ? icon('heart', 'icon thumb-heart') : null;
+    if (heart) frame.append(heart);
     const caption = document.createElement('span'); caption.className = 'thumbnail-caption';
     const name = document.createElement('span'); name.textContent = item.title;
     caption.append(name);
     button.append(frame, caption);
     button.addEventListener('click', () => { stopSlideshow(); state.index = index; renderSelection(); });
     fragment.append(button);
+    stripNodes.push({ button, frame, heart });
   });
   if (!images().length) {
     if (state.busy && state.mode === 'browse') {
@@ -96,6 +120,8 @@ function renderStrip() {
     } else { const message = document.createElement('p'); message.className = 'collection-empty'; message.textContent = state.mode === 'favorites' ? '你的风景故事，从一次收藏开始。' : '图片列表将在联网后显示。'; fragment.append(message); }
   }
   $('filmstrip').replaceChildren(fragment);
+  stripList = list; stripMode = state.mode; stripBusy = state.busy; stripFavorites = state.favorites; stripIndex = state.index;
+  if (focusedId) stripNodes[list.findIndex((item) => item.id === focusedId)]?.button.focus({ preventScroll: true });
 }
 function renderSelection() {
   const list = images();
@@ -188,7 +214,7 @@ async function loadArchive(force = false) {
       state.index = Math.max(0, state.images.findIndex((item) => item.id === currentId));
       renderSelection();
     }
-    if (force) toast(state.stale ? '当前显示缓存图片，稍后可再次刷新。' : '已与 Bing 同步，最新风景就在这里。');
+    if (force) toast(state.stale ? '当前显示缓存图片，稍后可再次刷新。' : data.cache === 'cooldown' ? '刚刚检查过更新，请稍后再刷新。' : '已与 Bing 同步，最新风景就在这里。');
   } catch (error) {
     if (generation !== state.generation) return;
     if (controller.signal.aborted && document.hidden) return;
@@ -436,6 +462,12 @@ window.addEventListener('storage', (event) => {
 
 restoreArchive(); renderSelection(); loadArchive(); scheduleRefresh();
 if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data?.type === 'offline-cache-unavailable' && !offlineCacheWarning) {
+      offlineCacheWarning = true;
+      toast('图片已显示，但离线保存暂时不可用。请检查浏览器存储空间。');
+    }
+  });
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     // Warm the offline cache even if the initial request preceded installation.
     loadArchive();

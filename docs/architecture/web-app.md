@@ -11,7 +11,9 @@
 | `public/app.js` | 展示、下载、收藏、偏好、模态框和可见性计时器 | 同源 localStorage、页面内存、下载 Blob URL | 本地 `/api/*`、DOM 与浏览器 API |
 | `public/sw.js` | 网络失败回退、外壳/归档/图片缓存 | 浏览器 Cache Storage | 同源 GET、浏览器缓存 API |
 | `test/app.test.mjs` | 合约和边界回归 | 独立临时目录和临时本机端口 | 导入服务与适配模块、假上游；不需要真实 Bing |
-| `test/browser-ui.test.mjs` | 完整前端脚本的全屏状态回归 | 隔离 DOM/浏览器 API 替身 | Node 内置 vm；真实布局另用浏览器验证 |
+| `test/browser-ui.test.mjs` | 完整前端脚本的全屏、缩略图与焦点状态回归 | 隔离 DOM/浏览器 API 替身 | Node 内置 vm；真实布局另用浏览器验证 |
+| `test/service-worker.test.mjs` | 外壳和图片缓存失败路径 | 隔离 Cache Storage/网络/计时器替身 | Node 内置 vm，执行完整 sw.js；真实配额另行验证 |
+| `test/resource-limits.test.mjs` | 资源池、冷却与 HTTP 条件请求 | 临时目录、回环端口、假上游 | 服务和适配模块，独立于公网配置 |
 | `docs/reverse-engineering/source` | 历史静态资料 | 只读证据快照 | 仅供阅读，不被应用导入或静态服务暴露 |
 
 ```mermaid
@@ -36,6 +38,8 @@ flowchart LR
 前端不直接读取磁盘或逆向资料；浏览器向同源 API 请求。服务端不能接受任意远端 URL、任意文件路径或调用原生应用。Bing 模块不依赖 DOM，测试可注入 `fetchImpl`、时间与独立缓存目录。图片真实解码仍由浏览器完成；服务的 JPEG 响应校验不是完整图片解码。
 
 静态资源使用明确白名单。新增文档、问题单和证据不会自动变成 HTTP 可访问文件。改监听地址、Host/CSP、路由、上游来源、持久化格式或系统集成时，按 [变更分流](../governance/CHANGE_TRIAGE.md) 完整评估安全和数据边界。
+
+1.1.1 由 Bing 服务统一拥有上游执行槽、等待队列和市场刷新冷却；HTTP 层负责静态 ETag/304 与繁忙重试头；Service Worker 负责外壳超时/5xx 回退和串行图片缓存预算；UI 保留缩略图节点并接收离线保存失败提示。限值与状态语义见 [缓存规则](../rules/cache.md)、[浏览器状态](../rules/browser-state.md) 和 [HTTP 规则](../rules/catalog.md)。持久化 schema 与数据所有权不变。
 
 ## 生命周期与演进
 

@@ -1,8 +1,11 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell-1.1.0`;
+const SHELL = `${VERSION}-shell-1.1.1`;
 const DATA = `${VERSION}-data`;
 const IMAGES = `${VERSION}-images`;
 const ASSETS = ['/', '/index.html', '/styles.css', '/app.js', '/icon.svg', '/manifest.webmanifest'];
+const IMAGE_COUNT = 80;
+const IMAGE_BYTES = 64 * 1024 * 1024;
+let imageWrites = Promise.resolve();
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(SHELL).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
@@ -34,6 +37,37 @@ async function archive(request) {
     return Response.json({ error: '离线状态下尚无此地区的图片，请联网后重试。' }, { status: 503 });
   }
 }
+async function saveImage(cache, key, response) {
+  const blob = await response.blob();
+  if (blob.size > IMAGE_BYTES) throw new Error('Image exceeds offline budget');
+  const entries = [];
+  for (const request of await cache.keys()) {
+    if (request.url === key) continue;
+    const cached = await cache.match(request);
+    if (!cached) continue;
+    const header = cached.headers.get('Content-Length');
+    const declared = header === null ? NaN : Number(header);
+    const bytes = Number.isSafeInteger(declared) && declared >= 0 ? declared : (await cached.blob()).size;
+    entries.push({ request, bytes });
+  }
+  let bytes = entries.reduce((sum, entry) => sum + entry.bytes, 0);
+  while (entries.length >= IMAGE_COUNT || bytes + blob.size > IMAGE_BYTES) {
+    const oldest = entries.shift();
+    if (!oldest) break;
+    await cache.delete(oldest.request); bytes -= oldest.bytes;
+  }
+  const headers = new Headers(response.headers);
+  headers.set('Content-Length', String(blob.size));
+  const copy = () => new Response(blob, { status: response.status, statusText: response.statusText, headers });
+  try { await cache.put(key, copy()); }
+  catch (error) {
+    if (error.name !== 'QuotaExceededError') throw error;
+    // Browser quota is shared with other storage and may be smaller than our budget.
+    const evict = entries.slice(0, Math.max(8, Math.ceil(entries.length / 4)));
+    for (const entry of evict) await cache.delete(entry.request);
+    await cache.put(key, copy());
+  }
+}
 async function image(request, event) {
   const url = new URL(request.url);
   url.searchParams.delete('download');
@@ -45,22 +79,30 @@ async function image(request, event) {
     const response = await fetch(request);
     if (response.ok && response.headers.get('Content-Type')?.startsWith('image/')) {
       const copy = response.clone();
-      event.waitUntil((async () => {
-        await cache.put(key, copy);
-        const keys = await cache.keys();
-        await Promise.all(keys.slice(0, Math.max(0, keys.length - 80)).map((old) => cache.delete(old)));
-      })().catch(() => {}));
+      imageWrites = imageWrites.then(() => saveImage(cache, key, copy)).catch(async () => {
+        const clients = await self.clients.matchAll({ type: 'window' });
+        for (const client of clients) client.postMessage({ type: 'offline-cache-unavailable' });
+      }).catch(() => {});
+      event.waitUntil(imageWrites);
     }
     return response;
   } catch { return new Response('', { status: 503 }); }
 }
 async function shell(request) {
   const cache = await caches.open(SHELL);
+  const controller = new AbortController();
+  const abort = () => controller.abort();
+  if (request.signal?.aborted) abort();
+  else request.signal?.addEventListener('abort', abort, { once: true });
+  const timeout = setTimeout(abort, 5000);
   try {
-    const response = await fetch(request);
+    const response = await fetch(request, { signal: controller.signal });
+    if (response.status >= 500) throw new Error('App shell unavailable');
     if (response.ok) await cache.put(request, response.clone()).catch(() => {});
+    controller.signal.throwIfAborted();
     return response;
   } catch { return await cache.match(request) || (request.mode === 'navigate' ? await cache.match('/') : null) || new Response('', { status: 503 }); }
+  finally { clearTimeout(timeout); request.signal?.removeEventListener('abort', abort); }
 }
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);

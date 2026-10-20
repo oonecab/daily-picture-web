@@ -1,5 +1,6 @@
 import http from 'node:http';
 import { spawn } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -34,7 +35,7 @@ export function createApp({ service = createBingService({ cacheDir: join(root, '
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.1.0' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.1.1' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/archive') {
         const result = await service.archive(url.searchParams.get('market') || 'zh-CN', url.searchParams.get('refresh') === '1');
@@ -54,10 +55,16 @@ export function createApp({ service = createBingService({ cacheDir: join(root, '
       const file = files[url.pathname];
       if (!file) throw new HttpError(404, '没有找到这个页面。');
       response.setHeader('Cache-Control', 'no-cache');
-      return send(200, await readFile(join(root, 'public', file[0])), file[1]);
+      const bytes = await readFile(join(root, 'public', file[0]));
+      const etag = `"${createHash('sha256').update(bytes).digest('hex')}"`;
+      response.setHeader('ETag', etag);
+      const validators = request.headers['if-none-match']?.split(',').map((value) => value.trim().replace(/^W\//, '')) || [];
+      if (validators.includes('*') || validators.includes(etag)) { response.writeHead(304); response.end(); return; }
+      return send(200, bytes, file[1]);
     } catch (error) {
       if (!response.headersSent) {
         response.setHeader('Cache-Control', 'no-store');
+        if (error.status === 503) response.setHeader('Retry-After', '5');
         send(error.status || 500, { error: error.status ? error.message : '本地服务遇到问题，请重试。' });
       }
     }

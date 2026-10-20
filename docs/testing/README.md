@@ -13,7 +13,7 @@
 
 ## 项目自定义测试设计规则
 
-[当前测试设计与覆盖关系](current-baseline.md)；[原浏览器/上游验证](../../VERIFICATION.md)；[本次初始化验收](../governance/INITIALIZATION.md)。可执行测试在 `test/app.test.mjs` 与 `test/browser-ui.test.mjs`。后者使用 DOM 替身，不能把 Node 测试结果扩大为全部浏览器行为通过。
+[当前测试设计与覆盖关系](current-baseline.md)；[原浏览器/上游验证](../../VERIFICATION.md)；[本次初始化验收](../governance/INITIALIZATION.md)。可执行测试在 `test/*.test.mjs`，覆盖服务、资源限制、UI 与 Service Worker。浏览器测试使用隔离 DOM/Cache Storage 替身，不能把 Node 测试结果扩大为全部浏览器行为通过。
 
 首次源码发布的文件、摘要和远端验收见 [initial-publication.md](initial-publication.md)。
 
@@ -24,3 +24,5 @@
 社区资料：[社区文件、反馈入口与远端验收](community-standards.md)。
 
 公开环境文档：[链接、公开范围与 Git 交付验收](public-environment-docs.md)。
+
+1.1.1：[缓存与资源可靠性验收](cache-resource-reliability.md)。

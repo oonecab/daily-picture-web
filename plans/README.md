@@ -24,3 +24,5 @@
 社区资料：[006 社区资料与反馈入口](006-community-standards.md)。
 
 公开环境文档：[007 链接修正与生产信息公开范围](007-public-environment-docs.md)。
+
+缓存与资源可靠性：[008 修复与验证](008-cache-resource-reliability.md)。

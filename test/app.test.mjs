@@ -107,8 +107,9 @@ test('merged archives are limited to the latest fifteen images even when pages d
 test('failure of the older page cannot replace a complete cached archive with a partial result', async (t) => {
   const cacheDir = await temporary(t);
   let failOlder = false;
+  let now = Date.now();
   const calls = [];
-  const service = createBingService({ cacheDir, fetchImpl: async (url) => {
+  const service = createBingService({ cacheDir, now: () => now, fetchImpl: async (url) => {
     const offset = Number(url.searchParams.get('idx')); calls.push(offset);
     if (failOlder && offset === 7) return new Response('unavailable', { status: 503 });
     const page = archivePage(offset);
@@ -118,7 +119,7 @@ test('failure of the older page cannot replace a complete cached archive with a 
   const first = await service.archive();
   const path = join(cacheDir, 'archives', 'zh-CN.json');
   const saved = await readFile(path, 'utf8');
-  failOlder = true; calls.length = 0;
+  failOlder = true; calls.length = 0; now += 30000;
   const result = await service.archive('zh-CN', true);
   assert.equal(result.stale, true);
   assert.equal(result.cache, 'fallback');
@@ -154,8 +155,9 @@ test('a fresh legacy seven-image cache is upgraded online and preserved as stale
 test('metadata-only changes are committed even when image IDs do not change', async (t) => {
   const cacheDir = await temporary(t);
   let title = '旧标题';
-  const service = createBingService({ cacheDir, fetchImpl: async () => Response.json(sample(title)) });
-  await service.archive(); title = '新标题';
+  let now = Date.now();
+  const service = createBingService({ cacheDir, now: () => now, fetchImpl: async () => Response.json(sample(title)) });
+  await service.archive(); title = '新标题'; now += 30000;
   const result = await service.archive('zh-CN', true);
   assert.equal(result.images[0].title, '新标题');
   assert.equal(JSON.parse(await readFile(join(cacheDir, 'archives', 'zh-CN.json'), 'utf8')).images[0].title, '新标题');

@@ -8,7 +8,7 @@ const html = await readFile(new URL('../public/index.html', import.meta.url), 'u
 
 // Run the complete application against a small DOM boundary double. Layout and
 // browser top-layer behavior are checked separately in the real browser.
-function browser({ native = 'missing', empty = false } = {}) {
+function browser({ native = 'missing', empty = false, archiveCache = null, worker = false } = {}) {
   const elements = new Map();
   let document;
   class Element {
@@ -36,8 +36,12 @@ function browser({ native = 'missing', empty = false } = {}) {
       for (const listener of this.listeners.get(name) || []) await listener(event);
       return event;
     }
-    append(...nodes) { nodes.forEach((node) => { node.parentElement = this; this.children.push(node); }); }
-    replaceChildren(...nodes) { this.children = []; this.append(...nodes); }
+    append(...nodes) { nodes.forEach((node) => { if (node.tagName === '#FRAGMENT') this.append(...node.children); else { node.parentElement = this; this.children.push(node); } }); }
+    replaceChildren(...nodes) {
+      if (this.children.some((node) => node === document.activeElement)) document.activeElement = document.body;
+      this.children.forEach((node) => { node.parentElement = null; }); this.children = []; this.append(...nodes);
+    }
+    remove() { if (this.parentElement) { this.parentElement.children = this.parentElement.children.filter((node) => node !== this); this.parentElement = null; } }
     get lastElementChild() { return this.children.at(-1) || new Element(); }
     focus() { document.activeElement = this; }
     closest(selector) { return selector === '[hidden]' ? (this.hidden ? this : this.parentElement?.closest(selector)) : null; }
@@ -68,7 +72,7 @@ function browser({ native = 'missing', empty = false } = {}) {
   document.getElementById = get;
   document.createElement = (tag) => new Element(tag);
   document.createElementNS = (_namespace, tag) => new Element(tag);
-  document.createDocumentFragment = () => new Element();
+  document.createDocumentFragment = () => new Element('#fragment');
   document.querySelector = (selector) => selector === 'dialog[open]' ? [...elements.values()].find((element) => element.open) || null : null;
   document.querySelectorAll = (selector) => {
     if (selector === 'dialog') return [...elements.values()].filter((element) => element.tagName === 'DIALOG');
@@ -100,16 +104,51 @@ function browser({ native = 'missing', empty = false } = {}) {
     ['daily-picture-v1:archive:zh-CN', JSON.stringify({ market: 'zh-CN', images })],
     ['daily-picture-v1:favorites', JSON.stringify(images.slice(0, 1))],
   ]);
+  const serviceWorker = new Element('serviceworker');
+  serviceWorker.register = async () => {};
   const context = vm.createContext({
-    document, window, navigator: { onLine: true },
+    document, window, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
     localStorage: { getItem: (key) => stored.get(key), setItem: (key, value) => stored.set(key, value) },
     URL, URLSearchParams, AbortController, AbortSignal, console,
-    fetch: () => new Promise(() => {}),
+    fetch: archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {}),
     setTimeout: () => 1, clearTimeout() {}, setInterval: () => 1, clearInterval() {},
   });
   vm.runInContext(source, context);
-  return { get, gallery, document, window, background, requests: () => requests };
+  return { get, gallery, document, window, background, serviceWorker, requests: () => requests };
 }
+
+test('manual refresh reports cooldown instead of claiming a fresh upstream sync', async () => {
+  const b = browser({ archiveCache: 'cooldown' });
+  await b.get('refresh').emit('click');
+  assert.equal(b.get('toast').textContent, '刚刚检查过更新，请稍后再刷新。');
+  assert.equal(b.get('refresh').disabled, false);
+});
+test('offline storage failure is shown once per page', async () => {
+  const b = browser({ worker: true });
+  await b.serviceWorker.emit('message', { data: { type: 'offline-cache-unavailable' } });
+  assert.match(b.get('toast').textContent, /离线保存暂时不可用/);
+  b.get('toast').textContent = 'Later notification';
+  await b.serviceWorker.emit('message', { data: { type: 'offline-cache-unavailable' } });
+  assert.equal(b.get('toast').textContent, 'Later notification');
+});
+
+test('thumbnail selection preserves nodes and keyboard focus while updating selection and favorite marks', async () => {
+  const b = browser();
+  const thumbnails = [...b.get('filmstrip').children];
+  assert.equal(thumbnails.length, 2);
+  thumbnails[1].focus();
+  await thumbnails[1].emit('click');
+  assert.deepEqual(b.get('filmstrip').children, thumbnails);
+  assert.equal(b.document.activeElement, thumbnails[1]);
+  assert.equal(thumbnails[0].getAttribute('aria-pressed'), 'false');
+  assert.equal(thumbnails[1].getAttribute('aria-pressed'), 'true');
+  await b.get('favorite').emit('click');
+  assert.deepEqual(b.get('filmstrip').children, thumbnails);
+  assert.equal(b.document.activeElement, thumbnails[1]);
+  assert.ok(thumbnails[1].children[0].children.some((node) => node.tagName === 'SVG'));
+  await b.get('favorite').emit('click');
+  assert.ok(!thumbnails[1].children[0].children.some((node) => node.tagName === 'SVG'));
+});
 
 test('missing fullscreen API opens a viewport viewer and restores scrolling and focus on exit', async () => {
   const b = browser();

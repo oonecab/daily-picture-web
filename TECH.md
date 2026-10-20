@@ -74,6 +74,8 @@
 
 1.1.0 业务增量：归档改为两批并行合并、最多 15 项，首页加入 GitHub 链接；缓存窗口标识与浏览器升级兼容见 [问题 007](issues/007-fifteen-day-archive.md) 和 [验收记录](docs/testing/fifteen-day-archive.md)。此项不改变技术栈或运行兼容基线。
 
+1.1.1 可靠性补丁：外壳失败回退、图片缓存预算与配额恢复、上游总量与刷新冷却、缩略图节点复用、静态 ETag/304，见 [问题 012](issues/012-cache-resource-reliability.md) 和 [验收记录](docs/testing/cache-resource-reliability.md)。运行栈、兼容基线、环境变量与存储 schema 不变。
+
 ## 技术栈变更索引（只追加）
 
 “技术栈变更”至少包括语言、运行时、框架、核心库、构建工具、数据库或中间件的新增、移除、替换、主版本升级，以及兼容基线变化。普通补丁升级仅在影响行为、兼容性或安全基线时记录。
