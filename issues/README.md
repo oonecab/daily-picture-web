@@ -31,5 +31,6 @@
 | 011 | 环境文档链接与生产信息公开范围 | [问题 011](011-public-environment-docs.md) |
 | 012 | 缓存恢复、上游资源限制与切图交互 | [问题 012](012-cache-resource-reliability.md) |
 | 013 | 1.1.1 可靠性修复发布 | [问题 013](013-reliability-release.md) |
+| 014 | 提交邮箱与 GitHub 作者关联修正 | [问题 014](014-git-identity-correction.md) |
 
 对外反馈使用 [GitHub Issues](https://github.com/oonecab/daily-picture-web/issues)；本目录由维护者保存需要关联规则、计划和验收的项目记录，并按需链接对应 GitHub Issue。既有记录编号保留，后续新文件可采用上方建议命名。

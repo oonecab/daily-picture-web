@@ -29,3 +29,5 @@ GitHub 原页面实际 DOM 确认中文说明被拼入 Bing 链接目标。对�
 初始终端 HTTPS/SSH 连接中断，经本机已有 SOCKS 代理通道读取远端并完成 SSH 身份验证；远端 main 与本地基线一致。Git 提交身份仅写入本仓库配置，使用用户给定的作者名与邮箱。
 
 修正提交：[79064fcce411a7f33544fe988fb0b56f2e771664](https://github.com/oonecab/daily-picture-web/commit/79064fcce411a7f33544fe988fb0b56f2e771664)。普通推送后，`git fetch`、`git ls-remote` 与本地引用读回得到相同 SHA，工作区干净。后续仅追加问题、计划、里程碑及本验收结果；最终记录提交的身份、远端与工作区读回随交付说明提供。
+
+2026-10-20 身份修正补充：本文保留当时的提交号与验收事实；旧新提交映射和 GitHub 实际作者关联见 [修正验收](git-identity-correction.md)。此前身份检查仅覆盖 Git 字段与推送认证，账号关联结论以该修正验收为准。

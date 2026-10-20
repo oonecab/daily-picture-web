@@ -27,3 +27,5 @@
 缓存与资源可靠性：[008 源码补丁](008-cache-resource-reliability.md)。
 
 1.1.1 上线：[009 可靠性修复发布](009-reliability-release.md)。
+
+提交身份：[010 GitHub 作者关联修正](010-git-identity-correction.md)。

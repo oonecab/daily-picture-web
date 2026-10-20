@@ -28,3 +28,5 @@
 缓存与资源可靠性：[008 修复与验证](008-cache-resource-reliability.md)。
 
 1.1.1 上线：[009 发布计划](009-reliability-release.md)。
+
+提交身份：[010 邮箱与账号关联修正](010-git-identity-correction.md)。

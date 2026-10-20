@@ -28,3 +28,5 @@
 1.1.1：[缓存与资源可靠性验收](cache-resource-reliability.md)。
 
 1.1.1 上线：[发布验收](reliability-release.md)。
+
+提交身份：[历史邮箱修正与账号关联验收](git-identity-correction.md)。
