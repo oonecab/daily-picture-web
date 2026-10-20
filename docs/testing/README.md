@@ -22,3 +22,5 @@
 手机修复：[本地验收](mobile-fullscreen-footer.md) / [发布验收](mobile-release.md)。
 
 社区资料：[社区文件、反馈入口与远端验收](community-standards.md)。
+
+公开环境文档：[链接、公开范围与 Git 交付验收](public-environment-docs.md)。

@@ -2,9 +2,11 @@
 
 日期：2026-10-19（Asia/Shanghai）；[问题 009](../../issues/009-mobile-release.md) / [计划 005](../../plans/005-mobile-release.md) / [里程碑 005](../../milestones/005-mobile-release.md)。
 
+2026-10-20 公开范围调整：实例账户、服务名、绝对路径、运行时精确版本及版本目录标识转存私有运维记录；以下保留原验收日期、提交、摘要、结果和限制，未重新执行部署验证。
+
 ## 发布基线与场景
 
-本地 macOS / Node v24.21.0；服务器 Linux / Node v24.22.0。Git 初始 main = origin/main = ec35db0；生产原 current 指向 `20261017-eb0c4d4`，Nginx 与 daily-picture 均 active。server.mjs 和 lib/bing.mjs 的本地/生产摘要相同。
+本地 macOS / Node v24.21.0；服务器 Linux / Node，满足 package.json 兼容基线。Git 初始 main = origin/main = ec35db0；已核对原 current 目标，反向代理与应用服务均 active。server.mjs 和 lib/bing.mjs 的本地/生产摘要相同。
 
 | ID | 验收目标 | 结果 |
 | --- | --- | --- |
@@ -26,11 +28,11 @@
 ## 发布记录
 
 - 应用提交：[3f1bfd54863c87b9af020b0b8672f98584658065](https://github.com/oonecab/daily-picture-web/commit/3f1bfd54863c87b9af020b0b8672f98584658065)。首次 HTTPS 推送因本机缺少凭据退出；现有 SSH 身份验证后正常推送成功，未重写远端历史。
-- 当前版本：`/var/www/dailypicture.zzzping.top/releases/20261019T214608-3f1bfd5`；current 与运行进程 cwd 均指向此目录。
+- 激活版本：来自上述应用提交的独立版本目录；current 与运行进程 cwd 均指向该目录，实际位置保存在私有运维记录。
 - 运行包 SHA-256：`5f1802f49ca0924b4d8e4fae2d6a294feee5888ad3d770b0bd6dab7a938f5305`。包从 git archive 生成，排除开发缓存和本地配置。
 - 激活时间：2026-10-19 21:47:36（Asia/Shanghai）。重启后的第一次就绪探测暂时拒绝连接，重试成功；最终 health 为 ok=true、app=daily-picture-web。应用版本字段仍为 1.1.0，发布身份以提交和文件摘要判定。
-- 服务以 dailypicture 运行，仅监听 127.0.0.1:8787；Nginx 和应用 active。激活后目标服务 warning 级别日志无条目。systemd/Nginx 配置摘要与发布前一致。
-- 回滚目标：`/var/www/dailypicture.zzzping.top/releases/20261017-eb0c4d4`。新目录 `.deployment/` 中保留旧目标、配置快照、配置摘要与本次包；`.cache` 继续指向 `/var/lib/daily-picture`。
+- 服务使用专用账户并保持回环监听；反向代理和应用 active。激活后目标服务 warning 级别日志无条目。服务与反向代理配置摘要与发布前一致。
+- 回滚材料：已保存旧版本目标、配置快照、配置摘要与本次包，具体位置保存在私有运维记录；`.cache` 继续指向既有持久化状态目录。
 
 正式域名的 `/`、`/app.js`、`/styles.css`、`/sw.js`、`/icon.svg`、`/manifest.webmanifest` 均通过浏览器 HTTPS 取得并计算摘要，与发布 Git 文件一致。重点文件为：
 

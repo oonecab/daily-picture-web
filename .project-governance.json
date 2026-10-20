@@ -95,18 +95,19 @@
       "PORT"
     ],
     "services": [
-      "HTTPS www.bing.com：固定归档和图片读取；不要求账号或令牌",
-      "生产 Nginx HTTPS 反向代理与 daily-picture.service；部署事实见 docs/environments.md"
+      "HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌",
+      "自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md"
     ],
     "ports": [
       "Node HTTP 默认 127.0.0.1:8787；CLI 数字参数优先于进程环境 PORT",
-      "生产 Nginx 443 提供 HTTPS，80 重定向至 HTTPS；反向代理到 127.0.0.1:8787"
+      "自部署 HTTPS 通常使用 443，HTTP 80 重定向至 HTTPS；上游使用应用实际监听的回环端口"
     ]
   },
   "security": {
     "sensitive_data": [
       "浏览器收藏与偏好（个人使用数据）",
-      "研究证据中的本机路径与环境标识（分享前检查）"
+      "研究证据中的本机路径与环境标识（分享前检查）",
+      "生产实例的管理地址、服务名、系统账户、绝对路径、运行时精确版本与配置快照（仅私有运维记录）"
     ],
     "forbidden_actions": [
       "把本机服务改为公开监听、增加任意 URL/路径代理或暴露研究证据，必须作为安全边界变更另行评估和验证。",

@@ -22,3 +22,5 @@
 手机体验上线：[005 发布计划](005-mobile-release.md)。
 
 社区资料：[006 社区资料与反馈入口](006-community-standards.md)。
+
+公开环境文档：[007 链接修正与生产信息公开范围](007-public-environment-docs.md)。

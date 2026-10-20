@@ -1,6 +1,7 @@
 .cache/
 .runtime/
 test-output/
+.private/
 node_modules/
 
 # Local configuration and Python maintenance artifacts.

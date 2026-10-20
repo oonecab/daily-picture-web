@@ -30,7 +30,7 @@
 | 贡献、社区行为与漏洞报告 | [贡献指南](../CONTRIBUTING.md)、[行为准则](../CODE_OF_CONDUCT.md)、[安全政策](../SECURITY.md) |
 | 开源许可证与第三方范围 | [MIT License](../LICENSE)、[第三方说明](../THIRD_PARTY_NOTICES.md) |
 | 当前技术与架构 | [TECH](../TECH.md)、[Web 架构](architecture/web-app.md) |
-| 生产环境与发布 | [环境事实](environments.md)、[发布与回滚](deployment.md) |
+| 运行环境与自部署 | [环境事实与配置要求](environments.md)、[发布与回滚](deployment.md) |
 | 前期 REA 分析 | [研究导航](reverse-engineering/README.md)、[原生→Web 对应表](reverse-engineering/web-mapping.md) |
 | 数据来源与字段 | [Bing 契约](contracts/bing.md) |
 | 日期、缓存、重试、浏览器状态 | [规则目录](rules/README.md) |

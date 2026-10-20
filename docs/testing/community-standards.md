@@ -23,7 +23,7 @@
 
 ## GitHub 设置
 
-2026-10-19 已通过登录的仓库管理页面保存 About：简介为“一个轻量的 Bing 每日图片浏览器，支持最近十五日浏览、收藏、下载、沉浸式看图与离线缓存。”，网站为 `https://dailypicture.zzzping.top/`。原值均为空。
+2026-10-19 已通过登录的仓库管理页面保存 About：简介为“一个轻量的 Bing 每日图片浏览器，支持最近十五日浏览、收藏、下载、沉浸式看图与离线缓存。”，网站使用 [README](../../README.md) 中的公开访问入口。原值均为空。2026-10-20 按[问题 011](../../issues/011-public-environment-docs.md)改为引用入口，原验证结论保留。
 
 私密漏洞报告原为 Disabled，启用后页面显示 `Disable private vulnerability reporting` 和配置入口，确认已启用。安全政策的报告链接与该功能配套，未创建实际漏洞报告。
 

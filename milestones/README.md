@@ -21,3 +21,5 @@
 手机体验上线：[005 全屏与页脚修复发布](005-mobile-release.md)。
 
 社区资料：[006 GitHub 社区资料就绪](006-community-standards.md)。
+
+公开环境文档：[007 文档与运维信息分离](007-public-environment-docs.md)。
