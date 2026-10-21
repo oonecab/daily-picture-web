@@ -36,3 +36,5 @@
 - [1.2.0 历史壁纸发布验收](history-release.md)
 
 - [1.2.1 年月选择器验收](history-picker.md)
+
+- [1.3.0 双来源历史验收](dual-history.md)

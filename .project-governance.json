@@ -98,6 +98,7 @@
     "services": [
       "HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌",
       "HTTPS bing.npanuhin.me：中国区历史月索引与图片副本，只读且不需要令牌",
+      "HTTPS raw.githubusercontent.com：固定 zxyongyo/bing-daily-wallpaper 月度索引，只读且不需要令牌",
       "自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md"
     ],
     "ports": [

@@ -26,4 +26,6 @@ MIT 许可证不表示原应用名称、Bing、Microsoft 或其他第三方名�
 
 1.2.0 接入 [npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 的公开中国区月索引和图片副本，站点为 [bing.npanuhin.me](https://bing.npanuhin.me/)。感谢该项目维护历史归档。接口和字段来自该仓库 README；适配、缓存和界面代码由本项目独立编写，没有复制该项目源码或随源码捆绑图片。
 
-该仓库的软件许可证声明为 MIT；各图片及版权文字、说明仍归各自权利人。遵守上游关于合理下载量的说明，本程序按月请求元数据、按用户浏览请求图片，不预下载整个图库。页面历史入口、关于及图片详情保留归档来源，并显示原摄影版权。`.history/` 和自定义 HISTORY_DIR 是运行时索引，应独立保留并从源码发布包排除。
+该仓库的软件许可证声明为 MIT；各图片及版权文字、说明仍归各自权利人。遵守上游关于合理下载量的说明，本程序按月请求元数据、按用户浏览请求图片，不预下载整个图库。页面底部、关于及图片详情保留归档来源，并显示原摄影版权。`.history/` 和自定义 HISTORY_DIR 是运行时索引，应独立保留并从源码发布包排除。
+
+1.3.0 同时接入 [zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 的公开月度 JSON，用于补充 2018-09 起的历史索引、摄影版权与 Bing 图片链接。感谢 zxyongyo 维护该项目；其软件许可证为 [MIT，Copyright (c) 2023 zxyongyo](https://github.com/zxyongyo/bing-daily-wallpaper/blob/master/LICENSE)。本站独立实现数据适配，不复制该项目源码、不随源码分发其索引或图片。图片通过 Bing 获取，不能将该仓库视为原图备份，也不因链接带有 4K 参数而保证原生分辨率。两项目名称、用途与链接均展示在网站页脚和 README；摄影权利范围与上述 Bing 内容规则一致。

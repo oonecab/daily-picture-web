@@ -26,6 +26,7 @@ const state = {
   favorites: Array.isArray(savedFavorites) ? savedFavorites.filter(validImage).slice(0, 200) : [],
   fetchedAt: null, lastCheck: 0, stale: false, busy: false, request: null, generation: 0,
   heroGeneration: 0, slideshow: null, refreshTimer: null, toastTimer: null, installPrompt: null,
+  heroDimensions: null,
   fullscreenView: null,
   historyImages: [], historyError: null, historyCatalog: null, historyMonth: null, historyBusy: false, historyRequest: null, historyGeneration: 0,
 };
@@ -160,6 +161,7 @@ function renderSelection() {
   $('image-error').hidden = true;
   $('hero-image').hidden = true;
   state.heroGeneration++;
+  state.heroDimensions=null;
   for (const id of ['image-bottom', 'position']) $(id).hidden = !item;
   // Keep the exit control available until a native fullscreen exit completes.
   $('image-topbar').hidden = !item && !state.fullscreenView;
@@ -196,6 +198,8 @@ function renderSelection() {
   hero.onload = () => {
     if (generation !== state.heroGeneration) return;
     hero.hidden = false; $('loading-state').hidden = true; $('image-error').hidden = true;
+    state.heroDimensions={width:hero.naturalWidth,height:hero.naturalHeight};
+    historyDownloadSize();
   };
   hero.onerror = () => {
     if (generation !== state.heroGeneration) return;
@@ -335,11 +339,16 @@ function toggleFavorite() {
   else { favoriteButton(); renderStrip(); }
   if (saved) toast(exists ? '已从收藏中移除。' : '已收藏，把这片风景留在身边。');
 }
+function historyDownloadSize() {
+  const size=state.heroDimensions;
+  $('history-download-size').textContent=size?.width && size?.height ? `${size.width} × ${size.height} · 实际图片尺寸` : '获取可用的最高尺寸';
+}
 async function openDialog(id) {
   stopSlideshow();
   if (!await exitFullscreenView()) return;
   if(id==='download-dialog') {
     const history=selected()?.history === true;
+    historyDownloadSize();
     $('history-download-note').hidden=!history;
     $('download-description').textContent=history ? '保存这张历史影像到下载文件夹。' : '选择适合屏幕的尺寸，保存到下载文件夹。';
     $('download-note').textContent=history ? '请保留摄影版权与来源信息。下载后可在系统设置中设为壁纸。' : '尺寸以 Bing 实际返回为准。下载后可在系统设置中设为桌面或锁屏。';
@@ -503,10 +512,13 @@ $('details').addEventListener('click', () => {
   try { const url = new URL(item.sourceUrl); if (url.protocol === 'https:' && ['www.bing.com', 'cn.bing.com'].includes(url.hostname)) source = url.href; } catch { /* Safe default. */ }
   const archived=item.history === true;
   if(archived && item.snapshot) source='https://github.com/npanuhin/Bing-Wallpaper-Archive';
+  else if(archived && item.source==='zxyongyo') source='https://github.com/zxyongyo/bing-daily-wallpaper';
   $('detail-source').href = source;
-  $('detail-source').textContent = archived && item.snapshot ? '查看历史归档项目 ↗' : '在 Bing 了解更多 ↗';
+  $('detail-source').textContent = archived && (item.snapshot || item.source==='zxyongyo') ? '查看历史归档项目 ↗' : '在 Bing 了解更多 ↗';
   $('detail-history').hidden=!archived;
-  $('detail-history').textContent = archived ? `索引来源：${item.source === 'npanuhin' ? 'npanuhin/Bing-Wallpaper-Archive' : 'Bing 每日索引'}。图片${item.snapshot ? '由历史归档保存' : '从 Bing 获取'}；原始尺寸以实际返回为准。` : '';
+  const sourceNames={npanuhin:'npanuhin/Bing-Wallpaper-Archive',zxyongyo:'zxyongyo/bing-daily-wallpaper',bing:'Bing 每日索引'};
+  const sourceLabels=(Array.isArray(item.sources)?item.sources:[item.source]).map(key=>sourceNames[key]).filter(Boolean);
+  $('detail-history').textContent = archived ? `索引来源：${sourceLabels.join('、') || 'Bing 每日索引'}。图片${item.snapshot ? '优先读取归档副本，可回退到 Bing' : '从 Bing 获取'}；尺寸以实际返回为准。` : '';
   openDialog('details-dialog');
 });
 document.querySelectorAll('dialog').forEach((dialog) => {

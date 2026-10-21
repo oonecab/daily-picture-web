@@ -70,8 +70,26 @@ body.viewer-open{position:fixed;width:100%;overflow:hidden}
 @media(hover:hover){.history-date-picker select:hover{background:#eef2e8}}
 @media(prefers-reduced-motion:reduce){.history-date-picker,.history-date-picker select{transition:none}}
 @media(forced-colors:active){.history-date-picker{border-color:ButtonText;box-shadow:none}.history-date-divider{background:ButtonText}.history-calendar,.history-select-arrow{color:ButtonText}.history-date-picker select:focus-visible{outline-color:Highlight}}
-.history-source,.history-status{font-size:11px;line-height:1.9;margin:12px 0 0;color:#68735f}.history-source a{color:#435d38;text-underline-offset:3px;overflow-wrap:anywhere}
+.history-status{font-size:11px;line-height:1.9;margin:12px 0 0;color:#68735f}
 .history-status{color:#3f5937;min-height:21px}.history-controls[hidden]{display:none}
-@media(max-width:700px){.primary-nav{gap:18px}.history-controls{padding:16px}.history-picker{gap:12px}.history-picker>span{width:100%}.history-date-picker{width:272px}.history-source{font-size:10px}}
+@media(max-width:700px){.primary-nav{gap:18px}.history-controls{padding:16px}.history-picker{gap:12px}.history-picker>span{width:100%}.history-date-picker{width:272px}}
 .thumb-history.thumb-broken:before{content:"图片暂不可用"}
 .history-view #photo-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+/* A quiet colophon keeps source credits close to the photographs, at the end. */
+footer{display:block}
+.archive-credits{padding:24px 26px;background:#edf0e8;border:1px solid #dde3d5;border-radius:14px;letter-spacing:0}
+.archive-credits-intro{display:flex;align-items:center;gap:13px}
+.credits-mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid #ced8c6;border-radius:50%;color:#687c5e;flex-shrink:0}
+.credits-mark .icon{width:18px;height:18px}
+.archive-credits h2{margin:0 0 5px;color:#43573c;font-size:14px;font-weight:500;letter-spacing:.5px}
+.archive-credits-intro p{font-size:11px;color:#6d7965}
+.archive-credit-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:19px 0 16px}
+.archive-credit{display:flex;flex-direction:column;gap:7px;padding:14px 17px;border:1px solid #d9e0d1;border-radius:9px;background:#f6f7f1;min-width:0;transition:background .15s,border-color .15s}
+.archive-credit:hover{background:#fffef8;border-color:#aab99e}
+.credit-role{font-size:10px;color:#78846d;letter-spacing:.6px}
+.credit-name{font-size:12px;color:#43573c;line-height:1.7;overflow-wrap:anywhere}
+.credit-slash{color:#9da892}
+.credit-name .icon{width:11px;height:11px;margin-left:9px;vertical-align:-1px;opacity:.6}
+footer .credits-copyright{font-size:10px;color:#78836e;line-height:1.9}
+.footer-meta{display:flex;align-items:center;justify-content:space-between;gap:10px 20px;padding-top:16px}
+@media(max-width:700px){.archive-credits{padding:19px 17px}.archive-credit-links{grid-template-columns:1fr;gap:9px;margin:16px 0 14px}.archive-credits h2{font-size:13px}.archive-credits-intro{align-items:flex-start;gap:11px}.archive-credits-intro p{font-size:10px}.credit-name{font-size:11px}.archive-credit{padding:12px 14px}.footer-meta{align-items:flex-start;flex-direction:column;gap:7px}footer .credits-copyright{font-size:10px}}

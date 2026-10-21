@@ -15,7 +15,10 @@ const jpeg = (w = 1920, h = 1080) => Buffer.from([255,216,255,192,0,11,8,h>>8,h&
 async function setup(t, fetchImpl, extras = {}) {
   const dir = await mkdtemp(join(tmpdir(), 'daily-history-'));
   t.after(() => rm(dir, {recursive:true,force:true}));
-  return {dir,service:createBingService({cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl,...extras})};
+  // These original-provider regressions model the supplementary source as missing.
+  // Dual-source request/merge behavior is exercised in history-sources.test.mjs.
+  const fetchSources=(url,options)=>url.hostname==='raw.githubusercontent.com' ? Promise.resolve(new Response('',{status:404})) : fetchImpl(url,options);
+  return {dir,service:createBingService({cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl:fetchSources,...extras})};
 }
 test('history requests only the selected month, coalesces concurrent readers and preserves attribution', async t => {
   const calls=[];
@@ -28,7 +31,7 @@ test('history requests only the selected month, coalesces concurrent readers and
 });
 test('history validates calendar, range, dates and external image addresses before exposing records', async t => {
   const {service} = await setup(t, async()=>Response.json([{...row(),url:'https://example.org/secret.jpg'}]));
-  for (const month of ['2024-00','2024-13','../../x','2024-03','2027-01']) await assert.rejects(service.history.month(month), {status:400});
+  for (const month of ['2024-00','2024-13','../../x','2018-08','2027-01']) await assert.rejects(service.history.month(month), {status:400});
   for (const date of ['2024-02-30','2024-04-31','../../secret','2024-04-03?url=x']) await assert.rejects(service.history.image(date), {status:400});
   await assert.rejects(service.history.month('2024-04'),{status:502});
 });
@@ -60,7 +63,7 @@ test('old image checks reject HTML, tiny placeholders and broken JPEG, retain me
   await service.history.month('2024-04');
   await assert.rejects(service.history.image('2024-04-03'),{status:502});
   assert.equal((await service.history.month('2024-04')).images[0].availability.status,'unavailable');
-  await assert.rejects(service.history.image('2024-04-03')); assert.equal(calls,1);
+  await assert.rejects(service.history.image('2024-04-03')); assert.equal(calls,2); // Archive and same-picture UHD, then negative cache.
   time+=61000; bytes=jpeg();
   const result=await service.history.image('2024-04-03'); assert.deepEqual(result,bytes);
   const a=(await service.history.month('2024-04')).images[0].availability;
@@ -118,7 +121,7 @@ test('history HTTP routes validate queries, hide files, and return original-imag
   const {service}=await setup(t,async url=>String(url).endsWith('.json')?Response.json([row()]):new Response(jpeg(),{headers:{'Content-Type':'image/jpeg'}}));
   const server=createApp({service});server.listen(0,'127.0.0.1');await once(server,'listening');t.after(()=>{server.close();server.closeAllConnections();});
   const base=`http://127.0.0.1:${server.address().port}`;
-  const catalog=await (await fetch(`${base}/api/history`)).json();assert.ok(catalog.months.includes('2024-04'));assert.ok(!catalog.months.includes('2024-03'));
+  const catalog=await (await fetch(`${base}/api/history`)).json();assert.ok(catalog.months.includes('2018-09'));assert.ok(!catalog.months.includes('2018-08'));
   for(const path of ['/api/history?month=2024-13','/api/history?market=en-US','/api/history/image?date=2024-04-31'])assert.equal((await fetch(base+path)).status,400);
   assert.equal((await fetch(`${base}/.history/2024-04.json`)).status,404);
   assert.equal((await fetch(`${base}/api/history/image?date=2024-04-03`)).status,404);

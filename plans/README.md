@@ -36,3 +36,5 @@
 - [012 历史壁纸发布](012-history-release.md)
 
 - [013 年月选择器优化与发布](013-history-picker.md)
+
+- [014 双来源历史与发布](014-dual-history.md)
