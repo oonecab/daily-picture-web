@@ -9,7 +9,7 @@
 
 日常浏览仅读取本站 HISTORY_DIR 的月文件和图片。第三方适配只能由明确的 import 模式使用；导入工具一次性读取两来源，保留摄影版权、来源与原始 ID，独立保存到本站。按日期合并，每日一条、每月最多 31 条，降序展示；同日优先级 Bing > npanuhin > zxyongyo。ID 相同才合并贡献来源、图片备份标记与此前检查结果；ID 不同使用优先记录并重新检查，不借另一张图片填补失败。
 
-每项保留 ID、市场、日期、标题、说明、版权、来源链接、source/sources、snapshot、availability；没有 Bing ID 的备份使用 OHR.HistoryCN_YYYYMMDD，不把该标识送给 Bing。普通 API 不请求用户提供的 URL。导入刷新不会删除本地已有、源端暂时缺失的记录。单个历史来源月数据出现非法地址、日期或结构时拒绝该批；本地导入工具额外隔离同日尺寸链接指向不同 ID 的记录，保留其日期/ID/原因到 import-report.json，不猜测正确链接。其余有效记录继续导入。
+每项保留 ID、市场、日期、标题、说明、版权、来源链接、source/sources、snapshot、availability；没有 Bing ID 的备份使用 OHR.HistoryCN_YYYYMMDD，不把该标识送给 Bing。普通 API 不请求用户提供的 URL。导入刷新不会删除本地已有、源端暂时缺失的记录。同一 Bing 采集窗口若同日有多个图片 ID，月索引及 latest.json 均取适配器按发布时间降序排列后的第一项。单个历史来源月数据出现非法地址、日期或结构时拒绝该批；本地导入工具额外隔离同日尺寸链接指向不同 ID 的记录，保留其日期/ID/原因到 import-report.json，不猜测正确链接。其余有效记录继续导入。
 
 ## DP-HISTORY-STORE：采集、持久化与恢复
 

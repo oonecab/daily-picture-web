@@ -33,6 +33,16 @@ test('Actions collection preserves historical months, deduplicates overlap, and 
   await assert.rejects(collectIndex({output:dir,now,fetchImpl:async url=>url.searchParams.get('idx')==='0'?Response.json(page(0)):new Response('',{status:404})}));
   assert.deepEqual(await readFile(join(dir,'latest.json')),before);
 });
+test('daily collection keeps the newest publication when Bing returns two image IDs for the same China date',async t=>{
+  const dir=await directory(t),body={images:[
+    {urlbase:'/th?id=OHR.Older',startdate:'20261021',fullstartdate:'202610210100',title:'较早版本'},
+    {urlbase:'/th?id=OHR.Newer',startdate:'20261021',fullstartdate:'202610210200',title:'最新版本'},
+  ]};
+  await collectIndex({output:dir,now,fetchImpl:async()=>Response.json(body)});
+  const latest=JSON.parse(await readFile(join(dir,'latest.json'))),month=JSON.parse(await readFile(join(dir,'2026-10.json')));
+  assert.equal(latest.images.length,1);assert.equal(latest.images[0].id,'OHR.Newer');
+  assert.equal(month.images.length,1);assert.equal(month.images[0].id,'OHR.Newer');
+});
 test('daily sync reads only our repository and Bing, persists originals, and becomes offline on visitor requests',async t=>{
   const dir=await directory(t),calls=[];
   const app=service(dir,async url=>{calls.push(String(url));return url.hostname==='raw.githubusercontent.com'?Response.json(index()):new Response(jpeg(3840,2160),{headers:{'Content-Type':'image/jpeg'}});});
