@@ -63,4 +63,4 @@ python -X utf8 tools/verify_research.py
 
 1.4.2 新增跨批次/窗口外恢复与读取租约回归，使用真实回环慢连接核对预算持有、中断和超时释放；大图容量对照与发布结果见 [历史可靠性验收](history-reliability.md)。
 
-1.5.0 分层图库、直接加载/下载回退、统一磁盘预算和受控清理覆盖见 [hybrid-history.md](hybrid-history.md) 与 test/hybrid.test.mjs；真实浏览器、全量链接与备份证据分别记录。
+1.5.0 分层图库、直接加载/下载回退、统一磁盘预算和受控清理覆盖见 [hybrid-history.md](hybrid-history.md) 与 test/hybrid.test.mjs。2026-10-21 本机及 Linux 的 139 项测试全部通过；全量 2,962 张链接、8,886 个备份文件、公网浏览/下载、生产缩略图同步和精确清理后的媒体摘要均已验证。具体结果及浏览器、容量、定时工作流与回滚的证据边界见该验收记录。
