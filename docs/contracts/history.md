@@ -1,6 +1,6 @@
 # 中国区历史归档契约
 
-状态：CURRENT，1.4.0；2026-10-21。本项目独立编写适配代码，历史来源仅供一次性导入，日常网站读取自己的索引与图片。
+状态：CURRENT，1.5.0；2026-10-21。本项目独立编写适配代码，历史来源仅供一次性导入，日常网站读取自己的索引和缩略图，大图按需从 Bing 读取。
 
 ## 一次性历史来源
 
@@ -14,7 +14,7 @@ GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Co
 
 ## 自有每日数据
 
-工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。同一批 Bing 数据出现同日不同 ID 时，latest.json 与月文件都取发布时间较新的一项。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；只有后台同步读取分支并从 Bing 保存新图。
+工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。同一批 Bing 数据出现同日不同 ID 时，latest.json 与月文件都取发布时间较新的一项。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；后台同步读取分支并从 Bing 保存缩略图，预览与原图在查看/下载时读取。
 
 ## 本地 API
 
@@ -23,17 +23,20 @@ GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Co
 | GET /api/history | market、降序 months、latest、firstMonth:2018-09、sources 两历史来源信息、sync 同步状态。可选 market 只接受 zh-CN |
 | GET /api/history?month=2024-04 | 本站月索引及 imported、stale、warning；refresh=1 仍只重读本站文件，不触发第三方访问。未导入返回 images:[] / imported:false 和明确提示 |
 | GET /api/history/image?date=2024-04-03&id=OHR.…&size=thumb | 本站 JPEG 缩略图，宽度最多 640 |
-| 同一路由 size=preview | 本站 JPEG 预览，宽度最多 1920 |
-| 同一路由 size=original 或省略 size | 本站原图原始字节；download=1 附件名 Bing_CN_YYYY-MM-DD.jpg |
+| 同一路由 size=preview | 受保护 JPEG 预览或按需读取 Bing 预览，目标宽度 1920 |
+| 同一路由 size=original 或省略 size | 受保护原图或按需读取 Bing 原图；download=1 附件名 Bing_CN_YYYY-MM-DD.jpg |
+| 上述路由 direct=1 | 校验日期/当前 ID 后 302 到固定 Bing 地址；受保护图片仍返回本站 JPEG |
 
-图片 ID 可选但前端始终传入，必须匹配当前日期索引；不同 ID/尺寸用不同 URL，隔离缓存。省略 size 沿用旧客户端原图行为。图片以 date 与 ID 的摘要定位，接口不接收 URL/路径。损坏派生图可从本站原图重建；缺失原图返回 404，不在请求中下载上游。
+图片 ID 可选但前端始终传入，必须匹配当前日期索引；不同 ID/尺寸用不同 URL，隔离缓存。省略 size 沿用旧客户端原图行为。图片以 date 与 ID 的摘要定位，接口不接收 URL/路径。缩略图缺失时返回 404，由后台补齐；有受保护原图时可重建派生图。按需大图读取失败返回 502；容量不足返回 503。
 
-月条目保留 history:true、source:npanuhin|zxyongyo|bing、sources、可选 bingVariant、snapshot、availability。可用图片附 stored:true、width/height 与 checkedAt。providers 与 importedAt 为导入溯源字段，旧 providerFetchedAt 兼容解释为 npanuhin 时间；schemaVersion 保持 1。
+月条目保留 history:true、source:npanuhin|zxyongyo|bing、sources、可选 bingVariant、snapshot、availability。availability.thumbnailStored 表示缩略图已保存，stored 表示有本站原图；width/height 为最近校验的原图尺寸，可缺省。delivery.mode=bing|local，original/preview 记录检查时间对应的变体、尺寸、字节数与摘要；这些字段不是任意 URL。providers 与 importedAt 为导入溯源字段，旧 providerFetchedAt 兼容解释为 npanuhin 时间；schemaVersion 保持 1。
 
-sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集）、lastMediaSuccessAt（整库待补清零且索引新鲜）、checkedAt、source、repository、branch、saved、total、retryTotal、pending、failures、stale、error。saved/total 计入当前窗口和额外补齐的尝试，retryTotal 为额外补齐数量，pending 为月索引内全部尚未保存的 Bing 日图数；未尝试的待补也保持 error。未执行过的字段可能缺失，不能按零或成功解释。
+sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集）、lastMediaSuccessAt / lastThumbnailSuccessAt（缩略图待补清零且索引新鲜）、mediaPolicy:thumbnails、checkedAt、source、repository、branch、saved、total、retryTotal、pending、failures、stale、error。saved/total 计入当前窗口和额外补齐的尝试，retryTotal 为额外补齐数量，pending 为月索引内全部尚未保存缩略图的 Bing 日图数；未尝试的待补也保持 error。未执行过的字段可能缺失，不能按零或成功解释。
 
 1.4.2 Bing 月条目追加可选 observedAt，记录该条的采集时刻；先比较可用的 fullStartDate，再比较采集时刻。不同版本间不倒退，同 ID 保留媒体状态；旧文件仍可读取，schemaVersion 保持 1。字段与合并边界详见历史规则。
 
-元数据 no-store；成功图片 public,max-age=86400；错误 no-store。非法日期/尺寸/ID 为 400，未收录或未保存为 404，本地索引损坏为 500，图片处理/读取容量满或排队超过 5 秒为 503 + Retry-After:5。GET/HEAD、Host 白名单保持原约束，HEAD 无正文。图片发送超过 30 秒会中断连接，需重新请求；连接关闭释放共享缓冲区预算。导入/后台上游失败内部记为 502 并保留索引；浏览器可重新读取本站，不保证源端故障已经恢复。
+元数据和 302 no-store；成功图片 public,max-age=86400；错误 no-store。非法日期/尺寸/ID 为 400，未收录或缩略图未保存为 404，本地索引损坏为 500，图片处理/读取容量满或排队超过 5 秒为 503 + Retry-After:5。GET/HEAD、Host 白名单保持原约束，HEAD 无正文。图片发送超过 30 秒会中断连接，需重新请求；连接关闭释放共享缓冲区预算。导入/后台上游失败内部记为 502 并保留索引；浏览器可重新读取本站，不保证源端故障已经恢复。
 
 持久化、时间、采集、合并、可用性和加载规则统一见 [历史规则](../rules/history.md)，验证证据见 [自有图库验收](../testing/owned-history.md)。
+
+1.5.0 采集只持久化缩略图；客户端 direct=1 使用浏览器直连，CORS/网络失败可请求同一索引的本站代理。临时图片预算覆盖每日精选与历史代理，保护副本独立保留。迁移要求完整备份校验、全量链接报告、停止写入及精确清理，见[部署](../deployment.md)。

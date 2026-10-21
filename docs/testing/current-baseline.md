@@ -62,3 +62,5 @@ python -X utf8 tools/verify_research.py
 1.4.1 精简页脚，复用既有功能测试并实测桌面/窄屏、“关于”键盘与来源链接，见 [页脚验收](compact-footer.md)。
 
 1.4.2 新增跨批次/窗口外恢复与读取租约回归，使用真实回环慢连接核对预算持有、中断和超时释放；大图容量对照与发布结果见 [历史可靠性验收](history-reliability.md)。
+
+1.5.0 分层图库、直接加载/下载回退、统一磁盘预算和受控清理覆盖见 [hybrid-history.md](hybrid-history.md) 与 test/hybrid.test.mjs；真实浏览器、全量链接与备份证据分别记录。

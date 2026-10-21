@@ -8,8 +8,9 @@ const html = await readFile(new URL('../public/index.html', import.meta.url), 'u
 
 // Run the complete application against a small DOM boundary double. Layout and
 // browser top-layer behavior are checked separately in the real browser.
-function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false } = {}) {
+function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false, abortSignal = AbortSignal, bitmap } = {}) {
   const elements = new Map();
+  const downloaded=[];
   let document;
   class Element {
     constructor(tagName = 'div', id = '') {
@@ -45,6 +46,7 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
     get isConnected() { return Boolean(this.parentElement); }
     get lastElementChild() { return this.children.at(-1) || new Element(); }
     focus() { document.activeElement = this; }
+    click() { if(this.tagName==='A'&&this.download)downloaded.push(this.download);return this.emit('click'); }
     closest(selector) { return selector === '[hidden]' ? (this.hidden ? this : this.parentElement?.closest(selector)) : null; }
     querySelector(selector) {
       if (selector === '.close-dialog') { this.closeButton ||= new Element('button'); return this.closeButton; }
@@ -112,12 +114,13 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
     ...(observe ? {IntersectionObserver:class { constructor(callback){intersect=callback;} observe(img){observed.push(img);} unobserve(){} disconnect(){observed.length=0;} }} : {}),
     document, window, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
     localStorage: { getItem: (key) => stored.get(key), setItem: (key, value) => stored.set(key, value) },
-    URL, URLSearchParams, AbortController, AbortSignal, console,
+    URL, URLSearchParams, AbortController, AbortSignal:abortSignal, console,
+    ...(bitmap?{createImageBitmap:bitmap}:{}),
     fetch: fetchImpl || (archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {})),
     setTimeout: () => 1, clearTimeout() {}, setInterval: () => 1, clearInterval() {},
   });
   vm.runInContext(source, context);
-  return { get, gallery, document, window, background, serviceWorker, observed, intersect:entries=>intersect(entries), context, requests: () => requests };
+  return { get, gallery, document, window, background, serviceWorker, observed, downloaded, intersect:entries=>intersect(entries), context, requests: () => requests };
 }
 
 test('manual refresh reports cooldown instead of claiming a fresh upstream sync', async () => {
@@ -327,11 +330,11 @@ test('historical downloads use original metadata and never label a resized previ
     if(url.startsWith('/api/history?')) {const data=await response.json();data.images[0].availability={stored:true,width:3840,height:2160};return {ok:true,json:async()=>data};}
     return response;
   }});await b.get('history-tab').emit('click');
-  await b.get('download').emit('click');assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 原图实际尺寸');
+  await b.get('download').emit('click');assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 最近校验尺寸');
   const hero=b.get('hero-image');hero.naturalWidth=1920;hero.naturalHeight=1080;hero.onload();
-  assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 原图实际尺寸');
+  assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 最近校验尺寸');
   b.get('download-dialog').close();await b.get('next').emit('click');await b.get('download').emit('click');
-  assert.equal(b.get('history-download-size').textContent,'下载本站保存的原图');
+  assert.equal(b.get('history-download-size').textContent,'下载 Bing 提供的原图，尺寸以实际文件为准');
 });
 test('the supplementary history source is identified in picture details',async()=>{
   const b=browser({fetchImpl:url=>url.startsWith('/api/history?')?Promise.resolve({ok:true,json:async()=>({month:'2026-10',images:[{...historyRow('2026-10-01'),snapshot:false,source:'zxyongyo'}]})}):historyFetch(url)});
@@ -345,7 +348,44 @@ test('history thumbnails request small files while the selected image requests o
   await b.get('history-tab').emit('click');
   assert.ok(b.observed.every(i=>new URL(i.dataset.src,'http://localhost').searchParams.get('size')==='thumb'));
   assert.equal(new URL(b.get('hero-image').src,'http://localhost').searchParams.get('size'),'preview');
+  assert.equal(new URL(b.get('hero-image').src,'http://localhost').searchParams.get('direct'),'1');
   assert.ok(b.observed.every(i=>!i.src));
   b.intersect(b.observed.slice(0,4).map(target=>({isIntersecting:true,target})));
   assert.equal(b.observed.filter(i=>i.src).length,2);
+});
+
+test('history preview falls back once to the same indexed picture after direct loading fails',async()=>{
+ const b=browser({fetchImpl:historyFetch});await b.get('history-tab').emit('click');
+ const hero=b.get('hero-image'),direct=new URL(hero.src,'http://localhost');
+ hero.onerror();const fallback=new URL(hero.src,'http://localhost');
+ assert.equal(fallback.searchParams.has('direct'),false);assert.equal(fallback.searchParams.get('id'),direct.searchParams.get('id'));
+ assert.equal(fallback.searchParams.get('date'),direct.searchParams.get('date'));assert.equal(b.get('image-error').hidden,true);
+ hero.onerror();assert.equal(b.get('image-error').hidden,false);
+ await b.get('next').emit('click');assert.equal(new URL(hero.src,'http://localhost').searchParams.get('direct'),'1');
+});
+
+test('historical download reserves fallback time and saves the same indexed image after direct timeout',async()=>{
+  const calls=[],deadlines=[];
+  const b=browser({abortSignal:{timeout:ms=>{deadlines.push(ms);return new AbortController().signal;},any:AbortSignal.any},
+    fetchImpl:(url,options)=>{
+      if(!url.includes('/api/history/image'))return historyFetch(url);
+      calls.push({url,signal:options.signal});
+      if(url.includes('direct=1'))return Promise.reject(new DOMException('timed out','TimeoutError'));
+      return Promise.resolve(new Response(new Blob([new Uint8Array(200)],{type:'image/jpeg'})));
+    }});
+  await b.get('history-tab').emit('click');await vm.runInContext("download('original')",b.context);
+  assert.equal(calls.length,2);assert.match(calls[0].url,/direct=1/);assert.doesNotMatch(calls[1].url,/direct=1/);
+  assert.equal(calls[0].url.replace('&direct=1',''),calls[1].url);
+  assert.notEqual(calls[0].signal,calls[1].signal);assert.deepEqual(deadlines.slice(-2),[30000,10000]);
+  assert.deepEqual(b.downloaded,['Bing_CN_2026-10-01.jpg']);assert.match(b.get('toast').textContent,/已交给浏览器下载/);
+});
+
+test('historical download rejects a placeholder before falling back and closes both decoders',async()=>{
+  let decoded=0,closed=0;const calls=[];
+  const b=browser({bitmap:async()=>({width:++decoded===1?16:3840,height:2160,close(){closed++;}}),fetchImpl:url=>{
+    if(!url.includes('/api/history/image'))return historyFetch(url);
+    calls.push(url);return Promise.resolve(new Response(new Blob([new Uint8Array(200)],{type:'image/jpeg'})));
+  }});
+  await b.get('history-tab').emit('click');await vm.runInContext("download('original')",b.context);
+  assert.equal(calls.length,2);assert.equal(closed,2);assert.equal(b.downloaded.length,1);
 });

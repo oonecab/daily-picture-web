@@ -121,12 +121,12 @@
       "HISTORY_COLLECTOR"
     ],
     "services": [
-      "HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌",
+      "HTTPS www.bing.com / cn.bing.com：固定 Bing 归档和图片；浏览器直连历史大图，服务端按需读取与缩略图采集",
       "HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本",
       "HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库",
       "HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束",
       "GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支",
-      "自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md"
+      "自部署 Nginx HTTPS 反向代理与 systemd；图片代理关闭额外缓存、缓冲落盘，配置见 docs/environments.md"
     ],
     "ports": [
       "Node HTTP 默认 127.0.0.1:8787；CLI 数字参数优先于进程环境 PORT",

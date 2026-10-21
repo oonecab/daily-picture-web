@@ -33,10 +33,10 @@ const state = {
 const downloadUrls = new Set();
 function images() { return state.mode === 'favorites' ? state.favorites : state.mode === 'history' ? state.historyImages : state.images; }
 function selected() { return images()[state.index]; }
-function imageUrl(image, size = '1920x1080') {
+function imageUrl(image, size = '1920x1080', direct = true) {
   if(image.history === true && image.market === 'zh-CN') {
     const variant=size==='640x360'?'thumb':size==='original'?'original':'preview';
-    return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant})}`;
+    return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant,...(direct&&variant!=='thumb'?{direct:'1'}:{})})}`;
   }
   return `/api/image?${new URLSearchParams({id:image.id,size})}`;
 }
@@ -200,15 +200,19 @@ function renderSelection() {
   $('edition').lastElementChild.textContent = friendlyDate(item.date);
   const generation = state.heroGeneration;
   const hero = $('hero-image');
+  let fallback=false;
+  hero.crossOrigin='anonymous';
   hero.alt = `${item.title}：${item.description}`;
   hero.onload = () => {
     if (generation !== state.heroGeneration) return;
+    if(item.history&&hero.naturalWidth&&hero.naturalHeight&&(hero.naturalWidth<320||hero.naturalHeight<180)){hero.onerror();return;}
     hero.hidden = false; $('loading-state').hidden = true; $('image-error').hidden = true;
     state.heroDimensions={width:hero.naturalWidth,height:hero.naturalHeight};
     historyDownloadSize();
   };
   hero.onerror = () => {
     if (generation !== state.heroGeneration) return;
+    if(item.history&&!fallback){fallback=true;hero.src=imageUrl(item,'1920x1080',false);return;}
     $('loading-state').hidden = true; $('image-error').hidden = false;
   };
   hero.src = imageUrl(item);
@@ -347,7 +351,7 @@ function toggleFavorite() {
 }
 function historyDownloadSize() {
   const size=selected()?.availability;
-  $('history-download-size').textContent=size?.stored && size?.width && size?.height ? `${size.width} × ${size.height} · 原图实际尺寸` : '下载本站保存的原图';
+  $('history-download-size').textContent=size?.width && size?.height ? `${size.width} × ${size.height} · 最近校验尺寸` : '下载 Bing 提供的原图，尺寸以实际文件为准';
 }
 async function openDialog(id) {
   stopSlideshow();
@@ -466,9 +470,22 @@ async function download(size) {
   buttons.forEach((button) => { button.disabled = true; });
   toast('正在准备图片，请稍候…');
   try {
-    const response = await fetch(`${imageUrl(item, size)}&download=1`, { signal: AbortSignal.timeout(30000) });
-    if (!response.ok || !response.headers.get('Content-Type')?.startsWith('image/')) throw new Error('download');
-    const objectUrl = URL.createObjectURL(await response.blob());
+    const signal=AbortSignal.timeout(30000);
+    async function read(direct){
+      // Reserve time for the same-origin fallback when the browser cannot reach Bing.
+      const attempt=item.history&&direct?AbortSignal.any([signal,AbortSignal.timeout(10000)]):signal;
+      const response=await fetch(`${imageUrl(item,size,direct)}&download=1`,{signal:attempt});
+      if(!response.ok||!response.headers.get('Content-Type')?.startsWith('image/'))throw new Error('download');
+      const blob=await response.blob();
+      if(blob.size>20*1024*1024||blob.size<100)throw new Error('download');
+      if(item.history&&typeof createImageBitmap==='function'){
+        const bitmap=await createImageBitmap(blob);try{if(bitmap.width<320||bitmap.height<180)throw new Error('placeholder');}finally{bitmap.close();}
+      }
+      return blob;
+    }
+    let blob;
+    try{blob=await read(true);}catch(error){if(!item.history||signal.aborted)throw error;blob=await read(false);}
+    const objectUrl = URL.createObjectURL(blob);
     downloadUrls.add(objectUrl);
     const link = document.createElement('a'); link.href = objectUrl; link.download = item.history ? `Bing_CN_${item.date}.jpg` : `${item.id}_${size}.jpg`;
     document.body.append(link); link.click(); link.remove();

@@ -36,7 +36,7 @@ export function createApp({ service = defaultService(), imageReads = createImage
   return http.createServer(async (request, response) => {
     response.setHeader('X-Content-Type-Options', 'nosniff');
     response.setHeader('Referrer-Policy', 'no-referrer');
-    response.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
+    response.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data: https://www.bing.com https://cn.bing.com; connect-src 'self' https://www.bing.com https://cn.bing.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
     function send(status, body, type = 'application/json; charset=utf-8') {
       const data = Buffer.isBuffer(body) ? body : Buffer.from(type.startsWith('application/json') ? JSON.stringify(body) : body);
       response.writeHead(status, { 'Content-Type': type, 'Content-Length': data.length });
@@ -67,7 +67,7 @@ export function createApp({ service = defaultService(), imageReads = createImage
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.4.2' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.5.0' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');
@@ -78,6 +78,10 @@ export function createApp({ service = defaultService(), imageReads = createImage
       }
       if (url.pathname === '/api/history/image') {
         const date=url.searchParams.get('date'),id=url.searchParams.get('id'),size=url.searchParams.get('size') || 'original';
+        if(url.searchParams.get('direct')==='1'){
+          const location=await service.history.remoteImage(date,id,size);
+          if(location){response.writeHead(302,{'Location':location,'Cache-Control':'no-store'});response.end();return;}
+        }
         return await sendImage(JSON.stringify(['history',date,id,size]),()=>service.history.image(date,id,size),
           'public, max-age=86400',url.searchParams.get('download')==='1'?`Bing_CN_${date}.jpg`:null);
       }

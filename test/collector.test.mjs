@@ -43,7 +43,7 @@ test('daily collection keeps the newest publication when Bing returns two image 
   assert.equal(latest.images.length,1);assert.equal(latest.images[0].id,'OHR.Newer');
   assert.equal(month.images.length,1);assert.equal(month.images[0].id,'OHR.Newer');
 });
-test('daily sync reads only our repository and Bing, persists originals, and becomes offline on visitor requests',async t=>{
+test('daily sync persists thumbnails, keeps them offline, and fetches large images only on demand',async t=>{
   const dir=await directory(t),calls=[];
   const app=service(dir,async url=>{calls.push(String(url));return url.hostname==='raw.githubusercontent.com'?Response.json(index()):new Response(jpeg(3840,2160),{headers:{'Content-Type':'image/jpeg'}});});
   const [a,b]=await Promise.all([app.syncHistory(),app.syncHistory()]);assert.deepEqual(a,b);assert.equal(a.saved,1);
@@ -51,15 +51,17 @@ test('daily sync reads only our repository and Bing, persists originals, and bec
   assert.equal(calls.length,2);assert.match(calls[1],/^https:\/\/www.bing.com\/th/);
   await app.syncHistory();assert.equal(calls.length,3);
   const offline=service(dir,async()=>{throw new Error('offline');});
-  assert.equal((await offline.history.month('2026-10')).images[0].availability.stored,true);
+  assert.equal((await offline.history.month('2026-10')).images[0].availability.stored,false);
+  assert.equal((await offline.history.month('2026-10')).images[0].availability.thumbnailStored,true);
   assert.equal((await offline.history.catalog()).sync.source,'github-actions');
-  assert.deepEqual(await offline.history.image(row.date,row.id,'original'),jpeg(3840,2160));
-  const server=createApp({service:offline});server.listen(0,'127.0.0.1');await once(server,'listening');
+  assert.equal((await sharp(await offline.history.image(row.date,row.id,'thumb')).metadata()).width,640);
+  await assert.rejects(offline.history.image(row.date,row.id,'original'),{status:502});
+  const server=createApp({service:app});server.listen(0,'127.0.0.1');await once(server,'listening');
   t.after(()=>new Promise(resolve=>{server.closeAllConnections();server.close(resolve);}));
   const base=`http://127.0.0.1:${server.address().port}/api/history/image?date=${row.date}&id=${row.id}`;
   const thumb=await fetch(`${base}&size=thumb`),preview=await fetch(`${base}&size=preview`),download=await fetch(`${base}&size=original&download=1`);
   assert.equal((await sharp(Buffer.from(await thumb.arrayBuffer())).metadata()).width,640);
-  assert.equal((await sharp(Buffer.from(await preview.arrayBuffer())).metadata()).width,1920);
+  assert.equal(preview.status,200);assert.equal((await sharp(Buffer.from(await preview.arrayBuffer())).metadata()).width,3840);
   assert.match(download.headers.get('content-disposition'),/attachment; filename="Bing_CN_2026-10-21.jpg"/);
   assert.deepEqual(Buffer.from(await download.arrayBuffer()),jpeg(3840,2160));
   const head=await fetch(`${base}&size=thumb`,{method:'HEAD'});assert.equal(head.status,200);assert.equal(await head.text(),'');

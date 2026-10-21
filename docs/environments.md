@@ -10,12 +10,12 @@
 
 ## 服务
 
-- HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌
+- HTTPS www.bing.com / cn.bing.com：固定 Bing 归档和图片；浏览器直连历史大图，服务端按需读取与缩略图采集
 - HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本
 - HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库
 - HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束
 - GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支
-- 自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md
+- 自部署 Nginx HTTPS 反向代理与 systemd；图片代理关闭额外缓存、缓冲落盘，配置见 docs/environments.md
 
 ## 端口与端点
 
@@ -51,10 +51,18 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 
 1.3.1 原始文件入口出现传输异常时，可在同一请求预算内使用 GitHub 官方 API。增加只读出站域名，环境变量、端口与持久化目录不变。
 
-## 1.4.0 自有图库运行配置
+## 自有图库运行配置（当前 1.5.0）
 
 `HISTORY_REPOSITORY` 为 `owner/repository`，默认 `oonecab/daily-picture-web`；fork 后填写自己的仓库。只读取固定 `codex/wallpaper-data/latest.json`，不能设置任意 URL。`HISTORY_COLLECTOR=off` 关闭当前服务后台同步，适用于隔离验证；其他值或未设置时启用。不影响 GitHub Actions 定时任务。
 
-服务启动及每轮结束一小时后同步自己的数据分支，随后从 Bing 下载缺失图片，校验并生成缩略图/预览，写入 `HISTORY_DIR/media`。历史页面只读本地数据。Actions 每日计划北京时间 05:17 执行，允许手动触发；使用 GitHub 自动提供的 GITHUB_TOKEN，仅授予同仓库 contents:write，不需要 SSH 或额外 Secret。新 fork 需启用其 Actions 定时工作流；首次执行会创建数据分支。运行中断超过最近十五日窗口的缺口无法保证补回。
+服务启动及每轮结束一小时后同步自己的数据分支，随后从 Bing 获取缺失缩略图，校验并保存到 `HISTORY_DIR/media`。历史预览和原图按需从 Bing 加载。Actions 每日计划北京时间 05:17 执行，允许手动触发；使用 GitHub 自动提供的 GITHUB_TOKEN，仅授予同仓库 contents:write，不需要 SSH 或额外 Secret。新 fork 需启用其 Actions 定时工作流；首次执行会创建数据分支。运行中断超过最近十五日窗口的缺口无法保证补回。
 
-安装使用 `npm ci`，必须在目标 OS/架构安装 Sharp 原生组件，不能复制 macOS node_modules 到 Linux。图片永久存储需要持续关注磁盘余量并备份整个 HISTORY_DIR；不设自动淘汰。正式服务保持单进程；导入工具在隔离目录续跑，停服务后迁移并保留旧目录用于回滚。以上为当前事实，前述版本段落为迁移历史。
+安装使用 `npm ci`，必须在目标 OS/架构安装 Sharp 原生组件，不能复制 macOS node_modules 到 Linux。索引、缩略图及受保护副本需备份；临时图片统一按 256 MiB 预算淘汰。正式服务保持单进程；导入工具在隔离目录续跑，停服务后迁移并保留旧目录用于回滚。以上为当前事实，前述版本段落为迁移历史。
+
+## 1.5.0 浏览器直连与缓存边界
+
+应用 CSP 的 img-src/connect-src 允许 self、https://www.bing.com 与 https://cn.bing.com；不得配置任意远端图片代理。反向代理沿用应用 CSP，避免另加仅允许同源的策略阻断直连。应用保持 Host 白名单和回环监听。
+
+应用的 .cache/images 是全部服务端临时图片的统一存放处，上限 256 MiB。Nginx 图片代理设置 proxy_buffering off、proxy_max_temp_file_size 0，并关闭 proxy_cache，避免在应用预算以外产生缓存或慢客户端下载临时文件。索引和永久缩略图、受保护原图不计入临时缓存预算。
+
+环境变量名与端口保持不变；迁移工具必须在停止写入进程后运行，备份文件及逐图报告置于私有路径。

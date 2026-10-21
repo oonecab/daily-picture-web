@@ -33,7 +33,7 @@ test('an older Actions snapshot must not replace a newer already stored Bing pub
   assert.equal(result.error,null,'the collector must save the winning ID, not the obsolete snapshot ID');
 });
 
-test('a pending failed original must still retry after it leaves latest.json',async t=>{
+test('a pending failed thumbnail must still retry after it leaves latest.json',async t=>{
   const dir=await directory(t);let time=Date.parse('2026-10-21T04:00:00Z'),broken=true;
   const dates=()=>Array.from({length:15},(_,i)=>new Date(time-i*day).toISOString().slice(0,10));
   const rows=()=>dates().map(date=>row(date,`OHR.Day${date.replaceAll('-','')}`,`${date.replaceAll('-','')}0100`));
@@ -52,10 +52,10 @@ test('a pending failed original must still retry after it leaves latest.json',as
   const attemptsAfter=calls.filter(id=>id.startsWith(missingId)).length;
   const pending=(await service.history.month('2026-10')).images.find(i=>i.id===missingId);
   const sync=(await service.history.catalog()).sync;
-  let status=200;try{await service.history.image(pending.date,pending.id,'original');}catch(e){status=e.status;}
+  let status=200;try{await service.history.image(pending.date,pending.id,'thumb');}catch(e){status=e.status;}
   t.diagnostic(JSON.stringify({firstFailures:first.failures.length,secondSaved:second.saved,secondFailures:second.failures.length,
     pendingAvailability:pending.availability.status,pendingImageStatus:status,attemptsBefore,attemptsAfter,reportedError:sync.error}));
-  assert.equal(status,200,'the background retry must restore the original');
+  assert.equal(status,200,'the background retry must restore the thumbnail');
   assert.equal(sync.error,null);
   assert.ok(attemptsAfter>attemptsBefore,'the durable pending item must be retried even after leaving the recent window');
 });
@@ -116,7 +116,7 @@ test('durable retries cross months and restarts, bound each batch, rotate failur
   app=create();time+=3600000;
   const second=await app.syncHistory();
   assert.equal(second.retryTotal,15);assert.equal(second.pending,20);
-  for(const image of old)assert.ok(calls.includes(`${image.id}_UHD.jpg`),'all old dates eventually get an attempt');
+  for(const image of old)assert.ok(calls.includes(`${image.id}_640x360.jpg`),'all old dates eventually get an attempt');
   broken=false;time+=3600000;
   const partial=await app.syncHistory(),partialStatus=(await app.history.catalog()).sync;
   assert.equal(partial.failures.length,0);assert.equal(partial.pending,5);assert.ok(partial.error);
@@ -125,5 +125,5 @@ test('durable retries cross months and restarts, bound each batch, rotate failur
   const recovered=await app.syncHistory();
   assert.equal(recovered.pending,0);assert.equal(recovered.error,null);assert.equal(recovered.retryTotal,5);
   assert.ok((await app.history.catalog()).sync.lastMediaSuccessAt);
-  for(const image of old)assert.ok((await app.history.image(image.date,image.id)).length);
+  for(const image of old)assert.ok((await app.history.image(image.date,image.id,'thumb')).length);
 });

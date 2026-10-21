@@ -10,6 +10,8 @@
 | `lib/bing.mjs` | `createBingService`、市场/图片校验、日期转换、两批归档合并、上游与缓存 | `.cache/archives`、`.cache/images`、内存缓存与同键在途请求 | Node 内置模块、固定 HTTPS Bing 端点 |
 | `lib/history.mjs` | 本站月索引、导入适配、入库和同步状态 | HISTORY_DIR 月 JSON 与 sync.json | 注入上游、media、errors/jpeg |
 | `lib/media.mjs` | 完整解码、原图/640 缩略图/1920 预览、有界共享读盘与摘要检查 | HISTORY_DIR/media | Sharp、Node 文件系统、image-reads |
+| `lib/image-cache.mjs` | 每日精选与历史共用的 256 MiB 磁盘缓存、写前淘汰 | .cache/images | Node 文件系统 |
+| `lib/bing-images.mjs` | 固定 Bing 链接变体与有界完整解码 | 校验队列 | Sharp、jpeg/errors |
 | `lib/image-reads.mjs` | 以键共享读取结果，预算预留、等待/消费者限制、租约释放 | 实例内在途缓冲区和等待队列 | Node Buffer、errors；不读磁盘、不访问上游 |
 | `lib/owned-index.mjs` / `lib/github-file.mjs` | 自有数据分支同步、受限 GitHub JSON 读取 | 调用 history 写入 | 固定 GitHub/Bing 端点 |
 | `lib/jpeg.mjs` / `lib/errors.mjs` | JPEG 结构检查 / 公共 HTTP 错误 | 无持久状态 | Node Buffer / 无依赖 |
@@ -40,7 +42,7 @@ flowchart LR
 
 ## 依赖边界
 
-前端不直接读取磁盘或逆向资料；浏览器向同源 API 请求。服务端不能接受任意远端 URL、任意文件路径或调用原生应用。Bing 模块不依赖 DOM，测试可注入 `fetchImpl`、时间与独立缓存目录。图片真实解码仍由浏览器完成；服务的 JPEG 响应校验不是完整图片解码。
+前端不直接读取磁盘或逆向资料；浏览器从同源 API 取得索引、缩略图及受限重定向，历史大图可直接访问 CSP 允许的两个固定 Bing 主机。服务端不能接受任意远端 URL、任意文件路径或调用原生应用。Bing 模块不依赖 DOM，测试可注入 `fetchImpl`、时间与独立缓存目录。浏览器负责展示解码；历史缩略图入库与按需代理使用 Sharp 完整解码校验。
 
 静态资源使用明确白名单。新增文档、问题单和证据不会自动变成 HTTP 可访问文件。改监听地址、Host/CSP、路由、上游来源、持久化格式或系统集成时，按 [变更分流](../governance/CHANGE_TRIAGE.md) 完整评估安全和数据边界。
 
@@ -65,7 +67,7 @@ Bing 适配注入共享上游资源池给历史模块；近期中国区元数据
 1.3.1 为原始文件传输异常追加同仓库官方 API 读取，依旧使用同一共享资源池与总体超时；解码严格匹配的文件响应，不跟随 API 返回的 URL。
 
 
-## 1.4.0 当前数据链路
+## 1.4.0 全量图库阶段
 
 历史导入工具 → 两来源固定月文件/图片 → 本站 HISTORY_DIR。之后访客 history API 仅从该目录读取月索引和媒体；最近精选仍按既有 Bing 流程读取。旧版本段落中的访客请求触发上游、原图临时缓存语义至此被取代。
 
@@ -74,3 +76,11 @@ GitHub Actions → Bing 最近十五日 → 本仓库 codex/wallpaper-data 月�
 原图文件和媒体清单独立于临时 .cache，服务单进程写入；完整导入和迁移用隔离目录，旧目录保留回滚。运行依赖和环境变更见 TECH/环境事实；具体规则不在本页重复。
 
 1.4.2 月索引兼作持久待补账本，owned-index 在当前批次外有界补齐，历史合并按逐条版本时刻防止倒退。HTTP 和媒体读盘分别拥有 image-reads 池；HTTP 获取缓冲区租约后持有到 finish/close，断开及超时回收资源。两者边界和具体限值统一见历史规则；数据格式兼容追加，没有新依赖或环境配置。
+
+## 1.5.0 当前分层数据链路
+
+长期状态为月索引、缩略图和检查失败/无法确认/尺寸下降图片的原图副本。Actions 仍只保存 JSON；Node 每轮保存新缩略图，月索引继续保存跨窗口待补状态。完整原图库先备份到本机并核对摘要，明确可用的 Bing 原图及预览通过受控工具清理。
+
+历史大图请求带 direct=1：服务验证日期和当前 ID 后返回固定 Bing URL 的 302；受保护图片返回本站文件。浏览器使用匿名 CORS 取图，失败时改用同日期、ID、尺寸的本站按需代理。代理与每日精选共用 image-cache，所有写入前串行淘汰到 256 MiB 预算以内；反向代理禁止额外缓存/临时落盘。读盘、上游、解码与 HTTP 发送各自保留有界资源限制。
+
+详情见[历史规则](../rules/history.md)、[契约](../contracts/history.md)、[迁移](../deployment.md)及[验证](../testing/hybrid-history.md)。
