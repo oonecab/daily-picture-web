@@ -45,14 +45,9 @@ npm start
 
 点击“历史壁纸”，在年月选择栏中选择年份和月份；支持原生菜单和键盘操作。可查询范围从 **2018 年 9 月**起，首月最早收录为 **2018-09-11**。网站只读取本站保存的月索引及图片，缺档会明确提示。
 
-历史数据**一次性导入**自以下两个项目，来源声明长期保留在网站“关于每日一景”、图片详情和本文档：
+历史数据来源及版权说明见[第三方声明](THIRD_PARTY_NOTICES.md#中国区历史归档)。
 
-| 项目 | 初次导入的贡献 |
-| --- | --- |
-| [zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) | 2018-09 起的中国区历史索引、摄影署名和 Bing 图片链接 |
-| [npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) | 2024-04 起的中国区月索引、图片说明与可用图片备份 |
-
-历史浏览直接访问本站图库，不再访问这两个项目。列表只读取所选月份；缩略图进入视野后最多两张并行加载，实际宽度上限 640 像素；主图使用宽度上限 1920 像素的预览，点击下载才取原图。三者独立存储、独立缓存；小图不会放大。下载标注原图实际尺寸，链接中的 4K 字样不代表原生 4K 细节。
+历史浏览直接访问本站图库。列表只读取所选月份；缩略图进入视野后最多两张并行加载，实际宽度上限 640 像素；主图使用宽度上限 1920 像素的预览，点击下载才取原图。三者独立存储、独立缓存；小图不会放大。下载标注原图实际尺寸，链接中的 4K 字样不代表原生 4K 细节。
 
 新增索引由 [GitHub Actions](.github/workflows/collect-wallpapers.yml) 每日计划在北京时间 05:17 从 Bing 获取最近十五日并按日期合并（同日多版本取最新发布）到本仓库的 `codex/wallpaper-data` 分支，支持手动运行；调度可能延迟。网站服务启动及每轮结束一小时后同步该分支，并从 Bing 下载尚未保存的图片。历史文件存于 `HISTORY_DIR`，图库原图不参与临时缓存淘汰。重复执行不会重复下载已校验的图片；失败记录和待重试状态保留。超过 48 小时未更新会显示提示。
 
@@ -64,9 +59,9 @@ npm start
 node tools/import-history.mjs --history-dir /path/to/staging-history
 ```
 
-可选 `--from 2018-09 --through 2026-10` 限定月份、`--indexes-only` 仅导入索引、`--source-dir /path/to/bing-daily-wallpaper` 读取该仓库本地的月文件。导入断点在已保存的月文件和媒体清单中，重新执行即可复用；`import-report.json` 记录成功、失败与链接冲突隔离项。异常退出留下 `.import.lock` 时，确认该导入进程已经结束后再移除锁。恢复重试同样在隔离目录操作；保留旧目录后切换，详见 [部署](docs/deployment.md)。
+可选 `--from 2018-09 --through 2026-10` 限定月份、`--indexes-only` 仅导入索引、`--source-dir /path/to/history-source` 读取本地历史归档月文件，支持的来源见上述第三方声明。导入断点在已保存的月文件和媒体清单中，重新执行即可复用；`import-report.json` 记录成功、失败与链接冲突隔离项。异常退出留下 `.import.lock` 时，确认该导入进程已经结束后再移除锁。恢复重试同样在隔离目录操作；保留旧目录后切换，详见 [部署](docs/deployment.md)。
 
-图片入库检查 HTTP 类型、20 MiB 上限、JPEG 结构与完整解码、40 百万像素上限，并记录 SHA-256 和实际尺寸；无法获取的图片保留索引。校验不等于逐图人工语义核对。两项目软件许可证均为 MIT，摄影作品和说明仍归各自权利人；见 [第三方声明](THIRD_PARTY_NOTICES.md)。规则、接口和证据见 [历史规则](docs/rules/history.md)、[契约](docs/contracts/history.md)、[自有图库验收](docs/testing/owned-history.md)。
+图片入库检查 HTTP 类型、20 MiB 上限、JPEG 结构与完整解码、40 百万像素上限，并记录 SHA-256 和实际尺寸；无法获取的图片保留索引。校验不等于逐图人工语义核对。规则、接口和证据见 [历史规则](docs/rules/history.md)、[契约](docs/contracts/history.md)、[自有图库验收](docs/testing/owned-history.md)。
 
 ## 与原应用的对应和差异
 

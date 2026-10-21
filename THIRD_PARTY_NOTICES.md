@@ -24,11 +24,19 @@ MIT 许可证不表示原应用名称、Bing、Microsoft 或其他第三方名�
 
 ## 中国区历史归档
 
-1.2.0 接入 [npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 的公开中国区月索引和图片副本，站点为 [bing.npanuhin.me](https://bing.npanuhin.me/)。感谢该项目维护历史归档。接口和字段来自该仓库 README；适配、缓存和界面代码由本项目独立编写，没有复制该项目源码或随源码捆绑图片。
+1.4.0 将以下两份开放归档用于一次性历史数据导入，详细来源集中记录于本节，README 提供入口。网站“关于每日一景”及图片详情保留归档来源与原摄影版权。日常历史浏览读取本站保存的月索引和图片；新增索引由本站 GitHub Actions 从 Bing 采集，服务同步后保存原图、缩略图和预览。`.history/` 和自定义 `HISTORY_DIR` 中的索引与图片应独立保留、备份，并从源码发布包排除。
 
-该仓库的软件许可证声明为 MIT；各图片及版权文字、说明仍归各自权利人。遵守上游关于合理下载量的说明，1.4.0 经用户授权进行一次历史导入，后续日常浏览读取本站保存的图片与索引，不继续请求该归档；导入采用有限并发并记录来源。网站“关于每日一景”及图片详情保留归档来源，并显示原摄影版权。`.history/` 和自定义 HISTORY_DIR 是运行时索引，应独立保留并从源码发布包排除。
+### npanuhin/Bing-Wallpaper-Archive
 
-1.3.0 同时接入 [zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 的公开月度 JSON，用于补充 2018-09 起的历史索引、摄影版权与 Bing 图片链接。感谢 zxyongyo 维护该项目；其软件许可证为 [MIT，Copyright (c) 2023 zxyongyo](https://github.com/zxyongyo/bing-daily-wallpaper/blob/master/LICENSE)。本站独立实现数据适配，不复制该项目源码，历史索引导入后保留来源归属并可备份到本站独立数据分支，图片不进入源码发布包。图片通过 Bing 获取，不能将该仓库视为原图备份，也不因链接带有 4K 参数而保证原生分辨率。两项目名称、用途与链接均展示在网站“关于每日一景”和 README；摄影权利范围与上述 Bing 内容规则一致。
+1.2.0 接入 [npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 的公开中国区月索引和图片副本，站点为 [bing.npanuhin.me](https://bing.npanuhin.me/)。初次导入使用其 2024-04 起的中国区月索引、图片说明与可用图片备份。感谢该项目维护历史归档。接口和字段来自该仓库 README；适配、缓存和界面代码由本项目独立编写，没有复制该项目源码或随源码捆绑图片。
+
+该仓库的软件许可证声明为 MIT；各图片及版权文字、说明仍归各自权利人。初次导入遵守上游关于合理下载量的说明，采用有限并发并记录来源。
+
+### zxyongyo/bing-daily-wallpaper
+
+1.3.0 同时接入 [zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 的公开月度 JSON，用于补充 2018-09 起的中国区历史索引、摄影署名与 Bing 图片链接。感谢 zxyongyo 维护该项目；其软件许可证为 [MIT，Copyright (c) 2023 zxyongyo](https://github.com/zxyongyo/bing-daily-wallpaper/blob/master/LICENSE)。本站独立实现数据适配，不复制该项目源码，历史索引导入后保留来源归属并可备份到本站独立数据分支。导入工具的 `--source-dir` 选项支持读取该仓库的本地月文件。
+
+图片通过 Bing 获取，不能将该仓库视为原图备份，也不因链接带有 4K 参数而保证原生分辨率。摄影权利范围与上述 Bing 内容规则一致。
 
 ## 图片处理依赖
 
