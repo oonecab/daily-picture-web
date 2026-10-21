@@ -1,5 +1,7 @@
 # 013：年月选择器优化发布
 
-状态：进行中；关联 [问题 017](../issues/017-history-picker.md)、[计划 013](../plans/013-history-picker.md)、[验证](../docs/testing/history-picker.md)。
+状态：已完成；关联 [问题 017](../issues/017-history-picker.md)、[计划 013](../plans/013-history-picker.md)、[验证](../docs/testing/history-picker.md)。
 
 完成条件：年月选择栏与页面协调、焦点可见且不叠加粗外框、键盘和原生选择操作可用、窄屏无溢出、完整回归通过、1.2.1 公网资源与提交一致、持久索引与旧版本保留、验收和远端读回完成。
+
+交付：`90f9268` / `20261021T155720-90f9268`。macOS Chromium 的 Tab 导航和原生菜单选择、1280/390/320px 视觉检查、两端 75 项回归、资源和索引读回均通过；Safari、手机真机及方向键选项选择不在已验证范围，具体限制见验收记录。代码、测试与文档已联动。
