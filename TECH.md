@@ -78,6 +78,8 @@
 
 1.2.0 新增 `lib/history.mjs` 月度索引和采集、`lib/jpeg.mjs` 图片结构检查、`lib/errors.mjs` 公共 HTTP 错误。独立历史目录由 HISTORY_DIR 指定；新增固定只读归档服务，无第三方依赖或数据库。中国区按年/月浏览与资源边界见 [历史规则](docs/rules/history.md)、[契约](docs/contracts/history.md) 和 [验证](docs/testing/china-history.md)。
 
+1.2.1 调整历史年月选择栏的布局、焦点和窄屏样式，保留原生 select 与既有切换逻辑；验证见 [年月选择器验收](docs/testing/history-picker.md)。此次只升级应用外壳缓存，不改变运行栈、接口、环境或历史数据格式。
+
 ## 技术栈变更索引（只追加）
 
 “技术栈变更”至少包括语言、运行时、框架、核心库、构建工具、数据库或中间件的新增、移除、替换、主版本升级，以及兼容基线变化。普通补丁升级仅在影响行为、兼容性或安全基线时记录。

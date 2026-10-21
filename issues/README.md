@@ -38,3 +38,5 @@
 - [015 中国区历史壁纸](015-china-history.md)
 
 - [016 历史壁纸发布](016-history-release.md)
+
+- [017 年月选择器优化](017-history-picker.md)

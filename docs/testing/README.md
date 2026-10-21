@@ -34,3 +34,5 @@
 - [中国区历史浏览验证](china-history.md)
 
 - [1.2.0 历史壁纸发布验收](history-release.md)
+
+- [1.2.1 年月选择器验收](history-picker.md)

@@ -33,3 +33,5 @@
 - [011 中国区历史浏览](011-china-history.md)
 
 - [012 历史壁纸上线](012-history-release.md)
+
+- [013 年月选择器优化上线](013-history-picker.md)
