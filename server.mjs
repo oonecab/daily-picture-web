@@ -23,6 +23,13 @@ function defaultService() {
     historyRepository:process.env.HISTORY_REPOSITORY || undefined,
     onError:(context,error)=>console.warn(`[upstream ${context}] ${error.message}`)});
 }
+export function startSavedHistoryCollector(service,onWarning=error=>console.warn(`[history sync] ${error.message}`)) {
+  return startHistoryCollector({collect:async()=>{
+    const result=await service.syncHistory();
+    // A completed sync has already persisted its precise image/freshness diagnosis.
+    if(result.error)onWarning(new Error(result.error));
+  },onError:async error=>{await service.history.markSyncError();onWarning(error);}});
+}
 export function createApp({ service = defaultService() } = {}) {
   return http.createServer(async (request, response) => {
     response.setHeader('X-Content-Type-Options', 'nosniff');
@@ -100,10 +107,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   server.listen(port, '127.0.0.1', () => {
     const url = `http://localhost:${port}`;
     console.log(`Daily Picture is ready at ${url}`);
-    if(process.env.HISTORY_COLLECTOR!=='off')collector = startHistoryCollector({collect:async()=>{
-      const result = await service.syncHistory();
-      if(result.error) throw new Error(result.error);
-    },onError:async error=>{await service.history.markSyncError();console.warn(`[history sync] ${error.message}`);}});
+    if(process.env.HISTORY_COLLECTOR!=='off')collector = startSavedHistoryCollector(service);
     if (process.argv.includes('--open') && !process.argv.includes('--no-open')) {
       const command = process.platform === 'win32' ? 'explorer.exe' : process.platform === 'darwin' ? 'open' : 'xdg-open';
       const browser = spawn(command, [url], { stdio: 'ignore', windowsHide: true });

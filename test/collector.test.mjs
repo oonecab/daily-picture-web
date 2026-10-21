@@ -8,7 +8,7 @@ import sharp from 'sharp';
 import {collectIndex} from '../tools/collect-index.mjs';
 import {importHistory} from '../tools/import-history.mjs';
 import {createBingService} from '../lib/bing.mjs';
-import {createApp} from '../server.mjs';
+import {createApp,startSavedHistoryCollector} from '../server.mjs';
 import {jpeg} from './fixtures/jpeg.mjs';
 
 const clock=Date.parse('2026-10-21T04:00:00Z'),now=()=>clock;
@@ -77,6 +77,14 @@ test('stale Actions indexes remain useful but report their true collection time'
   const dir=await directory(t),value={...index(),fetchedAt:'2026-10-18T01:00:00Z'};
   const app=service(dir,async url=>url.hostname==='raw.githubusercontent.com'?Response.json(value):new Response(jpeg(),{headers:{'Content-Type':'image/jpeg'}}));
   assert.equal((await app.syncHistory()).stale,true);
+  assert.match((await app.history.catalog()).sync.error,/48/);
+});
+test('the service collector preserves the saved stale-index diagnosis instead of overwriting it with a generic failure',async t=>{
+  const dir=await directory(t),value={...index(),fetchedAt:'2026-10-18T01:00:00Z'},warnings=[];
+  const app=service(dir,async url=>url.hostname==='raw.githubusercontent.com'?Response.json(value):new Response(jpeg(),{headers:{'Content-Type':'image/jpeg'}}));
+  const collector=startSavedHistoryCollector(app,error=>warnings.push(error.message));
+  t.after(()=>collector.stop());await collector.done;
+  assert.equal(warnings.length,1);assert.match(warnings[0],/48/);
   assert.match((await app.history.catalog()).sync.error,/48/);
 });
 test('our GitHub API fallback validates the exact file and ignores its download URL',async t=>{
