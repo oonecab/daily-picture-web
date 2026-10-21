@@ -10,7 +10,7 @@ const html = await readFile(new URL('../public/index.html', import.meta.url), 'u
 // browser top-layer behavior are checked separately in the real browser.
 function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false, abortSignal = AbortSignal, bitmap } = {}) {
   const elements = new Map();
-  const downloaded=[];
+  const downloaded=[],timeouts=[];
   let document;
   class Element {
     constructor(tagName = 'div', id = '') {
@@ -117,10 +117,10 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
     URL, URLSearchParams, AbortController, AbortSignal:abortSignal, console,
     ...(bitmap?{createImageBitmap:bitmap}:{}),
     fetch: fetchImpl || (archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {})),
-    setTimeout: () => 1, clearTimeout() {}, setInterval: () => 1, clearInterval() {},
+    setTimeout: (callback,delay) => {const timer={callback,delay,cancelled:false};timeouts.push(timer);return timer;}, clearTimeout(timer) {if(timer)timer.cancelled=true;}, setInterval: () => 1, clearInterval() {},
   });
   vm.runInContext(source, context);
-  return { get, gallery, document, window, background, serviceWorker, observed, downloaded, intersect:entries=>intersect(entries), context, requests: () => requests };
+  return { get, gallery, document, window, background, serviceWorker, observed, downloaded, timeouts, intersect:entries=>intersect(entries), context, requests: () => requests };
 }
 
 test('manual refresh reports cooldown instead of claiming a fresh upstream sync', async () => {
@@ -388,4 +388,13 @@ test('historical download rejects a placeholder before falling back and closes b
   }});
   await b.get('history-tab').emit('click');await vm.runInContext("download('original')",b.context);
   assert.equal(calls.length,2);assert.equal(closed,2);assert.equal(b.downloaded.length,1);
+});
+
+test('slow direct previews fall back within twelve seconds and stale timers cannot switch a newer image',async()=>{
+  const b=browser({fetchImpl:historyFetch});await b.get('history-tab').emit('click');
+  const timer=()=>b.timeouts.filter(t=>t.delay===12000).at(-1),first=timer(),hero=b.get('hero-image');
+  assert.equal(first.cancelled,false);first.callback();assert.doesNotMatch(hero.src,/direct=1/);assert.equal(first.cancelled,true);
+  await b.get('next').emit('click');const next=hero.src,second=timer();first.callback();assert.equal(hero.src,next);
+  hero.naturalWidth=1920;hero.naturalHeight=1080;hero.onload();assert.equal(second.cancelled,true);
+  await b.get('next').emit('click');const third=timer();await b.window.emit('pagehide');assert.equal(third.cancelled,true);
 });

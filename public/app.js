@@ -26,7 +26,7 @@ const state = {
   favorites: Array.isArray(savedFavorites) ? savedFavorites.filter(validImage).slice(0, 200) : [],
   fetchedAt: null, lastCheck: 0, stale: false, busy: false, request: null, generation: 0,
   heroGeneration: 0, slideshow: null, refreshTimer: null, toastTimer: null, installPrompt: null,
-  heroDimensions: null,
+  heroDimensions: null, heroTimer: null,
   fullscreenView: null,
   historyImages: [], historyError: null, historyCatalog: null, historyMonth: null, historyBusy: false, historyRequest: null, historyGeneration: 0,
 };
@@ -167,6 +167,7 @@ function renderSelection() {
   $('image-error').hidden = true;
   $('hero-image').hidden = true;
   state.heroGeneration++;
+  clearTimeout(state.heroTimer); state.heroTimer=null;
   state.heroDimensions=null;
   for (const id of ['image-bottom', 'position']) $(id).hidden = !item;
   // Keep the exit control available until a native fullscreen exit completes.
@@ -205,6 +206,7 @@ function renderSelection() {
   hero.alt = `${item.title}：${item.description}`;
   hero.onload = () => {
     if (generation !== state.heroGeneration) return;
+    clearTimeout(state.heroTimer);
     if(item.history&&hero.naturalWidth&&hero.naturalHeight&&(hero.naturalWidth<320||hero.naturalHeight<180)){hero.onerror();return;}
     hero.hidden = false; $('loading-state').hidden = true; $('image-error').hidden = true;
     state.heroDimensions={width:hero.naturalWidth,height:hero.naturalHeight};
@@ -212,10 +214,12 @@ function renderSelection() {
   };
   hero.onerror = () => {
     if (generation !== state.heroGeneration) return;
+    clearTimeout(state.heroTimer);
     if(item.history&&!fallback){fallback=true;hero.src=imageUrl(item,'1920x1080',false);return;}
     $('loading-state').hidden = true; $('image-error').hidden = false;
   };
   hero.src = imageUrl(item);
+  if(item.history)state.heroTimer=setTimeout(hero.onerror,12000);
   if (hero.complete && hero.naturalWidth) hero.onload();
   renderStrip();
 }
@@ -585,7 +589,7 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('online', () => { status(); loadArchive(); });
 window.addEventListener('offline', status);
 window.addEventListener('pagehide', () => {
-  state.request?.abort(); state.historyRequest?.abort(); state.historyGeneration++; resetLazyImages(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer);
+  state.request?.abort(); state.historyRequest?.abort(); state.historyGeneration++; resetLazyImages(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer); clearTimeout(state.heroTimer);
   for (const url of downloadUrls) URL.revokeObjectURL(url);
   downloadUrls.clear();
 });
