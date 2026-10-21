@@ -40,7 +40,7 @@ export function createApp({ service = defaultService() } = {}) {
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.3.0' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.3.1' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');

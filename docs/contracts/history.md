@@ -1,6 +1,6 @@
 # 中国区历史归档契约
 
-状态：CURRENT，1.3.0；2026-10-21。本项目独立编写适配代码，消费公开归档数据，没有复制上游源码。
+状态：CURRENT，1.3.1；2026-10-21。本项目独立编写适配代码，消费公开归档数据，没有复制上游源码。
 
 ## 外部来源
 
@@ -19,6 +19,8 @@
 - Bing 链接只接受 HTTPS、bing.com / www.bing.com / cn.bing.com、`/th`、无端口/用户信息、唯一 id 参数。提取规范 OHR ID 与 UHD / 1920x1080 变体后由本站构造固定请求，不保存/代理任意 URL 或参数。
 - 不从 URL 的市场后缀反推发布日期或重写源日期；旧记录可能含其他市场 ID，按其中国区历史集合展示。月内唯一真实日期、最多 31 条及字符串约束与原来源一致。
 - 原图可在同 ID 上依次使用归档副本、Bing UHD、记录的 1920x1080 文件加 3840×2160 请求参数；标记 4K 不等于原生 4K，显示实际解码尺寸。
+
+1.3.1 增加传输故障备用入口 `https://api.github.com/repos/zxyongyo/bing-daily-wallpaper/contents/archives/YYYY/YYYY-MM/YYYY-MM.json?ref=master`。只解码 type=file、encoding=base64、path 精确匹配、size 等于解码长度的响应；忽略 download_url，不跟随任意链接。providers 内可选 transport 为 archive / raw / github-api，便于诊断，不改变条目来源归属。两个入口总预算 20 秒，原始入口最多 8 秒。API 不使用令牌，受公开访问限额约束。
 
 ## 本地 API
 

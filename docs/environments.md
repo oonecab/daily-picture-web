@@ -11,6 +11,7 @@
 - HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌
 - HTTPS bing.npanuhin.me：中国区历史月索引与图片副本，只读且不需要令牌
 - HTTPS raw.githubusercontent.com：固定 zxyongyo/bing-daily-wallpaper 月度索引，只读且不需要令牌
+- HTTPS api.github.com：同一历史仓库月文件的官方 API 备用读取，无令牌且受公开访问限额约束
 - 自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md
 
 ## 端口与端点
@@ -44,3 +45,5 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 1.2.0：服务运行时启动即采集中国区每日索引，此后每轮结束一小时再采集；不依赖浏览器打开，不另建系统定时任务。停止进程则停止采集。历史目录不得置于版本发布目录内后随旧版本清理；不将运行时索引或图片提交到源码仓库。
 
 1.3.0 增加上述 GitHub 原始文件域名的出站只读访问；环境变量、端口与单进程持久化约束不变。schemaVersion 1 的历史文件可直接沿用，逐来源新鲜度是可选新增字段。
+
+1.3.1 原始文件入口出现传输异常时，可在同一请求预算内使用 GitHub 官方 API。增加只读出站域名，环境变量、端口与持久化目录不变。

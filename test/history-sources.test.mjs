@@ -91,3 +91,25 @@ test('a new daily ID cannot inherit the previous supplementary download variant'
   await service.history.ingest({images:[{id:'OHR.DailyReplacement',date:'2018-09-11',market:'zh-CN',title:'每日记录'}]});
   const image=(await service.history.month('2018-09')).images[0];assert.equal(image.source,'bing');assert.equal(image.bingVariant,undefined);assert.deepEqual(image.sources,['bing']);
 });
+test('a raw GitHub connection failure falls back to the same repository file through the official API',async t=>{
+  const calls=[];const bytes=Buffer.from(JSON.stringify([oldRow()]));
+  const {service}=await setup(t,async url=>{
+    calls.push(String(url));if(url.hostname==='raw.githubusercontent.com')throw new TypeError('connection reset');
+    return Response.json({type:'file',encoding:'base64',path:'archives/2018/2018-09/2018-09.json',size:bytes.length,content:bytes.toString('base64')});
+  });
+  const data=await service.history.month('2018-09');assert.equal(data.images.length,1);assert.equal(data.stale,false);
+  assert.equal(calls.at(-1),'https://api.github.com/repos/zxyongyo/bing-daily-wallpaper/contents/archives/2018/2018-09/2018-09.json?ref=master');
+  assert.equal(data.providers.zxyongyo.transport,'github-api');assert.equal(calls.length,3);
+});
+test('the GitHub API fallback rejects mismatched file envelopes',async t=>{
+  const bytes=Buffer.from(JSON.stringify([oldRow()]));const calls=[];
+  const {service}=await setup(t,async url=>{
+    calls.push(url.hostname);if(url.hostname==='raw.githubusercontent.com')throw new TypeError('connection reset');
+    return Response.json({type:'file',encoding:'base64',path:'other.json',size:bytes.length,content:bytes.toString('base64'),download_url:'https://evil.example/image'});
+  });
+  await assert.rejects(service.history.month('2018-09'),{status:502});assert.ok(calls.includes('api.github.com'));assert.ok(!calls.includes('evil.example'));
+});
+test('a failed uncached month does not claim that saved records are being shown',async t=>{
+  const {service}=await setup(t,async()=>new Response('',{status:503}));
+  await assert.rejects(service.history.month('2018-09'),error=>error.status===502 && !error.message.includes('正在显示'));
+});
