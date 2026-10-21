@@ -58,3 +58,5 @@ python -X utf8 tools/verify_research.py
 1.2.0 发布复查为 75 项通过；服务器、真实浏览器、下载与索引持久化证据见 [发布验收](history-release.md)。
 
 1.4.0 自有图库增加 Sharp 真实解码夹具、三尺寸 HTTP/下载、离线重启、Actions 采集幂等、部分失败恢复和一次性导入隔离测试；当前证据见 [自有图库验收](owned-history.md)。启动/测试前先 npm ci。
+
+1.4.1 精简页脚，复用既有功能测试并实测桌面/窄屏、“关于”键盘与来源链接，见 [页脚验收](compact-footer.md)。
