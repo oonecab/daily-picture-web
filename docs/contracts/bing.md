@@ -37,3 +37,7 @@
 ## 1.2.0 每日索引联动
 
 成功的中国区近期归档额外合并到独立历史目录，失败通过 historyWarning 提示，不影响精选图片响应。新增归档源和 API 的权威契约为 [history.md](history.md)，既有 Bing 端点/字段/尺寸不变。
+
+## 1.4.0 每日采集
+
+同一 Bing 适配也供 GitHub Actions 的 tools/collect-index.mjs 使用：两批完整校验后输出 latest.json 及累积月份文件，失败不提交数据分支。网页历史读取和后台自有图库保存见 [历史契约](history.md)，近期端点、市场与参数不变。本次用户已授权初次历史导入、自有维护与 Actions 每日采集；历史版本的授权表不替代当前会话范围。

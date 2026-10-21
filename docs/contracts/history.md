@@ -1,39 +1,37 @@
 # 中国区历史归档契约
 
-状态：CURRENT，1.3.1；2026-10-21。本项目独立编写适配代码，消费公开归档数据，没有复制上游源码。
+状态：CURRENT，1.4.0；2026-10-21。本项目独立编写适配代码，历史来源仅供一次性导入，日常网站读取自己的索引与图片。
 
-## 外部来源
+## 一次性历史来源
 
-项目：[npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive)，接口说明以其 README 为准；网站：[Bing Wallpaper Archive](https://bing.npanuhin.me/)。项目仓库声明 MIT；摄影作品、版权和说明不因仓库许可证转为本项目的 MIT 内容。见 [第三方声明](../../THIRD_PARTY_NOTICES.md)。上游声明可能变化，以下是当前消费约定，不是 SLA。
+[npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 提供中国区月 JSON `https://bing.npanuhin.me/CN-zh.YYYY.MM.json` 与图片副本 `https://bing.npanuhin.me/CN/zh/YYYY-MM-DD.jpg`；[zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 提供月 JSON `https://raw.githubusercontent.com/zxyongyo/bing-daily-wallpaper/master/archives/YYYY/YYYY-MM/YYYY-MM.json`。两个项目软件为 MIT，摄影作品不因索引导入成为本站 MIT 内容；见 [第三方声明](../../THIRD_PARTY_NOTICES.md)。
 
-- 月度索引：固定 `https://bing.npanuhin.me/CN-zh.YYYY.MM.json`，数组，日期升序；本项目规范化后降序。
-- 图片副本：固定 `https://bing.npanuhin.me/CN/zh/YYYY-MM-DD.jpg`。
-- 上游 404 表示记录或图片不存在。只按需取月索引和用户浏览的图片，不下载完整图库。
-- `date` 原样保留；`caption` 优先作为标题，回退 `title`；`description` 回退 `title`；`copyright` 保留为版权/署名；`url` 必须精确匹配固定图片路径。`bing_url` 仅用于抽取合法 OHR ID，允许指定 Bing HTTPS 主机的 `/th`，不直接代理该地址。
-- 字符串上限：标题 300 字符、说明 5000 字符、版权 1000 字符。单月非数组、超过 31 项、重复/无效日期、跨月或任意来源 URL 均拒绝整次刷新。
-- 上游文档提醒旧 Bing 链接可能返回占位图，因此优先读取其保存副本；不将 HTTP 200 当作有效图片证明。
+npanuhin 消费 date、caption/title、description、copyright、url、bing_url；url 必须精确匹配固定图片路径。zxyongyo 消费 date、title、copyright、url_4k（否则 url_1080），其他尺寸若提供必须同一 ID；导入工具把冲突记录隔离到报告，不猜测 URL。标题上限 300、归档说明 5000、版权 1000 字符；每月最多 31 条唯一真实日期。上游日期不做额外时区平移，旧链接可能包含其他市场 ID。
 
-补充项目：[zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper)，MIT，Copyright (c) 2023 zxyongyo。读取固定 `https://raw.githubusercontent.com/zxyongyo/bing-daily-wallpaper/master/archives/YYYY/YYYY-MM/YYYY-MM.json`，不读取整库 map.json。
+Bing 图片引用仅接受 HTTPS、bing.com/www.bing.com/cn.bing.com、路径 /th、无端口或用户信息、唯一 id 参数和合法 OHR 标识。只提取 ID 与 UHD / 1920x1080 变体，再构造固定请求，不代理任意地址。导入同图可依次使用备份、UHD、记录的 1920x1080 文件加 3840×2160 参数；不代表原生 4K。
 
-- 消费 `date`、`title`、`copyright` 和 `url_4k`（缺失时 url_1080），其余图片 URL 若有也须属于同一 ID。该项目提供链接，不为本站提供图片备份。
-- Bing 链接只接受 HTTPS、bing.com / www.bing.com / cn.bing.com、`/th`、无端口/用户信息、唯一 id 参数。提取规范 OHR ID 与 UHD / 1920x1080 变体后由本站构造固定请求，不保存/代理任意 URL 或参数。
-- 不从 URL 的市场后缀反推发布日期或重写源日期；旧记录可能含其他市场 ID，按其中国区历史集合展示。月内唯一真实日期、最多 31 条及字符串约束与原来源一致。
-- 原图可在同 ID 上依次使用归档副本、Bing UHD、记录的 1920x1080 文件加 3840×2160 请求参数；标记 4K 不等于原生 4K，显示实际解码尺寸。
+GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Contents API，总预算 20 秒；404、非法数据、资源队列满不回退。API 只解码 type=file、encoding=base64、精确 path、有效 size 且解码字节数匹配的响应；不跟随 download_url。无令牌且受公开限额约束。`--source-dir` 可读取事先取得的仓库月文件，不执行源仓库脚本。
 
-1.3.1 增加传输故障备用入口 `https://api.github.com/repos/zxyongyo/bing-daily-wallpaper/contents/archives/YYYY/YYYY-MM/YYYY-MM.json?ref=master`。只解码 type=file、encoding=base64、path 精确匹配、size 等于解码长度的响应；忽略 download_url，不跟随任意链接。providers 内可选 transport 为 archive / raw / github-api，便于诊断，不改变条目来源归属。两个入口总预算 20 秒，原始入口最多 8 秒。API 不使用令牌，受公开访问限额约束。
+## 自有每日数据
+
+工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；只有后台同步读取分支并从 Bing 保存新图。
 
 ## 本地 API
 
 | 请求 | 返回 |
 | --- | --- |
-| `GET /api/history` | `market`、降序 `months`、`latest`、`firstMonth:2018-09`、`sources` 两来源信息及 `sync.lastSuccessAt/error`。可选 `market` 只接受 zh-CN |
-| `GET /api/history?month=2024-04` | schemaVersion=1、month、market、images、providerFetchedAt、providerMissing、providers、source、sources、stale、warning；`refresh=1` 绕过 TTL，仍受 60 秒冷却 |
-| `GET /api/history/image?date=2024-04-03` | 已有索引对应的原始 JPEG；可选 `id` 必须匹配当前记录，前端用它隔离图片更新后的缓存；`download=1` 返回 `Bing_CN_YYYY-MM-DD.jpg` 附件名 |
+| GET /api/history | market、降序 months、latest、firstMonth:2018-09、sources 两历史来源信息、sync 同步状态。可选 market 只接受 zh-CN |
+| GET /api/history?month=2024-04 | 本站月索引及 imported、stale、warning；refresh=1 仍只重读本站文件，不触发第三方访问。未导入返回 images:[] / imported:false 和明确提示 |
+| GET /api/history/image?date=2024-04-03&id=OHR.…&size=thumb | 本站 JPEG 缩略图，宽度最多 640 |
+| 同一路由 size=preview | 本站 JPEG 预览，宽度最多 1920 |
+| 同一路由 size=original 或省略 size | 本站原图原始字节；download=1 附件名 Bing_CN_YYYY-MM-DD.jpg |
 
-`providers` 按来源记录 fetchedAt/missing；providerMissing 仅在所有适用来源均明确缺档时为 true。兼容保留 source 为原 npanuhin 描述，完整来源请读 sources。旧文件的 providerFetchedAt 只代表 npanuhin，读取后转为可选 providers 字段；schemaVersion 保持 1。
+图片 ID 可选但前端始终传入，必须匹配当前日期索引；不同 ID/尺寸用不同 URL，隔离缓存。省略 size 沿用旧客户端原图行为。图片以 date 与 ID 的摘要定位，接口不接收 URL/路径。损坏派生图可从本站原图重建；缺失原图返回 404，不在请求中下载上游。
 
-月度条目兼容现有收藏字段，附加 `history:true`、`source:npanuhin|zxyongyo|bing`、`sources`（同 ID 的贡献来源）、可选 `bingVariant`、`snapshot:boolean`、`availability`。图片参数不接收 URL 或路径；原图接口不提供尺寸转换。元数据 `no-store`，图片 `public,max-age=86400`；错误 `no-store`。
+月条目保留 history:true、source:npanuhin|zxyongyo|bing、sources、可选 bingVariant、snapshot、availability。可用图片附 stored:true、width/height 与 checkedAt。providers 与 importedAt 为导入溯源字段，旧 providerFetchedAt 兼容解释为 npanuhin 时间；schemaVersion 保持 1。
 
-非法输入 400，未收录图片日期 404，损坏的本地历史文件 500，无可回退索引或无有效图片 502，上游队列满 503 + Retry-After。GET/HEAD 继续受 Host 和方法白名单约束，HEAD 不返回正文。客户端断开不取消服务已开始的共享上游请求，但上游预算保持有界。
+sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集）、lastMediaSuccessAt（全部新图保存）、checkedAt、source、repository、branch、saved、total、failures、stale、error。未执行过的字段可能缺失，不能按零或成功解释。
 
-持久化、采集、合并、失败和加载规则的唯一权威来源为 [历史规则](../rules/history.md)。本次真实读取和浏览器证据见 [双来源验证](../testing/dual-history.md)。
+元数据 no-store；成功图片 public,max-age=86400；错误 no-store。非法日期/尺寸/ID 为 400，未收录或未保存为 404，本地文件损坏为 500，图片处理容量满为 503 + Retry-After。GET/HEAD、Host 白名单保持原约束，HEAD 无正文。导入/后台上游失败内部记为 502 并保留索引；浏览器可重新读取本站，不保证源端故障已经恢复。
+
+持久化、时间、采集、合并、可用性和加载规则统一见 [历史规则](../rules/history.md)，验证证据见 [自有图库验收](../testing/owned-history.md)。

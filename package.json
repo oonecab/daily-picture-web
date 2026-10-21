@@ -1,6 +1,6 @@
 {
   "name": "daily-picture-web",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -11,6 +11,9 @@
   "scripts": {
     "start": "node server.mjs",
     "test": "node --test test/*.test.mjs",
-    "check": "node --check server.mjs && node --check lib/bing.mjs && node --check lib/history.mjs && node --check lib/jpeg.mjs && node --check lib/errors.mjs && node --check public/app.js && node --check public/sw.js"
+    "check": "node tools/check-syntax.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
   }
 }

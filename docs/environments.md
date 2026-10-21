@@ -5,13 +5,16 @@
 
 - PORT
 - HISTORY_DIR
+- HISTORY_REPOSITORY
+- HISTORY_COLLECTOR
 
 ## 服务
 
 - HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌
-- HTTPS bing.npanuhin.me：中国区历史月索引与图片副本，只读且不需要令牌
-- HTTPS raw.githubusercontent.com：固定 zxyongyo/bing-daily-wallpaper 月度索引，只读且不需要令牌
-- HTTPS api.github.com：同一历史仓库月文件的官方 API 备用读取，无令牌且受公开访问限额约束
+- HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本
+- HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库
+- HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束
+- GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支
 - 自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md
 
 ## 端口与端点
@@ -47,3 +50,11 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 1.3.0 增加上述 GitHub 原始文件域名的出站只读访问；环境变量、端口与单进程持久化约束不变。schemaVersion 1 的历史文件可直接沿用，逐来源新鲜度是可选新增字段。
 
 1.3.1 原始文件入口出现传输异常时，可在同一请求预算内使用 GitHub 官方 API。增加只读出站域名，环境变量、端口与持久化目录不变。
+
+## 1.4.0 自有图库运行配置
+
+`HISTORY_REPOSITORY` 为 `owner/repository`，默认 `oonecab/daily-picture-web`；fork 后填写自己的仓库。只读取固定 `codex/wallpaper-data/latest.json`，不能设置任意 URL。`HISTORY_COLLECTOR=off` 关闭当前服务后台同步，适用于隔离验证；其他值或未设置时启用。不影响 GitHub Actions 定时任务。
+
+服务启动及每轮结束一小时后同步自己的数据分支，随后从 Bing 下载缺失图片，校验并生成缩略图/预览，写入 `HISTORY_DIR/media`。历史页面只读本地数据。Actions 每日计划北京时间 05:17 执行，允许手动触发；使用 GitHub 自动提供的 GITHUB_TOKEN，仅授予同仓库 contents:write，不需要 SSH 或额外 Secret。新 fork 需启用其 Actions 定时工作流；首次执行会创建数据分支。运行中断超过最近十五日窗口的缺口无法保证补回。
+
+安装使用 `npm ci`，必须在目标 OS/架构安装 Sharp 原生组件，不能复制 macOS node_modules 到 Linux。图片永久存储需要持续关注磁盘余量并备份整个 HISTORY_DIR；不设自动淘汰。正式服务保持单进程；导入工具在隔离目录续跑，停服务后迁移并保留旧目录用于回滚。以上为当前事实，前述版本段落为迁移历史。

@@ -4,6 +4,7 @@ import { mkdtemp, rm, mkdir, writeFile, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createBingService } from '../lib/bing.mjs';
+import { jpeg } from './fixtures/jpeg.mjs';
 
 const clock=Date.parse('2026-10-21T04:00:00Z');
 const oldRow=(date='2018-09-11',id='OHR.Old_EN-AU123')=>({date,title:'旧日风景',copyright:'© Photographer',
@@ -12,10 +13,9 @@ const oldRow=(date='2018-09-11',id='OHR.Old_EN-AU123')=>({date,title:'旧日风�
   url_preview:`https://cn.bing.com/th?id=${id}_1920x1080.jpg&w=480&h=270`});
 const archiveRow=(date='2024-04-03',id='OHR.Same')=>({date,title:'归档说明',copyright:'© Photographer',
   url:`https://bing.npanuhin.me/CN/zh/${date}.jpg`,bing_url:`https://www.bing.com/th?id=${id}_UHD.jpg`});
-const jpeg=(w=3840,h=2160)=>Buffer.from([255,216,255,192,0,11,8,h>>8,h&255,w>>8,w&255,1,1,17,0,255,218,0,8,1,1,0,0,63,0,1,2,3,255,217]);
 async function setup(t,fetchImpl,extras={}) {
   const dir=await mkdtemp(join(tmpdir(),'daily-dual-history-'));t.after(()=>rm(dir,{recursive:true,force:true}));
-  const options={cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl,...extras};
+  const options={historyMode:'import',cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl,...extras};
   return {dir,options,service:createBingService(options)};
 }
 test('2018 history loads only the requested monthly JSON and exposes both credits',async t=>{
@@ -55,9 +55,9 @@ test('old-image download tries UHD then the validated recorded variant within on
   const calls=[],signals=[];const {service,dir}=await setup(t,async(url,options)=>{
     if(url.hostname==='raw.githubusercontent.com')return Response.json([oldRow()]);
     calls.push(String(url));signals.push(options.signal);
-    return url.searchParams.get('id').endsWith('_UHD.jpg')?new Response('',{status:404}):new Response(jpeg(),{headers:{'Content-Type':'image/jpeg'}});
+    return url.searchParams.get('id').endsWith('_UHD.jpg')?new Response('',{status:404}):new Response(jpeg(3840,2160),{headers:{'Content-Type':'image/jpeg'}});
   });
-  await service.history.month('2018-09');assert.deepEqual(await service.history.image('2018-09-11'),jpeg());
+  await service.history.month('2018-09');assert.deepEqual(await service.history.image('2018-09-11'),jpeg(3840,2160));
   assert.equal(calls.length,2);assert.equal(signals[0],signals[1]);assert.match(calls[1],/1920x1080/);
   const saved=JSON.parse(await readFile(join(dir,'history','2018-09.json'),'utf8'));assert.equal(saved.images[0].availability.width,3840);
   await service.history.image('2018-09-11');assert.equal(calls.length,2);
@@ -66,9 +66,9 @@ test('archive image failures fall back to Bing for the same indexed picture',asy
   const calls=[];const {service}=await setup(t,async url=>{
     if(url.hostname==='raw.githubusercontent.com')return Response.json([oldRow('2024-04-03','OHR.Same')]);
     if(url.pathname.endsWith('.json'))return Response.json([archiveRow()]);
-    calls.push(String(url));return url.hostname==='bing.npanuhin.me'?new Response('',{status:404}):new Response(jpeg(),{headers:{'Content-Type':'image/jpeg'}});
+    calls.push(String(url));return url.hostname==='bing.npanuhin.me'?new Response('',{status:404}):new Response(jpeg(3840,2160),{headers:{'Content-Type':'image/jpeg'}});
   });
-  await service.history.month('2024-04');assert.deepEqual(await service.history.image('2024-04-03'),jpeg());
+  await service.history.month('2024-04');assert.deepEqual(await service.history.image('2024-04-03'),jpeg(3840,2160));
   assert.equal(calls.length,2);assert.match(calls[1],/OHR.Same_UHD/);
 });
 test('failed manual refresh remains stale during cooldown even if the saved index is fresh',async t=>{

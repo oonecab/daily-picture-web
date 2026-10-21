@@ -33,7 +33,13 @@ const state = {
 const downloadUrls = new Set();
 function images() { return state.mode === 'favorites' ? state.favorites : state.mode === 'history' ? state.historyImages : state.images; }
 function selected() { return images()[state.index]; }
-function imageUrl(image, size = '1920x1080') { return image.history === true && image.market === 'zh-CN' ? `/api/history/image?${new URLSearchParams({date:image.date,id:image.id})}` : `/api/image?${new URLSearchParams({ id: image.id, size })}`; }
+function imageUrl(image, size = '1920x1080') {
+  if(image.history === true && image.market === 'zh-CN') {
+    const variant=size==='640x360'?'thumb':size==='original'?'original':'preview';
+    return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant})}`;
+  }
+  return `/api/image?${new URLSearchParams({id:image.id,size})}`;
+}
 function liked(image) { return state.favorites.some((item) => item.id === image?.id); }
 function saveSettings() { writeStored('settings', { market: state.market, autoRefresh: state.autoRefresh, contain: state.contain }); }
 function friendlyDate(date) { return date ? date.replaceAll('-', '.') : '—'; }
@@ -125,7 +131,7 @@ function renderStrip() {
     const frame = document.createElement('span'); frame.className = 'thumbnail-image';
     if(item.history) frame.classList.add('thumb-history');
     const img = document.createElement('img');
-    if(item.history && historyObserver) {img.dataset.src=imageUrl(item);historyObserver.observe(img);}
+    if(item.history && historyObserver) {img.dataset.src=imageUrl(item,'640x360');historyObserver.observe(img);}
     else img.src = imageUrl(item, '640x360');
     img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.width = 640; img.height = 360;
     img.addEventListener('error', () => { img.hidden = true; frame.classList.add('thumb-broken'); button.title = `${item.title} · 图片暂不可用，可选中后重试`; });
@@ -340,8 +346,8 @@ function toggleFavorite() {
   if (saved) toast(exists ? '已从收藏中移除。' : '已收藏，把这片风景留在身边。');
 }
 function historyDownloadSize() {
-  const size=state.heroDimensions;
-  $('history-download-size').textContent=size?.width && size?.height ? `${size.width} × ${size.height} · 实际图片尺寸` : '获取可用的最高尺寸';
+  const size=selected()?.availability;
+  $('history-download-size').textContent=size?.stored && size?.width && size?.height ? `${size.width} × ${size.height} · 原图实际尺寸` : '下载本站保存的原图';
 }
 async function openDialog(id) {
   stopSlideshow();
@@ -518,7 +524,7 @@ $('details').addEventListener('click', () => {
   $('detail-history').hidden=!archived;
   const sourceNames={npanuhin:'npanuhin/Bing-Wallpaper-Archive',zxyongyo:'zxyongyo/bing-daily-wallpaper',bing:'Bing 每日索引'};
   const sourceLabels=(Array.isArray(item.sources)?item.sources:[item.source]).map(key=>sourceNames[key]).filter(Boolean);
-  $('detail-history').textContent = archived ? `索引来源：${sourceLabels.join('、') || 'Bing 每日索引'}。图片${item.snapshot ? '优先读取归档副本，可回退到 Bing' : '从 Bing 获取'}；尺寸以实际返回为准。` : '';
+  $('detail-history').textContent = archived ? `索引来源：${sourceLabels.join('、') || 'Bing 每日索引'}。图片由本站保存，下载提供已保存的原图；尺寸以实际图片为准。` : '';
   openDialog('details-dialog');
 });
 document.querySelectorAll('dialog').forEach((dialog) => {

@@ -7,21 +7,23 @@
 
 ### 环境准备
 
-- 尚未登记。
+- `npm ci`
+  - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：quick。
+  - 前置条件：Node.js >=22、npm 和 npm registry 网络；网络：required；副作用：local-write。
 
 ### 测试
 
 - `node --test test/*.test.mjs`
-  - 工作目录：`.`（相对项目根）；平台：windows；类型：integration。
+  - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：integration。
   - 前置条件：Node.js >=22；可创建并清理系统临时目录，可监听临时回环端口；不访问互联网；网络：none；副作用：local-write。
 - `python -X utf8 tools/verify_research.py`
-  - 工作目录：`.`（相对项目根）；平台：windows；类型：quick。
+  - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：quick。
   - 前置条件：Python >=3.10；只读资料快照和来源清单；网络：none；副作用：read-only。
 
 ### 静态检查
 
-- `node --check server.mjs && node --check lib/bing.mjs && node --check lib/history.mjs && node --check lib/jpeg.mjs && node --check lib/errors.mjs && node --check public/app.js && node --check public/sw.js`
-  - 工作目录：`.`（相对项目根）；平台：windows；类型：quick。
+- `node tools/check-syntax.mjs`
+  - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：quick。
   - 前置条件：Node.js >=22；本机实测 24.14.0；网络：none；副作用：read-only。
 
 ### 格式检查
@@ -65,4 +67,4 @@
 
 ## 项目专属质量门禁
 
-[当前测试设计](../testing/current-baseline.md) 区分语法检查、Node 回归、研究摘要与历史浏览器实测。对本项目没有安装/构建步骤；没有登记格式化命令。Python 仅为维护工具，不改变应用启动前提。初始化结果见 [验收记录](INITIALIZATION.md)。
+[当前测试设计](../testing/current-baseline.md) 区分语法检查、Node 回归、研究摘要与历史浏览器实测。本项目先执行 npm ci 安装依赖，没有构建步骤；没有登记格式化命令。Python 仅为维护工具，不改变应用启动前提。初始化结果见 [验收记录](INITIALIZATION.md)。

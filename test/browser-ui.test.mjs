@@ -321,17 +321,31 @@ test('empty or failed history month stays explicit and does not reuse another mo
   await b.get('history-tab').emit('click');b.get('history-month').value='2026-09';await b.get('history-month').emit('change');
   assert.equal(b.get('history-status').textContent,'归档暂时不可用');assert.equal(b.get('hero-image').hidden,true);
 });
-test('historical downloads show measured dimensions and reset them for the next image',async()=>{
-  const b=browser({fetchImpl:historyFetch});await b.get('history-tab').emit('click');
-  await b.get('download').emit('click');assert.equal(b.get('history-download-size').textContent,'获取可用的最高尺寸');
-  const hero=b.get('hero-image');hero.naturalWidth=3840;hero.naturalHeight=2160;hero.onload();
-  assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 实际图片尺寸');
+test('historical downloads use original metadata and never label a resized preview as the original',async()=>{
+  const b=browser({fetchImpl:async url=>{
+    const response=await historyFetch(url);
+    if(url.startsWith('/api/history?')) {const data=await response.json();data.images[0].availability={stored:true,width:3840,height:2160};return {ok:true,json:async()=>data};}
+    return response;
+  }});await b.get('history-tab').emit('click');
+  await b.get('download').emit('click');assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 原图实际尺寸');
+  const hero=b.get('hero-image');hero.naturalWidth=1920;hero.naturalHeight=1080;hero.onload();
+  assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 原图实际尺寸');
   b.get('download-dialog').close();await b.get('next').emit('click');await b.get('download').emit('click');
-  assert.equal(b.get('history-download-size').textContent,'获取可用的最高尺寸');
+  assert.equal(b.get('history-download-size').textContent,'下载本站保存的原图');
 });
 test('the supplementary history source is identified in picture details',async()=>{
   const b=browser({fetchImpl:url=>url.startsWith('/api/history?')?Promise.resolve({ok:true,json:async()=>({month:'2026-10',images:[{...historyRow('2026-10-01'),snapshot:false,source:'zxyongyo'}]})}):historyFetch(url)});
   await b.get('history-tab').emit('click');await b.get('details').emit('click');
   assert.equal(b.get('detail-source').href,'https://github.com/zxyongyo/bing-daily-wallpaper');
   assert.match(b.get('detail-history').textContent,/zxyongyo\/bing-daily-wallpaper/);
+});
+
+test('history thumbnails request small files while the selected image requests only its preview',async()=>{
+  const b=browser({observe:true,fetchImpl:historyFetch});
+  await b.get('history-tab').emit('click');
+  assert.ok(b.observed.every(i=>new URL(i.dataset.src,'http://localhost').searchParams.get('size')==='thumb'));
+  assert.equal(new URL(b.get('hero-image').src,'http://localhost').searchParams.get('size'),'preview');
+  assert.ok(b.observed.every(i=>!i.src));
+  b.intersect(b.observed.slice(0,4).map(target=>({isIntersecting:true,target})));
+  assert.equal(b.observed.filter(i=>i.src).length,2);
 });

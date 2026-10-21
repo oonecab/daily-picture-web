@@ -4,21 +4,20 @@ import { mkdtemp, rm, readFile, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createBingService } from '../lib/bing.mjs';
+import { jpeg } from './fixtures/jpeg.mjs';
 
 const clock = Date.parse('2026-10-21T04:00:00Z');
 const row = (date = '2024-04-03') => ({ date, title: '彩虹', description: '山间彩虹', copyright: '© Test',
   url: `https://bing.npanuhin.me/CN/zh/${date}.jpg`, bing_url: `https://bing.com/th?id=OHR.Rainbow${date.replaceAll('-', '')}_ZH-CN123_UHD.jpg` });
 const recent = (date, id = date.replaceAll('-', '')) => ({ id: `OHR.Day${id}`, date, market: 'zh-CN', title: '每日风景',
   description: '山川', copyright: '© Test', credit: '© Test', sourceUrl: 'https://www.bing.com', wallpaper: true });
-// Structural JPEG fixture, not a visual/decode fixture.
-const jpeg = (w = 1920, h = 1080) => Buffer.from([255,216,255,192,0,11,8,h>>8,h&255,w>>8,w&255,1,1,17,0,255,218,0,8,1,1,0,0,63,0,1,2,3,255,217]);
 async function setup(t, fetchImpl, extras = {}) {
   const dir = await mkdtemp(join(tmpdir(), 'daily-history-'));
   t.after(() => rm(dir, {recursive:true,force:true}));
   // These original-provider regressions model the supplementary source as missing.
   // Dual-source request/merge behavior is exercised in history-sources.test.mjs.
   const fetchSources=(url,options)=>url.hostname==='raw.githubusercontent.com' ? Promise.resolve(new Response('',{status:404})) : fetchImpl(url,options);
-  return {dir,service:createBingService({cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl:fetchSources,...extras})};
+  return {dir,service:createBingService({historyMode:'import',cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl:fetchSources,...extras})};
 }
 test('history requests only the selected month, coalesces concurrent readers and preserves attribution', async t => {
   const calls=[];
@@ -39,7 +38,7 @@ test('daily indexes accumulate across months, concurrent imports and restart wit
   const {service,dir} = await setup(t, async()=> {throw new Error('offline');});
   await Promise.all([service.history.ingest({images:[recent('2026-09-30')]}),service.history.ingest({images:[recent('2026-10-01')]})]);
   await service.history.ingest({images:[{...recent('2026-09-30'),title:'更新标题'}]});
-  const again=createBingService({cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl:async()=>{throw new Error('offline');}});
+  const again=createBingService({historyMode:'import',cacheDir:dir,historyDir:join(dir,'history'),now:()=>clock,fetchImpl:async()=>{throw new Error('offline');}});
   assert.equal((await again.history.month('2026-09')).images[0].title,'更新标题');
   assert.equal((await again.history.month('2026-10')).images[0].date,'2026-10-01');
   assert.equal((await again.history.month('2026-09')).stale,true);
@@ -177,6 +176,6 @@ test('automatic daily capture keeps records outside the next recent window and s
 test('unwritable history storage reports a warning while recent pictures remain available',async t=>{
   const {writeFile}=await import('node:fs/promises');const {dir}=await setup(t,async()=>Response.json([]));
   const blocked=join(dir,'blocked');await writeFile(blocked,'not a directory');
-  const service=createBingService({cacheDir:dir,historyDir:blocked,now:()=>clock,fetchImpl:async()=>Response.json({images:[{urlbase:'/th?id=OHR.Test',startdate:'20261021',copyright:'© Test'}]})});
+  const service=createBingService({historyMode:'import',cacheDir:dir,historyDir:blocked,now:()=>clock,fetchImpl:async()=>Response.json({images:[{urlbase:'/th?id=OHR.Test',startdate:'20261021',copyright:'© Test'}]})});
   const result=await service.archive('zh-CN');assert.equal(result.stale,false);assert.match(result.historyWarning,/保存失败/);assert.equal(result.images.length,1);
 });

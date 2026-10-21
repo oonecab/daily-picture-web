@@ -14,10 +14,11 @@
       "Python（仅资料校验工具）"
     ],
     "frameworks": [
-      "无第三方框架；使用 Node.js 内置 HTTP 和原生浏览器 API"
+      "无第三方框架；使用 Node.js 内置 HTTP 和原生浏览器 API",
+      "Sharp 0.35.5：完整 JPEG 解码与缩略图/预览生成，npm ci 安装锁定依赖"
     ],
     "runtimes": [
-      "Node.js >=22（package.json 为权威；本机 24.14.0 已测）",
+      "Node.js >=22（package.json 为权威；macOS 24.21.0 已测）",
       "现代浏览器（已有 Chrome 实测；其他浏览器未验证）",
       "Python >=3.10（仅治理与资料校验；本机 3.12.1）"
     ],
@@ -28,7 +29,7 @@
       "tools"
     ],
     "architecture_notes": [
-      "无第三方运行依赖，无安装或构建步骤；任务定义以 package.json 为准。",
+      "运行依赖 Sharp 0.35.5，首次启动前运行 npm ci；无构建步骤；任务定义以 package.json 为准。",
       "server.mjs 提供回环 HTTP 与静态白名单；lib/bing.mjs 隔离上游、校验和磁盘缓存。",
       "public/app.js 与 public/sw.js 管理浏览器状态和离线缓存；不读取原 UWP 应用数据。",
       "当前架构见 docs/architecture/web-app.md；外部消费约定见 docs/contracts/bing.md。",
@@ -37,13 +38,31 @@
     ]
   },
   "commands": {
-    "setup": [],
+    "setup": [
+      {
+        "run": "npm ci",
+        "cwd": ".",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux"
+        ],
+        "requires": [
+          "Node.js >=22、npm 和 npm registry 网络"
+        ],
+        "network": "required",
+        "side_effects": "local-write",
+        "kind": "quick"
+      }
+    ],
     "test": [
       {
         "run": "node --test test/*.test.mjs",
         "cwd": ".",
         "platforms": [
-          "windows"
+          "windows",
+          "macos",
+          "linux"
         ],
         "requires": [
           "Node.js >=22",
@@ -57,7 +76,9 @@
         "run": "python -X utf8 tools/verify_research.py",
         "cwd": ".",
         "platforms": [
-          "windows"
+          "windows",
+          "macos",
+          "linux"
         ],
         "requires": [
           "Python >=3.10；只读资料快照和来源清单"
@@ -69,10 +90,12 @@
     ],
     "lint": [
       {
-        "run": "node --check server.mjs && node --check lib/bing.mjs && node --check lib/history.mjs && node --check lib/jpeg.mjs && node --check lib/errors.mjs && node --check public/app.js && node --check public/sw.js",
+        "run": "node tools/check-syntax.mjs",
         "cwd": ".",
         "platforms": [
-          "windows"
+          "windows",
+          "macos",
+          "linux"
         ],
         "requires": [
           "Node.js >=22；本机实测 24.14.0"
@@ -93,13 +116,16 @@
   "environment": {
     "variables": [
       "PORT",
-      "HISTORY_DIR"
+      "HISTORY_DIR",
+      "HISTORY_REPOSITORY",
+      "HISTORY_COLLECTOR"
     ],
     "services": [
       "HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌",
-      "HTTPS bing.npanuhin.me：中国区历史月索引与图片副本，只读且不需要令牌",
-      "HTTPS raw.githubusercontent.com：固定 zxyongyo/bing-daily-wallpaper 月度索引，只读且不需要令牌",
-      "HTTPS api.github.com：同一历史仓库月文件的官方 API 备用读取，无令牌且受公开访问限额约束",
+      "HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本",
+      "HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库",
+      "HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束",
+      "GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支",
       "自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md"
     ],
     "ports": [

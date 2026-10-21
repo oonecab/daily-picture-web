@@ -56,3 +56,5 @@ python -X utf8 tools/verify_research.py
 新增月度归档、独立持久化、图片检查、采集调度、按需加载与离线回归。当前执行结果和真实浏览证据见 [中国区历史验证](china-history.md)。
 
 1.2.0 发布复查为 75 项通过；服务器、真实浏览器、下载与索引持久化证据见 [发布验收](history-release.md)。
+
+1.4.0 自有图库增加 Sharp 真实解码夹具、三尺寸 HTTP/下载、离线重启、Actions 采集幂等、部分失败恢复和一次性导入隔离测试；当前证据见 [自有图库验收](owned-history.md)。启动/测试前先 npm ci。

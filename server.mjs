@@ -20,6 +20,7 @@ const files = {
 
 function defaultService() {
   return createBingService({cacheDir:join(root,'.cache'),historyDir:resolve(root,process.env.HISTORY_DIR || '.history'),
+    historyRepository:process.env.HISTORY_REPOSITORY || undefined,
     onError:(context,error)=>console.warn(`[upstream ${context}] ${error.message}`)});
 }
 export function createApp({ service = defaultService() } = {}) {
@@ -40,7 +41,7 @@ export function createApp({ service = defaultService() } = {}) {
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.3.1' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.4.0' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');
@@ -51,7 +52,7 @@ export function createApp({ service = defaultService() } = {}) {
       }
       if (url.pathname === '/api/history/image') {
         const date = url.searchParams.get('date');
-        const bytes = await service.history.image(date,url.searchParams.get('id'));
+        const bytes = await service.history.image(date,url.searchParams.get('id'),url.searchParams.get('size') || 'original');
         response.setHeader('Cache-Control','public, max-age=86400');
         if(url.searchParams.get('download')==='1') response.setHeader('Content-Disposition',`attachment; filename="Bing_CN_${date}.jpg"`);
         return send(200,bytes,'image/jpeg');
@@ -99,10 +100,10 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   server.listen(port, '127.0.0.1', () => {
     const url = `http://localhost:${port}`;
     console.log(`Daily Picture is ready at ${url}`);
-    collector = startHistoryCollector({collect:async()=>{
-      const result = await service.archive('zh-CN',true);
-      if(result.stale || result.historyWarning) throw new Error(result.historyWarning || 'Bing 同步暂时不可用');
-    },onError:error=>{service.history.markSyncError();console.warn(`[history sync] ${error.message}`);}});
+    if(process.env.HISTORY_COLLECTOR!=='off')collector = startHistoryCollector({collect:async()=>{
+      const result = await service.syncHistory();
+      if(result.error) throw new Error(result.error);
+    },onError:async error=>{await service.history.markSyncError();console.warn(`[history sync] ${error.message}`);}});
     if (process.argv.includes('--open') && !process.argv.includes('--no-open')) {
       const command = process.platform === 'win32' ? 'explorer.exe' : process.platform === 'darwin' ? 'open' : 'xdg-open';
       const browser = spawn(command, [url], { stdio: 'ignore', windowsHide: true });

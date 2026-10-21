@@ -8,7 +8,9 @@
 | --- | --- | --- | --- |
 | `server.mjs` | `createApp`、HTTP 路由、静态白名单、Host/方法检查、启动 | HTTP 响应及监听生命周期 | `lib/bing.mjs`、Node 内置模块、`public` 白名单文件 |
 | `lib/bing.mjs` | `createBingService`、市场/图片校验、日期转换、两批归档合并、上游与缓存 | `.cache/archives`、`.cache/images`、内存缓存与同键在途请求 | Node 内置模块、固定 HTTPS Bing 端点 |
-| `lib/history.mjs` | 中国区月索引、归档适配、原图检查、采集调度 | HISTORY_DIR 的月 JSON 与 sync.json | 注入的共享上游函数、Node、errors/jpeg |
+| `lib/history.mjs` | 本站月索引、导入适配、入库和同步状态 | HISTORY_DIR 月 JSON 与 sync.json | 注入上游、media、errors/jpeg |
+| `lib/media.mjs` | 完整解码、原图/640 缩略图/1920 预览、摘要检查 | HISTORY_DIR/media | Sharp、Node 文件系统 |
+| `lib/owned-index.mjs` / `lib/github-file.mjs` | 自有数据分支同步、受限 GitHub JSON 读取 | 调用 history 写入 | 固定 GitHub/Bing 端点 |
 | `lib/jpeg.mjs` / `lib/errors.mjs` | JPEG 结构检查 / 公共 HTTP 错误 | 无持久状态 | Node Buffer / 无依赖 |
 | `public/app.js` | 展示、下载、收藏、偏好、模态框和可见性计时器 | 同源 localStorage、页面内存、下载 Blob URL | 本地 `/api/*`、DOM 与浏览器 API |
 | `public/sw.js` | 网络失败回退、外壳/归档/图片缓存 | 浏览器 Cache Storage | 同源 GET、浏览器缓存 API |
@@ -47,7 +49,7 @@ flowchart LR
 
 服务退出不维持后台任务；浏览器页面关闭后不再刷新界面，1.2.0 的中国区每日索引采集由仍在运行的 Node 服务继续执行。服务磁盘与浏览器存储分别管理，清理其中一方不会自动清理另一方。改变端口会改变浏览器来源，收藏/缓存随之隔离。
 
-目前应用无数据库服务、用户账号、第三方运行依赖或打包步骤。现有公网实例由 Nginx 提供 TLS，再转发至回环 Node 服务；systemd 管理进程，版本目录与缓存分离，详见 [环境事实](../environments.md) 与 [发布方式](../deployment.md)。未来若增加桌面辅助服务、跨设备同步或改变 Node 监听边界，应另建 TARGET 架构记录、授权模型与迁移/回退计划，通过验证后才更新 CURRENT。1.1.0 沿用上述应用模块边界。
+目前应用无数据库服务、用户账号或打包步骤；Sharp 为图片处理运行依赖，需 npm ci 安装。现有公网实例由 Nginx 提供 TLS，再转发至回环 Node 服务；systemd 管理进程，版本目录与缓存分离，详见 [环境事实](../environments.md) 与 [发布方式](../deployment.md)。未来若增加桌面辅助服务、跨设备同步或改变 Node 监听边界，应另建 TARGET 架构记录、授权模型与迁移/回退计划，通过验证后才更新 CURRENT。1.1.0 沿用上述应用模块边界。
 
 ## 1.2.0 中国区历史数据流
 
@@ -60,3 +62,12 @@ Bing 适配注入共享上游资源池给历史模块；近期中国区元数据
 历史模块按所选月份并行读取适用的固定来源：2018-09 起 zxyongyo 的 GitHub 月 JSON，2024-04 起再合并 npanuhin 的索引。Bing 每日索引优先，逐来源维护有效期和失败冷却，单源错误不丢弃另一源及本地数据。只在同一图片 ID 上共享副本与 Bing 备用链接，图片回退共用一次 20 秒预算。schemaVersion 1 增加可选字段，原文件无需离线迁移；页脚集中标注两项目。
 
 1.3.1 为原始文件传输异常追加同仓库官方 API 读取，依旧使用同一共享资源池与总体超时；解码严格匹配的文件响应，不跟随 API 返回的 URL。
+
+
+## 1.4.0 当前数据链路
+
+历史导入工具 → 两来源固定月文件/图片 → 本站 HISTORY_DIR。之后访客 history API 仅从该目录读取月索引和媒体；最近精选仍按既有 Bing 流程读取。旧版本段落中的访客请求触发上游、原图临时缓存语义至此被取代。
+
+GitHub Actions → Bing 最近十五日 → 本仓库 codex/wallpaper-data 月文件/latest.json；服务后台 → 自有分支 → 校验元数据 → 两张并行保存 Bing 原图 → Sharp 派生缩略图/预览。浏览器每月只加载可见缩略图和当前预览，下载独立请求原图。PNG/WebP/任意 URL 不在适配范围。
+
+原图文件和媒体清单独立于临时 .cache，服务单进程写入；完整导入和迁移用隔离目录，旧目录保留回滚。运行依赖和环境变更见 TECH/环境事实；具体规则不在本页重复。
