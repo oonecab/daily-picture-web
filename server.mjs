@@ -6,6 +6,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createBingService, HttpError, MARKETS } from './lib/bing.mjs';
 import { startHistoryCollector } from './lib/history.mjs';
+import { createImageReadPool } from './lib/image-reads.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const files = {
@@ -30,7 +31,8 @@ export function startSavedHistoryCollector(service,onWarning=error=>console.warn
     if(result.error)onWarning(new Error(result.error));
   },onError:async error=>{await service.history.markSyncError();onWarning(error);}});
 }
-export function createApp({ service = defaultService() } = {}) {
+export function createApp({ service = defaultService(), imageReads = createImageReadPool(), imageSendTimeoutMs = 30000 } = {}) {
+  if(!Number.isSafeInteger(imageSendTimeoutMs) || imageSendTimeoutMs<1)throw new TypeError('Invalid image response timeout');
   return http.createServer(async (request, response) => {
     response.setHeader('X-Content-Type-Options', 'nosniff');
     response.setHeader('Referrer-Policy', 'no-referrer');
@@ -40,6 +42,23 @@ export function createApp({ service = defaultService() } = {}) {
       response.writeHead(status, { 'Content-Type': type, 'Content-Length': data.length });
       response.end(request.method === 'HEAD' ? undefined : data);
     }
+    async function sendImage(key,load,cacheControl,filename) {
+      const controller=new AbortController();let lease,timer;
+      const finish=()=>{
+        clearTimeout(timer);controller.abort();lease?.release();lease=null;
+        response.off('finish',finish);response.off('close',finish);
+      };
+      response.once('finish',finish);response.once('close',finish);
+      try {
+        lease=await imageReads.acquire(key,load,{signal:controller.signal});
+        if(response.destroyed){finish();return;}
+        response.setHeader('Cache-Control',cacheControl);
+        if(filename)response.setHeader('Content-Disposition',`attachment; filename="${filename}"`);
+        // Bound retention even if a peer remains connected but stops consuming bytes.
+        timer=setTimeout(()=>response.destroy(),imageSendTimeoutMs);timer.unref?.();
+        send(200,lease.bytes,'image/jpeg');
+      }catch(error){finish();throw error;}
+    }
     try {
       const host = (request.headers.host || '').split(':')[0];
       if (!['localhost', '127.0.0.1'].includes(host)) throw new HttpError(403, '此本地服务仅接受 localhost 请求。');
@@ -48,7 +67,7 @@ export function createApp({ service = defaultService() } = {}) {
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.4.1' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.4.2' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');
@@ -58,11 +77,9 @@ export function createApp({ service = defaultService() } = {}) {
           : await service.history.catalog());
       }
       if (url.pathname === '/api/history/image') {
-        const date = url.searchParams.get('date');
-        const bytes = await service.history.image(date,url.searchParams.get('id'),url.searchParams.get('size') || 'original');
-        response.setHeader('Cache-Control','public, max-age=86400');
-        if(url.searchParams.get('download')==='1') response.setHeader('Content-Disposition',`attachment; filename="Bing_CN_${date}.jpg"`);
-        return send(200,bytes,'image/jpeg');
+        const date=url.searchParams.get('date'),id=url.searchParams.get('id'),size=url.searchParams.get('size') || 'original';
+        return await sendImage(JSON.stringify(['history',date,id,size]),()=>service.history.image(date,id,size),
+          'public, max-age=86400',url.searchParams.get('download')==='1'?`Bing_CN_${date}.jpg`:null);
       }
       if (url.pathname === '/api/archive') {
         const result = await service.archive(url.searchParams.get('market') || 'zh-CN', url.searchParams.get('refresh') === '1');
@@ -72,12 +89,8 @@ export function createApp({ service = defaultService() } = {}) {
       if (url.pathname === '/api/image') {
         const id = url.searchParams.get('id');
         const size = url.searchParams.get('size') || '1920x1080';
-        const bytes = await service.image(id, size);
-        response.setHeader('Cache-Control', 'public, max-age=604800, immutable');
-        if (url.searchParams.get('download') === '1') {
-          response.setHeader('Content-Disposition', `attachment; filename="${id}_${size}.jpg"`);
-        }
-        return send(200, bytes, 'image/jpeg');
+        return await sendImage(JSON.stringify(['recent',id,size]),()=>service.image(id,size),
+          'public, max-age=604800, immutable',url.searchParams.get('download')==='1'?`${id}_${size}.jpg`:null);
       }
       const file = files[url.pathname];
       if (!file) throw new HttpError(404, '没有找到这个页面。');
@@ -89,7 +102,7 @@ export function createApp({ service = defaultService() } = {}) {
       if (validators.includes('*') || validators.includes(etag)) { response.writeHead(304); response.end(); return; }
       return send(200, bytes, file[1]);
     } catch (error) {
-      if (!response.headersSent) {
+      if (!response.headersSent && !response.destroyed) {
         response.setHeader('Cache-Control', 'no-store');
         if (error.status === 503) response.setHeader('Retry-After', '5');
         send(error.status || 500, { error: error.status ? error.message : '本地服务遇到问题，请重试。' });

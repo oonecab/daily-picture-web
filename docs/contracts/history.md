@@ -30,8 +30,10 @@ GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Co
 
 月条目保留 history:true、source:npanuhin|zxyongyo|bing、sources、可选 bingVariant、snapshot、availability。可用图片附 stored:true、width/height 与 checkedAt。providers 与 importedAt 为导入溯源字段，旧 providerFetchedAt 兼容解释为 npanuhin 时间；schemaVersion 保持 1。
 
-sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集）、lastMediaSuccessAt（全部新图保存）、checkedAt、source、repository、branch、saved、total、failures、stale、error。未执行过的字段可能缺失，不能按零或成功解释。
+sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集）、lastMediaSuccessAt（整库待补清零且索引新鲜）、checkedAt、source、repository、branch、saved、total、retryTotal、pending、failures、stale、error。saved/total 计入当前窗口和额外补齐的尝试，retryTotal 为额外补齐数量，pending 为月索引内全部尚未保存的 Bing 日图数；未尝试的待补也保持 error。未执行过的字段可能缺失，不能按零或成功解释。
 
-元数据 no-store；成功图片 public,max-age=86400；错误 no-store。非法日期/尺寸/ID 为 400，未收录或未保存为 404，本地文件损坏为 500，图片处理容量满为 503 + Retry-After。GET/HEAD、Host 白名单保持原约束，HEAD 无正文。导入/后台上游失败内部记为 502 并保留索引；浏览器可重新读取本站，不保证源端故障已经恢复。
+1.4.2 Bing 月条目追加可选 observedAt，记录该条的采集时刻；先比较可用的 fullStartDate，再比较采集时刻。不同版本间不倒退，同 ID 保留媒体状态；旧文件仍可读取，schemaVersion 保持 1。字段与合并边界详见历史规则。
+
+元数据 no-store；成功图片 public,max-age=86400；错误 no-store。非法日期/尺寸/ID 为 400，未收录或未保存为 404，本地索引损坏为 500，图片处理/读取容量满或排队超过 5 秒为 503 + Retry-After:5。GET/HEAD、Host 白名单保持原约束，HEAD 无正文。图片发送超过 30 秒会中断连接，需重新请求；连接关闭释放共享缓冲区预算。导入/后台上游失败内部记为 502 并保留索引；浏览器可重新读取本站，不保证源端故障已经恢复。
 
 持久化、时间、采集、合并、可用性和加载规则统一见 [历史规则](../rules/history.md)，验证证据见 [自有图库验收](../testing/owned-history.md)。

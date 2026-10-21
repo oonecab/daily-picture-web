@@ -6,10 +6,11 @@
 
 | 模块 | 职责 / 公开边界 | 数据所有者 | 允许依赖 |
 | --- | --- | --- | --- |
-| `server.mjs` | `createApp`、HTTP 路由、静态白名单、Host/方法检查、启动 | HTTP 响应及监听生命周期 | `lib/bing.mjs`、Node 内置模块、`public` 白名单文件 |
+| `server.mjs` | `createApp`、HTTP 路由、静态白名单、Host/方法检查、启动 | HTTP 响应及监听生命周期 | `lib/bing.mjs`、`lib/image-reads.mjs`、Node 内置模块、`public` 白名单文件 |
 | `lib/bing.mjs` | `createBingService`、市场/图片校验、日期转换、两批归档合并、上游与缓存 | `.cache/archives`、`.cache/images`、内存缓存与同键在途请求 | Node 内置模块、固定 HTTPS Bing 端点 |
 | `lib/history.mjs` | 本站月索引、导入适配、入库和同步状态 | HISTORY_DIR 月 JSON 与 sync.json | 注入上游、media、errors/jpeg |
-| `lib/media.mjs` | 完整解码、原图/640 缩略图/1920 预览、摘要检查 | HISTORY_DIR/media | Sharp、Node 文件系统 |
+| `lib/media.mjs` | 完整解码、原图/640 缩略图/1920 预览、有界共享读盘与摘要检查 | HISTORY_DIR/media | Sharp、Node 文件系统、image-reads |
+| `lib/image-reads.mjs` | 以键共享读取结果，预算预留、等待/消费者限制、租约释放 | 实例内在途缓冲区和等待队列 | Node Buffer、errors；不读磁盘、不访问上游 |
 | `lib/owned-index.mjs` / `lib/github-file.mjs` | 自有数据分支同步、受限 GitHub JSON 读取 | 调用 history 写入 | 固定 GitHub/Bing 端点 |
 | `lib/jpeg.mjs` / `lib/errors.mjs` | JPEG 结构检查 / 公共 HTTP 错误 | 无持久状态 | Node Buffer / 无依赖 |
 | `public/app.js` | 展示、下载、收藏、偏好、模态框和可见性计时器 | 同源 localStorage、页面内存、下载 Blob URL | 本地 `/api/*`、DOM 与浏览器 API |
@@ -71,3 +72,5 @@ Bing 适配注入共享上游资源池给历史模块；近期中国区元数据
 GitHub Actions → Bing 最近十五日 → 本仓库 codex/wallpaper-data 月文件/latest.json；服务后台 → 自有分支 → 校验元数据 → 两张并行保存 Bing 原图 → Sharp 派生缩略图/预览。浏览器每月只加载可见缩略图和当前预览，下载独立请求原图。PNG/WebP/任意 URL 不在适配范围。
 
 原图文件和媒体清单独立于临时 .cache，服务单进程写入；完整导入和迁移用隔离目录，旧目录保留回滚。运行依赖和环境变更见 TECH/环境事实；具体规则不在本页重复。
+
+1.4.2 月索引兼作持久待补账本，owned-index 在当前批次外有界补齐，历史合并按逐条版本时刻防止倒退。HTTP 和媒体读盘分别拥有 image-reads 池；HTTP 获取缓冲区租约后持有到 finish/close，断开及超时回收资源。两者边界和具体限值统一见历史规则；数据格式兼容追加，没有新依赖或环境配置。

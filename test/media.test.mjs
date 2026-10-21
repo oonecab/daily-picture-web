@@ -73,3 +73,12 @@ test('media rejects excessive compressed bytes and decoded pixel count before pu
   await assert.rejects(media.put(item,huge),/pixel limit/i);
   assert.equal(await media.get(item,'original'),null);
 });
+test('simultaneous readers share one verified buffer without hiding later disk corruption',async t=>{
+  const {root,media}=await setup(t);
+  await media.put(item,original);
+  const results=await Promise.all(Array.from({length:16},()=>media.get(item,'original')));
+  assert.equal(new Set(results).size,1,'one image must not allocate one buffer per reader');
+  const file=(await readdir(root)).find(name=>name.endsWith('.original.jpg'));
+  await writeFile(join(root,file),Buffer.alloc(original.length));
+  assert.equal(await media.get(item,'original'),null,'completed reads must not become an unchecked permanent cache');
+});

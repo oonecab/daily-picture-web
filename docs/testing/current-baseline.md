@@ -60,3 +60,5 @@ python -X utf8 tools/verify_research.py
 1.4.0 自有图库增加 Sharp 真实解码夹具、三尺寸 HTTP/下载、离线重启、Actions 采集幂等、部分失败恢复和一次性导入隔离测试；当前证据见 [自有图库验收](owned-history.md)。启动/测试前先 npm ci。
 
 1.4.1 精简页脚，复用既有功能测试并实测桌面/窄屏、“关于”键盘与来源链接，见 [页脚验收](compact-footer.md)。
+
+1.4.2 新增跨批次/窗口外恢复与读取租约回归，使用真实回环慢连接核对预算持有、中断和超时释放；大图容量对照与发布结果见 [历史可靠性验收](history-reliability.md)。

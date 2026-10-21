@@ -20,6 +20,6 @@
 | DP-METADATA / DP-CACHE / DP-RETRY / DP-RESOURCE | 元数据提交、旧数据、失败预算与上游总量 | [cache.md](cache.md) | 1.1.1 / 2026-10-20 | 项目维护者 |
 | DP-LOCAL / DP-LIFECYCLE | 收藏、离线与页面生命周期 | [browser-state.md](browser-state.md) | 1.1.1 / 2026-10-20 | 项目维护者 |
 
-| DP-HISTORY / DP-HISTORY-STORE / DP-HISTORY-IMAGE / DP-HISTORY-UI | 中国区历史、持续索引、旧图检查与按需浏览 | [history.md](history.md) | 1.2.0 / 2026-10-21 | 项目维护者 |
+| DP-HISTORY / DP-HISTORY-STORE / DP-HISTORY-IMAGE / DP-HISTORY-UI | 中国区历史、持续索引、旧图检查与按需浏览 | [history.md](history.md) | 1.4.2 / 2026-10-21 | 项目维护者 |
 
 已登记服务规则的引用可由 manifest consistency 检查；完整测试覆盖与限制见 [测试基线](../testing/current-baseline.md)。首次建档没有改变业务口径；1.1.0 的窗口扩展与兼容变化见 [问题 007](../../issues/007-fifteen-day-archive.md)，1.1.1 的资源与缓存变化见 [问题 012](../../issues/012-cache-resource-reliability.md)。
