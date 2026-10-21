@@ -14,7 +14,7 @@ GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Co
 
 ## 自有每日数据
 
-工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；只有后台同步读取分支并从 Bing 保存新图。
+工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。同一批 Bing 数据出现同日不同 ID 时，latest.json 与月文件都取发布时间较新的一项。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；只有后台同步读取分支并从 Bing 保存新图。
 
 ## 本地 API
 
