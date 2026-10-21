@@ -112,7 +112,7 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
   const observed=[]; let intersect;
   const context = vm.createContext({
     ...(observe ? {IntersectionObserver:class { constructor(callback){intersect=callback;} observe(img){observed.push(img);} unobserve(){} disconnect(){observed.length=0;} }} : {}),
-    document, window, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
+    document, window, location:{origin:'http://localhost'}, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
     localStorage: { getItem: (key) => stored.get(key), setItem: (key, value) => stored.set(key, value) },
     URL, URLSearchParams, AbortController, AbortSignal:abortSignal, console,
     ...(bitmap?{createImageBitmap:bitmap}:{}),
@@ -376,7 +376,8 @@ test('historical download reserves fallback time and saves the same indexed imag
   await b.get('history-tab').emit('click');await vm.runInContext("download('original')",b.context);
   assert.equal(calls.length,2);assert.match(calls[0].url,/direct=1/);assert.doesNotMatch(calls[1].url,/direct=1/);
   assert.equal(calls[0].url.replace('&direct=1',''),calls[1].url);
-  assert.notEqual(calls[0].signal,calls[1].signal);assert.deepEqual(deadlines.slice(-2),[30000,10000]);
+  assert.notEqual(calls[0].signal,calls[1].signal);assert.deepEqual(deadlines,[30000]);
+  assert.ok(b.timeouts.some(timer=>timer.delay===10000&&timer.cancelled));
   assert.deepEqual(b.downloaded,['Bing_CN_2026-10-01.jpg']);assert.match(b.get('toast').textContent,/已交给浏览器下载/);
 });
 
@@ -397,4 +398,16 @@ test('slow direct previews fall back within twelve seconds and stale timers cann
   await b.get('next').emit('click');const next=hero.src,second=timer();first.callback();assert.equal(hero.src,next);
   hero.naturalWidth=1920;hero.naturalHeight=1080;hero.onload();assert.equal(second.cancelled,true);
   await b.get('next').emit('click');const third=timer();await b.window.emit('pagehide');assert.equal(third.cancelled,true);
+});
+
+test('protected originals and older favorites retain the full body transfer budget after local headers arrive',async()=>{
+ let release,calls=0;
+ const b=browser({fetchImpl:url=>{
+  if(!url.includes('/api/history/image'))return historyFetch(url);
+  calls++;return Promise.resolve({ok:true,url:'http://localhost'+url,headers:new Headers({'Content-Type':'image/jpeg'}),blob:()=>new Promise(resolve=>{release=()=>resolve(new Blob([new Uint8Array(200)],{type:'image/jpeg'}));})});
+ }});
+ await b.get('history-tab').emit('click');await b.get('favorite').emit('click');await b.get('favorites-tab').emit('click');
+ const pending=vm.runInContext("download('original')",b.context);await new Promise(setImmediate);
+ assert.equal(b.timeouts.filter(t=>t.delay===10000).at(-1).cancelled,true,'the fallback timer must not interrupt a local response body');
+ release();await pending;assert.equal(calls,1);assert.equal(b.downloaded.length,1);
 });

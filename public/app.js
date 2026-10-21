@@ -477,8 +477,14 @@ async function download(size) {
     const signal=AbortSignal.timeout(30000);
     async function read(direct){
       // Reserve time for the same-origin fallback when the browser cannot reach Bing.
-      const attempt=item.history&&direct?AbortSignal.any([signal,AbortSignal.timeout(10000)]):signal;
+      const controller=new AbortController();
+      const timer=item.history&&direct?setTimeout(()=>controller.abort(),10000):null;
+      const attempt=timer?AbortSignal.any([signal,controller.signal]):signal;
+      try{
       const response=await fetch(`${imageUrl(item,size,direct)}&download=1`,{signal:attempt});
+      // A protected original (including an older favorite) is already being served locally.
+      // Allow its body the full transfer budget instead of retrying the same large file.
+      if(response.url&&new URL(response.url).origin===location.origin)clearTimeout(timer);
       if(!response.ok||!response.headers.get('Content-Type')?.startsWith('image/'))throw new Error('download');
       const blob=await response.blob();
       if(blob.size>20*1024*1024||blob.size<100)throw new Error('download');
@@ -486,6 +492,7 @@ async function download(size) {
         const bitmap=await createImageBitmap(blob);try{if(bitmap.width<320||bitmap.height<180)throw new Error('placeholder');}finally{bitmap.close();}
       }
       return blob;
+      }finally{clearTimeout(timer);}
     }
     let blob;
     try{blob=await read(true);}catch(error){if(!item.history||signal.aborted)throw error;blob=await read(false);}
