@@ -30,3 +30,7 @@
 1.1.1 上线：[009 发布计划](009-reliability-release.md)。
 
 提交身份：[010 邮箱与账号关联修正](010-git-identity-correction.md)。
+
+- [011 中国区历史浏览](011-china-history.md)
+
+- [012 历史壁纸发布](012-history-release.md)

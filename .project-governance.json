@@ -69,7 +69,7 @@
     ],
     "lint": [
       {
-        "run": "node --check server.mjs && node --check lib/bing.mjs && node --check public/app.js && node --check public/sw.js",
+        "run": "node --check server.mjs && node --check lib/bing.mjs && node --check lib/history.mjs && node --check lib/jpeg.mjs && node --check lib/errors.mjs && node --check public/app.js && node --check public/sw.js",
         "cwd": ".",
         "platforms": [
           "windows"
@@ -92,10 +92,12 @@
   },
   "environment": {
     "variables": [
-      "PORT"
+      "PORT",
+      "HISTORY_DIR"
     ],
     "services": [
       "HTTPS [www.bing.com](https://www.bing.com/)：固定归档和图片读取；不要求账号或令牌",
+      "HTTPS bing.npanuhin.me：中国区历史月索引与图片副本，只读且不需要令牌",
       "自部署可使用 Nginx HTTPS 反向代理与 systemd 应用服务；配置要求见 docs/environments.md"
     ],
     "ports": [
@@ -254,9 +256,22 @@
       },
       {
         "id": "DP-RESOURCE",
-        "document": { "path": "docs/rules/cache.md", "contains": "DP-RESOURCE" },
-        "code": [{ "path": "lib/bing.mjs", "contains": "maxConcurrent = 4, maxQueued = 32" }],
-        "tests": [{ "path": "test/resource-limits.test.mjs", "contains": "different images share bounded upstream capacity and reject queue overflow" }]
+        "document": {
+          "path": "docs/rules/cache.md",
+          "contains": "DP-RESOURCE"
+        },
+        "code": [
+          {
+            "path": "lib/bing.mjs",
+            "contains": "maxConcurrent = 4, maxQueued = 32"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/resource-limits.test.mjs",
+            "contains": "different images share bounded upstream capacity and reject queue overflow"
+          }
+        ]
       },
       {
         "id": "DP-HTTP",
@@ -274,6 +289,25 @@
           {
             "path": "test/app.test.mjs",
             "contains": "HTTP routes serve the app, reject writes and invalid hosts, and hide workspace files"
+          }
+        ]
+      },
+      {
+        "id": "DP-HISTORY",
+        "document": {
+          "path": "docs/rules/history.md",
+          "contains": "DP-HISTORY"
+        },
+        "code": [
+          {
+            "path": "lib/history.mjs",
+            "contains": "createHistoryService"
+          }
+        ],
+        "tests": [
+          {
+            "path": "test/history.test.mjs",
+            "contains": "daily indexes accumulate across months"
           }
         ]
       }

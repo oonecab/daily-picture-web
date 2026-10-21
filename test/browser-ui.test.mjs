@@ -8,7 +8,7 @@ const html = await readFile(new URL('../public/index.html', import.meta.url), 'u
 
 // Run the complete application against a small DOM boundary double. Layout and
 // browser top-layer behavior are checked separately in the real browser.
-function browser({ native = 'missing', empty = false, archiveCache = null, worker = false } = {}) {
+function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false } = {}) {
   const elements = new Map();
   let document;
   class Element {
@@ -42,6 +42,7 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
       this.children.forEach((node) => { node.parentElement = null; }); this.children = []; this.append(...nodes);
     }
     remove() { if (this.parentElement) { this.parentElement.children = this.parentElement.children.filter((node) => node !== this); this.parentElement = null; } }
+    get isConnected() { return Boolean(this.parentElement); }
     get lastElementChild() { return this.children.at(-1) || new Element(); }
     focus() { document.activeElement = this; }
     closest(selector) { return selector === '[hidden]' ? (this.hidden ? this : this.parentElement?.closest(selector)) : null; }
@@ -106,15 +107,17 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
   ]);
   const serviceWorker = new Element('serviceworker');
   serviceWorker.register = async () => {};
+  const observed=[]; let intersect;
   const context = vm.createContext({
+    ...(observe ? {IntersectionObserver:class { constructor(callback){intersect=callback;} observe(img){observed.push(img);} unobserve(){} disconnect(){observed.length=0;} }} : {}),
     document, window, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
     localStorage: { getItem: (key) => stored.get(key), setItem: (key, value) => stored.set(key, value) },
     URL, URLSearchParams, AbortController, AbortSignal, console,
-    fetch: archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {}),
+    fetch: fetchImpl || (archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {})),
     setTimeout: () => 1, clearTimeout() {}, setInterval: () => 1, clearInterval() {},
   });
   vm.runInContext(source, context);
-  return { get, gallery, document, window, background, serviceWorker, requests: () => requests };
+  return { get, gallery, document, window, background, serviceWorker, observed, intersect:entries=>intersect(entries), context, requests: () => requests };
 }
 
 test('manual refresh reports cooldown instead of claiming a fresh upstream sync', async () => {
@@ -268,4 +271,53 @@ test('an empty collection keeps the exit control visible until native fullscreen
   await b.document.emit('fullscreenchange');
   assert.equal(b.get('image-topbar').hidden, true);
   assert.equal(b.document.body.classList.contains('viewer-open'), false);
+});
+
+const historyRow=(date)=>({id:`OHR.History${date.replaceAll('-','')}`,date,history:true,market:'zh-CN',title:date,description:'历史风景',credit:'© Test',copyright:'© Test',snapshot:true,source:'npanuhin'});
+const historyCatalog={months:['2026-10','2026-09','2024-04'],latest:'2026-10',sync:{}};
+function historyFetch(url){
+  if(url==='/api/history')return Promise.resolve({ok:true,json:async()=>historyCatalog});
+  if(url.startsWith('/api/history?')){const month=new URL(url,'http://localhost').searchParams.get('month');return Promise.resolve({ok:true,json:async()=>({month,images:Array.from({length:10},(_,i)=>historyRow(`${month}-${String(i+1).padStart(2,'0')}`))})});}
+  return new Promise(()=>{});
+}
+test('history loads one month and starts at most two visible thumbnails; favorite keeps history routing',async()=>{
+  const calls=[];
+  const b=browser({observe:true,fetchImpl:url=>{calls.push(url);return historyFetch(url);}});
+  await b.get('history-tab').emit('click');
+  assert.equal(b.get('history-controls').hidden,false);
+  assert.equal(b.get('market').disabled,true);
+  assert.deepEqual(calls.filter(u=>u.startsWith('/api/history')),['/api/history','/api/history?month=2026-10']);
+  assert.equal(b.observed.length,10);assert.ok(b.observed.every(i=>!i.src));
+  b.intersect(b.observed.slice(0,4).map(target=>({isIntersecting:true,target})));
+  assert.equal(b.observed.filter(i=>i.src).length,2);
+  await b.observed[0].emit('load');assert.equal(b.observed.filter(i=>i.src).length,3);
+  await b.get('favorite').emit('click');await b.get('favorites-tab').emit('click');
+  assert.match(b.get('hero-image').src,/api\/history\/image\?date=2026-10-01/);
+  await b.get('details').emit('click');assert.equal(b.get('detail-source').href,'https://github.com/npanuhin/Bing-Wallpaper-Archive');
+});
+test('late history response cannot replace a later month or a different tab',async()=>{
+  let release;
+  const b=browser({fetchImpl:url=>url.includes('month=2026-09')?new Promise(resolve=>{release=()=>resolve({ok:true,json:async()=>({month:'2026-09',images:[historyRow('2026-09-01')]})});}):historyFetch(url)});
+  await b.get('history-tab').emit('click');
+  b.get('history-month').value='2026-09';const pending=b.get('history-month').emit('change');
+  await b.get('browse-tab').emit('click');release();await pending;
+  assert.equal(b.get('photo-title').textContent,'风景 0');assert.equal(b.get('history-controls').hidden,true);
+});
+test('switching history months releases unfinished thumbnail slots and ignores late completion',async()=>{
+  const b=browser({observe:true,fetchImpl:historyFetch});
+  await b.get('history-tab').emit('click');
+  const old=b.observed.slice(0,2);
+  b.intersect(old.map(target=>({isIntersecting:true,target})));
+  b.get('history-month').value='2026-09';await b.get('history-month').emit('change');
+  b.intersect(b.observed.slice(0,4).map(target=>({isIntersecting:true,target})));
+  assert.equal(b.observed.filter(i=>i.src).length,2);
+  await old[0].emit('load');
+  assert.equal(b.observed.filter(i=>i.src).length,2);
+  await b.observed[0].emit('load');
+  assert.equal(b.observed.filter(i=>i.src).length,3);
+});
+test('empty or failed history month stays explicit and does not reuse another month',async()=>{
+  const b=browser({fetchImpl:url=>url.includes('month=2026-09')?Promise.resolve({ok:false,json:async()=>({error:'归档暂时不可用'})}):historyFetch(url)});
+  await b.get('history-tab').emit('click');b.get('history-month').value='2026-09';await b.get('history-month').emit('change');
+  assert.equal(b.get('history-status').textContent,'归档暂时不可用');assert.equal(b.get('hero-image').hidden,true);
 });

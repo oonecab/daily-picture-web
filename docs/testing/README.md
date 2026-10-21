@@ -30,3 +30,7 @@
 1.1.1 上线：[发布验收](reliability-release.md)。
 
 提交身份：[历史邮箱修正与账号关联验收](git-identity-correction.md)。
+
+- [中国区历史浏览验证](china-history.md)
+
+- [1.2.0 历史壁纸发布验收](history-release.md)

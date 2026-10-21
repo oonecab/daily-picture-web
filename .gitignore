@@ -1,4 +1,5 @@
 .cache/
+.history/
 .runtime/
 test-output/
 .private/

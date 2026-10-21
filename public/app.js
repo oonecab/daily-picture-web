@@ -27,11 +27,12 @@ const state = {
   fetchedAt: null, lastCheck: 0, stale: false, busy: false, request: null, generation: 0,
   heroGeneration: 0, slideshow: null, refreshTimer: null, toastTimer: null, installPrompt: null,
   fullscreenView: null,
+  historyImages: [], historyError: null, historyCatalog: null, historyMonth: null, historyBusy: false, historyRequest: null, historyGeneration: 0,
 };
 const downloadUrls = new Set();
-function images() { return state.mode === 'favorites' ? state.favorites : state.images; }
+function images() { return state.mode === 'favorites' ? state.favorites : state.mode === 'history' ? state.historyImages : state.images; }
 function selected() { return images()[state.index]; }
-function imageUrl(image, size = '1920x1080') { return `/api/image?${new URLSearchParams({ id: image.id, size })}`; }
+function imageUrl(image, size = '1920x1080') { return image.history === true && image.market === 'zh-CN' ? `/api/history/image?${new URLSearchParams({date:image.date,id:image.id})}` : `/api/image?${new URLSearchParams({ id: image.id, size })}`; }
 function liked(image) { return state.favorites.some((item) => item.id === image?.id); }
 function saveSettings() { writeStored('settings', { market: state.market, autoRefresh: state.autoRefresh, contain: state.contain }); }
 function friendlyDate(date) { return date ? date.replaceAll('-', '.') : '—'; }
@@ -66,12 +67,36 @@ function icon(name, className = 'icon') {
   svg.append(use);
   return svg;
 }
+let lazyQueue = [], lazyActive = 0;
+const lazyLoads = new Map();
+const historyObserver = typeof IntersectionObserver === 'function' ? new IntersectionObserver(entries => {
+  for (const entry of entries) if (entry.isIntersecting) { historyObserver.unobserve(entry.target); lazyQueue.push(entry.target); }
+  drainImages();
+}, {rootMargin:'80px'}) : null;
+function drainImages() {
+  while (lazyActive < 2 && lazyQueue.length) {
+    const img=lazyQueue.shift();
+    if (!img.isConnected) continue;
+    lazyActive++;
+    let done=false;
+    const complete=()=>{if(done)return;done=true;lazyLoads.delete(img);lazyActive--;drainImages();};
+    lazyLoads.set(img,complete);
+    img.addEventListener('load',complete,{once:true}); img.addEventListener('error',complete,{once:true});
+    img.src=img.dataset.src;
+    if(img.complete) complete();
+  }
+}
+function resetLazyImages() {
+  historyObserver?.disconnect(); lazyQueue = [];
+  for (const [img,complete] of lazyLoads) { complete(); img.removeAttribute('src'); }
+}
 let stripList, stripMode, stripBusy, stripFavorites;
 let stripIndex = -1;
 let stripNodes = [];
 function renderStrip() {
   const list = images();
-  if (stripList === list && stripMode === state.mode && (list.length || stripBusy === state.busy)) {
+  const loading=state.mode === 'history' ? state.historyBusy : state.busy;
+  if (stripList === list && stripMode === state.mode && (list.length || stripBusy === loading)) {
     stripNodes[stripIndex]?.button.setAttribute('aria-pressed', 'false');
     stripNodes[state.index]?.button.setAttribute('aria-pressed', 'true');
     stripIndex = state.index;
@@ -87,6 +112,7 @@ function renderStrip() {
   }
   const focused = stripNodes.findIndex((node) => node.button === document.activeElement);
   const focusedId = focused >= 0 ? stripList[focused]?.id : null;
+  resetLazyImages();
   stripNodes = [];
   const fragment = document.createDocumentFragment();
   list.forEach((item, index) => {
@@ -96,9 +122,12 @@ function renderStrip() {
     button.setAttribute('aria-pressed', String(index === state.index));
     button.title = `${item.title} · ${item.description}`;
     const frame = document.createElement('span'); frame.className = 'thumbnail-image';
+    if(item.history) frame.classList.add('thumb-history');
     const img = document.createElement('img');
-    img.src = imageUrl(item, '640x360'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.width = 640; img.height = 360;
-    img.addEventListener('error', () => { img.hidden = true; frame.classList.add('thumb-broken'); });
+    if(item.history && historyObserver) {img.dataset.src=imageUrl(item);historyObserver.observe(img);}
+    else img.src = imageUrl(item, '640x360');
+    img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.width = 640; img.height = 360;
+    img.addEventListener('error', () => { img.hidden = true; frame.classList.add('thumb-broken'); button.title = `${item.title} · 图片暂不可用，可选中后重试`; });
     const date = document.createElement('span'); date.className = 'thumb-day'; date.textContent = shortDate(item.date);
     frame.append(img, date);
     if (index === 0 && state.mode === 'browse') {
@@ -115,18 +144,19 @@ function renderStrip() {
     stripNodes.push({ button, frame, heart });
   });
   if (!images().length) {
-    if (state.busy && state.mode === 'browse') {
+    if (loading && state.mode !== 'favorites') {
       for (let i = 0; i < 15; i++) { const card = document.createElement('div'); card.className = 'filmstrip-placeholder'; fragment.append(card); }
-    } else { const message = document.createElement('p'); message.className = 'collection-empty'; message.textContent = state.mode === 'favorites' ? '你的风景故事，从一次收藏开始。' : '图片列表将在联网后显示。'; fragment.append(message); }
+    } else { const message = document.createElement('p'); message.className = 'collection-empty'; message.textContent = state.mode === 'favorites' ? '你的风景故事，从一次收藏开始。' : state.mode === 'history' ? '请选择其他月份，或刷新重试。' : '图片列表将在联网后显示。'; fragment.append(message); }
   }
   $('filmstrip').replaceChildren(fragment);
-  stripList = list; stripMode = state.mode; stripBusy = state.busy; stripFavorites = state.favorites; stripIndex = state.index;
+  stripList = list; stripMode = state.mode; stripBusy = loading; stripFavorites = state.favorites; stripIndex = state.index;
   if (focusedId) stripNodes[list.findIndex((item) => item.id === focusedId)]?.button.focus({ preventScroll: true });
 }
 function renderSelection() {
   const list = images();
   state.index = Math.max(0, Math.min(state.index, list.length - 1));
   const item = selected();
+  $('gallery').classList.toggle('history-view',item?.history === true);
   $('image-error').hidden = true;
   $('hero-image').hidden = true;
   state.heroGeneration++;
@@ -136,24 +166,28 @@ function renderSelection() {
   $('previous').hidden = $('next').hidden = list.length < 2;
   $('slideshow').disabled = list.length < 2;
   favoriteButton();
-  $('empty-state').hidden = Boolean(item) || (state.busy && state.mode === 'browse');
-  $('loading-state').hidden = Boolean(!item && (!state.busy || state.mode === 'favorites'));
+  const busy = state.mode === 'history' ? state.historyBusy : state.mode === 'browse' && state.busy;
+  $('empty-state').hidden = Boolean(item) || busy;
+  $('loading-state').hidden = !item && !busy;
+  $('loading-label').textContent = state.mode === 'history' ? '正在打开这段时光…' : '正在打开风景…';
+  $('image-error-text').textContent = item?.history ? '这张旧图暂时不可用，索引仍保留。可稍后重试或查看其他图片。' : '图片未能加载';
   if (!item) {
     exitFullscreenView();
     const favorites = state.mode === 'favorites';
     $('empty-title').textContent = favorites ? '把喜欢的风景留下来' : '风景正在路上';
     $('empty-description').textContent = favorites ? '点击图片上的爱心，建立自己的风景收藏。' : '暂时无法连接 Bing。检查网络后，再试一次。';
     $('empty-action').textContent = favorites ? '去发现图片' : '重新连接';
+    if(state.mode === 'history') { $('empty-title').textContent = state.historyError ? '暂时无法读取这个月' : '这个月的风景还未收录'; $('empty-description').textContent = state.historyError || '可选择其他月份，或稍后刷新重试。'; $('empty-action').textContent='刷新本月'; }
     $('edition').lastElementChild.textContent = '—';
     renderStrip();
     return;
   }
   $('photo-date').textContent = friendlyDate(item.date);
-  $('photo-market').textContent = `${MARKET_NAMES[item.market]} · BING`;
+  $('photo-market').textContent = `${MARKET_NAMES[item.market]} · ${item.history ? '历史影像' : 'BING'}`;
   $('photo-title').textContent = item.title;
-  $('photo-description').textContent = item.description;
+  $('photo-description').textContent = item.description.length > 140 ? `${item.description.slice(0,140)}…` : item.description;
   $('photo-credit').textContent = item.credit;
-  $('image-label').textContent = state.mode === 'favorites' ? '我的收藏' : state.index === 0 ? '最新精选' : '时光里的风景';
+  $('image-label').textContent = state.mode === 'favorites' ? '我的收藏' : state.mode === 'browse' && state.index === 0 ? '最新精选' : '时光里的风景';
   $('position').textContent = `${String(state.index + 1).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}`;
   $('edition').lastElementChild.textContent = friendlyDate(item.date);
   const generation = state.heroGeneration;
@@ -171,22 +205,77 @@ function renderSelection() {
   if (hero.complete && hero.naturalWidth) hero.onload();
   renderStrip();
 }
-function setMode(mode) {
+async function setMode(mode) {
   stopSlideshow();
   state.mode = mode; state.index = 0;
   const favorites = mode === 'favorites';
-  $('browse-tab').classList.toggle('active', !favorites); $('browse-tab').setAttribute('aria-pressed', String(!favorites));
+  const history = mode === 'history';
+  state.historyRequest?.abort(); state.historyGeneration++; state.historyBusy=false;
+  $('history-controls').hidden=!history; $('market').disabled=history;
+  $('history-tab').classList.toggle('active',history); $('history-tab').setAttribute('aria-pressed',String(history));
+  $('browse-tab').classList.toggle('active', mode === 'browse'); $('browse-tab').setAttribute('aria-pressed', String(mode === 'browse'));
+  $('notice').hidden = history || !state.stale;
   $('favorites-tab').classList.toggle('active', favorites); $('favorites-tab').setAttribute('aria-pressed', String(favorites));
-  $('page-heading').textContent = favorites ? '喜欢的风景，值得再看一遍。' : '每天，发现一点不一样。';
-  $('filmstrip-title').textContent = favorites ? '我的风景收藏' : '最近十五日';
+  $('page-heading').textContent = history ? '沿着时间，重遇一片风景。' : favorites ? '喜欢的风景，值得再看一遍。' : '每天，发现一点不一样。';
+  $('filmstrip-title').textContent = history ? '按月回望' : favorites ? '我的风景收藏' : '最近十五日';
   $('filmstrip-subtitle').textContent = favorites ? '每一次心动，都有迹可循' : '让美好，多停留一会儿';
   renderSelection();
+  if(history) await loadHistory();
 }
 function move(delta, manual = true) {
   if (manual) stopSlideshow();
   if (images().length < 2) return;
   state.index = (state.index + delta + images().length) % images().length;
   renderSelection();
+}
+function historyPickers() {
+  const months=state.historyCatalog.months;
+  const year=state.historyMonth.slice(0,4);
+  function options(id, values, selected, label) {
+    $(id).replaceChildren(...values.map(value=>{const option=document.createElement('option');option.value=value;option.textContent=label(value);return option;}));
+    $(id).value=selected;
+  }
+  options('history-year',[...new Set(months.map(m=>m.slice(0,4)))],year,y=>`${y} 年`);
+  options('history-month',months.filter(m=>m.startsWith(year)),state.historyMonth,m=>`${Number(m.slice(5))} 月`);
+}
+async function loadHistory(force=false) {
+  state.historyRequest?.abort();
+  const controller=new AbortController();state.historyRequest=controller;
+  const generation=++state.historyGeneration;
+  const month=state.historyMonth;
+  state.historyBusy=true;state.historyError=null;state.historyImages=[];state.index=0;
+  $('history-status').textContent='正在读取所选月份…';
+  $('filmstrip-title').textContent=month ? `${month.replace('-',' 年 ')} 月` : '按月回望';
+  $('filmstrip-subtitle').textContent='正在读取所选月份…';
+  renderSelection();
+  const timeout=setTimeout(()=>controller.abort(),25000);
+  const json=async url=>{const response=await fetch(url,{signal:controller.signal,cache:'no-store'});const data=await response.json();if(!response.ok)throw new Error(data.error || '历史归档暂时不可用。');return data;};
+  try {
+    if(!state.historyCatalog || force) {
+      const catalog=await json('/api/history');
+      if(generation!==state.historyGeneration)return;
+      if(!Array.isArray(catalog.months) || !catalog.months.length || !catalog.months.every(m=>/^\d{4}-(0[1-9]|1[0-2])$/.test(m)))throw new Error('历史年月目录格式异常。');
+      state.historyCatalog=catalog;
+      state.historyMonth=month || catalog.latest;
+    }
+    historyPickers();
+    const requested=state.historyMonth;
+    const data=await json(`/api/history?month=${requested}${force?'&refresh=1':''}`);
+    if(generation!==state.historyGeneration || state.mode!=='history')return;
+    if(data.month!==requested || !Array.isArray(data.images) || data.images.length>31 || !data.images.every(i=>validImage(i) && i.history===true && i.market==='zh-CN' && i.date.startsWith(requested)))throw new Error('历史图片列表格式异常。');
+    state.historyImages=data.images;
+    $('filmstrip-title').textContent=`${requested.replace('-',' 年 ')} 月 · ${data.images.length} 张`;
+    $('filmstrip-subtitle').textContent='选择缩略图，查看当日影像';
+    $('history-status').textContent=data.stale ? (data.warning || '正在显示已保存的历史索引。') : data.images.length ? `已读取 ${data.images.length} 条记录，图片随浏览加载。` : '这个月暂时没有收录图片，可选择其他月份。';
+    if(state.historyCatalog.sync?.error) $('history-status').textContent+=` ${state.historyCatalog.sync.error}`;
+  } catch(error) {
+    if(generation!==state.historyGeneration || state.mode!=='history')return;
+    state.historyError=controller.signal.aborted?'加载超时，请刷新重试。':error.message;
+    $('history-status').textContent=state.historyError;
+  } finally {
+    clearTimeout(timeout);
+    if(generation===state.historyGeneration) {state.historyBusy=false;if(state.mode==='history')renderSelection();}
+  }
 }
 async function loadArchive(force = false) {
   state.request?.abort();
@@ -208,8 +297,8 @@ async function loadArchive(force = false) {
     const currentId = state.mode === 'browse' ? selected()?.id : null;
     state.images = data.images; state.fetchedAt = data.fetchedAt; state.stale = data.stale === true; state.lastCheck = Date.now();
     writeStored(`archive:${market}`, data);
-    $('notice').hidden = !state.stale;
-    $('notice').textContent = data.warning || '离线浏览：正在显示上次成功更新的图片。';
+    $('notice').hidden = state.mode === 'history' || (!state.stale && !data.historyWarning);
+    $('notice').textContent = data.historyWarning || data.warning || '离线浏览：正在显示上次成功更新的图片。';
     if (state.mode === 'browse') {
       state.index = Math.max(0, state.images.findIndex((item) => item.id === currentId));
       renderSelection();
@@ -219,7 +308,7 @@ async function loadArchive(force = false) {
     if (generation !== state.generation) return;
     if (controller.signal.aborted && document.hidden) return;
     state.stale = true;
-    $('notice').hidden = false;
+    $('notice').hidden = state.mode === 'history';
     $('notice').textContent = state.images.length ? '网络暂时不可用，正在显示已缓存的图片。联网后可点击右上角刷新。' : '暂时无法连接 Bing。请检查网络，再点击刷新重试。';
   } finally {
     clearTimeout(timeout);
@@ -249,6 +338,13 @@ function toggleFavorite() {
 async function openDialog(id) {
   stopSlideshow();
   if (!await exitFullscreenView()) return;
+  if(id==='download-dialog') {
+    const history=selected()?.history === true;
+    $('history-download-note').hidden=!history;
+    $('download-description').textContent=history ? '保存这张历史影像到下载文件夹。' : '选择适合屏幕的尺寸，保存到下载文件夹。';
+    $('download-note').textContent=history ? '请保留摄影版权与来源信息。下载后可在系统设置中设为壁纸。' : '尺寸以 Bing 实际返回为准。下载后可在系统设置中设为桌面或锁屏。';
+    document.querySelectorAll('[data-size]').forEach(button=>{button.hidden=history ? button.dataset.size !== 'original' : button.dataset.size === 'original';});
+  }
   $(id).showModal();
 }
 function stopSlideshow() {
@@ -359,7 +455,7 @@ async function download(size) {
     if (!response.ok || !response.headers.get('Content-Type')?.startsWith('image/')) throw new Error('download');
     const objectUrl = URL.createObjectURL(await response.blob());
     downloadUrls.add(objectUrl);
-    const link = document.createElement('a'); link.href = objectUrl; link.download = `${item.id}_${size}.jpg`;
+    const link = document.createElement('a'); link.href = objectUrl; link.download = item.history ? `Bing_CN_${item.date}.jpg` : `${item.id}_${size}.jpg`;
     document.body.append(link); link.click(); link.remove();
     setTimeout(() => { URL.revokeObjectURL(objectUrl); downloadUrls.delete(objectUrl); }, 60000);
     $('download-dialog').close();
@@ -374,17 +470,24 @@ $('contain-image').checked = state.contain;
 $('gallery').classList.toggle('contain', state.contain);
 $('browse-tab').addEventListener('click', () => setMode('browse'));
 $('favorites-tab').addEventListener('click', () => setMode('favorites'));
+$('history-tab').addEventListener('click', () => setMode('history'));
+$('history-year').addEventListener('change', () => {
+  const months=state.historyCatalog.months.filter(m=>m.startsWith($('history-year').value));
+  state.historyMonth=months.find(m=>m.slice(5)===state.historyMonth?.slice(5)) || months[0];
+  historyPickers(); return loadHistory();
+});
+$('history-month').addEventListener('change', () => {state.historyMonth=$('history-month').value;return loadHistory();});
 $('market').addEventListener('change', () => {
   stopSlideshow(); state.market = $('market').value; saveSettings(); restoreArchive(); setMode('browse'); loadArchive();
 });
-$('refresh').addEventListener('click', () => loadArchive(true));
+$('refresh').addEventListener('click', () => state.mode === 'history' ? loadHistory(true) : loadArchive(true));
 $('previous').addEventListener('click', () => move(-1));
 $('next').addEventListener('click', () => move(1));
 $('favorite').addEventListener('click', toggleFavorite);
 $('fullscreen').addEventListener('click', fullscreen);
 $('slideshow').addEventListener('click', startSlideshow);
 $('retry-image').addEventListener('click', () => renderSelection());
-$('empty-action').addEventListener('click', () => { if (state.mode === 'favorites') setMode('browse'); else loadArchive(true); });
+$('empty-action').addEventListener('click', () => { if (state.mode === 'favorites') setMode('browse'); else if(state.mode==='history') return loadHistory(true); else loadArchive(true); });
 $('download').addEventListener('click', () => openDialog('download-dialog'));
 document.querySelectorAll('[data-size]').forEach((button) => button.addEventListener('click', () => download(button.dataset.size)));
 $('settings').addEventListener('click', () => openDialog('settings-dialog'));
@@ -398,7 +501,12 @@ $('details').addEventListener('click', () => {
   $('detail-credit').textContent = item.credit;
   let source = 'https://www.bing.com';
   try { const url = new URL(item.sourceUrl); if (url.protocol === 'https:' && ['www.bing.com', 'cn.bing.com'].includes(url.hostname)) source = url.href; } catch { /* Safe default. */ }
+  const archived=item.history === true;
+  if(archived && item.snapshot) source='https://github.com/npanuhin/Bing-Wallpaper-Archive';
   $('detail-source').href = source;
+  $('detail-source').textContent = archived && item.snapshot ? '查看历史归档项目 ↗' : '在 Bing 了解更多 ↗';
+  $('detail-history').hidden=!archived;
+  $('detail-history').textContent = archived ? `索引来源：${item.source === 'npanuhin' ? 'npanuhin/Bing-Wallpaper-Archive' : 'Bing 每日索引'}。图片${item.snapshot ? '由历史归档保存' : '从 Bing 获取'}；原始尺寸以实际返回为准。` : '';
   openDialog('details-dialog');
 });
 document.querySelectorAll('dialog').forEach((dialog) => {
@@ -442,11 +550,11 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('online', () => { status(); loadArchive(); });
 window.addEventListener('offline', status);
 window.addEventListener('pagehide', () => {
-  state.request?.abort(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer);
+  state.request?.abort(); state.historyRequest?.abort(); state.historyGeneration++; resetLazyImages(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer);
   for (const url of downloadUrls) URL.revokeObjectURL(url);
   downloadUrls.clear();
 });
-window.addEventListener('pageshow', (event) => { if (event.persisted) { scheduleRefresh(); loadArchive(); } });
+window.addEventListener('pageshow', (event) => { if (event.persisted) { scheduleRefresh(); loadArchive(); if(state.mode === 'history') loadHistory(); } });
 window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); state.installPrompt = event; $('install').hidden = false; });
 $('install').addEventListener('click', async () => {
   if (!state.installPrompt) return;
@@ -471,7 +579,7 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     // Warm the offline cache even if the initial request preceded installation.
     loadArchive();
-    for (const item of images()) fetch(imageUrl(item, '640x360')).catch(() => {});
+    if(state.mode !== 'history') for (const item of images().filter(item=>!item.history)) fetch(imageUrl(item, '640x360')).catch(() => {});
     if (selected()) fetch(imageUrl(selected())).catch(() => {});
   });
   navigator.serviceWorker.register('/sw.js').catch(() => { /* Online use remains available. */ });

@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createBingService, HttpError, MARKETS } from './lib/bing.mjs';
+import { startHistoryCollector } from './lib/history.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const files = {
@@ -17,7 +18,11 @@ const files = {
   '/manifest.webmanifest': ['manifest.webmanifest', 'application/manifest+json'],
 };
 
-export function createApp({ service = createBingService({ cacheDir: join(root, '.cache'), onError: (context, error) => console.warn(`[Bing ${context}] ${error.message}${error.cause ? `: ${error.cause.code || ''} ${error.cause.message}` : ''}`) }) } = {}) {
+function defaultService() {
+  return createBingService({cacheDir:join(root,'.cache'),historyDir:resolve(root,process.env.HISTORY_DIR || '.history'),
+    onError:(context,error)=>console.warn(`[upstream ${context}] ${error.message}`)});
+}
+export function createApp({ service = defaultService() } = {}) {
   return http.createServer(async (request, response) => {
     response.setHeader('X-Content-Type-Options', 'nosniff');
     response.setHeader('Referrer-Policy', 'no-referrer');
@@ -35,8 +40,22 @@ export function createApp({ service = createBingService({ cacheDir: join(root, '
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.1.1' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.2.0' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
+      if (url.pathname === '/api/history') {
+        response.setHeader('Cache-Control','no-store');
+        if (url.searchParams.has('market') && url.searchParams.get('market') !== 'zh-CN') throw new HttpError(400,'历史浏览目前支持中国区。');
+        return send(200, url.searchParams.has('month')
+          ? await service.history.month(url.searchParams.get('month'),url.searchParams.get('refresh')==='1')
+          : await service.history.catalog());
+      }
+      if (url.pathname === '/api/history/image') {
+        const date = url.searchParams.get('date');
+        const bytes = await service.history.image(date,url.searchParams.get('id'));
+        response.setHeader('Cache-Control','public, max-age=86400');
+        if(url.searchParams.get('download')==='1') response.setHeader('Content-Disposition',`attachment; filename="Bing_CN_${date}.jpg"`);
+        return send(200,bytes,'image/jpeg');
+      }
       if (url.pathname === '/api/archive') {
         const result = await service.archive(url.searchParams.get('market') || 'zh-CN', url.searchParams.get('refresh') === '1');
         response.setHeader('Cache-Control', 'no-store');
@@ -74,10 +93,16 @@ export function createApp({ service = createBingService({ cacheDir: join(root, '
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const port = Number(process.argv.slice(2).find((arg) => /^\d+$/.test(arg)) || process.env.PORT || 8787);
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('PORT must be between 1 and 65535.');
-  const server = createApp();
+  const service = defaultService();
+  const server = createApp({service});
+  let collector;
   server.listen(port, '127.0.0.1', () => {
     const url = `http://localhost:${port}`;
     console.log(`Daily Picture is ready at ${url}`);
+    collector = startHistoryCollector({collect:async()=>{
+      const result = await service.archive('zh-CN',true);
+      if(result.stale || result.historyWarning) throw new Error(result.historyWarning || 'Bing 同步暂时不可用');
+    },onError:error=>{service.history.markSyncError();console.warn(`[history sync] ${error.message}`);}});
     if (process.argv.includes('--open') && !process.argv.includes('--no-open')) {
       const command = process.platform === 'win32' ? 'explorer.exe' : process.platform === 'darwin' ? 'open' : 'xdg-open';
       const browser = spawn(command, [url], { stdio: 'ignore', windowsHide: true });
@@ -89,5 +114,5 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     console.error(error.code === 'EADDRINUSE' ? `端口 ${port} 已被占用。请设置其他 PORT 后重试。` : error.message);
     process.exitCode = 1;
   });
-  for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => { server.close(); server.closeAllConnections(); });
+  for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => { collector?.stop(); server.close(); server.closeAllConnections(); });
 }

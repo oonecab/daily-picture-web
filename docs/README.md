@@ -40,3 +40,5 @@
 | 当前工作与开放问题 | [问题单](../issues/README.md)、[计划](../plans/README.md)、[里程碑](../milestones/README.md) |
 
 `reverse-engineering/source/` 保留历史研究的原始字节；当前实现规则在 `rules/`，两者不互相覆盖。上级工作区仍是原生研究母目录，本项目快照只覆盖清单中列出的文件。
+
+- [中国区历史浏览规则](rules/history.md)

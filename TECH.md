@@ -76,6 +76,8 @@
 
 1.1.1 可靠性补丁：外壳失败回退、图片缓存预算与配额恢复、上游总量与刷新冷却、缩略图节点复用、静态 ETag/304，见 [问题 012](issues/012-cache-resource-reliability.md) 和 [验收记录](docs/testing/cache-resource-reliability.md)。运行栈、兼容基线、环境变量与存储 schema 不变。
 
+1.2.0 新增 `lib/history.mjs` 月度索引和采集、`lib/jpeg.mjs` 图片结构检查、`lib/errors.mjs` 公共 HTTP 错误。独立历史目录由 HISTORY_DIR 指定；新增固定只读归档服务，无第三方依赖或数据库。中国区按年/月浏览与资源边界见 [历史规则](docs/rules/history.md)、[契约](docs/contracts/history.md) 和 [验证](docs/testing/china-history.md)。
+
 ## 技术栈变更索引（只追加）
 
 “技术栈变更”至少包括语言、运行时、框架、核心库、构建工具、数据库或中间件的新增、移除、替换、主版本升级，以及兼容基线变化。普通补丁升级仅在影响行为、兼容性或安全基线时记录。

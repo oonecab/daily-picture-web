@@ -34,3 +34,7 @@
 | 014 | 提交邮箱与 GitHub 作者关联修正 | [问题 014](014-git-identity-correction.md) |
 
 对外反馈使用 [GitHub Issues](https://github.com/oonecab/daily-picture-web/issues)；本目录由维护者保存需要关联规则、计划和验收的项目记录，并按需链接对应 GitHub Issue。既有记录编号保留，后续新文件可采用上方建议命名。
+
+- [015 中国区历史壁纸](015-china-history.md)
+
+- [016 历史壁纸发布](016-history-release.md)

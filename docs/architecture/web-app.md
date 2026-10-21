@@ -8,6 +8,8 @@
 | --- | --- | --- | --- |
 | `server.mjs` | `createApp`、HTTP 路由、静态白名单、Host/方法检查、启动 | HTTP 响应及监听生命周期 | `lib/bing.mjs`、Node 内置模块、`public` 白名单文件 |
 | `lib/bing.mjs` | `createBingService`、市场/图片校验、日期转换、两批归档合并、上游与缓存 | `.cache/archives`、`.cache/images`、内存缓存与同键在途请求 | Node 内置模块、固定 HTTPS Bing 端点 |
+| `lib/history.mjs` | 中国区月索引、归档适配、原图检查、采集调度 | HISTORY_DIR 的月 JSON 与 sync.json | 注入的共享上游函数、Node、errors/jpeg |
+| `lib/jpeg.mjs` / `lib/errors.mjs` | JPEG 结构检查 / 公共 HTTP 错误 | 无持久状态 | Node Buffer / 无依赖 |
 | `public/app.js` | 展示、下载、收藏、偏好、模态框和可见性计时器 | 同源 localStorage、页面内存、下载 Blob URL | 本地 `/api/*`、DOM 与浏览器 API |
 | `public/sw.js` | 网络失败回退、外壳/归档/图片缓存 | 浏览器 Cache Storage | 同源 GET、浏览器缓存 API |
 | `test/app.test.mjs` | 合约和边界回归 | 独立临时目录和临时本机端口 | 导入服务与适配模块、假上游；不需要真实 Bing |
@@ -46,3 +48,9 @@ flowchart LR
 服务退出不维持后台任务；浏览器页面关闭后不继续每日更新。服务磁盘与浏览器存储分别管理，清理其中一方不会自动清理另一方。改变端口会改变浏览器来源，收藏/缓存随之隔离。
 
 目前应用无数据库服务、用户账号、第三方运行依赖或打包步骤。现有公网实例由 Nginx 提供 TLS，再转发至回环 Node 服务；systemd 管理进程，版本目录与缓存分离，详见 [环境事实](../environments.md) 与 [发布方式](../deployment.md)。未来若增加桌面辅助服务、跨设备同步或改变 Node 监听边界，应另建 TARGET 架构记录、授权模型与迁移/回退计划，通过验证后才更新 CURRENT。1.1.0 沿用上述应用模块边界。
+
+## 1.2.0 中国区历史数据流
+
+Bing 适配注入共享上游资源池给历史模块；近期中国区元数据成功后追加至 HISTORY_DIR。CLI 启动独立的小时采集循环，关闭服务时停止调度；createApp 工厂不会自动发起后台网络，便于隔离测试。历史 GET 只读取所选月份，归档提供者固定为 bing.npanuhin.me；历史图片以已索引日期映射到固定图片路径，前端不接触远端任意 URL。
+
+持久化月索引与可淘汰图片分开存放。单进程串行原子更新避免并发丢失；没有数据库、迁移或新运行依赖。一个 HISTORY_DIR 不能由多个进程同时写入。来源、回退和加载规则统一见 [历史规则](../rules/history.md)。

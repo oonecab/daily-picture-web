@@ -99,3 +99,14 @@ test('image writes enforce both byte and entry budgets, including simultaneous r
   assert.equal(w.entries.size, 80);
   for (const id of ['A', 'B', 'C']) assert.ok(w.entries.has(imageRequest(id).url));
 });
+
+test('history metadata cache is bounded and a failed month returns its explicit stale copy',async()=>{
+  let offline=false;
+  const w=worker({fetchImpl:async request=>{if(offline)throw new Error('offline');return Response.json({month:new URL(request.url).searchParams.get('month'),images:[]});}});
+  for(let i=0;i<15;i++)await w.context.archive(new Request(`${origin}/api/history?month=2025-${String(i+1).padStart(2,'0')}`),true);
+  assert.equal(w.entries.size,13);
+  offline=true;
+  const cached=await w.context.archive(new Request(`${origin}/api/history?month=2025-12`),true);
+  assert.equal((await cached.json()).stale,true);
+  assert.equal((await w.context.archive(new Request(`${origin}/api/history?month=2025-01`),true)).status,503);
+});

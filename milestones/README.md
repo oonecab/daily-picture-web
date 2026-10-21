@@ -29,3 +29,7 @@
 1.1.1 上线：[009 可靠性修复发布](009-reliability-release.md)。
 
 提交身份：[010 GitHub 作者关联修正](010-git-identity-correction.md)。
+
+- [011 中国区历史浏览](011-china-history.md)
+
+- [012 历史壁纸上线](012-history-release.md)

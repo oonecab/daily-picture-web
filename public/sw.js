@@ -1,5 +1,7 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell-1.1.1`;
+const SHELL = `${VERSION}-shell-1.2.0`;
+const HISTORY = `${VERSION}-history`;
+let historyWrites=Promise.resolve();
 const DATA = `${VERSION}-data`;
 const IMAGES = `${VERSION}-images`;
 const ASSETS = ['/', '/index.html', '/styles.css', '/app.js', '/icon.svg', '/manifest.webmanifest'];
@@ -13,20 +15,24 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
-    await Promise.all(keys.filter((key) => key.startsWith('daily-picture-') && ![SHELL, DATA, IMAGES].includes(key)).map((key) => caches.delete(key)));
+    await Promise.all(keys.filter((key) => key.startsWith('daily-picture-') && ![SHELL, DATA, IMAGES, HISTORY].includes(key)).map((key) => caches.delete(key)));
     await self.clients.claim();
   })());
 });
 
-async function archive(request) {
+async function archive(request, history = false) {
   const url = new URL(request.url);
   url.searchParams.delete('refresh');
   const key = url.href;
-  const cache = await caches.open(DATA);
+  const cache = await caches.open(history ? HISTORY : DATA);
   try {
     const response = await fetch(request);
     if (!response.ok) throw new Error('Archive unavailable');
-    await cache.put(key, response.clone()).catch(() => {});
+    if(history) {
+      const copy=response.clone();
+      historyWrites=historyWrites.then(async()=>{await cache.put(key,copy);const keys=await cache.keys();for(const old of keys.slice(0,Math.max(0,keys.length-13)))await cache.delete(old);}).catch(()=>{});
+      await historyWrites;
+    } else await cache.put(key, response.clone()).catch(() => {});
     return response;
   } catch {
     const cached = await cache.match(key);
@@ -34,7 +40,7 @@ async function archive(request) {
       const data = await cached.json();
       return Response.json({ ...data, stale: true, cache: 'browser-offline', warning: '离线浏览：正在显示上次成功更新的图片。' });
     }
-    return Response.json({ error: '离线状态下尚无此地区的图片，请联网后重试。' }, { status: 503 });
+    return Response.json({ error: history ? '此月份尚未离线保存，请联网后重试。' : '离线状态下尚无此地区的图片，请联网后重试。' }, { status: 503 });
   }
 }
 async function saveImage(cache, key, response) {
@@ -108,6 +114,8 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== 'GET' || url.origin !== self.location.origin) return;
   if (url.pathname === '/api/archive') event.respondWith(archive(event.request));
+  else if (url.pathname === '/api/history') event.respondWith(archive(event.request, true));
+  else if (url.pathname === '/api/history/image') event.respondWith(image(event.request, event));
   else if (url.pathname === '/api/image') event.respondWith(image(event.request, event));
   else if (ASSETS.includes(url.pathname)) event.respondWith(shell(event.request));
 });

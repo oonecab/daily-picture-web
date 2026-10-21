@@ -54,3 +54,14 @@ body.viewer-open{position:fixed;width:100%;overflow:hidden}
   .gallery.is-fullscreen .image-actions{margin:0;gap:8px}
   .gallery.is-fullscreen .download-button{padding:12px}
 }
+
+/* China history: a single month at a time; images enter the viewport on demand. */
+.history-controls{padding:18px 22px;margin-bottom:22px;border:1px solid var(--line);border-radius:12px;background:#eeefe7}
+.history-picker{display:flex;align-items:center;flex-wrap:wrap;gap:18px;color:var(--green);font-size:13px}
+.history-picker>span{margin-right:auto;font-weight:600}.history-picker label{display:flex;align-items:center;gap:10px}
+.history-picker select{font:inherit;background:#fafbf5;color:#304936;border:1px solid #c9d0bf;border-radius:6px;padding:9px 12px}
+.history-source,.history-status{font-size:11px;line-height:1.9;margin:12px 0 0;color:#68735f}.history-source a{color:#435d38;text-underline-offset:3px;overflow-wrap:anywhere}
+.history-status{color:#3f5937;min-height:21px}.history-controls[hidden]{display:none}
+@media(max-width:700px){.primary-nav{gap:18px}.history-controls{padding:16px}.history-picker{gap:12px}.history-picker>span{width:100%}.history-picker select{padding:8px}.history-source{font-size:10px}}
+.thumb-history.thumb-broken:before{content:"图片暂不可用"}
+.history-view #photo-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}

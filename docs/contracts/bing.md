@@ -33,3 +33,7 @@
 1.1.1 的 `refresh=1` 跳过在线 TTL，但仍遵守每市场 30 秒刷新冷却。`cache: cooldown` 复用上次完整结果和 stale 状态，并提供整数秒 `retryAfter`；无缓存的失败在冷却期保持原错误。总并发、排队时限和重试由 [DP-RESOURCE / DP-RETRY](../rules/cache.md) 定义。上游端点、归档字段与 schemaVersion 均不变。
 
 保留图片来源、版权及介绍链接。此项目未获得、也未声称拥有原应用或上游图片的再许可；可见界面与下载功能的实现不改变作品权利。
+
+## 1.2.0 每日索引联动
+
+成功的中国区近期归档额外合并到独立历史目录，失败通过 historyWarning 提示，不影响精选图片响应。新增归档源和 API 的权威契约为 [history.md](history.md)，既有 Bing 端点/字段/尺寸不变。

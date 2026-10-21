@@ -14,7 +14,7 @@
 
 同一市场并行请求 `idx=0&n=8` 和 `idx=7&n=8`。两批通过 DP-IMAGE 校验后按图片 ID 去重；重复项保留 idx=0 批次的信息，不受请求完成先后影响。按市场显示日期降序排列，同日按原始 `fullStartDate` 降序，最多返回前 15 项。例：两批各 8 项、重叠 1 项时返回 15 项；无重叠共 16 项时保留最新 15 项。
 
-两批均成功才更新归档，任一批失败或为空都不提交部分结果。Bing 可能返回不足 15 项，界面显示实际数量；不补重复或示例图片，不承诺完整历史图库。API 保持 schemaVersion=1，新增 `windowDays: 15` 表示请求窗口；旧缓存兼容见 DP-CACHE。
+两批均成功才更新归档，任一批失败或为空都不提交部分结果。Bing 可能返回不足 15 项，界面显示实际数量；不补重复或示例图片，不承诺完整历史图库。1.2.0 的中国区按月历史入口独立遵循 [DP-HISTORY](history.md)。API 保持 schemaVersion=1，新增 `windowDays: 15` 表示请求窗口；旧缓存兼容见 DP-CACHE。
 
 ## DP-IMAGE：来源、标识与尺寸
 
@@ -22,7 +22,7 @@
 
 尺寸仅为 `640x360`、`1920x1080`、`UHD`、`1080x1920`；默认下载/主图接口尺寸为 `1920x1080`。尺寸参数是请求约定，不承诺每张上游图片都以相同像素返回。服务重新构造固定 HTTPS Bing URL，不直接使用元数据中的原始 URL 请求。
 
-版权文本与原始介绍链接应保留；可点击来源只接受 HTTPS 的 `www.bing.com` 或 `cn.bing.com`，其他链接回退 Bing 首页。格式映射详见 [Bing 契约](../contracts/bing.md)。
+版权文本与原始介绍链接应保留；每日精选的可点击来源只接受 HTTPS 的 `www.bing.com` 或 `cn.bing.com`，其他链接回退 Bing 首页。格式映射详见 [Bing 契约](../contracts/bing.md)。
 
 ## DP-HTTP：本机服务边界
 
@@ -37,3 +37,5 @@ CLI 只监听 `127.0.0.1`，Host 仅允许 `localhost` / `127.0.0.1`。请求仅
 - 2026-10-17：依据现有代码建立 DP-DATE / DP-IMAGE / DP-HTTP 文档基线，未改变行为；[问题 001](../../issues/001-governance-adoption.md)。
 - 2026-10-17：1.1.0 新增 DP-ARCHIVE，单批校验扩大到 8 项，两批合并最多 15 项；DP-DATE / DP-HTTP 不变；[问题 007](../../issues/007-fifteen-day-archive.md)。
 - 2026-10-20：1.1.1 DP-HTTP 增加静态条件请求及资源繁忙响应；[问题 012](../../issues/012-cache-resource-reliability.md)。
+
+- 2026-10-21：1.2.0 新增固定历史归档源和历史 API，安全与日期边界见 [历史规则](history.md)；现有精选请求和尺寸约定保留。

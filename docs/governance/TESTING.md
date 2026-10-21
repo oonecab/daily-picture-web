@@ -20,7 +20,7 @@
 
 ### 静态检查
 
-- `node --check server.mjs && node --check lib/bing.mjs && node --check public/app.js && node --check public/sw.js`
+- `node --check server.mjs && node --check lib/bing.mjs && node --check lib/history.mjs && node --check lib/jpeg.mjs && node --check lib/errors.mjs && node --check public/app.js && node --check public/sw.js`
   - 工作目录：`.`（相对项目根）；平台：windows；类型：quick。
   - 前置条件：Node.js >=22；本机实测 24.14.0；网络：none；副作用：read-only。
 
