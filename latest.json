@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-22T00:00:28.795Z",
+  "fetchedAt": "2026-10-22T23:59:22.291Z",
   "images": [
+    {
+      "id": "OHR.YellowstoneWolves_ZH-CN6767268961",
+      "market": "zh-CN",
+      "date": "2026-10-23",
+      "title": "荒野伙伴",
+      "description": "两只灰狼，黄石国家公园，怀俄明州，美国",
+      "credit": "© John Morrison/Getty Images",
+      "copyright": "两只灰狼，黄石国家公园，怀俄明州，美国 (© John Morrison/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E7%81%B0%E7%8B%BC&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261022",
+      "fullStartDate": "202610221600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.NaejangsanNP_ZH-CN6538893004",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E7%A7%91%E8%A5%BF%E5%98%89%E5%B2%9B%E6%A1%91%E5%90%89%E5%A5%88%E5%B0%94%E7%BE%A4%E5%B2%9B&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261008",
       "fullStartDate": "202610081600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MayotteOctopus_ZH-CN2837659998",
-      "market": "zh-CN",
-      "date": "2026-10-08",
-      "title": "现在你“海”能看见我……",
-      "description": "印度洋马约特岛，一只呈防御姿态的章鱼",
-      "credit": "© Gabriel Barathieu/Minden Pictures",
-      "copyright": "印度洋马约特岛，一只呈防御姿态的章鱼 (© Gabriel Barathieu/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=%E4%B8%96%E7%95%8C%E7%AB%A0%E9%B1%BC%E6%97%A5&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261007",
-      "fullStartDate": "202610071600",
       "wallpaper": true
     }
   ]
