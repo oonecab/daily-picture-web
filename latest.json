@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-21T10:56:13.001Z",
+  "fetchedAt": "2026-10-22T00:00:28.795Z",
   "images": [
+    {
+      "id": "OHR.NaejangsanNP_ZH-CN6538893004",
+      "market": "zh-CN",
+      "date": "2026-10-22",
+      "title": "静水映斑斓",
+      "description": "内藏山国立公园的秋景，韩国",
+      "credit": "© Twenty47studio/Getty Images",
+      "copyright": "内藏山国立公园的秋景，韩国 (© Twenty47studio/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%86%85%E8%97%8F%E5%B1%B1%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261021",
+      "fullStartDate": "202610211600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.VietnamBridge_ZH-CN6134321119",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E4%B8%96%E7%95%8C%E7%AB%A0%E9%B1%BC%E6%97%A5&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261007",
       "fullStartDate": "202610071600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.ForestofDean_ZH-CN2654753621",
-      "market": "zh-CN",
-      "date": "2026-10-07",
-      "title": "迷惑不解？沿着小径走",
-      "description": "覆满苔藓的岩石，英国格洛斯特郡谜林，迪恩森林，格洛斯特郡，英格兰",
-      "credit": "© Fulcanelli_AOS/Getty Images",
-      "copyright": "覆满苔藓的岩石，英国格洛斯特郡谜林，迪恩森林，格洛斯特郡，英格兰 (© Fulcanelli_AOS/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E8%8B%B1%E5%9B%BD%E6%A0%BC%E6%B4%9B%E6%96%AF%E7%89%B9%E9%83%A1%E8%B0%9C%E6%9E%97&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261006",
-      "fullStartDate": "202610061600",
       "wallpaper": true
     }
   ]
