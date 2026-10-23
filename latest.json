@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-22T23:59:22.291Z",
+  "fetchedAt": "2026-10-23T23:51:50.808Z",
   "images": [
+    {
+      "id": "OHR.PortugueseLibrary_ZH-CN7096893027",
+      "market": "zh-CN",
+      "date": "2026-10-24",
+      "title": "书香里的极致华美",
+      "description": "皇家葡萄牙语阅览室，里约热内卢，巴西",
+      "credit": "© Antonio Salaverry/Shutterstock",
+      "copyright": "皇家葡萄牙语阅览室，里约热内卢，巴西 (© Antonio Salaverry/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=%E7%9A%87%E5%AE%B6%E8%91%A1%E8%90%84%E7%89%99%E8%AF%AD%E9%98%85%E8%A7%88%E5%AE%A4&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261023",
+      "fullStartDate": "202610231600",
+      "wallpaper": false
+    },
     {
       "id": "OHR.YellowstoneWolves_ZH-CN6767268961",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E4%B8%96%E7%95%8C%E5%80%99%E9%B8%9F%E6%97%A5&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261009",
       "fullStartDate": "202610091600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.IlesSanguinaires_ZH-CN3149346035",
-      "market": "zh-CN",
-      "date": "2026-10-09",
-      "title": "科西嘉岛的岩石前哨",
-      "description": "桑吉奈尔群岛景观，摄自科西嘉岛，法国",
-      "credit": "© Francesco Riccardo Iacomino/Getty Images",
-      "copyright": "桑吉奈尔群岛景观，摄自科西嘉岛，法国 (© Francesco Riccardo Iacomino/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E7%A7%91%E8%A5%BF%E5%98%89%E5%B2%9B%E6%A1%91%E5%90%89%E5%A5%88%E5%B0%94%E7%BE%A4%E5%B2%9B&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261008",
-      "fullStartDate": "202610081600",
       "wallpaper": true
     }
   ]
