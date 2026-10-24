@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-23T23:51:50.808Z",
+  "fetchedAt": "2026-10-24T23:13:55.861Z",
   "images": [
+    {
+      "id": "OHR.MaligneFest_ZH-CN8343066766",
+      "market": "zh-CN",
+      "date": "2026-10-25",
+      "title": "群峰与宁静相遇之地",
+      "description": "玛琳湖，贾斯珀国家公园，艾伯塔省，加拿大",
+      "credit": "© Andrey Popov/Getty Images",
+      "copyright": "玛琳湖，贾斯珀国家公园，艾伯塔省，加拿大 (© Andrey Popov/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E7%8E%9B%E7%90%B3%E6%B9%96&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261024",
+      "fullStartDate": "202610241600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PortugueseLibrary_ZH-CN7096893027",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%B7%B4%E5%B8%83%E7%A7%91%E5%85%8B%E5%B7%9E%E7%AB%8B%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261010",
       "fullStartDate": "202610101600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.CormorantsFlight_ZH-CN0770863330",
-      "market": "zh-CN",
-      "date": "2026-10-10",
-      "title": "迁飞路线上的生命",
-      "description": "蒙特雷湾上空的双冠鸬鹚，加利福尼亚州，美国",
-      "credit": "© Hiroya Minakuchi/Minden Pictures",
-      "copyright": "蒙特雷湾上空的双冠鸬鹚，加利福尼亚州，美国 (© Hiroya Minakuchi/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=%E4%B8%96%E7%95%8C%E5%80%99%E9%B8%9F%E6%97%A5&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261009",
-      "fullStartDate": "202610091600",
       "wallpaper": true
     }
   ]
