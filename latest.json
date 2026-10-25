@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-24T23:13:55.861Z",
+  "fetchedAt": "2026-10-25T23:16:32.068Z",
   "images": [
+    {
+      "id": "OHR.SitovoWaterfall_ZH-CN8495214046",
+      "market": "zh-CN",
+      "date": "2026-10-26",
+      "title": "大自然的秋日乐章",
+      "description": "秋日瀑布，西托沃附近，普罗夫迪夫州，保加利亚",
+      "credit": "© Nadya85/Getty Images",
+      "copyright": "秋日瀑布，西托沃附近，普罗夫迪夫州，保加利亚 (© Nadya85/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A%E6%99%AE%E7%BD%97%E5%A4%AB%E8%BF%AA%E5%A4%AB%E8%A5%BF%E6%89%98%E6%B2%83&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261025",
+      "fullStartDate": "202610251600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.MaligneFest_ZH-CN8343066766",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%A8%81%E5%B0%94%E5%A3%AB%E6%9B%BC%E5%B8%83%E5%B0%94%E6%96%AF%E7%A0%81%E5%A4%B4&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261011",
       "fullStartDate": "202610111600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.BabcockSP_ZH-CN5266848536",
-      "market": "zh-CN",
-      "date": "2026-10-11",
-      "title": "秋色中转动的水轮",
-      "description": "格莱德溪磨坊，巴布科克州立公园，西弗吉尼亚州，美国",
-      "credit": "© dszc/Getty Images",
-      "copyright": "格莱德溪磨坊，巴布科克州立公园，西弗吉尼亚州，美国 (© dszc/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%B7%B4%E5%B8%83%E7%A7%91%E5%85%8B%E5%B7%9E%E7%AB%8B%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261010",
-      "fullStartDate": "202610101600",
       "wallpaper": true
     }
   ]
