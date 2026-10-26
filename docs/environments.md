@@ -72,3 +72,5 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 不增加环境变量、服务或端口。已有 HISTORY_DIR 根继续用于中国，海外使用其 markets/<market>/ 子目录；服务账户需具有同等写权限。海外归档图片由服务器出站访问 bing.npanuhin.me，浏览器 CSP 无需增加该站。导入请使用独立暂存目录，完成逐文件验证后停服务接入；不覆盖中国历史目录。10 GiB 空间停止阈值属于 tools/import-regions.mjs，日常全部地区临时图片缓存仍共用 256 MiB。
 
 Windows 使用 PowerShell 执行，远程 Linux 的部署脚本应保存为 LF；实例凭据、绝对部署路径、日志及图库留在私有运维目录。
+
+1.6.0 真实上游连接验证发现，较慢跨境链路可在 Node 默认地址尝试时间内尚未连通。使用原生 fetch 的服务与导入进程将全进程 TCP 地址尝试时间下限设为 2000ms，保留 IPv4/IPv6 自动选择；更高的已有设置不降低。单请求总预算、TLS 验证和主机白名单不变，无新增环境变量。API 依据 [Node net 文档](https://nodejs.org/api/net.html#netsetdefaultautoselectfamilyattempttimeoutvalue)，本次实际运行时原值为 250ms。

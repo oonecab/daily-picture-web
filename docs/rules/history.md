@@ -73,3 +73,5 @@ HTTP 的相同图片请求共享缓冲区，预算持有至最后一个响应完
 - 2026-10-26：1.6.0 多地区历史、轻量导入、共享容量、六区每日采集与紧凑筛选；[问题 023](../../issues/023-multi-region-history.md)。
 
 固定海外归档部分 JPEG 响应缺少 Content-Type。仅该固定主机的空类型或 application/octet-stream 可在 JPEG 签名正确时进入完整解码；显式非图片类型仍拒绝，20 MiB 文件与 40 百万像素上限不变。此兼容不应用于 Bing 或任意主机。
+
+1.6.0 真实上游连接验证发现，较慢跨境链路可在 Node 默认地址尝试时间内尚未连通。使用原生 fetch 的服务与导入进程将全进程 TCP 地址尝试时间下限设为 2000ms，保留 IPv4/IPv6 自动选择；更高的已有设置不降低。单请求总预算、TLS 验证和主机白名单不变，无新增环境变量。API 依据 [Node net 文档](https://nodejs.org/api/net.html#netsetdefaultautoselectfamilyattempttimeoutvalue)，本次实际运行时原值为 250ms。
