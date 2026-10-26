@@ -38,3 +38,5 @@
 - [013 年月选择器优化与发布](013-history-picker.md)
 
 - [014 双来源历史与发布](014-dual-history.md)
+
+- [019 多地区历史实施计划](019-multi-region-history.md)

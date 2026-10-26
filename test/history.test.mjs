@@ -121,7 +121,8 @@ test('history HTTP routes validate queries, hide files, and return original-imag
   const server=createApp({service});server.listen(0,'127.0.0.1');await once(server,'listening');t.after(()=>{server.close();server.closeAllConnections();});
   const base=`http://127.0.0.1:${server.address().port}`;
   const catalog=await (await fetch(`${base}/api/history`)).json();assert.ok(catalog.months.includes('2018-09'));assert.ok(!catalog.months.includes('2018-08'));
-  for(const path of ['/api/history?month=2024-13','/api/history?market=en-US','/api/history/image?date=2024-04-31'])assert.equal((await fetch(base+path)).status,400);
+  for(const path of ['/api/history?month=2024-13','/api/history?market=unknown','/api/history/image?date=2024-04-31'])assert.equal((await fetch(base+path)).status,400);
+  const us=await (await fetch(`${base}/api/history?market=en-US`)).json();assert.equal(us.market,'en-US');assert.equal(us.firstMonth,'2010-01');
   assert.equal((await fetch(`${base}/.history/2024-04.json`)).status,404);
   assert.equal((await fetch(`${base}/api/history/image?date=2024-04-03`)).status,404);
   assert.equal((await fetch(`${base}/api/history?month=2024-04`)).status,200);

@@ -55,14 +55,14 @@ body.viewer-open{position:fixed;width:100%;overflow:hidden}
   .gallery.is-fullscreen .download-button{padding:12px}
 }
 
-/* China history: a single month at a time; images enter the viewport on demand. */
-.history-controls{padding:18px 22px;margin-bottom:22px;border:1px solid var(--line);border-radius:12px;background:#eeefe7}
+/* Regional history: a single month at a time; images enter the viewport on demand. */
+.history-controls{width:min(100%,740px);margin:0 auto 22px;padding:14px 18px 12px;border:1px solid #dce3d4;border-radius:16px;background:linear-gradient(115deg,#f1f3eb,#f9faf6);box-shadow:0 3px 16px #2f493206}
 .history-picker{display:flex;align-items:center;flex-wrap:wrap;gap:18px;color:var(--green);font-size:13px}
-.history-picker>span{margin-right:auto;font-weight:600}
-.history-date-picker{display:grid;grid-template-columns:20px minmax(0,1.25fr) 1px minmax(0,1fr);align-items:center;gap:6px;width:272px;max-width:100%;padding:4px 6px 4px 12px;background:#fafbf7;border:1px solid #d1d8ca;border-radius:12px;box-shadow:0 2px 5px #263e2d05;transition:border-color .18s,box-shadow .18s}
+.history-caption{display:grid;gap:5px;margin-right:auto;white-space:nowrap}.history-caption strong{font-size:13px;font-weight:600}.history-caption>span{font-size:11px;color:#6b7763;letter-spacing:.04em}
+.history-date-picker{display:grid;grid-template-columns:18px minmax(0,1fr) 1px minmax(0,1.25fr) 1px minmax(0,.85fr);align-items:center;gap:6px;width:350px;max-width:100%;padding:4px 6px 4px 12px;background:#fafbf7;border:1px solid #d1d8ca;border-radius:12px;box-shadow:0 2px 5px #263e2d05;transition:border-color .18s,box-shadow .18s}
 .history-calendar{width:18px;height:18px;color:#73836a}
 .history-date-field{position:relative;min-width:0}
-.history-date-picker select{-webkit-appearance:none;appearance:none;display:block;width:100%;min-height:44px;margin:0;padding:0 30px 0 10px;font:inherit;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.4;color:#304936;background:transparent;border:1px solid transparent;border-radius:7px;cursor:pointer;transition:background .18s}
+.history-date-picker select{-webkit-appearance:none;appearance:none;display:block;width:100%;min-height:44px;margin:0;padding:0 30px 0 10px;font:inherit;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.4;color:#304936;background:transparent;border:1px solid transparent;border-radius:7px;cursor:pointer;transition:background .18s}
 .history-select-arrow{position:absolute;right:10px;top:50%;width:11px;height:11px;transform:translateY(-50%) rotate(90deg);color:#7c8976;pointer-events:none}
 .history-date-divider{height:22px;background:#dce1d5}
 .history-date-picker:focus-within{border-color:#8b9c80;box-shadow:0 0 0 3px #344e4010}
@@ -70,8 +70,8 @@ body.viewer-open{position:fixed;width:100%;overflow:hidden}
 @media(hover:hover){.history-date-picker select:hover{background:#eef2e8}}
 @media(prefers-reduced-motion:reduce){.history-date-picker,.history-date-picker select{transition:none}}
 @media(forced-colors:active){.history-date-picker{border-color:ButtonText;box-shadow:none}.history-date-divider{background:ButtonText}.history-calendar,.history-select-arrow{color:ButtonText}.history-date-picker select:focus-visible{outline-color:Highlight}}
-.history-status{font-size:11px;line-height:1.9;margin:12px 0 0;color:#68735f}
-.history-status{color:#3f5937;min-height:21px}.history-controls[hidden]{display:none}
-@media(max-width:700px){.primary-nav{gap:18px}.history-controls{padding:16px}.history-picker{gap:12px}.history-picker>span{width:100%}.history-date-picker{width:272px}}
+.history-status{font-size:11px;line-height:1.7;margin:9px 0 0;color:#56684c;min-height:19px}.history-status:before{content:"";display:inline-block;width:5px;height:5px;margin:0 7px 2px 0;border-radius:50%;background:#839b6f}.history-controls[hidden]{display:none}
+@media(max-width:700px){.primary-nav{gap:18px}}
+@media(max-width:560px){.history-controls{padding:12px 14px;border-radius:13px}.history-picker{gap:10px}.history-caption{display:flex;align-items:center;justify-content:space-between;width:100%;gap:8px}.history-caption>span{font-size:10px}.history-date-picker{width:100%;padding-left:8px;gap:3px}.history-date-picker select{padding-left:6px;padding-right:23px}.history-select-arrow{right:7px}.history-status{margin-top:8px}}
 .thumb-history.thumb-broken:before{content:"图片暂不可用"}
 .history-view #photo-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}

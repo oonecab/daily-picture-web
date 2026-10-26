@@ -81,12 +81,17 @@ async function httpFixture(t,{maxQueued=0,timeout=30000}={}) {
   let calls=0;
   const image=async()=>{calls++;return bytes;};
   const server=createApp({service:{image,history:{image}},imageReads:pool,imageSendTimeoutMs:timeout});
+  // Keep a real HTTP response open deterministically. A paused client alone can
+  // still accept the entire body into Windows socket buffers and emit finish.
+  server.prependListener('request',(request,response)=>{
+    if(request.headers['x-test-stall']==='1')response.end=()=>{response.flushHeaders();return response;};
+  });
   server.listen(0,'127.0.0.1');await once(server,'listening');
   const requests=[];
   t.after(()=>{for(const request of requests)request.destroy();server.closeAllConnections();server.close();});
   const base=`http://127.0.0.1:${server.address().port}`;
   async function slow(path='/api/history/image?date=2026-10-21&id=OHR.Slow') {
-    const request=http.get(base+path);requests.push(request);request.on('error',()=>{});
+    const request=http.get(base+path,{headers:{'x-test-stall':'1'}});requests.push(request);request.on('error',()=>{});
     const [response]=await once(request,'response');response.on('error',()=>{});response.pause();
     return {request,response};
   }

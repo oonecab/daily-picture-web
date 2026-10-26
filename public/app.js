@@ -34,13 +34,14 @@ const downloadUrls = new Set();
 function images() { return state.mode === 'favorites' ? state.favorites : state.mode === 'history' ? state.historyImages : state.images; }
 function selected() { return images()[state.index]; }
 function imageUrl(image, size = '1920x1080', direct = true) {
-  if(image.history === true && image.market === 'zh-CN') {
+  if(image.history === true) {
     const variant=size==='640x360'?'thumb':size==='original'?'original':'preview';
-    return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant,...(direct&&variant!=='thumb'?{direct:'1'}:{})})}`;
+    return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant,...(image.market!=='zh-CN'?{market:image.market}:{}),...(direct&&variant!=='thumb'?{direct:'1'}:{})})}`;
   }
   return `/api/image?${new URLSearchParams({id:image.id,size})}`;
 }
-function liked(image) { return state.favorites.some((item) => item.id === image?.id); }
+function sameImage(a,b) { return a?.id===b?.id && a?.date===b?.date && a?.market===b?.market; }
+function liked(image) { return state.favorites.some((item) => sameImage(item,image)); }
 function saveSettings() { writeStored('settings', { market: state.market, autoRefresh: state.autoRefresh, contain: state.contain }); }
 function friendlyDate(date) { return date ? date.replaceAll('-', '.') : '—'; }
 function shortDate(date) { return date ? `${Number(date.slice(5, 7))}月${Number(date.slice(8, 10))}日` : ''; }
@@ -229,7 +230,7 @@ async function setMode(mode) {
   const favorites = mode === 'favorites';
   const history = mode === 'history';
   state.historyRequest?.abort(); state.historyGeneration++; state.historyBusy=false;
-  $('history-controls').hidden=!history; $('market').disabled=history;
+  $('history-controls').hidden=!history;
   $('history-tab').classList.toggle('active',history); $('history-tab').setAttribute('aria-pressed',String(history));
   $('browse-tab').classList.toggle('active', mode === 'browse'); $('browse-tab').setAttribute('aria-pressed', String(mode === 'browse'));
   $('notice').hidden = history || !state.stale;
@@ -261,7 +262,12 @@ async function loadHistory(force=false) {
   const controller=new AbortController();state.historyRequest=controller;
   const generation=++state.historyGeneration;
   const month=state.historyMonth;
+  const market=state.market;
+  const query=values=>{const params=new URLSearchParams({...values,...(market!=='zh-CN'?{market}:{})});return '/api/history'+(params.size?'?'+params:'');};
   state.historyBusy=true;state.historyError=null;state.historyImages=[];state.index=0;
+  $('history-label').textContent=`${MARKET_NAMES[market]} · 历史影像`;
+  $('history-market').value=market;
+  $('history-year').disabled=true;$('history-month').disabled=true;
   $('history-status').textContent='正在读取所选月份…';
   $('filmstrip-title').textContent=month ? `${month.replace('-',' 年 ')} 月` : '按月回望';
   $('filmstrip-subtitle').textContent='正在读取所选月份…';
@@ -269,22 +275,23 @@ async function loadHistory(force=false) {
   const timeout=setTimeout(()=>controller.abort(),25000);
   const json=async url=>{const response=await fetch(url,{signal:controller.signal,cache:'no-store'});const data=await response.json();if(!response.ok)throw new Error(data.error || '历史归档暂时不可用。');return data;};
   try {
-    if(!state.historyCatalog || force) {
-      const catalog=await json('/api/history');
+    if(!state.historyCatalog || (state.historyCatalog.market||'zh-CN')!==market || force) {
+      const catalog=await json(query({}));
       if(generation!==state.historyGeneration)return;
-      if(!Array.isArray(catalog.months) || !catalog.months.length || !catalog.months.every(m=>/^\d{4}-(0[1-9]|1[0-2])$/.test(m)))throw new Error('历史年月目录格式异常。');
+      if((catalog.market||'zh-CN')!==market || !Array.isArray(catalog.months) || !catalog.months.length || !catalog.months.includes(catalog.latest) || !catalog.months.every(m=>/^\d{4}-(0[1-9]|1[0-2])$/.test(m)))throw new Error('历史年月目录格式异常。');
       state.historyCatalog=catalog;
-      state.historyMonth=month || catalog.latest;
+      state.historyMonth=catalog.months.includes(month)?month:catalog.latest;
     }
     historyPickers();
+    $('history-year').disabled=false;$('history-month').disabled=false;
     const requested=state.historyMonth;
-    const data=await json(`/api/history?month=${requested}${force?'&refresh=1':''}`);
+    const data=await json(query({month:requested,...(force?{refresh:'1'}:{})}));
     if(generation!==state.historyGeneration || state.mode!=='history')return;
-    if(data.month!==requested || !Array.isArray(data.images) || data.images.length>31 || !data.images.every(i=>validImage(i) && i.history===true && i.market==='zh-CN' && i.date.startsWith(requested)))throw new Error('历史图片列表格式异常。');
+    if((data.market||'zh-CN')!==market || data.month!==requested || !Array.isArray(data.images) || data.images.length>31 || !data.images.every(i=>validImage(i) && i.history===true && i.market===market && i.date.startsWith(requested)))throw new Error('历史图片列表格式异常。');
     state.historyImages=data.images;
     $('filmstrip-title').textContent=`${requested.replace('-',' 年 ')} 月 · ${data.images.length} 张`;
     $('filmstrip-subtitle').textContent='选择缩略图，查看当日影像';
-    $('history-status').textContent=data.stale ? (data.warning || '正在显示已保存的历史索引。') : data.images.length ? `已读取 ${data.images.length} 条记录，图片随浏览加载。` : '这个月暂时没有收录图片，可选择其他月份。';
+    $('history-status').textContent=data.stale ? (data.warning || '正在显示已保存的历史索引。') : data.images.length ? `${data.images.length} 张影像 · 图片随浏览加载` : '这个月暂时没有收录图片，可选择其他月份。';
     if(state.historyCatalog.sync?.error) $('history-status').textContent+=` ${state.historyCatalog.sync.error}`;
   } catch(error) {
     if(generation!==state.historyGeneration || state.mode!=='history')return;
@@ -347,7 +354,7 @@ function toggleFavorite() {
   const item = selected(); if (!item) return;
   const exists = liked(item);
   if (!exists && state.favorites.length >= 200) { toast('收藏已达到 200 张，请先移除一些图片。'); return; }
-  state.favorites = exists ? state.favorites.filter((entry) => entry.id !== item.id) : [{ ...item, savedAt: new Date().toISOString() }, ...state.favorites];
+  state.favorites = exists ? state.favorites.filter((entry) => !sameImage(entry,item)) : [{ ...item, savedAt: new Date().toISOString() }, ...state.favorites];
   const saved = writeStored('favorites', state.favorites);
   if (state.mode === 'favorites') { stopSlideshow(); renderSelection(); }
   else { favoriteButton(); renderStrip(); }
@@ -355,7 +362,7 @@ function toggleFavorite() {
 }
 function historyDownloadSize() {
   const size=selected()?.availability;
-  $('history-download-size').textContent=size?.width && size?.height ? `${size.width} × ${size.height} · 最近校验尺寸` : '下载 Bing 提供的原图，尺寸以实际文件为准';
+  $('history-download-size').textContent=size?.width && size?.height ? `${size.width} × ${size.height} · 最近校验尺寸` : '下载来源提供的原图，尺寸以实际文件为准';
 }
 async function openDialog(id) {
   stopSlideshow();
@@ -498,7 +505,7 @@ async function download(size) {
     try{blob=await read(true);}catch(error){if(!item.history||signal.aborted)throw error;blob=await read(false);}
     const objectUrl = URL.createObjectURL(blob);
     downloadUrls.add(objectUrl);
-    const link = document.createElement('a'); link.href = objectUrl; link.download = item.history ? `Bing_CN_${item.date}.jpg` : `${item.id}_${size}.jpg`;
+    const link = document.createElement('a'); link.href = objectUrl; link.download = item.history ? `Bing_${item.market.split('-')[1]}_${item.date}.jpg` : `${item.id}_${size}.jpg`;
     document.body.append(link); link.click(); link.remove();
     setTimeout(() => { URL.revokeObjectURL(objectUrl); downloadUrls.delete(objectUrl); }, 60000);
     $('download-dialog').close();
@@ -520,9 +527,18 @@ $('history-year').addEventListener('change', () => {
   historyPickers(); return loadHistory();
 });
 $('history-month').addEventListener('change', () => {state.historyMonth=$('history-month').value;return loadHistory();});
-$('market').addEventListener('change', () => {
-  stopSlideshow(); state.market = $('market').value; saveSettings(); restoreArchive(); setMode('browse'); loadArchive();
-});
+async function setMarket(market) {
+  if(!Object.hasOwn(MARKET_NAMES,market)||market===state.market)return;
+  stopSlideshow();state.request?.abort();state.generation++;state.busy=false;
+  $('refresh').disabled=false;$('refresh').classList.remove('busy');
+  state.market=market;$('market').value=market;$('history-market').value=market;
+  state.historyCatalog=null;state.historyImages=[];
+  saveSettings();restoreArchive();status();
+  if(state.mode==='history')return loadHistory();
+  await setMode('browse');return loadArchive();
+}
+$('market').addEventListener('change', () => setMarket($('market').value));
+$('history-market').addEventListener('change', () => setMarket($('history-market').value));
 $('refresh').addEventListener('click', () => state.mode === 'history' ? loadHistory(true) : loadArchive(true));
 $('previous').addEventListener('click', () => move(-1));
 $('next').addEventListener('click', () => move(1));
@@ -552,7 +568,7 @@ $('details').addEventListener('click', () => {
   $('detail-history').hidden=!archived;
   const sourceNames={npanuhin:'npanuhin/Bing-Wallpaper-Archive',zxyongyo:'zxyongyo/bing-daily-wallpaper',bing:'Bing 每日索引'};
   const sourceLabels=(Array.isArray(item.sources)?item.sources:[item.source]).map(key=>sourceNames[key]).filter(Boolean);
-  $('detail-history').textContent = archived ? `索引来源：${sourceLabels.join('、') || 'Bing 每日索引'}。图片由本站保存，下载提供已保存的原图；尺寸以实际图片为准。` : '';
+  $('detail-history').textContent = archived ? `索引来源：${sourceLabels.join('、') || 'Bing 每日索引'}。缩略图由本站保存，预览与原图按需从 Bing 或历史归档获取；尺寸以实际图片为准。` : '';
   openDialog('details-dialog');
 });
 document.querySelectorAll('dialog').forEach((dialog) => {

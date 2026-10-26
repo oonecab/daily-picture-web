@@ -8,6 +8,8 @@ on:
     paths:
       - '.github/workflows/collect-wallpapers.yml'
       - 'tools/collect-index.mjs'
+      - 'lib/markets.mjs'
+      - 'lib/owned-index.mjs'
 permissions:
   contents: write
 concurrency:
@@ -40,8 +42,10 @@ jobs:
             git -C "$destination" checkout --orphan "$branch"
             git -C "$destination" rm -rf .
           fi
-      - name: Collect the latest fifteen days from Bing
-        run: node tools/collect-index.mjs --output "$RUNNER_TEMP/wallpaper-data"
+      - name: Collect the latest fifteen days for six regions
+        id: collect
+        continue-on-error: true
+        run: node tools/collect-index.mjs --market all --output "$RUNNER_TEMP/wallpaper-data"
       - name: Save the daily index
         shell: bash
         run: |
@@ -51,6 +55,9 @@ jobs:
           git config user.email hisaohisaochao@foxmail.com
           git add -- '*.json'
           if ! git diff --cached --quiet; then
-            git commit -m "data: collect Bing China daily index"
+            git commit -m "data: collect six-region Bing daily indexes"
             git push origin HEAD:refs/heads/codex/wallpaper-data
           fi
+      - name: Report a partial collection failure after saving successful regions
+        if: steps.collect.outcome == 'failure'
+        run: exit 1

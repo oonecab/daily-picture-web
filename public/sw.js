@@ -1,5 +1,5 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell-1.5.0`;
+const SHELL = `${VERSION}-shell-1.6.0`;
 const HISTORY = `${VERSION}-history`;
 let historyWrites=Promise.resolve();
 const DATA = `${VERSION}-data`;

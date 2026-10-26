@@ -42,3 +42,5 @@
 - [017 年月选择器优化](017-history-picker.md)
 
 - [018 双来源历史与页脚署名](018-dual-history.md)
+
+- [023 多地区历史与紧凑筛选](023-multi-region-history.md)

@@ -1,10 +1,10 @@
-# 中国区历史归档契约
+# 多地区历史归档契约
 
-状态：CURRENT，1.5.0；2026-10-21。本项目独立编写适配代码，历史来源仅供一次性导入，日常网站读取自己的索引和缩略图，大图按需从 Bing 读取。
+状态：CURRENT，1.6.0；2026-10-26。本项目独立编写适配代码。日常月索引与缩略图来自本站；中国大图按需从 Bing 或保护副本读取，海外归档大图通过本站读取已索引的固定归档图片。
 
 ## 一次性历史来源
 
-[npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 提供中国区月 JSON `https://bing.npanuhin.me/CN-zh.YYYY.MM.json` 与图片副本 `https://bing.npanuhin.me/CN/zh/YYYY-MM-DD.jpg`；[zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 提供月 JSON `https://raw.githubusercontent.com/zxyongyo/bing-daily-wallpaper/master/archives/YYYY/YYYY-MM/YYYY-MM.json`。两个项目软件为 MIT，摄影作品不因索引导入成为本站 MIT 内容；见 [第三方声明](../../THIRD_PARTY_NOTICES.md)。
+[npanuhin/Bing-Wallpaper-Archive](https://github.com/npanuhin/Bing-Wallpaper-Archive) 提供固定地区月 JSON `https://bing.npanuhin.me/<国家>-<语言>.YYYY.MM.json` 与图片副本 `https://bing.npanuhin.me/<国家>/<语言>/YYYY-MM-DD.jpg`；允许组合仅为 CN-zh、US-en、GB-en、JP-ja、DE-de、FR-fr；[zxyongyo/bing-daily-wallpaper](https://github.com/zxyongyo/bing-daily-wallpaper) 提供月 JSON `https://raw.githubusercontent.com/zxyongyo/bing-daily-wallpaper/master/archives/YYYY/YYYY-MM/YYYY-MM.json`。两个项目软件为 MIT，摄影作品不因索引导入成为本站 MIT 内容；见 [第三方声明](../../THIRD_PARTY_NOTICES.md)。
 
 npanuhin 消费 date、caption/title、description、copyright、url、bing_url；url 必须精确匹配固定图片路径。zxyongyo 消费 date、title、copyright、url_4k（否则 url_1080），其他尺寸若提供必须同一 ID；导入工具把冲突记录隔离到报告，不猜测 URL。标题上限 300、归档说明 5000、版权 1000 字符；每月最多 31 条唯一真实日期。上游日期不做额外时区平移，旧链接可能包含其他市场 ID。
 
@@ -14,20 +14,20 @@ GitHub 原始入口最多 8 秒，传输/408/429/5xx 故障可回退同仓库 Co
 
 ## 自有每日数据
 
-工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。latest.json 包含 schemaVersion=1、market=zh-CN、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。同一批 Bing 数据出现同日不同 ID 时，latest.json 与月文件都取发布时间较新的一项。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客请求不读取该分支或两个历史项目；后台同步读取分支并从 Bing 保存缩略图，预览与原图在查看/下载时读取。
+工作流从 Bing 的近期接口采集，写入自己的 `codex/wallpaper-data` 分支。中国 latest.json 与海外 markets/<market>/latest.json 分别包含 schemaVersion=1、对应 market、fetchedAt、1～15 项 images；月文件保持 schemaVersion=1，按日期合并，其他月份保留。同一批 Bing 数据出现同日不同 ID 时，latest.json 与月文件都取发布时间较新的一项。服务从 HISTORY_REPOSITORY（默认 oonecab/daily-picture-web）的该固定路径读取，沿用上述 GitHub 传输校验。每日记录只保留受限文本、有效日期/ID、允许的 Bing 来源链接，不保留未知对象字段。访客元数据请求不读取该分支或两个历史项目的索引；后台同步读取分支并从 Bing 保存缩略图，预览与原图在查看/下载时读取。
 
 ## 本地 API
 
 | 请求 | 返回 |
 | --- | --- |
-| GET /api/history | market、降序 months、latest、firstMonth:2018-09、sources 两历史来源信息、sync 同步状态。可选 market 只接受 zh-CN |
+| GET /api/history | market、降序 months、latest、firstMonth、sources、该区 sync；可选 market 接受 zh-CN/en-US/en-GB/ja-JP/de-DE/fr-FR，省略为 zh-CN。下限按地区为 2018-09/2010-01/2024-04 |
 | GET /api/history?month=2024-04 | 本站月索引及 imported、stale、warning；refresh=1 仍只重读本站文件，不触发第三方访问。未导入返回 images:[] / imported:false 和明确提示 |
 | GET /api/history/image?date=2024-04-03&id=OHR.…&size=thumb | 本站 JPEG 缩略图，宽度最多 640 |
-| 同一路由 size=preview | 受保护 JPEG 预览或按需读取 Bing 预览，目标宽度 1920 |
-| 同一路由 size=original 或省略 size | 受保护原图或按需读取 Bing 原图；download=1 附件名 Bing_CN_YYYY-MM-DD.jpg |
-| 上述路由 direct=1 | 校验日期/当前 ID 后 302 到固定 Bing 地址；受保护图片仍返回本站 JPEG |
+| 同一路由 size=preview | 受保护 JPEG、Bing 预览或本站生成的海外归档预览，目标宽度 1920 |
+| 同一路由 size=original 或省略 size | 受保护原图或按需读取 Bing/海外归档原图；download=1 附件名 Bing_<国家>_YYYY-MM-DD.jpg |
+| 上述路由 direct=1 | 校验日期/当前 ID 后 302 到固定 Bing 地址；受保护图片及海外归档图片仍返回本站 JPEG |
 
-图片 ID 可选但前端始终传入，必须匹配当前日期索引；不同 ID/尺寸用不同 URL，隔离缓存。省略 size 沿用旧客户端原图行为。图片以 date 与 ID 的摘要定位，接口不接收 URL/路径。缩略图缺失时返回 404，由后台补齐；有受保护原图时可重建派生图。按需大图读取失败返回 502；容量不足返回 503。
+图片 ID 可选但前端始终传入，必须匹配当前日期索引；不同地区/ID/尺寸用不同 URL，隔离缓存。所有历史路由均接受 market，缺省中国与旧链接兼容；不支持的地区返回 400。省略 size 沿用旧客户端原图行为。图片以 date 与 ID 的摘要定位，接口不接收 URL/路径。缩略图缺失时返回 404，由后台补齐；有受保护原图时可重建派生图。按需大图读取失败返回 502；容量不足返回 503。
 
 月条目保留 history:true、source:npanuhin|zxyongyo|bing、sources、可选 bingVariant、snapshot、availability。availability.thumbnailStored 表示缩略图已保存，stored 表示有本站原图；width/height 为最近校验的原图尺寸，可缺省。delivery.mode=bing|local，original/preview 记录检查时间对应的变体、尺寸、字节数与摘要；这些字段不是任意 URL。providers 与 importedAt 为导入溯源字段，旧 providerFetchedAt 兼容解释为 npanuhin 时间；schemaVersion 保持 1。
 
@@ -40,3 +40,7 @@ sync 字段包括 lastSuccessAt（索引保存）、fetchedAt（Actions 采集�
 持久化、时间、采集、合并、可用性和加载规则统一见 [历史规则](../rules/history.md)，验证证据见 [自有图库验收](../testing/owned-history.md)。
 
 1.5.0 采集只持久化缩略图；客户端 direct=1 使用浏览器直连，CORS/网络失败可请求同一索引的本站代理。临时图片预算覆盖每日精选与历史代理，保护副本独立保留。迁移要求完整备份校验、全量链接报告、停止写入及精确清理，见[部署](../deployment.md)。
+
+1.6.0 海外合成标识为 OHR.History<国家>_YYYYMMDD，仅定位固定归档，不传给 Bing。archive URL 必须在导入时精确匹配该地区日期；运行时由地区配置重建，不消费任意外部 URL。跨地区原图/预览共享缓存容量，读盘键包含存储根，HTTP 缓冲区键包含 market。普通 API 不开放批量导入或磁盘管理。海外批量导入及容量停止约束见[历史规则](../rules/history.md#160-海外轻量导入与取图)。
+
+固定海外归档部分 JPEG 响应缺少 Content-Type。仅该固定主机的空类型或 application/octet-stream 可在 JPEG 签名正确时进入完整解码；显式非图片类型仍拒绝，20 MiB 文件与 40 百万像素上限不变。此兼容不应用于 Bing 或任意主机。

@@ -11,7 +11,7 @@
 ## 服务
 
 - HTTPS www.bing.com / cn.bing.com：固定 Bing 归档和图片；浏览器直连历史大图，服务端按需读取与缩略图采集
-- HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本
+- HTTPS bing.npanuhin.me：导入月索引与图片；海外已索引图片由服务器按需读取固定路径
 - HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库
 - HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束
 - GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支
@@ -51,11 +51,11 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 
 1.3.1 原始文件入口出现传输异常时，可在同一请求预算内使用 GitHub 官方 API。增加只读出站域名，环境变量、端口与持久化目录不变。
 
-## 自有图库运行配置（当前 1.5.0）
+## 自有图库运行配置（当前 1.6.0）
 
-`HISTORY_REPOSITORY` 为 `owner/repository`，默认 `oonecab/daily-picture-web`；fork 后填写自己的仓库。只读取固定 `codex/wallpaper-data/latest.json`，不能设置任意 URL。`HISTORY_COLLECTOR=off` 关闭当前服务后台同步，适用于隔离验证；其他值或未设置时启用。不影响 GitHub Actions 定时任务。
+`HISTORY_REPOSITORY` 为 `owner/repository`，默认 `oonecab/daily-picture-web`；fork 后填写自己的仓库。只读取固定 `codex/wallpaper-data/latest.json` 和 `codex/wallpaper-data/markets/<允许地区>/latest.json`，不能设置任意 URL。`HISTORY_COLLECTOR=off` 关闭当前服务后台同步，适用于隔离验证；其他值或未设置时启用。不影响 GitHub Actions 定时任务。
 
-服务启动及每轮结束一小时后同步自己的数据分支，随后从 Bing 获取缺失缩略图，校验并保存到 `HISTORY_DIR/media`。历史预览和原图按需从 Bing 加载。Actions 每日计划北京时间 05:17 执行，允许手动触发；使用 GitHub 自动提供的 GITHUB_TOKEN，仅授予同仓库 contents:write，不需要 SSH 或额外 Secret。新 fork 需启用其 Actions 定时工作流；首次执行会创建数据分支。运行中断超过最近十五日窗口的缺口无法保证补回。
+服务启动及每轮结束一小时后顺序同步自己的六地区数据分支文件，随后从 Bing 获取缺失缩略图，校验并保存到 `HISTORY_DIR/media`。历史预览和原图按需从 Bing 加载。Actions 每日计划北京时间 05:17 执行，允许手动触发；使用 GitHub 自动提供的 GITHUB_TOKEN，仅授予同仓库 contents:write，不需要 SSH 或额外 Secret。新 fork 需启用其 Actions 定时工作流；首次执行会创建数据分支。运行中断超过最近十五日窗口的缺口无法保证补回。
 
 安装使用 `npm ci`，必须在目标 OS/架构安装 Sharp 原生组件，不能复制 macOS node_modules 到 Linux。索引、缩略图及受保护副本需备份；临时图片统一按 256 MiB 预算淘汰。正式服务保持单进程；导入工具在隔离目录续跑，停服务后迁移并保留旧目录用于回滚。以上为当前事实，前述版本段落为迁移历史。
 
@@ -66,3 +66,9 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 应用的 .cache/images 是全部服务端临时图片的统一存放处，上限 256 MiB。Nginx 图片代理设置 proxy_buffering off、proxy_max_temp_file_size 0，并关闭 proxy_cache，避免在应用预算以外产生缓存或慢客户端下载临时文件。索引和永久缩略图、受保护原图不计入临时缓存预算。
 
 环境变量名与端口保持不变；迁移工具必须在停止写入进程后运行，备份文件及逐图报告置于私有路径。
+
+## 1.6.0 多地区配置
+
+不增加环境变量、服务或端口。已有 HISTORY_DIR 根继续用于中国，海外使用其 markets/<market>/ 子目录；服务账户需具有同等写权限。海外归档图片由服务器出站访问 bing.npanuhin.me，浏览器 CSP 无需增加该站。导入请使用独立暂存目录，完成逐文件验证后停服务接入；不覆盖中国历史目录。10 GiB 空间停止阈值属于 tools/import-regions.mjs，日常全部地区临时图片缓存仍共用 256 MiB。
+
+Windows 使用 PowerShell 执行，远程 Linux 的部署脚本应保存为 LF；实例凭据、绝对部署路径、日志及图库留在私有运维目录。

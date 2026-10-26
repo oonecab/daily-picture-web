@@ -278,6 +278,33 @@ test('an empty collection keeps the exit control visible until native fullscreen
 
 const historyRow=(date)=>({id:`OHR.History${date.replaceAll('-','')}`,date,history:true,market:'zh-CN',title:date,description:'历史风景',credit:'© Test',copyright:'© Test',snapshot:true,source:'npanuhin'});
 const historyCatalog={months:['2026-10','2026-09','2024-04'],latest:'2026-10',sync:{}};
+
+test('regional history ignores late replies, clamps years and keeps cross-region favorites distinct',async()=>{
+  let release;
+  const fixture=(market,month)=>({ok:true,json:async()=>({market,month,images:[{...historyRow(`${month}-01`),id:'OHR.Shared',market,title:market}]})});
+  const b=browser({fetchImpl:url=>{
+    if(!url.startsWith('/api/history'))return new Promise(()=>{});
+    const query=new URL(url,'http://localhost').searchParams,market=query.get('market')||'zh-CN',month=query.get('month');
+    if(!month)return Promise.resolve({ok:true,json:async()=>({market,months:market==='en-US'?['2026-10','2010-01']:['2026-10','2024-04'],latest:'2026-10',sync:{}})});
+    if(market==='en-US'&&month==='2010-01')return new Promise(resolve=>{release=()=>resolve(fixture(market,month));});
+    return Promise.resolve(fixture(market,month));
+  }});
+  await b.get('history-tab').emit('click');await b.get('favorite').emit('click');
+  b.get('history-market').value='en-US';await b.get('history-market').emit('change');
+  assert.equal(b.get('refresh').disabled,false);
+  assert.equal(b.get('history-controls').hidden,false);assert.equal(b.get('market').value,'en-US');
+  assert.match(b.get('hero-image').src,/market=en-US/);assert.equal(b.get('favorite').getAttribute('aria-pressed'),'false');
+  await b.get('favorite').emit('click');assert.equal(b.get('favorite-count').textContent,'3');
+  b.get('history-year').value='2010';const pending=b.get('history-year').emit('change');
+  await Promise.resolve();
+  b.get('market').value='ja-JP';await b.get('market').emit('change');
+  assert.equal(b.get('history-year').value,'2026');assert.equal(b.get('history-market').value,'ja-JP');
+  release();await pending;assert.equal(b.get('photo-title').textContent,'ja-JP');
+  assert.equal(b.get('history-label').textContent,'日本 · 历史影像');
+  await b.get('favorites-tab').emit('click');assert.match(b.get('hero-image').src,/market=en-US/);
+  await b.get('favorite').emit('click');assert.equal(b.get('favorite-count').textContent,'2');
+  assert.equal(b.get('photo-title').textContent,'zh-CN');
+});
 function historyFetch(url){
   if(url==='/api/history')return Promise.resolve({ok:true,json:async()=>historyCatalog});
   if(url.startsWith('/api/history?')){const month=new URL(url,'http://localhost').searchParams.get('month');return Promise.resolve({ok:true,json:async()=>({month,images:Array.from({length:10},(_,i)=>historyRow(`${month}-${String(i+1).padStart(2,'0')}`))})});}
@@ -288,7 +315,7 @@ test('history loads one month and starts at most two visible thumbnails; favorit
   const b=browser({observe:true,fetchImpl:url=>{calls.push(url);return historyFetch(url);}});
   await b.get('history-tab').emit('click');
   assert.equal(b.get('history-controls').hidden,false);
-  assert.equal(b.get('market').disabled,true);
+  assert.equal(b.get('market').disabled,false);
   assert.deepEqual(calls.filter(u=>u.startsWith('/api/history')),['/api/history','/api/history?month=2026-10']);
   assert.equal(b.observed.length,10);assert.ok(b.observed.every(i=>!i.src));
   b.intersect(b.observed.slice(0,4).map(target=>({isIntersecting:true,target})));
@@ -334,7 +361,7 @@ test('historical downloads use original metadata and never label a resized previ
   const hero=b.get('hero-image');hero.naturalWidth=1920;hero.naturalHeight=1080;hero.onload();
   assert.equal(b.get('history-download-size').textContent,'3840 × 2160 · 最近校验尺寸');
   b.get('download-dialog').close();await b.get('next').emit('click');await b.get('download').emit('click');
-  assert.equal(b.get('history-download-size').textContent,'下载 Bing 提供的原图，尺寸以实际文件为准');
+  assert.equal(b.get('history-download-size').textContent,'下载来源提供的原图，尺寸以实际文件为准');
 });
 test('the supplementary history source is identified in picture details',async()=>{
   const b=browser({fetchImpl:url=>url.startsWith('/api/history?')?Promise.resolve({ok:true,json:async()=>({month:'2026-10',images:[{...historyRow('2026-10-01'),snapshot:false,source:'zxyongyo'}]})}):historyFetch(url)});

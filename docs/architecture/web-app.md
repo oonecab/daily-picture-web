@@ -84,3 +84,11 @@ GitHub Actions → Bing 最近十五日 → 本仓库 codex/wallpaper-data 月�
 历史大图请求带 direct=1：服务验证日期和当前 ID 后返回固定 Bing URL 的 302；受保护图片返回本站文件。浏览器使用匿名 CORS 取图，失败时改用同日期、ID、尺寸的本站按需代理。代理与每日精选共用 image-cache，所有写入前串行淘汰到 256 MiB 预算以内；反向代理禁止额外缓存/临时落盘。读盘、上游、解码与 HTTP 发送各自保留有界资源限制。
 
 详情见[历史规则](../rules/history.md)、[契约](../contracts/history.md)、[迁移](../deployment.md)及[验证](../testing/hybrid-history.md)。
+
+## 1.6.0 当前多地区数据链路
+
+lib/markets.mjs 统一六地区时区、历史起始月、持久目录和自有索引路径。createBingService 懒创建独立 history 实例，月数据/同步状态按区隔离，共享上游、磁盘图片缓存和媒体读盘池；读盘键包含存储根，HTTP 键包含地区。syncAllHistory 顺序同步六区，逐区保留错误并继续其他地区。
+
+海外轻量导入只生成索引和缩略图，采用隔离目录、断点报告、进程锁、最多 4 并发与 10 GiB 空间停止阈值。日常读取海外归档大图时，本站根据已验证地区/日期构造固定 npanuhin 图片 URL，必要时回退同 ID Bing；浏览器不直连该归档站。预览由有界 Sharp 处理，图片尺寸分别进入同一个 256 MiB 临时缓存。中国根路径及保护副本不迁移。没有新依赖或数据库。
+
+前端以地区和月份读取目录，切换取消迟到请求，收藏身份包含地区/日期/ID。新筛选栏最大宽 740px，移动端分行。详情见[多地区验收](../testing/multi-region-history.md)。

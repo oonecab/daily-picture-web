@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { createBingService, HttpError, MARKETS } from './lib/bing.mjs';
+import { createBingService, HttpError, MARKETS, validateMarket } from './lib/bing.mjs';
 import { startHistoryCollector } from './lib/history.mjs';
 import { createImageReadPool } from './lib/image-reads.mjs';
 
@@ -26,7 +26,7 @@ function defaultService() {
 }
 export function startSavedHistoryCollector(service,onWarning=error=>console.warn(`[history sync] ${error.message}`)) {
   return startHistoryCollector({collect:async()=>{
-    const result=await service.syncHistory();
+    const result=await (service.syncAllHistory?service.syncAllHistory():service.syncHistory());
     // A completed sync has already persisted its precise image/freshness diagnosis.
     if(result.error)onWarning(new Error(result.error));
   },onError:async error=>{await service.history.markSyncError();onWarning(error);}});
@@ -67,23 +67,26 @@ export function createApp({ service = defaultService(), imageReads = createImage
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.5.0' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.6.0' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');
-        if (url.searchParams.has('market') && url.searchParams.get('market') !== 'zh-CN') throw new HttpError(400,'历史浏览目前支持中国区。');
+        const market=validateMarket(url.searchParams.get('market')||'zh-CN');
+        const history=service.historyFor?service.historyFor(market):service.history;
         return send(200, url.searchParams.has('month')
-          ? await service.history.month(url.searchParams.get('month'),url.searchParams.get('refresh')==='1')
-          : await service.history.catalog());
+          ? await history.month(url.searchParams.get('month'),url.searchParams.get('refresh')==='1')
+          : await history.catalog());
       }
       if (url.pathname === '/api/history/image') {
+        const market=validateMarket(url.searchParams.get('market')||'zh-CN');
+        const history=service.historyFor?service.historyFor(market):service.history;
         const date=url.searchParams.get('date'),id=url.searchParams.get('id'),size=url.searchParams.get('size') || 'original';
         if(url.searchParams.get('direct')==='1'){
-          const location=await service.history.remoteImage(date,id,size);
+          const location=await history.remoteImage(date,id,size);
           if(location){response.writeHead(302,{'Location':location,'Cache-Control':'no-store'});response.end();return;}
         }
-        return await sendImage(JSON.stringify(['history',date,id,size]),()=>service.history.image(date,id,size),
-          'public, max-age=86400',url.searchParams.get('download')==='1'?`Bing_CN_${date}.jpg`:null);
+        return await sendImage(JSON.stringify(['history',market,date,id,size]),()=>history.image(date,id,size),
+          'public, max-age=86400',url.searchParams.get('download')==='1'?`Bing_${MARKETS[market].country}_${date}.jpg`:null);
       }
       if (url.pathname === '/api/archive') {
         const result = await service.archive(url.searchParams.get('market') || 'zh-CN', url.searchParams.get('refresh') === '1');

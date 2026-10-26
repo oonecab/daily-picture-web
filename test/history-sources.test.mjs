@@ -34,7 +34,7 @@ test('two sources merge dates with archive metadata and same-picture fallback on
   const data=await service.history.month('2024-04');assert.equal(data.images.length,3);
   const same=data.images.find(i=>i.date==='2024-04-03');assert.equal(same.title,'归档说明');assert.equal(same.snapshot,true);
   assert.deepEqual(new Set(same.sources),new Set(['npanuhin','zxyongyo']));assert.equal(same.bingVariant,'1920x1080');
-  const different=data.images.find(i=>i.date==='2024-04-04');assert.equal(different.id,'OHR.Archive');assert.equal(different.bingVariant,undefined);
+  const different=data.images.find(i=>i.date==='2024-04-04');assert.equal(different.id,'OHR.Archive');assert.equal(different.bingVariant,'UHD');
 });
 test('a missing or failing provider does not discard the other source or saved daily rows',async t=>{
   const {service}=await setup(t,async url=>url.hostname==='raw.githubusercontent.com'?Response.json([oldRow('2024-04-03')]):new Response('',{status:503}));

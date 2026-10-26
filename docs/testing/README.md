@@ -38,3 +38,5 @@
 - [1.2.1 年月选择器验收](history-picker.md)
 
 - [1.3.0 双来源历史验收](dual-history.md)
+
+- [多地区历史验收](multi-region-history.md)

@@ -43,9 +43,9 @@
         "run": "npm ci",
         "cwd": ".",
         "platforms": [
-          "windows",
+          "linux",
           "macos",
-          "linux"
+          "windows"
         ],
         "requires": [
           "Node.js >=22、npm 和 npm registry 网络"
@@ -60,9 +60,9 @@
         "run": "node --test test/*.test.mjs",
         "cwd": ".",
         "platforms": [
-          "windows",
+          "linux",
           "macos",
-          "linux"
+          "windows"
         ],
         "requires": [
           "Node.js >=22",
@@ -76,9 +76,9 @@
         "run": "python -X utf8 tools/verify_research.py",
         "cwd": ".",
         "platforms": [
-          "windows",
+          "linux",
           "macos",
-          "linux"
+          "windows"
         ],
         "requires": [
           "Python >=3.10；只读资料快照和来源清单"
@@ -93,9 +93,9 @@
         "run": "node tools/check-syntax.mjs",
         "cwd": ".",
         "platforms": [
-          "windows",
+          "linux",
           "macos",
-          "linux"
+          "windows"
         ],
         "requires": [
           "Node.js >=22；本机实测 24.14.0"
@@ -122,7 +122,7 @@
     ],
     "services": [
       "HTTPS www.bing.com / cn.bing.com：固定 Bing 归档和图片；浏览器直连历史大图，服务端按需读取与缩略图采集",
-      "HTTPS bing.npanuhin.me：仅一次性历史导入所用的月索引与图片副本",
+      "HTTPS bing.npanuhin.me：导入月索引与图片；海外已索引图片由服务器按需读取固定路径",
       "HTTPS raw.githubusercontent.com：本站自有数据分支；一次性导入时读取历史来源仓库",
       "HTTPS api.github.com：上述固定 JSON 文件的备用入口，无令牌且受访问限额约束",
       "GitHub Actions：每日从 Bing 采集并通过 GITHUB_TOKEN 写入同仓库 codex/wallpaper-data 分支",

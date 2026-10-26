@@ -37,3 +37,5 @@
 - [013 年月选择器优化上线](013-history-picker.md)
 
 - [014 双来源历史上线](014-dual-history.md)
+
+- [019 多地区历史交付](019-multi-region-history.md)
