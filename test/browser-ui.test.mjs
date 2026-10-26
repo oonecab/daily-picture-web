@@ -279,6 +279,31 @@ test('an empty collection keeps the exit control visible until native fullscreen
 const historyRow=(date)=>({id:`OHR.History${date.replaceAll('-','')}`,date,history:true,market:'zh-CN',title:date,description:'历史风景',credit:'© Test',copyright:'© Test',snapshot:true,source:'npanuhin'});
 const historyCatalog={months:['2026-10','2026-09','2024-04'],latest:'2026-10',sync:{}};
 
+test('history footer follows loading, regional results and errors without borrowing the daily feed status',async()=>{
+  let release;
+  const b=browser({fetchImpl:url=>{
+    if(!url.startsWith('/api/history'))return new Promise(()=>{});
+    const q=new URL(url,'http://localhost').searchParams,market=q.get('market')||'zh-CN',month=q.get('month');
+    if(!month)return Promise.resolve({ok:true,json:async()=>({...historyCatalog,market})});
+    if(month==='2026-09')return Promise.resolve({ok:false,json:async()=>({error:'来源故障'})});
+    const response={ok:true,json:async()=>({market,month,images:[{...historyRow(month+'-01'),market}]})};
+    return market==='en-US'?new Promise(resolve=>{release=()=>resolve(response);}):Promise.resolve(response);
+  }});
+  await b.get('history-tab').emit('click');
+  assert.equal(b.get('sync-status').textContent,'历史影像 · 中国 · 2026-10 · 1 张');
+  b.get('history-market').value='en-US';const pending=b.get('history-market').emit('change');
+  await new Promise(setImmediate);
+  assert.equal(b.get('sync-status').textContent,'正在读取历史索引… · 美国');
+  release();await pending;
+  assert.equal(b.get('sync-status').textContent,'历史影像 · 美国 · 2026-10 · 1 张');
+  b.get('history-month').value='2026-09';await b.get('history-month').emit('change');
+  assert.equal(b.get('sync-status').textContent,'历史索引读取失败 · 美国');
+  await b.get('favorites-tab').emit('click');
+  assert.equal(b.get('sync-status').textContent,'我的收藏 · 1 张');
+  await b.get('browse-tab').emit('click');
+  assert.doesNotMatch(b.get('sync-status').textContent,/历史|收藏/);
+});
+
 test('regional history ignores late replies, clamps years and keeps cross-region favorites distinct',async()=>{
   let release;
   const fixture=(market,month)=>({ok:true,json:async()=>({market,month,images:[{...historyRow(`${month}-01`),id:'OHR.Shared',market,title:market}]})});

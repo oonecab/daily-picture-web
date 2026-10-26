@@ -55,6 +55,16 @@ function toast(message) {
   state.toastTimer = setTimeout(() => { $('toast').hidden = true; }, 4500);
 }
 function status() {
+  if(state.mode==='history') {
+    const region=MARKET_NAMES[state.market];
+    $('sync-status').textContent=state.historyBusy ? `正在读取历史索引… · ${region}` : state.historyError ? `历史索引读取失败 · ${region}`
+      : `${navigator.onLine?'历史影像':'离线历史'} · ${region} · ${state.historyMonth || '按月浏览'} · ${state.historyImages.length} 张`;
+    return;
+  }
+  if(state.mode==='favorites') {
+    $('sync-status').textContent=`我的收藏 · ${state.favorites.length} 张`;
+    return;
+  }
   const stamp = state.fetchedAt ? new Date(state.fetchedAt).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }) : '';
   const prefix = !navigator.onLine ? '离线浏览' : state.stale ? '浏览缓存' : '已同步';
   $('sync-status').textContent = state.fetchedAt ? `${prefix} · ${MARKET_NAMES[state.market]} · ${stamp}${state.autoRefresh ? ' · 每小时刷新' : ''}` : (state.busy ? '正在连接 Bing…' : '尚未获取图片');
@@ -65,6 +75,7 @@ function favoriteButton() {
   $('favorite').setAttribute('aria-label', active ? '取消收藏' : '收藏图片');
   $('favorite').title = active ? '取消收藏 · L' : '收藏图片 · L';
   $('favorite-count').textContent = String(state.favorites.length);
+  if(state.mode==='favorites')status();
 }
 function icon(name, className = 'icon') {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -239,6 +250,7 @@ async function setMode(mode) {
   $('filmstrip-title').textContent = history ? '按月回望' : favorites ? '我的风景收藏' : '最近十五日';
   $('filmstrip-subtitle').textContent = favorites ? '每一次心动，都有迹可循' : '让美好，多停留一会儿';
   renderSelection();
+  status();
   if(history) await loadHistory();
 }
 function move(delta, manual = true) {
@@ -265,6 +277,7 @@ async function loadHistory(force=false) {
   const market=state.market;
   const query=values=>{const params=new URLSearchParams({...values,...(market!=='zh-CN'?{market}:{})});return '/api/history'+(params.size?'?'+params:'');};
   state.historyBusy=true;state.historyError=null;state.historyImages=[];state.index=0;
+  status();
   $('history-label').textContent=`${MARKET_NAMES[market]} · 历史影像`;
   $('history-market').value=market;
   $('history-year').disabled=true;$('history-month').disabled=true;
@@ -299,7 +312,7 @@ async function loadHistory(force=false) {
     $('history-status').textContent=state.historyError;
   } finally {
     clearTimeout(timeout);
-    if(generation===state.historyGeneration) {state.historyBusy=false;if(state.mode==='history')renderSelection();}
+    if(generation===state.historyGeneration) {state.historyBusy=false;if(state.mode==='history'){renderSelection();status();}}
   }
 }
 async function loadArchive(force = false) {
