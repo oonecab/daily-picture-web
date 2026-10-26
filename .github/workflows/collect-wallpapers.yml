@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/collect-wallpapers.yml'
       - 'tools/collect-index.mjs'
+      - 'lib/bing.mjs'
       - 'lib/markets.mjs'
       - 'lib/owned-index.mjs'
 permissions:

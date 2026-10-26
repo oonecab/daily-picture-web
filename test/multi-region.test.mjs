@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,rm,readdir,readFile} from 'node:fs/promises';
+import {mkdtemp,rm,readdir,readFile,mkdir,writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {once} from 'node:events';
-import {createBingService} from '../lib/bing.mjs';
+import {createBingService,normalizeArchive} from '../lib/bing.mjs';
 import {createApp} from '../server.mjs';
 import {jpeg} from './fixtures/jpeg.mjs';
 import {importRegion,MINIMUM_FREE_BYTES} from '../tools/import-regions.mjs';
@@ -20,6 +20,30 @@ async function fixture(t,fetchImpl=async()=>{throw Error('unexpected network');}
   return {dir,settings,service:createBingService(settings)};
 }
 const row=(market,date='2026-10-25')=>({market,date,id:'OHR.SameDay',title:market,description:'description',copyright:'© Test',credit:'© Test'});
+
+test('foreign daily feeds use the global endpoint and reject a different returned market including cached metadata',async t=>{
+  const body=id=>({images:[{urlbase:'/th?id='+id,startdate:'20261025',fullstartdate:'202610250700',title:'Daily',copyright:'Daily (© Test)'}]});
+  assert.throws(()=>normalizeArchive(body('OHR.Wrong_ZH-CN123'),'en-US',new Date(now()).toISOString()),/地区/);
+  const {dir,service}=await fixture(t,async url=>{
+    assert.equal(url.hostname,'global.bing.com');assert.equal(url.searchParams.get('mkt'),'en-US');
+    return Response.json(body('OHR.Correct_EN-US123'));
+  });
+  await mkdir(join(dir,'cache/archives'),{recursive:true});
+  await writeFile(join(dir,'cache/archives/en-US.json'),JSON.stringify({schemaVersion:1,market:'en-US',windowDays:15,fetchedAt:new Date(now()).toISOString(),images:[{...row('en-US'),id:'OHR.Wrong_ZH-CN123'}]}));
+  const actual=await service.archive('en-US');
+  assert.equal(actual.stale,false);assert.equal(actual.images[0].id,'OHR.Correct_EN-US123');
+});
+
+test('valid regional metadata repairs a mislabelled daily row even when its publication timestamp is older',async t=>{
+  const {dir,service}=await fixture(t);const market='ja-JP',history=service.historyFor(market);
+  const folder=join(dir,'history/markets',market);await mkdir(folder,{recursive:true});
+  await writeFile(join(folder,'2026-10.json'),JSON.stringify({schemaVersion:1,market,month:'2026-10',images:[{...row(market),id:'OHR.Wrong_ZH-CN123',source:'bing',sources:['bing'],fullStartDate:'202610250100',observedAt:new Date(now()).toISOString()}]}));
+  const correct={...row(market),id:'OHR.Correct_JA-JP123',fullStartDate:'202610250000'};
+  await history.ingest({images:[correct],fetchedAt:new Date(now()).toISOString()});
+  assert.equal((await history.month('2026-10')).images[0].id,correct.id);
+  await assert.rejects(history.ingest({images:[{...correct,id:'OHR.Wrong_ZH-CN123'}]}),/market/);
+  assert.equal((await history.month('2026-10')).images[0].id,correct.id);
+});
 
 test('six regions retain independent history, dates, sync state and legacy China paths',async t=>{
   const {dir,service}=await fixture(t);

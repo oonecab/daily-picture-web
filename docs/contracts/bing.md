@@ -1,18 +1,18 @@
 # Bing 外部契约
 
-状态：**CURRENT（应用消费约定，1.1.1）**。来源为 [适配源码](../../lib/bing.mjs)、[缓存与资源验收](../testing/cache-resource-reliability.md)、[最近十五日验收](../testing/fifteen-day-archive.md)、[初版实测记录](../../VERIFICATION.md) 和 [原生研究](../reverse-engineering/source/docs/network-and-download.md)。这些材料不是 Bing 官方稳定 API 或服务可用性承诺；接口变化需重新验证。
+状态：**CURRENT（应用消费约定，1.6.0）**。来源为 [适配源码](../../lib/bing.mjs)、[缓存与资源验收](../testing/cache-resource-reliability.md)、[最近十五日验收](../testing/fifteen-day-archive.md)、[初版实测记录](../../VERIFICATION.md) 和 [原生研究](../reverse-engineering/source/docs/network-and-download.md)。这些材料不是 Bing 官方稳定 API 或服务可用性承诺；接口变化需重新验证。
 
 ## 调用范围与证据
 
 | 维度 | 当前事实 | 证据 / 限度 |
 | --- | --- | --- |
 | 本次任务授权 | 用户要求修复本地评审确认的缓存、资源限制、交互与静态响应问题，验证后提交推送 | 不推导生产服务器更新、其他账号操作或第三方图片再分发授权 |
-| 代码使用 | 固定 HTTPS `www.bing.com` 归档与 `/th` 图片端点，禁止跟随重定向 | `createBingService`；不接收用户提供的任意 URL |
+| 代码使用 | 中国归档固定 HTTPS `www.bing.com`，其他地区固定 `global.bing.com`；图片仍为固定 Bing `/th` 端点，禁止跟随重定向 | `createBingService`；不接收用户提供的任意 URL |
 | 最近真实上游实测 | 六市场经两批合并各返回 15 个唯一 ID，日期为 2026-10-17 至 2026-10-03 | 2026-10-17 本地 1.1.0 实际调用，详见最近十五日验收；1.1.1 使用隔离上游，不刷新该结论 |
 | 历史实测 | 初版六市场各返回 7 张；一个图片样例的四种尺寸实际解码 | 保留原验证记录，不将历史尺寸验证扩大为全部图片 |
 | 未知 | 长期稳定性、全部图片尺寸、历史图片永久可用、上游完整服务政策 | 不由本地检查或原生静态研究推出 |
 
-归档向 `https://www.bing.com/HPImageArchive.aspx` 并行发送 `format=js&idx=0&n=8&mkt=<market>` 和 `format=js&idx=7&n=8&mkt=<market>`，使用相同市场。两批分别校验，按图片 ID 合并去重，重叠时优先 idx=0 批次；按市场显示日期降序排列，同日按原始发布时间降序，最多 15 项。任一批失败或为空则整次刷新失败，不提交部分结果。图片请求：`https://www.bing.com/th?id=<OHR标识>_<size>.jpg`。市场和尺寸必须来自 [目录规则](../rules/catalog.md)，重试、限额和旧数据规则见 [缓存规则](../rules/cache.md)。
+归档向 `https://www.bing.com/HPImageArchive.aspx`（中国）或 `https://global.bing.com/HPImageArchive.aspx`（其他地区）并行发送 `format=js&idx=0&n=8&mkt=<market>` 和 `format=js&idx=7&n=8&mkt=<market>`，使用相同市场。两批分别校验，按图片 ID 合并去重，重叠时优先 idx=0 批次；按市场显示日期降序排列，同日按原始发布时间降序，最多 15 项。任一批失败或为空则整次刷新失败，不提交部分结果。图片请求：`https://www.bing.com/th?id=<OHR标识>_<size>.jpg`。市场和尺寸必须来自 [目录规则](../rules/catalog.md)，重试、限额和旧数据规则见 [缓存规则](../rules/cache.md)。
 
 ## 字段映射
 
@@ -43,3 +43,7 @@
 同一 Bing 适配也供 GitHub Actions 的 tools/collect-index.mjs 使用：两批完整校验后输出 latest.json 及累积月份文件，失败不提交数据分支。网页历史读取和后台自有图库保存见 [历史契约](history.md)，近期端点、市场与参数不变。本次用户已授权初次历史导入、自有维护与 Actions 每日采集；历史版本的授权表不替代当前会话范围。
 
 1.4.2 的 `/api/image` 与历史图片共享 HTTP 读取/发送预算；容量满或排队超过 5 秒时为 503、no-store、Retry-After:5。发送超过 30 秒中断连接并释放预算，调用方可重新请求；上游超时、地区和尺寸选择保持原契约。历史版本比较和窗口外待补状态见历史契约。
+
+## 1.6.0 地区一致性
+
+上述双批参数与去重规则保留，中国索引请求 www.bing.com，海外请求 global.bing.com。后者是服务端固定主机，不是新增用户 URL 参数。真实大陆出口对 www 主机的 ja-JP/en-GB/de-DE/fr-FR 请求曾返回 ZH-CN 图片；global 主机实测能返回对应地区。若 Bing ID 带可识别的语言/地区后缀，须与请求市场一致，否则整批拒绝；同样拒绝带错误后缀的磁盘近期缓存和每日索引入库。已有错误地区的 Bing 行不享有时间戳优先级，允许正确行修复；正常同地区记录继续按原版本规则比较。归档来源的历史快照继续由固定国家/语言路径校验，不以共享图片 ID 猜测其市场。
