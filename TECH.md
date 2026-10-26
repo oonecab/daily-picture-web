@@ -108,3 +108,5 @@
 1.6.0：新增 lib/markets.mjs，六地区独立历史路径、时区边界、Actions 增量、轻量海外导入与本站按需提供海外归档图片；共享上游、读盘与 256 MiB 临时图片预算。环境变量、端口、依赖和 schemaVersion 保持兼容，环境服务说明更新到固定归档图片访问。紧凑历史卡片最大宽度 740px，收藏以地区/日期/ID 区分。见[问题 023](issues/023-multi-region-history.md)与[验证](docs/testing/multi-region-history.md)。
 
 非中国区近期 Bing 索引固定通过 global.bing.com 请求，并校验可识别的图片地区后缀；中国仍使用 www.bing.com。此差异解决大陆出站请求 www.bing.com 时 mkt 可能被忽略的问题，不扩展浏览器图片 CSP 或任意代理范围。
+
+1.6.1 将历史筛选卡片改为与主图对齐的工具栏，三个独立选择器和月份数量状态采用响应式布局；不改变数据/接口/依赖/环境。外壳缓存更新为 shell-1.6.1，收藏和媒体缓存键保持原值。见[问题 024](issues/024-history-toolbar.md)与[验收](docs/testing/history-toolbar.md)。

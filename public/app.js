@@ -304,7 +304,7 @@ async function loadHistory(force=false) {
     state.historyImages=data.images;
     $('filmstrip-title').textContent=`${requested.replace('-',' 年 ')} 月 · ${data.images.length} 张`;
     $('filmstrip-subtitle').textContent='选择缩略图，查看当日影像';
-    $('history-status').textContent=data.stale ? (data.warning || '正在显示已保存的历史索引。') : data.images.length ? `${data.images.length} 张影像 · 图片随浏览加载` : '这个月暂时没有收录图片，可选择其他月份。';
+    $('history-status').textContent=data.stale ? (data.warning || '正在显示已保存的历史索引。') : data.images.length ? `本月收录 ${data.images.length} 张影像` : '这个月暂时没有收录图片，可选择其他月份。';
     if(state.historyCatalog.sync?.error) $('history-status').textContent+=` ${state.historyCatalog.sync.error}`;
   } catch(error) {
     if(generation!==state.historyGeneration || state.mode!=='history')return;
