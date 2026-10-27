@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-10-26T15:16:53.836Z",
+  "fetchedAt": "2026-10-27T00:25:46.817Z",
   "images": [
+    {
+      "id": "OHR.PondCypress_EN-GB5711949030",
+      "market": "en-GB",
+      "date": "2026-10-27",
+      "title": "Nature's golden mirror",
+      "description": "A grove of pond cypress trees with autumn foliage, Georgia, United States",
+      "credit": "© Chris Moore/Getty Images",
+      "copyright": "A grove of pond cypress trees with autumn foliage, Georgia, United States (© Chris Moore/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Pond+cypress&form=hpcapt&filters=HpDate%3a%2220261027_0000%22",
+      "originalDate": "20261027",
+      "fullStartDate": "202610270000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SitovoWaterfall_EN-GB5626792550",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Plitvice+Lakes+National+Park&form=hpcapt&filters=HpDate%3a%2220261012_2300%22",
       "originalDate": "20261012",
       "fullStartDate": "202610122300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MumblesSwansea2026_EN-GB4411542970",
-      "market": "en-GB",
-      "date": "2026-10-12",
-      "title": "Pier-ing into the past",
-      "description": "Mumbles Pier, Swansea, Wales",
-      "credit": "© Helen Hotson/Shutterstock",
-      "copyright": "Mumbles Pier, Swansea, Wales (© Helen Hotson/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=Mumbles+Pier+Wales&form=hpcapt&filters=HpDate%3a%2220261011_2300%22",
-      "originalDate": "20261011",
-      "fullStartDate": "202610112300",
       "wallpaper": true
     }
   ]

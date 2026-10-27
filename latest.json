@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-10-26T15:16:53.713Z",
+  "fetchedAt": "2026-10-27T00:25:46.549Z",
   "images": [
+    {
+      "id": "OHR.PondCypress_ZH-CN9472607734",
+      "market": "zh-CN",
+      "date": "2026-10-27",
+      "title": "大自然的金色明镜",
+      "description": "秋叶缤纷的池杉林，乔治亚州，美国",
+      "credit": "© Chris Moore/Getty Images",
+      "copyright": "秋叶缤纷的池杉林，乔治亚州，美国 (© Chris Moore/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E6%B1%A0%E6%9D%89&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261026",
+      "fullStartDate": "202610261600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SitovoWaterfall_ZH-CN8495214046",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E6%99%AE%E5%88%A9%E7%89%B9%E7%BB%B4%E9%87%87%E6%B9%96%E7%BE%A4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261012",
       "fullStartDate": "202610121600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MumblesSwansea2026_ZH-CN5419531039",
-      "market": "zh-CN",
-      "date": "2026-10-12",
-      "title": "从铁轨到潮汐",
-      "description": "曼布尔斯码头，斯旺西，威尔士",
-      "credit": "© Helen Hotson/Shutterstock",
-      "copyright": "曼布尔斯码头，斯旺西，威尔士 (© Helen Hotson/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%A8%81%E5%B0%94%E5%A3%AB%E6%9B%BC%E5%B8%83%E5%B0%94%E6%96%AF%E7%A0%81%E5%A4%B4&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261011",
-      "fullStartDate": "202610111600",
       "wallpaper": true
     }
   ]

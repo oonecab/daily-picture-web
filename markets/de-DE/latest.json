@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-26T15:16:53.890Z",
+  "fetchedAt": "2026-10-27T00:25:46.890Z",
   "images": [
+    {
+      "id": "OHR.PondCypress_DE-DE2656375905",
+      "market": "de-DE",
+      "date": "2026-10-27",
+      "title": "Goldener Spiegel der Natur",
+      "description": "Teichzypressen in herbstlicher Färbung, Georgia, USA",
+      "credit": "© Chris Moore/Getty Images",
+      "copyright": "Teichzypressen in herbstlicher Färbung, Georgia, USA (© Chris Moore/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261026_2300%22",
+      "originalDate": "20261026",
+      "fullStartDate": "202610262300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SitovoWaterfall_DE-DE2533514641",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Nationalpark+Plitvicer+Seen+Kroatien&form=hpcapt&filters=HpDate%3a%2220261012_2200%22",
       "originalDate": "20261012",
       "fullStartDate": "202610122200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MumblesSwansea2026_DE-DE6402348082",
-      "market": "de-DE",
-      "date": "2026-10-12",
-      "title": "Ein Pier voller Geschichte",
-      "description": "Mumbles Pier, Swansea, Wales",
-      "credit": "© Helen Hotson/Shutterstock",
-      "copyright": "Mumbles Pier, Swansea, Wales (© Helen Hotson/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=Mumbles+Pier+Informationen&form=hpcapt&filters=HpDate%3a%2220261011_2200%22",
-      "originalDate": "20261011",
-      "fullStartDate": "202610112200",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-10-26T15:16:53.914Z",
+  "fetchedAt": "2026-10-27T00:25:46.917Z",
   "images": [
+    {
+      "id": "OHR.PondCypress_FR-FR3578297716",
+      "market": "fr-FR",
+      "date": "2026-10-27",
+      "title": "Le reflet doré de la nature",
+      "description": "Un bosquet de cyprès des étangs aux couleurs automnales, Géorgie, États-Unis",
+      "credit": "© Chris Moore/Getty Images",
+      "copyright": "Un bosquet de cyprès des étangs aux couleurs automnales, Géorgie, États-Unis (© Chris Moore/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=cypr%C3%A8s+des+%C3%A9tangs&form=hpcapt&filters=HpDate%3a%2220261026_2300%22",
+      "originalDate": "20261026",
+      "fullStartDate": "202610262300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SitovoWaterfall_FR-FR3730397148",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Parc+national+lacs+de+Plitvice&form=hpcapt&filters=HpDate%3a%2220261012_2200%22",
       "originalDate": "20261012",
       "fullStartDate": "202610122200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MumblesSwansea2026_FR-FR6666496816",
-      "market": "fr-FR",
-      "date": "2026-10-12",
-      "title": "Entre rails et marées",
-      "description": "Jetée de Mumbles, Swansea, Pays de Galles",
-      "credit": "© Helen Hotson/Shutterstock",
-      "copyright": "Jetée de Mumbles, Swansea, Pays de Galles (© Helen Hotson/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=Jet%C3%A9e+de+Mumbles+Pays+de+Galles&form=hpcapt&filters=HpDate%3a%2220261011_2200%22",
-      "originalDate": "20261011",
-      "fullStartDate": "202610112200",
       "wallpaper": true
     }
   ]
