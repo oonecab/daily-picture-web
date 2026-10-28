@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-10-27T00:25:46.917Z",
+  "fetchedAt": "2026-10-28T00:31:28.656Z",
   "images": [
+    {
+      "id": "OHR.KuneticeCastle_FR-FR0560907896",
+      "market": "fr-FR",
+      "date": "2026-10-28",
+      "title": "Gardien de l’histoire",
+      "description": "Château de Kunětická hora, Bohême, Tchéquie",
+      "credit": "© Marek Saroch/Alamy",
+      "copyright": "Château de Kunětická hora, Bohême, Tchéquie (© Marek Saroch/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=ch%C3%A2teau+de+Kun%C4%9Btick%C3%A1+hora&form=hpcapt&filters=HpDate%3a%2220261027_2300%22",
+      "originalDate": "20261027",
+      "fullStartDate": "202610272300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PondCypress_FR-FR3578297716",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=le+Jurassique&form=hpcapt&filters=HpDate%3a%2220261013_2200%22",
       "originalDate": "20261013",
       "fullStartDate": "202610132200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PlitviceAutumn_FR-FR7127723381",
-      "market": "fr-FR",
-      "date": "2026-10-13",
-      "title": "Variations en bleu et vert",
-      "description": "Parc national des lacs de Plitvice, Croatie",
-      "credit": "© Jan Wlodarczyk/Alamy",
-      "copyright": "Parc national des lacs de Plitvice, Croatie (© Jan Wlodarczyk/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Parc+national+lacs+de+Plitvice&form=hpcapt&filters=HpDate%3a%2220261012_2200%22",
-      "originalDate": "20261012",
-      "fullStartDate": "202610122200",
       "wallpaper": true
     }
   ]

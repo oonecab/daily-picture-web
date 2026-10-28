@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-10-27T00:25:46.817Z",
+  "fetchedAt": "2026-10-28T00:31:28.560Z",
   "images": [
+    {
+      "id": "OHR.KuneticeCastle_EN-GB5805400783",
+      "market": "en-GB",
+      "date": "2026-10-28",
+      "title": "Where history stands watch",
+      "description": "Kunětická hora Castle, Bohemia, Czechia",
+      "credit": "© Marek Saroch/Alamy",
+      "copyright": "Kunětická hora Castle, Bohemia, Czechia (© Marek Saroch/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Kuneticka+hora+Castle&form=hpcapt&filters=HpDate%3a%2220261028_0000%22",
+      "originalDate": "20261028",
+      "fullStartDate": "202610280000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PondCypress_EN-GB5711949030",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Ammonite+fossils&form=hpcapt&filters=HpDate%3a%2220261013_2300%22",
       "originalDate": "20261013",
       "fullStartDate": "202610132300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PlitviceAutumn_EN-GB4470740504",
-      "market": "en-GB",
-      "date": "2026-10-13",
-      "title": "A symphony in blue and green",
-      "description": "Plitvice Lakes National Park, Croatia",
-      "credit": "© Jan Wlodarczyk/Alamy",
-      "copyright": "Plitvice Lakes National Park, Croatia (© Jan Wlodarczyk/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Plitvice+Lakes+National+Park&form=hpcapt&filters=HpDate%3a%2220261012_2300%22",
-      "originalDate": "20261012",
-      "fullStartDate": "202610122300",
       "wallpaper": true
     }
   ]

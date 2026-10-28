@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-10-27T00:25:46.653Z",
+  "fetchedAt": "2026-10-28T00:31:28.529Z",
   "images": [
+    {
+      "id": "OHR.PondCypress_EN-US0123444779",
+      "market": "en-US",
+      "date": "2026-10-27",
+      "title": "Nature's golden mirror",
+      "description": "A grove of pond cypress trees with fall foliage, Georgia, USA",
+      "credit": "© Chris Moore/Getty Images",
+      "copyright": "A grove of pond cypress trees with fall foliage, Georgia, USA (© Chris Moore/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=pond+cypress&form=hpcapt&filters=HpDate%3a%2220261027_0700%22",
+      "originalDate": "20261027",
+      "fullStartDate": "202610270700",
+      "wallpaper": true
+    },
     {
       "id": "OHR.HangingBat_EN-US7714746725",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Plitvice+Lakes+National+Park&form=hpcapt&filters=HpDate%3a%2220261013_0700%22",
       "originalDate": "20261013",
       "fullStartDate": "202610130700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.WhiteHouse_EN-US6161912809",
-      "market": "en-US",
-      "date": "2026-10-12",
-      "title": "A landscape of living history",
-      "description": "White House Ruin at Canyon de Chelly National Monument in Arizona",
-      "credit": "© Ingo Arndt/Minden Pictures",
-      "copyright": "White House Ruin at Canyon de Chelly National Monument in Arizona (© Ingo Arndt/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=Indigenous+Peoples%27+Day+US&form=hpcapt&filters=HpDate%3a%2220261012_0700%22",
-      "originalDate": "20261012",
-      "fullStartDate": "202610120700",
       "wallpaper": true
     }
   ]

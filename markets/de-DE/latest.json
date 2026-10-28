@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-27T00:25:46.890Z",
+  "fetchedAt": "2026-10-28T00:31:28.621Z",
   "images": [
+    {
+      "id": "OHR.KuneticeCastle_DE-DE2818546067",
+      "market": "de-DE",
+      "date": "2026-10-28",
+      "title": "Wo Geschichte Wache hält",
+      "description": "Burg Kunětická hora, Böhmen, Tschechien",
+      "credit": "© Marek Saroch/Alamy",
+      "copyright": "Burg Kunětická hora, Böhmen, Tschechien (© Marek Saroch/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Burg+Kun%C4%9Btick%C3%A1+hora&form=hpcapt&filters=HpDate%3a%2220261027_2300%22",
+      "originalDate": "20261027",
+      "fullStartDate": "202610272300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PondCypress_DE-DE2656375905",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Fossilien&form=hpcapt&filters=HpDate%3a%2220261013_2200%22",
       "originalDate": "20261013",
       "fullStartDate": "202610132200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PlitviceAutumn_DE-DE7625110895",
-      "market": "de-DE",
-      "date": "2026-10-13",
-      "title": "Eine Symphonie in Blau und Grün",
-      "description": "Nationalpark Plitvicer Seen, Kroatien",
-      "credit": "© Jan Wlodarczyk/Alamy",
-      "copyright": "Nationalpark Plitvicer Seen, Kroatien (© Jan Wlodarczyk/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Nationalpark+Plitvicer+Seen+Kroatien&form=hpcapt&filters=HpDate%3a%2220261012_2200%22",
-      "originalDate": "20261012",
-      "fullStartDate": "202610122200",
       "wallpaper": true
     }
   ]
