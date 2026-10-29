@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-28T00:31:28.621Z",
+  "fetchedAt": "2026-10-29T00:56:15.116Z",
   "images": [
+    {
+      "id": "OHR.AveburyStones_DE-DE3052154737",
+      "market": "de-DE",
+      "date": "2026-10-29",
+      "title": "Wo Nebel auf Jahrtausende trifft",
+      "description": "Stehende Steine in Avebury, Wiltshire, England",
+      "credit": "© George W Johnson/Getty Images",
+      "copyright": "Stehende Steine in Avebury, Wiltshire, England (© George W Johnson/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Avebury+Steinkreis&form=hpcapt&filters=HpDate%3a%2220261028_2300%22",
+      "originalDate": "20261028",
+      "fullStartDate": "202610282300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KuneticeCastle_DE-DE2818546067",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Breslau&form=hpcapt&filters=HpDate%3a%2220261014_2200%22",
       "originalDate": "20261014",
       "fullStartDate": "202610142200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AmmoniteFossils_DE-DE6773160072",
-      "market": "de-DE",
-      "date": "2026-10-14",
-      "title": "Spiralen durch die Zeit",
-      "description": "Ammonitenfossilien aus der Jurazeit",
-      "credit": "© J Nemchinova/Getty Images",
-      "copyright": "Ammonitenfossilien aus der Jurazeit (© J Nemchinova/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Fossilien&form=hpcapt&filters=HpDate%3a%2220261013_2200%22",
-      "originalDate": "20261013",
-      "fullStartDate": "202610132200",
       "wallpaper": true
     }
   ]

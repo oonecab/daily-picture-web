@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-10-28T00:31:28.656Z",
+  "fetchedAt": "2026-10-29T00:56:15.145Z",
   "images": [
+    {
+      "id": "OHR.AveburyStones_FR-FR0792308002",
+      "market": "fr-FR",
+      "date": "2026-10-29",
+      "title": "Des millénaires caressés par la brume",
+      "description": "Pierres dressées à Avebury dans le Wiltshire, Angleterre",
+      "credit": "© George W Johnson/Getty Images",
+      "copyright": "Pierres dressées à Avebury dans le Wiltshire, Angleterre (© George W Johnson/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=cercle+de+pierres+Avebury+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261028_2300%22",
+      "originalDate": "20261028",
+      "fullStartDate": "202610282300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KuneticeCastle_FR-FR0560907896",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Wroclaw&form=hpcapt&filters=HpDate%3a%2220261014_2200%22",
       "originalDate": "20261014",
       "fullStartDate": "202610142200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AmmoniteFossils_FR-FR7395830779",
-      "market": "fr-FR",
-      "date": "2026-10-14",
-      "title": "Le temps pris dans la pierre",
-      "description": "Fossiles d'ammonites du Jurassique",
-      "credit": "© J Nemchinova/Getty Images",
-      "copyright": "Fossiles d'ammonites du Jurassique (© J Nemchinova/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=le+Jurassique&form=hpcapt&filters=HpDate%3a%2220261013_2200%22",
-      "originalDate": "20261013",
-      "fullStartDate": "202610132200",
       "wallpaper": true
     }
   ]

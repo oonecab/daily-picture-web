@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-10-28T00:31:28.592Z",
+  "fetchedAt": "2026-10-29T00:56:15.083Z",
   "images": [
+    {
+      "id": "OHR.AveburyStones_JA-JP4031336786",
+      "market": "ja-JP",
+      "date": "2026-10-29",
+      "title": "草原に立ち並ぶ巨石群",
+      "description": "エーヴベリー 巨石群, イングランド",
+      "credit": "© George W Johnson/Getty Images",
+      "copyright": "エーヴベリー 巨石群, イングランド (© George W Johnson/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%A8%E3%83%BC%E3%83%B4%E3%83%99%E3%83%AA%E3%83%BC+%E5%B7%A8%E7%9F%B3%E7%BE%A4&form=hpcapt&filters=HpDate%3a%2220261028_1500%22",
+      "originalDate": "20261028",
+      "fullStartDate": "202610281500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KuneticeCastle_JA-JP3914699688",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%83%B4%E3%83%AD%E3%83%84%E3%83%AF%E3%83%95&form=hpcapt&filters=HpDate%3a%2220261014_1500%22",
       "originalDate": "20261014",
       "fullStartDate": "202610141500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.RailwayDay2026_JA-JP4058067313",
-      "market": "ja-JP",
-      "date": "2026-10-14",
-      "title": "今日は鉄道の日",
-      "description": "嵯峨野トロッコ列車, 京都府京都市",
-      "credit": "© giggsy25/Shutterstock",
-      "copyright": "嵯峨野トロッコ列車, 京都府京都市 (© giggsy25/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E9%89%84%E9%81%93%E3%81%AE%E6%97%A5&form=hpcapt&filters=HpDate%3a%2220261013_1500%22",
-      "originalDate": "20261013",
-      "fullStartDate": "202610131500",
       "wallpaper": true
     }
   ]

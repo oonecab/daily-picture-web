@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-10-28T00:31:28.560Z",
+  "fetchedAt": "2026-10-29T00:56:15.048Z",
   "images": [
+    {
+      "id": "OHR.AveburyStones_EN-GB5895980350",
+      "market": "en-GB",
+      "date": "2026-10-29",
+      "title": "Where mist meets millennia",
+      "description": "Standing stones at Avebury in Wiltshire, England",
+      "credit": "© George W Johnson/Getty Images",
+      "copyright": "Standing stones at Avebury in Wiltshire, England (© George W Johnson/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Avebury+henge+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261029_0000%22",
+      "originalDate": "20261029",
+      "fullStartDate": "202610290000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KuneticeCastle_EN-GB5805400783",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Wroclaw&form=hpcapt&filters=HpDate%3a%2220261014_2300%22",
       "originalDate": "20261014",
       "fullStartDate": "202610142300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AmmoniteFossils_EN-GB4546470412",
-      "market": "en-GB",
-      "date": "2026-10-14",
-      "title": "Spirals through time",
-      "description": "Ammonite fossils from the Jurassic Period",
-      "credit": "© J Nemchinova/Getty Images",
-      "copyright": "Ammonite fossils from the Jurassic Period (© J Nemchinova/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Ammonite+fossils&form=hpcapt&filters=HpDate%3a%2220261013_2300%22",
-      "originalDate": "20261013",
-      "fullStartDate": "202610132300",
       "wallpaper": true
     }
   ]
