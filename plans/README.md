@@ -40,3 +40,5 @@
 - [014 双来源历史与发布](014-dual-history.md)
 
 - [019 多地区历史实施计划](019-multi-region-history.md)
+
+- [026 下拉菜单完善计划](026-select-styling.md)

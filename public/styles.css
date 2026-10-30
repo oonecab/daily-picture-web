@@ -75,4 +75,47 @@ body.viewer-open{position:fixed;width:100%;overflow:hidden}
 @media(max-width:700px){.history-picker{gap:14px}.history-date-picker{grid-template-columns:112px 132px 104px;gap:8px}.history-date-field{gap:7px;padding-left:10px}.history-status{font-size:11px}}
 @media(max-width:560px){.history-controls{padding-bottom:13px;margin-bottom:16px}.history-picker{align-items:stretch;flex-direction:column;gap:10px}.history-date-picker{width:100%;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,.9fr)}.history-field-label{display:none}.history-date-field{padding-left:12px}.history-status{max-width:none;margin-left:1px;text-align:left}}
 .thumb-history.thumb-broken:before{content:"图片暂不可用"}
+/* Keep native select semantics; enhance the popup where the browser supports it. */
+.market-control select{min-height:44px;min-width:68px;border-radius:8px;color:#304936;font:inherit;font-size:13px}
+.market-control select:focus-visible{outline:2px solid #627b56;outline-offset:3px}
+select:disabled{cursor:not-allowed}
+@supports (appearance:base-select){
+  :is(#market,.history-date-picker select),:is(#market,.history-date-picker select)::picker(select){appearance:base-select}
+  :is(#market,.history-date-picker select){display:flex;align-items:center;gap:12px;text-align:left}
+  #market{padding:0 10px}
+  .history-date-field{gap:0;padding-left:0}
+  .history-field-label{position:absolute;left:12px;z-index:1;pointer-events:none;color:#687461}
+  .history-date-picker select{padding:0 12px 0 44px}
+  .history-select-arrow{display:none}
+  :is(#market,.history-date-picker select)::picker-icon{content:"";flex-shrink:0;width:6px;height:6px;margin-left:auto;margin-right:2px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;color:#6b7e61;transform:translateY(-2px) rotate(45deg);transition:transform .16s}
+  :is(#market,.history-date-picker select):open::picker-icon{transform:translateY(2px) rotate(225deg)}
+  .history-date-field:has(select:open){border-color:#829674;background:#fff}
+  #market:open{background:#e9eddf}
+  :is(#market,.history-date-picker select)::picker(select){
+    min-inline-size:max(164px,anchor-size(width));max-inline-size:calc(100vw - 24px);
+    max-block-size:min(320px,60dvh);margin-block:8px;padding:6px;overflow:auto;
+    border:1px solid #d5ddca;border-radius:12px;background:#fffffa;color:#304936;
+    box-shadow:0 14px 36px #23321f24,0 3px 8px #23321f0a;
+    font-family:inherit;font-size:13px;font-weight:400;line-height:1.5;
+    scrollbar-width:thin;scrollbar-color:#b6c4aa transparent;overscroll-behavior:contain;
+  }
+  :is(#market,.history-date-picker select) option{position:relative;display:flex;align-items:center;min-height:40px;padding:9px 38px 9px 12px;border-radius:7px;cursor:pointer;white-space:nowrap}
+  :is(#market,.history-date-picker select) option:checked{background:#e8eddf;color:#29452e;font-weight:600}
+  :is(#market,.history-date-picker select) option::checkmark{position:absolute;right:13px;color:#48673b;font-size:14px}
+  :is(#market,.history-date-picker select) option:focus-visible{outline:2px solid #627b56;outline-offset:-2px}
+  @media(hover:hover){
+    #market:hover{background:#e9eddf}
+    :is(#market,.history-date-picker select) option:hover{background:#f0f3e9}
+    :is(#market,.history-date-picker select) option:checked:hover{background:#dfe7d4}
+  }
+  @media(max-width:560px){.history-date-picker select{padding-left:12px}}
+  @media(pointer:coarse){:is(#market,.history-date-picker select),:is(#market,.history-date-picker select) option{min-height:48px}}
+  @media(prefers-reduced-motion:reduce){:is(#market,.history-date-picker select)::picker-icon{transition:none}}
+  @media(forced-colors:active){
+    :is(#market,.history-date-picker select)::picker(select){border-color:ButtonText;background:Canvas;color:CanvasText;box-shadow:none}
+    :is(#market,.history-date-picker select) option:checked,:is(#market,.history-date-picker select) option:checked:hover{forced-color-adjust:none;background:Highlight;color:HighlightText}
+    :is(#market,.history-date-picker select) option::checkmark{color:inherit}
+    :is(#market,.history-date-picker select) option:focus-visible{outline-color:Highlight}
+  }
+}
 .history-view #photo-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}

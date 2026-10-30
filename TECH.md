@@ -112,3 +112,5 @@
 1.6.1 将历史筛选卡片改为与主图对齐的工具栏，三个独立选择器和月份数量状态采用响应式布局；不改变数据/接口/依赖/环境。外壳缓存更新为 shell-1.6.1，收藏和媒体缓存键保持原值。见[问题 024](issues/024-history-toolbar.md)与[验收](docs/testing/history-toolbar.md)。
 
 1.6.2 为近期主图、缩略图、下载接入固定 Bing 直连与同图代理回退；近期直连/代理复用旧离线图片键，外壳升级 shell-1.6.2。无依赖、环境、图库迁移或收藏格式变化。见[问题 025](issues/025-image-bandwidth.md)与[验收](docs/testing/image-bandwidth.md)。
+
+1.6.3 通过 @supports (appearance:base-select) 渐进增强四个原生选择器和 ::picker(select)，保留不支持浏览器的原生交互，不引入依赖或更改兼容基线。外壳更新为 shell-1.6.3；业务逻辑、API、环境与媒体缓存保持不变。见[问题 026](issues/026-select-styling.md)与[验收](docs/testing/select-styling.md)。

@@ -44,3 +44,5 @@
 - [018 双来源历史与页脚署名](018-dual-history.md)
 
 - [023 多地区历史与紧凑筛选](023-multi-region-history.md)
+
+- [026 统一下拉菜单样式](026-select-styling.md)
