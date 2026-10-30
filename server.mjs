@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { createBingService, HttpError, MARKETS, validateMarket } from './lib/bing.mjs';
+import { createBingService, HttpError, MARKETS, validateMarket, validateImage } from './lib/bing.mjs';
 import { startHistoryCollector } from './lib/history.mjs';
 import { createImageReadPool } from './lib/image-reads.mjs';
 
@@ -67,7 +67,7 @@ export function createApp({ service = defaultService(), imageReads = createImage
         throw new HttpError(405, '不支持此请求方法。');
       }
       const url = new URL(request.url, 'http://localhost');
-      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.6.1' });
+      if (url.pathname === '/api/health') return send(200, { ok: true, app: 'daily-picture-web', version: '1.6.2' });
       if (url.pathname === '/api/markets') return send(200, MARKETS);
       if (url.pathname === '/api/history') {
         response.setHeader('Cache-Control','no-store');
@@ -96,6 +96,12 @@ export function createApp({ service = defaultService(), imageReads = createImage
       if (url.pathname === '/api/image') {
         const id = url.searchParams.get('id');
         const size = url.searchParams.get('size') || '1920x1080';
+        if(url.searchParams.get('direct')==='1'){
+          validateImage(id,size);
+          const location=new URL('https://www.bing.com/th');
+          location.searchParams.set('id',`${id}_${size}.jpg`);
+          response.writeHead(302,{Location:location.href,'Cache-Control':'no-store'});response.end();return;
+        }
         return await sendImage(JSON.stringify(['recent',id,size]),()=>service.image(id,size),
           'public, max-age=604800, immutable',url.searchParams.get('download')==='1'?`${id}_${size}.jpg`:null);
       }

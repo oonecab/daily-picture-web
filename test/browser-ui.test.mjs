@@ -463,3 +463,20 @@ test('protected originals and older favorites retain the full body transfer budg
  assert.equal(b.timeouts.filter(t=>t.delay===10000).at(-1).cancelled,true,'the fallback timer must not interrupt a local response body');
  release();await pending;assert.equal(calls,1);assert.equal(b.downloaded.length,1);
 });
+
+test('recent hero and thumbnails prefer direct delivery and fall back once to the same image',async()=>{
+ const b=browser(),hero=b.get('hero-image');
+ assert.match(hero.src,/direct=1/);const direct=hero.src;
+ hero.onerror();assert.equal(hero.src,direct.replace('&direct=1',''));assert.equal(b.get('image-error').hidden,true);
+ hero.onerror();assert.equal(b.get('image-error').hidden,false);
+ const thumb=b.get('filmstrip').children[0].children[0].children[0];
+ assert.equal(thumb.crossOrigin,'anonymous');assert.match(thumb.src,/direct=1/);const original=thumb.src;
+ await thumb.emit('error');assert.equal(thumb.src,original.replace('&direct=1',''));assert.equal(thumb.hidden,false);
+ await thumb.emit('error');assert.equal(thumb.hidden,true);
+});
+
+test('recent downloads retry through the proxy after a failed direct response',async()=>{
+ const calls=[];const b=browser({fetchImpl:async url=>{if(!url.includes('/api/image?'))return new Promise(()=>{});calls.push(url);if(url.includes('direct=1'))throw new TypeError('CORS failed');return new Response(new Blob([new Uint8Array(200)],{type:'image/jpeg'}));}});
+ await vm.runInContext("download('UHD')",b.context);
+ assert.equal(calls.length,2);assert.match(calls[0],/direct=1/);assert.equal(calls[1],calls[0].replace('&direct=1',''));assert.equal(b.downloaded.length,1);
+});

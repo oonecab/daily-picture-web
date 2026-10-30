@@ -38,7 +38,7 @@ function imageUrl(image, size = '1920x1080', direct = true) {
     const variant=size==='640x360'?'thumb':size==='original'?'original':'preview';
     return `/api/history/image?${new URLSearchParams({date:image.date,id:image.id,size:variant,...(image.market!=='zh-CN'?{market:image.market}:{}),...(direct&&variant!=='thumb'?{direct:'1'}:{})})}`;
   }
-  return `/api/image?${new URLSearchParams({id:image.id,size})}`;
+  return `/api/image?${new URLSearchParams({id:image.id,size,...(direct?{direct:'1'}:{})})}`;
 }
 function sameImage(a,b) { return a?.id===b?.id && a?.date===b?.date && a?.market===b?.market; }
 function liked(image) { return state.favorites.some((item) => sameImage(item,image)); }
@@ -143,10 +143,15 @@ function renderStrip() {
     const frame = document.createElement('span'); frame.className = 'thumbnail-image';
     if(item.history) frame.classList.add('thumb-history');
     const img = document.createElement('img');
+    img.crossOrigin='anonymous';
     if(item.history && historyObserver) {img.dataset.src=imageUrl(item,'640x360');historyObserver.observe(img);}
     else img.src = imageUrl(item, '640x360');
     img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.width = 640; img.height = 360;
-    img.addEventListener('error', () => { img.hidden = true; frame.classList.add('thumb-broken'); button.title = `${item.title} · 图片暂不可用，可选中后重试`; });
+    let thumbFallback=false;
+    img.addEventListener('error', () => {
+      if(!item.history&&!thumbFallback){thumbFallback=true;img.src=imageUrl(item,'640x360',false);return;}
+      img.hidden = true; frame.classList.add('thumb-broken'); button.title = `${item.title} · 图片暂不可用，可选中后重试`;
+    });
     const date = document.createElement('span'); date.className = 'thumb-day'; date.textContent = shortDate(item.date);
     frame.append(img, date);
     if (index === 0 && state.mode === 'browse') {
@@ -219,7 +224,7 @@ function renderSelection() {
   hero.onload = () => {
     if (generation !== state.heroGeneration) return;
     clearTimeout(state.heroTimer);
-    if(item.history&&hero.naturalWidth&&hero.naturalHeight&&(hero.naturalWidth<320||hero.naturalHeight<180)){hero.onerror();return;}
+    if(hero.naturalWidth&&hero.naturalHeight&&(hero.naturalWidth<320||hero.naturalHeight<180)){hero.onerror();return;}
     hero.hidden = false; $('loading-state').hidden = true; $('image-error').hidden = true;
     state.heroDimensions={width:hero.naturalWidth,height:hero.naturalHeight};
     historyDownloadSize();
@@ -227,11 +232,11 @@ function renderSelection() {
   hero.onerror = () => {
     if (generation !== state.heroGeneration) return;
     clearTimeout(state.heroTimer);
-    if(item.history&&!fallback){fallback=true;hero.src=imageUrl(item,'1920x1080',false);return;}
+    if(!fallback){fallback=true;hero.src=imageUrl(item,'1920x1080',false);return;}
     $('loading-state').hidden = true; $('image-error').hidden = false;
   };
   hero.src = imageUrl(item);
-  if(item.history)state.heroTimer=setTimeout(hero.onerror,12000);
+  state.heroTimer=setTimeout(hero.onerror,12000);
   if (hero.complete && hero.naturalWidth) hero.onload();
   renderStrip();
 }
@@ -498,7 +503,7 @@ async function download(size) {
     async function read(direct){
       // Reserve time for the same-origin fallback when the browser cannot reach Bing.
       const controller=new AbortController();
-      const timer=item.history&&direct?setTimeout(()=>controller.abort(),10000):null;
+      const timer=direct?setTimeout(()=>controller.abort(),10000):null;
       const attempt=timer?AbortSignal.any([signal,controller.signal]):signal;
       try{
       const response=await fetch(`${imageUrl(item,size,direct)}&download=1`,{signal:attempt});
@@ -508,14 +513,14 @@ async function download(size) {
       if(!response.ok||!response.headers.get('Content-Type')?.startsWith('image/'))throw new Error('download');
       const blob=await response.blob();
       if(blob.size>20*1024*1024||blob.size<100)throw new Error('download');
-      if(item.history&&typeof createImageBitmap==='function'){
+      if(typeof createImageBitmap==='function'){
         const bitmap=await createImageBitmap(blob);try{if(bitmap.width<320||bitmap.height<180)throw new Error('placeholder');}finally{bitmap.close();}
       }
       return blob;
       }finally{clearTimeout(timer);}
     }
     let blob;
-    try{blob=await read(true);}catch(error){if(!item.history||signal.aborted)throw error;blob=await read(false);}
+    try{blob=await read(true);}catch(error){if(signal.aborted)throw error;blob=await read(false);}
     const objectUrl = URL.createObjectURL(blob);
     downloadUrls.add(objectUrl);
     const link = document.createElement('a'); link.href = objectUrl; link.download = item.history ? `Bing_${item.market.split('-')[1]}_${item.date}.jpg` : `${item.id}_${size}.jpg`;

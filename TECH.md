@@ -110,3 +110,5 @@
 非中国区近期 Bing 索引固定通过 global.bing.com 请求，并校验可识别的图片地区后缀；中国仍使用 www.bing.com。此差异解决大陆出站请求 www.bing.com 时 mkt 可能被忽略的问题，不扩展浏览器图片 CSP 或任意代理范围。
 
 1.6.1 将历史筛选卡片改为与主图对齐的工具栏，三个独立选择器和月份数量状态采用响应式布局；不改变数据/接口/依赖/环境。外壳缓存更新为 shell-1.6.1，收藏和媒体缓存键保持原值。见[问题 024](issues/024-history-toolbar.md)与[验收](docs/testing/history-toolbar.md)。
+
+1.6.2 为近期主图、缩略图、下载接入固定 Bing 直连与同图代理回退；近期直连/代理复用旧离线图片键，外壳升级 shell-1.6.2。无依赖、环境、图库迁移或收藏格式变化。见[问题 025](issues/025-image-bandwidth.md)与[验收](docs/testing/image-bandwidth.md)。

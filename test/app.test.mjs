@@ -225,3 +225,20 @@ test('HTTP routes serve the app, reject writes and invalid hosts, and hide works
   const image = await fetch(`${base}/api/image?id=OHR.Test&size=UHD&download=1`);
   assert.equal(image.headers.get('Content-Disposition'), 'attachment; filename="OHR.Test_UHD.jpg"');
 });
+
+test('recent direct images redirect only validated IDs and sizes without reading the proxy', async t => {
+  let calls=0;
+  const server=createApp({service:{image:async()=>{calls++;return Buffer.from([255,216,255,217]);}}});
+  server.listen(0,'127.0.0.1');await once(server,'listening');
+  t.after(()=>{server.closeAllConnections();server.close();});
+  const base=`http://127.0.0.1:${server.address().port}`;
+  for(const size of ['640x360','1920x1080','UHD','1080x1920']){
+    const r=await fetch(`${base}/api/image?id=OHR.Test&size=${size}&direct=1`,{redirect:'manual'});
+    assert.equal(r.status,302);assert.equal(r.headers.get('location'),`https://www.bing.com/th?id=OHR.Test_${size}.jpg`);
+  }
+  for(const query of ['id=evil&size=UHD','id=OHR.Test&size=original','id=https://evil.example&size=UHD']){
+    assert.equal((await fetch(`${base}/api/image?${query}&direct=1`,{redirect:'manual'})).status,400);
+  }
+  assert.equal(calls,0);
+  assert.equal((await fetch(`${base}/api/image?id=OHR.Test&size=UHD`)).status,200);assert.equal(calls,1);
+});

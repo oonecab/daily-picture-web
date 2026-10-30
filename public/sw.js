@@ -1,5 +1,5 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell-1.6.1`;
+const SHELL = `${VERSION}-shell-1.6.2`;
 const HISTORY = `${VERSION}-history`;
 let historyWrites=Promise.resolve();
 const DATA = `${VERSION}-data`;
@@ -77,6 +77,9 @@ async function saveImage(cache, key, response) {
 async function image(request, event) {
   const url = new URL(request.url);
   url.searchParams.delete('download');
+  // Direct delivery and the compatibility proxy represent the same recent image.
+  // Keep the pre-upgrade key so already-saved pictures still work offline.
+  if(url.pathname==='/api/image')url.searchParams.delete('direct');
   const key = url.href;
   const cache = await caches.open(IMAGES);
   const hit = await cache.match(key);

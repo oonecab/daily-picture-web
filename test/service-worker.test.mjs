@@ -110,3 +110,13 @@ test('history metadata cache is bounded and a failed month returns its explicit 
   assert.equal((await cached.json()).stale,true);
   assert.equal((await w.context.archive(new Request(`${origin}/api/history?month=2025-01`),true)).status,503);
 });
+
+test('recent direct, download and proxy requests reuse the existing offline image key',async()=>{
+  let calls=0;const w=worker({fetchImpl:async()=>{calls++;return jpeg();}});
+  w.seed(imageRequest('Existing'),jpeg());
+  assert.equal((await w.image(new Request(imageRequest('Existing').url+'&direct=1'))).status,200);
+  assert.equal(calls,0,'the new direct URL must reuse pre-upgrade offline bytes');
+  await w.image(new Request(imageRequest('New').url+'&direct=1&download=1'));
+  await w.image(imageRequest('New'));
+  assert.equal(calls,1);assert.ok(w.entries.has(imageRequest('New').url));
+});
