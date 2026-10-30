@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-29T00:56:15.116Z",
+  "fetchedAt": "2026-10-30T00:59:03.694Z",
   "images": [
+    {
+      "id": "OHR.AutumnCranes_DE-DE0229834342",
+      "market": "de-DE",
+      "date": "2026-10-30",
+      "title": "Zeit für Höhenflüge",
+      "description": "Kanadakraniche, Bosque del Apache National Wildlife Refuge, New Mexico, USA",
+      "credit": "© Terry St.Louis/Getty Images",
+      "copyright": "Kanadakraniche, Bosque del Apache National Wildlife Refuge, New Mexico, USA (© Terry St.Louis/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Kanadakranich&form=hpcapt&filters=HpDate%3a%2220261029_2300%22",
+      "originalDate": "20261029",
+      "fullStartDate": "202610292300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AveburyStones_DE-DE3052154737",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Kloster+Andechs&form=hpcapt&filters=HpDate%3a%2220261015_2200%22",
       "originalDate": "20261015",
       "fullStartDate": "202610152200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.WroclawPoland_DE-DE7177247783",
-      "market": "de-DE",
-      "date": "2026-10-15",
-      "title": "Brücken, Dächer und Dämmerung",
-      "description": "Blick auf den Breslauer Marktplatz von der Hexenbrücke in Breslau, Polen",
-      "credit": "© Piotr Mitelski/Shutterstock",
-      "copyright": "Blick auf den Breslauer Marktplatz von der Hexenbrücke in Breslau, Polen (© Piotr Mitelski/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=Breslau&form=hpcapt&filters=HpDate%3a%2220261014_2200%22",
-      "originalDate": "20261014",
-      "fullStartDate": "202610142200",
       "wallpaper": true
     }
   ]
