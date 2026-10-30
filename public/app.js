@@ -31,6 +31,7 @@ const state = {
   historyImages: [], historyError: null, historyCatalog: null, historyMonth: null, historyBusy: false, historyRequest: null, historyGeneration: 0,
 };
 const downloadUrls = new Set();
+let offlineWarmController;
 function images() { return state.mode === 'favorites' ? state.favorites : state.mode === 'history' ? state.historyImages : state.images; }
 function selected() { return images()[state.index]; }
 function imageUrl(image, size = '1920x1080', direct = true) {
@@ -630,6 +631,7 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('online', () => { status(); loadArchive(); });
 window.addEventListener('offline', status);
 window.addEventListener('pagehide', () => {
+  offlineWarmController?.abort();
   state.request?.abort(); state.historyRequest?.abort(); state.historyGeneration++; resetLazyImages(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer); clearTimeout(state.heroTimer);
   for (const url of downloadUrls) URL.revokeObjectURL(url);
   downloadUrls.clear();
@@ -656,11 +658,23 @@ if ('serviceWorker' in navigator) {
       toast('图片已显示，但离线保存暂时不可用。请检查浏览器存储空间。');
     }
   });
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    // Warm the offline cache even if the initial request preceded installation.
-    loadArchive();
-    if(state.mode !== 'history') for (const item of images().filter(item=>!item.history)) fetch(imageUrl(item, '640x360')).catch(() => {});
-    if (selected()) fetch(imageUrl(selected())).catch(() => {});
+  navigator.serviceWorker.addEventListener('controllerchange', async () => {
+    // Preserve an in-progress render. Warm pre-installation responses without
+    // reloading the gallery or flooding the per-client request budget.
+    offlineWarmController?.abort();
+    const controller=offlineWarmController=new AbortController();
+    const current=selected(),thumbs=state.mode==='history'?[]:images().filter(item=>!item.history);
+    const warm=async url=>{
+      if(controller.signal.aborted)return;
+      try{const response=await fetch(url,{signal:AbortSignal.any([controller.signal,AbortSignal.timeout(10000)])});await response.arrayBuffer();}catch{}
+    };
+    await warm(`/api/archive?market=${state.market}`);
+    if(current)await warm(imageUrl(current));
+    for(const item of thumbs){
+      if(controller.signal.aborted)return;
+      await new Promise(resolve=>setTimeout(resolve,150));
+      await warm(imageUrl(item,'640x360'));
+    }
   });
   navigator.serviceWorker.register('/sw.js').catch(() => { /* Online use remains available. */ });
 }

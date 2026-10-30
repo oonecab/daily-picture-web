@@ -480,3 +480,19 @@ test('recent downloads retry through the proxy after a failed direct response',a
  await vm.runInContext("download('UHD')",b.context);
  assert.equal(calls.length,2);assert.match(calls[0],/direct=1/);assert.equal(calls[1],calls[0].replace('&direct=1',''));assert.equal(b.downloaded.length,1);
 });
+
+test('worker takeover warms sequentially without rendering or issuing a thumbnail burst',async()=>{
+ let release;const calls=[];
+ const b=browser({worker:true,fetchImpl:url=>{calls.push(url);return new Promise(resolve=>{release=()=>resolve(new Response('fixture'));});}});
+ const initial=b.get('hero-image').src,generation=vm.runInContext('state.heroGeneration',b.context);calls.length=0;
+ const takeover=b.serviceWorker.emit('controllerchange');
+ await new Promise(setImmediate);
+ assert.equal(vm.runInContext('state.heroGeneration',b.context),generation);assert.equal(b.get('hero-image').src,initial);
+ assert.equal(calls.length,1);assert.match(calls[0],/api\/archive/);
+ release();await new Promise(setImmediate);
+ assert.equal(calls.length,2);assert.equal(calls[1],initial);
+ // Resolve the main image; the remaining warm-ups must be paced by the timer.
+ release();await new Promise(setImmediate);assert.equal(calls.length,2);
+ assert.ok(b.timeouts.some(t=>t.delay===150));
+ void takeover;
+});
