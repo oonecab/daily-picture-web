@@ -30,3 +30,7 @@ Windows Chrome 156.0.8078.48，Playwright 隔离上下文。先在旧实现运�
 独立 Chrome 访问实际线上域名，无 API/图片拦截：四个菜单展开样式正确，地区各 6 项、年份 9 项、当前年份月份 10 项；键盘将 2026-10 切换至 2026-09 后显示“本月收录 30 张影像”。主图完成解码、页面无脚本错误；390px 无横向溢出。线上 styles.css SHA-256 与发布源一致，浏览器外壳缓存为 daily-picture-v1-shell-1.6.3。证据为 .private/selects-163/live-results.json、live-*.png 和 deployment.json。
 
 本次为样式发布，未重复执行公网压测；未将此前容量测量作为本次新增结果。
+
+## 1.6.4 对齐跟进
+
+新增真实浏览器几何检查，初次捕获历史地区字段 132px、菜单 130px 的边框补偿未生效；修正选择器优先级后，四个菜单在 1440、768、390、320px 共 16 个组合中，左边缘差值和宽度差值均小于 0.5px，选项内容无横向溢出。桌面年份字段及菜单均 148px。私有执行脚本 check-alignment.mjs 与 fixed-alignment.json、fixed-alignment.png 保存在原验收目录。待发布验证。

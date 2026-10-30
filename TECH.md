@@ -114,3 +114,5 @@
 1.6.2 为近期主图、缩略图、下载接入固定 Bing 直连与同图代理回退；近期直连/代理复用旧离线图片键，外壳升级 shell-1.6.2。无依赖、环境、图库迁移或收藏格式变化。见[问题 025](issues/025-image-bandwidth.md)与[验收](docs/testing/image-bandwidth.md)。
 
 1.6.3 通过 @supports (appearance:base-select) 渐进增强四个原生选择器和 ::picker(select)，保留不支持浏览器的原生交互，不引入依赖或更改兼容基线。外壳更新为 shell-1.6.3；业务逻辑、API、环境与媒体缓存保持不变。见[问题 026](issues/026-select-styling.md)与[验收](docs/testing/select-styling.md)。
+
+1.6.4 修正选择器面板宽度：随锚点宽度并补偿历史字段边框，不再设置固定 164px 下限。外壳升级 shell-1.6.4；依赖、API、数据与环境不变。

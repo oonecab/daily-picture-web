@@ -92,16 +92,18 @@ select:disabled{cursor:not-allowed}
   .history-date-field:has(select:open){border-color:#829674;background:#fff}
   #market:open{background:#e9eddf}
   :is(#market,.history-date-picker select)::picker(select){
-    min-inline-size:max(164px,anchor-size(width));max-inline-size:calc(100vw - 24px);
+    min-inline-size:0;inline-size:anchor-size(width);max-inline-size:calc(100vw - 24px);
     max-block-size:min(320px,60dvh);margin-block:8px;padding:6px;overflow:auto;
     border:1px solid #d5ddca;border-radius:12px;background:#fffffa;color:#304936;
     box-shadow:0 14px 36px #23321f24,0 3px 8px #23321f0a;
     font-family:inherit;font-size:13px;font-weight:400;line-height:1.5;
     scrollbar-width:thin;scrollbar-color:#b6c4aa transparent;overscroll-behavior:contain;
   }
-  :is(#market,.history-date-picker select) option{position:relative;display:flex;align-items:center;min-height:40px;padding:9px 38px 9px 12px;border-radius:7px;cursor:pointer;white-space:nowrap}
+  :is(#history-market,#history-year,#history-month)::picker(select){inline-size:calc(anchor-size(width) + 2px);margin-inline-start:-1px}
+  #market::picker(select){padding:4px}
+  :is(#market,.history-date-picker select) option{position:relative;display:flex;align-items:center;min-height:40px;padding:9px 25px 9px 8px;border-radius:7px;cursor:pointer;white-space:nowrap}
   :is(#market,.history-date-picker select) option:checked{background:#e8eddf;color:#29452e;font-weight:600}
-  :is(#market,.history-date-picker select) option::checkmark{position:absolute;right:13px;color:#48673b;font-size:14px}
+  :is(#market,.history-date-picker select) option::checkmark{position:absolute;right:8px;color:#48673b;font-size:14px}
   :is(#market,.history-date-picker select) option:focus-visible{outline:2px solid #627b56;outline-offset:-2px}
   @media(hover:hover){
     #market:hover{background:#e9eddf}
