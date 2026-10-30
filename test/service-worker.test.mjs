@@ -7,7 +7,7 @@ const source = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8
 const origin = 'http://localhost';
 const imageRequest = (id = 'New') => new Request(`${origin}/api/image?id=OHR.${id}&size=640x360`);
 const jpeg = () => new Response(new Uint8Array([255, 216, 255, 217]), { headers: { 'Content-Type': 'image/jpeg' } });
-function worker({ fetchImpl = async () => jpeg(), failPut, timers } = {}) {
+function worker({ fetchImpl = async () => jpeg(), failPut, timers, bitmap } = {}) {
   const entries = new Map(), messages = [], pending = [];
   const key = (request) => new URL(typeof request === 'string' ? request : request.url, origin).href;
   let attempts = 0, deletions = 0;
@@ -21,7 +21,7 @@ function worker({ fetchImpl = async () => jpeg(), failPut, timers } = {}) {
     },
   };
   const context = vm.createContext({ URL, Request, Response, Headers, AbortController, setTimeout: timers?.set || setTimeout, clearTimeout: timers?.clear || clearTimeout,
-    fetch: fetchImpl, caches: { open: async () => cache },
+    fetch: fetchImpl, caches: { open: async () => cache }, ...(bitmap?{createImageBitmap:bitmap}:{}),
     self: { addEventListener() {}, location: { origin }, clients: { matchAll: async () => [{ postMessage: (message) => messages.push(message) }] } },
   });
   vm.runInContext(source, context, { filename: 'public/sw.js' });
@@ -119,4 +119,11 @@ test('recent direct, download and proxy requests reuse the existing offline imag
   await w.image(new Request(imageRequest('New').url+'&direct=1&download=1'));
   await w.image(imageRequest('New'));
   assert.equal(calls,1);assert.ok(w.entries.has(imageRequest('New').url));
+});
+
+test('a direct placeholder cannot poison the shared offline key used by proxy fallback',async()=>{
+ let closed=0;const w=worker({bitmap:async()=>({width:16,height:16,close(){closed++;}})});
+ await w.image(new Request(imageRequest().url+'&direct=1'));
+ assert.equal(closed,1);assert.equal(w.entries.size,0);
+ await w.image(imageRequest());assert.equal(w.entries.size,1,'the real proxy response remains cacheable');
 });

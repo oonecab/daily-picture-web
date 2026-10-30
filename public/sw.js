@@ -43,9 +43,17 @@ async function archive(request, history = false) {
     return Response.json({ error: history ? '此月份尚未离线保存，请联网后重试。' : '离线状态下尚无此地区的图片，请联网后重试。' }, { status: 503 });
   }
 }
-async function saveImage(cache, key, response) {
+async function saveImage(cache, key, response, verifyDimensions = false) {
   const blob = await response.blob();
   if (blob.size > IMAGE_BYTES) throw new Error('Image exceeds offline budget');
+  // A successful HTTP response can still be Bing's tiny unavailable placeholder.
+  // Do not let that response replace the shared key needed by proxy fallback.
+  if(verifyDimensions && typeof createImageBitmap==='function'){
+    let bitmap;
+    try{bitmap=await createImageBitmap(blob);if(bitmap.width<320||bitmap.height<180)return;}
+    catch{return;}
+    finally{bitmap?.close();}
+  }
   const entries = [];
   for (const request of await cache.keys()) {
     if (request.url === key) continue;
@@ -88,7 +96,8 @@ async function image(request, event) {
     const response = await fetch(request);
     if (response.ok && response.headers.get('Content-Type')?.startsWith('image/')) {
       const copy = response.clone();
-      imageWrites = imageWrites.then(() => saveImage(cache, key, copy)).catch(async () => {
+      const verifyDimensions=new URL(request.url).searchParams.get('direct')==='1';
+      imageWrites = imageWrites.then(() => saveImage(cache, key, copy, verifyDimensions)).catch(async () => {
         const clients = await self.clients.matchAll({ type: 'window' });
         for (const client of clients) client.postMessage({ type: 'offline-cache-unavailable' });
       }).catch(() => {});
