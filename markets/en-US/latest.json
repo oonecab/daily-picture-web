@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-10-30T00:59:03.615Z",
+  "fetchedAt": "2026-10-31T00:47:46.880Z",
   "images": [
+    {
+      "id": "OHR.AutumnCranes_EN-US9795571462",
+      "market": "en-US",
+      "date": "2026-10-30",
+      "title": "Time to fly high",
+      "description": "Sandhill cranes, Bosque del Apache National Wildlife Refuge, New Mexico, USA",
+      "credit": "© Terry St.Louis/Getty Images",
+      "copyright": "Sandhill cranes, Bosque del Apache National Wildlife Refuge, New Mexico, USA (© Terry St.Louis/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Sandhill+Cranes&form=hpcapt&filters=HpDate%3a%2220261030_0700%22",
+      "originalDate": "20261030",
+      "fullStartDate": "202610300700",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AveburyStones_EN-US9568662876",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Mount+Sneffels&form=hpcapt&filters=HpDate%3a%2220261016_0700%22",
       "originalDate": "20261016",
       "fullStartDate": "202610160700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.WroclawPoland_EN-US7757698922",
-      "market": "en-US",
-      "date": "2026-10-15",
-      "title": "Bridges, rooftops, and twilight",
-      "description": "View of the Wroclaw Market Square from the Witches' Bridge in Wroclaw, Poland",
-      "credit": "© Piotr Mitelski/Shutterstock",
-      "copyright": "View of the Wroclaw Market Square from the Witches' Bridge in Wroclaw, Poland (© Piotr Mitelski/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=Wroclaw&form=hpcapt&filters=HpDate%3a%2220261015_0700%22",
-      "originalDate": "20261015",
-      "fullStartDate": "202610150700",
       "wallpaper": true
     }
   ]

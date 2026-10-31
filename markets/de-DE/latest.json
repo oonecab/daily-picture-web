@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-30T00:59:03.694Z",
+  "fetchedAt": "2026-10-31T00:47:47.080Z",
   "images": [
+    {
+      "id": "OHR.FrankfurtHalloween_DE-DE2172526536",
+      "market": "de-DE",
+      "date": "2026-10-31",
+      "title": "Der Geist vergangener Kaiserreiche",
+      "description": "Kaiserdom St. Bartholomäus in Frankfurt am Main, Deutschland",
+      "credit": "© AlxeyPnferov/Getty Images",
+      "copyright": "Kaiserdom St. Bartholomäus in Frankfurt am Main, Deutschland (© AlxeyPnferov/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261030_2300%22",
+      "originalDate": "20261030",
+      "fullStartDate": "202610302300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnCranes_DE-DE0229834342",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261016",
       "fullStartDate": "202610162200",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.AndechsAbbey_DE-DE4997798666",
-      "market": "de-DE",
-      "date": "2026-10-16",
-      "title": "Hoch über Bayern",
-      "description": "Kloster Andechs bei Sonnenuntergang, Andechs, Bayern",
-      "credit": "© imageBROKER/Martin Moxter",
-      "copyright": "Kloster Andechs bei Sonnenuntergang, Andechs, Bayern (© imageBROKER/Martin Moxter)",
-      "sourceUrl": "https://www.bing.com/search?q=Kloster+Andechs&form=hpcapt&filters=HpDate%3a%2220261015_2200%22",
-      "originalDate": "20261015",
-      "fullStartDate": "202610152200",
-      "wallpaper": true
     }
   ]
 }
