@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-10-31T00:47:47.019Z",
+  "fetchedAt": "2026-11-01T00:07:35.750Z",
   "images": [
+    {
+      "id": "OHR.SchwarzwaldAutumn_JA-JP7556408951",
+      "market": "ja-JP",
+      "date": "2026-11-01",
+      "title": "木々を包む霧",
+      "description": "シュヴァルツヴァルト、バーデン＝ヴュルテンベルク州、ドイツ",
+      "credit": "© Britus/Getty Images",
+      "copyright": "シュヴァルツヴァルト、バーデン＝ヴュルテンベルク州、ドイツ (© Britus/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%B7%E3%83%A5%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%84%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%88+%E3%83%89%E3%82%A4%E3%83%84&form=hpcapt&filters=HpDate%3a%2220261031_1500%22",
+      "originalDate": "20261031",
+      "fullStartDate": "202610311500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FrankfurtHalloween_JA-JP4785085446",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%A8%E3%83%AA%E3%83%AA%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261017_1500%22",
       "originalDate": "20261017",
       "fullStartDate": "202610171500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.Persimmons2026_JA-JP2192858733",
-      "market": "ja-JP",
-      "date": "2026-10-17",
-      "title": "秋の風に揺れる干し柿",
-      "description": "ずらりと並ぶ干し柿, 長野県 妻籠宿",
-      "credit": "© wayfarer2020/Shutterstock",
-      "copyright": "ずらりと並ぶ干し柿, 長野県 妻籠宿 (© wayfarer2020/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%B9%B2%E3%81%97%E6%9F%BF&form=hpcapt&filters=HpDate%3a%2220261016_1500%22",
-      "originalDate": "20261016",
-      "fullStartDate": "202610161500",
       "wallpaper": true
     }
   ]

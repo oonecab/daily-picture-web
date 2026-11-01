@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-10-31T00:47:47.080Z",
+  "fetchedAt": "2026-11-01T00:07:35.778Z",
   "images": [
+    {
+      "id": "OHR.SchwarzwaldAutumn_DE-DE2707949453",
+      "market": "de-DE",
+      "date": "2026-11-01",
+      "title": "Wälder im Nebel",
+      "description": "Schwarzwald, Baden-Württemberg",
+      "credit": "© Britus/Getty Images",
+      "copyright": "Schwarzwald, Baden-Württemberg (© Britus/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Schwarzwald+Deutschland&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
+      "originalDate": "20261031",
+      "fullStartDate": "202610312300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FrankfurtHalloween_DE-DE2172526536",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261017",
       "fullStartDate": "202610172200",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.ChauvetPaintingsFrance_DE-DE0392727746",
-      "market": "de-DE",
-      "date": "2026-10-17",
-      "title": "Die Vergangenheit ans Licht gebracht",
-      "description": "Lebensgroße Nachbildung der Chauvet-Höhlenmalereien in Vallon-Pont-d'Arc, Frankreich",
-      "credit": "© Audrey Poree/Alamy",
-      "copyright": "Lebensgroße Nachbildung der Chauvet-Höhlenmalereien in Vallon-Pont-d'Arc, Frankreich (© Audrey Poree/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Chauvet-H%C3%B6hle&form=hpcapt&filters=HpDate%3a%2220261016_2200%22",
-      "originalDate": "20261016",
-      "fullStartDate": "202610162200",
-      "wallpaper": false
     }
   ]
 }

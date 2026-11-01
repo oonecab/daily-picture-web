@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-10-31T00:47:47.138Z",
+  "fetchedAt": "2026-11-01T00:07:35.805Z",
   "images": [
+    {
+      "id": "OHR.SchwarzwaldAutumn_FR-FR8510928698",
+      "market": "fr-FR",
+      "date": "2026-11-01",
+      "title": "Manteau de brume sur la forêt",
+      "description": "Forêt-Noire, Bade-Wurtemberg, Allemagne",
+      "credit": "© Britus/Getty Images",
+      "copyright": "Forêt-Noire, Bade-Wurtemberg, Allemagne  (© Britus/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=For%C3%AAt-Noire+Allemagne&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
+      "originalDate": "20261031",
+      "fullStartDate": "202610312300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FrankfurtHalloween_FR-FR8337402452",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=parc+Eryri+Pays+de+Galles&form=hpcapt&filters=HpDate%3a%2220261017_2200%22",
       "originalDate": "20261017",
       "fullStartDate": "202610172200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SmilingSquirrel_FR-FR7350313584",
-      "market": "fr-FR",
-      "date": "2026-10-17",
-      "title": "Le jardinier des bois",
-      "description": "Écureuil roux",
-      "credit": "© Cédric GUERE/Getty Images",
-      "copyright": "Écureuil roux (© Cédric GUERE/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%C3%A9cureuil+roux&form=hpcapt&filters=HpDate%3a%2220261016_2200%22",
-      "originalDate": "20261016",
-      "fullStartDate": "202610162200",
       "wallpaper": true
     }
   ]

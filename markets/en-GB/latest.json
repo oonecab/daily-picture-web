@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-10-31T00:47:46.956Z",
+  "fetchedAt": "2026-11-01T00:07:35.722Z",
   "images": [
+    {
+      "id": "OHR.SchwarzwaldAutumn_EN-GB3893624438",
+      "market": "en-GB",
+      "date": "2026-11-01",
+      "title": "Mist among the trees",
+      "description": "Black Forest, Baden-Württemberg, Germany",
+      "credit": "© Britus/Getty Images",
+      "copyright": "Black Forest, Baden-Württemberg, Germany (© Britus/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Black+Forest+Germany&form=hpcapt&filters=HpDate%3a%2220261101_0000%22",
+      "originalDate": "20261101",
+      "fullStartDate": "202611010000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FrankfurtHalloween_EN-GB3041218795",
       "market": "en-GB",
@@ -184,19 +197,6 @@
       "originalDate": "20261017",
       "fullStartDate": "202610172300",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.ChauvetPaintingsFrance_EN-GB4836767874",
-      "market": "en-GB",
-      "date": "2026-10-17",
-      "title": "The past, unearthed",
-      "description": "Life-size replica of Chauvet cave art in Vallon-Pont-d'Arc, France",
-      "credit": "© Audrey Poree/Alamy",
-      "copyright": "Life-size replica of Chauvet cave art in Vallon-Pont-d'Arc, France (© Audrey Poree/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=International+Archaeology+Day&form=hpcapt&filters=HpDate%3a%2220261016_2300%22",
-      "originalDate": "20261016",
-      "fullStartDate": "202610162300",
-      "wallpaper": false
     }
   ]
 }
