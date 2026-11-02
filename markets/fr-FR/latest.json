@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-01T00:07:35.805Z",
+  "fetchedAt": "2026-11-02T00:44:41.014Z",
   "images": [
+    {
+      "id": "OHR.HudsonBear_FR-FR2767726453",
+      "market": "fr-FR",
+      "date": "2026-11-02",
+      "title": "Un avenir écrit dans la glace",
+      "description": "Ours polaire et oursons, baie d'Hudson, Manitoba, Canada",
+      "credit": "© Danita Delimont/Adobe Stock",
+      "copyright": "Ours polaire et oursons, baie d'Hudson, Manitoba, Canada (© Danita Delimont/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=ours+polaire&form=hpcapt&filters=HpDate%3a%2220261101_2300%22",
+      "originalDate": "20261101",
+      "fullStartDate": "202611012300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SchwarzwaldAutumn_FR-FR8510928698",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Grand+Canal+Venise&form=hpcapt&filters=HpDate%3a%2220261018_2200%22",
       "originalDate": "20261018",
       "fullStartDate": "202610182200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DolbadarnWales_FR-FR3604957648",
-      "market": "fr-FR",
-      "date": "2026-10-18",
-      "title": "75 ans et rayonnant",
-      "description": "Château de Dolbadarn, Llanberis, Parc national d’Eryri (Snowdonia), Pays de Galles",
-      "credit": "© joe daniel price/Getty Images",
-      "copyright": "Château de Dolbadarn, Llanberis, Parc national d’Eryri (Snowdonia), Pays de Galles (© joe daniel price/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=parc+Eryri+Pays+de+Galles&form=hpcapt&filters=HpDate%3a%2220261017_2200%22",
-      "originalDate": "20261017",
-      "fullStartDate": "202610172200",
       "wallpaper": true
     }
   ]

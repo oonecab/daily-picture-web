@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-01T00:07:35.778Z",
+  "fetchedAt": "2026-11-02T00:44:40.981Z",
   "images": [
+    {
+      "id": "OHR.HudsonBear_DE-DE3504338986",
+      "market": "de-DE",
+      "date": "2026-11-02",
+      "title": "Eine Zukunft, geprägt vom Eis",
+      "description": "Eisbär mit Jungen, Hudson Bay, Manitoba, Kanada",
+      "credit": "© Danita Delimont/Adobe Stock",
+      "copyright": "Eisbär mit Jungen, Hudson Bay, Manitoba, Kanada (© Danita Delimont/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=Eisb%C3%A4ren&form=hpcapt&filters=HpDate%3a%2220261101_2300%22",
+      "originalDate": "20261101",
+      "fullStartDate": "202611012300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SchwarzwaldAutumn_DE-DE2707949453",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Canal+Grande&form=hpcapt&filters=HpDate%3a%2220261018_2200%22",
       "originalDate": "20261018",
       "fullStartDate": "202610182200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DolbadarnWales_DE-DE0565954250",
-      "market": "de-DE",
-      "date": "2026-10-18",
-      "title": "75 und voller Leben",
-      "description": "Dolbadarn Castle, Llanberis, Eryri-Nationalpark (Snowdonia), Wales",
-      "credit": "© joe daniel price/Getty Images",
-      "copyright": "Dolbadarn Castle, Llanberis, Eryri-Nationalpark (Snowdonia), Wales (© joe daniel price/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Eryri-Nationalpark+Informationen&form=hpcapt&filters=HpDate%3a%2220261017_2200%22",
-      "originalDate": "20261017",
-      "fullStartDate": "202610172200",
       "wallpaper": true
     }
   ]

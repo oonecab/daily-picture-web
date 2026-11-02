@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-01T00:07:35.722Z",
+  "fetchedAt": "2026-11-02T00:44:40.917Z",
   "images": [
+    {
+      "id": "OHR.HudsonBear_EN-GB3657065728",
+      "market": "en-GB",
+      "date": "2026-11-02",
+      "title": "A future written in ice",
+      "description": "Polar bear and cubs by Hudson Bay, Manitoba, Canada",
+      "credit": "© Danita Delimont/Adobe Stock",
+      "copyright": "Polar bear and cubs by Hudson Bay, Manitoba, Canada (© Danita Delimont/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=Polar+Bear+Week&form=hpcapt&filters=HpDate%3a%2220261102_0000%22",
+      "originalDate": "20261102",
+      "fullStartDate": "202611020000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SchwarzwaldAutumn_EN-GB3893624438",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Grand+Canal+Venice&form=hpcapt&filters=HpDate%3a%2220261018_2300%22",
       "originalDate": "20261018",
       "fullStartDate": "202610182300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DolbadarnWales_EN-GB4918405829",
-      "market": "en-GB",
-      "date": "2026-10-18",
-      "title": "75 and thriving",
-      "description": "Dolbadarn Castle, Llanberis, Eryri National Park (Snowdonia), Wales",
-      "credit": "© joe daniel price/Getty Images",
-      "copyright": "Dolbadarn Castle, Llanberis, Eryri National Park (Snowdonia), Wales (© joe daniel price/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Eryri+National+Park+Wales&form=hpcapt&filters=HpDate%3a%2220261017_2300%22",
-      "originalDate": "20261017",
-      "fullStartDate": "202610172300",
       "wallpaper": true
     }
   ]
