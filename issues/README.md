@@ -46,3 +46,5 @@
 - [023 多地区历史与紧凑筛选](023-multi-region-history.md)
 
 - [026 统一下拉菜单样式](026-select-styling.md)
+
+- [027 每日照片背景](027-daily-background.md)

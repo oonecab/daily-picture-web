@@ -116,3 +116,5 @@
 1.6.3 通过 @supports (appearance:base-select) 渐进增强四个原生选择器和 ::picker(select)，保留不支持浏览器的原生交互，不引入依赖或更改兼容基线。外壳更新为 shell-1.6.3；业务逻辑、API、环境与媒体缓存保持不变。见[问题 026](issues/026-select-styling.md)与[验收](docs/testing/select-styling.md)。
 
 1.6.4 修正选择器面板宽度：随锚点宽度并补偿历史字段边框，不再设置固定 164px 下限。外壳升级 shell-1.6.4；依赖、API、数据与环境不变。
+
+1.6.5 增加独立每日背景加载与本地偏好，使用现有直连及同图代理回退，等待地区当天图片时每 15 分钟检查，正常每小时；外壳 shell-1.6.5。无依赖、API、环境或数据迁移变化。见[问题 027](issues/027-daily-background.md)。

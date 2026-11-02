@@ -41,3 +41,5 @@
 - [019 多地区历史交付](019-multi-region-history.md)
 
 - [026 统一下拉菜单交付](026-select-styling.md)
+
+- [027 每日照片背景](027-daily-background.md)

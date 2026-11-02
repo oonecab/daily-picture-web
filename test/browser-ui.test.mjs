@@ -496,3 +496,32 @@ test('worker takeover warms sequentially without rendering or issuing a thumbnai
  assert.ok(b.timeouts.some(t=>t.delay===150));
  void takeover;
 });
+
+
+test('daily background follows newest archive independently and can be disabled', async()=>{
+ const b=browser(),created=[];const original=b.document.createElement.bind(b.document);
+ b.document.createElement=tag=>{const e=original(tag);if(tag==='img')created.push(e);return e;};
+ vm.runInContext("backgroundPending='';state.index=1;updateDailyBackground()",b.context);
+ assert.equal(created.length,1);const img=created[0];img.naturalWidth=1920;img.naturalHeight=1080;await img.onload();
+ const background=b.get('daily-background').style.backgroundImage;assert.ok(background.includes('direct=1'));
+ vm.runInContext("state.mode='favorites';state.index=0;updateDailyBackground()",b.context);assert.equal(created.length,1);
+ assert.equal(b.get('daily-background').style.backgroundImage,background);
+ b.get('daily-background-toggle').checked=false;await b.get('daily-background-toggle').emit('change');
+ assert.equal(b.get('daily-background').style.backgroundImage,'');assert.equal(b.get('daily-background').classList.contains('ready'),false);
+});
+
+test('daily background falls back once and late old-region completion cannot replace it',async()=>{
+ const b=browser(),created=[];const original=b.document.createElement.bind(b.document);
+ b.document.createElement=tag=>{const e=original(tag);if(tag==='img')created.push(e);return e;};
+ vm.runInContext("backgroundPending='';updateDailyBackground()",b.context);
+ created[0].onerror();assert.equal(created.length,2);assert.ok(!created[1].src.includes('direct=1'));
+ const late=created[1].onload;vm.runInContext("state.market='en-US';state.images=[];updateDailyBackground()",b.context);
+ created[1].naturalWidth=1920;created[1].naturalHeight=1080;await late();assert.equal(b.get('daily-background').style.backgroundImage,'');
+});
+
+test('daily refresh polls at fifteen minutes for a missing current-day image',()=>{
+ const b=browser();
+ assert.equal(vm.runInContext("state.lastCheck=Date.now()-16*60000;state.images=[{date:'2000-01-01'}];refreshDue()",b.context),true);
+ assert.equal(vm.runInContext("state.lastCheck=Date.now()-10*60000;refreshDue()",b.context),false);
+ assert.equal(vm.runInContext("state.lastCheck=Date.now()-16*60000;state.images=[{date:'9999-01-01'}];refreshDue()",b.context),false);
+});

@@ -42,3 +42,5 @@
 - [019 多地区历史实施计划](019-multi-region-history.md)
 
 - [026 下拉菜单完善计划](026-select-styling.md)
+
+- [027 每日照片背景](027-daily-background.md)

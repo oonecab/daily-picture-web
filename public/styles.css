@@ -121,3 +121,11 @@ select:disabled{cursor:not-allowed}
   }
 }
 .history-view #photo-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+
+/* A decorative daily photograph, kept separate from gallery selection. */
+body{isolation:isolate}
+#daily-background{position:fixed;inset:0;z-index:-1;pointer-events:none;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease}
+#daily-background.ready{opacity:1}
+#daily-background:after{content:"";position:absolute;inset:0;background:rgba(246,245,241,.88)}
+@media(prefers-reduced-motion:reduce){#daily-background{transition:none}}
+@media(forced-colors:active){#daily-background{display:none}}

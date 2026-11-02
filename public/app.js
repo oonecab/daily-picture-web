@@ -22,6 +22,7 @@ const state = {
   market: Object.hasOwn(MARKET_NAMES, savedSettings?.market) ? savedSettings.market : 'zh-CN',
   autoRefresh: savedSettings?.autoRefresh !== false,
   contain: savedSettings?.contain === true,
+  dailyBackground: savedSettings?.dailyBackground !== false,
   mode: 'browse', index: 0, images: [],
   favorites: Array.isArray(savedFavorites) ? savedFavorites.filter(validImage).slice(0, 200) : [],
   fetchedAt: null, lastCheck: 0, stale: false, busy: false, request: null, generation: 0,
@@ -43,7 +44,7 @@ function imageUrl(image, size = '1920x1080', direct = true) {
 }
 function sameImage(a,b) { return a?.id===b?.id && a?.date===b?.date && a?.market===b?.market; }
 function liked(image) { return state.favorites.some((item) => sameImage(item,image)); }
-function saveSettings() { writeStored('settings', { market: state.market, autoRefresh: state.autoRefresh, contain: state.contain }); }
+function saveSettings() { writeStored('settings', { market: state.market, autoRefresh: state.autoRefresh, contain: state.contain, dailyBackground: state.dailyBackground }); }
 function friendlyDate(date) { return date ? date.replaceAll('-', '.') : '—'; }
 function shortDate(date) { return date ? `${Number(date.slice(5, 7))}月${Number(date.slice(8, 10))}日` : ''; }
 function toast(message) {
@@ -328,7 +329,7 @@ async function loadArchive(force = false) {
   const generation = ++state.generation;
   const market = state.market;
   state.busy = true;
-  $('refresh').disabled = true; $('refresh').classList.add('busy');
+  $('refresh').disabled = state.mode !== 'history'; $('refresh').classList.add('busy');
   const timeout = setTimeout(() => controller.abort(), 25000);
   status();
   if (!state.images.length && state.mode === 'browse') renderSelection();
@@ -341,6 +342,7 @@ async function loadArchive(force = false) {
     const currentId = state.mode === 'browse' ? selected()?.id : null;
     state.images = data.images; state.fetchedAt = data.fetchedAt; state.stale = data.stale === true; state.lastCheck = Date.now();
     writeStored(`archive:${market}`, data);
+    updateDailyBackground();
     $('notice').hidden = state.mode === 'history' || (!state.stale && !data.historyWarning);
     $('notice').textContent = data.historyWarning || data.warning || '离线浏览：正在显示上次成功更新的图片。';
     if (state.mode === 'browse') {
@@ -368,6 +370,7 @@ function restoreArchive() {
   state.images = cached?.market === state.market && Array.isArray(cached.images) ? cached.images.filter(validImage) : [];
   state.fetchedAt = cached?.fetchedAt || null;
   state.stale = true; state.index = 0;
+  updateDailyBackground();
 }
 function toggleFavorite() {
   const item = selected(); if (!item) return;
@@ -411,11 +414,56 @@ function startSlideshow() {
   $('slideshow').replaceChildren(icon('pause'));
   toast('幻灯片已开始，每 8 秒切换一张。');
 }
+// Independent of the selected gallery/history item; share the normal image URL/cache.
+let backgroundGeneration=0, backgroundPending='', backgroundShown='', backgroundMarket='', backgroundTimer;
+function updateDailyBackground() {
+  const layer=$('daily-background');
+  if(backgroundMarket!==state.market || !state.dailyBackground){
+    backgroundGeneration++;clearTimeout(backgroundTimer);backgroundPending='';backgroundShown='';
+    layer.classList.remove('ready');layer.style.backgroundImage='';backgroundMarket=state.market;
+  }
+  if(!state.dailyBackground)return;
+  const item=state.images.filter(i=>validImage(i)&&i.market===state.market).sort((a,b)=>b.date.localeCompare(a.date))[0];
+  if(!item)return;
+  const key=`${item.market}:${item.date}:${item.id}`;
+  if(key===backgroundShown||key===backgroundPending)return;
+  const generation=++backgroundGeneration;clearTimeout(backgroundTimer);backgroundPending=key;
+  let proxy=false,attemptId=0;
+  function attempt(){
+    const currentAttempt=++attemptId;
+    const img=document.createElement('img');img.crossOrigin='anonymous';img.decoding='async';
+    const url=imageUrl(item,'1920x1080',!proxy);
+    const failed=()=>{
+      if(generation!==backgroundGeneration||currentAttempt!==attemptId)return;
+      clearTimeout(backgroundTimer);img.onload=null;img.onerror=null;
+      if(!proxy){proxy=true;attempt();}else{backgroundPending='';}
+    };
+    img.onerror=failed;
+    img.onload=async()=>{
+      if(generation!==backgroundGeneration||currentAttempt!==attemptId)return;
+      if(img.naturalWidth<320||img.naturalHeight<180){failed();return;}
+      try{if(img.decode)await img.decode();}catch{failed();return;}
+      if(generation!==backgroundGeneration||currentAttempt!==attemptId)return;
+      clearTimeout(backgroundTimer);img.onload=null;img.onerror=null;
+      layer.style.backgroundImage=`url("${url}")`;layer.classList.add('ready');
+      backgroundShown=key;backgroundPending='';
+    };
+    backgroundTimer=setTimeout(failed,12000);img.src=url;
+  }
+  attempt();
+}
+function refreshDue(){
+  const zones={'zh-CN':'Asia/Shanghai','en-US':'America/Los_Angeles','en-GB':'Europe/London','ja-JP':'Asia/Tokyo','de-DE':'Europe/Berlin','fr-FR':'Europe/Paris'};
+  const today=new Intl.DateTimeFormat('en-CA',{timeZone:zones[state.market],year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const newest=state.images.reduce((date,item)=>item.date>date?item.date:date,'');
+  // Poll every 15 minutes while waiting for the new day's upstream photograph.
+  return Date.now()-state.lastCheck >= (newest<today?15*60000:HOUR);
+}
 function scheduleRefresh() {
   clearInterval(state.refreshTimer);
   state.refreshTimer = null;
   if (!document.hidden && state.autoRefresh) {
-    state.refreshTimer = setInterval(() => { if (!state.busy && Date.now() - state.lastCheck >= HOUR) loadArchive(); }, 60000);
+    state.refreshTimer = setInterval(() => { if (!state.busy && refreshDue()) loadArchive(); }, 60000);
   }
 }
 function nativeFullscreenElement() {
@@ -535,6 +583,7 @@ async function download(size) {
 
 $('market').value = state.market;
 $('auto-refresh').checked = state.autoRefresh;
+$('daily-background-toggle').checked = state.dailyBackground;
 $('contain-image').checked = state.contain;
 $('gallery').classList.toggle('contain', state.contain);
 $('browse-tab').addEventListener('click', () => setMode('browse'));
@@ -553,7 +602,7 @@ async function setMarket(market) {
   state.market=market;$('market').value=market;$('history-market').value=market;
   state.historyCatalog=null;state.historyImages=[];
   saveSettings();restoreArchive();status();
-  if(state.mode==='history')return loadHistory();
+  if(state.mode==='history'){void loadArchive();return loadHistory();}
   await setMode('browse');return loadArchive();
 }
 $('market').addEventListener('change', () => setMarket($('market').value));
@@ -599,6 +648,7 @@ document.querySelectorAll('dialog').forEach((dialog) => {
   dialog.addEventListener('close', () => { document.body.append($('toast')); });
 });
 $('auto-refresh').addEventListener('change', () => { state.autoRefresh = $('auto-refresh').checked; saveSettings(); scheduleRefresh(); status(); });
+$('daily-background-toggle').addEventListener('change', () => { state.dailyBackground=$('daily-background-toggle').checked;saveSettings();updateDailyBackground(); });
 $('contain-image').addEventListener('change', () => { state.contain = $('contain-image').checked; $('gallery').classList.toggle('contain', state.contain); saveSettings(); });
 document.addEventListener('keydown', (event) => {
   if (document.querySelector('dialog[open]') || event.ctrlKey || event.metaKey || event.altKey || ['INPUT', 'SELECT', 'TEXTAREA'].includes(event.target.tagName)) return;
@@ -625,12 +675,13 @@ $('gallery').addEventListener('touchend', (event) => {
 }, { passive: true });
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) stopSlideshow();
-  else if (state.autoRefresh && !state.busy && Date.now() - state.lastCheck >= HOUR) loadArchive();
+  else if (state.autoRefresh && !state.busy && refreshDue()) loadArchive();
   scheduleRefresh();
 });
 window.addEventListener('online', () => { status(); loadArchive(); });
 window.addEventListener('offline', status);
 window.addEventListener('pagehide', () => {
+  backgroundGeneration++;clearTimeout(backgroundTimer);backgroundPending='';
   offlineWarmController?.abort();
   state.request?.abort(); state.historyRequest?.abort(); state.historyGeneration++; resetLazyImages(); stopSlideshow(); clearInterval(state.refreshTimer); clearTimeout(state.toastTimer); clearTimeout(state.heroTimer);
   for (const url of downloadUrls) URL.revokeObjectURL(url);
