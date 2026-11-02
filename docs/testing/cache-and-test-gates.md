@@ -32,3 +32,15 @@
 实现状态：F1/F2/F3 均 implemented；验证结论：本地必需检查 pass，外部 CI 与生产结果未声明通过。无需为此重新执行无关压测。服务端 JPEG 检查为结构/尺寸检查，不宣称完整熵解码；无解码器的浏览器保持在线但不会新增未验证的近期离线条目。
 
 远端 Actions、生产部署、真机跨浏览器、性能压测及长时间运行未执行，不计为通过。
+
+
+## 生产发布补充（2026-11-02）
+
+用户随后明确授权提交推送、合入主分支及部署。工作区原本就在 main，无待合并的功能分支；运行提交 72cea2d6d560ff3be8df6029549659f4fc922f6e 已推送 origin/main 并部署 1.6.6。
+
+- pass：服务器语法检查 20 文件，166/166 自动化测试，44 个发布文件摘要匹配；切换独立版本后服务 active、NRestarts=0，HTTPS 健康为 1.6.6。
+- pass：Nginx 配置和 3 个受保护原图摘要不变，保留 1.6.5 独立回滚版本及共享数据。
+- pass：实际线上 Chrome 背景加载、历史 2026-11→2026-10（31 张）、四个菜单边缘对齐、390px 无溢出，无 pageerror；外壳为 shell-1.6.6，CSS 摘要匹配。
+- pass：[Verify application](https://github.com/oonecab/daily-picture-web/actions/runs/41475623266) 已在 GitHub Actions 完成成功；同次推送触发的[采集工作流](https://github.com/oonecab/daily-picture-web/actions/runs/41475623350)也成功。
+
+此前 not-run 是本地验收阶段的历史状态，本段记录实际补验结果。Linux Actions 与服务器执行已补齐；跨浏览器、真实午夜长时间运行、性能压测仍不在本次完成范围。部署及浏览器原始证据位于私有 release-166 目录。
