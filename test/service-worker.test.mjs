@@ -7,7 +7,7 @@ const source = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8
 const origin = 'http://localhost';
 const imageRequest = (id = 'New') => new Request(`${origin}/api/image?id=OHR.${id}&size=640x360`);
 const jpeg = () => new Response(new Uint8Array([255, 216, 255, 217]), { headers: { 'Content-Type': 'image/jpeg' } });
-function worker({ fetchImpl = async () => jpeg(), failPut, timers, bitmap } = {}) {
+function worker({ fetchImpl = async () => jpeg(), failPut, timers, bitmap = async()=>({width:640,height:360,close(){}}) } = {}) {
   const entries = new Map(), messages = [], pending = [];
   const key = (request) => new URL(typeof request === 'string' ? request : request.url, origin).href;
   let attempts = 0, deletions = 0;
@@ -122,8 +122,21 @@ test('recent direct, download and proxy requests reuse the existing offline imag
 });
 
 test('a direct placeholder cannot poison the shared offline key used by proxy fallback',async()=>{
- let closed=0;const w=worker({bitmap:async()=>({width:16,height:16,close(){closed++;}})});
+ let closed=0,width=16;const w=worker({bitmap:async()=>({width,height:width,close(){closed++;}})});
  await w.image(new Request(imageRequest().url+'&direct=1'));
  assert.equal(closed,1);assert.equal(w.entries.size,0);
- await w.image(imageRequest());assert.equal(w.entries.size,1,'the real proxy response remains cacheable');
+ width=640;await w.image(imageRequest());assert.equal(w.entries.size,1,'a validated healthy proxy response remains cacheable');
+});
+
+
+test('proxy placeholders are rejected and legacy poisoned entries recover through direct',async()=>{
+ let width=1,calls=0;const w=worker({bitmap:async()=>({width,height:width,close(){}}),fetchImpl:async()=>{calls++;return jpeg();}});
+ await w.image();assert.equal(w.entries.size,0,'proxy placeholder must not enter shared cache');
+ w.seed(imageRequest(),jpeg());
+ width=1;await w.image(new Request(imageRequest().url+'&direct=1'));assert.equal(calls,2,'legacy bad hit must reach network');assert.equal(w.entries.size,0);
+ width=640;await w.image();assert.equal(w.entries.size,1);await w.image(new Request(imageRequest().url+'&direct=1'));assert.equal(calls,3);
+});
+
+test('without a decoder unverified recent images are not persisted',async()=>{
+ const w=worker({bitmap:null});const r=await w.image();assert.equal(r.status,200);assert.equal(w.entries.size,0);
 });

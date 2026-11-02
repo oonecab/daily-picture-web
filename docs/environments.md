@@ -7,6 +7,7 @@
 - HISTORY_DIR
 - HISTORY_REPOSITORY
 - HISTORY_COLLECTOR
+- BROWSER_EXECUTABLE_PATH
 
 ## 服务
 
@@ -75,3 +76,5 @@ PowerShell 可用 `$env:PORT = '8788'` 设置当前进程环境，再 `npm start
 Windows 使用 PowerShell 执行，远程 Linux 的部署脚本应保存为 LF；实例凭据、绝对部署路径、日志及图库留在私有运维目录。
 
 1.6.0 真实上游连接验证发现，较慢跨境链路可在 Node 默认地址尝试时间内尚未连通。使用原生 fetch 的服务与导入进程将全进程 TCP 地址尝试时间下限设为 2000ms，保留 IPv4/IPv6 自动选择；更高的已有设置不降低。单请求总预算、TLS 验证和主机白名单不变，无新增环境变量。API 依据 [Node net 文档](https://nodejs.org/api/net.html#netsetdefaultautoselectfamilyattempttimeoutvalue)，本次实际运行时原值为 250ms。
+
+测试工具：npm run test:browser 使用固定 Playwright 开发依赖及预装 Chromium。BROWSER_EXECUTABLE_PATH 为可选的测试浏览器可执行文件路径，不用于服务端启动；未设置时使用 Playwright 浏览器。测试只监听随机回环端口，产物写入被忽略的 test-output/browser/。

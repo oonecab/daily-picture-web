@@ -19,6 +19,9 @@
 - `python -X utf8 tools/verify_research.py`
   - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：quick。
   - 前置条件：Python >=3.10；只读资料快照和来源清单；网络：none；副作用：read-only。
+- `npm run test:browser`
+  - 工作目录：`.`（相对项目根）；平台：linux, macos, windows；类型：integration。
+  - 前置条件：npm ci；Playwright Chromium 已安装，或 BROWSER_EXECUTABLE_PATH 指向本地 Chromium 浏览器；可监听随机回环端口；隔离浏览器上下文，不访问公网；网络：none；副作用：local-write。
 
 ### 静态检查
 
@@ -68,3 +71,7 @@
 ## 项目专属质量门禁
 
 [当前测试设计](../testing/current-baseline.md) 区分语法检查、Node 回归、研究摘要与历史浏览器实测。本项目先执行 npm ci 安装依赖，没有构建步骤；没有登记格式化命令。Python 仅为维护工具，不改变应用启动前提。初始化结果见 [验收记录](INITIALIZATION.md)。
+
+## 真实浏览器回归
+
+npm run test:browser：前置 npm ci 和 npx playwright install chromium（安装阶段需要网络），或设置测试专用 BROWSER_EXECUTABLE_PATH；执行本身只使用本地夹具、回环服务、隔离浏览器，无生产写入。产物位于 test-output/browser/。开发依赖由锁文件固定；CI 使用 Playwright 安装的 Chromium，本机允许显式使用已安装 Chrome。

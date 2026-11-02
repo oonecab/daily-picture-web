@@ -185,3 +185,9 @@ Bing 摄影作品及上游内容、原生应用内容，以及 `docs/reverse-eng
 ## 1.6.5 每日照片背景
 
 默认使用当前地区最新每日照片作为柔和背景，历史和收藏浏览不改变背景。浏览设置可关闭；当天图片尚未发布时保留已有背景，自动更新开启且页面可见时每 15 分钟补查，正常每小时更新。离线使用可用缓存，否则保留纯色背景。
+
+## 1.6.6 缓存恢复与回归验证
+
+近期图片的直连和代理统一校验离线缓存，旧占位图缓存会重新获取。没有图片解码能力的浏览器继续在线使用，但不保存未经验证的近期图片；已带验证标记的缓存仍可使用。
+
+开发验证：npm ci 后执行 npm run check、npm test；运行 npx playwright install chromium 安装测试浏览器，再执行 npm run test:browser。也可设置仅供测试的 BROWSER_EXECUTABLE_PATH 指向现有 Chrome/Chromium。浏览器回归仅使用本地夹具和随机回环端口，结果在 test-output/browser/。CI 在 PR 与 main 推送时自动执行验证，不执行生产采集。远端 CI 结果需以实际 workflow 运行记录为准。

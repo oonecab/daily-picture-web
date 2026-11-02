@@ -44,3 +44,5 @@
 - [026 下拉菜单完善计划](026-select-styling.md)
 
 - [027 每日照片背景](027-daily-background.md)
+
+- [028 缓存恢复与测试门禁](028-cache-and-test-gates.md)

@@ -1,5 +1,5 @@
 const VERSION = 'daily-picture-v1';
-const SHELL = `${VERSION}-shell-1.6.5`;
+const SHELL = `${VERSION}-shell-1.6.6`;
 const HISTORY = `${VERSION}-history`;
 let historyWrites=Promise.resolve();
 const DATA = `${VERSION}-data`;
@@ -43,17 +43,20 @@ async function archive(request, history = false) {
     return Response.json({ error: history ? '此月份尚未离线保存，请联网后重试。' : '离线状态下尚无此地区的图片，请联网后重试。' }, { status: 503 });
   }
 }
+// All writers of a shared recent-image key must enforce the same contract.
+async function usableImage(blob){
+  if(typeof createImageBitmap!=='function')return false;
+  let bitmap;
+  try{bitmap=await createImageBitmap(blob);return bitmap.width>=320&&bitmap.height>=180;}
+  catch{return false;}
+  finally{bitmap?.close();}
+}
 async function saveImage(cache, key, response, verifyDimensions = false) {
   const blob = await response.blob();
   if (blob.size > IMAGE_BYTES) throw new Error('Image exceeds offline budget');
   // A successful HTTP response can still be Bing's tiny unavailable placeholder.
   // Do not let that response replace the shared key needed by proxy fallback.
-  if(verifyDimensions && typeof createImageBitmap==='function'){
-    let bitmap;
-    try{bitmap=await createImageBitmap(blob);if(bitmap.width<320||bitmap.height<180)return;}
-    catch{return;}
-    finally{bitmap?.close();}
-  }
+  if(verifyDimensions && !await usableImage(blob))return;
   const entries = [];
   for (const request of await cache.keys()) {
     if (request.url === key) continue;
@@ -72,6 +75,8 @@ async function saveImage(cache, key, response, verifyDimensions = false) {
   }
   const headers = new Headers(response.headers);
   headers.set('Content-Length', String(blob.size));
+  headers.delete('X-Daily-Picture-Verified');
+  if(verifyDimensions)headers.set('X-Daily-Picture-Verified','dimensions-v1');
   const copy = () => new Response(blob, { status: response.status, statusText: response.statusText, headers });
   try { await cache.put(key, copy()); }
   catch (error) {
@@ -91,12 +96,17 @@ async function image(request, event) {
   const key = url.href;
   const cache = await caches.open(IMAGES);
   const hit = await cache.match(key);
-  if (hit) return hit;
+  if(hit){
+    if(url.pathname!=='/api/image'||hit.headers.get('X-Daily-Picture-Verified')==='dimensions-v1')return hit;
+    if(await usableImage(await hit.clone().blob()))return hit;
+    // Only remove an old entry when a decoder can establish that it is bad.
+    if(typeof createImageBitmap==='function')await cache.delete(key);
+  }
   try {
     const response = await fetch(request);
     if (response.ok && response.headers.get('Content-Type')?.startsWith('image/')) {
       const copy = response.clone();
-      const verifyDimensions=new URL(request.url).searchParams.get('direct')==='1';
+      const verifyDimensions=url.pathname==='/api/image'||new URL(request.url).searchParams.get('direct')==='1';
       imageWrites = imageWrites.then(() => saveImage(cache, key, copy, verifyDimensions)).catch(async () => {
         const clients = await self.clients.matchAll({ type: 'window' });
         for (const client of clients) client.postMessage({ type: 'offline-cache-unavailable' });

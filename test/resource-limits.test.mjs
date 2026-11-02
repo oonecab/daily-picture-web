@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {jpeg as jpegBytes} from './fixtures/jpeg.mjs';
 import assert from 'node:assert/strict';
 import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -8,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import { createBingService } from '../lib/bing.mjs';
 import { createApp } from '../server.mjs';
 
-const jpeg = () => new Response(new Uint8Array([255, 216, 255, 217]), { headers: { 'Content-Type': 'image/jpeg' } });
+const jpeg = () => new Response(jpegBytes(), { headers: { 'Content-Type': 'image/jpeg' } });
 async function temporary(t) { const directory = await mkdtemp(join(tmpdir(), 'daily-picture-limits-')); t.after(() => rm(directory, { recursive: true, force: true })); return directory; }
 const archive = () => Response.json({ images: [{ urlbase: '/th?id=OHR.Limit', startdate: '20261020', title: 'Fixture' }] });
 
@@ -23,7 +24,7 @@ test('different images share bounded upstream capacity and reject queue overflow
   try { await delay(40); assert.equal(calls, 2); } finally { release(); results = await Promise.all(requests); }
   assert.equal(peak, 2); assert.equal(results.filter((status) => status === 503).length, 1);
   assert.equal(results.filter((status) => status === 200).length, 4);
-  assert.equal((await service.image('OHR.AfterOverflow')).length, 4);
+  assert.deepEqual(await service.image('OHR.AfterOverflow'),jpegBytes());
 });
 test('same image requests still share one upstream operation', async (t) => {
   let calls = 0;
@@ -40,7 +41,7 @@ test('queued requests expire in the original budget and capacity is released aft
   await Promise.race([Promise.all(responses), delay(200).then(() => { throw new Error('Request budget did not bound the queue'); })]);
   assert.equal(calls, 1);
   slow = false;
-  assert.equal((await service.image('OHR.Recovered')).length, 4);
+  assert.equal((await service.image('OHR.Recovered')).length, jpegBytes().length);
 });
 test('refresh cooldown is per market and preserves failed refresh state', async (t) => {
   let now = 0, calls = 0, fail = false;

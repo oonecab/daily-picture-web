@@ -2,13 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
+import {createClock} from './fixtures/clock.mjs';
 
 const source = await readFile(new URL('../public/app.js', import.meta.url), 'utf8');
 const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
 
 // Run the complete application against a small DOM boundary double. Layout and
 // browser top-layer behavior are checked separately in the real browser.
-function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false, abortSignal = AbortSignal, bitmap } = {}) {
+function browser({ native = 'missing', empty = false, archiveCache = null, worker = false, fetchImpl, observe = false, abortSignal = AbortSignal, bitmap, clock, autoRefresh = false } = {}) {
   const elements = new Map();
   const downloaded=[],timeouts=[];
   let document;
@@ -103,7 +104,7 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
   }
   const images = empty ? [] : [0, 1].map((i) => ({ id: `OHR.Test${i}`, date: '2026-10-19', market: 'zh-CN', title: `风景 ${i}`, description: '测试风景', credit: '© Test', copyright: '© Test' }));
   const stored = new Map([
-    ['daily-picture-v1:settings', JSON.stringify({ autoRefresh: false })],
+    ['daily-picture-v1:settings', JSON.stringify({ autoRefresh })],
     ['daily-picture-v1:archive:zh-CN', JSON.stringify({ market: 'zh-CN', images })],
     ['daily-picture-v1:favorites', JSON.stringify(images.slice(0, 1))],
   ]);
@@ -114,10 +115,11 @@ function browser({ native = 'missing', empty = false, archiveCache = null, worke
     ...(observe ? {IntersectionObserver:class { constructor(callback){intersect=callback;} observe(img){observed.push(img);} unobserve(){} disconnect(){observed.length=0;} }} : {}),
     document, window, location:{origin:'http://localhost'}, navigator: { onLine: true, ...(worker ? { serviceWorker } : {}) },
     localStorage: { getItem: (key) => stored.get(key), setItem: (key, value) => stored.set(key, value) },
-    URL, URLSearchParams, AbortController, AbortSignal:abortSignal, console,
+    URL, URLSearchParams, AbortController, AbortSignal:abortSignal, console, Date:clock?.Date || Date,
     ...(bitmap?{createImageBitmap:bitmap}:{}),
     fetch: fetchImpl || (archiveCache ? async () => ({ ok: true, json: async () => ({ market: 'zh-CN', images, fetchedAt: '2026-10-20T00:00:00Z', cache: archiveCache, stale: false }) }) : () => new Promise(() => {})),
     setTimeout: (callback,delay) => {const timer={callback,delay,cancelled:false};timeouts.push(timer);return timer;}, clearTimeout(timer) {if(timer)timer.cancelled=true;}, setInterval: () => 1, clearInterval() {},
+    ...(clock?{setTimeout:clock.setTimeout,clearTimeout:clock.clearTimeout,setInterval:clock.setInterval,clearInterval:clock.clearInterval}:{}),
   });
   vm.runInContext(source, context);
   return { get, gallery, document, window, background, serviceWorker, observed, downloaded, timeouts, intersect:entries=>intersect(entries), context, requests: () => requests };
@@ -524,4 +526,30 @@ test('daily refresh polls at fifteen minutes for a missing current-day image',()
  assert.equal(vm.runInContext("state.lastCheck=Date.now()-16*60000;state.images=[{date:'2000-01-01'}];refreshDue()",b.context),true);
  assert.equal(vm.runInContext("state.lastCheck=Date.now()-10*60000;refreshDue()",b.context),false);
  assert.equal(vm.runInContext("state.lastCheck=Date.now()-16*60000;state.images=[{date:'9999-01-01'}];refreshDue()",b.context),false);
+});
+
+
+function scheduledBrowser(start){
+ const clock=createClock(start);let calls=0;
+ const b=browser({clock,autoRefresh:true,fetchImpl:async()=>{calls++;const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new clock.Date());return {ok:true,json:async()=>({market:'zh-CN',images:[{id:'OHR.Day'+date.replaceAll('-',''),date,market:'zh-CN',title:'Daily',description:'Daily',credit:'Test',copyright:'Test'}]})};}});
+ return {b,clock,calls:()=>calls};
+}
+test('automatic refresh actually runs hourly and pauses while hidden or disabled',async()=>{
+ const {b,clock,calls}=scheduledBrowser('2026-10-19T04:00:00Z');await new Promise(setImmediate);assert.equal(calls(),1);
+ await clock.advance(59*60000);assert.equal(calls(),1);await clock.advance(60000);assert.equal(calls(),2);
+ b.document.hidden=true;await b.document.emit('visibilitychange');await clock.advance(2*3600000);assert.equal(calls(),2);
+ b.document.hidden=false;await b.document.emit('visibilitychange');await new Promise(setImmediate);assert.equal(calls(),3);
+ b.get('auto-refresh').checked=false;await b.get('auto-refresh').emit('change');await clock.advance(2*3600000);assert.equal(calls(),3);
+ b.get('auto-refresh').checked=true;await b.get('auto-refresh').emit('change');await clock.advance(60000);assert.equal(calls(),4);
+ await b.window.emit('pagehide');await clock.advance(3600000);assert.equal(calls(),4);
+});
+test('midnight polling obtains a new daily background without changing a historical selection',async()=>{
+ const {b,clock,calls}=scheduledBrowser('2026-10-19T15:55:00Z');await new Promise(setImmediate);
+ const created=[],original=b.document.createElement.bind(b.document);b.document.createElement=tag=>{const e=original(tag);if(tag==='img')created.push(e);return e;};
+ vm.runInContext("state.mode='history';state.historyImages=Array.from({length:4},()=>({...state.images[0],history:true}));state.index=3",b.context);
+ await clock.advance(14*60000);assert.equal(calls(),1);
+ await clock.advance(60000);assert.equal(calls(),2);const current=created.filter(e=>e.src.includes('OHR.Day20261020'));assert.equal(current.length,1);
+ current[0].naturalWidth=1920;current[0].naturalHeight=1080;await current[0].onload();
+ assert.match(b.get('daily-background').style.backgroundImage,/OHR.Day20261020/);
+ assert.equal(vm.runInContext('state.index',b.context),3);assert.equal(vm.runInContext('state.mode',b.context),'history');
 });

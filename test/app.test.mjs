@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
 import http from 'node:http';
+import {jpeg} from './fixtures/jpeg.mjs';
 import { createBingService, normalizeArchive, displayDate, validateImage } from '../lib/bing.mjs';
 import { createApp } from '../server.mjs';
 
@@ -241,4 +242,14 @@ test('recent direct images redirect only validated IDs and sizes without reading
   }
   assert.equal(calls,0);
   assert.equal((await fetch(`${base}/api/image?id=OHR.Test&size=UHD`)).status,200);assert.equal(calls,1);
+});
+
+
+test('recent image rejects a placeholder on disk and upstream then recovers',async t=>{
+ const root=await temporary(t);await mkdir(join(root,'images'),{recursive:true});
+ await writeFile(join(root,'images','OHR.Recovery_1920x1080.jpg'),jpeg(80,80));
+ let healthy=false,calls=0;const service=createBingService({cacheDir:root,fetchImpl:async()=>{calls++;return new Response(healthy?jpeg():jpeg(80,80),{headers:{'Content-Type':'image/jpeg'}});}});
+ await assert.rejects(service.image('OHR.Recovery'),e=>e.status===502);
+ healthy=true;assert.deepEqual(await service.image('OHR.Recovery'),jpeg());assert.equal(calls,2);
+ assert.deepEqual(await service.image('OHR.Recovery'),jpeg());assert.equal(calls,2);
 });
