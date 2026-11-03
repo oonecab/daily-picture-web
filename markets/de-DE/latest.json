@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-02T15:51:24.073Z",
+  "fetchedAt": "2026-11-03T02:55:35.192Z",
   "images": [
+    {
+      "id": "OHR.AlpineBraies_DE-DE4176036164",
+      "market": "de-DE",
+      "date": "2026-11-03",
+      "title": "Stille Gipfelwelten",
+      "description": "Pragser Wildsee, Naturpark Fanes‑Sennes‑Prags, Dolomiten, Italien",
+      "credit": "© leonid_tit/Getty Images",
+      "copyright": "Pragser Wildsee, Naturpark Fanes‑Sennes‑Prags, Dolomiten, Italien (© leonid_tit/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Pragser+Wildsee+Dolomiten&form=hpcapt&filters=HpDate%3a%2220261102_2300%22",
+      "originalDate": "20261102",
+      "fullStartDate": "202611022300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.HudsonBear_DE-DE3504338986",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Internationaler+Tag+des+Faultiers&form=hpcapt&filters=HpDate%3a%2220261019_2200%22",
       "originalDate": "20261019",
       "fullStartDate": "202610192200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VeniceSunrise_DE-DE1204445748",
-      "market": "de-DE",
-      "date": "2026-10-19",
-      "title": "Die Straße, die übers Wasser führt",
-      "description": "Canal Grande in Venedig, Italien",
-      "credit": "© Juan Romero/Cavan Images",
-      "copyright": "Canal Grande in Venedig, Italien (© Juan Romero/Cavan Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Canal+Grande&form=hpcapt&filters=HpDate%3a%2220261018_2200%22",
-      "originalDate": "20261018",
-      "fullStartDate": "202610182200",
       "wallpaper": true
     }
   ]

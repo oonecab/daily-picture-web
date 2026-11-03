@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-02T15:51:23.773Z",
+  "fetchedAt": "2026-11-03T02:55:35.022Z",
   "images": [
+    {
+      "id": "OHR.AlpineBraies_ZH-CN7307997866",
+      "market": "zh-CN",
+      "date": "2026-11-03",
+      "title": "群峰间的宁静",
+      "description": "布莱埃斯湖，法内斯-塞内斯-布莱埃斯湖自然公园，多洛米蒂山脉，意大利",
+      "credit": "© leonid_tit/Getty Images",
+      "copyright": "布莱埃斯湖，法内斯-塞内斯-布莱埃斯湖自然公园，多洛米蒂山脉，意大利 (© leonid_tit/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%A4%9A%E6%B4%9B%E7%B1%B3%E8%92%82%E5%B1%B1%E8%84%89&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261102",
+      "fullStartDate": "202611021600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.HudsonBear_ZH-CN6630706907",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%9B%BD%E9%99%85%E6%A0%91%E6%87%92%E6%97%A5&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261019",
       "fullStartDate": "202610191600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VeniceSunrise_ZH-CN5251815339",
-      "market": "zh-CN",
-      "date": "2026-10-19",
-      "title": "水上通衢",
-      "description": "大运河，威尼斯，意大利",
-      "credit": "© Juan Romero/Cavan Images",
-      "copyright": "大运河，威尼斯，意大利 (© Juan Romero/Cavan Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%A8%81%E5%B0%BC%E6%96%AF%E5%A4%A7%E8%BF%90%E6%B2%B3&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261018",
-      "fullStartDate": "202610181600",
       "wallpaper": true
     }
   ]
