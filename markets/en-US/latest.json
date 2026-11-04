@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-03T02:55:35.097Z",
+  "fetchedAt": "2026-11-04T01:20:14.944Z",
   "images": [
+    {
+      "id": "OHR.AlpineBraies_EN-US6636326357",
+      "market": "en-US",
+      "date": "2026-11-03",
+      "title": "Peace among the peaks",
+      "description": "Lake Braies, Fanes‑Sennes‑Braies Nature Park, Dolomites, Italy",
+      "credit": "© leonid_tit/Getty Images",
+      "copyright": "Lake Braies, Fanes‑Sennes‑Braies Nature Park, Dolomites, Italy (© leonid_tit/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+Braies+Dolomites&form=hpcapt&filters=HpDate%3a%2220261103_0800%22",
+      "originalDate": "20261103",
+      "fullStartDate": "202611030800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.HudsonBear_EN-US0297833232",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=International+Sloth+Day&form=hpcapt&filters=HpDate%3a%2220261020_0700%22",
       "originalDate": "20261020",
       "fullStartDate": "202610200700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VeniceSunrise_EN-US6714393168",
-      "market": "en-US",
-      "date": "2026-10-19",
-      "title": "The road that runs on water",
-      "description": "Grand Canal in Venice, Italy",
-      "credit": "© Juan Romero/Cavan Images",
-      "copyright": "Grand Canal in Venice, Italy (© Juan Romero/Cavan Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Grand+Canal+Venice&form=hpcapt&filters=HpDate%3a%2220261019_0700%22",
-      "originalDate": "20261019",
-      "fullStartDate": "202610190700",
       "wallpaper": true
     }
   ]

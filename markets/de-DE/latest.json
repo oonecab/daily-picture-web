@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-03T02:55:35.192Z",
+  "fetchedAt": "2026-11-04T01:20:15.132Z",
   "images": [
+    {
+      "id": "OHR.AutumnChina_DE-DE5410503674",
+      "market": "de-DE",
+      "date": "2026-11-04",
+      "title": "Paddeln durch ein Gemälde",
+      "description": "Paddler zwischen farbenprächtigen Sumpfzypressen, Xuancheng, Anhui, China",
+      "credit": "© Jackal Pan/Getty Images",
+      "copyright": "Paddler zwischen farbenprächtigen Sumpfzypressen, Xuancheng, Anhui, China (© Jackal Pan/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261103_2300%22",
+      "originalDate": "20261103",
+      "fullStartDate": "202611032300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AlpineBraies_DE-DE4176036164",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Hu%E1%BA%BF&form=hpcapt&filters=HpDate%3a%2220261020_2200%22",
       "originalDate": "20261020",
       "fullStartDate": "202610202200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.BrownSloth_DE-DE1394372620",
-      "market": "de-DE",
-      "date": "2026-10-20",
-      "title": "Immer mit der Ruhe",
-      "description": "Braunkehl-Faultier, Puerto Viejo de Talamanca, Costa Rica",
-      "credit": "© Suzi Eszterhas/Minden Pictures",
-      "copyright": "Braunkehl-Faultier, Puerto Viejo de Talamanca, Costa Rica (© Suzi Eszterhas/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=Internationaler+Tag+des+Faultiers&form=hpcapt&filters=HpDate%3a%2220261019_2200%22",
-      "originalDate": "20261019",
-      "fullStartDate": "202610192200",
       "wallpaper": true
     }
   ]

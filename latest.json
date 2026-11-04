@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-03T02:55:35.022Z",
+  "fetchedAt": "2026-11-04T01:20:14.815Z",
   "images": [
+    {
+      "id": "OHR.AutumnChina_ZH-CN7665959692",
+      "market": "zh-CN",
+      "date": "2026-11-04",
+      "title": "泛舟如画秋林",
+      "description": "五彩落羽杉间划船的人们，宣城，安徽省，中国",
+      "credit": "© Jackal Pan/Getty Images",
+      "copyright": "五彩落羽杉间划船的人们，宣城，安徽省，中国 (© Jackal Pan/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E8%90%BD%E7%BE%BD%E6%9D%89&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261103",
+      "fullStartDate": "202611031600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AlpineBraies_ZH-CN7307997866",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E8%B6%8A%E5%8D%97%E9%A1%BA%E5%8C%96%E5%B8%82&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261020",
       "fullStartDate": "202610201600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.BrownSloth_ZH-CN5776383136",
-      "market": "zh-CN",
-      "date": "2026-10-20",
-      "title": "慢节奏生活",
-      "description": "褐喉三趾树懒，塔拉曼卡旧港，哥斯达黎加",
-      "credit": "© Suzi Eszterhas/Minden Pictures",
-      "copyright": "褐喉三趾树懒，塔拉曼卡旧港，哥斯达黎加 (© Suzi Eszterhas/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%9B%BD%E9%99%85%E6%A0%91%E6%87%92%E6%97%A5&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261019",
-      "fullStartDate": "202610191600",
       "wallpaper": true
     }
   ]

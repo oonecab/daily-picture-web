@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-03T02:55:35.217Z",
+  "fetchedAt": "2026-11-04T01:20:15.193Z",
   "images": [
+    {
+      "id": "OHR.AutumnChina_FR-FR8803814320",
+      "market": "fr-FR",
+      "date": "2026-11-04",
+      "title": "Glisser à travers une peinture",
+      "description": "Kayak dans une forêt de cyprès, Xuancheng, Anhui, Chine",
+      "credit": "© Jackal Pan/Getty Images",
+      "copyright": "Kayak dans une forêt de cyprès, Xuancheng, Anhui, Chine (© Jackal Pan/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=cypr%C3%A8s+chauve&form=hpcapt&filters=HpDate%3a%2220261103_2300%22",
+      "originalDate": "20261103",
+      "fullStartDate": "202611032300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AlpineBraies_FR-FR8651963330",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Hu%C3%A9+Vietnam&form=hpcapt&filters=HpDate%3a%2220261020_2200%22",
       "originalDate": "20261020",
       "fullStartDate": "202610202200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.BrownSloth_FR-FR7781895704",
-      "market": "fr-FR",
-      "date": "2026-10-20",
-      "title": "La vie au ralenti",
-      "description": "Paresseux à gorge brune, Puerto Viejo de Talamanca, Costa Rica",
-      "credit": "© Suzi Eszterhas/Minden Pictures",
-      "copyright": "Paresseux à gorge brune, Puerto Viejo de Talamanca, Costa Rica (© Suzi Eszterhas/Minden Pictures)",
-      "sourceUrl": "https://www.bing.com/search?q=Journ%C3%A9e+internationale+du+paresseux&form=hpcapt&filters=HpDate%3a%2220261019_2200%22",
-      "originalDate": "20261019",
-      "fullStartDate": "202610192200",
       "wallpaper": true
     }
   ]
