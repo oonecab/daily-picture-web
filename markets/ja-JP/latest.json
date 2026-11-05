@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-04T01:20:15.069Z",
+  "fetchedAt": "2026-11-05T01:27:42.438Z",
   "images": [
+    {
+      "id": "OHR.StileCrossing_JA-JP3443452365",
+      "market": "ja-JP",
+      "date": "2026-11-05",
+      "title": "山頂へ、もう一歩",
+      "description": "石垣に設けられた木製の踏み越し段、ブラック・クラッグ、湖水地方、イギリス",
+      "credit": "© Alex Treadway/Getty Images",
+      "copyright": "石垣に設けられた木製の踏み越し段、ブラック・クラッグ、湖水地方、イギリス (© Alex Treadway/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E6%B9%96%E6%B0%B4%E5%9C%B0%E6%96%B9&form=hpcapt&filters=HpDate%3a%2220261104_1500%22",
+      "originalDate": "20261104",
+      "fullStartDate": "202611041500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnChina_JA-JP2275105446",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%86%85%E8%94%B5%E5%B1%B1%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261021_1500%22",
       "originalDate": "20261021",
       "fullStartDate": "202610211500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VietnamBridge_JA-JP2833280767",
-      "market": "ja-JP",
-      "date": "2026-10-21",
-      "title": "ライトアップされたアーチ橋",
-      "description": "グエン・ホアン橋, ベトナム",
-      "credit": "© VU PHAM VAN/Getty Images",
-      "copyright": "グエン・ホアン橋, ベトナム (© VU PHAM VAN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%82%B0%E3%82%A8%E3%83%B3%E3%83%BB%E3%83%9B%E3%82%A2%E3%83%B3%E6%A9%8B&form=hpcapt&filters=HpDate%3a%2220261020_1500%22",
-      "originalDate": "20261020",
-      "fullStartDate": "202610201500",
       "wallpaper": true
     }
   ]

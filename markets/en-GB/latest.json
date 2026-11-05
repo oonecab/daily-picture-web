@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-04T01:20:15.007Z",
+  "fetchedAt": "2026-11-05T01:27:42.402Z",
   "images": [
+    {
+      "id": "OHR.FireworksBattersea_EN-GB4505786809",
+      "market": "en-GB",
+      "date": "2026-11-05",
+      "title": "Remember, remember",
+      "description": "Fireworks over Battersea Power Station, London",
+      "credit": "© Michael Lee/Getty Images",
+      "copyright": "Fireworks over Battersea Power Station, London (© Michael Lee/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=bonfire+night&form=hpcapt&filters=HpDate%3a%2220261105_0000%22",
+      "originalDate": "20261105",
+      "fullStartDate": "202611050000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnChina_EN-GB4167994080",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Naejangsan+National+Park&form=hpcapt&filters=HpDate%3a%2220261021_2300%22",
       "originalDate": "20261021",
       "fullStartDate": "202610212300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VietnamBridge_EN-GB5180652549",
-      "market": "en-GB",
-      "date": "2026-10-21",
-      "title": "Winging it over the river",
-      "description": "Nguyen Hoang Bridge over the Perfume River, Hue, Vietnam",
-      "credit": "© VU PHAM VAN/Getty Images",
-      "copyright": "Nguyen Hoang Bridge over the Perfume River, Hue, Vietnam (© VU PHAM VAN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Hue+Vietnam&form=hpcapt&filters=HpDate%3a%2220261020_2300%22",
-      "originalDate": "20261020",
-      "fullStartDate": "202610202300",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-04T01:20:15.132Z",
+  "fetchedAt": "2026-11-05T01:27:42.471Z",
   "images": [
+    {
+      "id": "OHR.StileCrossing_DE-DE6131632165",
+      "market": "de-DE",
+      "date": "2026-11-05",
+      "title": "Ein Schritt näher am Gipfel",
+      "description": "Holzsteg an einer Steinmauer, Black Crag, Lake District, England",
+      "credit": "© Alex Treadway/Getty Images",
+      "copyright": "Holzsteg an einer Steinmauer, Black Crag, Lake District, England (© Alex Treadway/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+District+Vereinigtes+K%C3%B6nigreich&form=hpcapt&filters=HpDate%3a%2220261104_2300%22",
+      "originalDate": "20261104",
+      "fullStartDate": "202611042300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnChina_DE-DE5410503674",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Naejangsan-Nationalpark&form=hpcapt&filters=HpDate%3a%2220261021_2200%22",
       "originalDate": "20261021",
       "fullStartDate": "202610212200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VietnamBridge_DE-DE1735618070",
-      "market": "de-DE",
-      "date": "2026-10-21",
-      "title": "Über den Fluss fliegen",
-      "description": "Nguyen-Hoang-Brücke über den Parfümfluss, Huế, Vietnam",
-      "credit": "© VU PHAM VAN/Getty Images",
-      "copyright": "Nguyen-Hoang-Brücke über den Parfümfluss, Huế, Vietnam (© VU PHAM VAN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Hu%E1%BA%BF&form=hpcapt&filters=HpDate%3a%2220261020_2200%22",
-      "originalDate": "20261020",
-      "fullStartDate": "202610202200",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-04T01:20:15.193Z",
+  "fetchedAt": "2026-11-05T01:27:42.502Z",
   "images": [
+    {
+      "id": "OHR.StileCrossing_FR-FR8951232534",
+      "market": "fr-FR",
+      "date": "2026-11-05",
+      "title": "Un pas de plus vers le sommet",
+      "description": "Échelle près d'un mur de pierre, Black Crag, Lake District, Angleterre",
+      "credit": "© Alex Treadway/Getty Images",
+      "copyright": "Échelle près d'un mur de pierre, Black Crag, Lake District, Angleterre (© Alex Treadway/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+District&form=hpcapt&filters=HpDate%3a%2220261104_2300%22",
+      "originalDate": "20261104",
+      "fullStartDate": "202611042300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnChina_FR-FR8803814320",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=parc+national+de+Naejangsan&form=hpcapt&filters=HpDate%3a%2220261021_2200%22",
       "originalDate": "20261021",
       "fullStartDate": "202610212200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VietnamBridge_FR-FR7991423921",
-      "market": "fr-FR",
-      "date": "2026-10-21",
-      "title": "Vol au-dessus de la rivière",
-      "description": "Le pont Nguyen Hoang sur la rivière des Parfums, Hué, Vietnam",
-      "credit": "© VU PHAM VAN/Getty Images",
-      "copyright": "Le pont Nguyen Hoang sur la rivière des Parfums, Hué, Vietnam (© VU PHAM VAN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Hu%C3%A9+Vietnam&form=hpcapt&filters=HpDate%3a%2220261020_2200%22",
-      "originalDate": "20261020",
-      "fullStartDate": "202610202200",
       "wallpaper": true
     }
   ]
