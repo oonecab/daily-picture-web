@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-05T01:27:42.502Z",
+  "fetchedAt": "2026-11-06T01:32:15.015Z",
   "images": [
+    {
+      "id": "OHR.PipiwaiTrail_FR-FR9210868970",
+      "market": "fr-FR",
+      "date": "2026-11-06",
+      "title": "Toit de verdure à travers Maui",
+      "description": "Forêt de bambous, Pīpīwai Trail, Hawaii, États-Unis",
+      "credit": "© MNStudio/Getty Images",
+      "copyright": "Forêt de bambous, Pīpīwai Trail, Hawaii, États-Unis (© MNStudio/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Parc+national+Haleakal%C4%81&form=hpcapt&filters=HpDate%3a%2220261105_2300%22",
+      "originalDate": "20261105",
+      "fullStartDate": "202611052300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.StileCrossing_FR-FR8951232534",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Journ%C3%A9e+mondiale+du+champagne&form=hpcapt&filters=HpDate%3a%2220261022_2200%22",
       "originalDate": "20261022",
       "fullStartDate": "202610222200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NaejangsanNP_FR-FR8219456677",
-      "market": "fr-FR",
-      "date": "2026-10-22",
-      "title": "Eaux paisibles, teintes flamboyantes",
-      "description": "Le parc national de Naejangsan en automne, Corée du Sud",
-      "credit": "© Twenty47studio/Getty Images",
-      "copyright": "Le parc national de Naejangsan en automne, Corée du Sud (© Twenty47studio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=parc+national+de+Naejangsan&form=hpcapt&filters=HpDate%3a%2220261021_2200%22",
-      "originalDate": "20261021",
-      "fullStartDate": "202610212200",
       "wallpaper": true
     }
   ]

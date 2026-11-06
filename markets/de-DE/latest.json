@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-05T01:27:42.471Z",
+  "fetchedAt": "2026-11-06T01:32:14.958Z",
   "images": [
+    {
+      "id": "OHR.PipiwaiTrail_DE-DE9691097479",
+      "market": "de-DE",
+      "date": "2026-11-06",
+      "title": "Ein grüner Tunnel durch Maui",
+      "description": "Bambuswald, Pīpīwai Trail, Haleakalā-Nationalpark, Maui, Hawaii, USA",
+      "credit": "© MNStudio/Getty Images",
+      "copyright": "Bambuswald, Pīpīwai Trail, Haleakalā-Nationalpark, Maui, Hawaii, USA (© MNStudio/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Haleakala-Nationalpark+Hawaii&form=hpcapt&filters=HpDate%3a%2220261105_2300%22",
+      "originalDate": "20261105",
+      "fullStartDate": "202611052300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.StileCrossing_DE-DE6131632165",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Wolf+Tier&form=hpcapt&filters=HpDate%3a%2220261022_2200%22",
       "originalDate": "20261022",
       "fullStartDate": "202610222200",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NaejangsanNP_DE-DE1873468197",
-      "market": "de-DE",
-      "date": "2026-10-22",
-      "title": "Stille Wasser, leuchtende Farben",
-      "description": "Herbst im Naejangsan-Nationalpark, Südkorea",
-      "credit": "© Twenty47studio/Getty Images",
-      "copyright": "Herbst im Naejangsan-Nationalpark, Südkorea (© Twenty47studio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Naejangsan-Nationalpark&form=hpcapt&filters=HpDate%3a%2220261021_2200%22",
-      "originalDate": "20261021",
-      "fullStartDate": "202610212200",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-05T01:27:42.438Z",
+  "fetchedAt": "2026-11-06T01:32:14.898Z",
   "images": [
+    {
+      "id": "OHR.PipiwaiTrail_JA-JP1383562325",
+      "market": "ja-JP",
+      "date": "2026-11-06",
+      "title": "マウイ島を抜ける緑のトンネル",
+      "description": "ピピワイ・トレイルの竹林、ハレアカラ国立公園、マウイ島、ハワイ、アメリカ",
+      "credit": "© MNStudio/Getty Images",
+      "copyright": "ピピワイ・トレイルの竹林、ハレアカラ国立公園、マウイ島、ハワイ、アメリカ (© MNStudio/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%8F%E3%83%AC%E3%82%A2%E3%82%AB%E3%83%A9%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261105_1500%22",
+      "originalDate": "20261105",
+      "fullStartDate": "202611051500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.StileCrossing_JA-JP3443452365",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E8%94%A6%E6%B2%BC&form=hpcapt&filters=HpDate%3a%2220261022_1500%22",
       "originalDate": "20261022",
       "fullStartDate": "202610221500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NaejangsanNP_JA-JP7092803320",
-      "market": "ja-JP",
-      "date": "2026-10-22",
-      "title": "紅葉に彩られた東屋",
-      "description": "内蔵山国立公園, 韓国",
-      "credit": "© Twenty47studio/Getty Images",
-      "copyright": "内蔵山国立公園, 韓国 (© Twenty47studio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%86%85%E8%94%B5%E5%B1%B1%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261021_1500%22",
-      "originalDate": "20261021",
-      "fullStartDate": "202610211500",
       "wallpaper": true
     }
   ]

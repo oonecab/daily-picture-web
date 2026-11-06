@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-05T01:27:42.279Z",
+  "fetchedAt": "2026-11-06T01:32:14.637Z",
   "images": [
+    {
+      "id": "OHR.PipiwaiTrail_ZH-CN1811194311",
+      "market": "zh-CN",
+      "date": "2026-11-06",
+      "title": "穿越毛伊岛的绿色隧道",
+      "description": "竹林，皮皮维小径，哈莱亚卡拉国家公园，毛伊岛，夏威夷州，美国",
+      "credit": "© MNStudio/Getty Images",
+      "copyright": "竹林，皮皮维小径，哈莱亚卡拉国家公园，毛伊岛，夏威夷州，美国 (© MNStudio/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%93%88%E8%8E%B1%E4%BA%9A%E5%8D%A1%E6%8B%89%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261105",
+      "fullStartDate": "202611051600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.StileCrossing_ZH-CN9811465935",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E7%81%B0%E7%8B%BC&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261022",
       "fullStartDate": "202610221600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NaejangsanNP_ZH-CN6538893004",
-      "market": "zh-CN",
-      "date": "2026-10-22",
-      "title": "静水映斑斓",
-      "description": "内藏山国立公园的秋景，韩国",
-      "credit": "© Twenty47studio/Getty Images",
-      "copyright": "内藏山国立公园的秋景，韩国 (© Twenty47studio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%86%85%E8%97%8F%E5%B1%B1%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261021",
-      "fullStartDate": "202610211600",
       "wallpaper": true
     }
   ]

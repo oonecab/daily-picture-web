@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-05T01:27:42.369Z",
+  "fetchedAt": "2026-11-06T01:32:14.756Z",
   "images": [
+    {
+      "id": "OHR.StileCrossing_EN-US9052435517",
+      "market": "en-US",
+      "date": "2026-11-05",
+      "title": "One step closer to the summit",
+      "description": "Wooden stile at a stone wall, Black Crag, Lake District, England",
+      "credit": "© Alex Treadway/Getty Images",
+      "copyright": "Wooden stile at a stone wall, Black Crag, Lake District, England (© Alex Treadway/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+District&form=hpcapt&filters=HpDate%3a%2220261105_0800%22",
+      "originalDate": "20261105",
+      "fullStartDate": "202611050800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AutumnChina_EN-US0467722422",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Naejangsan+National+Park&form=hpcapt&filters=HpDate%3a%2220261022_0700%22",
       "originalDate": "20261022",
       "fullStartDate": "202610220700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.VietnamBridge_EN-US6907946681",
-      "market": "en-US",
-      "date": "2026-10-21",
-      "title": "Winging it over the river",
-      "description": "Nguyen Hoang Bridge over the Perfume River, Hue, Vietnam",
-      "credit": "© VU PHAM VAN/Getty Images",
-      "copyright": "Nguyen Hoang Bridge over the Perfume River, Hue, Vietnam (© VU PHAM VAN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Hue+Vietnam&form=hpcapt&filters=HpDate%3a%2220261021_0700%22",
-      "originalDate": "20261021",
-      "fullStartDate": "202610210700",
       "wallpaper": true
     }
   ]
