@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-06T01:32:14.958Z",
+  "fetchedAt": "2026-11-07T00:56:42.566Z",
   "images": [
+    {
+      "id": "OHR.DakotaBison_DE-DE0154878283",
+      "market": "de-DE",
+      "date": "2026-11-07",
+      "title": "Der zurückgekehrte Riese",
+      "description": "Ein Bison in der Grassteppe des Theodore-Roosevelt-Nationalparks, Nord-Dakota, USA",
+      "credit": "© Tandem Stock/Adobe Stock",
+      "copyright": "Ein Bison in der Grassteppe des Theodore-Roosevelt-Nationalparks, Nord-Dakota, USA (© Tandem Stock/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=Bisons&form=hpcapt&filters=HpDate%3a%2220261106_2300%22",
+      "originalDate": "20261106",
+      "fullStartDate": "202611062300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PipiwaiTrail_DE-DE9691097479",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261023",
       "fullStartDate": "202610232200",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.YellowstoneWolves_DE-DE2017697752",
-      "market": "de-DE",
-      "date": "2026-10-23",
-      "title": "Partner in freier Wildbahn",
-      "description": "Wölfe im Yellowstone-Nationalpark, Wyoming, USA",
-      "credit": "© John Morrison/Getty Images",
-      "copyright": "Wölfe im Yellowstone-Nationalpark, Wyoming, USA (© John Morrison/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Wolf+Tier&form=hpcapt&filters=HpDate%3a%2220261022_2200%22",
-      "originalDate": "20261022",
-      "fullStartDate": "202610222200",
-      "wallpaper": true
     }
   ]
 }

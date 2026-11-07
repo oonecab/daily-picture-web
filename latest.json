@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-06T01:32:14.637Z",
+  "fetchedAt": "2026-11-07T00:56:42.390Z",
   "images": [
+    {
+      "id": "OHR.DakotaBison_ZH-CN2302503868",
+      "market": "zh-CN",
+      "date": "2026-11-07",
+      "title": "归来的草原巨兽",
+      "description": "草原上的一头野牛，西奥多·罗斯福国家公园，北达科他州，美国",
+      "credit": "© Tandem Stock/Adobe Stock",
+      "copyright": "草原上的一头野牛，西奥多·罗斯福国家公园，北达科他州，美国 (© Tandem Stock/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=%E7%BE%8E%E6%B4%B2%E9%87%8E%E7%89%9B&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261106",
+      "fullStartDate": "202611061600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PipiwaiTrail_ZH-CN1811194311",
       "market": "zh-CN",
@@ -184,19 +197,6 @@
       "originalDate": "20261023",
       "fullStartDate": "202610231600",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.YellowstoneWolves_ZH-CN6767268961",
-      "market": "zh-CN",
-      "date": "2026-10-23",
-      "title": "荒野伙伴",
-      "description": "两只灰狼，黄石国家公园，怀俄明州，美国",
-      "credit": "© John Morrison/Getty Images",
-      "copyright": "两只灰狼，黄石国家公园，怀俄明州，美国 (© John Morrison/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E7%81%B0%E7%8B%BC&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261022",
-      "fullStartDate": "202610221600",
-      "wallpaper": true
     }
   ]
 }

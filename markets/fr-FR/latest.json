@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-06T01:32:15.015Z",
+  "fetchedAt": "2026-11-07T00:56:42.597Z",
   "images": [
+    {
+      "id": "OHR.DakotaBison_FR-FR7465030722",
+      "market": "fr-FR",
+      "date": "2026-11-07",
+      "title": "Un géant de retour",
+      "description": "Bison dans le parc national Theodore Roosevelt, Dakota du Nord, États-Unis",
+      "credit": "© Tandem Stock/Adobe Stock",
+      "copyright": "Bison dans le parc national Theodore Roosevelt, Dakota du Nord, États-Unis (© Tandem Stock/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=bison+bison&form=hpcapt&filters=HpDate%3a%2220261106_2300%22",
+      "originalDate": "20261106",
+      "fullStartDate": "202611062300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PipiwaiTrail_FR-FR9210868970",
       "market": "fr-FR",
@@ -184,19 +197,6 @@
       "originalDate": "20261023",
       "fullStartDate": "202610232200",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.ReimsChampagne_FR-FR6230244152",
-      "market": "fr-FR",
-      "date": "2026-10-23",
-      "title": "Là où naissent les bulles",
-      "description": "Vignobles à Verzenay, montagne de Reims, Champagne",
-      "credit": "© Philippe TURPIN/Getty Images",
-      "copyright": "Vignobles à Verzenay, montagne de Reims, Champagne (© Philippe TURPIN/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Journ%C3%A9e+mondiale+du+champagne&form=hpcapt&filters=HpDate%3a%2220261022_2200%22",
-      "originalDate": "20261022",
-      "fullStartDate": "202610222200",
-      "wallpaper": true
     }
   ]
 }
