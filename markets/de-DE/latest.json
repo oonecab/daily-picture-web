@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-07T00:56:42.566Z",
+  "fetchedAt": "2026-11-08T00:35:29.581Z",
   "images": [
+    {
+      "id": "OHR.DiwaliLamps_DE-DE0703233561",
+      "market": "de-DE",
+      "date": "2026-11-08",
+      "title": "Ein strahlendes Fest",
+      "description": "Laternen für Diwali, Mumbai, Maharashtra, Indien",
+      "credit": "© Dinodia Photo/Getty Images",
+      "copyright": "Laternen für Diwali, Mumbai, Maharashtra, Indien (© Dinodia Photo/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Diwali&form=hpcapt&filters=HpDate%3a%2220261107_2300%22",
+      "originalDate": "20261107",
+      "fullStartDate": "202611072300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.DakotaBison_DE-DE0154878283",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261024",
       "fullStartDate": "202610242200",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.BerlinLibrary_DE-DE5145605761",
-      "market": "de-DE",
-      "date": "2026-10-24",
-      "title": "Architektur des Wissens",
-      "description": "Philologische Bibliothek der Freien Universität Berlin, Berlin",
-      "credit": "© ullstein bild/Getty Images",
-      "copyright": "Philologische Bibliothek der Freien Universität Berlin, Berlin (© ullstein bild/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Tag+der+Bibliotheken&form=hpcapt&filters=HpDate%3a%2220261023_2200%22",
-      "originalDate": "20261023",
-      "fullStartDate": "202610232200",
-      "wallpaper": false
     }
   ]
 }

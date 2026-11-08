@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-07T00:56:42.472Z",
+  "fetchedAt": "2026-11-08T00:35:29.421Z",
   "images": [
+    {
+      "id": "OHR.DakotaBison_EN-US0710175615",
+      "market": "en-US",
+      "date": "2026-11-07",
+      "title": "The giant that came back",
+      "description": "A bison in the grasslands of Theodore Roosevelt National Park, North Dakota",
+      "credit": "© Tandem Stock/Adobe Stock",
+      "copyright": "A bison in the grasslands of Theodore Roosevelt National Park, North Dakota (© Tandem Stock/Adobe Stock)",
+      "sourceUrl": "https://www.bing.com/search?q=National+Bison+Day&form=hpcapt&filters=HpDate%3a%2220261107_0800%22",
+      "originalDate": "20261107",
+      "fullStartDate": "202611070800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PipiwaiTrail_EN-US0631882545",
       "market": "en-US",
@@ -184,19 +197,6 @@
       "originalDate": "20261024",
       "fullStartDate": "202610240700",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.YellowstoneWolves_EN-US7105521535",
-      "market": "en-US",
-      "date": "2026-10-23",
-      "title": "Partners in the wild",
-      "description": "Two gray wolves, Yellowstone National Park, Wyoming",
-      "credit": "© John Morrison/Getty Images",
-      "copyright": "Two gray wolves, Yellowstone National Park, Wyoming (© John Morrison/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Wolf+Awareness+Week&form=hpcapt&filters=HpDate%3a%2220261023_0700%22",
-      "originalDate": "20261023",
-      "fullStartDate": "202610230700",
-      "wallpaper": true
     }
   ]
 }

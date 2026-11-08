@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-07T00:56:42.535Z",
+  "fetchedAt": "2026-11-08T00:35:29.529Z",
   "images": [
+    {
+      "id": "OHR.DiwaliLamps_JA-JP0443643151",
+      "market": "ja-JP",
+      "date": "2026-11-08",
+      "title": "光に包まれる祝祭",
+      "description": "ディーワーリーを彩るランタン、ムンバイ、マハーラーシュトラ州、インド",
+      "credit": "© Dinodia Photo/Getty Images",
+      "copyright": "ディーワーリーを彩るランタン、ムンバイ、マハーラーシュトラ州、インド (© Dinodia Photo/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%87%E3%82%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AA%E3%83%BC&form=hpcapt&filters=HpDate%3a%2220261107_1500%22",
+      "originalDate": "20261107",
+      "fullStartDate": "202611071500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.DakotaBison_JA-JP7700625518",
       "market": "ja-JP",
@@ -184,19 +197,6 @@
       "originalDate": "20261024",
       "fullStartDate": "202610241500",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.PortugueseLibrary_JA-JP3230226750",
-      "market": "ja-JP",
-      "date": "2026-10-24",
-      "title": "図書館の天窓から差し込む自然光",
-      "description": "王立ポルトガル図書館, ブラジル",
-      "credit": "© Antonio Salaverry/Shutterstock",
-      "copyright": "王立ポルトガル図書館, ブラジル (© Antonio Salaverry/Shutterstock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E7%8E%8B%E7%AB%8B%E3%83%9D%E3%83%AB%E3%83%88%E3%82%AC%E3%83%AB%E5%9B%B3%E6%9B%B8%E9%A4%A8&form=hpcapt&filters=HpDate%3a%2220261023_1500%22",
-      "originalDate": "20261023",
-      "fullStartDate": "202610231500",
-      "wallpaper": false
     }
   ]
 }
