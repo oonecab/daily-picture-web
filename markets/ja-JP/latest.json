@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-08T00:35:29.529Z",
+  "fetchedAt": "2026-11-09T00:54:44.154Z",
   "images": [
+    {
+      "id": "OHR.TrianaSpain_JA-JP2076026093",
+      "market": "ja-JP",
+      "date": "2026-11-09",
+      "title": "芸術がリズムを刻む街",
+      "description": "セビリアの歴史地区トリアナ、スペイン",
+      "credit": "© Andrzej Rostek/Getty Images",
+      "copyright": "セビリアの歴史地区トリアナ、スペイン (© Andrzej Rostek/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%BB%E3%83%93%E3%83%AA%E3%82%A2+%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3&form=hpcapt&filters=HpDate%3a%2220261108_1500%22",
+      "originalDate": "20261108",
+      "fullStartDate": "202611081500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.DiwaliLamps_JA-JP0443643151",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sitovo+waterfall&form=hpcapt&filters=HpDate%3a%2220261025_1500%22",
       "originalDate": "20261025",
       "fullStartDate": "202610251500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.YellowstoneWolves_JA-JP3378091323",
-      "market": "ja-JP",
-      "date": "2026-10-25",
-      "title": "冬の大地を進むオオカミたち",
-      "description": "ハイイロオオカミ, 米国 ワイオミング州",
-      "credit": "© John Morrison/Getty Images",
-      "copyright": "ハイイロオオカミ, 米国 ワイオミング州 (© John Morrison/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%83%8F%E3%82%A4%E3%82%A4%E3%83%AD%E3%82%AA%E3%82%AA%E3%82%AB%E3%83%9F&form=hpcapt&filters=HpDate%3a%2220261024_1500%22",
-      "originalDate": "20261024",
-      "fullStartDate": "202610241500",
       "wallpaper": true
     }
   ]

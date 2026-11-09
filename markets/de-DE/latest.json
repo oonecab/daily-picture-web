@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-08T00:35:29.581Z",
+  "fetchedAt": "2026-11-09T00:54:44.182Z",
   "images": [
+    {
+      "id": "OHR.MauerBerlin_DE-DE4395338070",
+      "market": "de-DE",
+      "date": "2026-11-09",
+      "title": "Die Nacht, die Deutschland veränderte",
+      "description": "Schüler spähen durch einen Spalt in einem noch erhaltenen Abschnitt der Berliner Mauer",
+      "credit": "© Sean Gallup/Getty Images",
+      "copyright": "Schüler spähen durch einen Spalt in einem noch erhaltenen Abschnitt der Berliner Mauer (© Sean Gallup/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Fall+der+Berliner+Mauer&form=hpcapt&filters=HpDate%3a%2220261108_2300%22",
+      "originalDate": "20261108",
+      "fullStartDate": "202611082300",
+      "wallpaper": false
+    },
     {
       "id": "OHR.DiwaliLamps_DE-DE0703233561",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sitowo+Plowdiw+Bulgarien&form=hpcapt&filters=HpDate%3a%2220261025_2300%22",
       "originalDate": "20261025",
       "fullStartDate": "202610252300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.MaligneFest_DE-DE5179640958",
-      "market": "de-DE",
-      "date": "2026-10-25",
-      "title": "Wo Gipfel auf Stille treffen",
-      "description": "Maligne Lake, Jasper-Nationalpark, Alberta, Kanada",
-      "credit": "© Andrey Popov/Getty Images",
-      "copyright": "Maligne Lake, Jasper-Nationalpark, Alberta, Kanada (© Andrey Popov/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Jasper-Nationalpark+Kanada&form=hpcapt&filters=HpDate%3a%2220261024_2200%22",
-      "originalDate": "20261024",
-      "fullStartDate": "202610242200",
       "wallpaper": true
     }
   ]

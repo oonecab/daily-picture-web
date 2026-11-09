@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-08T00:35:29.475Z",
+  "fetchedAt": "2026-11-09T00:54:44.123Z",
   "images": [
+    {
+      "id": "OHR.TrianaSpain_EN-GB4312074959",
+      "market": "en-GB",
+      "date": "2026-11-09",
+      "title": "Where art finds its rhythm",
+      "description": "Historic district of Triana, Seville, Spain",
+      "credit": "© Andrzej Rostek/Getty Images",
+      "copyright": "Historic district of Triana, Seville, Spain (© Andrzej Rostek/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Seville+Spain&form=hpcapt&filters=HpDate%3a%2220261109_0000%22",
+      "originalDate": "20261109",
+      "fullStartDate": "202611090000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.DiwaliLamps_EN-GB4404345220",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sitovo+Plovdiv+Bulgaria&form=hpcapt&filters=HpDate%3a%2220261026_0000%22",
       "originalDate": "20261026",
       "fullStartDate": "202610260000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.BSTEnds2026_EN-GB5502884225",
-      "market": "en-GB",
-      "date": "2026-10-25",
-      "title": "The clock strikes back",
-      "description": "The Eastgate Clock, Chester, England",
-      "credit": "© Alexey_Fedoren/iStock/Getty Images",
-      "copyright": "The Eastgate Clock, Chester, England (© Alexey_Fedoren/iStock/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=British+Summer+Time&form=hpcapt&filters=HpDate%3a%2220261024_2300%22",
-      "originalDate": "20261024",
-      "fullStartDate": "202610242300",
       "wallpaper": true
     }
   ]
