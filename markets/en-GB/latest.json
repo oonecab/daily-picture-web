@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-09T00:54:44.123Z",
+  "fetchedAt": "2026-11-10T03:34:03.796Z",
   "images": [
+    {
+      "id": "OHR.RoseIsland_EN-GB4222638797",
+      "market": "en-GB",
+      "date": "2026-11-10",
+      "title": "Licensed to chill",
+      "description": "Aerial view of Rose Island, The Bahamas",
+      "credit": "© Abstract Aerial Art/Getty Images",
+      "copyright": "Aerial view of Rose Island, The Bahamas (© Abstract Aerial Art/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261110_0000%22",
+      "originalDate": "20261110",
+      "fullStartDate": "202611100000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrianaSpain_EN-GB4312074959",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Pond+cypress&form=hpcapt&filters=HpDate%3a%2220261027_0000%22",
       "originalDate": "20261027",
       "fullStartDate": "202610270000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SitovoWaterfall_EN-GB5626792550",
-      "market": "en-GB",
-      "date": "2026-10-26",
-      "title": "Nature's autumn soundtrack",
-      "description": "Autumn waterfalls near Sitovo, Plovdiv Province, Bulgaria",
-      "credit": "© Nadya85/Getty Images",
-      "copyright": "Autumn waterfalls near Sitovo, Plovdiv Province, Bulgaria (© Nadya85/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Sitovo+Plovdiv+Bulgaria&form=hpcapt&filters=HpDate%3a%2220261026_0000%22",
-      "originalDate": "20261026",
-      "fullStartDate": "202610260000",
       "wallpaper": true
     }
   ]

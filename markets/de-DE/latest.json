@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-09T00:54:44.182Z",
+  "fetchedAt": "2026-11-10T03:34:03.890Z",
   "images": [
+    {
+      "id": "OHR.RoseIsland_DE-DE1760101963",
+      "market": "de-DE",
+      "date": "2026-11-10",
+      "title": "Die Lizenz zum Chillen",
+      "description": "Luftaufnahme von Rose Island, Bahamas",
+      "credit": "© Abstract Aerial Art/Getty Images",
+      "copyright": "Luftaufnahme von Rose Island, Bahamas (© Abstract Aerial Art/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261109_2300%22",
+      "originalDate": "20261109",
+      "fullStartDate": "202611092300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.MauerBerlin_DE-DE4395338070",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261026_2300%22",
       "originalDate": "20261026",
       "fullStartDate": "202610262300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SitovoWaterfall_DE-DE2533514641",
-      "market": "de-DE",
-      "date": "2026-10-26",
-      "title": "Der Klang des Herbstes",
-      "description": "Wasserfälle bei Sitovo im Herbst, Plowdiw, Bulgarien",
-      "credit": "© Nadya85/Getty Images",
-      "copyright": "Wasserfälle bei Sitovo im Herbst, Plowdiw, Bulgarien (© Nadya85/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Sitowo+Plowdiw+Bulgarien&form=hpcapt&filters=HpDate%3a%2220261025_2300%22",
-      "originalDate": "20261025",
-      "fullStartDate": "202610252300",
       "wallpaper": true
     }
   ]

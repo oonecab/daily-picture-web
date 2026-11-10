@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-09T00:54:44.211Z",
+  "fetchedAt": "2026-11-10T03:34:03.931Z",
   "images": [
+    {
+      "id": "OHR.RoseIsland_FR-FR0867516842",
+      "market": "fr-FR",
+      "date": "2026-11-10",
+      "title": "Permis de se relaxer",
+      "description": "Vue aérienne de Rose Island, Bahamas",
+      "credit": "© Abstract Aerial Art/Getty Images",
+      "copyright": "Vue aérienne de Rose Island, Bahamas (© Abstract Aerial Art/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261109_2300%22",
+      "originalDate": "20261109",
+      "fullStartDate": "202611092300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrianaSpain_FR-FR5872801405",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=cypr%C3%A8s+des+%C3%A9tangs&form=hpcapt&filters=HpDate%3a%2220261026_2300%22",
       "originalDate": "20261026",
       "fullStartDate": "202610262300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SitovoWaterfall_FR-FR3730397148",
-      "market": "fr-FR",
-      "date": "2026-10-26",
-      "title": "Le son de l’automne",
-      "description": "Une cascade en Automne près de Sitovo, Oblast de Plovdiv, Bulgarie",
-      "credit": "© Nadya85/Getty Images",
-      "copyright": "Une cascade en Automne près de Sitovo, Oblast de Plovdiv, Bulgarie (© Nadya85/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=village+de+Sitovo+Bulgarie&form=hpcapt&filters=HpDate%3a%2220261025_2300%22",
-      "originalDate": "20261025",
-      "fullStartDate": "202610252300",
       "wallpaper": true
     }
   ]
