@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-10T03:34:03.617Z",
+  "fetchedAt": "2026-11-11T01:14:21.125Z",
   "images": [
+    {
+      "id": "OHR.Atlantica_ZH-CN6593995386",
+      "market": "zh-CN",
+      "date": "2026-11-11",
+      "title": "奇妙纷呈的森林",
+      "description": "大西洋森林，巴西",
+      "credit": "© FG Trade/Getty Images",
+      "copyright": "大西洋森林，巴西 (© FG Trade/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%B7%B4%E8%A5%BF%E5%A4%A7%E8%A5%BF%E6%B4%8B%E6%A3%AE%E6%9E%97&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261110",
+      "fullStartDate": "202611101600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RoseIsland_ZH-CN6477140814",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%BA%93%E6%B6%85%E5%AD%A3%E9%87%87%E5%B1%B1%E5%9F%8E%E5%A0%A1&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261027",
       "fullStartDate": "202610271600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PondCypress_ZH-CN9472607734",
-      "market": "zh-CN",
-      "date": "2026-10-27",
-      "title": "大自然的金色明镜",
-      "description": "秋叶缤纷的池杉林，乔治亚州，美国",
-      "credit": "© Chris Moore/Getty Images",
-      "copyright": "秋叶缤纷的池杉林，乔治亚州，美国 (© Chris Moore/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E6%B1%A0%E6%9D%89&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261026",
-      "fullStartDate": "202610261600",
       "wallpaper": true
     }
   ]

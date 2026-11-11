@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-10T03:34:03.890Z",
+  "fetchedAt": "2026-11-11T01:14:21.315Z",
   "images": [
+    {
+      "id": "OHR.Atlantica_DE-DE2362030432",
+      "market": "de-DE",
+      "date": "2026-11-11",
+      "title": "Ein Wald voller Wunder",
+      "description": "Der Atlantische Regenwald, Brasilien",
+      "credit": "© FG Trade/Getty Images",
+      "copyright": "Der Atlantische Regenwald, Brasilien (© FG Trade/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Atlantischer+Regenwald+Brasilien&form=hpcapt&filters=HpDate%3a%2220261110_2300%22",
+      "originalDate": "20261110",
+      "fullStartDate": "202611102300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RoseIsland_DE-DE1760101963",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Burg+Kun%C4%9Btick%C3%A1+hora&form=hpcapt&filters=HpDate%3a%2220261027_2300%22",
       "originalDate": "20261027",
       "fullStartDate": "202610272300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PondCypress_DE-DE2656375905",
-      "market": "de-DE",
-      "date": "2026-10-27",
-      "title": "Goldener Spiegel der Natur",
-      "description": "Teichzypressen in herbstlicher Färbung, Georgia, USA",
-      "credit": "© Chris Moore/Getty Images",
-      "copyright": "Teichzypressen in herbstlicher Färbung, Georgia, USA (© Chris Moore/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261026_2300%22",
-      "originalDate": "20261026",
-      "fullStartDate": "202610262300",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-10T03:34:03.796Z",
+  "fetchedAt": "2026-11-11T01:14:21.249Z",
   "images": [
+    {
+      "id": "OHR.PoppiesField_EN-GB3947926925",
+      "market": "en-GB",
+      "date": "2026-11-11",
+      "title": "We will remember them",
+      "description": "A field of poppies",
+      "credit": "© lloyd-horgan/Getty Images",
+      "copyright": "A field of poppies (© lloyd-horgan/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Remembrance+Day&form=hpcapt&filters=HpDate%3a%2220261111_0000%22",
+      "originalDate": "20261111",
+      "fullStartDate": "202611110000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RoseIsland_EN-GB4222638797",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Kuneticka+hora+Castle&form=hpcapt&filters=HpDate%3a%2220261028_0000%22",
       "originalDate": "20261028",
       "fullStartDate": "202610280000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PondCypress_EN-GB5711949030",
-      "market": "en-GB",
-      "date": "2026-10-27",
-      "title": "Nature's golden mirror",
-      "description": "A grove of pond cypress trees with autumn foliage, Georgia, United States",
-      "credit": "© Chris Moore/Getty Images",
-      "copyright": "A grove of pond cypress trees with autumn foliage, Georgia, United States (© Chris Moore/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Pond+cypress&form=hpcapt&filters=HpDate%3a%2220261027_0000%22",
-      "originalDate": "20261027",
-      "fullStartDate": "202610270000",
       "wallpaper": true
     }
   ]

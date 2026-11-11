@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-10T03:34:03.750Z",
+  "fetchedAt": "2026-11-11T01:14:21.217Z",
   "images": [
+    {
+      "id": "OHR.RoseIsland_EN-US0952497192",
+      "market": "en-US",
+      "date": "2026-11-10",
+      "title": "Licensed to chill",
+      "description": "Aerial view of Rose Island, The Bahamas",
+      "credit": "© Abstract Aerial Art/Getty Images",
+      "copyright": "Aerial view of Rose Island, The Bahamas (© Abstract Aerial Art/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261110_0800%22",
+      "originalDate": "20261110",
+      "fullStartDate": "202611100800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrianaSpain_EN-US0872031458",
       "market": "en-US",
@@ -184,19 +197,6 @@
       "originalDate": "20261027",
       "fullStartDate": "202610270700",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.HangingBat_EN-US7714746725",
-      "market": "en-US",
-      "date": "2026-10-26",
-      "title": "Hanging in there",
-      "description": "Gray-headed flying fox, Victoria, Australia",
-      "credit": "© Doug Gimesy/Nature Picture Library",
-      "copyright": "Gray-headed flying fox, Victoria, Australia (© Doug Gimesy/Nature Picture Library)",
-      "sourceUrl": "https://www.bing.com/search?q=Bat+Week&form=hpcapt&filters=HpDate%3a%2220261026_0700%22",
-      "originalDate": "20261026",
-      "fullStartDate": "202610260700",
-      "wallpaper": false
     }
   ]
 }
