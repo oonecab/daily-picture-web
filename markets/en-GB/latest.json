@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-11T01:14:21.249Z",
+  "fetchedAt": "2026-11-12T02:16:23.370Z",
   "images": [
+    {
+      "id": "OHR.NorthWindow_EN-GB5518413161",
+      "market": "en-GB",
+      "date": "2026-11-12",
+      "title": "Architecture without an architect",
+      "description": "North Window, Arches National Park, Moab, Utah, USA",
+      "credit": "© lightphoto/Getty Images",
+      "copyright": "North Window, Arches National Park, Moab, Utah, USA (© lightphoto/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Arches+National+Park&form=hpcapt&filters=HpDate%3a%2220261112_0000%22",
+      "originalDate": "20261112",
+      "fullStartDate": "202611120000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.PoppiesField_EN-GB3947926925",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Avebury+henge+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261029_0000%22",
       "originalDate": "20261029",
       "fullStartDate": "202610290000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.KuneticeCastle_EN-GB5805400783",
-      "market": "en-GB",
-      "date": "2026-10-28",
-      "title": "Where history stands watch",
-      "description": "Kunětická hora Castle, Bohemia, Czechia",
-      "credit": "© Marek Saroch/Alamy",
-      "copyright": "Kunětická hora Castle, Bohemia, Czechia (© Marek Saroch/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Kuneticka+hora+Castle&form=hpcapt&filters=HpDate%3a%2220261028_0000%22",
-      "originalDate": "20261028",
-      "fullStartDate": "202610280000",
       "wallpaper": true
     }
   ]

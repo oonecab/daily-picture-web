@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-11T01:14:21.125Z",
+  "fetchedAt": "2026-11-12T02:16:23.201Z",
   "images": [
+    {
+      "id": "OHR.NorthWindow_ZH-CN6734579353",
+      "market": "zh-CN",
+      "date": "2026-11-12",
+      "title": "没有建筑师的建筑杰作",
+      "description": "北窗，拱门国家公园，莫阿布，犹他州，美国",
+      "credit": "© lightphoto/Getty Images",
+      "copyright": "北窗，拱门国家公园，莫阿布，犹他州，美国 (© lightphoto/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E6%8B%B1%E9%97%A8%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261111",
+      "fullStartDate": "202611111600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.Atlantica_ZH-CN6593995386",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%A8%81%E5%B0%94%E7%89%B9%E9%83%A1%E5%9F%83%E5%A4%AB%E4%BC%AF%E9%87%8C%E7%8E%AF%E5%BD%A2%E9%81%97%E5%9D%80&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261028",
       "fullStartDate": "202610281600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.KuneticeCastle_ZH-CN8895858920",
-      "market": "zh-CN",
-      "date": "2026-10-28",
-      "title": "历史守望之地",
-      "description": "库涅季采山城堡，波希米亚，捷克",
-      "credit": "© Marek Saroch/Alamy",
-      "copyright": "库涅季采山城堡，波希米亚，捷克 (© Marek Saroch/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%BA%93%E6%B6%85%E5%AD%A3%E9%87%87%E5%B1%B1%E5%9F%8E%E5%A0%A1&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261027",
-      "fullStartDate": "202610271600",
       "wallpaper": true
     }
   ]

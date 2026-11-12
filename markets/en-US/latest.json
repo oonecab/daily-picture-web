@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-11T01:14:21.217Z",
+  "fetchedAt": "2026-11-12T02:16:23.333Z",
   "images": [
+    {
+      "id": "OHR.SunsetFlags_EN-US1046151448",
+      "market": "en-US",
+      "date": "2026-11-11",
+      "title": "A salute in red, white, and blue",
+      "description": "American flags in a public park in upstate New York",
+      "credit": "© Matt Champlin/Getty Images",
+      "copyright": "American flags in a public park in upstate New York (© Matt Champlin/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Veterans+Day&form=hpcapt&filters=HpDate%3a%2220261111_0800%22",
+      "originalDate": "20261111",
+      "fullStartDate": "202611110800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RoseIsland_EN-US0952497192",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Kun%C4%9Btick%C3%A1+hora+Castle&form=hpcapt&filters=HpDate%3a%2220261028_0700%22",
       "originalDate": "20261028",
       "fullStartDate": "202610280700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PondCypress_EN-US0123444779",
-      "market": "en-US",
-      "date": "2026-10-27",
-      "title": "Nature's golden mirror",
-      "description": "A grove of pond cypress trees with fall foliage, Georgia, USA",
-      "credit": "© Chris Moore/Getty Images",
-      "copyright": "A grove of pond cypress trees with fall foliage, Georgia, USA (© Chris Moore/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=pond+cypress&form=hpcapt&filters=HpDate%3a%2220261027_0700%22",
-      "originalDate": "20261027",
-      "fullStartDate": "202610270700",
       "wallpaper": true
     }
   ]

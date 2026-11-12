@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-11T01:14:21.283Z",
+  "fetchedAt": "2026-11-12T02:16:23.405Z",
   "images": [
+    {
+      "id": "OHR.NorthWindow_JA-JP8307735119",
+      "market": "ja-JP",
+      "date": "2026-11-12",
+      "title": "自然が生んだ建築美",
+      "description": "ノース・ウィンドウ、アーチーズ国立公園、モアブ、ユタ州、アメリカ",
+      "credit": "© lightphoto/Getty Images",
+      "copyright": "ノース・ウィンドウ、アーチーズ国立公園、モアブ、ユタ州、アメリカ (© lightphoto/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%A2%E3%83%BC%E3%83%81%E3%83%BC%E3%82%BA%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261111_1500%22",
+      "originalDate": "20261111",
+      "fullStartDate": "202611111500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.Atlantica_JA-JP3902829738",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%A8%E3%83%BC%E3%83%B4%E3%83%99%E3%83%AA%E3%83%BC+%E5%B7%A8%E7%9F%B3%E7%BE%A4&form=hpcapt&filters=HpDate%3a%2220261028_1500%22",
       "originalDate": "20261028",
       "fullStartDate": "202610281500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.KuneticeCastle_JA-JP3914699688",
-      "market": "ja-JP",
-      "date": "2026-10-28",
-      "title": "夕暮れに佇む古城",
-      "description": "クネティツカー・ホラ城, チェコ",
-      "credit": "© Marek Saroch/Alamy",
-      "copyright": "クネティツカー・ホラ城, チェコ (© Marek Saroch/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=Kun%C4%9Btick%C3%A1+hora+Castle+&form=hpcapt&filters=HpDate%3a%2220261027_1500%22",
-      "originalDate": "20261027",
-      "fullStartDate": "202610271500",
       "wallpaper": true
     }
   ]

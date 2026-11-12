@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-11T01:14:21.348Z",
+  "fetchedAt": "2026-11-12T02:16:23.473Z",
   "images": [
+    {
+      "id": "OHR.NorthWindow_FR-FR9118968859",
+      "market": "fr-FR",
+      "date": "2026-11-12",
+      "title": "Architecture sans architecte",
+      "description": "North Window, parc national des Arches, Moab, Utah, États-Unis",
+      "credit": "© lightphoto/Getty Images",
+      "copyright": "North Window, parc national des Arches, Moab, Utah, États-Unis (© lightphoto/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Parc+national+des+Arches&form=hpcapt&filters=HpDate%3a%2220261111_2300%22",
+      "originalDate": "20261111",
+      "fullStartDate": "202611112300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.ArmisticeTriomphe_FR-FR3844367700",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=cercle+de+pierres+Avebury+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261028_2300%22",
       "originalDate": "20261028",
       "fullStartDate": "202610282300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.KuneticeCastle_FR-FR0560907896",
-      "market": "fr-FR",
-      "date": "2026-10-28",
-      "title": "Gardien de l’histoire",
-      "description": "Château de Kunětická hora, Bohême, Tchéquie",
-      "credit": "© Marek Saroch/Alamy",
-      "copyright": "Château de Kunětická hora, Bohême, Tchéquie (© Marek Saroch/Alamy)",
-      "sourceUrl": "https://www.bing.com/search?q=ch%C3%A2teau+de+Kun%C4%9Btick%C3%A1+hora&form=hpcapt&filters=HpDate%3a%2220261027_2300%22",
-      "originalDate": "20261027",
-      "fullStartDate": "202610272300",
       "wallpaper": true
     }
   ]
