@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-12T02:16:23.440Z",
+  "fetchedAt": "2026-11-13T01:49:38.335Z",
   "images": [
+    {
+      "id": "OHR.AbrahamCanada_DE-DE1158881043",
+      "market": "de-DE",
+      "date": "2026-11-13",
+      "title": "Verborgene Tiefen",
+      "description": "Abraham Lake in Alberta, Kanada",
+      "credit": "© Guang Cao/Getty Images",
+      "copyright": "Abraham Lake in Alberta, Kanada (© Guang Cao/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Abraham+Lake+Stausee+Kanada&form=hpcapt&filters=HpDate%3a%2220261112_2300%22",
+      "originalDate": "20261112",
+      "fullStartDate": "202611122300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.NorthWindow_DE-DE3364064033",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Kanadakranich&form=hpcapt&filters=HpDate%3a%2220261029_2300%22",
       "originalDate": "20261029",
       "fullStartDate": "202610292300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AveburyStones_DE-DE3052154737",
-      "market": "de-DE",
-      "date": "2026-10-29",
-      "title": "Wo Nebel auf Jahrtausende trifft",
-      "description": "Stehende Steine in Avebury, Wiltshire, England",
-      "credit": "© George W Johnson/Getty Images",
-      "copyright": "Stehende Steine in Avebury, Wiltshire, England (© George W Johnson/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Avebury+Steinkreis&form=hpcapt&filters=HpDate%3a%2220261028_2300%22",
-      "originalDate": "20261028",
-      "fullStartDate": "202610282300",
       "wallpaper": true
     }
   ]

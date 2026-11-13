@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-12T02:16:23.473Z",
+  "fetchedAt": "2026-11-13T01:49:38.382Z",
   "images": [
+    {
+      "id": "OHR.AbrahamCanada_FR-FR1972061533",
+      "market": "fr-FR",
+      "date": "2026-11-13",
+      "title": "Des profondeurs mystérieuses",
+      "description": "Lac Abraham, Alberta, Canada",
+      "credit": "© Guang Cao/Getty Images",
+      "copyright": "Lac Abraham, Alberta, Canada (© Guang Cao/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Lac+Abraham+Alberta&form=hpcapt&filters=HpDate%3a%2220261112_2300%22",
+      "originalDate": "20261112",
+      "fullStartDate": "202611122300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.NorthWindow_FR-FR9118968859",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Grue+du+Canada&form=hpcapt&filters=HpDate%3a%2220261029_2300%22",
       "originalDate": "20261029",
       "fullStartDate": "202610292300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AveburyStones_FR-FR0792308002",
-      "market": "fr-FR",
-      "date": "2026-10-29",
-      "title": "Des millénaires caressés par la brume",
-      "description": "Pierres dressées à Avebury dans le Wiltshire, Angleterre",
-      "credit": "© George W Johnson/Getty Images",
-      "copyright": "Pierres dressées à Avebury dans le Wiltshire, Angleterre (© George W Johnson/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=cercle+de+pierres+Avebury+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261028_2300%22",
-      "originalDate": "20261028",
-      "fullStartDate": "202610282300",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-12T02:16:23.405Z",
+  "fetchedAt": "2026-11-13T01:49:38.288Z",
   "images": [
+    {
+      "id": "OHR.AbrahamCanada_JA-JP9609532400",
+      "market": "ja-JP",
+      "date": "2026-11-13",
+      "title": "氷の下の神秘",
+      "description": "アブラハム湖、アルバータ州、カナダ",
+      "credit": "© Guang Cao/Getty Images",
+      "copyright": "アブラハム湖、アルバータ州、カナダ (© Guang Cao/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%A2%E3%83%96%E3%83%A9%E3%83%8F%E3%83%A0%E6%B9%96+%E3%82%A2%E3%83%AB%E3%83%90%E3%83%BC%E3%82%BF%E5%B7%9E&form=hpcapt&filters=HpDate%3a%2220261112_1500%22",
+      "originalDate": "20261112",
+      "fullStartDate": "202611121500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.NorthWindow_JA-JP8307735119",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%AB%E3%83%8A%E3%83%80%E3%83%85%E3%83%AB&form=hpcapt&filters=HpDate%3a%2220261029_1500%22",
       "originalDate": "20261029",
       "fullStartDate": "202610291500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AveburyStones_JA-JP4031336786",
-      "market": "ja-JP",
-      "date": "2026-10-29",
-      "title": "草原に立ち並ぶ巨石群",
-      "description": "エーヴベリー 巨石群, イングランド",
-      "credit": "© George W Johnson/Getty Images",
-      "copyright": "エーヴベリー 巨石群, イングランド (© George W Johnson/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%82%A8%E3%83%BC%E3%83%B4%E3%83%99%E3%83%AA%E3%83%BC+%E5%B7%A8%E7%9F%B3%E7%BE%A4&form=hpcapt&filters=HpDate%3a%2220261028_1500%22",
-      "originalDate": "20261028",
-      "fullStartDate": "202610281500",
       "wallpaper": true
     }
   ]

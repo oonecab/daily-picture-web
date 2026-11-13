@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-12T02:16:23.370Z",
+  "fetchedAt": "2026-11-13T01:49:38.239Z",
   "images": [
+    {
+      "id": "OHR.AbrahamCanada_EN-GB1908527515",
+      "market": "en-GB",
+      "date": "2026-11-13",
+      "title": "Hidden depths",
+      "description": "Abraham Lake in Alberta, Canada",
+      "credit": "© Guang Cao/Getty Images",
+      "copyright": "Abraham Lake in Alberta, Canada (© Guang Cao/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Abraham+Lake+Alberta&form=hpcapt&filters=HpDate%3a%2220261113_0000%22",
+      "originalDate": "20261113",
+      "fullStartDate": "202611130000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.NorthWindow_EN-GB5518413161",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sandhill+Cranes&form=hpcapt&filters=HpDate%3a%2220261030_0000%22",
       "originalDate": "20261030",
       "fullStartDate": "202610300000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AveburyStones_EN-GB5895980350",
-      "market": "en-GB",
-      "date": "2026-10-29",
-      "title": "Where mist meets millennia",
-      "description": "Standing stones at Avebury in Wiltshire, England",
-      "credit": "© George W Johnson/Getty Images",
-      "copyright": "Standing stones at Avebury in Wiltshire, England (© George W Johnson/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Avebury+henge+Wiltshire&form=hpcapt&filters=HpDate%3a%2220261029_0000%22",
-      "originalDate": "20261029",
-      "fullStartDate": "202610290000",
       "wallpaper": true
     }
   ]
