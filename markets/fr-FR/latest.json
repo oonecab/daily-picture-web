@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-13T01:49:38.382Z",
+  "fetchedAt": "2026-11-14T01:26:58.304Z",
   "images": [
+    {
+      "id": "OHR.BlueHK_FR-FR2342913478",
+      "market": "fr-FR",
+      "date": "2026-11-14",
+      "title": "Les yeux rivés vers le haut",
+      "description": "Port Victoria, Hong Kong, Chine",
+      "credit": "© Juan Romero/Cavan Images",
+      "copyright": "Port Victoria, Hong Kong, Chine (© Juan Romero/Cavan Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Port+Victoria+Hong+Kong&form=hpcapt&filters=HpDate%3a%2220261113_2300%22",
+      "originalDate": "20261113",
+      "fullStartDate": "202611132300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AbrahamCanada_FR-FR1972061533",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261030_2300%22",
       "originalDate": "20261030",
       "fullStartDate": "202610302300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AutumnCranes_FR-FR2970535620",
-      "market": "fr-FR",
-      "date": "2026-10-30",
-      "title": "L'heure de prendre de la hauteur",
-      "description": "Grues du Canada, réserve de Bosque del Apache, Nouveau-Mexique, États-Unis",
-      "credit": "© Terry St.Louis/Getty Images",
-      "copyright": "Grues du Canada, réserve de Bosque del Apache, Nouveau-Mexique, États-Unis (© Terry St.Louis/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Grue+du+Canada&form=hpcapt&filters=HpDate%3a%2220261029_2300%22",
-      "originalDate": "20261029",
-      "fullStartDate": "202610292300",
       "wallpaper": true
     }
   ]
