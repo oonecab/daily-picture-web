@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-14T01:26:58.252Z",
+  "fetchedAt": "2026-11-15T01:02:15.452Z",
   "images": [
+    {
+      "id": "OHR.FirstFrost_JA-JP1519167944",
+      "market": "ja-JP",
+      "date": "2026-11-15",
+      "title": "霜化粧の葉",
+      "description": "赤い葉に霜が降りたツツジ",
+      "credit": "© avoferten/Shutterstock",
+      "copyright": "赤い葉に霜が降りたツツジ (© avoferten/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%84%E3%83%84%E3%82%B8&form=hpcapt&filters=HpDate%3a%2220261114_1500%22",
+      "originalDate": "20261114",
+      "fullStartDate": "202611141500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.BlueHK_JA-JP0477081186",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%B7%E3%83%A5%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%84%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%88+%E3%83%89%E3%82%A4%E3%83%84&form=hpcapt&filters=HpDate%3a%2220261031_1500%22",
       "originalDate": "20261031",
       "fullStartDate": "202610311500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.FrankfurtHalloween_JA-JP4785085446",
-      "market": "ja-JP",
-      "date": "2026-10-31",
-      "title": "帝国の面影",
-      "description": "聖バルトロメウス大聖堂、フランクフルト、ドイツ",
-      "credit": "© AlxeyPnferov/Getty Images",
-      "copyright": "聖バルトロメウス大聖堂、フランクフルト、ドイツ (© AlxeyPnferov/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%83%8F%E3%83%AD%E3%82%A6%E3%82%A3%E3%83%B3&form=hpcapt&filters=HpDate%3a%2220261030_1500%22",
-      "originalDate": "20261030",
-      "fullStartDate": "202610301500",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-14T01:26:58.304Z",
+  "fetchedAt": "2026-11-15T01:02:15.572Z",
   "images": [
+    {
+      "id": "OHR.FirstFrost_FR-FR6372552822",
+      "market": "fr-FR",
+      "date": "2026-11-15",
+      "title": "Givre sur tons d'automne",
+      "description": "Azalée gelée aux feuilles rouges",
+      "credit": "© avoferten/Shutterstock",
+      "copyright": "Azalée gelée aux feuilles rouges (© avoferten/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=azal%C3%A9e&form=hpcapt&filters=HpDate%3a%2220261114_2300%22",
+      "originalDate": "20261114",
+      "fullStartDate": "202611142300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.BlueHK_FR-FR2342913478",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=For%C3%AAt-Noire+Allemagne&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
       "originalDate": "20261031",
       "fullStartDate": "202610312300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.FrankfurtHalloween_FR-FR8337402452",
-      "market": "fr-FR",
-      "date": "2026-10-31",
-      "title": "Visiteurs d'un autre monde",
-      "description": "Cathédrale Saint-Barthélemy à Francfort, Allemagne",
-      "credit": "© AlxeyPnferov/Getty Images",
-      "copyright": "Cathédrale Saint-Barthélemy à Francfort, Allemagne (© AlxeyPnferov/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261030_2300%22",
-      "originalDate": "20261030",
-      "fullStartDate": "202610302300",
       "wallpaper": true
     }
   ]

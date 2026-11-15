@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-14T01:26:58.279Z",
+  "fetchedAt": "2026-11-15T01:02:15.514Z",
   "images": [
+    {
+      "id": "OHR.FirstFrost_DE-DE6574553682",
+      "market": "de-DE",
+      "date": "2026-11-15",
+      "title": "Frostige Blätter",
+      "description": "Gefrorene Azalee mit roten Blättern",
+      "credit": "© avoferten/Shutterstock",
+      "copyright": "Gefrorene Azalee mit roten Blättern (© avoferten/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=Azaleen&form=hpcapt&filters=HpDate%3a%2220261114_2300%22",
+      "originalDate": "20261114",
+      "fullStartDate": "202611142300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.BlueHK_DE-DE1662761141",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Schwarzwald+Deutschland&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
       "originalDate": "20261031",
       "fullStartDate": "202610312300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.FrankfurtHalloween_DE-DE2172526536",
-      "market": "de-DE",
-      "date": "2026-10-31",
-      "title": "Der Geist vergangener Kaiserreiche",
-      "description": "Kaiserdom St. Bartholomäus in Frankfurt am Main, Deutschland",
-      "credit": "© AlxeyPnferov/Getty Images",
-      "copyright": "Kaiserdom St. Bartholomäus in Frankfurt am Main, Deutschland (© AlxeyPnferov/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261030_2300%22",
-      "originalDate": "20261030",
-      "fullStartDate": "202610302300",
       "wallpaper": true
     }
   ]

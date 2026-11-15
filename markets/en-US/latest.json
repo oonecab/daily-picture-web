@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-14T01:26:58.193Z",
+  "fetchedAt": "2026-11-15T01:02:15.324Z",
   "images": [
+    {
+      "id": "OHR.BlueHK_EN-US7870996687",
+      "market": "en-US",
+      "date": "2026-11-14",
+      "title": "The only way is up",
+      "description": "Victoria Harbour, Hong Kong, China",
+      "credit": "© Juan Romero/Cavan Images",
+      "copyright": "Victoria Harbour, Hong Kong, China (© Juan Romero/Cavan Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Victoria+Harbour+Hong+Kong&form=hpcapt&filters=HpDate%3a%2220261114_0800%22",
+      "originalDate": "20261114",
+      "fullStartDate": "202611140800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.AbrahamCanada_EN-US3455540217",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261031_0700%22",
       "originalDate": "20261031",
       "fullStartDate": "202610310700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AutumnCranes_EN-US9795571462",
-      "market": "en-US",
-      "date": "2026-10-30",
-      "title": "Time to fly high",
-      "description": "Sandhill cranes, Bosque del Apache National Wildlife Refuge, New Mexico, USA",
-      "credit": "© Terry St.Louis/Getty Images",
-      "copyright": "Sandhill cranes, Bosque del Apache National Wildlife Refuge, New Mexico, USA (© Terry St.Louis/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Sandhill+Cranes&form=hpcapt&filters=HpDate%3a%2220261030_0700%22",
-      "originalDate": "20261030",
-      "fullStartDate": "202610300700",
       "wallpaper": true
     }
   ]
