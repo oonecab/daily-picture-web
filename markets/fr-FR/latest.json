@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-15T01:02:15.572Z",
+  "fetchedAt": "2026-11-16T01:01:41.210Z",
   "images": [
+    {
+      "id": "OHR.GilaCliff_FR-FR9544531277",
+      "market": "fr-FR",
+      "date": "2026-11-16",
+      "title": "Construites pour durer",
+      "description": "Habitations troglodytes de Gila, Nouveau-Mexique, États-Unis",
+      "credit": "© Chiara Salvadori/Getty Images",
+      "copyright": "Habitations troglodytes de Gila, Nouveau-Mexique, États-Unis (© Chiara Salvadori/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Monument+national+habitations+troglodytes+Gila&form=hpcapt&filters=HpDate%3a%2220261115_2300%22",
+      "originalDate": "20261115",
+      "fullStartDate": "202611152300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FirstFrost_FR-FR6372552822",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=ours+polaire&form=hpcapt&filters=HpDate%3a%2220261101_2300%22",
       "originalDate": "20261101",
       "fullStartDate": "202611012300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SchwarzwaldAutumn_FR-FR8510928698",
-      "market": "fr-FR",
-      "date": "2026-11-01",
-      "title": "Manteau de brume sur la forêt",
-      "description": "Forêt-Noire, Bade-Wurtemberg, Allemagne",
-      "credit": "© Britus/Getty Images",
-      "copyright": "Forêt-Noire, Bade-Wurtemberg, Allemagne  (© Britus/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=For%C3%AAt-Noire+Allemagne&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
-      "originalDate": "20261031",
-      "fullStartDate": "202610312300",
       "wallpaper": true
     }
   ]

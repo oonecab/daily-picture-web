@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-15T01:02:15.393Z",
+  "fetchedAt": "2026-11-16T01:01:41.115Z",
   "images": [
+    {
+      "id": "OHR.GilaCliff_EN-GB1863069273",
+      "market": "en-GB",
+      "date": "2026-11-16",
+      "title": "Built to last",
+      "description": "Gila Cliff Dwellings National Monument, New Mexico, USA",
+      "credit": "© Chiara Salvadori/Getty Images",
+      "copyright": "Gila Cliff Dwellings National Monument, New Mexico, USA (© Chiara Salvadori/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Gila+Cliff+Dwellings+National+Monument&form=hpcapt&filters=HpDate%3a%2220261116_0000%22",
+      "originalDate": "20261116",
+      "fullStartDate": "202611160000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FirstFrost_EN-GB4338987849",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Polar+Bear+Week&form=hpcapt&filters=HpDate%3a%2220261102_0000%22",
       "originalDate": "20261102",
       "fullStartDate": "202611020000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SchwarzwaldAutumn_EN-GB3893624438",
-      "market": "en-GB",
-      "date": "2026-11-01",
-      "title": "Mist among the trees",
-      "description": "Black Forest, Baden-Württemberg, Germany",
-      "credit": "© Britus/Getty Images",
-      "copyright": "Black Forest, Baden-Württemberg, Germany (© Britus/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Black+Forest+Germany&form=hpcapt&filters=HpDate%3a%2220261101_0000%22",
-      "originalDate": "20261101",
-      "fullStartDate": "202611010000",
       "wallpaper": true
     }
   ]

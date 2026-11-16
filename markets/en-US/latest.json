@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-15T01:02:15.324Z",
+  "fetchedAt": "2026-11-16T01:01:41.083Z",
   "images": [
+    {
+      "id": "OHR.FirstFrost_EN-US8881008245",
+      "market": "en-US",
+      "date": "2026-11-15",
+      "title": "Frosty foliage",
+      "description": "Frozen azalea with red leaves",
+      "credit": "© avoferten/Shutterstock",
+      "copyright": "Frozen azalea with red leaves (© avoferten/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=azaleas&form=hpcapt&filters=HpDate%3a%2220261115_0800%22",
+      "originalDate": "20261115",
+      "fullStartDate": "202611150800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.BlueHK_EN-US7870996687",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Native+American+Heritage+Month&form=hpcapt&filters=HpDate%3a%2220261101_0700%22",
       "originalDate": "20261101",
       "fullStartDate": "202611010700",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.FrankfurtHalloween_EN-US0115213682",
-      "market": "en-US",
-      "date": "2026-10-31",
-      "title": "Ghosts of empires past",
-      "description": "St. Bartholomew's Cathedral in Frankfurt, Germany",
-      "credit": "© AlxeyPnferov/Getty Images",
-      "copyright": "St. Bartholomew's Cathedral in Frankfurt, Germany (© AlxeyPnferov/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Halloween&form=hpcapt&filters=HpDate%3a%2220261031_0700%22",
-      "originalDate": "20261031",
-      "fullStartDate": "202610310700",
       "wallpaper": true
     }
   ]

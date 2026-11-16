@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-15T01:02:15.514Z",
+  "fetchedAt": "2026-11-16T01:01:41.182Z",
   "images": [
+    {
+      "id": "OHR.GilaCliff_DE-DE8866174254",
+      "market": "de-DE",
+      "date": "2026-11-16",
+      "title": "Für die Ewigkeit gebaut",
+      "description": "Gila Cliff Dwellings National Monument, New Mexico, USA",
+      "credit": "© Chiara Salvadori/Getty Images",
+      "copyright": "Gila Cliff Dwellings National Monument, New Mexico, USA (© Chiara Salvadori/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Gila+Cliff+Dwellings+National+Monument&form=hpcapt&filters=HpDate%3a%2220261115_2300%22",
+      "originalDate": "20261115",
+      "fullStartDate": "202611152300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FirstFrost_DE-DE6574553682",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Eisb%C3%A4ren&form=hpcapt&filters=HpDate%3a%2220261101_2300%22",
       "originalDate": "20261101",
       "fullStartDate": "202611012300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SchwarzwaldAutumn_DE-DE2707949453",
-      "market": "de-DE",
-      "date": "2026-11-01",
-      "title": "Wälder im Nebel",
-      "description": "Schwarzwald, Baden-Württemberg",
-      "credit": "© Britus/Getty Images",
-      "copyright": "Schwarzwald, Baden-Württemberg (© Britus/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Schwarzwald+Deutschland&form=hpcapt&filters=HpDate%3a%2220261031_2300%22",
-      "originalDate": "20261031",
-      "fullStartDate": "202610312300",
       "wallpaper": true
     }
   ]
