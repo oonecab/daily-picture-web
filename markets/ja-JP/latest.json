@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-16T01:01:41.151Z",
+  "fetchedAt": "2026-11-17T03:53:11.821Z",
   "images": [
+    {
+      "id": "OHR.TrailCedars_JA-JP3850490248",
+      "market": "ja-JP",
+      "date": "2026-11-17",
+      "title": "さあ、大自然の中へ",
+      "description": "トレイル・オブ・ザ・シーダーズ、グレイシャー国立公園、モンタナ州、アメリカ",
+      "credit": "© DBushue Photography/Getty Images",
+      "copyright": "トレイル・オブ・ザ・シーダーズ、グレイシャー国立公園、モンタナ州、アメリカ (© DBushue Photography/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B7%E3%83%A3%E3%83%BC%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261116_1500%22",
+      "originalDate": "20261116",
+      "fullStartDate": "202611161500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.GilaCliff_JA-JP2766300250",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%83%96%E3%83%A9%E3%82%A4%E3%82%A8%E3%82%B9%E6%B9%96+%E3%83%89%E3%83%AD%E3%83%9F%E3%83%86&form=hpcapt&filters=HpDate%3a%2220261102_1500%22",
       "originalDate": "20261102",
       "fullStartDate": "202611021500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.HudsonBear_JA-JP9155678647",
-      "market": "ja-JP",
-      "date": "2026-11-02",
-      "title": "氷がつなぐ未来",
-      "description": "ホッキョクグマの親子、ハドソン湾、マニトバ州、カナダ",
-      "credit": "© Danita Delimont/Adobe Stock",
-      "copyright": "ホッキョクグマの親子、ハドソン湾、マニトバ州、カナダ (© Danita Delimont/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%83%9B%E3%83%83%E3%82%AD%E3%83%A7%E3%82%AF%E3%82%B0%E3%83%9E%E9%80%B1%E9%96%93&form=hpcapt&filters=HpDate%3a%2220261101_1500%22",
-      "originalDate": "20261101",
-      "fullStartDate": "202611011500",
       "wallpaper": true
     }
   ]

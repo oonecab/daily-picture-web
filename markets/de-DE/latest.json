@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-16T01:01:41.182Z",
+  "fetchedAt": "2026-11-17T03:53:11.845Z",
   "images": [
+    {
+      "id": "OHR.TrailCedars_DE-DE2756657002",
+      "market": "de-DE",
+      "date": "2026-11-17",
+      "title": "Raus in die Natur!",
+      "description": "Trail of the Cedars, Glacier-Nationalpark, Montana, USA",
+      "credit": "© DBushue Photography/Getty Images",
+      "copyright": "Trail of the Cedars, Glacier-Nationalpark, Montana, USA (© DBushue Photography/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Glacier-Nationalpark%2c+Montana%2c+USA&form=hpcapt&filters=HpDate%3a%2220261116_2300%22",
+      "originalDate": "20261116",
+      "fullStartDate": "202611162300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.GilaCliff_DE-DE8866174254",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Pragser+Wildsee+Dolomiten&form=hpcapt&filters=HpDate%3a%2220261102_2300%22",
       "originalDate": "20261102",
       "fullStartDate": "202611022300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.HudsonBear_DE-DE3504338986",
-      "market": "de-DE",
-      "date": "2026-11-02",
-      "title": "Eine Zukunft, geprägt vom Eis",
-      "description": "Eisbär mit Jungen, Hudson Bay, Manitoba, Kanada",
-      "credit": "© Danita Delimont/Adobe Stock",
-      "copyright": "Eisbär mit Jungen, Hudson Bay, Manitoba, Kanada (© Danita Delimont/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=Eisb%C3%A4ren&form=hpcapt&filters=HpDate%3a%2220261101_2300%22",
-      "originalDate": "20261101",
-      "fullStartDate": "202611012300",
       "wallpaper": true
     }
   ]

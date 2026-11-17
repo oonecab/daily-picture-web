@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-16T01:01:40.982Z",
+  "fetchedAt": "2026-11-17T03:53:11.686Z",
   "images": [
+    {
+      "id": "OHR.TrailCedars_ZH-CN2670680285",
+      "market": "zh-CN",
+      "date": "2026-11-17",
+      "title": "走进广阔的大自然",
+      "description": "雪松林步道，冰川国家公园，蒙大拿州，美国",
+      "credit": "© DBushue Photography/Getty Images",
+      "copyright": "雪松林步道，冰川国家公园，蒙大拿州，美国 (© DBushue Photography/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%86%B0%E5%B7%9D%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD%E7%9A%84%E9%9B%AA%E6%9D%BE%E6%9E%97%E6%AD%A5%E9%81%93&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261116",
+      "fullStartDate": "202611161600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.GilaCliff_ZH-CN2393001519",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%A4%9A%E6%B4%9B%E7%B1%B3%E8%92%82%E5%B1%B1%E8%84%89&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261102",
       "fullStartDate": "202611021600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.HudsonBear_ZH-CN6630706907",
-      "market": "zh-CN",
-      "date": "2026-11-02",
-      "title": "写在冰上的未来",
-      "description": "北极熊和幼崽，哈得孙湾畔，马尼托巴省，加拿大",
-      "credit": "© Danita Delimont/Adobe Stock",
-      "copyright": "北极熊和幼崽，哈得孙湾畔，马尼托巴省，加拿大 (© Danita Delimont/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%8C%97%E6%9E%81%E7%86%8A%E5%91%A8&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261101",
-      "fullStartDate": "202611011600",
       "wallpaper": true
     }
   ]

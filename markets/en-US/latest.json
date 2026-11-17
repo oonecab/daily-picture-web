@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-16T01:01:41.083Z",
+  "fetchedAt": "2026-11-17T03:53:11.773Z",
   "images": [
+    {
+      "id": "OHR.GilaCliff_EN-US2139490645",
+      "market": "en-US",
+      "date": "2026-11-16",
+      "title": "Built to last",
+      "description": "Gila Cliff Dwellings National Monument, New Mexico",
+      "credit": "© Chiara Salvadori/Getty Images",
+      "copyright": "Gila Cliff Dwellings National Monument, New Mexico (© Chiara Salvadori/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Gila+Cliff+Dwellings+National+Monument&form=hpcapt&filters=HpDate%3a%2220261116_0800%22",
+      "originalDate": "20261116",
+      "fullStartDate": "202611160800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FirstFrost_EN-US8881008245",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Polar+Bear+Week&form=hpcapt&filters=HpDate%3a%2220261102_0800%22",
       "originalDate": "20261102",
       "fullStartDate": "202611020800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NativeBaskets_EN-US0205712064",
-      "market": "en-US",
-      "date": "2026-11-01",
-      "title": "Crafting continuity",
-      "description": "Handmade baskets, Santa Fe, New Mexico",
-      "credit": "© Patrick Lane/Getty Images",
-      "copyright": "Handmade baskets, Santa Fe, New Mexico (© Patrick Lane/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Native+American+Heritage+Month&form=hpcapt&filters=HpDate%3a%2220261101_0700%22",
-      "originalDate": "20261101",
-      "fullStartDate": "202611010700",
       "wallpaper": true
     }
   ]
