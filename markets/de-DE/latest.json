@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-17T03:53:11.845Z",
+  "fetchedAt": "2026-11-18T02:53:48.118Z",
   "images": [
+    {
+      "id": "OHR.BarnOwlsUnite_DE-DE3292837255",
+      "market": "de-DE",
+      "date": "2026-11-18",
+      "title": "Jäger der Nacht",
+      "description": "Ein Schleiereulenpaar",
+      "credit": "© Zahoor Salmi/Getty Images",
+      "copyright": "Ein Schleiereulenpaar (© Zahoor Salmi/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Schleiereule&form=hpcapt&filters=HpDate%3a%2220261117_2300%22",
+      "originalDate": "20261117",
+      "fullStartDate": "202611172300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrailCedars_DE-DE2756657002",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261103_2300%22",
       "originalDate": "20261103",
       "fullStartDate": "202611032300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AlpineBraies_DE-DE4176036164",
-      "market": "de-DE",
-      "date": "2026-11-03",
-      "title": "Stille Gipfelwelten",
-      "description": "Pragser Wildsee, Naturpark Fanes‑Sennes‑Prags, Dolomiten, Italien",
-      "credit": "© leonid_tit/Getty Images",
-      "copyright": "Pragser Wildsee, Naturpark Fanes‑Sennes‑Prags, Dolomiten, Italien (© leonid_tit/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Pragser+Wildsee+Dolomiten&form=hpcapt&filters=HpDate%3a%2220261102_2300%22",
-      "originalDate": "20261102",
-      "fullStartDate": "202611022300",
       "wallpaper": true
     }
   ]

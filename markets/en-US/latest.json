@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-17T03:53:11.773Z",
+  "fetchedAt": "2026-11-18T02:53:47.937Z",
   "images": [
+    {
+      "id": "OHR.TrailCedars_EN-US2240500417",
+      "market": "en-US",
+      "date": "2026-11-17",
+      "title": "Step into the great outdoors",
+      "description": "Trail of the Cedars, Glacier National Park, Montana",
+      "credit": "© DBushue Photography/Getty Images",
+      "copyright": "Trail of the Cedars, Glacier National Park, Montana (© DBushue Photography/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Take+a+Hike+Day&form=hpcapt&filters=HpDate%3a%2220261117_0800%22",
+      "originalDate": "20261117",
+      "fullStartDate": "202611170800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.GilaCliff_EN-US2139490645",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Lake+Braies+Dolomites&form=hpcapt&filters=HpDate%3a%2220261103_0800%22",
       "originalDate": "20261103",
       "fullStartDate": "202611030800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.HudsonBear_EN-US0297833232",
-      "market": "en-US",
-      "date": "2026-11-02",
-      "title": "A future written in ice",
-      "description": "Polar bear and cubs by Hudson Bay, Manitoba, Canada",
-      "credit": "© Danita Delimont/Adobe Stock",
-      "copyright": "Polar bear and cubs by Hudson Bay, Manitoba, Canada (© Danita Delimont/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=Polar+Bear+Week&form=hpcapt&filters=HpDate%3a%2220261102_0800%22",
-      "originalDate": "20261102",
-      "fullStartDate": "202611020800",
       "wallpaper": true
     }
   ]

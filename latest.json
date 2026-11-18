@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-17T03:53:11.686Z",
+  "fetchedAt": "2026-11-18T02:53:47.827Z",
   "images": [
+    {
+      "id": "OHR.BarnOwlsUnite_ZH-CN2930153291",
+      "market": "zh-CN",
+      "date": "2026-11-18",
+      "title": "从黄昏狩猎到黎明",
+      "description": "一对仓鸮",
+      "credit": "© Zahoor Salmi/Getty Images",
+      "copyright": "一对仓鸮 (© Zahoor Salmi/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E4%BB%93%E9%B8%AE&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261117",
+      "fullStartDate": "202611171600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrailCedars_ZH-CN2670680285",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E8%90%BD%E7%BE%BD%E6%9D%89&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261103",
       "fullStartDate": "202611031600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AlpineBraies_ZH-CN7307997866",
-      "market": "zh-CN",
-      "date": "2026-11-03",
-      "title": "群峰间的宁静",
-      "description": "布莱埃斯湖，法内斯-塞内斯-布莱埃斯湖自然公园，多洛米蒂山脉，意大利",
-      "credit": "© leonid_tit/Getty Images",
-      "copyright": "布莱埃斯湖，法内斯-塞内斯-布莱埃斯湖自然公园，多洛米蒂山脉，意大利 (© leonid_tit/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E5%A4%9A%E6%B4%9B%E7%B1%B3%E8%92%82%E5%B1%B1%E8%84%89&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261102",
-      "fullStartDate": "202611021600",
       "wallpaper": true
     }
   ]

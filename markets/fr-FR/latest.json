@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-17T03:53:11.867Z",
+  "fetchedAt": "2026-11-18T02:53:48.178Z",
   "images": [
+    {
+      "id": "OHR.BarnOwlsUnite_FR-FR0018372456",
+      "market": "fr-FR",
+      "date": "2026-11-18",
+      "title": "Chasser du crépuscule à l’aube",
+      "description": "Couple de chouettes effraies",
+      "credit": "© Zahoor Salmi/Getty Images",
+      "copyright": "Couple de chouettes effraies  (© Zahoor Salmi/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=chouette+effraie&form=hpcapt&filters=HpDate%3a%2220261117_2300%22",
+      "originalDate": "20261117",
+      "fullStartDate": "202611172300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrailCedars_FR-FR7583904016",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=cypr%C3%A8s+chauve&form=hpcapt&filters=HpDate%3a%2220261103_2300%22",
       "originalDate": "20261103",
       "fullStartDate": "202611032300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AlpineBraies_FR-FR8651963330",
-      "market": "fr-FR",
-      "date": "2026-11-03",
-      "title": "La paix parmi les sommets",
-      "description": "Lac de Braies, Parc naturel Fanes‑Sennes‑Braies, Dolomites, Italie",
-      "credit": "© leonid_tit/Getty Images",
-      "copyright": "Lac de Braies, Parc naturel Fanes‑Sennes‑Braies, Dolomites, Italie (© leonid_tit/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Lac+de+Braies+Dolomites&form=hpcapt&filters=HpDate%3a%2220261102_2300%22",
-      "originalDate": "20261102",
-      "fullStartDate": "202611022300",
       "wallpaper": true
     }
   ]

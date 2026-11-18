@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-17T03:53:11.798Z",
+  "fetchedAt": "2026-11-18T02:53:47.996Z",
   "images": [
+    {
+      "id": "OHR.BarnOwlsUnite_EN-GB9873814926",
+      "market": "en-GB",
+      "date": "2026-11-18",
+      "title": "Hunting from dusk till dawn",
+      "description": "Pair of barn owls",
+      "credit": "© Zahoor Salmi/Getty Images",
+      "copyright": "Pair of barn owls (© Zahoor Salmi/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Barn+owl&form=hpcapt&filters=HpDate%3a%2220261118_0000%22",
+      "originalDate": "20261118",
+      "fullStartDate": "202611180000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.TrailCedars_EN-GB2504891943",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=bald+cypress&form=hpcapt&filters=HpDate%3a%2220261104_0000%22",
       "originalDate": "20261104",
       "fullStartDate": "202611040000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AlpineBraies_EN-GB4055015386",
-      "market": "en-GB",
-      "date": "2026-11-03",
-      "title": "Peace among the peaks",
-      "description": "Lake Braies, Fanes‑Sennes‑Braies Nature Park, Dolomites, Italy",
-      "credit": "© leonid_tit/Getty Images",
-      "copyright": "Lake Braies, Fanes‑Sennes‑Braies Nature Park, Dolomites, Italy (© leonid_tit/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Lake+Braies+Dolomites&form=hpcapt&filters=HpDate%3a%2220261103_0000%22",
-      "originalDate": "20261103",
-      "fullStartDate": "202611030000",
       "wallpaper": true
     }
   ]
