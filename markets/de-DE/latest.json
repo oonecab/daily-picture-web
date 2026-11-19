@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-18T02:53:48.118Z",
+  "fetchedAt": "2026-11-19T02:34:05.462Z",
   "images": [
+    {
+      "id": "OHR.KnowledgeSculpture_DE-DE3802350761",
+      "market": "de-DE",
+      "date": "2026-11-19",
+      "title": "Wo Ideen Gestalt annehmen",
+      "description": "Die Skulptur „Body of Knowledge“ von Jaume Plensa an der Goethe-Universität in Frankfurt am Main",
+      "credit": "© Todamo/Shutterstock",
+      "copyright": "Die Skulptur „Body of Knowledge“ von Jaume Plensa an der Goethe-Universität in Frankfurt am Main (© Todamo/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=Welttag+der+Philosophie&form=hpcapt&filters=HpDate%3a%2220261118_2300%22",
+      "originalDate": "20261118",
+      "fullStartDate": "202611182300",
+      "wallpaper": false
+    },
     {
       "id": "OHR.BarnOwlsUnite_DE-DE3292837255",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Lake+District+Vereinigtes+K%C3%B6nigreich&form=hpcapt&filters=HpDate%3a%2220261104_2300%22",
       "originalDate": "20261104",
       "fullStartDate": "202611042300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AutumnChina_DE-DE5410503674",
-      "market": "de-DE",
-      "date": "2026-11-04",
-      "title": "Paddeln durch ein Gemälde",
-      "description": "Paddler zwischen farbenprächtigen Sumpfzypressen, Xuancheng, Anhui, China",
-      "credit": "© Jackal Pan/Getty Images",
-      "copyright": "Paddler zwischen farbenprächtigen Sumpfzypressen, Xuancheng, Anhui, China (© Jackal Pan/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Sumpfzypressen&form=hpcapt&filters=HpDate%3a%2220261103_2300%22",
-      "originalDate": "20261103",
-      "fullStartDate": "202611032300",
       "wallpaper": true
     }
   ]

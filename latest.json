@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-18T02:53:47.827Z",
+  "fetchedAt": "2026-11-19T02:34:05.283Z",
   "images": [
+    {
+      "id": "OHR.KnowledgeSculpture_ZH-CN3168800853",
+      "market": "zh-CN",
+      "date": "2026-11-19",
+      "title": "思想在此成形",
+      "description": "雕塑《知识之躯》，由豪梅·普兰萨创作，位于德国法兰克福的法兰克福歌德大学",
+      "credit": "© Todamo/Shutterstock",
+      "copyright": "雕塑《知识之躯》，由豪梅·普兰萨创作，位于德国法兰克福的法兰克福歌德大学 (© Todamo/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=%E4%B8%96%E7%95%8C%E5%93%B2%E5%AD%A6%E6%97%A5&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261118",
+      "fullStartDate": "202611181600",
+      "wallpaper": false
+    },
     {
       "id": "OHR.BarnOwlsUnite_ZH-CN2930153291",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E8%8B%B1%E6%A0%BC%E5%85%B0%E6%B9%96%E5%8C%BA&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261104",
       "fullStartDate": "202611041600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AutumnChina_ZH-CN7665959692",
-      "market": "zh-CN",
-      "date": "2026-11-04",
-      "title": "泛舟如画秋林",
-      "description": "五彩落羽杉间划船的人们，宣城，安徽省，中国",
-      "credit": "© Jackal Pan/Getty Images",
-      "copyright": "五彩落羽杉间划船的人们，宣城，安徽省，中国 (© Jackal Pan/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E8%90%BD%E7%BE%BD%E6%9D%89&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261103",
-      "fullStartDate": "202611031600",
       "wallpaper": true
     }
   ]
