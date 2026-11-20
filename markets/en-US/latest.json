@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-19T02:34:05.362Z",
+  "fetchedAt": "2026-11-20T02:19:31.527Z",
   "images": [
+    {
+      "id": "OHR.KnowledgeSculpture_EN-US9746703110",
+      "market": "en-US",
+      "date": "2026-11-19",
+      "title": "Where ideas take shape",
+      "description": "The \"Body of Knowledge\" sculpture by Jaume Plensa at Goethe University in Frankfurt, Germany",
+      "credit": "© Todamo/Shutterstock",
+      "copyright": "The \"Body of Knowledge\" sculpture by Jaume Plensa at Goethe University in Frankfurt, Germany (© Todamo/Shutterstock)",
+      "sourceUrl": "https://www.bing.com/search?q=World+Philosophy+Day&form=hpcapt&filters=HpDate%3a%2220261119_0800%22",
+      "originalDate": "20261119",
+      "fullStartDate": "202611190800",
+      "wallpaper": false
+    },
     {
       "id": "OHR.BarnOwlsUnite_EN-US9661992435",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Lake+District&form=hpcapt&filters=HpDate%3a%2220261105_0800%22",
       "originalDate": "20261105",
       "fullStartDate": "202611050800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AutumnChina_EN-US0467722422",
-      "market": "en-US",
-      "date": "2026-11-04",
-      "title": "Paddling a painted forest",
-      "description": "People rowing among colorful bald cypress, Xuancheng, Anhui, China",
-      "credit": "© Jackal Pan/Getty Images",
-      "copyright": "People rowing among colorful bald cypress, Xuancheng, Anhui, China (© Jackal Pan/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=bald+cypress&form=hpcapt&filters=HpDate%3a%2220261104_0800%22",
-      "originalDate": "20261104",
-      "fullStartDate": "202611040800",
       "wallpaper": true
     }
   ]

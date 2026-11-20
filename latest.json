@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-19T02:34:05.283Z",
+  "fetchedAt": "2026-11-20T02:19:31.448Z",
   "images": [
+    {
+      "id": "OHR.Megaptera_ZH-CN3361807823",
+      "market": "zh-CN",
+      "date": "2026-11-20",
+      "title": "在峡湾中大快朵颐",
+      "description": "正在潜水的座头鲸，挪威北部特罗姆斯的克瓦尔岛",
+      "credit": "© Espen Bergersen/Minden Pictures",
+      "copyright": "正在潜水的座头鲸，挪威北部特罗姆斯的克瓦尔岛 (© Espen Bergersen/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%BA%A7%E5%A4%B4%E9%B2%B8&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261119",
+      "fullStartDate": "202611191600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KnowledgeSculpture_ZH-CN3168800853",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E5%93%88%E8%8E%B1%E4%BA%9A%E5%8D%A1%E6%8B%89%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261105",
       "fullStartDate": "202611051600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.StileCrossing_ZH-CN9811465935",
-      "market": "zh-CN",
-      "date": "2026-11-05",
-      "title": "向山巅再迈一步",
-      "description": "石墙边的木制翻越梯，黑岩，湖区，英格兰",
-      "credit": "© Alex Treadway/Getty Images",
-      "copyright": "石墙边的木制翻越梯，黑岩，湖区，英格兰 (© Alex Treadway/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E8%8B%B1%E6%A0%BC%E5%85%B0%E6%B9%96%E5%8C%BA&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261104",
-      "fullStartDate": "202611041600",
       "wallpaper": true
     }
   ]

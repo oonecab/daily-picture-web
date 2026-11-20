@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-19T02:34:05.405Z",
+  "fetchedAt": "2026-11-20T02:19:31.557Z",
   "images": [
+    {
+      "id": "OHR.Megaptera_EN-GB2786065203",
+      "market": "en-GB",
+      "date": "2026-11-20",
+      "title": "Feasting in the fjords",
+      "description": "Diving humpback whale, Kvaloya, Troms, Northern Norway",
+      "credit": "© Espen Bergersen/Minden Pictures",
+      "copyright": "Diving humpback whale, Kvaloya, Troms, Northern Norway (© Espen Bergersen/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=humpback+whales&form=hpcapt&filters=HpDate%3a%2220261120_0000%22",
+      "originalDate": "20261120",
+      "fullStartDate": "202611200000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KnowledgeSculpture_EN-GB1364284090",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Haleakala+National+Park&form=hpcapt&filters=HpDate%3a%2220261106_0000%22",
       "originalDate": "20261106",
       "fullStartDate": "202611060000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.FireworksBattersea_EN-GB4505786809",
-      "market": "en-GB",
-      "date": "2026-11-05",
-      "title": "Remember, remember",
-      "description": "Fireworks over Battersea Power Station, London",
-      "credit": "© Michael Lee/Getty Images",
-      "copyright": "Fireworks over Battersea Power Station, London (© Michael Lee/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=bonfire+night&form=hpcapt&filters=HpDate%3a%2220261105_0000%22",
-      "originalDate": "20261105",
-      "fullStartDate": "202611050000",
       "wallpaper": true
     }
   ]
