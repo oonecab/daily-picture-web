@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-20T02:19:31.615Z",
+  "fetchedAt": "2026-11-21T02:13:34.834Z",
   "images": [
+    {
+      "id": "OHR.RedNice_DE-DE7638538750",
+      "market": "de-DE",
+      "date": "2026-11-21",
+      "title": "Ein Traum aus Terrakotta",
+      "description": "Nizza, Provence-Alpes-Côte d'Azur, Frankreich",
+      "credit": "© Siripong Kaewla-iad/Getty Images",
+      "copyright": "Nizza, Provence-Alpes-Côte d'Azur, Frankreich (© Siripong Kaewla-iad/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Nizza+Frankreich&form=hpcapt&filters=HpDate%3a%2220261120_2300%22",
+      "originalDate": "20261120",
+      "fullStartDate": "202611202300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.Megaptera_DE-DE6966438629",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Bisons&form=hpcapt&filters=HpDate%3a%2220261106_2300%22",
       "originalDate": "20261106",
       "fullStartDate": "202611062300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PipiwaiTrail_DE-DE9691097479",
-      "market": "de-DE",
-      "date": "2026-11-06",
-      "title": "Ein grüner Tunnel durch Maui",
-      "description": "Bambuswald, Pīpīwai Trail, Haleakalā-Nationalpark, Maui, Hawaii, USA",
-      "credit": "© MNStudio/Getty Images",
-      "copyright": "Bambuswald, Pīpīwai Trail, Haleakalā-Nationalpark, Maui, Hawaii, USA (© MNStudio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Haleakala-Nationalpark+Hawaii&form=hpcapt&filters=HpDate%3a%2220261105_2300%22",
-      "originalDate": "20261105",
-      "fullStartDate": "202611052300",
       "wallpaper": true
     }
   ]

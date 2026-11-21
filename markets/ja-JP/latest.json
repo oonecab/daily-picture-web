@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-20T02:19:31.588Z",
+  "fetchedAt": "2026-11-21T02:13:34.812Z",
   "images": [
+    {
+      "id": "OHR.RedNice_JA-JP4725682184",
+      "market": "ja-JP",
+      "date": "2026-11-21",
+      "title": "テラコッタ色に染まる街",
+      "description": "ニース、プロヴァンス＝アルプ＝コート・ダジュール地域圏、フランス",
+      "credit": "© Siripong Kaewla-iad/Getty Images",
+      "copyright": "ニース、プロヴァンス＝アルプ＝コート・ダジュール地域圏、フランス (© Siripong Kaewla-iad/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%8B%E3%83%BC%E3%82%B9+%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9&form=hpcapt&filters=HpDate%3a%2220261120_1500%22",
+      "originalDate": "20261120",
+      "fullStartDate": "202611201500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.Megaptera_JA-JP4163269980",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%90%E3%82%A4%E3%82%BD%E3%83%B3&form=hpcapt&filters=HpDate%3a%2220261106_1500%22",
       "originalDate": "20261106",
       "fullStartDate": "202611061500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PipiwaiTrail_JA-JP1383562325",
-      "market": "ja-JP",
-      "date": "2026-11-06",
-      "title": "マウイ島を抜ける緑のトンネル",
-      "description": "ピピワイ・トレイルの竹林、ハレアカラ国立公園、マウイ島、ハワイ、アメリカ",
-      "credit": "© MNStudio/Getty Images",
-      "copyright": "ピピワイ・トレイルの竹林、ハレアカラ国立公園、マウイ島、ハワイ、アメリカ (© MNStudio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%83%8F%E3%83%AC%E3%82%A2%E3%82%AB%E3%83%A9%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92&form=hpcapt&filters=HpDate%3a%2220261105_1500%22",
-      "originalDate": "20261105",
-      "fullStartDate": "202611051500",
       "wallpaper": true
     }
   ]

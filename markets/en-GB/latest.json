@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-20T02:19:31.557Z",
+  "fetchedAt": "2026-11-21T02:13:34.791Z",
   "images": [
+    {
+      "id": "OHR.RedNice_EN-GB3371662260",
+      "market": "en-GB",
+      "date": "2026-11-21",
+      "title": "Terracotta dreams",
+      "description": "Nice, Provence-Alpes-Côte d'Azur, France",
+      "credit": "© Siripong Kaewla-iad/Getty Images",
+      "copyright": "Nice, Provence-Alpes-Côte d'Azur, France (© Siripong Kaewla-iad/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Nice+France&form=hpcapt&filters=HpDate%3a%2220261121_0000%22",
+      "originalDate": "20261121",
+      "fullStartDate": "202611210000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.Megaptera_EN-GB2786065203",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=American+bison&form=hpcapt&filters=HpDate%3a%2220261107_0000%22",
       "originalDate": "20261107",
       "fullStartDate": "202611070000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.PipiwaiTrail_EN-GB4651327269",
-      "market": "en-GB",
-      "date": "2026-11-06",
-      "title": "A green tunnel through Maui",
-      "description": "Bamboo forest, Pīpīwai Trail, Haleakalā National Park, Maui, Hawaii, USA",
-      "credit": "© MNStudio/Getty Images",
-      "copyright": "Bamboo forest, Pīpīwai Trail, Haleakalā National Park, Maui, Hawaii, USA (© MNStudio/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Haleakala+National+Park&form=hpcapt&filters=HpDate%3a%2220261106_0000%22",
-      "originalDate": "20261106",
-      "fullStartDate": "202611060000",
       "wallpaper": true
     }
   ]

@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-20T02:19:31.527Z",
+  "fetchedAt": "2026-11-21T02:13:34.770Z",
   "images": [
+    {
+      "id": "OHR.Megaptera_EN-US1728719939",
+      "market": "en-US",
+      "date": "2026-11-20",
+      "title": "Feasting in the fjords",
+      "description": "Diving humpback whale, Kvaloya, Troms, Northern Norway",
+      "credit": "© Espen Bergersen/Minden Pictures",
+      "copyright": "Diving humpback whale, Kvaloya, Troms, Northern Norway (© Espen Bergersen/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=humpback+whales&form=hpcapt&filters=HpDate%3a%2220261120_0800%22",
+      "originalDate": "20261120",
+      "fullStartDate": "202611200800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.KnowledgeSculpture_EN-US9746703110",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Haleakala+National+Park&form=hpcapt&filters=HpDate%3a%2220261106_0800%22",
       "originalDate": "20261106",
       "fullStartDate": "202611060800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.StileCrossing_EN-US9052435517",
-      "market": "en-US",
-      "date": "2026-11-05",
-      "title": "One step closer to the summit",
-      "description": "Wooden stile at a stone wall, Black Crag, Lake District, England",
-      "credit": "© Alex Treadway/Getty Images",
-      "copyright": "Wooden stile at a stone wall, Black Crag, Lake District, England (© Alex Treadway/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Lake+District&form=hpcapt&filters=HpDate%3a%2220261105_0800%22",
-      "originalDate": "20261105",
-      "fullStartDate": "202611050800",
       "wallpaper": true
     }
   ]
