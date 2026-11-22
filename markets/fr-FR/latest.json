@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-21T02:13:34.855Z",
+  "fetchedAt": "2026-11-22T01:18:20.436Z",
   "images": [
+    {
+      "id": "OHR.JustaHermitage_FR-FR2303317894",
+      "market": "fr-FR",
+      "date": "2026-11-22",
+      "title": "Refuge au milieu des vagues",
+      "description": "Ermitage de Santa Justa, Cantabrie, Espagne",
+      "credit": "© Tramont_ana/Getty Images",
+      "copyright": "Ermitage de Santa Justa, Cantabrie, Espagne (© Tramont_ana/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Ermitage+de+Santa+Justa&form=hpcapt&filters=HpDate%3a%2220261121_2300%22",
+      "originalDate": "20261121",
+      "fullStartDate": "202611212300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RedNice_FR-FR1499556885",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Diwali&form=hpcapt&filters=HpDate%3a%2220261107_2300%22",
       "originalDate": "20261107",
       "fullStartDate": "202611072300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DakotaBison_FR-FR7465030722",
-      "market": "fr-FR",
-      "date": "2026-11-07",
-      "title": "Un géant de retour",
-      "description": "Bison dans le parc national Theodore Roosevelt, Dakota du Nord, États-Unis",
-      "credit": "© Tandem Stock/Adobe Stock",
-      "copyright": "Bison dans le parc national Theodore Roosevelt, Dakota du Nord, États-Unis (© Tandem Stock/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=bison+bison&form=hpcapt&filters=HpDate%3a%2220261106_2300%22",
-      "originalDate": "20261106",
-      "fullStartDate": "202611062300",
       "wallpaper": true
     }
   ]

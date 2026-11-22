@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-21T02:13:34.698Z",
+  "fetchedAt": "2026-11-22T01:18:20.244Z",
   "images": [
+    {
+      "id": "OHR.JustaHermitage_ZH-CN3751022621",
+      "market": "zh-CN",
+      "date": "2026-11-22",
+      "title": "海浪间的庇护所",
+      "description": "西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂",
+      "credit": "© Tramont_ana/Getty Images",
+      "copyright": "西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂 (© Tramont_ana/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E5%9C%A3%E8%83%A1%E6%96%AF%E5%A1%94%E5%B0%8F%E6%95%99%E5%A0%82&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261121",
+      "fullStartDate": "202611211600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RedNice_ZH-CN3518429866",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E6%8E%92%E7%81%AF%E8%8A%82&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261107",
       "fullStartDate": "202611071600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DakotaBison_ZH-CN2302503868",
-      "market": "zh-CN",
-      "date": "2026-11-07",
-      "title": "归来的草原巨兽",
-      "description": "草原上的一头野牛，西奥多·罗斯福国家公园，北达科他州，美国",
-      "credit": "© Tandem Stock/Adobe Stock",
-      "copyright": "草原上的一头野牛，西奥多·罗斯福国家公园，北达科他州，美国 (© Tandem Stock/Adobe Stock)",
-      "sourceUrl": "https://www.bing.com/search?q=%E7%BE%8E%E6%B4%B2%E9%87%8E%E7%89%9B&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261106",
-      "fullStartDate": "202611061600",
       "wallpaper": true
     }
   ]
