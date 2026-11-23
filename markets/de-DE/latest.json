@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-22T01:18:20.410Z",
+  "fetchedAt": "2026-11-23T01:42:11.428Z",
   "images": [
+    {
+      "id": "OHR.FibonacciFern_DE-DE6300100112",
+      "market": "de-DE",
+      "date": "2026-11-23",
+      "title": "Geometrie in der Natur",
+      "description": "Farnspitzen",
+      "credit": "© Reza Saputra/Getty Images",
+      "copyright": "Farnspitzen (© Reza Saputra/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Fibonacci-Tag&form=hpcapt&filters=HpDate%3a%2220261122_2300%22",
+      "originalDate": "20261122",
+      "fullStartDate": "202611222300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.JustaHermitage_DE-DE4182731523",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261108",
       "fullStartDate": "202611082300",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.DiwaliLamps_DE-DE0703233561",
-      "market": "de-DE",
-      "date": "2026-11-08",
-      "title": "Ein strahlendes Fest",
-      "description": "Laternen für Diwali, Mumbai, Maharashtra, Indien",
-      "credit": "© Dinodia Photo/Getty Images",
-      "copyright": "Laternen für Diwali, Mumbai, Maharashtra, Indien (© Dinodia Photo/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Diwali&form=hpcapt&filters=HpDate%3a%2220261107_2300%22",
-      "originalDate": "20261107",
-      "fullStartDate": "202611072300",
-      "wallpaper": true
     }
   ]
 }

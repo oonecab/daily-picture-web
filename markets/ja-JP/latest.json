@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-22T01:18:20.385Z",
+  "fetchedAt": "2026-11-23T01:42:11.403Z",
   "images": [
+    {
+      "id": "OHR.FibonacciFern_JA-JP6039925060",
+      "market": "ja-JP",
+      "date": "2026-11-23",
+      "title": "自然が描く幾何学模様",
+      "description": "シダの若芽",
+      "credit": "© Reza Saputra/Getty Images",
+      "copyright": "シダの若芽 (© Reza Saputra/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97&form=hpcapt&filters=HpDate%3a%2220261122_1500%22",
+      "originalDate": "20261122",
+      "fullStartDate": "202611221500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.JustaHermitage_JA-JP5350379708",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%82%BB%E3%83%93%E3%83%AA%E3%82%A2+%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3&form=hpcapt&filters=HpDate%3a%2220261108_1500%22",
       "originalDate": "20261108",
       "fullStartDate": "202611081500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DiwaliLamps_JA-JP0443643151",
-      "market": "ja-JP",
-      "date": "2026-11-08",
-      "title": "光に包まれる祝祭",
-      "description": "ディーワーリーを彩るランタン、ムンバイ、マハーラーシュトラ州、インド",
-      "credit": "© Dinodia Photo/Getty Images",
-      "copyright": "ディーワーリーを彩るランタン、ムンバイ、マハーラーシュトラ州、インド (© Dinodia Photo/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%83%87%E3%82%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AA%E3%83%BC&form=hpcapt&filters=HpDate%3a%2220261107_1500%22",
-      "originalDate": "20261107",
-      "fullStartDate": "202611071500",
       "wallpaper": true
     }
   ]

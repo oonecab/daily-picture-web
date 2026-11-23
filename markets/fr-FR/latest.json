@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-22T01:18:20.436Z",
+  "fetchedAt": "2026-11-23T01:42:11.452Z",
   "images": [
+    {
+      "id": "OHR.FibonacciFern_FR-FR6204076819",
+      "market": "fr-FR",
+      "date": "2026-11-23",
+      "title": "Géométrie au naturel",
+      "description": "Pousse de fougère",
+      "credit": "© Reza Saputra/Getty Images",
+      "copyright": "Pousse de fougère (© Reza Saputra/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Journ%C3%A9e+de+Fibonacci&form=hpcapt&filters=HpDate%3a%2220261122_2300%22",
+      "originalDate": "20261122",
+      "fullStartDate": "202611222300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.JustaHermitage_FR-FR2303317894",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=S%C3%A9ville+Espagne&form=hpcapt&filters=HpDate%3a%2220261108_2300%22",
       "originalDate": "20261108",
       "fullStartDate": "202611082300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DiwaliLamps_FR-FR3288508792",
-      "market": "fr-FR",
-      "date": "2026-11-08",
-      "title": "Célébration qui scintille",
-      "description": "Lanternes pour Diwali, Mumbai, Maharashtra, Inde",
-      "credit": "© Dinodia Photo/Getty Images",
-      "copyright": "Lanternes pour Diwali, Mumbai, Maharashtra, Inde (© Dinodia Photo/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Diwali&form=hpcapt&filters=HpDate%3a%2220261107_2300%22",
-      "originalDate": "20261107",
-      "fullStartDate": "202611072300",
       "wallpaper": true
     }
   ]
