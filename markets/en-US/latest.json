@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-23T01:42:11.348Z",
+  "fetchedAt": "2026-11-24T05:19:42.289Z",
   "images": [
+    {
+      "id": "OHR.FibonacciFern_EN-US6307771770",
+      "market": "en-US",
+      "date": "2026-11-23",
+      "title": "Geometry in nature",
+      "description": "Fiddlehead fern",
+      "credit": "© Reza Saputra/Getty Images",
+      "copyright": "Fiddlehead fern (© Reza Saputra/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=fibonacci+day&form=hpcapt&filters=HpDate%3a%2220261123_0800%22",
+      "originalDate": "20261123",
+      "fullStartDate": "202611230800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.JustaHermitage_EN-US0130271816",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Seville+Spain&form=hpcapt&filters=HpDate%3a%2220261109_0800%22",
       "originalDate": "20261109",
       "fullStartDate": "202611090800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.DiwaliLamps_EN-US0788074051",
-      "market": "en-US",
-      "date": "2026-11-08",
-      "title": "A celebration that shines",
-      "description": "Lanterns for Diwali, Mumbai, Maharashtra, India",
-      "credit": "© Dinodia Photo/Getty Images",
-      "copyright": "Lanterns for Diwali, Mumbai, Maharashtra, India (© Dinodia Photo/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Diwali&form=hpcapt&filters=HpDate%3a%2220261108_0800%22",
-      "originalDate": "20261108",
-      "fullStartDate": "202611080800",
       "wallpaper": true
     }
   ]

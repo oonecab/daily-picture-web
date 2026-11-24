@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-23T01:42:11.375Z",
+  "fetchedAt": "2026-11-24T05:19:42.318Z",
   "images": [
+    {
+      "id": "OHR.CairngormsSquirrel_EN-GB7505295031",
+      "market": "en-GB",
+      "date": "2026-11-24",
+      "title": "Autumnal camouflage",
+      "description": "Red squirrel in Cairngorms National Park, Highlands, Scotland",
+      "credit": "© Scotland: The Big Picture/Minden Pictures",
+      "copyright": "Red squirrel in Cairngorms National Park, Highlands, Scotland (© Scotland: The Big Picture/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=Eurasian+red+squirrel&form=hpcapt&filters=HpDate%3a%2220261124_0000%22",
+      "originalDate": "20261124",
+      "fullStartDate": "202611240000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FibonacciFern_EN-GB6785963710",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261110_0000%22",
       "originalDate": "20261110",
       "fullStartDate": "202611100000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.TrianaSpain_EN-GB4312074959",
-      "market": "en-GB",
-      "date": "2026-11-09",
-      "title": "Where art finds its rhythm",
-      "description": "Historic district of Triana, Seville, Spain",
-      "credit": "© Andrzej Rostek/Getty Images",
-      "copyright": "Historic district of Triana, Seville, Spain (© Andrzej Rostek/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Seville+Spain&form=hpcapt&filters=HpDate%3a%2220261109_0000%22",
-      "originalDate": "20261109",
-      "fullStartDate": "202611090000",
       "wallpaper": true
     }
   ]

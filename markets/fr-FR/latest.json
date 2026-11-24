@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-23T01:42:11.452Z",
+  "fetchedAt": "2026-11-24T05:19:42.409Z",
   "images": [
+    {
+      "id": "OHR.CairngormsSquirrel_FR-FR2394488770",
+      "market": "fr-FR",
+      "date": "2026-11-24",
+      "title": "Camouflage d’automne",
+      "description": "Écureuil roux dans le parc national des Cairngorms, Highlands, Écosse",
+      "credit": "© Scotland: The Big Picture/Minden Pictures",
+      "copyright": "Écureuil roux dans le parc national des Cairngorms, Highlands, Écosse (© Scotland: The Big Picture/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=%C3%A9cureuil+roux&form=hpcapt&filters=HpDate%3a%2220261123_2300%22",
+      "originalDate": "20261123",
+      "fullStartDate": "202611232300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FibonacciFern_FR-FR6204076819",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261109_2300%22",
       "originalDate": "20261109",
       "fullStartDate": "202611092300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.TrianaSpain_FR-FR5872801405",
-      "market": "fr-FR",
-      "date": "2026-11-09",
-      "title": "Ici, l’art trouve son rythme",
-      "description": "Quartier historique de Triana, Séville, Espagne",
-      "credit": "© Andrzej Rostek/Getty Images",
-      "copyright": "Quartier historique de Triana, Séville, Espagne (© Andrzej Rostek/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=S%C3%A9ville+Espagne&form=hpcapt&filters=HpDate%3a%2220261108_2300%22",
-      "originalDate": "20261108",
-      "fullStartDate": "202611082300",
       "wallpaper": true
     }
   ]

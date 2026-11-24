@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-23T01:42:11.428Z",
+  "fetchedAt": "2026-11-24T05:19:42.380Z",
   "images": [
+    {
+      "id": "OHR.CairngormsSquirrel_DE-DE7485834001",
+      "market": "de-DE",
+      "date": "2026-11-24",
+      "title": "Herbstliche Tarnung",
+      "description": "Eichhörnchen (Sciurus vulgaris) im Cairngorms-Nationalpark, Highlands, Schottland",
+      "credit": "© Scotland: The Big Picture/Minden Pictures",
+      "copyright": "Eichhörnchen (Sciurus vulgaris) im Cairngorms-Nationalpark, Highlands, Schottland (© Scotland: The Big Picture/Minden Pictures)",
+      "sourceUrl": "https://www.bing.com/search?q=Eurasisches+Eichh%C3%B6rnchen&form=hpcapt&filters=HpDate%3a%2220261123_2300%22",
+      "originalDate": "20261123",
+      "fullStartDate": "202611232300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FibonacciFern_DE-DE6300100112",
       "market": "de-DE",
@@ -184,19 +197,6 @@
       "originalDate": "20261109",
       "fullStartDate": "202611092300",
       "wallpaper": true
-    },
-    {
-      "id": "OHR.MauerBerlin_DE-DE4395338070",
-      "market": "de-DE",
-      "date": "2026-11-09",
-      "title": "Die Nacht, die Deutschland veränderte",
-      "description": "Schüler spähen durch einen Spalt in einem noch erhaltenen Abschnitt der Berliner Mauer",
-      "credit": "© Sean Gallup/Getty Images",
-      "copyright": "Schüler spähen durch einen Spalt in einem noch erhaltenen Abschnitt der Berliner Mauer (© Sean Gallup/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Fall+der+Berliner+Mauer&form=hpcapt&filters=HpDate%3a%2220261108_2300%22",
-      "originalDate": "20261108",
-      "fullStartDate": "202611082300",
-      "wallpaper": false
     }
   ]
 }
