@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-24T05:19:42.409Z",
+  "fetchedAt": "2026-11-25T04:10:51.768Z",
   "images": [
+    {
+      "id": "OHR.SunsetPoint_FR-FR4616557781",
+      "market": "fr-FR",
+      "date": "2026-11-25",
+      "title": "Cheminées de fées enneigées",
+      "description": "Sunset Point, parc national de Bryce Canyon, Utah, États-Unis",
+      "credit": "© Colin D. Young/Alamy",
+      "copyright": "Sunset Point, parc national de Bryce Canyon, Utah, États-Unis (© Colin D. Young/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Parc+national+de+Bryce+Canyon&form=hpcapt&filters=HpDate%3a%2220261124_2300%22",
+      "originalDate": "20261124",
+      "fullStartDate": "202611242300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.CairngormsSquirrel_FR-FR2394488770",
       "market": "fr-FR",
@@ -184,19 +197,6 @@
       "originalDate": "20261110",
       "fullStartDate": "202611102300",
       "wallpaper": false
-    },
-    {
-      "id": "OHR.RoseIsland_FR-FR0867516842",
-      "market": "fr-FR",
-      "date": "2026-11-10",
-      "title": "Permis de se relaxer",
-      "description": "Vue aérienne de Rose Island, Bahamas",
-      "credit": "© Abstract Aerial Art/Getty Images",
-      "copyright": "Vue aérienne de Rose Island, Bahamas (© Abstract Aerial Art/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261109_2300%22",
-      "originalDate": "20261109",
-      "fullStartDate": "202611092300",
-      "wallpaper": true
     }
   ]
 }

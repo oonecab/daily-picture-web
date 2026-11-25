@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-24T05:19:42.318Z",
+  "fetchedAt": "2026-11-25T04:10:51.696Z",
   "images": [
+    {
+      "id": "OHR.SunsetPoint_EN-GB6418180336",
+      "market": "en-GB",
+      "date": "2026-11-25",
+      "title": "When snow meets red rock",
+      "description": "Sunset Point, Bryce Canyon National Park, Utah, USA",
+      "credit": "© Colin D. Young/Alamy",
+      "copyright": "Sunset Point, Bryce Canyon National Park, Utah, USA (© Colin D. Young/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Bryce+Canyon+National+Park&form=hpcapt&filters=HpDate%3a%2220261125_0000%22",
+      "originalDate": "20261125",
+      "fullStartDate": "202611250000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.CairngormsSquirrel_EN-GB7505295031",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Remembrance+Day&form=hpcapt&filters=HpDate%3a%2220261111_0000%22",
       "originalDate": "20261111",
       "fullStartDate": "202611110000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.RoseIsland_EN-GB4222638797",
-      "market": "en-GB",
-      "date": "2026-11-10",
-      "title": "Licensed to chill",
-      "description": "Aerial view of Rose Island, The Bahamas",
-      "credit": "© Abstract Aerial Art/Getty Images",
-      "copyright": "Aerial view of Rose Island, The Bahamas (© Abstract Aerial Art/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261110_0000%22",
-      "originalDate": "20261110",
-      "fullStartDate": "202611100000",
       "wallpaper": true
     }
   ]

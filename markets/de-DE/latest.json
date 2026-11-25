@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-24T05:19:42.380Z",
+  "fetchedAt": "2026-11-25T04:10:51.748Z",
   "images": [
+    {
+      "id": "OHR.SunsetPoint_DE-DE0548911114",
+      "market": "de-DE",
+      "date": "2026-11-25",
+      "title": "Schneefall im Südwesten",
+      "description": "Sunset Point, Bryce-Canyon-Nationalpark, Utah",
+      "credit": "© Colin D. Young/Alamy",
+      "copyright": "Sunset Point, Bryce-Canyon-Nationalpark, Utah (© Colin D. Young/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Bryce-Canyon-Nationalpark&form=hpcapt&filters=HpDate%3a%2220261124_2300%22",
+      "originalDate": "20261124",
+      "fullStartDate": "202611242300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.CairngormsSquirrel_DE-DE7485834001",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Atlantischer+Regenwald+Brasilien&form=hpcapt&filters=HpDate%3a%2220261110_2300%22",
       "originalDate": "20261110",
       "fullStartDate": "202611102300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.RoseIsland_DE-DE1760101963",
-      "market": "de-DE",
-      "date": "2026-11-10",
-      "title": "Die Lizenz zum Chillen",
-      "description": "Luftaufnahme von Rose Island, Bahamas",
-      "credit": "© Abstract Aerial Art/Getty Images",
-      "copyright": "Luftaufnahme von Rose Island, Bahamas (© Abstract Aerial Art/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261109_2300%22",
-      "originalDate": "20261109",
-      "fullStartDate": "202611092300",
       "wallpaper": true
     }
   ]
