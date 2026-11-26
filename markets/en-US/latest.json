@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-25T04:10:51.674Z",
+  "fetchedAt": "2026-11-26T03:34:15.126Z",
   "images": [
+    {
+      "id": "OHR.SunsetPoint_EN-US0827880440",
+      "market": "en-US",
+      "date": "2026-11-25",
+      "title": "A southwestern snowfall",
+      "description": "Sunset Point, Bryce Canyon National Park, Utah",
+      "credit": "© Colin D. Young/Alamy",
+      "copyright": "Sunset Point, Bryce Canyon National Park, Utah (© Colin D. Young/Alamy)",
+      "sourceUrl": "https://www.bing.com/search?q=Bryce+Canyon+National+Park&form=hpcapt&filters=HpDate%3a%2220261125_0800%22",
+      "originalDate": "20261125",
+      "fullStartDate": "202611250800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.CairngormsSquirrel_EN-US7053432564",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Veterans+Day&form=hpcapt&filters=HpDate%3a%2220261111_0800%22",
       "originalDate": "20261111",
       "fullStartDate": "202611110800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.RoseIsland_EN-US0952497192",
-      "market": "en-US",
-      "date": "2026-11-10",
-      "title": "Licensed to chill",
-      "description": "Aerial view of Rose Island, The Bahamas",
-      "credit": "© Abstract Aerial Art/Getty Images",
-      "copyright": "Aerial view of Rose Island, The Bahamas (© Abstract Aerial Art/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Rose+Island+Bahamas&form=hpcapt&filters=HpDate%3a%2220261110_0800%22",
-      "originalDate": "20261110",
-      "fullStartDate": "202611100800",
       "wallpaper": true
     }
   ]
