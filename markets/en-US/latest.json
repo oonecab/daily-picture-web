@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-26T03:34:15.126Z",
+  "fetchedAt": "2026-11-27T03:38:23.902Z",
   "images": [
+    {
+      "id": "OHR.WildTom_EN-US1069249609",
+      "market": "en-US",
+      "date": "2026-11-26",
+      "title": "Turkey twins",
+      "description": "Two wild tom turkeys",
+      "credit": "© davidsdodd/Getty Images",
+      "copyright": "Two wild tom turkeys (© davidsdodd/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Thanksgiving&form=hpcapt&filters=HpDate%3a%2220261126_0800%22",
+      "originalDate": "20261126",
+      "fullStartDate": "202611260800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.SunsetPoint_EN-US0827880440",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Arches+National+Park&form=hpcapt&filters=HpDate%3a%2220261112_0800%22",
       "originalDate": "20261112",
       "fullStartDate": "202611120800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.SunsetFlags_EN-US1046151448",
-      "market": "en-US",
-      "date": "2026-11-11",
-      "title": "A salute in red, white, and blue",
-      "description": "American flags in a public park in upstate New York",
-      "credit": "© Matt Champlin/Getty Images",
-      "copyright": "American flags in a public park in upstate New York (© Matt Champlin/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Veterans+Day&form=hpcapt&filters=HpDate%3a%2220261111_0800%22",
-      "originalDate": "20261111",
-      "fullStartDate": "202611110800",
       "wallpaper": true
     }
   ]

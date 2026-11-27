@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "zh-CN",
-  "fetchedAt": "2026-11-26T03:34:15.023Z",
+  "fetchedAt": "2026-11-27T03:38:23.752Z",
   "images": [
+    {
+      "id": "OHR.FaceCanyon_ZH-CN9505064248",
+      "market": "zh-CN",
+      "date": "2026-11-27",
+      "title": "灰金交织的峡谷",
+      "description": "夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国",
+      "credit": "© Jeff Foott/Minden",
+      "copyright": "夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国 (© Jeff Foott/Minden)",
+      "sourceUrl": "https://www.bing.com/search?q=%E9%B2%8D%E5%A8%81%E5%B0%94%E6%B9%96&form=hpcapt&mkt=zh-cn",
+      "originalDate": "20261126",
+      "fullStartDate": "202611261600",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RFHilo_ZH-CN5962114314",
       "market": "zh-CN",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E8%89%BE%E4%BC%AF%E5%A1%94%E7%9C%81%E4%BA%9A%E4%BC%AF%E6%8B%89%E7%BD%95%E6%B9%96&form=hpcapt&mkt=zh-cn",
       "originalDate": "20261112",
       "fullStartDate": "202611121600",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NorthWindow_ZH-CN6734579353",
-      "market": "zh-CN",
-      "date": "2026-11-12",
-      "title": "没有建筑师的建筑杰作",
-      "description": "北窗，拱门国家公园，莫阿布，犹他州，美国",
-      "credit": "© lightphoto/Getty Images",
-      "copyright": "北窗，拱门国家公园，莫阿布，犹他州，美国 (© lightphoto/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E6%8B%B1%E9%97%A8%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD&form=hpcapt&mkt=zh-cn",
-      "originalDate": "20261111",
-      "fullStartDate": "202611111600",
       "wallpaper": true
     }
   ]

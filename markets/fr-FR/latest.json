@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "fr-FR",
-  "fetchedAt": "2026-11-26T03:34:15.298Z",
+  "fetchedAt": "2026-11-27T03:38:24.086Z",
   "images": [
+    {
+      "id": "OHR.FaceCanyon_FR-FR9763207069",
+      "market": "fr-FR",
+      "date": "2026-11-27",
+      "title": "Rubans gris et or",
+      "description": "Coucher du soleil sur Face Canyon, Lac Powell, Utah, États-Unis",
+      "credit": "© Jeff Foott/Minden",
+      "copyright": "Coucher du soleil sur Face Canyon, Lac Powell, Utah, États-Unis (© Jeff Foott/Minden)",
+      "sourceUrl": "https://www.bing.com/search?q=Lac+Powell&form=hpcapt&filters=HpDate%3a%2220261126_2300%22",
+      "originalDate": "20261126",
+      "fullStartDate": "202611262300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RFHilo_FR-FR7467471346",
       "market": "fr-FR",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Lac+Abraham+Alberta&form=hpcapt&filters=HpDate%3a%2220261112_2300%22",
       "originalDate": "20261112",
       "fullStartDate": "202611122300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NorthWindow_FR-FR9118968859",
-      "market": "fr-FR",
-      "date": "2026-11-12",
-      "title": "Architecture sans architecte",
-      "description": "North Window, parc national des Arches, Moab, Utah, États-Unis",
-      "credit": "© lightphoto/Getty Images",
-      "copyright": "North Window, parc national des Arches, Moab, Utah, États-Unis (© lightphoto/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Parc+national+des+Arches&form=hpcapt&filters=HpDate%3a%2220261111_2300%22",
-      "originalDate": "20261111",
-      "fullStartDate": "202611112300",
       "wallpaper": true
     }
   ]

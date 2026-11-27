@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "de-DE",
-  "fetchedAt": "2026-11-26T03:34:15.256Z",
+  "fetchedAt": "2026-11-27T03:38:24.041Z",
   "images": [
+    {
+      "id": "OHR.FaceCanyon_DE-DE8985806432",
+      "market": "de-DE",
+      "date": "2026-11-27",
+      "title": "Streifen in Grau und Gold",
+      "description": "Butte bei Sonnenuntergang, Face Canyon, Lake Powell, Utah, USA",
+      "credit": "© Jeff Foott/Minden",
+      "copyright": "Butte bei Sonnenuntergang, Face Canyon, Lake Powell, Utah, USA (© Jeff Foott/Minden)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+Powell+Stausee&form=hpcapt&filters=HpDate%3a%2220261126_2300%22",
+      "originalDate": "20261126",
+      "fullStartDate": "202611262300",
+      "wallpaper": true
+    },
     {
       "id": "OHR.RFHilo_DE-DE3182652312",
       "market": "de-DE",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Abraham+Lake+Stausee+Kanada&form=hpcapt&filters=HpDate%3a%2220261112_2300%22",
       "originalDate": "20261112",
       "fullStartDate": "202611122300",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NorthWindow_DE-DE3364064033",
-      "market": "de-DE",
-      "date": "2026-11-12",
-      "title": "Architektur ohne Architekten",
-      "description": "North Window, Arches-Nationalpark, Moab, Utah, USA",
-      "credit": "© lightphoto/Getty Images",
-      "copyright": "North Window, Arches-Nationalpark, Moab, Utah, USA (© lightphoto/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Arches-Nationalpark+Utah&form=hpcapt&filters=HpDate%3a%2220261111_2300%22",
-      "originalDate": "20261111",
-      "fullStartDate": "202611112300",
       "wallpaper": true
     }
   ]
