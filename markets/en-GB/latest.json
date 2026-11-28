@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-GB",
-  "fetchedAt": "2026-11-27T03:38:23.947Z",
+  "fetchedAt": "2026-11-28T03:19:03.445Z",
   "images": [
+    {
+      "id": "OHR.VltavaPrague_EN-GB9335121200",
+      "market": "en-GB",
+      "date": "2026-11-28",
+      "title": "Bridges through time",
+      "description": "Old town and Vltava River, Prague, Czechia",
+      "credit": "© Lara_Uhryn/Getty Images",
+      "copyright": "Old town and Vltava River, Prague, Czechia (© Lara_Uhryn/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=Prague+bridges&form=hpcapt&filters=HpDate%3a%2220261128_0000%22",
+      "originalDate": "20261128",
+      "fullStartDate": "202611280000",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FaceCanyon_EN-GB5580459617",
       "market": "en-GB",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Victoria+Harbour+Hong+Kong&form=hpcapt&filters=HpDate%3a%2220261114_0000%22",
       "originalDate": "20261114",
       "fullStartDate": "202611140000",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AbrahamCanada_EN-GB1908527515",
-      "market": "en-GB",
-      "date": "2026-11-13",
-      "title": "Hidden depths",
-      "description": "Abraham Lake in Alberta, Canada",
-      "credit": "© Guang Cao/Getty Images",
-      "copyright": "Abraham Lake in Alberta, Canada (© Guang Cao/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Abraham+Lake+Alberta&form=hpcapt&filters=HpDate%3a%2220261113_0000%22",
-      "originalDate": "20261113",
-      "fullStartDate": "202611130000",
       "wallpaper": true
     }
   ]

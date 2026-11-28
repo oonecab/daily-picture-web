@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "en-US",
-  "fetchedAt": "2026-11-27T03:38:23.902Z",
+  "fetchedAt": "2026-11-28T03:19:03.382Z",
   "images": [
+    {
+      "id": "OHR.FaceCanyon_EN-US6254374163",
+      "market": "en-US",
+      "date": "2026-11-27",
+      "title": "Ribbons of gray and gold",
+      "description": "Butte at sunset, Face Canyon, Lake Powell, Utah",
+      "credit": "© Jeff Foott/Minden",
+      "copyright": "Butte at sunset, Face Canyon, Lake Powell, Utah (© Jeff Foott/Minden)",
+      "sourceUrl": "https://www.bing.com/search?q=Lake+Powell&form=hpcapt&filters=HpDate%3a%2220261127_0800%22",
+      "originalDate": "20261127",
+      "fullStartDate": "202611270800",
+      "wallpaper": true
+    },
     {
       "id": "OHR.WildTom_EN-US1069249609",
       "market": "en-US",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=Abraham+Lake+Alberta&form=hpcapt&filters=HpDate%3a%2220261113_0800%22",
       "originalDate": "20261113",
       "fullStartDate": "202611130800",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.NorthWindow_EN-US1170338293",
-      "market": "en-US",
-      "date": "2026-11-12",
-      "title": "Architecture without an architect",
-      "description": "North Window, Arches National Park, Moab, Utah",
-      "credit": "© lightphoto/Getty Images",
-      "copyright": "North Window, Arches National Park, Moab, Utah (© lightphoto/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=Arches+National+Park&form=hpcapt&filters=HpDate%3a%2220261112_0800%22",
-      "originalDate": "20261112",
-      "fullStartDate": "202611120800",
       "wallpaper": true
     }
   ]

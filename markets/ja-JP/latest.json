@@ -1,8 +1,21 @@
 {
   "schemaVersion": 1,
   "market": "ja-JP",
-  "fetchedAt": "2026-11-27T03:38:23.994Z",
+  "fetchedAt": "2026-11-28T03:19:03.508Z",
   "images": [
+    {
+      "id": "OHR.VltavaPrague_JA-JP5027997170",
+      "market": "ja-JP",
+      "date": "2026-11-28",
+      "title": "歴史をつなぐ橋",
+      "description": "旧市街とヴルタヴァ川、プラハ、チェコ",
+      "credit": "© Lara_Uhryn/Getty Images",
+      "copyright": "旧市街とヴルタヴァ川、プラハ、チェコ (© Lara_Uhryn/Getty Images)",
+      "sourceUrl": "https://www.bing.com/search?q=%E3%83%97%E3%83%A9%E3%83%8F+%E6%A9%8B&form=hpcapt&filters=HpDate%3a%2220261127_1500%22",
+      "originalDate": "20261127",
+      "fullStartDate": "202611271500",
+      "wallpaper": true
+    },
     {
       "id": "OHR.FaceCanyon_JA-JP4501981808",
       "market": "ja-JP",
@@ -183,19 +196,6 @@
       "sourceUrl": "https://www.bing.com/search?q=%E3%83%93%E3%82%AF%E3%83%88%E3%83%AA%E3%82%A2%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC+%E9%A6%99%E6%B8%AF&form=hpcapt&filters=HpDate%3a%2220261113_1500%22",
       "originalDate": "20261113",
       "fullStartDate": "202611131500",
-      "wallpaper": true
-    },
-    {
-      "id": "OHR.AbrahamCanada_JA-JP9609532400",
-      "market": "ja-JP",
-      "date": "2026-11-13",
-      "title": "氷の下の神秘",
-      "description": "アブラハム湖、アルバータ州、カナダ",
-      "credit": "© Guang Cao/Getty Images",
-      "copyright": "アブラハム湖、アルバータ州、カナダ (© Guang Cao/Getty Images)",
-      "sourceUrl": "https://www.bing.com/search?q=%E3%82%A2%E3%83%96%E3%83%A9%E3%83%8F%E3%83%A0%E6%B9%96+%E3%82%A2%E3%83%AB%E3%83%90%E3%83%BC%E3%82%BF%E5%B7%9E&form=hpcapt&filters=HpDate%3a%2220261112_1500%22",
-      "originalDate": "20261112",
-      "fullStartDate": "202611121500",
       "wallpaper": true
     }
   ]
